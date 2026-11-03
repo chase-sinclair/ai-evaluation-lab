@@ -29,9 +29,19 @@ tool-count conditions. The secondary dataset work is documentation-only.
 | Reusability | A second text-output experiment with a different deterministic grader runs through the unchanged runner. |
 | Live adapter | Actual installed SDK tested using local HTTP fake transport; no real requests. Opt-in, budget, usage uncertainty, malformed JSON, secret redaction, and no retries covered. |
 
-First acceptance run: `20261103T210204-aea8946b1eb5`. Later final-source run and fresh-clone
-installation evidence are recorded below after completion. Raw artifacts are local and
-gitignored; no paid cost or token usage was invented. Measured latency is machine-specific.
+Final-source acceptance run: **`20261103T210917-113f1fe09b93`**, generated from clean engine
+commit `6dab98ed578e8960c248c71f3c6bb89888aa6007`. Manifest, plan, 15 JSONL records, and summary
+are in `results/20261103T210917-113f1fe09b93/`. `summarize` and an independent artifact check
+confirmed the counts and clean revision. The earlier run `20261103T210204-aea8946b1eb5`
+is also preserved. Raw artifacts are local and gitignored; no paid cost or token usage
+was invented. Measured latency is machine-specific.
+
+A fresh local clone of that commit at `.verification/fresh-checkout` successfully ran
+`uv sync --locked --offline` into a new virtual environment using the populated uv cache,
+then CLI help/list/validate, all **48 tests**, and Ruff. This verifies fresh-checkout
+installation on Windows; an empty dependency cache still needs a first online installation.
+The original checkout also ran the exact `uv run pytest` and `uv run ruff check .` commands
+with `UV_OFFLINE=1`: **48 passed**, no skips, all lint checks passed.
 
 ## Limits and decisions
 
