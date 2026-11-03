@@ -35,3 +35,47 @@ Rules:
   marking it complete.
 - Leave the working tree clean after successful delivery.
 
+
+## GitHub Delivery & Session Continuity
+
+### Development Checkpoints
+- After each completed phase, run pytest, Ruff lint,
+  and Ruff format checks.
+- Update `docs/verification.md` with test results.
+- Commit verified changes using descriptive messages.
+- Push completed work to `origin/main`.
+- Verify GitHub Actions passes when available.
+- Never force-push, commit secrets, or push failing code.
+
+### Persistent Progress Tracking
+Maintain `docs/PROGRESS.md` throughout development.
+
+Update it after meaningful milestones with:
+- Current phase and status
+- Completed and outstanding tasks
+- Important technical decisions
+- Files changed
+- Tests performed and their results
+- Known blockers
+- Latest verified commit
+- Exact next steps
+
+### Session Recovery
+If a session ends due to usage limits, context limits,
+or interruptions:
+
+1. Preserve completed work and update `docs/PROGRESS.md`
+   whenever tools remain available.
+2. Commit and push verified checkpoints when possible.
+3. Clearly label incomplete or untested work.
+4. Never discard uncommitted changes to restore state.
+
+At the beginning of every new session:
+1. Read `AGENTS.md` and `docs/PROGRESS.md`.
+2. Inspect `git status` and recent commits.
+3. Compare repository state with the progress notes.
+4. Resume from the last verified checkpoint.
+
+Do not rely on previous chat context for continuity.
+Never claim tests, commits, or pushes succeeded
+without verifying them.
