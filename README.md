@@ -64,6 +64,9 @@ Read [architecture](docs/architecture.md), [adding an experiment](docs/adding_an
 [real pilot approval protocol](docs/experiment_protocol.md).
 Live model compatibility is tested only with local fake responses so far.
 
+Phase 1.5 adds [comparative reporting](docs/comparative_reporting.md), offline CI, and
+a [specific BFCL pilot protocol for review](docs/bfcl_pilot_protocol.md).
+
 ## Research boundary
 
 Dataset research is documentation-only. See [the feasibility review](docs/data_source_research.md)

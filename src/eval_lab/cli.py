@@ -80,7 +80,12 @@ def summarize(run_id: str, results: Results = Path("results")):
         else:
             manifest = json.loads((path / "plan.json").read_text(encoding="utf-8"))["manifest"]
             warnings.append("No final manifest: run is active or was interrupted")
-        summary = aggregate(records, manifest["planned_trials"])
+        names = [c["id"] for c in manifest["experiment"]["conditions"]]
+        summary = aggregate(
+            records,
+            manifest["planned_trials"],
+            {name: manifest["planned_trials"] // len(names) for name in names},
+        )
         summary.update(
             {
                 "run_id": run_id,

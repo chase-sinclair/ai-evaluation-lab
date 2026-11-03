@@ -2,6 +2,28 @@
 
 Date: November 3, 2026. Host: Windows, CPython 3.13.0, uv 0.13.7.
 
+## Phase 1.5 — Research engine hardening
+
+Implemented additive condition summaries and case-paired comparisons with explicit
+repetition/partial-pair denominators; fixed text versus tool-call normalization without
+changing the shared-engine/module design. Added SDK fake-transport text-grading tests,
+comparison tests, and a Python 3.12/3.13 GitHub Actions matrix with locked installation,
+offline pytest, lint and format checks. No secrets are supplied to CI; socket connections
+are blocked by the test fixture. Installation itself requires network access.
+
+Local validation: **54 tests passed**, Ruff lint and format checks passed, diff whitespace
+check passed. Run `20261103T221524-68ef3167b8f6` contains 15 trials, with 4/5 passes under
+tools_5 and 3/5 under each larger condition. These are software fixture outcomes only.
+Paired differences are descriptive and not statistical significance evidence.
+
+Prepared [the BFCL protocol](bfcl_pilot_protocol.md): pinned source/checker inspection,
+20 exact development IDs, answer-key compatibility requirements, a fixed easy distractor
+pool and semantic audit, controls, and a conditional 60-call/$1 pilot proposal. No
+additional experiment or frontend was implemented; no paid calls or large archives used.
+Outstanding live-pilot gates: owner approval, exact model/prices, selected-case ambiguity
+review, importer/grader compatibility tests and independent rendered-request review.
+GitHub Actions result will be recorded after the first pushed run completes.
+
 ## Workflow guidance update — November 3, 2026
 
 Synced the owner's Git/GitHub workflow guidance from commit `8652be1` and made

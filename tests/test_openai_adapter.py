@@ -110,3 +110,63 @@ def test_secret_sanitization(monkeypatch):
         "api_key": "[REDACTED]",
         "nested": ["echo [REDACTED] [REDACTED]"],
     }
+
+
+@pytest.mark.parametrize("unexpected_calls", [False, True])
+def test_text_sdk_transport_through_runner(experiment, tmp_path, monkeypatch, unexpected_calls):
+    import httpx
+    import openai
+
+    from eval_lab.contracts import GradeResult, ModelRequest
+    from eval_lab.core.runner import run
+
+    def request(case, condition):
+        return ModelRequest(
+            model=condition.model,
+            output_format="text",
+            messages=[{"role": "user", "content": "ping"}],
+        )
+
+    def grade(case, response):
+        passed = response.parsed == "pong"
+        return GradeResult(passed=passed, score=float(passed), grader_version="0.1.0")
+
+    def handler(req):
+        assert "tools" not in json.loads(req.content)
+        raw = payload()
+        if not unexpected_calls:
+            raw["output"] = [
+                {
+                    "type": "message",
+                    "id": "msg_local",
+                    "role": "assistant",
+                    "status": "completed",
+                    "content": [{"type": "output_text", "text": "pong", "annotations": []}],
+                }
+            ]
+        return httpx.Response(200, json=raw)
+
+    monkeypatch.setattr(experiment, "build_request", request)
+    monkeypatch.setattr(experiment, "grade", grade)
+    with openai.OpenAI(
+        api_key="fake",
+        max_retries=0,
+        http_client=httpx.Client(transport=httpx.MockTransport(handler)),
+    ) as client:
+        result = run(
+            experiment,
+            results=tmp_path,
+            provider_factory=lambda: OpenAIProvider(live=True, client=client),
+        )
+    assert result["correct"] == (0 if unexpected_calls else 15)
+    if unexpected_calls:
+        assert result["status_counts"] == {"invalid_output": 15}
+
+
+def test_text_contract_rejects_tools(experiment, cases):
+    from eval_lab.contracts import ModelRequest
+
+    data = experiment.build_request(cases["invoice"], experiment.spec.conditions[0]).model_dump()
+    data["output_format"] = "text"
+    with pytest.raises(ValueError, match="cannot offer tools"):
+        ModelRequest.model_validate(data)

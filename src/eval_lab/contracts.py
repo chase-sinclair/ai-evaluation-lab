@@ -75,12 +75,24 @@ class ExperimentSpec(Contract):
 
 
 class ModelRequest(Contract):
+    """text -> parsed string; tool_calls -> parsed dict with tool_calls and optional text.
+
+    output_format selects local normalization, not provider JSON-schema mode.
+    Text-only requests cannot offer tools. Raw output is retained for both formats.
+    """
+
     model: str
     messages: list[dict[str, str]]
     tools: list[dict[str, Any]] = Field(default_factory=list)
     output_format: Literal["tool_calls", "text"] = "tool_calls"
     options: dict[str, Any] = Field(default_factory=dict)
     max_output_tokens: Annotated[int, Field(strict=True, ge=16)] = 256
+
+    @model_validator(mode="after")
+    def text_without_tools(self):
+        if self.output_format == "text" and self.tools:
+            raise ValueError("Text-only requests cannot offer tools")
+        return self
 
 
 class Usage(Contract):

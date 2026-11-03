@@ -248,7 +248,9 @@ def run(
             r.status in {"provider_error", "grader_error"} for r in records
         ):
             status = "completed_with_errors"
-        summary = summarize(records, len(trials))
+        summary = summarize(
+            records, len(trials), {c.id: len(cases) * spec.repetitions for c in spec.conditions}
+        )
         summary.update({"run_id": run_id, "run_status": status, "mode": mode})
         manifest = manifest.model_copy(
             update={

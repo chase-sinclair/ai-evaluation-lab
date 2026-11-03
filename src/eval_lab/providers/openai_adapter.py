@@ -76,10 +76,14 @@ class OpenAIProvider:
                 calls.append({"name": item.get("name"), "arguments": arguments})
         usage = raw.get("usage")
         parsed = {"tool_calls": calls, "text": getattr(response, "output_text", "")}
+        if request.output_format == "text":
+            parsed = parsed["text"]
         return ModelResponse(
             raw=raw,
             parsed=sanitize(parsed),
-            finish_status=raw.get("status", "unknown"),
+            finish_status="unexpected_tool_calls"
+            if request.output_format == "text" and calls
+            else raw.get("status", "unknown"),
             usage=Usage(input_tokens=usage["input_tokens"], output_tokens=usage["output_tokens"])
             if usage
             else None,

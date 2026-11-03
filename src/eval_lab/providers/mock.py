@@ -33,7 +33,7 @@ class MockProvider:
                 calls[0]["name"] = "customer_status"  # Deliberate wrong name.
         return ModelResponse(
             raw={"fixture_provider": True, "tool_calls": calls},
-            parsed={"tool_calls": calls},
+            parsed=text if request.output_format == "text" else {"tool_calls": calls},
             request_id=f"mock-{digest([request.model_dump(), self.seed])[:20]}",
             model=request.model,
             effective_options={"seed": self.seed},
