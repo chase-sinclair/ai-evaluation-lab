@@ -1,0 +1,195 @@
+catalog_version: 0.1.0
+last_verified: '2026-11-03'
+scope: Documentation, license text, schemas in documentation, and repository metadata only.
+benchmark_downloads_performed: false
+experiments_authorized: false
+cost_assumptions:
+  status: Illustrative planning arithmetic, not current provider prices or an approved budget.
+  input_usd_per_million: 1.0
+  output_usd_per_million: 4.0
+  formula: calls * (mean_input_tokens * input_rate + mean_output_tokens * output_rate) / 1000000
+  exclusions: No retries, cache discounts, tool-service fees, or local engineering/compute costs.
+sources:
+  - id: bfcl
+    name: Berkeley Function Calling Leaderboard
+    maintainers: UC Berkeley Gorilla/BFCL team; Shishir Patil, Huanzhi Mao, and collaborators
+    last_verified: '2026-11-03'
+    official_urls:
+      - https://gorilla.cs.berkeley.edu/leaderboard
+      - https://github.com/ShishirPatil/gorilla/tree/f7cf7359b7ac615a0b294831c5ba2bc95ee4a000/berkeley-function-call-leaderboard
+      - https://github.com/ShishirPatil/gorilla/blob/f7cf7359b7ac615a0b294831c5ba2bc95ee4a000/berkeley-function-call-leaderboard/bfcl_eval/data/README.md
+    citation: Patil et al., The Berkeley Function Calling Leaderboard (BFCL), ICML 2025.
+    relevance: EXP-001; paired accuracy under expanded tool choice sets.
+    ground_truth: Category answer files and AST/type-aware checker; irrelevance requires zero calls.
+    format: JSON objects per line in .json files; questions, function schemas, separate possible_answer.
+    version:
+      release: BFCL V4
+      candidate_commit: f7cf7359b7ac615a0b294831c5ba2bc95ee4a000
+      reference_package: bfcl-eval==2025.12.17
+      basis: Official leaderboard reproduction checkpoint; not a claim of latest repository HEAD.
+    size:
+      selected_category_metadata_bytes: {simple_python: 283274, irrelevance: 159940}
+      basis: GitHub contents metadata at pinned commit; answer files additional; no data fetched.
+      corpus_count: Varies by release/category; original documentation lists 400 simple AST and 240 relevance cases.
+    proposed_subset: 20 pilot cases (16 simple Python, 4 irrelevance), then 100 disjoint held-out cases if approved.
+    license:
+      verified: Apache-2.0 declared in pinned dataset README; repository license also inspected.
+      redistribution: Retain license and notices, identify modifications, preserve applicable NOTICE.
+      commercial_api_terms: Apache grants commercial use subject to terms; model-provider terms separate.
+    acquisition: After approval fetch only pinned category and answer files, sample IDs, record SHA-256 hashes.
+    dependencies_effort: Small JSON loader plus official-checker compatibility review; estimated 1-2 engineering days.
+    offline_availability: Local labels/checker can grade offline; paid inference only after approval.
+    splits_leakage: Public evaluation categories, not a private held-out split. Freeze disjoint pilot/evaluation IDs; contamination possible.
+    grading_ambiguity: Preserve allowed-value/type semantics; our exact fixture grader is not a BFCL-compatible replacement.
+    controls: Keep target/query fixed; inspect every added distractor for alternate valid calls and no-call invalidation.
+    call_cost_plan:
+      pilot_calls: 60
+      held_out_calls: 300
+      mean_input_tokens: 4000
+      mean_output_tokens: 250
+      hypothetical_pilot_usd: 0.30
+      hypothetical_held_out_usd: 1.50
+    verdict: adopt
+    rationale: Best first pilot fit; small files, declared data license, structured objective targets. Adoption is conditional on approval.
+    blockers: Review selected labels and distractors, preserve BFCL equivalences, approve provider and price snapshot; never label derivative score official BFCL.
+
+  - id: wdc_products
+    name: WDC Products
+    maintainers: Ralph Peeters, Reng Chiz Der, Christian Bizer; University of Mannheim
+    last_verified: '2026-11-03'
+    official_urls:
+      - https://webdatacommons.org/largescaleproductcorpus/wdc-products/index.html
+      - https://webdatacommons.org/
+    citation: Peeters, Der, and Bizer, WDC Products, EDBT 2024 (paper linked on official page).
+    relevance: EXP-002 rules versus LLM versus hybrid deployment-strategy comparison.
+    ground_truth: Binary pair labels or entity cluster IDs, generated from cleansed identifier clusters; inspect noise.
+    format: Gzipped JSONL; paired left/right attributes, label and pair_id.
+    version: Initial 2022-12-22 benchmark on PDC2020; archive checksum/revision unverified.
+    size: 11715 offers / 2162 entities; pair archives 20-21.6 MB; multiclass 2.3-2.5 MB; full cleansed corpus 4.3 GB (exclude).
+    proposed_subset: 100 stratified pairs from one frozen test variant, with separate development pairs.
+    license:
+      verified: Dataset-specific license NOT verified. WDC Apache statement concerns extraction software.
+      redistribution: Unknown for Products records and source-shop text; do not redistribute pending confirmation.
+      commercial_api_terms: Unknown for data; public download is not evidence of commercial permission.
+    acquisition: Official example links for schema review; after license approval, one hardness archive, not full corpus.
+    dependencies_effort: Standard-library gzip/json and deterministic pair metrics; estimated 0.5-1 engineering day after license resolution.
+    offline_availability: Matching labels and deterministic rules work offline after approved download.
+    splits_leakage: Nine train/validation/test sets combine into 27 variants; offers disjoint, entity overlap depends on seen/unseen design.
+    grading_ambiguity: Binary precision/recall/F1 plus accuracy; cluster-correlated pairs and noisy source IDs need audit.
+    call_cost_plan:
+      assumptions: 100 LLM decisions plus 20 hybrid escalations; rules use zero model calls.
+      calls: 120
+      mean_input_tokens: 1000
+      mean_output_tokens: 20
+      hypothetical_usd: 0.1296
+    verdict: investigate
+    rationale: Lowest inference-cost candidate and simple labels; licensing is a blocking publication/import question.
+    blockers: Confirm data-specific use/redistribution terms and archive hash; freeze thresholds on development only.
+
+  - id: bird_mini_dev
+    name: BIRD Mini-Dev, 2026 annotation update
+    maintainers: BIRD team; Xiaolong Li, Jinyang Li, Ge Qu, Binyuan Hui, Reynold Cheng, Chenhao Ma
+    last_verified: '2026-11-03'
+    official_urls:
+      - https://github.com/bird-bench/mini_dev/tree/1c49a375e76c471e218564da3f4617513d33e371
+      - https://huggingface.co/datasets/birdsql/bird_mini_dev/blob/main/README.md
+      - https://github.com/bird-bench/mini_dev/blob/1c49a375e76c471e218564da3f4617513d33e371/evaluation/evaluation_ex.py
+    citation: Li et al., Can LLM Already Serve as a Database Interface?, NeurIPS 36; citation supplied by maintainers.
+    relevance: EXP-003 paired schema-context detail, with fixed question/database/model.
+    ground_truth: Reference SQL executed on a pinned database; execution results, not SQL text equality.
+    format: JSONL with question_id, db_id, question, evidence and dialect-specific SQL; database files and schema descriptions required.
+    version:
+      release: 2026-10-28 update, 500 aligned IDs per dialect
+      documentation_commit: 1c49a375e76c471e218564da3f4617513d33e371
+      dataset_hf_commit: null
+      caveat: HF card verified; API/history retrieval failed, so dataset SHA and database/image digests remain unverified.
+    size: 500 questions across 11 original databases; 1500 dialect rows are not independent questions. Current archive bytes unverified.
+    proposed_subset: 20 SELECT-only SQLite pilot questions from one small database after verifying snapshot size and compatibility.
+    license:
+      verified: CC-BY-SA-4.0 in canonical dataset card and repository badge; root LICENSE fetch returned 404.
+      redistribution: Attribution, change notices, and ShareAlike for adaptations; verify underlying database notices separately.
+      commercial_api_terms: CC license allows commercial use subject to terms; external model/hosting terms separate.
+    acquisition: Canonical HF annotations at a pinned revision plus matching SQLite snapshot; no broad load_dataset or image pull now.
+    dependencies_effort: SQLite, JSON, read-only sandbox and timeouts; official evaluator uses func_timeout. Estimated 2-4 engineering days.
+    offline_availability: SQL execution can be offline once exact database snapshot is available.
+    splits_leakage: Mini-Dev is development data; dialect splits repeat IDs. Partition by question and preferably database; public contamination possible.
+    grading_ambiguity: Inspected EX checker uses set equality, ignoring order/duplicate rows. Declare bag/order/null/numeric semantics before extension.
+    call_cost_plan:
+      pilot_calls: 40
+      later_calls: 100
+      mean_input_tokens: 6000
+      mean_output_tokens: 500
+      hypothetical_pilot_usd: 0.32
+      hypothetical_later_usd: 0.80
+    verdict: investigate
+    rationale: Strongest direct database/FDE relevance, but snapshot setup and revised annotations need careful alignment.
+    blockers: Pin HF and DB revisions, verify size/underlying licenses, isolate read-only execution, audit equivalences; exclude CRUD extension.
+
+  - id: agentdojo
+    name: AgentDojo
+    maintainers: ETH Zurich SPY Lab and Invariant Labs; Edoardo Debenedetti and collaborators
+    last_verified: '2026-11-03'
+    official_urls:
+      - https://agentdojo.spylab.ai/
+      - https://agentdojo.spylab.ai/concepts/task_suite_and_tasks/
+      - https://github.com/ethz-spylab/agentdojo/tree/089ed468cf3ed0322acc66b0211f26d9d90dbf60
+      - https://arxiv.org/abs/2406.13352v3
+    citation: Debenedetti et al., AgentDojo, NeurIPS Datasets and Benchmarks 2024.
+    relevance: EXP-005 authorized task utility versus attacker success under controlled injections.
+    ground_truth: Python utility/security checks over environment states and traces; executable ground-truth task functions.
+    format: Python task suites plus environment.yaml and injection_vectors.yaml.
+    version: Candidate repository commit 089ed468cf3ed0322acc66b0211f26d9d90dbf60; benchmark-version must also be frozen.
+    size: Original paper reports 97 tasks and 629 security cases; current selected-version count and installation bytes unverified.
+    proposed_subset: 10 workspace tasks, one fixed attack versus clean control; bounded 8 model turns each.
+    license:
+      verified: MIT repository license inspected.
+      redistribution: Preserve copyright and license notice; audit external suite additions separately.
+      commercial_api_terms: MIT permits commercial software use; model/attack-service costs and terms remain separate.
+    acquisition: Later pin package/repo and suite version; avoid optional transformers/model downloads unless separately approved.
+    dependencies_effort: agentdojo Python package, stateful tool runtime, isolated fixtures; estimated 3-5 engineering days.
+    offline_availability: Simulated environment and checks can run locally; model inference needs approved provider or local model.
+    splits_leakage: Extensible benchmark, no conventional fixed train/dev/test established here; freeze held-out tasks and attack templates.
+    grading_ambiguity: Security callback can indicate attacker success; audit polarity and utility jointly, not just final answer text.
+    call_cost_plan:
+      assumptions: 10 tasks * 2 conditions * at most 8 calls; fixed attacks, no attack-generation model.
+      max_calls: 160
+      mean_input_tokens: 4000
+      mean_output_tokens: 300
+      hypothetical_usd: 0.832
+    verdict: defer/reject
+    rationale: Defer, not reject; valuable security study but requires multi-step engine work beyond this vertical slice.
+    blockers: Approve stateful runtime, versions, attack budget and isolation; multi-turn context can exceed planning assumptions.
+
+  - id: sec_edgar_xbrl
+    name: SEC EDGAR / XBRL
+    maintainers: U.S. Securities and Exchange Commission; facts submitted by individual filers
+    last_verified: '2026-11-03'
+    official_urls:
+      - https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+      - https://www.sec.gov/about/developer-resources
+      - https://www.sec.gov/about/webmaster-frequently-asked-questions
+    citation: SEC, EDGAR Application Programming Interfaces and Developer Resources; accessed 2026-11-03.
+    relevance: Optional EXP-006 model-tier comparison on financial extraction/calculation.
+    ground_truth: Tagged numeric facts with filing accession, taxonomy, period and unit; needs independently reviewed question construction.
+    format: JSON companyconcept/companyfacts/submissions; source filings HTML or Inline XBRL.
+    version: Continuously updated, no fixed release; freeze retrieval time, accession, taxonomy, and response SHA-256.
+    size: Entire feed unbounded; selected endpoint/filing sizes unknown until bounded requests. Avoid bulk ZIP files.
+    proposed_subset: One issuer, one accession/year, two concepts, 20 reviewed tasks; not a ready-made QA benchmark.
+    license:
+      verified: SEC FAQ states government-created and public EDGAR filing content are free to access/reuse; some other site content excluded.
+      redistribution: Record original links/provenance and review any third-party material; no blanket license inferred for all site assets.
+      commercial_api_terms: Public data API needs no key; obey fair access, at most 10 requests/second total and declared User-Agent/contact.
+    acquisition: After approval fetch a few companyconcept responses and specific filings with identified user agent; cache, throttle and back off.
+    dependencies_effort: HTTP/JSON, Decimal, HTML/XBRL parsing if needed; estimated 2-4 days mostly label/context review.
+    offline_availability: Frozen approved JSON and source excerpts can be graded offline.
+    splits_leakage: No standard splits; split by issuer/filing/time, not individual facts; well-known filings may be in model training.
+    grading_ambiguity: Period/unit/taxonomy/amendment mismatches; missing standard tag is not proof fact absent; frame dates differ across issuers.
+    call_cost_plan:
+      calls: 40
+      assumptions: 20 questions * 2 model configurations, each evaluated using the same hypothetical rates.
+      mean_input_tokens: 3000
+      mean_output_tokens: 200
+      hypothetical_usd: 0.152
+    verdict: defer/reject
+    rationale: Defer; low API cost but expensive label validation and ambiguous contexts make it a weak first flagship.
+    blockers: Approve narrow task definitions, source snapshots, fair-access identity, model-specific prices, and independent ground-truth review.

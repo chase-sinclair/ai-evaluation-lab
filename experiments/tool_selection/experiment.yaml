@@ -1,0 +1,23 @@
+id: tool_selection
+version: 0.1.0
+research_question: How does available tool count affect structured tool-call correctness?
+hypothesis: Expanded tool choice sets reduce full-call accuracy; mock runs do not test this hypothesis.
+primary_variable: tool_count
+dataset:
+  id: local-tool-fixtures
+  path: fixtures/cases.jsonl
+  version: 0.1.0
+conditions:
+  - id: tools_5
+    variables: {tool_count: 5}
+  - id: tools_15
+    variables: {tool_count: 15}
+  - id: tools_30
+    variables: {tool_count: 30}
+repetitions: 1
+seed: 42
+max_requests: 15
+max_spend_usd: 0
+max_output_tokens: 256
+grader_id: structured-tool-call
+grader_version: 0.1.0
