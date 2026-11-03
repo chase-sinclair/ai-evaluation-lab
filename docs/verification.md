@@ -57,7 +57,7 @@ with `UV_OFFLINE=1`: **48 passed**, no skips, all lint checks passed.
 - Optional inference settings are rejected; default server settings are recorded when
   reported. Live model/account compatibility has not been exercised.
 - No findings about real models, no external benchmark import, no public report/charts.
-- Local Git history is initialized; no changes have been pushed to GitHub.
+- Git history records the verified source revisions; raw run artifacts remain local and gitignored.
 
 ## Research and approval boundary
 
