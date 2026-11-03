@@ -2,6 +2,15 @@
 
 Date: November 3, 2026. Host: Windows, CPython 3.13.0, uv 0.13.7.
 
+## Workflow guidance update — November 3, 2026
+
+Synced the owner's Git/GitHub workflow guidance from commit `8652be1` and made
+phase verification updates explicit in `AGENTS.md`: record implementation, checks
+and outcomes, and unresolved limitations while preserving earlier evidence.
+Documentation-only change; no engine behavior changed. Validation: offline pytest
+**48 passed**, Ruff lint passed, Ruff format check passed (31 files), and diff
+whitespace check passed. No GitHub Actions workflows are currently configured.
+
 ## Completed implementation
 
 Installable Python package and lockfile; typed contracts; trusted local discovery;

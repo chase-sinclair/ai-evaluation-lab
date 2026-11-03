@@ -17,8 +17,9 @@ After completing each implementation phase:
 1. Run pytest, Ruff lint, and Ruff format checks.
 2. Review changes for unintended modifications,
    credentials, caches, and generated artifacts.
-3. Update relevant documentation and
-   docs/verification.md.
+3. Update relevant documentation and docs/verification.md after each major phase,
+   recording what was implemented, the commands/checks run and their outcomes,
+   and any remaining limitations, deferrals, or blockers. Preserve earlier phase evidence.
 4. Commit verified changes with a descriptive message.
 5. Push completed changes to origin/main.
 6. Verify GitHub Actions passes, when configured.
