@@ -30,7 +30,9 @@ artifacts remain local/ignored; no code, data, protocol or grades changed.
 Post-run checks: **85 pytest tests passed**, Ruff lint passed, Ruff format check
 passed (47 files), and diff whitespace check passed. Git confirms raw records are
 ignored; only these verification/progress notes and the derived findings are staged.
-Documentation-delivery CI is pending push.
+Documentation-delivery [CI run 41904991694](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41904991694)
+passed for commit `016e2b006dafa6ee89cba4cdcf77234051ebfda7` on the configured
+Python 3.12/3.13 matrix. A documentation-only follow-up records this result.
 No further paid execution is authorized; stop for review of the findings.
 
 ## Phase 2.5 — live integration preparation (November 4, 2026)
