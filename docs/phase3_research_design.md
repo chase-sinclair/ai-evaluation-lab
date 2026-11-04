@@ -2,6 +2,12 @@
 
 November 4, 2026 — **design for owner review; no new experiment implemented or run.**
 
+Subsequent evidence: the [Phase 3A bounded audit](phase3a_feasibility.md) does not
+support the 5/15/30 catalog sizes or original sample targets from its reviewed pool.
+Its smaller development recommendation and [prospective cache policy](phase3a_cache_policy.md)
+supersede those proposed parameters for the next owner review. This document retains
+the earlier design rationale; it is not an execution authorization.
+
 Recommend a bounded, single-call BFCL-derived study at **5, 15 and 30 tools**.
 Keep the hypothesis: expanding choice sets may reduce full-call correctness.
 Measure function selection separately to explain failures. Accept null and ceiling

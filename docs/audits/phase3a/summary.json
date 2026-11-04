@@ -1,0 +1,674 @@
+{
+  "audit_version": "phase3a-check-v1",
+  "evidence_hashes": {
+    "source_records.json": "7d7a6fa165813946a095e85593e1d8fadb6a6e0c2676c498dc9fefe26528a6d3",
+    "review.json": "b5636808df75ce404562f9688ea674a4668c086b24e19d5799de90a25e1a2302",
+    "catalogs.json": "13da8ab0dc0e8881f97784bb5574dde13d87e40a5bf4d4a0c93acff2157c3581"
+  },
+  "candidate_count": 40,
+  "eligible_labels": 12,
+  "excluded": 28,
+  "decision_counts": {
+    "eligible": 12,
+    "scope": 18,
+    "ambiguous": 4,
+    "underspecified": 2,
+    "schema_conflict": 1,
+    "intent_mismatch": 1,
+    "answer_conflict": 2
+  },
+  "candidate_families": 30,
+  "eligible_families": 11,
+  "eligible_domains": {
+    "finance": 2,
+    "professional_services": 2,
+    "workplace": 1,
+    "market_analytics": 2,
+    "retail": 3,
+    "hospitality": 2
+  },
+  "no_call_cases": 0,
+  "source_function_occurrences": 99,
+  "distinct_source_names": 97,
+  "name_repetitions": {
+    "weather_forecast": [
+      "63:1",
+      "66:2",
+      "75:0"
+    ]
+  },
+  "conflicting_name_definitions": {},
+  "unsupported_current_converter_refs": [
+    "77:1",
+    "82:0",
+    "82:1",
+    "88:0",
+    "88:1"
+  ],
+  "cases": [
+    {
+      "source_id": "multiple_57",
+      "target": "financial.compound_interest",
+      "target_ref": "57:0",
+      "domain": "finance",
+      "family": "interest",
+      "catalog_tools": 6,
+      "near": 2,
+      "adjacent": 3,
+      "far_native": 0,
+      "size_possible": {
+        "5": true,
+        "10": false,
+        "15": false,
+        "20": false,
+        "30": false
+      },
+      "original_quota_count_possible": {
+        "5": true,
+        "15": false,
+        "30": false
+      },
+      "gold_variants_schema_and_subset_grade_checked": 1,
+      "input_row_sha256": "e73d680d93516be3329c3d8495e95a9817bf270aea14438126ca05e41a24a42d",
+      "answer_row_sha256": "fcf046979feb50bcd0f1bd9e895266c17eadb583664eaad766271bafbbf65528",
+      "ordered_source_refs": [
+        "57:0",
+        "57:1",
+        "96:1",
+        "95:0",
+        "96:0",
+        "72:1"
+      ],
+      "wire_tools_sha256": "888606f6a4a555623e6941de54b0fa8ab294a3b63f2feb9a013c825616a2b0dc",
+      "wire_schema_bytes": 3858
+    },
+    {
+      "source_id": "multiple_58",
+      "target": "lawyer.search",
+      "target_ref": "58:1",
+      "domain": "professional_services",
+      "family": "legal_search",
+      "catalog_tools": 7,
+      "near": 0,
+      "adjacent": 6,
+      "far_native": 0,
+      "size_possible": {
+        "5": true,
+        "10": false,
+        "15": false,
+        "20": false,
+        "30": false
+      },
+      "original_quota_count_possible": {
+        "5": false,
+        "15": false,
+        "30": false
+      },
+      "gold_variants_schema_and_subset_grade_checked": 3,
+      "input_row_sha256": "f0fc71568c82e5bda4b450148039b1e579bd4c8a323ce7ccd5b87004a41c3077",
+      "answer_row_sha256": "e87a3bb04da5c79c90d482659d02a384165f397d74e631402b8ddd104e76b1e7",
+      "ordered_source_refs": [
+        "58:1",
+        "58:0",
+        "61:0",
+        "61:1",
+        "80:0",
+        "80:1",
+        "59:0"
+      ],
+      "wire_tools_sha256": "9ec99d020e329d75992d0f3ee5ed3165513135b201b8ffb77f0c0cd019d95583",
+      "wire_schema_bytes": 4289
+    },
+    {
+      "source_id": "multiple_59",
+      "target": "lawyer_finder",
+      "target_ref": "59:1",
+      "domain": "professional_services",
+      "family": "legal_search",
+      "catalog_tools": 7,
+      "near": 0,
+      "adjacent": 5,
+      "far_native": 1,
+      "size_possible": {
+        "5": true,
+        "10": false,
+        "15": false,
+        "20": false,
+        "30": false
+      },
+      "original_quota_count_possible": {
+        "5": false,
+        "15": false,
+        "30": false
+      },
+      "gold_variants_schema_and_subset_grade_checked": 20,
+      "input_row_sha256": "9a6a4f44f619c31ca0842d7be463ba45f0d159d2586e26fa10c9b01c55529572",
+      "answer_row_sha256": "3e2c84032f1a6736dc237cb3daa37067e6d01273c9a2b89fc1d5cf5e0466aa43",
+      "ordered_source_refs": [
+        "59:1",
+        "58:0",
+        "61:0",
+        "61:1",
+        "80:0",
+        "80:1",
+        "59:0"
+      ],
+      "wire_tools_sha256": "8d36c5b78fd4441df98670a8c820d60c315214dc676582433a0719590e6d1bdc",
+      "wire_schema_bytes": 4365
+    },
+    {
+      "source_id": "multiple_67",
+      "target": "translate",
+      "target_ref": "67:0",
+      "domain": "workplace",
+      "family": "translation",
+      "catalog_tools": 3,
+      "near": 2,
+      "adjacent": 0,
+      "far_native": 0,
+      "size_possible": {
+        "5": false,
+        "10": false,
+        "15": false,
+        "20": false,
+        "30": false
+      },
+      "original_quota_count_possible": {
+        "5": false,
+        "15": false,
+        "30": false
+      },
+      "gold_variants_schema_and_subset_grade_checked": 1,
+      "input_row_sha256": "39af79971c44c5cf04cb0cc2b63459692da262e78124a7785e5b5d86a7649797",
+      "answer_row_sha256": "00e7cfd1f79269ee57359b6d8d1e9fcb1710fdf227e1860953990e23633d1368",
+      "ordered_source_refs": [
+        "67:0",
+        "67:1",
+        "67:2"
+      ],
+      "wire_tools_sha256": "2ec0cf9cd357683f536d731a0292afbab2864e9424794d1e322bff6e5d7cf493",
+      "wire_schema_bytes": 1147
+    },
+    {
+      "source_id": "multiple_74",
+      "target": "art_auction.fetch_artwork_price",
+      "target_ref": "74:0",
+      "domain": "market_analytics",
+      "family": "auction_price",
+      "catalog_tools": 3,
+      "near": 0,
+      "adjacent": 1,
+      "far_native": 1,
+      "size_possible": {
+        "5": false,
+        "10": false,
+        "15": false,
+        "20": false,
+        "30": false
+      },
+      "original_quota_count_possible": {
+        "5": false,
+        "15": false,
+        "30": false
+      },
+      "gold_variants_schema_and_subset_grade_checked": 2,
+      "input_row_sha256": "2cc6de393cf76b0b828267d6b59746961a592dc6ad712205c82f52bf9ad3e43c",
+      "answer_row_sha256": "f8edb828b0b1f3f5e075c9144d605ff579f55684dd60c23753c61901ce566708",
+      "ordered_source_refs": [
+        "74:0",
+        "79:1",
+        "74:1"
+      ],
+      "wire_tools_sha256": "56e125ef74835bbdeceb0e0088145dc6ece8efe6aa4c4b3f41ce238d2236a583",
+      "wire_schema_bytes": 1556
+    },
+    {
+      "source_id": "multiple_75",
+      "target": "paint_color.trends",
+      "target_ref": "75:1",
+      "domain": "market_analytics",
+      "family": "paint_trends",
+      "catalog_tools": 5,
+      "near": 1,
+      "adjacent": 2,
+      "far_native": 1,
+      "size_possible": {
+        "5": true,
+        "10": false,
+        "15": false,
+        "20": false,
+        "30": false
+      },
+      "original_quota_count_possible": {
+        "5": false,
+        "15": false,
+        "30": false
+      },
+      "gold_variants_schema_and_subset_grade_checked": 4,
+      "input_row_sha256": "b7e6c2e9371bdc3d6be0e8eb0be40a12c6c58f4dde6c27d92d6ea03ec27008a1",
+      "answer_row_sha256": "7e7613fe2d50964b8e76bb748bdde419efe17772a3e2ec8b907ad7a4486c7597",
+      "ordered_source_refs": [
+        "75:1",
+        "75:2",
+        "61:0",
+        "61:1",
+        "75:0"
+      ],
+      "wire_tools_sha256": "c0a03d93ca6fd6d9b8e219e7ed3df915bf5442aa468c07059857b793689c8a4d",
+      "wire_schema_bytes": 2753
+    },
+    {
+      "source_id": "multiple_80",
+      "target": "music_shop.find_nearby",
+      "target_ref": "80:0",
+      "domain": "retail",
+      "family": "instrument_store",
+      "catalog_tools": 9,
+      "near": 0,
+      "adjacent": 8,
+      "far_native": 0,
+      "size_possible": {
+        "5": true,
+        "10": false,
+        "15": false,
+        "20": false,
+        "30": false
+      },
+      "original_quota_count_possible": {
+        "5": false,
+        "15": false,
+        "30": false
+      },
+      "gold_variants_schema_and_subset_grade_checked": 2,
+      "input_row_sha256": "a39b31b44ed8a4e6f13d28c9d5e9c3e087a919241ac4ff637c31fed7c741c3d5",
+      "answer_row_sha256": "2e9d6dcfb647c88d633cd1089417bbafd92c86d8fa7c8a0c67deee3c586d4c03",
+      "ordered_source_refs": [
+        "80:0",
+        "80:1",
+        "58:0",
+        "58:1",
+        "61:0",
+        "61:1",
+        "62:1",
+        "90:1",
+        "91:0"
+      ],
+      "wire_tools_sha256": "4fd9f60e79c7bf86da983b98defa93850dfedfa226a6fe49819e306dacd1e910",
+      "wire_schema_bytes": 5420
+    },
+    {
+      "source_id": "multiple_86",
+      "target": "BoardGameGeek.recommend",
+      "target_ref": "86:0",
+      "domain": "retail",
+      "family": "boardgame_recommendation",
+      "catalog_tools": 5,
+      "near": 1,
+      "adjacent": 3,
+      "far_native": 0,
+      "size_possible": {
+        "5": true,
+        "10": false,
+        "15": false,
+        "20": false,
+        "30": false
+      },
+      "original_quota_count_possible": {
+        "5": false,
+        "15": false,
+        "30": false
+      },
+      "gold_variants_schema_and_subset_grade_checked": 2,
+      "input_row_sha256": "08f35ca41da7d34f450e83e5fd6ff8deca9264bb9a0a82d0d87aed1e6ecf4278",
+      "answer_row_sha256": "207f19876b575d49ca633640ce3e37a175ede9c01f6daf5de3c505bdecb33e9a",
+      "ordered_source_refs": [
+        "86:0",
+        "86:1",
+        "87:0",
+        "87:1",
+        "87:2"
+      ],
+      "wire_tools_sha256": "60fd19170b28b93186bb504d8283526d441004b64afc96f1c743d53317c52edf",
+      "wire_schema_bytes": 2686
+    },
+    {
+      "source_id": "multiple_87",
+      "target": "games.update.find",
+      "target_ref": "87:1",
+      "domain": "retail",
+      "family": "software_update",
+      "catalog_tools": 5,
+      "near": 2,
+      "adjacent": 2,
+      "far_native": 0,
+      "size_possible": {
+        "5": true,
+        "10": false,
+        "15": false,
+        "20": false,
+        "30": false
+      },
+      "original_quota_count_possible": {
+        "5": true,
+        "15": false,
+        "30": false
+      },
+      "gold_variants_schema_and_subset_grade_checked": 2,
+      "input_row_sha256": "030e5d0eed1078a09718532ef90e35249dd143d6d2fb30b75a981485139d7215",
+      "answer_row_sha256": "8fdfffec1c5b1b2a201a9db01258587cf8d8b1d084a9834ca8f5d15bf504dee9",
+      "ordered_source_refs": [
+        "87:1",
+        "87:0",
+        "87:2",
+        "86:0",
+        "86:1"
+      ],
+      "wire_tools_sha256": "fbb0b5736c7ce3d50431e676488488877b20459d9af1f0a8b110dd9d9c3c166d",
+      "wire_schema_bytes": 2686
+    },
+    {
+      "source_id": "multiple_90",
+      "target": "restaurant.find_group",
+      "target_ref": "90:1",
+      "domain": "hospitality",
+      "family": "group_restaurant",
+      "catalog_tools": 19,
+      "near": 3,
+      "adjacent": 15,
+      "far_native": 0,
+      "size_possible": {
+        "5": true,
+        "10": true,
+        "15": true,
+        "20": false,
+        "30": false
+      },
+      "original_quota_count_possible": {
+        "5": true,
+        "15": false,
+        "30": false
+      },
+      "gold_variants_schema_and_subset_grade_checked": 2,
+      "input_row_sha256": "40ba5ebed0d66d01e277a6865d56cfe72afcbc34d762099af982aa2e74060892",
+      "answer_row_sha256": "ff27af8053e3d57032b6a1b9fca5adf522257fe1f4534e58a3951d9edb78166f",
+      "ordered_source_refs": [
+        "90:1",
+        "62:1",
+        "91:0",
+        "89:0",
+        "90:0",
+        "62:0",
+        "65:0",
+        "65:1",
+        "65:2",
+        "59:0",
+        "94:0",
+        "94:1",
+        "94:2",
+        "60:0",
+        "60:1",
+        "66:1",
+        "77:0",
+        "77:2",
+        "79:1"
+      ],
+      "wire_tools_sha256": "1ca64bee99c08df0b0707e0f7cd8610820aaaa025d99d1a767ef3e64ca4fa35c",
+      "wire_schema_bytes": 9724
+    },
+    {
+      "source_id": "multiple_94",
+      "target": "hotel_room_pricing.get",
+      "target_ref": "94:0",
+      "domain": "hospitality",
+      "family": "hotel_quote",
+      "catalog_tools": 19,
+      "near": 0,
+      "adjacent": 18,
+      "far_native": 0,
+      "size_possible": {
+        "5": true,
+        "10": true,
+        "15": true,
+        "20": false,
+        "30": false
+      },
+      "original_quota_count_possible": {
+        "5": false,
+        "15": false,
+        "30": false
+      },
+      "gold_variants_schema_and_subset_grade_checked": 1,
+      "input_row_sha256": "978635c637f5d888a74555649dec3a6b5c1d68a1c19d26daf721a110f9f8fc68",
+      "answer_row_sha256": "10800992113d4f7973ff83a1cd4461c7c91ed343478fd7d3447a6a8d42a2c4e6",
+      "ordered_source_refs": [
+        "94:0",
+        "90:0",
+        "90:1",
+        "62:0",
+        "62:1",
+        "91:0",
+        "89:0",
+        "65:0",
+        "65:1",
+        "65:2",
+        "59:0",
+        "94:1",
+        "94:2",
+        "60:0",
+        "60:1",
+        "66:1",
+        "77:0",
+        "77:2",
+        "79:1"
+      ],
+      "wire_tools_sha256": "c022d71265c2b2fc205c310206fe0c71072c42baeee78ccc7b229092a4ef9a23",
+      "wire_schema_bytes": 9724
+    },
+    {
+      "source_id": "multiple_95",
+      "target": "currency_exchange.convert",
+      "target_ref": "95:0",
+      "domain": "finance",
+      "family": "currency_conversion",
+      "catalog_tools": 7,
+      "near": 0,
+      "adjacent": 6,
+      "far_native": 0,
+      "size_possible": {
+        "5": true,
+        "10": false,
+        "15": false,
+        "20": false,
+        "30": false
+      },
+      "original_quota_count_possible": {
+        "5": false,
+        "15": false,
+        "30": false
+      },
+      "gold_variants_schema_and_subset_grade_checked": 1,
+      "input_row_sha256": "a2b298f8c112e40295db51c52f2eb94f35591249c3751f10fcb793fa11c6d6a6",
+      "answer_row_sha256": "1b884db385ca6800ebe765156798851c251ecea7c2dd04ca214c8c76354a9e00",
+      "ordered_source_refs": [
+        "95:0",
+        "57:0",
+        "57:1",
+        "96:0",
+        "96:1",
+        "72:1",
+        "95:1"
+      ],
+      "wire_tools_sha256": "be6a556ab58a769b7ac11463cbf676f1fcab183ef56002671b9eab9e443dce12",
+      "wire_schema_bytes": 4313
+    }
+  ],
+  "small_catalog_examples": [
+    {
+      "source_id": "multiple_57",
+      "tools_3": {
+        "source_refs": [
+          "57:1",
+          "96:1",
+          "57:0"
+        ],
+        "schema_bytes": 2038,
+        "sha256": "58f0651bd57775e0da8a6f4f13726d2a51cd5dc2fa0e3f1163db073a6ec02f88",
+        "names": [
+          "financial_simple_interest",
+          "portfolio_future_value",
+          "financial_compound_interest"
+        ],
+        "description_bytes_median": 29,
+        "property_count_median": 4,
+        "target_index": 2
+      },
+      "tools_5": {
+        "source_refs": [
+          "95:0",
+          "57:1",
+          "96:1",
+          "96:0",
+          "57:0"
+        ],
+        "schema_bytes": 3267,
+        "sha256": "2599beba29f21e0b4200937a5894e519791620ff86c0c5b7b9b647ed6353fd79",
+        "names": [
+          "currency_exchange_convert",
+          "financial_simple_interest",
+          "portfolio_future_value",
+          "get_stock_info",
+          "financial_compound_interest"
+        ],
+        "description_bytes_median": 69,
+        "property_count_median": 4,
+        "target_index": 4
+      }
+    },
+    {
+      "source_id": "multiple_86",
+      "tools_3": {
+        "source_refs": [
+          "86:1",
+          "86:0",
+          "87:2"
+        ],
+        "schema_bytes": 1767,
+        "sha256": "f4e6c289b3dcac69cd2775e42abd87d2b0251d0a8034c5538c4a6a1400641e31",
+        "names": [
+          "AmazonGameStore_recommend",
+          "BoardGameGeek_recommend",
+          "games_price_find"
+        ],
+        "description_bytes_median": 92,
+        "property_count_median": 3,
+        "target_index": 1
+      },
+      "tools_5": {
+        "source_refs": [
+          "87:1",
+          "86:1",
+          "86:0",
+          "87:2",
+          "87:0"
+        ],
+        "schema_bytes": 2686,
+        "sha256": "88d7bcbd5e9316b645ca5427bdbd22e6b99b3571924dc4a96f32e05bde759415",
+        "names": [
+          "games_update_find",
+          "AmazonGameStore_recommend",
+          "BoardGameGeek_recommend",
+          "games_price_find",
+          "games_reviews_find"
+        ],
+        "description_bytes_median": 86,
+        "property_count_median": 3,
+        "target_index": 2
+      }
+    },
+    {
+      "source_id": "multiple_87",
+      "tools_3": {
+        "source_refs": [
+          "87:0",
+          "87:2",
+          "87:1"
+        ],
+        "schema_bytes": 1335,
+        "sha256": "6b778d2ee691b25b3056bf00ac21fdee2b67caa693c3b9f018ec71580c1b6322",
+        "names": [
+          "games_reviews_find",
+          "games_price_find",
+          "games_update_find"
+        ],
+        "description_bytes_median": 74,
+        "property_count_median": 2,
+        "target_index": 2
+      },
+      "tools_5": {
+        "source_refs": [
+          "87:0",
+          "87:2",
+          "86:1",
+          "87:1",
+          "86:0"
+        ],
+        "schema_bytes": 2686,
+        "sha256": "cae92dff80810077904432cafdd17355546a71efb12244aa7a5126fe8d851819",
+        "names": [
+          "games_reviews_find",
+          "games_price_find",
+          "AmazonGameStore_recommend",
+          "games_update_find",
+          "BoardGameGeek_recommend"
+        ],
+        "description_bytes_median": 86,
+        "property_count_median": 3,
+        "target_index": 3
+      }
+    },
+    {
+      "source_id": "multiple_90",
+      "tools_3": {
+        "source_refs": [
+          "62:1",
+          "90:1",
+          "90:0"
+        ],
+        "schema_bytes": 1783,
+        "sha256": "59aeabf62b5437e2a926046ccff88322324630ae19a1667e6e7ecb3552f2723d",
+        "names": [
+          "restaurant_find_nearby",
+          "restaurant_find_group",
+          "events_find_event"
+        ],
+        "description_bytes_median": 92,
+        "property_count_median": 3,
+        "target_index": 1
+      },
+      "tools_5": {
+        "source_refs": [
+          "62:1",
+          "90:1",
+          "94:0",
+          "90:0",
+          "94:1"
+        ],
+        "schema_bytes": 2824,
+        "sha256": "85242abb0fd155cd3d9e8b3807b41b9bf8d45870b5c1ceae2b1c2f5fe13febc2",
+        "names": [
+          "restaurant_find_nearby",
+          "restaurant_find_group",
+          "hotel_room_pricing_get",
+          "events_find_event",
+          "car_rental_pricing_get"
+        ],
+        "description_bytes_median": 77,
+        "property_count_median": 3,
+        "target_index": 1
+      }
+    }
+  ],
+  "independent_human_reviews": 0,
+  "model_requests": 0,
+  "scope": "Automated integrity/schema/count checks; semantic eligibility and uniqueness are AI-assisted judgments."
+}

@@ -1,0 +1,287 @@
+{
+  "version": "phase3a-review-v1",
+  "reviewer": "AI-assisted source/schema review by Codex; no independent human verification",
+  "eligibility_scope": "Single-call business-service routing: finance, professional services, workplace utility, market analytics, retail or hospitality. Label eligibility is distinct from catalog/study readiness.",
+  "records": [
+    {
+      "source_id": "multiple_57",
+      "decision": "eligible",
+      "domain": "finance",
+      "family": "interest",
+      "reason": "Complete principal/rate/term/frequency; compound versus simple interest is explicit."
+    },
+    {
+      "source_id": "multiple_58",
+      "decision": "eligible",
+      "domain": "professional_services",
+      "family": "legal_search",
+      "reason": "Divorce specialist and location are supplied; exclude lawyer_finder from expanded catalog because it is an alternative valid route."
+    },
+    {
+      "source_id": "multiple_59",
+      "decision": "eligible",
+      "domain": "professional_services",
+      "family": "legal_search",
+      "reason": "Criminal specialization/location supplied; optional experience can be omitted. Exclude lawyer.search as an alternate route; same family as 58."
+    },
+    {
+      "source_id": "multiple_60",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "environmental_forecast",
+      "reason": "Weather forecast, outside the selected enterprise operation scope."
+    },
+    {
+      "source_id": "multiple_61",
+      "decision": "ambiguous",
+      "domain": "professional_services",
+      "family": "landscape_search",
+      "reason": "Generic home-renovation expertise may include small-space garden design; native alternative is not demonstrably non-substitutable."
+    },
+    {
+      "source_id": "multiple_62",
+      "decision": "underspecified",
+      "domain": "hospitality",
+      "family": "park_search",
+      "reason": "Requests closest park but tool only promises nearby matches, with no distance/ranking guarantee."
+    },
+    {
+      "source_id": "multiple_63",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "environmental_forecast",
+      "reason": "Air-quality forecast rather than a business operation."
+    },
+    {
+      "source_id": "multiple_64",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "environmental_forecast",
+      "reason": "UV forecast rather than a business operation."
+    },
+    {
+      "source_id": "multiple_65",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "route_information",
+      "reason": "Geographical distance question; no business operation is stated."
+    },
+    {
+      "source_id": "multiple_66",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "route_information",
+      "reason": "Traffic forecast rather than a booking, transaction or business metric."
+    },
+    {
+      "source_id": "multiple_67",
+      "decision": "eligible",
+      "domain": "workplace",
+      "family": "translation",
+      "reason": "Supplied text and languages; sentiment and count do not translate. Generic workplace utility, not a real workplace transaction."
+    },
+    {
+      "source_id": "multiple_68",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "library_search",
+      "reason": "Public-library discovery, outside the selected enterprise operation scope."
+    },
+    {
+      "source_id": "multiple_69",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "personality",
+      "reason": "Personal personality classification, outside scope."
+    },
+    {
+      "source_id": "multiple_70",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "historical_monarchs",
+      "reason": "Historical trivia, outside scope."
+    },
+    {
+      "source_id": "multiple_71",
+      "decision": "ambiguous",
+      "domain": "non_business",
+      "family": "population_statistics",
+      "reason": "Broad bureau-statistics tool can also retrieve population statistics; requested country has no field or declared default."
+    },
+    {
+      "source_id": "multiple_72",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "population_statistics",
+      "reason": "Public population fact, not a specified business operation; GDP distractor remains usable for finance catalogs."
+    },
+    {
+      "source_id": "multiple_73",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "religion_origin",
+      "reason": "Religious-history trivia, outside scope."
+    },
+    {
+      "source_id": "multiple_74",
+      "decision": "eligible",
+      "domain": "market_analytics",
+      "family": "auction_price",
+      "reason": "Artwork/artist and all-platform scope supplied. Route selection only; does not establish actual auction availability."
+    },
+    {
+      "source_id": "multiple_75",
+      "decision": "eligible",
+      "domain": "market_analytics",
+      "family": "paint_trends",
+      "reason": "Living-room trend with documented Daily default; weather remains an unrelated mandatory native distractor."
+    },
+    {
+      "source_id": "multiple_77",
+      "decision": "ambiguous",
+      "domain": "hospitality",
+      "family": "artwork_discovery",
+      "reason": "Tourist-attraction search may retrieve sculptures; famous constraint is not represented. Nonstandard optional keyword also blocks current conversion."
+    },
+    {
+      "source_id": "multiple_78",
+      "decision": "ambiguous",
+      "domain": "hospitality",
+      "family": "museum_information",
+      "reason": "General tourist-spot information can cover the museum; both tools have string defaults for array parameters."
+    },
+    {
+      "source_id": "multiple_79",
+      "decision": "schema_conflict",
+      "domain": "hospitality",
+      "family": "museum_information",
+      "reason": "Mandatory native restaurant tool describes default any outside its cuisine enum. Do not silently repair the catalog."
+    },
+    {
+      "source_id": "multiple_80",
+      "decision": "eligible",
+      "domain": "retail",
+      "family": "instrument_store",
+      "reason": "Location, guitar sales and violin lessons are explicitly represented."
+    },
+    {
+      "source_id": "multiple_82",
+      "decision": "intent_mismatch",
+      "domain": "non_business",
+      "family": "music_generation",
+      "reason": "User asks to play a song, but selected function only generates music; optional keyword also unsupported."
+    },
+    {
+      "source_id": "multiple_83",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "sports_statistics",
+      "reason": "Football goal statistics outside enterprise operations scope."
+    },
+    {
+      "source_id": "multiple_84",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "sports_statistics",
+      "reason": "Football ranking outside scope."
+    },
+    {
+      "source_id": "multiple_85",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "sports_statistics",
+      "reason": "Match scores outside scope."
+    },
+    {
+      "source_id": "multiple_86",
+      "decision": "eligible",
+      "domain": "retail",
+      "family": "boardgame_recommendation",
+      "reason": "Named store, player count and category fix the route; alternate retailer is not substitutable. Recommendation quality is not measured."
+    },
+    {
+      "source_id": "multiple_87",
+      "decision": "eligible",
+      "domain": "retail",
+      "family": "software_update",
+      "reason": "Game and platform supplied; reviews and price cannot provide patches; region defaults to global."
+    },
+    {
+      "source_id": "multiple_88",
+      "decision": "answer_conflict",
+      "domain": "retail",
+      "family": "game_engagement",
+      "reason": "Gold additionally accepts PC despite blank default and no platform in query. Requires unapproved external knowledge; optional keyword unsupported."
+    },
+    {
+      "source_id": "multiple_89",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "recipe_search",
+      "reason": "Personal recipe recommendation, outside enterprise operation scope."
+    },
+    {
+      "source_id": "multiple_90",
+      "decision": "eligible",
+      "domain": "hospitality",
+      "family": "group_restaurant",
+      "reason": "Cuisine/location/party size explicit; alternative native event tool cannot return restaurants."
+    },
+    {
+      "source_id": "multiple_91",
+      "decision": "underspecified",
+      "domain": "non_business",
+      "family": "recipe_search",
+      "reason": "Ingredient search cannot guarantee apple pie; key accepts apple pie as an ingredient. Also outside business scope."
+    },
+    {
+      "source_id": "multiple_92",
+      "decision": "answer_conflict",
+      "domain": "retail",
+      "family": "dietary_stock",
+      "reason": "Vegetarian request is narrowed to vegan in the key; vegan-only results do not enumerate all requested vegetarian options."
+    },
+    {
+      "source_id": "multiple_94",
+      "decision": "eligible",
+      "domain": "hospitality",
+      "family": "hotel_quote",
+      "reason": "Explicit price inquiry, with hotel, room specification and nights; no booking or unspecified travel date is required by this price API."
+    },
+    {
+      "source_id": "multiple_95",
+      "decision": "eligible",
+      "domain": "finance",
+      "family": "currency_conversion",
+      "reason": "Amount, currencies and current-rate instruction supplied; live_conversion=true required by the key."
+    },
+    {
+      "source_id": "multiple_96",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "quadratic",
+      "reason": "Pure mathematics; related to already exposed development family."
+    },
+    {
+      "source_id": "multiple_97",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "circle_geometry",
+      "reason": "Pure mathematics; related to already exposed development family."
+    },
+    {
+      "source_id": "multiple_98",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "circle_geometry",
+      "reason": "Pure mathematics; related to already exposed development family."
+    },
+    {
+      "source_id": "multiple_99",
+      "decision": "scope",
+      "domain": "non_business",
+      "family": "derivative",
+      "reason": "Pure mathematics; related to already exposed development family."
+    }
+  ]
+}

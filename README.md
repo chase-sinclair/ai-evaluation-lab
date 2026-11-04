@@ -71,6 +71,10 @@ a [specific BFCL pilot protocol for review](docs/bfcl_pilot_protocol.md).
 Phase 2.6 adds [cache accounting and prospective grading diagnostics](docs/phase2_6_hardening.md).
 The [Phase 3 research design](docs/phase3_research_design.md) proposes a business-tool
 study for owner review; no further live execution is authorized.
+The [Phase 3A feasibility audit](docs/phase3a_feasibility.md) reviewed 40 new records:
+the original catalog/sample targets are unsupported by that pool. A smaller
+development probe and [explicit-30m accounting policy](docs/phase3a_cache_policy.md)
+are proposed for review; neither is connected to live execution.
 
 ## Research boundary
 

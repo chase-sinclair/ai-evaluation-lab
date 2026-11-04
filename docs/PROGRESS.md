@@ -1,5 +1,46 @@
 # Progress — November 4, 2026
 
+## Phase 3A — bounded feasibility audit verified; delivery pending
+
+Audited exactly 40 new BFCL multiple records (57–99 except previously reviewed
+76/81/93), preserving source schemas/keys/URLs/revision/hashes with Apache-2.0
+attribution. All are development-exposed, with no held-out selection. Counts:
+12 provisionally label-eligible records, 11 eligible families, six business-function
+domains, 28 exclusions and zero no-call cases. Review is AI-assisted; independent
+human reviews: zero. The original 12-case/120-case plans are not supported by this pool.
+
+Constructed source-only catalogs for all 12 label-eligible cases (3–19 tools).
+None supports 30 tools or the old 15/30 near/adjacent quotas. Only three have enough
+tools for the old five-tool quota. Proposed replacement: four development cases
+57/86/87/90 at 3/5 tools, eight requests, descriptive only, with unchanged native
+tools and two added adjacent functions. Broader enterprise conclusions are a no-go.
+Future held-out target is conditionally 24 untouched families (18 positive/6 native
+no-call), subject to a separate audit; availability is not established.
+
+Cache policy proposal: explicitly request implicit 30m caching with no explicit
+breakpoints. Keep reported-usage estimates, policy-based estimates and conservative
+reserves separate; absent lifetime detail stays unknown. Offline calculator/tests
+validate actual-body hashes, byte limits, tier/TTL/counter/output violations and
+SDK serialization. It has no network calls and is not connected to the live runner.
+Existing engine/adapter, smoke artifacts, old grades and frozen requests are unchanged.
+
+Verification: 136 offline tests passed; Ruff lint/format (58 files), locked offline
+sync, source-cache audit reproduction, frozen 54-request check and four smoke hash
+comparisons passed. Source refetch was bounded to two small category files; the
+cache-added final newline was explicitly reconciled and exact upstream hashes kept.
+No additional candidate records were semantically reviewed, no paid calls, no
+full experiment/held-out implementation, and no raw results or credentials added.
+
+Files: docs/audits/phase3a (source evidence, review ledger, catalog samples, summary,
+license/notices); phase3a_feasibility.md and phase3a_cache_policy.md; two offline
+scripts, test_phase3a.py, README/design links, progress and verification.
+Latest prior verified delivery: 3637a8c0db9be41b0b155b2ba7e3cb0cfc329278.
+Remaining delivery: commit/push and verify GitHub Actions. Then STOP for owner review.
+Next approval gates: reduced design/scope; independent human review and another
+bounded source audit; prospective accounting assumptions; minimal future integration;
+then frozen requests/settings/prices and explicit spending approval. Proposed
+eight-request reserve $0.032896, spending cap $0.05; no execution is authorized.
+
 ## Phase 2.6 — complete, pushed and CI verified
 
 Workstream A is complete: cache-aware usage partitions and component pricing,

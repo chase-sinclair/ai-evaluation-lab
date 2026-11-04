@@ -1,0 +1,258 @@
+{
+  "version": "phase3a-catalog-v1",
+  "reference_format": "candidate numeric suffix : zero-based original function index",
+  "status": "AI-assisted sample catalogs only; not model requests or approved production catalogs",
+  "native_tools_required": true,
+  "catalogs": [
+    {
+      "source_id": "multiple_57",
+      "near": [
+        "57:1",
+        "96:1"
+      ],
+      "adjacent": [
+        "95:0",
+        "96:0",
+        "72:1"
+      ],
+      "far_native": [],
+      "uniqueness_rationale": "Simple interest does not compound; portfolio projection requires a stock and has no quarterly compounding parameter. FX, stock lookup and GDP do not compute this specified compound-interest amount."
+    },
+    {
+      "source_id": "multiple_58",
+      "near": [],
+      "adjacent": [
+        "58:0",
+        "61:0",
+        "61:1",
+        "80:0",
+        "80:1",
+        "59:0"
+      ],
+      "far_native": [],
+      "uniqueness_rationale": "Other providers are medical, renovation, landscaping, music, fitness or rental services, not divorce lawyers. The alternate legal-search function from 59 is deliberately absent."
+    },
+    {
+      "source_id": "multiple_59",
+      "near": [],
+      "adjacent": [
+        "58:0",
+        "61:0",
+        "61:1",
+        "80:0",
+        "80:1"
+      ],
+      "far_native": [
+        "59:0"
+      ],
+      "uniqueness_rationale": "Other professional services cannot return criminal lawyers. Alternate lawyer.search is absent; car rental is retained only because it is native."
+    },
+    {
+      "source_id": "multiple_67",
+      "near": [
+        "67:1",
+        "67:2"
+      ],
+      "adjacent": [],
+      "far_native": [],
+      "uniqueness_rationale": "Sentiment analysis and word counting cannot translate text."
+    },
+    {
+      "source_id": "multiple_74",
+      "near": [],
+      "adjacent": [
+        "79:1"
+      ],
+      "far_native": [
+        "74:1"
+      ],
+      "uniqueness_rationale": "Exhibition information cannot quote an artwork price; library search is a mandatory unrelated native tool. Artwork-search tool has unsupported optional metadata and was not silently converted."
+    },
+    {
+      "source_id": "multiple_75",
+      "near": [
+        "75:2"
+      ],
+      "adjacent": [
+        "61:0",
+        "61:1"
+      ],
+      "far_native": [
+        "75:0"
+      ],
+      "uniqueness_rationale": "House prices are not paint-color popularity; finding professionals cannot return a paint trend. Weather is mandatory native but unrelated."
+    },
+    {
+      "source_id": "multiple_80",
+      "near": [],
+      "adjacent": [
+        "80:1",
+        "58:0",
+        "58:1",
+        "61:0",
+        "61:1",
+        "62:1",
+        "90:1",
+        "91:0"
+      ],
+      "far_native": [],
+      "uniqueness_rationale": "None of the medical/legal/renovation/gym/restaurant tools promises guitar stock and violin lessons."
+    },
+    {
+      "source_id": "multiple_86",
+      "near": [
+        "86:1"
+      ],
+      "adjacent": [
+        "87:0",
+        "87:1",
+        "87:2"
+      ],
+      "far_native": [],
+      "uniqueness_rationale": "Amazon is not the requested BoardGameGeek store. Video-game reviews, patches and prices do not recommend two-player board games from that store."
+    },
+    {
+      "source_id": "multiple_87",
+      "near": [
+        "87:0",
+        "87:2"
+      ],
+      "adjacent": [
+        "86:0",
+        "86:1"
+      ],
+      "far_native": [],
+      "uniqueness_rationale": "Reviews and prices do not supply a patch; board-game recommendations cannot provide Xbox software updates."
+    },
+    {
+      "source_id": "multiple_90",
+      "near": [
+        "62:1",
+        "91:0",
+        "89:0"
+      ],
+      "adjacent": [
+        "90:0",
+        "62:0",
+        "65:0",
+        "65:1",
+        "65:2",
+        "59:0",
+        "94:0",
+        "94:1",
+        "94:2",
+        "60:0",
+        "60:1",
+        "66:1",
+        "77:0",
+        "77:2",
+        "79:1"
+      ],
+      "far_native": [],
+      "uniqueness_rationale": "Other restaurant searches lack the requested location/cuisine/group-size combination. Events, lodging/transport pricing, routes and attractions do not return restaurants satisfying party size."
+    },
+    {
+      "source_id": "multiple_94",
+      "near": [],
+      "adjacent": [
+        "90:0",
+        "90:1",
+        "62:0",
+        "62:1",
+        "91:0",
+        "89:0",
+        "65:0",
+        "65:1",
+        "65:2",
+        "59:0",
+        "94:1",
+        "94:2",
+        "60:0",
+        "60:1",
+        "66:1",
+        "77:0",
+        "77:2",
+        "79:1"
+      ],
+      "far_native": [],
+      "uniqueness_rationale": "All alternatives concern restaurants, events, transport, routes or attractions; none prices a room in the specified Hilton hotel."
+    },
+    {
+      "source_id": "multiple_95",
+      "near": [],
+      "adjacent": [
+        "57:0",
+        "57:1",
+        "96:0",
+        "96:1",
+        "72:1",
+        "95:1"
+      ],
+      "far_native": [],
+      "uniqueness_rationale": "Interest, portfolio, stock and GDP tools cannot perform current EUR-to-USD conversion. Native unit conversion concerns measurement units rather than exchange rates."
+    }
+  ],
+  "small_pilot_examples": [
+    {
+      "source_id": "multiple_57",
+      "tools_3": [
+        "57:1",
+        "96:1",
+        "57:0"
+      ],
+      "tools_5": [
+        "95:0",
+        "57:1",
+        "96:1",
+        "96:0",
+        "57:0"
+      ]
+    },
+    {
+      "source_id": "multiple_86",
+      "tools_3": [
+        "86:1",
+        "86:0",
+        "87:2"
+      ],
+      "tools_5": [
+        "87:1",
+        "86:1",
+        "86:0",
+        "87:2",
+        "87:0"
+      ]
+    },
+    {
+      "source_id": "multiple_87",
+      "tools_3": [
+        "87:0",
+        "87:2",
+        "87:1"
+      ],
+      "tools_5": [
+        "87:0",
+        "87:2",
+        "86:1",
+        "87:1",
+        "86:0"
+      ]
+    },
+    {
+      "source_id": "multiple_90",
+      "tools_3": [
+        "62:1",
+        "90:1",
+        "90:0"
+      ],
+      "tools_5": [
+        "62:1",
+        "90:1",
+        "94:0",
+        "90:0",
+        "94:1"
+      ]
+    }
+  ],
+  "sample_ordering": "SHA-256 of phase3a-order-v1|20261104|source_id|source_ref; nested restriction; no outcome-based reroll"
+}

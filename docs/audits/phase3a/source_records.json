@@ -1,0 +1,3928 @@
+{
+  "audit_version": "phase3a-v1",
+  "source_revision": "f7cf7359b7ac615a0b294831c5ba2bc95ee4a000",
+  "license": "Apache-2.0",
+  "exposure": "development-only",
+  "source_file_sha256": "aef168155ebd74b7ac2401198b201343bc7d16d7a3d7e0d4e6d8ee82c6969b2a",
+  "answer_file_sha256": "244e00ce9395df948bcafc7bee64e8f9c87ef70887587d83cae45b13699f3047",
+  "cache_note": "Existing cache files add one final newline. Parsed rows match the pinned upstream files exactly; hashes above identify upstream bytes, not cache bytes.",
+  "input_url": "https://github.com/ShishirPatil/gorilla/blob/f7cf7359b7ac615a0b294831c5ba2bc95ee4a000/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multiple.json",
+  "answer_url": "https://github.com/ShishirPatil/gorilla/blob/f7cf7359b7ac615a0b294831c5ba2bc95ee4a000/berkeley-function-call-leaderboard/bfcl_eval/data/possible_answer/BFCL_v4_multiple.json",
+  "records": [
+    {
+      "source_id": "multiple_57",
+      "original_row": {
+        "id": "multiple_57",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Can you please calculate the compound interest for a principle of $1000, annual rate of 5% over 10 years with 4 compound per year."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "financial.compound_interest",
+            "description": "Calculates compound interest.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "principle": {
+                  "type": "integer",
+                  "description": "The initial amount of money that is being compounded."
+                },
+                "rate": {
+                  "type": "float",
+                  "description": "The annual interest rate, as a decimal. E.g., an annual interest rate of 5% would be represented as 0.05."
+                },
+                "time": {
+                  "type": "integer",
+                  "description": "The amount of time, in years, that the money is to be compounded for."
+                },
+                "n": {
+                  "type": "integer",
+                  "description": "The number of times interest applied per time period."
+                }
+              },
+              "required": [
+                "principle",
+                "rate",
+                "time",
+                "n"
+              ]
+            }
+          },
+          {
+            "name": "financial.simple_interest",
+            "description": "Calculates simple interest.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "principle": {
+                  "type": "float",
+                  "description": "The initial amount of money that interest is being calculated for."
+                },
+                "rate": {
+                  "type": "float",
+                  "description": "The annual interest rate, as a decimal. E.g., an annual interest rate of 5% would be represented as 0.05."
+                },
+                "time": {
+                  "type": "integer",
+                  "description": "The amount of time, in years, that the money is to be compounded for."
+                }
+              },
+              "required": [
+                "principle",
+                "rate",
+                "time"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_57",
+        "ground_truth": [
+          {
+            "financial.compound_interest": {
+              "principle": [
+                1000
+              ],
+              "rate": [
+                0.05
+              ],
+              "time": [
+                10
+              ],
+              "n": [
+                4
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_58",
+      "original_row": {
+        "id": "multiple_58",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Search for divorce law specialists in Los Angeles"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "doctor.search",
+            "description": "Search for a doctor based on area of expertise and location",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city and state, e.g. Los Angeles, CA"
+                },
+                "specialization": {
+                  "type": "string",
+                  "description": "Medical specialization. For example, 'Cardiology', 'Orthopedics', 'Gynecology'."
+                }
+              },
+              "required": [
+                "location",
+                "specialization"
+              ]
+            }
+          },
+          {
+            "name": "lawyer.search",
+            "description": "Search for a lawyer based on area of expertise and location",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city and state, e.g. Los Angeles, CA"
+                },
+                "expertise": {
+                  "type": "string",
+                  "description": "Area of legal expertise. For example, 'Marriage', 'Criminal', 'Business'."
+                }
+              },
+              "required": [
+                "location",
+                "expertise"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_58",
+        "ground_truth": [
+          {
+            "lawyer.search": {
+              "location": [
+                "Los Angeles",
+                "Los Angeles, CA",
+                "LA"
+              ],
+              "expertise": [
+                "Divorce"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_59",
+      "original_row": {
+        "id": "multiple_59",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Find lawyers specializing in criminal law near me in New York."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "car_rental",
+            "description": "Rent a car near you based on your preference.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "Your location"
+                },
+                "car_type": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Type of cars that you want to rent."
+                },
+                "fuel_type": {
+                  "type": "string",
+                  "description": "Preferred fuel type of car. Gas, diesel, electric, hybrid etc. Default 'gas'"
+                }
+              },
+              "required": [
+                "location",
+                "car_type"
+              ]
+            }
+          },
+          {
+            "name": "lawyer_finder",
+            "description": "Locate lawyers near you based on their specialization.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "Your location"
+                },
+                "specialization": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Specializations of lawyer that you are looking for."
+                },
+                "experience": {
+                  "type": "integer",
+                  "description": "Experience in years that lawyer has. Default 1"
+                }
+              },
+              "required": [
+                "location",
+                "specialization"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_59",
+        "ground_truth": [
+          {
+            "lawyer_finder": {
+              "location": [
+                "New York",
+                "New York, NY",
+                "NY",
+                "New York City",
+                "NYC"
+              ],
+              "specialization": [
+                [
+                  "Criminal Law"
+                ],
+                [
+                  "criminal law"
+                ]
+              ],
+              "experience": [
+                "",
+                1
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_60",
+      "original_row": {
+        "id": "multiple_60",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "What will be the humidity and temperature for New York City after 7 days?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "event_search",
+            "description": "Search for events happening in a specific location for a future date.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city that you want to get the event information for."
+                },
+                "days": {
+                  "type": "integer",
+                  "description": "Number of future days for which to retrieve the event information."
+                }
+              },
+              "required": [
+                "location",
+                "days"
+              ]
+            }
+          },
+          {
+            "name": "movie_showtimes",
+            "description": "Retrieve movie showtimes for a specific location and for a future date.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city that you want to get the movie showtimes for."
+                },
+                "days": {
+                  "type": "integer",
+                  "description": "Number of future days for which to retrieve the showtimes."
+                }
+              },
+              "required": [
+                "location",
+                "days"
+              ]
+            }
+          },
+          {
+            "name": "humidity_temperature_forecast",
+            "description": "Retrieve forecast of humidity and temperature for a specific location and for a future date.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city that you want to get the humidity and temperature forecast for."
+                },
+                "days": {
+                  "type": "integer",
+                  "description": "Number of future days for which to retrieve the forecast."
+                }
+              },
+              "required": [
+                "location",
+                "days"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_60",
+        "ground_truth": [
+          {
+            "humidity_temperature_forecast": {
+              "location": [
+                "New York City",
+                "NYC"
+              ],
+              "days": [
+                7
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_61",
+      "original_row": {
+        "id": "multiple_61",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Find a Landscape Architect who is experienced 5 years in small space garden design in Portland"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "home_renovation_expert.find_specialty",
+            "description": "Search for a home renovation expert based on the location and specialization",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "City and state where the professional is based, e.g. Portland, OR."
+                },
+                "specialization": {
+                  "type": "string",
+                  "description": "A specific area of expertise, such as kitchen or bathroom renovation."
+                },
+                "years_experience": {
+                  "type": "integer",
+                  "description": "Number of years the professional has been practicing in their field. (optional)",
+                  "default": 0
+                }
+              },
+              "required": [
+                "location",
+                "specialization"
+              ]
+            }
+          },
+          {
+            "name": "landscape_architect.find_specialty",
+            "description": "Search for a landscape architect based on the location and specialization",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "City and state where the professional is based, e.g. Portland, OR."
+                },
+                "specialization": {
+                  "type": "string",
+                  "description": "A specific area of expertise. Common areas include residential design, commercial design, urban design, and park design."
+                },
+                "years_experience": {
+                  "type": "integer",
+                  "description": "Number of years the professional has been practicing in their field. (optional)",
+                  "default": 0
+                }
+              },
+              "required": [
+                "location",
+                "specialization"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_61",
+        "ground_truth": [
+          {
+            "landscape_architect.find_specialty": {
+              "location": [
+                "Portland",
+                "Portland, OR"
+              ],
+              "specialization": [
+                "small space garden design"
+              ],
+              "years_experience": [
+                5
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_62",
+      "original_row": {
+        "id": "multiple_62",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Find me the closest nature park that allows camping and has scenic views in Boston, MA."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "nature_park.find_nearby",
+            "description": "Locate nearby nature parks based on specific criteria like camping availability and scenic views.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city and state, e.g. Boston, MA."
+                },
+                "features": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "Camping",
+                      "Scenic View",
+                      "Trails",
+                      "Picnic Areas"
+                    ]
+                  },
+                  "description": "Preferred features in nature park."
+                }
+              },
+              "required": [
+                "location",
+                "features"
+              ]
+            }
+          },
+          {
+            "name": "restaurant.find_nearby",
+            "description": "Locate nearby restaurants based on specific criteria.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city and state, e.g. Boston, MA."
+                },
+                "amenities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "Delivery",
+                      "Outdoor Seating",
+                      "Vegetarian Options"
+                    ]
+                  },
+                  "description": "Preferred amenities in restaurant. Default empty array []"
+                }
+              },
+              "required": [
+                "location"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_62",
+        "ground_truth": [
+          {
+            "nature_park.find_nearby": {
+              "location": [
+                "Boston, MA",
+                "Boston"
+              ],
+              "features": [
+                [
+                  "Camping",
+                  "Scenic View"
+                ],
+                [
+                  "Scenic View",
+                  "Camping"
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_63",
+      "original_row": {
+        "id": "multiple_63",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "What will be the air quality index of New York for the next week?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "air_quality_forecast",
+            "description": "Retrieve an air quality forecast for a specific location and time frame.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city that you want to get the air quality forecast for."
+                },
+                "days": {
+                  "type": "integer",
+                  "description": "Number of days for the forecast."
+                }
+              },
+              "required": [
+                "location",
+                "days"
+              ]
+            }
+          },
+          {
+            "name": "weather_forecast",
+            "description": "Retrieve a weather forecast for a specific location and time frame.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city that you want to get the weather for."
+                },
+                "days": {
+                  "type": "integer",
+                  "description": "Number of days for the forecast."
+                }
+              },
+              "required": [
+                "location",
+                "days"
+              ]
+            }
+          },
+          {
+            "name": "news",
+            "description": "Retrieve news articles for a specific topic.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "topic": {
+                  "type": "string",
+                  "description": "The topic that you want to get the news for."
+                },
+                "days": {
+                  "type": "integer",
+                  "description": "Number of past days for which to retrieve the news."
+                }
+              },
+              "required": [
+                "topic",
+                "days"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_63",
+        "ground_truth": [
+          {
+            "air_quality_forecast": {
+              "location": [
+                "New York",
+                "New York, NY",
+                "New York City",
+                "NYC"
+              ],
+              "days": [
+                7
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_64",
+      "original_row": {
+        "id": "multiple_64",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Give me the UV index for Tokyo for tomorrow, June01 2023."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "uv_index.get_future",
+            "description": "Retrieve UV index data for a specified location and date.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The location to retrieve the UV index for."
+                },
+                "date": {
+                  "type": "string",
+                  "description": "The date for the UV index, in the format mm-dd-yyyy."
+                }
+              },
+              "required": [
+                "location",
+                "date"
+              ]
+            }
+          },
+          {
+            "name": "rainfall_prediction",
+            "description": "Retrieve rainfall data for a specified location and date.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The location to retrieve the rainfall prediction for."
+                },
+                "date": {
+                  "type": "string",
+                  "description": "The date for the rainfall prediction, in the format mm/dd/yyyy.'"
+                }
+              },
+              "required": [
+                "location",
+                "date"
+              ]
+            }
+          },
+          {
+            "name": "snowfall_prediction",
+            "description": "Retrieve snowfall data for a specified location and date.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The location to retrieve the snowfall prediction for."
+                },
+                "date": {
+                  "type": "string",
+                  "description": "The date for the snowfall prediction, in the format mm-dd-yyyy."
+                }
+              },
+              "required": [
+                "location",
+                "date"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_64",
+        "ground_truth": [
+          {
+            "uv_index.get_future": {
+              "location": [
+                "Tokyo"
+              ],
+              "date": [
+                "06-01-2023"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_65",
+      "original_row": {
+        "id": "multiple_65",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Find the distance between New York City and Los Angeles."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "timezones.get_difference",
+            "description": "Find the time difference between two cities.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "city1": {
+                  "type": "string",
+                  "description": "The first city."
+                },
+                "city2": {
+                  "type": "string",
+                  "description": "The second city."
+                }
+              },
+              "required": [
+                "city1",
+                "city2"
+              ]
+            }
+          },
+          {
+            "name": "geodistance.find",
+            "description": "Find the distance between two cities on the globe.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "origin": {
+                  "type": "string",
+                  "description": "The originating city for the distance calculation."
+                },
+                "destination": {
+                  "type": "string",
+                  "description": "The destination city for the distance calculation."
+                },
+                "unit": {
+                  "type": "string",
+                  "default": "miles",
+                  "description": "The unit of measure for the distance calculation."
+                }
+              },
+              "required": [
+                "origin",
+                "destination"
+              ]
+            }
+          },
+          {
+            "name": "flights.search",
+            "description": "Find flights between two cities.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "from_city": {
+                  "type": "string",
+                  "description": "The city to depart from."
+                },
+                "to_city": {
+                  "type": "string",
+                  "description": "The city to arrive at."
+                },
+                "date": {
+                  "type": "string",
+                  "default": "next monday",
+                  "description": "The date to fly."
+                }
+              },
+              "required": [
+                "from_city",
+                "to_city"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_65",
+        "ground_truth": [
+          {
+            "geodistance.find": {
+              "origin": [
+                "New York City",
+                "NYC"
+              ],
+              "destination": [
+                "Los Angeles",
+                "LA"
+              ],
+              "unit": [
+                "miles",
+                ""
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_66",
+      "original_row": {
+        "id": "multiple_66",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "How much traffic should I expect from Las Vegas to Los Angeles this weekend?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "calculate_distance",
+            "description": "Calculate distance between two locations.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "start_point": {
+                  "type": "string",
+                  "description": "Starting point of the journey."
+                },
+                "end_point": {
+                  "type": "string",
+                  "description": "Ending point of the journey."
+                }
+              },
+              "required": [
+                "start_point",
+                "end_point"
+              ]
+            }
+          },
+          {
+            "name": "traffic_estimate",
+            "description": "Estimate traffic from one location to another for a specific time period.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "start_location": {
+                  "type": "string",
+                  "description": "Starting location for the journey."
+                },
+                "end_location": {
+                  "type": "string",
+                  "description": "Ending location for the journey."
+                },
+                "time_period": {
+                  "type": "string",
+                  "description": "Specify a time frame to estimate the traffic, 'now' for current, 'weekend' for the coming weekend. Default 'now'"
+                }
+              },
+              "required": [
+                "start_location",
+                "end_location"
+              ]
+            }
+          },
+          {
+            "name": "weather_forecast",
+            "description": "Retrieve a weather forecast for a specific location and time frame.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city that you want to get the weather for."
+                },
+                "days": {
+                  "type": "integer",
+                  "description": "Number of days for the forecast."
+                }
+              },
+              "required": [
+                "location",
+                "days"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_66",
+        "ground_truth": [
+          {
+            "traffic_estimate": {
+              "start_location": [
+                "Las Vegas"
+              ],
+              "end_location": [
+                "Los Angeles"
+              ],
+              "time_period": [
+                "weekend"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_67",
+      "original_row": {
+        "id": "multiple_67",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Translate Hello, how are you? from English to French."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "translate",
+            "description": "Translate text from a specified source language to a specified target language.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "description": "The text to be translated."
+                },
+                "source_language": {
+                  "type": "string",
+                  "description": "The language the text is currently in."
+                },
+                "target_language": {
+                  "type": "string",
+                  "description": "The language the text will be translated to."
+                }
+              },
+              "required": [
+                "text",
+                "source_language",
+                "target_language"
+              ]
+            }
+          },
+          {
+            "name": "sentiment_analysis",
+            "description": "Analyze the sentiment of a specified text.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "description": "The text whose sentiment is to be analyzed."
+                }
+              },
+              "required": [
+                "text"
+              ]
+            }
+          },
+          {
+            "name": "word_count",
+            "description": "Count the number of words in the given text.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "description": "The text that the number of words is to be calculated."
+                }
+              },
+              "required": [
+                "text"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_67",
+        "ground_truth": [
+          {
+            "translate": {
+              "text": [
+                "Hello, how are you?"
+              ],
+              "source_language": [
+                "English"
+              ],
+              "target_language": [
+                "French"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_68",
+      "original_row": {
+        "id": "multiple_68",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Can I find a historical fiction book at the New York public library?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "library.search_books",
+            "description": "Search for a book in a given library with optional parameters",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "Name or city of library"
+                },
+                "genre": {
+                  "type": "string",
+                  "description": "Genre of the book"
+                },
+                "title": {
+                  "type": "string",
+                  "description": "Title of the book. Default ''"
+                }
+              },
+              "required": [
+                "location",
+                "genre"
+              ]
+            }
+          },
+          {
+            "name": "google.books_search",
+            "description": "Search for a book in the Google Books library with optional parameters",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "genre": {
+                  "type": "string",
+                  "description": "Genre of the book"
+                },
+                "title": {
+                  "type": "string",
+                  "description": "Title of the book. Default ''"
+                }
+              },
+              "required": [
+                "genre"
+              ]
+            }
+          },
+          {
+            "name": "openlibrary.books_search",
+            "description": "Search for a book in the Open Library with optional parameters",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "genre": {
+                  "type": "string",
+                  "description": "Genre of the book"
+                },
+                "title": {
+                  "type": "string",
+                  "description": "Title of the book. Default ''"
+                }
+              },
+              "required": [
+                "genre"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_68",
+        "ground_truth": [
+          {
+            "library.search_books": {
+              "location": [
+                "New York",
+                "New York, NY",
+                "New York City",
+                "New York City, NY",
+                "NYC",
+                "New York public library"
+              ],
+              "genre": [
+                "Historical Fiction",
+                "historical fiction"
+              ],
+              "title": [
+                ""
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_69",
+      "original_row": {
+        "id": "multiple_69",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Determine my personality type based on the five factor model with given information: I'm talkative, gets nervous easily, has few artistic interests, tend to be lazy and has a forgiving nature."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "MBTI.analyse",
+            "description": "Analyse personality based on the Myers-Briggs Type Indicator (MBTI) which sorts for preferences and generates a 4-letter personality type.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "thinking_vs_feeling": {
+                  "type": "string",
+                  "description": "Preference of user between thinking and feeling."
+                },
+                "introverted_vs_extroverted": {
+                  "type": "string",
+                  "description": "Preference of user between introverted and extroverted."
+                },
+                "judging_vs_perceiving": {
+                  "type": "string",
+                  "description": "Preference of user between judging and perceiving."
+                },
+                "sensing_vs_intuition": {
+                  "type": "string",
+                  "description": "Preference of user between sensing and intuition."
+                }
+              },
+              "required": [
+                "thinking_vs_feeling",
+                "introverted_vs_extroverted",
+                "judging_vs_perceiving",
+                "sensing_vs_intuition"
+              ]
+            }
+          },
+          {
+            "name": "five_factor_model.analyse",
+            "description": "Analyse personality based on the five-factor model, also known as the Big Five, which measures openness, conscientiousness, extraversion, agreeableness, and neuroticism.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "talkative": {
+                  "type": "boolean",
+                  "description": "Indicates if the user is talkative."
+                },
+                "nervous": {
+                  "type": "boolean",
+                  "description": "Indicates if the user gets nervous easily."
+                },
+                "artistic_interests": {
+                  "type": "boolean",
+                  "description": "Indicates if the user has many artistic interests."
+                },
+                "lazy": {
+                  "type": "boolean",
+                  "description": "Indicates if the user tends to be lazy."
+                },
+                "forgiving": {
+                  "type": "boolean",
+                  "description": "Indicates if the user is forgiving."
+                }
+              },
+              "required": [
+                "talkative",
+                "nervous",
+                "artistic_interests",
+                "lazy",
+                "forgiving"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_69",
+        "ground_truth": [
+          {
+            "five_factor_model.analyse": {
+              "talkative": [
+                true
+              ],
+              "nervous": [
+                true
+              ],
+              "artistic_interests": [
+                false
+              ],
+              "lazy": [
+                true
+              ],
+              "forgiving": [
+                true
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_70",
+      "original_row": {
+        "id": "multiple_70",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Who were the kings of France during the 18th century?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "european_history.get_events",
+            "description": "Provides a list of major historical events based on the specified country and century.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "country": {
+                  "type": "string",
+                  "description": "Country name."
+                },
+                "century": {
+                  "type": "integer",
+                  "description": "Century as an integer. For example, for the 1700s, input '18'."
+                },
+                "event_type": {
+                  "type": "string",
+                  "description": "Type of the event such as 'war', 'invention', 'revolution' etc. This field is optional. Default is 'all'"
+                }
+              },
+              "required": [
+                "country",
+                "century"
+              ]
+            }
+          },
+          {
+            "name": "european_history.get_culture",
+            "description": "Provides information on cultural trends, art movements, philosophical ideas based on the specified country and century.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "country": {
+                  "type": "string",
+                  "description": "Country name."
+                },
+                "century": {
+                  "type": "integer",
+                  "description": "Century as an integer. For example, for the 1700s, input '18'."
+                },
+                "aspect": {
+                  "type": "string",
+                  "description": "Aspect of culture such as 'literature', 'art', 'philosophy' etc. This field is optional. Default 'any'"
+                }
+              },
+              "required": [
+                "country",
+                "century"
+              ]
+            }
+          },
+          {
+            "name": "european_history.get_monarchs",
+            "description": "Provides a list of monarchs based on the specified country and century.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "country": {
+                  "type": "string",
+                  "description": "Country name."
+                },
+                "century": {
+                  "type": "integer",
+                  "description": "Century as an integer. For example, for the 1700s, input '18'."
+                }
+              },
+              "required": [
+                "country",
+                "century"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_70",
+        "ground_truth": [
+          {
+            "european_history.get_monarchs": {
+              "country": [
+                "France"
+              ],
+              "century": [
+                18
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_71",
+      "original_row": {
+        "id": "multiple_71",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "How many veterans were there in the United States in the year 1954?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "get_bureau_statistics",
+            "description": "Retrieve statistical data for a specific year and statistical category",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "year": {
+                  "type": "integer",
+                  "description": "The year for which to retrieve the statistical data"
+                },
+                "category": {
+                  "type": "string",
+                  "description": "The statistical category (e.g., employment, crime, health)"
+                }
+              },
+              "required": [
+                "year",
+                "category"
+              ]
+            }
+          },
+          {
+            "name": "get_population",
+            "description": "Retrieve population data for a specific year and population category",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "year": {
+                  "type": "integer",
+                  "description": "The year for which to retrieve the population data"
+                },
+                "category": {
+                  "type": "string",
+                  "description": "The population category (e.g., total, veterans, women)"
+                }
+              },
+              "required": [
+                "year",
+                "category"
+              ]
+            }
+          },
+          {
+            "name": "get_demographics",
+            "description": "Retrieve demographic data for a specific year and demographic category",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "year": {
+                  "type": "integer",
+                  "description": "The year for which to retrieve the demographic data"
+                },
+                "category": {
+                  "type": "string",
+                  "description": "The demographic category (e.g., gender, race, age)"
+                }
+              },
+              "required": [
+                "year",
+                "category"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_71",
+        "ground_truth": [
+          {
+            "get_population": {
+              "year": [
+                1954
+              ],
+              "category": [
+                "veterans"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_72",
+      "original_row": {
+        "id": "multiple_72",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "What was the population of California in 1970?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "us_history.population_by_state_year",
+            "description": "Retrieve historical population data for a specific U.S. state and year.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "state": {
+                  "type": "string",
+                  "description": "The U.S. state for which to retrieve the population."
+                },
+                "year": {
+                  "type": "integer",
+                  "description": "The year for which to retrieve the population."
+                }
+              },
+              "required": [
+                "state",
+                "year"
+              ]
+            }
+          },
+          {
+            "name": "us_economy.gdp_by_state_year",
+            "description": "Retrieve historical GDP data for a specific U.S. state and year.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "state": {
+                  "type": "string",
+                  "description": "The U.S. state for which to retrieve the GDP."
+                },
+                "year": {
+                  "type": "integer",
+                  "description": "The year for which to retrieve the GDP."
+                },
+                "adjustment": {
+                  "type": "string",
+                  "description": "The type of adjustment for inflation, 'Real' or 'Nominal'. Optional, 'Nominal' by default.",
+                  "enum": [
+                    "Real",
+                    "Nominal"
+                  ]
+                }
+              },
+              "required": [
+                "state",
+                "year"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_72",
+        "ground_truth": [
+          {
+            "us_history.population_by_state_year": {
+              "state": [
+                "California",
+                "CA"
+              ],
+              "year": [
+                1970
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_73",
+      "original_row": {
+        "id": "multiple_73",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Who was the founder of Buddhism and where was it originated?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "religion.get_core_beliefs",
+            "description": "Retrieves the core beliefs and practices of a specified religion.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "religion": {
+                  "type": "string",
+                  "description": "Name of the religion for which to retrieve the core beliefs and practices."
+                }
+              },
+              "required": [
+                "religion"
+              ]
+            }
+          },
+          {
+            "name": "religion.get_origin",
+            "description": "Retrieves the origin and founder information of a specified religion.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "religion": {
+                  "type": "string",
+                  "description": "Name of the religion for which to retrieve the founder and origin."
+                }
+              },
+              "required": [
+                "religion"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_73",
+        "ground_truth": [
+          {
+            "religion.get_origin": {
+              "religion": [
+                "Buddhism"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_74",
+      "original_row": {
+        "id": "multiple_74",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Find the price of Van Gogh's painting 'Starry Night' on all auction platforms."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "art_auction.fetch_artwork_price",
+            "description": "Fetch the price of a specific artwork on the auction platform.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "artwork_name": {
+                  "type": "string",
+                  "description": "The name of the artwork to be searched."
+                },
+                "artist": {
+                  "type": "string",
+                  "description": "The artist's name to ensure the precise artwork is fetched."
+                },
+                "platform": {
+                  "type": "string",
+                  "description": "The platform where the artwork's price should be fetched from.",
+                  "default": "all"
+                }
+              },
+              "required": [
+                "artwork_name",
+                "artist"
+              ]
+            }
+          },
+          {
+            "name": "library.search_book",
+            "description": "Search for a specific book in the library.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "The title of the book to be searched."
+                },
+                "author": {
+                  "type": "string",
+                  "description": "The author of the book to ensure the precise book is fetched."
+                },
+                "platform": {
+                  "type": "string",
+                  "description": "The library where the book should be fetched from.",
+                  "default": "all"
+                }
+              },
+              "required": [
+                "title",
+                "author"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_74",
+        "ground_truth": [
+          {
+            "art_auction.fetch_artwork_price": {
+              "artwork_name": [
+                "Starry Night"
+              ],
+              "artist": [
+                "Van Gogh"
+              ],
+              "platform": [
+                "all",
+                ""
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_75",
+      "original_row": {
+        "id": "multiple_75",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Which paint color is currently most popular for living rooms?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "weather_forecast",
+            "description": "Retrieve a weather forecast for a specific location and time frame.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city that you want to get the weather for."
+                },
+                "days": {
+                  "type": "integer",
+                  "description": "Number of days for the forecast."
+                }
+              },
+              "required": [
+                "location",
+                "days"
+              ]
+            }
+          },
+          {
+            "name": "paint_color.trends",
+            "description": "Find the most popular paint color for a specific area in the home.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "room": {
+                  "type": "string",
+                  "description": "Type of the room e.g. Living room, Bathroom etc."
+                },
+                "period": {
+                  "type": "string",
+                  "enum": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Yearly"
+                  ],
+                  "description": "The period over which to check the paint color trend. Default 'Daily'"
+                }
+              },
+              "required": [
+                "room"
+              ]
+            }
+          },
+          {
+            "name": "house_price_trends",
+            "description": "Find the average house price in a specific area.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "City and state, e.g. New York, NY."
+                },
+                "period": {
+                  "type": "string",
+                  "enum": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Yearly"
+                  ],
+                  "description": "The period over which to check the price trend. Default 'Yearly'"
+                }
+              },
+              "required": [
+                "location"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_75",
+        "ground_truth": [
+          {
+            "paint_color.trends": {
+              "room": [
+                "living room",
+                "Living room"
+              ],
+              "period": [
+                "",
+                "Daily"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_77",
+      "original_row": {
+        "id": "multiple_77",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Search for famous contemporary sculptures in New York."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "tourist_attraction.find",
+            "description": "Search for tourist attractions based on type and location.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "attractionType": {
+                  "type": "string",
+                  "description": "Type of the attraction. E.g., monument, museum, park."
+                },
+                "location": {
+                  "type": "string",
+                  "description": "Location or city where the attraction is."
+                }
+              },
+              "required": [
+                "attractionType",
+                "location"
+              ]
+            }
+          },
+          {
+            "name": "artwork_search.find",
+            "description": "Search for artworks based on type and location.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "description": "Type of the artwork. E.g., painting, sculpture, installation."
+                },
+                "location": {
+                  "type": "string",
+                  "description": "Location or city where the artwork is."
+                },
+                "era": {
+                  "type": "string",
+                  "description": "Time period of the artwork, can be 'contemporary', 'modern', 'renaissance', etc. Default 'contemporary'",
+                  "optional": "True"
+                }
+              },
+              "required": [
+                "type",
+                "location"
+              ]
+            }
+          },
+          {
+            "name": "park_search.find",
+            "description": "Search for parks based on facilities and location.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "facilities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "List of facilities in the park."
+                },
+                "location": {
+                  "type": "string",
+                  "description": "Location or city where the park is."
+                }
+              },
+              "required": [
+                "facilities",
+                "location"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_77",
+        "ground_truth": [
+          {
+            "artwork_search.find": {
+              "type": [
+                "sculpture"
+              ],
+              "location": [
+                "New York",
+                "New York, NY",
+                "New York City",
+                "NYC"
+              ],
+              "era": [
+                "contemporary",
+                ""
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_78",
+      "original_row": {
+        "id": "multiple_78",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Get me information about Natural History Museum in London including timings, exhibitions, and accessibility."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "tourist_spot_info",
+            "description": "Retrieve information about a specific tourist spot.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "spot": {
+                  "type": "string",
+                  "description": "The name of the tourist spot you want to get information for."
+                },
+                "city": {
+                  "type": "string",
+                  "description": "The city where the tourist spot is located."
+                },
+                "details": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "timing",
+                      "attractions",
+                      "tickets",
+                      "accessibility",
+                      "history"
+                    ]
+                  },
+                  "description": "Details of the tourist spot to get information on. For multiple details, separate them by comma.",
+                  "default": "timing, attractions"
+                }
+              },
+              "required": [
+                "spot",
+                "city"
+              ]
+            }
+          },
+          {
+            "name": "museum_info",
+            "description": "Retrieve information about a specific museum.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "museum": {
+                  "type": "string",
+                  "description": "The name of the museum you want to get information for."
+                },
+                "city": {
+                  "type": "string",
+                  "description": "The city where the museum is located."
+                },
+                "features": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "timings",
+                      "exhibitions",
+                      "accessibility",
+                      "events",
+                      "history"
+                    ]
+                  },
+                  "description": "Features of the museum to get information on. For multiple features, separate them by comma.",
+                  "default": "timings, exhibitions"
+                }
+              },
+              "required": [
+                "museum",
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_78",
+        "ground_truth": [
+          {
+            "museum_info": {
+              "museum": [
+                "Natural History Museum"
+              ],
+              "city": [
+                "London"
+              ],
+              "features": [
+                [
+                  "timings",
+                  "exhibitions",
+                  "accessibility"
+                ],
+                [
+                  "exhibitions",
+                  "timings",
+                  "accessibility"
+                ],
+                [
+                  "exhibitions",
+                  "accessibility",
+                  "timings"
+                ],
+                [
+                  "accessibility",
+                  "timings",
+                  "exhibitions"
+                ],
+                [
+                  "accessibility",
+                  "exhibitions",
+                  "timings"
+                ],
+                [
+                  "timings",
+                  "accessibility",
+                  "exhibitions"
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_79",
+      "original_row": {
+        "id": "multiple_79",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Find art exhibitions for the upcoming month in the Museum of Modern Art, New York."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "restaurant_info",
+            "description": "Get restaurant information for a specific area.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "Location for which to find restaurants."
+                },
+                "food_type": {
+                  "type": "string",
+                  "description": "Type of cuisine for which to find restaurants. Default 'any'",
+                  "enum": [
+                    "Italian",
+                    "Chinese",
+                    "Mexican",
+                    "American"
+                  ]
+                }
+              },
+              "required": [
+                "location"
+              ]
+            }
+          },
+          {
+            "name": "exhibition_info",
+            "description": "Get exhibition information for a specific museum.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "museum_name": {
+                  "type": "string",
+                  "description": "Name of the museum for which to find exhibitions."
+                },
+                "month": {
+                  "type": "integer",
+                  "description": "Number of upcoming months for which to retrieve exhibition details. Default 1"
+                }
+              },
+              "required": [
+                "museum_name"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_79",
+        "ground_truth": [
+          {
+            "exhibition_info": {
+              "museum_name": [
+                "Museum of Modern Art",
+                "MOMA",
+                "Museum of Modern Art, New York"
+              ],
+              "month": [
+                "",
+                1
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_80",
+      "original_row": {
+        "id": "multiple_80",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Find a local guitar shop that also offers violin lessons in Nashville."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "music_shop.find_nearby",
+            "description": "Locate nearby music shops based on specific criteria like instrument lessons availability.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city and state, e.g. Nashville, TN"
+                },
+                "services": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "Guitar Lessons",
+                      "Violin Lessons",
+                      "Piano Lessons",
+                      "Ukulele Lessons"
+                    ]
+                  },
+                  "description": "Types of instrument lessons offered in the shop. Default empty array"
+                },
+                "instruments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "Guitars",
+                      "Violins",
+                      "Pianos",
+                      "Drums"
+                    ]
+                  },
+                  "description": "Types of instruments sold in the shop. Default empty array"
+                }
+              },
+              "required": [
+                "location"
+              ]
+            }
+          },
+          {
+            "name": "gym.find_nearby",
+            "description": "Locate nearby gyms based on specific criteria like types of fitness classes availability.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city and state, e.g. Nashville, TN"
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "Yoga",
+                      "Spin",
+                      "Zumba",
+                      "CrossFit"
+                    ]
+                  },
+                  "description": "Types of fitness classes offered in the gym. Default empty array"
+                },
+                "equipment": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "Treadmills",
+                      "Ellipticals",
+                      "Weight Machines",
+                      "Free Weights"
+                    ]
+                  },
+                  "description": "Types of gym equipment available. Default empty array"
+                }
+              },
+              "required": [
+                "location"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_80",
+        "ground_truth": [
+          {
+            "music_shop.find_nearby": {
+              "location": [
+                "Nashville, TN",
+                "Nashville"
+              ],
+              "services": [
+                [
+                  "Violin Lessons"
+                ]
+              ],
+              "instruments": [
+                [
+                  "Guitars"
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_82",
+      "original_row": {
+        "id": "multiple_82",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Play a song in C Major key at tempo 120 bpm."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "music.generate",
+            "description": "Generate a piece of music given a key, tempo, and time signature.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "description": "The key of the piece, e.g., C Major."
+                },
+                "tempo": {
+                  "type": "integer",
+                  "description": "Tempo of the piece in beats per minute."
+                },
+                "time_signature": {
+                  "type": "string",
+                  "description": "Time signature of the piece, e.g., 4/4. Default '4/4'",
+                  "optional": true
+                }
+              },
+              "required": [
+                "key",
+                "tempo"
+              ]
+            }
+          },
+          {
+            "name": "audio.generate",
+            "description": "Generate an audio signal given a frequency, amplitude, and duration.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "frequency": {
+                  "type": "float",
+                  "description": "Frequency of the audio signal in Hz."
+                },
+                "amplitude": {
+                  "type": "float",
+                  "description": "Amplitude of the audio signal."
+                },
+                "duration": {
+                  "type": "integer",
+                  "description": "Duration of the audio signal in seconds. Default 1",
+                  "optional": true
+                }
+              },
+              "required": [
+                "frequency",
+                "amplitude"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_82",
+        "ground_truth": [
+          {
+            "music.generate": {
+              "key": [
+                "C Major"
+              ],
+              "tempo": [
+                120
+              ],
+              "time_signature": [
+                "",
+                "4/4"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_83",
+      "original_row": {
+        "id": "multiple_83",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "How many goals has Lionel Messi scored for Barcelona till date?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "team_stats.get_top_scorer",
+            "description": "Fetch the top scorer of a specified football team.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "team_name": {
+                  "type": "string",
+                  "description": "The name of the football team."
+                },
+                "competition": {
+                  "type": "string",
+                  "description": "Competition for which to fetch stats (optional). Default ''"
+                }
+              },
+              "required": [
+                "team_name"
+              ]
+            }
+          },
+          {
+            "name": "league_stats.get_top_scorer",
+            "description": "Fetch the top scorer of a specified football league.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "league_name": {
+                  "type": "string",
+                  "description": "The name of the football league."
+                },
+                "season": {
+                  "type": "string",
+                  "description": "Season for which to fetch stats (optional). Default ''"
+                }
+              },
+              "required": [
+                "league_name"
+              ]
+            }
+          },
+          {
+            "name": "player_stats.get_all_time_goals",
+            "description": "Fetch all-time goals scored by a particular football player for a specified team.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "player_name": {
+                  "type": "string",
+                  "description": "The name of the football player."
+                },
+                "team_name": {
+                  "type": "string",
+                  "description": "The name of the team for which player has played."
+                },
+                "competition": {
+                  "type": "string",
+                  "description": "Competition for which to fetch stats (optional). Default ''"
+                }
+              },
+              "required": [
+                "player_name",
+                "team_name"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_83",
+        "ground_truth": [
+          {
+            "player_stats.get_all_time_goals": {
+              "player_name": [
+                "Lionel Messi"
+              ],
+              "team_name": [
+                "Barcelona"
+              ],
+              "competition": [
+                ""
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_84",
+      "original_row": {
+        "id": "multiple_84",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Give me the top 10 goal scorers in the UEFA Champions League from Barcelona team."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "getTopGoalScorers",
+            "description": "Returns the top goal scorers for a specific competition and team",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "competition": {
+                  "type": "string",
+                  "description": "The name of the competition (for example, 'UEFA Champions League')."
+                },
+                "team": {
+                  "type": "string",
+                  "description": "The name of the team (for example, 'Barcelona')."
+                },
+                "number": {
+                  "type": "integer",
+                  "description": "The number of top goal scorers to retrieve."
+                }
+              },
+              "required": [
+                "competition",
+                "team",
+                "number"
+              ]
+            }
+          },
+          {
+            "name": "getTopAssists",
+            "description": "Returns the top assist makers for a specific competition and team",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "competition": {
+                  "type": "string",
+                  "description": "The name of the competition (for example, 'UEFA Champions League')."
+                },
+                "team": {
+                  "type": "string",
+                  "description": "The name of the team (for example, 'Barcelona')."
+                },
+                "number": {
+                  "type": "integer",
+                  "description": "The number of top assist makers to retrieve."
+                }
+              },
+              "required": [
+                "competition",
+                "team",
+                "number"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_84",
+        "ground_truth": [
+          {
+            "getTopGoalScorers": {
+              "competition": [
+                "UEFA Champions League"
+              ],
+              "team": [
+                "Barcelona"
+              ],
+              "number": [
+                10
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_85",
+      "original_row": {
+        "id": "multiple_85",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Get the soccer scores for Real Madrid games in La Liga for the last 5 rounds."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "basketball_scores.get_scores",
+            "description": "Retrieve basketball scores for a specific team and league within a certain range of rounds.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "team": {
+                  "type": "string",
+                  "description": "The basketball team whose scores are to be retrieved."
+                },
+                "league": {
+                  "type": "string",
+                  "description": "The league in which the team competes."
+                },
+                "rounds": {
+                  "type": "integer",
+                  "description": "Number of past rounds for which to retrieve the scores."
+                }
+              },
+              "required": [
+                "team",
+                "league",
+                "rounds"
+              ]
+            }
+          },
+          {
+            "name": "soccer_scores.get_scores",
+            "description": "Retrieve soccer scores for a specific team and league within a certain range of rounds.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "team": {
+                  "type": "string",
+                  "description": "The soccer team whose scores are to be retrieved."
+                },
+                "league": {
+                  "type": "string",
+                  "description": "The league in which the team competes."
+                },
+                "rounds": {
+                  "type": "integer",
+                  "description": "Number of past rounds for which to retrieve the scores."
+                }
+              },
+              "required": [
+                "team",
+                "league",
+                "rounds"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_85",
+        "ground_truth": [
+          {
+            "soccer_scores.get_scores": {
+              "team": [
+                "Real Madrid"
+              ],
+              "league": [
+                "La Liga"
+              ],
+              "rounds": [
+                5
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_86",
+      "original_row": {
+        "id": "multiple_86",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "What are some recommended board games for 2 players and strategy based from store BoardGameGeek?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "BoardGameGeek.recommend",
+            "description": "Generate game recommendation from BoardGameGeek store based on number of players and category.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "numPlayers": {
+                  "type": "integer",
+                  "description": "The number of players who will play the game."
+                },
+                "category": {
+                  "type": "string",
+                  "description": "The preferred category of board game. E.g. strategy, family, party etc."
+                },
+                "difficulty": {
+                  "type": "string",
+                  "description": "Preferred difficulty level. E.g. beginner, intermediate, advanced etc. This is an optional parameter. Default 'beginner'"
+                }
+              },
+              "required": [
+                "numPlayers",
+                "category"
+              ]
+            }
+          },
+          {
+            "name": "AmazonGameStore.recommend",
+            "description": "Generate game recommendation from Amazon Game Store based on number of players and category.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "numOfPlayers": {
+                  "type": "integer",
+                  "description": "The number of players who will play the game."
+                },
+                "category": {
+                  "type": "string",
+                  "description": "The preferred category of board game. E.g. strategy, family, party etc."
+                },
+                "priceRange": {
+                  "type": "string",
+                  "description": "The price range you are willing to pay for the board game. E.g. $10-$20, $20-$30 etc. This is an optional parameter. Default ''"
+                }
+              },
+              "required": [
+                "numOfPlayers",
+                "category"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_86",
+        "ground_truth": [
+          {
+            "BoardGameGeek.recommend": {
+              "numPlayers": [
+                2
+              ],
+              "category": [
+                "strategy"
+              ],
+              "difficulty": [
+                "",
+                "beginner"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_87",
+      "original_row": {
+        "id": "multiple_87",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Find the latest update or patch for the game 'Cyberpunk 2077' on Xbox platform."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "games.reviews.find",
+            "description": "Find reviews for a specific game.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "game": {
+                  "type": "string",
+                  "description": "The name of the game."
+                },
+                "region": {
+                  "type": "string",
+                  "description": "The region where the reviews are coming from (optional, default is 'global')"
+                }
+              },
+              "required": [
+                "game"
+              ]
+            }
+          },
+          {
+            "name": "games.update.find",
+            "description": "Find the latest updates or patches for a specific game on a specified gaming platform.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "game": {
+                  "type": "string",
+                  "description": "The name of the game."
+                },
+                "platform": {
+                  "type": "string",
+                  "description": "The gaming platform, e.g. Xbox, Playstation, PC."
+                },
+                "region": {
+                  "type": "string",
+                  "description": "The region of the update (optional, default is 'global')"
+                }
+              },
+              "required": [
+                "game",
+                "platform"
+              ]
+            }
+          },
+          {
+            "name": "games.price.find",
+            "description": "Find the current price for a specific game on a specified gaming platform.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "game": {
+                  "type": "string",
+                  "description": "The name of the game."
+                },
+                "platform": {
+                  "type": "string",
+                  "description": "The gaming platform, e.g. Xbox, Playstation, PC."
+                }
+              },
+              "required": [
+                "game",
+                "platform"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_87",
+        "ground_truth": [
+          {
+            "games.update.find": {
+              "game": [
+                "Cyberpunk 2077"
+              ],
+              "platform": [
+                "Xbox"
+              ],
+              "region": [
+                "",
+                "global"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_88",
+      "original_row": {
+        "id": "multiple_88",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Find me the number of active players in the game 'World of Warcraft' in 2020."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "video_games.get_player_count",
+            "description": "Retrieves the number of active players for a specified video game and year.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "game_title": {
+                  "type": "string",
+                  "description": "The title of the video game."
+                },
+                "year": {
+                  "type": "integer",
+                  "description": "The year in question."
+                },
+                "platform": {
+                  "type": "string",
+                  "optional": true,
+                  "description": "The gaming platform (e.g. 'PC', 'Xbox', 'Playstation'). Default ''"
+                }
+              },
+              "required": [
+                "game_title",
+                "year"
+              ]
+            }
+          },
+          {
+            "name": "video_games.get_sales",
+            "description": "Retrieves the sales figures for a specified video game and year.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "game_title": {
+                  "type": "string",
+                  "description": "The title of the video game."
+                },
+                "year": {
+                  "type": "integer",
+                  "description": "The year in question."
+                },
+                "platform": {
+                  "type": "string",
+                  "optional": true,
+                  "description": "The gaming platform (e.g. 'PC', 'Xbox', 'Playstation'). Default ''"
+                }
+              },
+              "required": [
+                "game_title",
+                "year"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_88",
+        "ground_truth": [
+          {
+            "video_games.get_player_count": {
+              "game_title": [
+                "World of Warcraft"
+              ],
+              "year": [
+                2020
+              ],
+              "platform": [
+                "",
+                "PC"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_89",
+      "original_row": {
+        "id": "multiple_89",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Find a healthy lunch recipe under 500 calories that uses chicken and mushrooms."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "restaurant_search",
+            "description": "Searches for restaurants based on a list of preferred ingredients and maximum calorie count.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "ingredients": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "A list of ingredients you prefer in the restaurant's dishes."
+                },
+                "calories": {
+                  "type": "integer",
+                  "description": "The maximum calorie count you prefer for the restaurant's dishes."
+                },
+                "meal": {
+                  "type": "string",
+                  "description": "Type of the meal for the restaurant's dishes, it's optional and could be breakfast, lunch or dinner. Default 'lunch'"
+                }
+              },
+              "required": [
+                "ingredients",
+                "calories"
+              ]
+            }
+          },
+          {
+            "name": "ingredient_replace",
+            "description": "Replaces an ingredient in a recipe with a substitute, keeping the calories below a certain number.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "original_ingredient": {
+                  "type": "string",
+                  "description": "The ingredient in the recipe to replace."
+                },
+                "replacement_ingredient": {
+                  "type": "string",
+                  "description": "The substitute ingredient to replace the original one."
+                },
+                "calories": {
+                  "type": "integer",
+                  "description": "The maximum number of calories for the recipe after replacement."
+                }
+              },
+              "required": [
+                "original_ingredient",
+                "replacement_ingredient",
+                "calories"
+              ]
+            }
+          },
+          {
+            "name": "recipe_search",
+            "description": "Searches for recipes based on a list of ingredients and a maximum caloric value.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "ingredients": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "A list of ingredients you want to use in the recipe."
+                },
+                "calories": {
+                  "type": "integer",
+                  "description": "The maximum number of calories for the recipe."
+                },
+                "meal": {
+                  "type": "string",
+                  "description": "Type of the meal for the recipe, it's optional and could be breakfast, lunch or dinner. Default 'lunch'"
+                }
+              },
+              "required": [
+                "ingredients",
+                "calories"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_89",
+        "ground_truth": [
+          {
+            "recipe_search": {
+              "ingredients": [
+                [
+                  "chicken",
+                  "mushrooms"
+                ],
+                [
+                  "mushrooms",
+                  "chicken"
+                ]
+              ],
+              "calories": [
+                500
+              ],
+              "meal": [
+                "lunch",
+                ""
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_90",
+      "original_row": {
+        "id": "multiple_90",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "I want a seafood restaurant in Seattle that can accommodate a group of 5."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "events.find_event",
+            "description": "Find events suitable for groups based on specified criteria such as location and event type.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city and state, e.g. Seattle, WA"
+                },
+                "event_type": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "Concert",
+                      "Sports",
+                      "Exhibition",
+                      "Festival"
+                    ]
+                  },
+                  "description": "Type of event. Default empty array"
+                },
+                "group_size": {
+                  "type": "integer",
+                  "description": "Size of the group that the event should accommodate."
+                }
+              },
+              "required": [
+                "location",
+                "group_size"
+              ]
+            }
+          },
+          {
+            "name": "restaurant.find_group",
+            "description": "Find restaurants suitable for groups based on specified criteria such as location and cuisine.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city and state, e.g. Seattle, WA"
+                },
+                "cuisine": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "Seafood",
+                      "Italian",
+                      "Indian",
+                      "Chinese"
+                    ]
+                  },
+                  "description": "Preferred cuisine at the restaurant. Default empty array"
+                },
+                "group_size": {
+                  "type": "integer",
+                  "description": "Size of the group that the restaurant should accommodate."
+                }
+              },
+              "required": [
+                "location",
+                "group_size"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_90",
+        "ground_truth": [
+          {
+            "restaurant.find_group": {
+              "location": [
+                "Seattle",
+                "Seattle, WA"
+              ],
+              "cuisine": [
+                [
+                  "Seafood"
+                ]
+              ],
+              "group_size": [
+                5
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_91",
+      "original_row": {
+        "id": "multiple_91",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Can I find a good cooking recipe for apple pie using less than 5 ingredients?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "restaurant.find",
+            "description": "Locate restaurants based on specific criteria such as cuisine and price range",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "cuisine": {
+                  "type": "string",
+                  "description": "The type of cuisine preferred."
+                },
+                "price": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Price range of the restaurant in format ['low', 'mid', 'high']. Default ['low', 'mid', 'high']"
+                }
+              },
+              "required": [
+                "cuisine"
+              ]
+            }
+          },
+          {
+            "name": "recipe.find",
+            "description": "Locate cooking recipes based on specific criteria such as main ingredient and number of ingredients",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "mainIngredient": {
+                  "type": "string",
+                  "description": "Main ingredient for the recipe."
+                },
+                "ingredientLimit": {
+                  "type": "integer",
+                  "description": "Max number of ingredients the recipe should use."
+                }
+              },
+              "required": [
+                "mainIngredient",
+                "ingredientLimit"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_91",
+        "ground_truth": [
+          {
+            "recipe.find": {
+              "mainIngredient": [
+                "apple pie",
+                "apple"
+              ],
+              "ingredientLimit": [
+                4
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_92",
+      "original_row": {
+        "id": "multiple_92",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Get me a list of available vegetarian and gluten-free foods at the Walmart near Denver."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "safeway.vegan_products",
+            "description": "Get available vegan products at specified Safeway store",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "City and state where the Safeway store is located, e.g. Denver, CO"
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "vegan",
+                      "gluten-free"
+                    ]
+                  },
+                  "description": "Product categories to search within. Default empty array"
+                }
+              },
+              "required": [
+                "location"
+              ]
+            }
+          },
+          {
+            "name": "wholefoods.vegan_products",
+            "description": "Get available vegan products at specified Whole Foods store",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "City and state where the Whole Foods store is located, e.g. Denver, CO"
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "vegan",
+                      "gluten-free"
+                    ]
+                  },
+                  "description": "Product categories to search within. Default empty array"
+                }
+              },
+              "required": [
+                "location"
+              ]
+            }
+          },
+          {
+            "name": "walmart.vegan_products",
+            "description": "Get available vegan products at specified Walmart store",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "City and state where the Walmart store is located, e.g. Denver, CO"
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "vegan",
+                      "gluten-free"
+                    ]
+                  },
+                  "description": "Product categories to search within. Default empty array"
+                }
+              },
+              "required": [
+                "location"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_92",
+        "ground_truth": [
+          {
+            "walmart.vegan_products": {
+              "location": [
+                "Denver, CO",
+                "Denver"
+              ],
+              "categories": [
+                [
+                  "vegan",
+                  "gluten-free"
+                ],
+                [
+                  "gluten-free",
+                  "vegan"
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_94",
+      "original_row": {
+        "id": "multiple_94",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "I want to book a suite with queen size bed for 3 nights in Hilton New York. Can you find the pricing for me?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "hotel_room_pricing.get",
+            "description": "Get pricing for a specific type of hotel room for specified number of nights.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "hotelName": {
+                  "type": "string",
+                  "description": "The name of the hotel e.g. Hilton New York"
+                },
+                "roomType": {
+                  "type": "string",
+                  "description": "Type of the room to be booked."
+                },
+                "nights": {
+                  "type": "integer",
+                  "description": "Number of nights to book the room for."
+                }
+              },
+              "required": [
+                "hotelName",
+                "roomType",
+                "nights"
+              ]
+            }
+          },
+          {
+            "name": "car_rental_pricing.get",
+            "description": "Get pricing for a specific type of rental car for a specified number of days.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "rentalCompany": {
+                  "type": "string",
+                  "description": "The name of the rental company."
+                },
+                "carType": {
+                  "type": "string",
+                  "description": "Type of the car to be rented."
+                },
+                "days": {
+                  "type": "integer",
+                  "description": "Number of days to rent the car."
+                }
+              },
+              "required": [
+                "rentalCompany",
+                "carType",
+                "days"
+              ]
+            }
+          },
+          {
+            "name": "flight_ticket_pricing.get",
+            "description": "Get pricing for a specific type of flight ticket for specified number of passengers.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "airline": {
+                  "type": "string",
+                  "description": "The name of the airline."
+                },
+                "flightClass": {
+                  "type": "string",
+                  "description": "Class of the flight."
+                },
+                "passengers": {
+                  "type": "integer",
+                  "description": "Number of passengers."
+                }
+              },
+              "required": [
+                "airline",
+                "flightClass",
+                "passengers"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_94",
+        "ground_truth": [
+          {
+            "hotel_room_pricing.get": {
+              "hotelName": [
+                "Hilton New York"
+              ],
+              "roomType": [
+                "suite with queen size bed"
+              ],
+              "nights": [
+                3
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_95",
+      "original_row": {
+        "id": "multiple_95",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Convert 200 euros to US dollars using current exchange rate."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "currency_exchange.convert",
+            "description": "Converts a value from one currency to another using the latest exchange rate.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "amount": {
+                  "type": "integer",
+                  "description": "The amount of money to be converted."
+                },
+                "from_currency": {
+                  "type": "string",
+                  "description": "The currency to convert from."
+                },
+                "to_currency": {
+                  "type": "string",
+                  "description": "The currency to convert to."
+                },
+                "live_conversion": {
+                  "type": "boolean",
+                  "description": "If true, use the latest exchange rate for conversion, else use the last known rate. Default false"
+                }
+              },
+              "required": [
+                "amount",
+                "from_currency",
+                "to_currency"
+              ]
+            }
+          },
+          {
+            "name": "unit_conversion.convert",
+            "description": "Converts a value from one unit to another.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "description": "The value to be converted."
+                },
+                "from_unit": {
+                  "type": "string",
+                  "description": "The unit to convert from."
+                },
+                "to_unit": {
+                  "type": "string",
+                  "description": "The unit to convert to."
+                }
+              },
+              "required": [
+                "value",
+                "from_unit",
+                "to_unit"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_95",
+        "ground_truth": [
+          {
+            "currency_exchange.convert": {
+              "amount": [
+                200
+              ],
+              "from_currency": [
+                "EUR"
+              ],
+              "to_currency": [
+                "USD"
+              ],
+              "live_conversion": [
+                true
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_96",
+      "original_row": {
+        "id": "multiple_96",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Solve a quadratic equation where a=2, b=6, and c=5"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "get_stock_info",
+            "description": "Retrieves information about a specific stock based on company's name.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "company_name": {
+                  "type": "string",
+                  "description": "The name of the company."
+                },
+                "detail_level": {
+                  "type": "string",
+                  "description": "Level of detail for stock information. Can be 'summary' or 'detailed'."
+                },
+                "market": {
+                  "type": "string",
+                  "description": "The stock market of interest. Default is 'NASDAQ'"
+                }
+              },
+              "required": [
+                "company_name",
+                "detail_level"
+              ]
+            }
+          },
+          {
+            "name": "portfolio_future_value",
+            "description": "Calculate the future value of an investment in a specific stock based on the invested amount, expected annual return and number of years.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "stock": {
+                  "type": "string",
+                  "description": "The ticker symbol of the stock."
+                },
+                "invested_amount": {
+                  "type": "float",
+                  "description": "The invested amount in USD."
+                },
+                "expected_annual_return": {
+                  "type": "float",
+                  "description": "The expected annual return on investment as a decimal. E.g. 5% = 0.05"
+                },
+                "years": {
+                  "type": "integer",
+                  "description": "The number of years for which the investment is made."
+                }
+              },
+              "required": [
+                "stock",
+                "invested_amount",
+                "expected_annual_return",
+                "years"
+              ]
+            }
+          },
+          {
+            "name": "solve_quadratic_equation",
+            "description": "Function solves the quadratic equation and returns its roots.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "a": {
+                  "type": "integer",
+                  "description": "Coefficient of x squared"
+                },
+                "b": {
+                  "type": "integer",
+                  "description": "Coefficient of x"
+                },
+                "c": {
+                  "type": "integer",
+                  "description": "Constant term in the quadratic equation"
+                }
+              },
+              "required": [
+                "a",
+                "b",
+                "c"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_96",
+        "ground_truth": [
+          {
+            "solve_quadratic_equation": {
+              "a": [
+                2
+              ],
+              "b": [
+                6
+              ],
+              "c": [
+                5
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_97",
+      "original_row": {
+        "id": "multiple_97",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "What's the area of a circle with a radius of 10?"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "geometry.area_circle",
+            "description": "Calculate the area of a circle given the radius.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "radius": {
+                  "type": "integer",
+                  "description": "The radius of the circle."
+                },
+                "units": {
+                  "type": "string",
+                  "description": "The units in which the radius is measured (defaults to meters).",
+                  "default": "meters"
+                }
+              },
+              "required": [
+                "radius"
+              ]
+            }
+          },
+          {
+            "name": "plot_sine_wave",
+            "description": "Plot a sine wave for a given frequency in a given range.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "start_range": {
+                  "type": "float",
+                  "description": "Start of the range in radians."
+                },
+                "end_range": {
+                  "type": "float",
+                  "description": "End of the range in radians."
+                },
+                "frequency": {
+                  "type": "float",
+                  "description": "Frequency of the sine wave in Hz."
+                },
+                "amplitude": {
+                  "type": "float",
+                  "description": "Amplitude of the sine wave. Default is 1."
+                },
+                "phase_shift": {
+                  "type": "float",
+                  "description": "Phase shift of the sine wave in radians. Default is 0."
+                }
+              },
+              "required": [
+                "start_range",
+                "end_range",
+                "frequency"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_97",
+        "ground_truth": [
+          {
+            "geometry.area_circle": {
+              "radius": [
+                10
+              ],
+              "units": [
+                "",
+                "meters"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_98",
+      "original_row": {
+        "id": "multiple_98",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Calculate the circumference of a circle with radius 3"
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "get_earliest_reference",
+            "description": "Retrieve the earliest historical reference of a person.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the person."
+                },
+                "source": {
+                  "type": "string",
+                  "enum": [
+                    "scriptures",
+                    "historical records"
+                  ],
+                  "description": "Source to fetch the reference. Default is 'scriptures'"
+                }
+              },
+              "required": [
+                "name"
+              ]
+            }
+          },
+          {
+            "name": "get_current_time",
+            "description": "Retrieve the current time for a specified city and country.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "city": {
+                  "type": "string",
+                  "description": "The city for which the current time is to be retrieved."
+                },
+                "country": {
+                  "type": "string",
+                  "description": "The country where the city is located."
+                },
+                "format": {
+                  "type": "string",
+                  "description": "The format in which the time is to be displayed, optional (defaults to 'HH:MM:SS')."
+                }
+              },
+              "required": [
+                "city",
+                "country"
+              ]
+            }
+          },
+          {
+            "name": "music_generator.generate_melody",
+            "description": "Generate a melody based on certain musical parameters.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "description": "The key of the melody. E.g., 'C' for C major."
+                },
+                "start_note": {
+                  "type": "string",
+                  "description": "The first note of the melody, specified in scientific pitch notation. E.g., 'C4'."
+                },
+                "length": {
+                  "type": "integer",
+                  "description": "The number of measures in the melody."
+                },
+                "tempo": {
+                  "type": "integer",
+                  "description": "The tempo of the melody, in beats per minute. Optional parameter. If not specified, defaults to 120."
+                }
+              },
+              "required": [
+                "key",
+                "start_note",
+                "length"
+              ]
+            }
+          },
+          {
+            "name": "geometry.circumference",
+            "description": "Calculate the circumference of a circle given the radius.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "radius": {
+                  "type": "integer",
+                  "description": "The radius of the circle."
+                },
+                "units": {
+                  "type": "string",
+                  "description": "Units for the output circumference measurement. Default is 'cm'."
+                }
+              },
+              "required": [
+                "radius"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_98",
+        "ground_truth": [
+          {
+            "geometry.circumference": {
+              "radius": [
+                3
+              ],
+              "units": [
+                "cm",
+                ""
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "multiple_99",
+      "original_row": {
+        "id": "multiple_99",
+        "question": [
+          [
+            {
+              "role": "user",
+              "content": "Calculate the derivative of the function 2x^2 at x = 1."
+            }
+          ]
+        ],
+        "function": [
+          {
+            "name": "calculus.derivative",
+            "description": "Compute the derivative of a function at a specific value.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "function": {
+                  "type": "string",
+                  "description": "The function to calculate the derivative of."
+                },
+                "value": {
+                  "type": "integer",
+                  "description": "The value where the derivative needs to be calculated at."
+                },
+                "function_variable": {
+                  "type": "string",
+                  "description": "The variable present in the function, for instance x or y, etc. Default is 'x'"
+                }
+              },
+              "required": [
+                "function",
+                "value"
+              ]
+            }
+          },
+          {
+            "name": "get_personality_traits",
+            "description": "Retrieve the personality traits for a specific personality type, including their strengths and weaknesses.",
+            "parameters": {
+              "type": "dict",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "description": "The personality type."
+                },
+                "traits": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "strengths",
+                      "weaknesses"
+                    ]
+                  },
+                  "description": "List of traits to be retrieved, default is ['strengths', 'weaknesses']."
+                }
+              },
+              "required": [
+                "type"
+              ]
+            }
+          }
+        ]
+      },
+      "original_answer": {
+        "id": "multiple_99",
+        "ground_truth": [
+          {
+            "calculus.derivative": {
+              "function": [
+                "2x**2",
+                "lambda x: 2x**2"
+              ],
+              "value": [
+                1
+              ],
+              "function_variable": [
+                "x",
+                ""
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

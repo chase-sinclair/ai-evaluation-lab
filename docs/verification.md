@@ -2,6 +2,59 @@
 
 Date: November 3, 2026. Host: Windows, CPython 3.13.0, uv 0.13.7.
 
+## Phase 3A — November 4, 2026
+
+Completed a bounded, source-based feasibility audit, not a new experiment. Exactly
+40 previously unreviewed multiple-function records, unchanged schemas/keys and
+provenance are retained with licensing. AI-assisted ledger: 12 label-eligible,
+28 excluded, 11 eligible families, six business-function domains, zero no-call and
+zero independently human-verified cases. Source-function catalogs range 3–19 tools;
+none meets the old 15/30 near/adjacent quotas. Recommendations and limits are in
+[the feasibility report](phase3a_feasibility.md).
+
+Added only offline scripts/tests and evidence/documents. The cache proposal is a
+pure calculator/validator, not live adapter/runner integration. It keeps actual
+provider USD unknown, separates reported-usage pricing from a requested-30m-policy
+estimate, and reserves at the highest reviewed write rate/full output bound. Tests
+reject body/hash/size, breakpoint/history/hosted-tool, tier, TTL, prewarming, output
+limit and usage violations. No historical record is retrospectively repriced.
+
+Final verification commands, all passed:
+
+```text
+py -3.13 -m uv sync --locked --offline
+py -3.13 -m uv run --offline pytest -q
+py -3.13 -m uv run --offline ruff check .
+py -3.13 -m uv run --offline ruff format --check .
+py -3.13 -m uv run --offline python -m scripts.audit_phase3a --source-dir datasets/cache/bfcl/bfcl_eval/data
+py -3.13 -m uv run --offline python -m experiments.tool_selection.prepare_bfcl --check
+git diff --check
+```
+
+**136 tests passed in 28.97 seconds**; Ruff passed with 58 formatted Python files.
+Locked sync checked 36 packages. The audit deterministically reproduces IDs, counts,
+native-tool membership, seeded nested ordering, schema sizes and hashes; 41 gold
+argument variants pass JSON Schema and the existing strict subset grader in an
+audit-only view. Semantic uniqueness is not proven by those tests. Fresh CI does
+not need the ignored upstream cache: committed bounded evidence supplies its inputs.
+
+Pinned upstream input/answer files were fetched within a 400,000-byte-per-file
+limit. Existing cache files have one extra final LF; parsed contents match and
+upstream byte hashes are recorded explicitly. The optional source-cache check
+accepts exactly that known EOF difference and rejects other hash drift. Source
+schemas with unsupported optional metadata remain unsupported; no silent migration.
+
+Read-only SHA-256 comparisons confirm all four original smoke artifacts still
+match the Phase 2.6 preservation hashes. Frozen 54-request validation passed with
+zero provider calls; no matrix or smoke execution occurred. Original experiment
+interfaces, engine files, dataset and grades were not changed. No paid requests,
+new raw results, credentials, large archives or benchmark dependencies.
+
+Delivery CI verification is pending push. Remaining gates are independent human
+review, further source feasibility for held-out/no-call cases, acceptance of the
+reduced design/accounting policy, and separate integration/execution authorization.
+The current pool does not justify the substantive enterprise study.
+
 ## Phase 2.6 — November 4, 2026
 
 Implemented typed cache usage/pricing, component costs and provenance, strict
