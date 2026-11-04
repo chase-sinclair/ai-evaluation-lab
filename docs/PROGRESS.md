@@ -1,6 +1,6 @@
 # Progress — November 4, 2026
 
-## Phase 3A — bounded feasibility audit verified; delivery pending
+## Phase 3A — complete, pushed and CI verified
 
 Audited exactly 40 new BFCL multiple records (57–99 except previously reviewed
 76/81/93), preserving source schemas/keys/URLs/revision/hashes with Apache-2.0
@@ -34,8 +34,11 @@ full experiment/held-out implementation, and no raw results or credentials added
 Files: docs/audits/phase3a (source evidence, review ledger, catalog samples, summary,
 license/notices); phase3a_feasibility.md and phase3a_cache_policy.md; two offline
 scripts, test_phase3a.py, README/design links, progress and verification.
-Latest prior verified delivery: 3637a8c0db9be41b0b155b2ba7e3cb0cfc329278.
-Remaining delivery: commit/push and verify GitHub Actions. Then STOP for owner review.
+Latest CI-verified audit delivery: 5fb68f331134d7aeeb04ae8c04559c51ee91329d.
+GitHub Actions passed on Python 3.12 and 3.13 (locked install, offline tests, Ruff):
+https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41933167093
+This documentation-only checkpoint records the verified result. Work is STOPPED
+for owner review; no further implementation or execution is authorized.
 Next approval gates: reduced design/scope; independent human review and another
 bounded source audit; prospective accounting assumptions; minimal future integration;
 then frozen requests/settings/prices and explicit spending approval. Proposed

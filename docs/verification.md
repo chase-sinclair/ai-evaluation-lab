@@ -50,7 +50,11 @@ zero provider calls; no matrix or smoke execution occurred. Original experiment
 interfaces, engine files, dataset and grades were not changed. No paid requests,
 new raw results, credentials, large archives or benchmark dependencies.
 
-Delivery CI verification is pending push. Remaining gates are independent human
+Audit commit `5fb68f331134d7aeeb04ae8c04559c51ee91329d` was pushed to origin/main.
+[GitHub Actions run 41933167093](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41933167093)
+passed Python 3.12 and 3.13 jobs, including locked install, offline tests and Ruff.
+This documentation-only checkpoint records that verified result.
+Remaining gates are independent human
 review, further source feasibility for held-out/no-call cases, acceptance of the
 reduced design/accounting policy, and separate integration/execution authorization.
 The current pool does not justify the substantive enterprise study.
