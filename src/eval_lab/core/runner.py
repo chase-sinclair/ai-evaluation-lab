@@ -13,7 +13,7 @@ from pathlib import Path
 
 from eval_lab.analysis.summary import summarize
 from eval_lab.contracts import ModelResponse, RunManifest, RunRecord
-from eval_lab.core.budgets import cost, estimate_cost, estimate_input_tokens, preflight
+from eval_lab.core.budgets import cost_details, estimate_cost, estimate_input_tokens, preflight
 from eval_lab.core.hashes import canonical, digest
 from eval_lab.core.registry import Experiment
 from eval_lab.core.result_store import ResultStore
@@ -208,11 +208,12 @@ def run(
                 except Exception as exc:
                     grade = None
                     trial_status, trial_error = "grader_error", type(exc).__name__
-            estimated_cost = (
-                0.0
-                if mode == "mock"
-                else (cost(response.usage, spec.pricing) if response.usage else None)
+            accounting = (
+                cost_details(response.usage, spec.pricing)
+                if mode == "live" and response.usage
+                else {}
             )
+            estimated_cost = 0.0 if mode == "mock" else accounting.get("estimated_cost_usd")
             record = RunRecord(
                 run_id=run_id,
                 trial_id=f"{case.id}/{condition.id}/{repeat}",
@@ -239,14 +240,15 @@ def run(
                 cost_basis="offline_no_charge"
                 if mode == "mock"
                 else "reported_usage_times_snapshot",
+                cost_details=accounting,
             )
             store.append(record)
             records.append(record)
             spent += estimated_cost or 0
             if interrupted:
                 raise KeyboardInterrupt
-            if mode == "live" and (response.error or response.usage is None):
-                status, error = "failed", "Live usage uncertain; no further requests scheduled"
+            if mode == "live" and (response.error or estimated_cost is None):
+                status, error = "failed", "Live usage/cost uncertain; no further requests scheduled"
                 break
     except KeyboardInterrupt:
         status, error = "interrupted", "KeyboardInterrupt"

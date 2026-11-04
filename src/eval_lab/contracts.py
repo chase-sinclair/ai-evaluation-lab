@@ -2,11 +2,13 @@
 
 from typing import Annotated, Any, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, model_serializer, model_validator
 
 Identifier = Annotated[str, Field(pattern=r"^[A-Za-z0-9][A-Za-z0-9_.-]*$", max_length=120)]
 PositiveInt = Annotated[int, Field(strict=True, gt=0)]
 Money = Annotated[float, Field(ge=0, allow_inf_nan=False)]
+TokenCount = Annotated[int, Field(strict=True, ge=0)]
+CacheTTL = Literal["30m", "12h"]
 
 
 class Contract(BaseModel):
@@ -38,6 +40,12 @@ class Dataset(Contract):
     path: str
 
 
+class CachePricing(Contract):
+    service_tier: str
+    read_usd_per_million: Money
+    write_usd_per_million: dict[CacheTTL, Money]
+
+
 class Pricing(Contract):
     version: str
     verified_date: str
@@ -45,6 +53,14 @@ class Pricing(Contract):
     model: str
     input_usd_per_million: Annotated[float, Field(gt=0, allow_inf_nan=False)]
     output_usd_per_million: Annotated[float, Field(gt=0, allow_inf_nan=False)]
+    cache: CachePricing | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_legacy_snapshot(self, handler):
+        data = handler(self)
+        if self.cache is None:
+            data.pop("cache", None)
+        return data
 
 
 class ExperimentSpec(Contract):
@@ -95,9 +111,41 @@ class ModelRequest(Contract):
         return self
 
 
+class CacheUsage(Contract):
+    """Unknown counters remain null; maximum retention never determines write TTL."""
+
+    read_tokens: TokenCount | None = None
+    write_tokens: TokenCount | None = None
+    writes_by_ttl: dict[CacheTTL, TokenCount] | None = None
+    minimum_ttl: str | None = None
+    maximum_retention: str | None = None
+    service_tier: str | None = None
+
+    @model_validator(mode="after")
+    def consistent_writes(self):
+        if self.writes_by_ttl is not None and self.write_tokens != sum(self.writes_by_ttl.values()):
+            raise ValueError("Cache write total must equal the lifetime breakdown")
+        return self
+
+
 class Usage(Contract):
-    input_tokens: Annotated[int, Field(strict=True, ge=0)]
-    output_tokens: Annotated[int, Field(strict=True, ge=0)]
+    input_tokens: TokenCount
+    output_tokens: TokenCount
+    cache: CacheUsage | None = None
+
+    @property
+    def uncached_input_tokens(self) -> int | None:
+        c = self.cache
+        if c is None or c.read_tokens is None or c.write_tokens is None:
+            return None
+        return self.input_tokens - c.read_tokens - c.write_tokens
+
+    @model_validator(mode="after")
+    def valid_input_partition(self):
+        c = self.cache
+        if c and (c.read_tokens or 0) + (c.write_tokens or 0) > self.input_tokens:
+            raise ValueError("Cache counters exceed total input")
+        return self
 
 
 class ModelResponse(Contract):
@@ -119,6 +167,7 @@ class GradeResult(Contract):
     submetrics: dict[str, bool | float] = Field(default_factory=dict)
     diagnostics: list[str] = Field(default_factory=list)
     grader_version: str
+    diagnostics_version: str | None = None
 
 
 class RunRecord(Contract):
@@ -147,6 +196,7 @@ class RunRecord(Contract):
     error: str | None = None
     estimated_cost_usd: Money | None
     cost_basis: str
+    cost_details: dict[str, Any] = Field(default_factory=dict)
 
 
 class RunManifest(Contract):

@@ -122,6 +122,7 @@ def test_six_real_sdk_transport_calls_through_runner(smoke, smoke_module, tmp_pa
                 "created_at": 0,
                 "status": "completed",
                 "model": "gpt-6-luna",
+                "service_tier": "default",
                 "output": [
                     {
                         "type": "function_call",
@@ -133,7 +134,12 @@ def test_six_real_sdk_transport_calls_through_runner(smoke, smoke_module, tmp_pa
                     }
                     for c in calls
                 ],
-                "usage": {"input_tokens": 100, "output_tokens": 20, "total_tokens": 120},
+                "usage": {
+                    "input_tokens": 100,
+                    "output_tokens": 20,
+                    "total_tokens": 120,
+                    "input_tokens_details": {"cached_tokens": 0, "cache_write_tokens": 0},
+                },
             },
         )
 

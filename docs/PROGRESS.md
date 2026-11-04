@@ -1,5 +1,44 @@
 # Progress — November 4, 2026
 
+## Phase 2.6 — implementation verified; delivery in progress
+
+Workstream A is complete: cache-aware usage partitions and component pricing,
+source/version/tier/lifetime metadata, unknown-cost stopping, conservative cache
+reserves, and prospective BFCL schema/selection/exact diagnostics. Strict primary
+grader 0.2.1 and answer keys remain unchanged; diagnostics are separately versioned.
+Legacy pricing serialization preserves frozen configuration/request hashes.
+
+Workstream B is documentation-only: docs/phase3_research_design.md proposes paired
+5/15/30-tool business cases, a 12-case / 36-request development pilot, and a separate
+120-case held-out study. Pinned BFCL examples, API-Bank dialogue/checkers and current
+Sierra evaluation rules were inspected. Eligibility yield and gold uniqueness are
+explicit feasibility gates. No new dataset or experiment was implemented.
+
+Verification: locked offline sync (36 packages), 114 offline tests, Ruff lint/format
+(52 files), frozen 54-request manifest check and diff checks passed. Existing 388
+official-checker decisions still pass. All four original smoke artifact hashes
+match the before-edit snapshot; no smoke regrading or rewriting occurred. No paid
+calls, 54-request execution, new raw results, credentials or external data commits.
+
+Files: contracts, budgets, adapter, runner, summary, BFCL diagnostic wrapper;
+cache/diagnostic tests and explicit cache counters in the fake smoke transport;
+README, hardening/design documents, progress and verification.
+
+Official docs distinguish maximum 24h retention from minimum write lifetime.
+No 24h price is inferred. Missing lifetime breakdown remains unknown, so a future
+response matching the smoke telemetry would stop further calls. See
+docs/phase2_6_hardening.md for the accounting boundary and preservation hashes.
+
+Latest previous CI-verified delivery: 1686c9a97112fc428bc1dbb0373277e6397dd551.
+Phase 2.6 commit/push and CI verification are the remaining delivery steps.
+After delivery STOP for owner review. Next work needs approval of the Phase 3
+design, bounded source/label audit and redistribution, independent reviewers and
+split custodian, then exact frozen requests/settings/prices and an accounting policy
+before a separately approved pilot (proposed $0.35 / 36-request cap). Held-out
+implementation/execution and all further paid calls remain unauthorized.
+
+## Previous checkpoint — approved smoke findings
+
 Current status: the explicitly approved Phase 2.5 smoke was executed once; stopped
 after all six requests. No further execution authorized. See docs/bfcl_smoke_findings.md.
 

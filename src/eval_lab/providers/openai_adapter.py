@@ -4,7 +4,38 @@ import json
 import os
 import re
 
-from eval_lab.contracts import ModelRequest, ModelResponse, Usage
+from pydantic import ValidationError
+
+from eval_lab.contracts import CacheUsage, ModelRequest, ModelResponse, Usage
+
+
+def normalize_usage(raw: dict) -> Usage | None:
+    """Read additive SDK fields from raw JSON; preserve unknowns and reject bad totals."""
+    usage = raw.get("usage")
+    if not usage:
+        return None
+    try:
+        details = usage.get("input_tokens_details") or {}
+        writes = details.get("cache_write_tokens_details")
+        if writes is not None:
+            # Require both counters; an omitted/new lifetime must not be priced as zero.
+            if set(writes) != {"ttl_30m_tokens", "ttl_12h_tokens"}:
+                return None
+            writes = {"30m": writes["ttl_30m_tokens"], "12h": writes["ttl_12h_tokens"]}
+        return Usage(
+            input_tokens=usage["input_tokens"],
+            output_tokens=usage["output_tokens"],
+            cache=CacheUsage(
+                read_tokens=details.get("cached_tokens"),
+                write_tokens=details.get("cache_write_tokens"),
+                writes_by_ttl=writes,
+                minimum_ttl=(raw.get("prompt_cache_options") or {}).get("ttl"),
+                maximum_retention=raw.get("prompt_cache_retention"),
+                service_tier=raw.get("service_tier"),
+            ),
+        )
+    except (KeyError, TypeError, AttributeError, ValidationError):
+        return None  # Raw usage remains available for review; runner stops on uncertainty.
 
 
 def parse_arguments(text):
@@ -81,7 +112,6 @@ class OpenAIProvider:
                 except (TypeError, ValueError):
                     pass  # Grader sees malformed arguments, never silently converts to no-call.
                 calls.append({"name": item.get("name"), "arguments": arguments})
-        usage = raw.get("usage")
         parsed = {"tool_calls": calls, "text": getattr(response, "output_text", "")}
         if request.output_format == "text":
             parsed = parsed["text"]
@@ -91,9 +121,7 @@ class OpenAIProvider:
             finish_status="unexpected_tool_calls"
             if request.output_format == "text" and calls
             else raw.get("status", "unknown"),
-            usage=Usage(input_tokens=usage["input_tokens"], output_tokens=usage["output_tokens"])
-            if usage
-            else None,
+            usage=normalize_usage(raw),
             request_id=getattr(response, "_request_id", None),
             model=raw.get("model"),
             effective_options={
@@ -107,6 +135,8 @@ class OpenAIProvider:
                         "max_output_tokens",
                         "parallel_tool_calls",
                         "service_tier",
+                        "prompt_cache_options",
+                        "prompt_cache_retention",
                     )
                     if k in raw
                 },

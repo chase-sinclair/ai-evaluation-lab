@@ -10,6 +10,18 @@ def _aggregate(records: list[RunRecord], planned: int) -> dict:
     costs = [r.estimated_cost_usd for r in records if r.estimated_cost_usd is not None]
     usages = [r.response.usage for r in records if r.response.usage is not None]
     cost_complete = len(costs) == len(records)
+    metric_names = sorted({k for r in records if r.grade for k in r.grade.submetrics})
+    metrics = {}
+    for name in metric_names:
+        values = [
+            r.grade.submetrics[name] for r in records if r.grade and name in r.grade.submetrics
+        ]
+        metrics[name] = {
+            "measured_records": len(values),
+            "unmeasured_records": len(records) - len(values),
+            "mean": mean(values),
+        }
+    partitions = [u for u in usages if u.uncached_input_tokens is not None]
     return {
         "planned": planned,
         "recorded": len(records),
@@ -29,6 +41,21 @@ def _aggregate(records: list[RunRecord], planned: int) -> dict:
         "usage_records": len(usages),
         "known_input_tokens": sum(u.input_tokens for u in usages) if usages else None,
         "known_output_tokens": sum(u.output_tokens for u in usages) if usages else None,
+        "diagnostic_metrics": metrics,
+        "diagnostics_version_counts": dict(
+            Counter(r.grade.diagnostics_version or "unspecified" for r in records if r.grade)
+        ),
+        "cache_partition_records": len(partitions),
+        "unknown_cache_partition_records": len(records) - len(partitions),
+        "known_uncached_input_tokens": sum(u.uncached_input_tokens for u in partitions)
+        if partitions
+        else None,
+        "known_cached_read_tokens": sum(u.cache.read_tokens for u in partitions)
+        if partitions
+        else None,
+        "known_cache_write_tokens": sum(u.cache.write_tokens for u in partitions)
+        if partitions
+        else None,
     }
 
 

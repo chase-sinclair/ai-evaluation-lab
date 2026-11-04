@@ -2,6 +2,59 @@
 
 Date: November 3, 2026. Host: Windows, CPython 3.13.0, uv 0.13.7.
 
+## Phase 2.6 — November 4, 2026
+
+Implemented typed cache usage/pricing, component costs and provenance, strict
+accounting validation, unknown-cost stopping and maximum-write-rate reserves.
+Added prospective BFCL diagnostics without changing primary grading or answer
+keys. Generic summaries include diagnostic denominators/versions and cache
+partition coverage. Historical smoke files and frozen requests are preserved.
+See [accounting and diagnostic details](phase2_6_hardening.md).
+
+Commands run from the repository root (all passed):
+
+```text
+py -3.13 -m uv sync --locked --offline
+py -3.13 -m uv run --offline pytest -q
+py -3.13 -m uv run --offline ruff check .
+py -3.13 -m uv run --offline ruff format --check .
+py -3.13 -m uv run --offline python -m experiments.tool_selection.prepare_bfcl --check
+git diff --check
+```
+
+Results: **114 tests passed in 34.01 seconds**, including the existing 388 official
+checker decisions and fake SDK/runner flows. Ruff checks passed; 52 Python files
+already formatted. Locked install checked 36 packages. Frozen manifest check
+validated all 54 requests with zero provider/network calls; it did not execute
+the development matrix. Test sockets are blocked and API credentials removed.
+
+New coverage: mixed 30m/12h writes, read/ordinary-input separation, no reasoning
+double charge, missing/malformed counters, totals inconsistency, tier mismatch,
+missing prices, unknown lifetime, conservative preflight and durable stop on cost
+uncertainty. Grading tests distinguish integer versus float lists, schema-valid
+wrong values, malformed/unoffered calls, no-call and incomplete output; reporting
+tests retain primary results and explicitly count unmeasured diagnostics.
+
+The first expanded run exposed an overly strict test assertion about SDK-added
+null cache-mode metadata; the assertion now checks the relevant reported TTL.
+No production behavior was weakened. The final suite above passes without skips.
+
+Read-only SHA-256 checks before and after changes match all four original smoke
+files; exact hashes are in the hardening document. No original grades, stored
+estimates, raw records or frozen dataset/configuration were rewritten. No paid
+requests or benchmark archives were downloaded. No new raw output is committed.
+
+Documentation research inspected pinned BFCL multiple examples and keys, API-Bank
+meeting labels and checker code/license, and current Sierra evaluation rules/license.
+The [Phase 3 proposal](phase3_research_design.md) specifies selection, split isolation,
+controls, paired analysis, sample quotas, estimated costs, abort rules and approval
+gates. It does not claim that enough eligible cases or distractors have been audited.
+The held-out experiment is neither implemented nor executed.
+
+Delivery CI verification is pending the implementation push. No implementation
+blockers remain. Live work still needs a reviewed accounting policy for absent write
+lifetime detail, eligible source/gold audits, a frozen protocol and owner approval.
+
 ## Approved Phase 2.5 execution — November 4, 2026
 
 The owner explicitly approved the six frozen requests and their existing limits.

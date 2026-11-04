@@ -62,14 +62,20 @@ trials never disappear. Timing varies; seeded requests, predictions, and grades 
 Read [architecture](docs/architecture.md), [adding an experiment](docs/adding_an_experiment.md),
 [fixture rules](experiments/tool_selection/README.md), and
 [real pilot approval protocol](docs/experiment_protocol.md).
-Live model compatibility is tested only with local fake responses so far.
+The approved six-request BFCL smoke completed; see its preserved
+[findings and limitations](docs/bfcl_smoke_findings.md).
 
 Phase 1.5 adds [comparative reporting](docs/comparative_reporting.md), offline CI, and
 a [specific BFCL pilot protocol for review](docs/bfcl_pilot_protocol.md).
 
+Phase 2.6 adds [cache accounting and prospective grading diagnostics](docs/phase2_6_hardening.md).
+The [Phase 3 research design](docs/phase3_research_design.md) proposes a business-tool
+study for owner review; no further live execution is authorized.
+
 ## Research boundary
 
-Dataset research is documentation-only. See [the feasibility review](docs/data_source_research.md)
-and [catalog](datasets/catalog.yaml). No benchmark data is vendored. A real pilot needs owner
+New dataset research is documentation-only. See [the feasibility review](docs/data_source_research.md)
+and [catalog](datasets/catalog.yaml). The approved bounded BFCL development subset is
+vendored with attribution; raw caches and results are ignored. A new live pilot needs owner
 approval of the subset/license, exact model, pricing assumptions, protocol, and spending cap.
 See [verification](docs/verification.md) for completed acceptance checks and remaining limits.

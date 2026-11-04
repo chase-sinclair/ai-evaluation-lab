@@ -9,6 +9,8 @@ import math
 import re
 from typing import Any
 
+from jsonschema import Draft202012Validator
+
 from eval_lab.contracts import GradeResult, ModelResponse
 from eval_lab.contracts import TestCase as Case
 
@@ -65,7 +67,7 @@ def answer_variants(case: Case) -> list[dict]:
     return variants
 
 
-def grade(case: Case, response: ModelResponse, offered: list[dict]) -> GradeResult:
+def _grade_exact(case: Case, response: ModelResponse, offered: list[dict]) -> GradeResult:
     def result(passed: bool, valid: bool, reason: str) -> GradeResult:
         return GradeResult(
             passed=passed,
@@ -129,3 +131,49 @@ def grade(case: Case, response: ModelResponse, offered: list[dict]) -> GradeResu
         elif not any(normalize(arguments[key]) == normalize(value) for value in allowed):
             return result(False, True, "incorrect_argument")
     return result(True, True, "")
+
+
+def grade(case: Case, response: ModelResponse, offered: list[dict]) -> GradeResult:
+    """Prospective diagnostics v1; strict primary grader 0.2.1 is unchanged."""
+    exact = _grade_exact(case, response, offered)
+    parsed = response.parsed
+    envelope = (
+        response.finish_status == "completed"
+        and not response.error
+        and type(parsed) is dict
+        and not set(parsed) - {"tool_calls", "text"}
+        and ("text" not in parsed or type(parsed["text"]) is str)
+        and type(parsed.get("tool_calls")) is list
+        and "refusal" not in exact.diagnostics
+    )
+    calls = parsed["tool_calls"] if envelope else []
+    named = envelope and all(
+        type(c) is dict and set(c) == {"name", "arguments"} and type(c["name"]) is str
+        for c in calls
+    )
+    schemas = {t["name"]: t["parameters"] for t in offered}
+    schema_valid = named and all(
+        c["name"] in schemas
+        and type(c["arguments"]) is dict
+        and Draft202012Validator(schemas[c["name"]]).is_valid(c["arguments"])
+        for c in calls
+    )
+    expected_names = (
+        [wire_name(case.task_input["function"]["name"])] if case.ground_truth["bfcl"] else []
+    )
+    selected = (
+        named
+        and all(c["name"] in schemas for c in calls)
+        and ([c["name"] for c in calls] == expected_names)
+    )
+    return exact.model_copy(
+        update={
+            "diagnostics_version": "bfcl-diagnostics-v1",
+            "submetrics": {
+                **exact.submetrics,
+                "schema_valid_arguments": bool(schema_valid),
+                "tool_selection_correct": bool(selected),
+                "benchmark_exact_correct": exact.passed,
+            },
+        }
+    )
