@@ -39,8 +39,11 @@ Source verification corrected a connector-added EOF newline before freezing exac
 raw source hashes. No question, schema, or key content changed. Reproduction tools
 write exclusively to new files; committed artifacts are the frozen Phase 2 release.
 
-GitHub Actions verification is pending this phase's commit/push. The existing workflow
-runs locked installation, offline pytest and Ruff lint/format on Python 3.12 and 3.13.
+GitHub Actions [run 41765877967](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41765877967)
+passed for implementation commit `b4fbecd199426ca7c4fae374d58ca474236edab1`.
+Both Python 3.12 and 3.13 jobs passed locked installation, offline pytest, Ruff lint
+and formatting. Phase 2 preparation acceptance is complete. A following documentation
+checkpoint records this observed CI result without changing implementation or inputs.
 
 Remaining limits/gates: this easy mathematical set risks ceiling effects and has
 correlated families; BFCL string normalization is not symbolic equivalence. No held-out

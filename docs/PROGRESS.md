@@ -1,6 +1,6 @@
 # Progress — November 3, 2026
 
-Current phase: Phase 2 preparation implemented and locally verified; GitHub delivery pending.
+Current phase: Phase 2 preparation complete; implementation pushed and GitHub Actions passed.
 
 Completed: pinned bounded BFCL importer; 18 audited development cases (14 positive,
 4 no-call); schema/name conversion; deterministic subset grader; 388 decisions from
@@ -15,14 +15,17 @@ docs/bfcl_phase2_design.md, docs/bfcl_smoke_test.md, protocol/experiment README 
 
 Final local tests: 74 passed, Ruff lint/format (44 files) passed, locked offline sync
 passed, frozen 54-request manifest reproduced, raw-source reimport and all 388 official
-checker decisions regenerated exactly. GitHub Actions still pending. Raw source
+checker decisions regenerated exactly. GitHub Actions passed on Python 3.12 and 3.13,
+including locked install, offline pytest, Ruff lint and formatting. Raw source
 hashes were independently checked against bounded raw upstream responses; preserved
-original EOF bytes rather than connector-added final newlines. Final manifest will be
+original EOF bytes rather than connector-added final newlines. Final manifest was
 checked after formatting. Cached sources and raw results remain ignored.
 
-Latest CI-verified previous checkpoint: `4c11081eeb4d5ee6248952ba0cd95d122b71b4cf`.
-Next: commit and push verified Phase 2 work; verify Python 3.12/3.13 GitHub Actions;
-record delivery commit and clean status.
+Latest CI-verified implementation: `b4fbecd199426ca7c4fae374d58ca474236edab1`.
+CI evidence: https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41765877967
+The following documentation checkpoint records that result; no implementation changes.
+No Phase 2 preparation blockers remain. Next: owner review of docs/bfcl_phase2_design.md
+and docs/bfcl_smoke_test.md. Do not start paid execution on continuation alone.
 Live gates: owner approval of six frozen requests, model alias/default settings,
 dated prices and $0.05 cap; activate only the approved six-request invocation and
 recheck hashes/budget/account availability before any paid request. The full 54-request
