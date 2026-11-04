@@ -2,6 +2,37 @@
 
 Date: November 3, 2026. Host: Windows, CPython 3.13.0, uv 0.13.7.
 
+## Approved Phase 2.5 execution — November 4, 2026
+
+The owner explicitly approved the six frozen requests and their existing limits.
+Reran the frozen-manifest/readiness checks and spending preflight, then invoked
+`py -3.13 -m uv run --offline python -m experiments.tool_selection.smoke_bfcl --live`
+exactly once from clean commit `ca06c7c428dc47e2588c8d4b2d8b92bb84f09e68`.
+Run bfcl-smoke-v1 recorded six completed responses and no retries or additional runs.
+
+Reviewed every response against actual offered tools and original keys; reproduced
+all grades offline and verified request hashes/order, JSON Schema validity and usage.
+Result: 4 passes, 2 invalid outputs caused by the frozen BFCL float-list rule. All four
+function calls chose offered targets and were valid JSON/schema; both no-call outputs
+were correct. API integration succeeded for these payloads, but the grading mismatch
+and omitted cache-write premiums prevent claiming unconditional validation success.
+
+Returned model was gpt-6-luna throughout. Reported defaults: temperature 1.0, top_p 0.98,
+medium reasoning effort, standard reasoning mode, default service tier; output cap 4096
+and parallel calls false. Detailed per-request arguments, usage, latency, settings and
+cost estimates are documented in [the findings](bfcl_smoke_findings.md).
+Totals: 5784 input, 226 output (63 reasoning), 4599 cache-write tokens. Stored estimate
+$0.0006914; short-cache rate scenario $0.000806375, not an invoice. Raw responses report
+unrequested 24h cache retention; the applicable write price is unresolved. No missing usage,
+refusals, incomplete outputs, API/schema rejections or parsing errors. Raw immutable
+artifacts remain local/ignored; no code, data, protocol or grades changed.
+
+Post-run checks: **85 pytest tests passed**, Ruff lint passed, Ruff format check
+passed (47 files), and diff whitespace check passed. Git confirms raw records are
+ignored; only these verification/progress notes and the derived findings are staged.
+Documentation-delivery CI is pending push.
+No further paid execution is authorized; stop for review of the findings.
+
 ## Phase 2.5 — live integration preparation (November 4, 2026)
 
 Implemented keyword-only request context in the generic grading boundary; BFCL grader

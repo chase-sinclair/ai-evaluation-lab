@@ -1,5 +1,31 @@
 # Progress — November 4, 2026
 
+Current status: the explicitly approved Phase 2.5 smoke was executed once; stopped
+after all six requests. No further execution authorized. See docs/bfcl_smoke_findings.md.
+
+Run bfcl-smoke-v1 used clean commit ca06c7c428dc47e2588c8d4b2d8b92bb84f09e68.
+Readiness and spending preflight passed immediately before execution. All six API
+responses completed, returned gpt-6-luna and supplied usage. Frozen grades: 4 passes,
+2 invalid outputs (integration interval integers rejected by BFCL float-list rule).
+All emitted calls were offered and passed JSON Schema; no parsing/schema rejection,
+provider error or incomplete output. Raw artifacts remain ignored and unchanged.
+
+Usage: 5784 input / 226 output tokens, including 63 reasoning tokens; 4599 cache-write
+tokens. Stored estimate $0.0006914 omits cache-write premium; short-cache rate
+scenario $0.000806375. All raw responses report unrequested 24h cache retention;
+its applicable price and actual invoice are unverified. Integration transport succeeded;
+full validation is qualified by the grading mismatch and cost-accounting omission.
+
+All six responses reviewed individually; hashes/order/membership/schema/regrades and
+cost arithmetic verified offline. Documentation only is being updated and delivered.
+Post-run checks: 85 tests passed; Ruff lint/format (47 files) and diff checks passed.
+Next: commit/push documentation, verify CI, then STOP for owner review.
+No retries, substitutions, purchases, full pilot or held-out run.
+Any fixes to grading diagnostics or usage pricing require separate review before
+more spending; do not retroactively alter this run's grades or delete its directory.
+
+## Previous checkpoint — preparation and approval boundary
+
 Current phase: Phase 2.5 live integration preparation complete, pushed and CI verified.
 **No paid requests executed or approved. Await explicit owner approval.**
 
