@@ -13,19 +13,22 @@ from eval_lab.core.hashes import canonical, digest
 from eval_lab.core.runner import validate
 
 from . import bfcl_data as data
+from .bfcl_grader import VERSION as GRADER_VERSION
 from .bfcl_integration import PROMPT_VERSION
 from .experiment import Experiment
 
 DIRECTORY = Path(__file__).resolve().parent
 MANIFEST = DIRECTORY / "bfcl" / "development_requests.json"
 SMOKE_CASES = ("simple_python_0", "simple_python_13", "irrelevance_0")
+FROZEN_DIGEST = "c28821663e194956db707d6b595b0c1ee93356aacefabb8193098bdac583833b"
 
 
 def load_experiment() -> Experiment:
     spec = ExperimentSpec.model_validate(
         yaml.safe_load((DIRECTORY / "bfcl_development.yaml").read_text(encoding="utf-8"))
     )
-    return Experiment(spec, DIRECTORY)
+    # Historical config/manifest stay immutable; current execution records the corrected grader.
+    return Experiment(spec.model_copy(update={"grader_version": GRADER_VERSION}), DIRECTORY)
 
 
 def prepare() -> dict:
@@ -73,7 +76,7 @@ def prepare() -> dict:
         "config": experiment.spec.model_dump(mode="json"),
         "config_hash": digest(experiment.spec),
         "prompt_version": PROMPT_VERSION,
-        "grader_version": data.VERSION,
+        "grader_version": GRADER_VERSION,
         "source_hashes_lf_utf8": source_hashes,
         "independent_case_claim": False,
         "distinct_case_ids": len(cases),
@@ -85,6 +88,21 @@ def prepare() -> dict:
     }
 
 
+def verify_frozen() -> dict:
+    frozen = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    if digest(frozen) != FROZEN_DIGEST:
+        raise ValueError("Frozen Phase 2 manifest changed")
+    current = prepare()
+    # Historical source/grader metadata is retained, not rewritten to pretend it is current.
+    for key in frozen.keys() - {"source_hashes_lf_utf8", "grader_version", "config", "config_hash"}:
+        if frozen[key] != current[key]:
+            raise ValueError(f"Frozen request manifest differs: {key}")
+    expected_config = {**frozen["config"], "grader_version": GRADER_VERSION}
+    if current["config"] != expected_config or current["config_hash"] != digest(expected_config):
+        raise ValueError("Unexpected development configuration change")
+    return frozen
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     group = parser.add_mutually_exclusive_group(required=True)
@@ -93,8 +111,7 @@ def main() -> None:
     args = parser.parse_args()
     manifest = prepare()
     if args.check:
-        if json.loads(MANIFEST.read_text(encoding="utf-8")) != manifest:
-            raise SystemExit("Frozen request manifest differs; review and version any revision.")
+        verify_frozen()
     else:
         with args.output.open("x", encoding="utf-8", newline="\n") as output:
             output.write(canonical(manifest) + "\n")

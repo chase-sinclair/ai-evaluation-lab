@@ -1,5 +1,10 @@
 # Proposed first inexpensive API smoke test
 
+**Phase 2.5 update (November 4, 2026):** the six requests have been freshly audited
+and an executable, offline-by-default configuration is prepared. See
+[audit, current pricing, exact command and approval boundary](bfcl_smoke_audit.md).
+The preparation deferrals below are historical; paid execution still requires explicit approval.
+
 November 3, 2026. **Not executed; owner approval required.** This tests endpoint,
 schema, normalization, usage accounting and grading compatibility. Six calls cannot
 establish a model comparison, tool-count effect, or enterprise deployment conclusion.

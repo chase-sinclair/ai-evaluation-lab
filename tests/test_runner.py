@@ -42,7 +42,7 @@ def test_provider_and_grader_failures_are_distinct(experiment, tmp_path, monkeyp
     assert result["end_to_end_success_rate"] == 0
     assert "secret-must-not" not in (tmp_path / "provider" / "records.jsonl").read_text()
 
-    def broken_grade(*args):
+    def broken_grade(*args, **kwargs):
         raise RuntimeError("bad grader")
 
     monkeypatch.setattr(experiment, "grade", broken_grade)
@@ -117,7 +117,7 @@ def test_second_experiment_without_runner_changes(experiment, tmp_path):
                 output_format="text",
             )
 
-        def grade(self, case, response):
+        def grade(self, case, response, *, request):
             from eval_lab.contracts import GradeResult
 
             passed = response.parsed == "pong"

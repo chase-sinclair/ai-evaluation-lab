@@ -1,4 +1,39 @@
-# Progress — November 3, 2026
+# Progress — November 4, 2026
+
+Current phase: Phase 2.5 live integration preparation implemented and locally verified;
+GitHub delivery pending. **No paid requests executed or approved.**
+
+Completed: request-aware grading (BFCL 0.2.1) rejects unoffered tools; generic grading
+context passed by the runner; exact validated trial-order option preserves the frozen
+six-row order. Six-request configuration, offline preflight, fixed run ID/replay guard,
+explicit standard service tier and pinned OpenAI endpoint. Fresh audit of all six
+questions/schemas/keys/optional fields/distractors/hashes is in docs/bfcl_smoke_audit.md.
+
+Frozen dataset, 54-request manifest, source locks and original configuration unchanged.
+Current run metadata records new source/grader versions separately. No new experiment,
+frontend, held-out dataset or hypothesis/design change. Grader retains BFCL numeric-list
+and string-normalization limitations, documented in the audit.
+
+Verification so far: 85 offline tests pass, including 388 retained checker comparisons,
+six-request SDK fake transport, per-request invalid-vs-task-failure reporting, frozen
+ordering, replay prevention, drift rejection and preflight with zero provider calls.
+Spending preflight: 6 requests, 43,740 estimated input tokens, 24,576 output ceiling;
+$0.016662 standard / $0.0177555 cache-write estimate, below $0.05.
+Model/prices rechecked in official documentation November 4; account access untested.
+
+Files: runner/registry grading context; Responses payload helper/standard tier;
+BFCL integration/grader/prepare updates; smoke_bfcl.py, bfcl_smoke.yaml,
+bfcl/smoke_readiness.json; context/smoke tests; audit/proposal/extension/verification docs.
+Latest previously verified delivery: ee83f0579eda21c18b07ccd15863ac70f250c5f2.
+Final local checks passed: locked offline sync (36 packages), 85 tests, Ruff lint/format
+(47 files), frozen 54-request check, six-request spending preflight and diff whitespace.
+Next: commit/push; verify GitHub Actions and record the result. Then wait for explicit
+owner approval.
+After approval only: `py -3.13 -m uv run --offline python -m experiments.tool_selection.smoke_bfcl --live`.
+This would make paid calls despite uv's dependency-offline flag. Do not execute on
+continuation alone; do not delete results/bfcl-smoke-v1 to retry a failed attempt.
+
+## Previous accepted checkpoint — Phase 2
 
 Current phase: Phase 2 preparation complete; implementation pushed and GitHub Actions passed.
 

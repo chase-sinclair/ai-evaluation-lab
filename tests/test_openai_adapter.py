@@ -127,7 +127,7 @@ def test_text_sdk_transport_through_runner(experiment, tmp_path, monkeypatch, un
             messages=[{"role": "user", "content": "ping"}],
         )
 
-    def grade(case, response):
+    def grade(case, response, *, request):
         passed = response.parsed == "pong"
         return GradeResult(passed=passed, score=float(passed), grader_version="0.1.0")
 

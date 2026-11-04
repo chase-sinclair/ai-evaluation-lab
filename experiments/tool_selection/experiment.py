@@ -157,9 +157,11 @@ class Experiment:
                     call["arguments"]
                 )
 
-    def grade(self, case: Case, response: ModelResponse):
+    def grade(self, case: Case, response: ModelResponse, *, request: ModelRequest | None = None):
         if self.spec.dataset.id == DATASET_ID:
-            return bfcl_integration.grade(case, response)
+            if request is None:
+                raise ValueError("BFCL grading requires the actual request")
+            return bfcl_integration.grade(case, response, request=request)
         result = grade(case, response)
         if result.submetrics["well_formed"]:
             schemas = {t["name"]: t["parameters"] for t in TARGETS + DISTRACTORS}

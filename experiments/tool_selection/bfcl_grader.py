@@ -12,8 +12,9 @@ from typing import Any
 from eval_lab.contracts import GradeResult, ModelResponse
 from eval_lab.contracts import TestCase as Case
 
-from .bfcl_data import VERSION, wire_name
+from .bfcl_data import wire_name
 
+VERSION = "0.2.1"
 TYPES = {"integer": int, "float": float, "string": str, "boolean": bool, "array": list}
 
 
@@ -106,7 +107,7 @@ def grade(case: Case, response: ModelResponse, offered: list[dict]) -> GradeResu
         ):
             return result(False, False, "malformed_call")
         if call["name"] not in offered_names:
-            return result(False, False, "unknown_function")
+            return result(False, False, "unoffered_function")
         schema = (
             original["parameters"]
             if call["name"] == target

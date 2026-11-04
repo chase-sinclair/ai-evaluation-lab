@@ -40,6 +40,24 @@ def sanitize(value):
     return value
 
 
+def request_payload(request: ModelRequest) -> dict:
+    """Exact Responses body, also inspectable offline before an approved execution."""
+    if request.options:
+        raise ValueError("Optional inference parameters are unsupported; none are discarded")
+    kwargs = {
+        "model": request.model,
+        "input": request.messages,
+        "max_output_tokens": request.max_output_tokens,
+        "store": False,
+        "service_tier": "default",  # Explicit standard tier for the verified price snapshot.
+    }
+    if request.tools:
+        kwargs["tools"] = request.tools
+        kwargs["tool_choice"] = "auto"
+        kwargs["parallel_tool_calls"] = False
+    return kwargs
+
+
 class OpenAIProvider:
     def __init__(self, *, live: bool, client=None):
         if not live:
@@ -51,18 +69,7 @@ class OpenAIProvider:
         self.client = client
 
     def generate(self, request: ModelRequest) -> ModelResponse:
-        if request.options:
-            raise ValueError("Optional inference parameters are unsupported; none are discarded")
-        kwargs = {
-            "model": request.model,
-            "input": request.messages,
-            "max_output_tokens": request.max_output_tokens,
-            "store": False,
-        }
-        if request.tools:
-            kwargs["tools"] = request.tools
-            kwargs["tool_choice"] = "auto"
-            kwargs["parallel_tool_calls"] = False
+        kwargs = request_payload(request)
         response = self.client.responses.create(**kwargs)
         raw = sanitize(response.model_dump(mode="json"))
         calls = []
@@ -99,6 +106,7 @@ class OpenAIProvider:
                         "reasoning",
                         "max_output_tokens",
                         "parallel_tool_calls",
+                        "service_tier",
                     )
                     if k in raw
                 },

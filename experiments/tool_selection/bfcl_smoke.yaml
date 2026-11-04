@@ -1,0 +1,36 @@
+# Executable smoke view; defaults to offline preflight. Owner approval required for --live.
+id: tool_selection
+version: 0.2.0
+research_question: How does available tool count affect structured tool-call correctness?
+hypothesis: Expanded tool choice sets reduce full-call accuracy; development runs
+  are not confirmatory evidence.
+primary_variable: tool_count
+dataset:
+  id: bfcl-development
+  path: bfcl/development_cases.jsonl
+  version: 0.2.0
+conditions:
+- id: tools_5
+  variables:
+    tool_count: 5
+  provider: openai
+  model: gpt-6-luna
+- id: tools_30
+  variables:
+    tool_count: 30
+  provider: openai
+  model: gpt-6-luna
+repetitions: 1
+seed: 42
+max_requests: 6
+max_spend_usd: 0.05
+max_output_tokens: 4096
+grader_id: bfcl-python-subset
+grader_version: 0.2.1
+pricing:
+  version: openai-standard-2026-11-04
+  verified_date: '2026-11-04'
+  source_url: https://developers.openai.com/api/docs/models/gpt-6-luna
+  model: gpt-6-luna
+  input_usd_per_million: 0.1
+  output_usd_per_million: 0.5

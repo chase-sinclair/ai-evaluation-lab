@@ -24,7 +24,7 @@ class Experiment:
         # Return ModelRequest; never copy ground truth into model inputs.
         ...
 
-    def grade(self, case, response):
+    def grade(self, case, response, *, request):
         # Return GradeResult, using a fixed deterministic grading rule.
         ...
 ```

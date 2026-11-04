@@ -1,0 +1,60 @@
+{
+  "dry_run": true,
+  "planned_trials": 6,
+  "mode": "live",
+  "projected_cost_usd": 0.016662,
+  "estimated_input_tokens": 43740,
+  "output_token_ceiling": 24576,
+  "provider_calls": 0,
+  "owner_approval_required": true,
+  "pricing_verified_date": "2026-11-04",
+  "frozen_development_manifest_digest": "c28821663e194956db707d6b595b0c1ee93356aacefabb8193098bdac583833b",
+  "execution_config_hash": "00bacd8b7bd0236265ee7e43246cb3eabf300eb4bd8cbd110cc76bc2c491646f",
+  "grader_version": "0.2.1",
+  "max_spend_usd": 0.05,
+  "cache_write_conservative_cost_usd": 0.0177555,
+  "requests": [
+    {
+      "case_id": "irrelevance_0",
+      "condition_id": "tools_30",
+      "repeat": 0,
+      "request_hash": "f0ec87559690ac91a995eb78acabd79b1f99ea850cf6c2b1e6fc5f443679db55",
+      "responses_body_hash": "30006e0f5db50f59211b33f6a918246b94083139b2a32b5765769bab40f3d3e2"
+    },
+    {
+      "case_id": "simple_python_13",
+      "condition_id": "tools_5",
+      "repeat": 0,
+      "request_hash": "19e62fdf95def0bd4b4bc31c8957713800cc00ee35fb77f2e431a6a88b1ebdb7",
+      "responses_body_hash": "2c16c9928438b44663eb8650b466f40c58a161f4c5cc027050d9b2d172fe02f1"
+    },
+    {
+      "case_id": "simple_python_0",
+      "condition_id": "tools_5",
+      "repeat": 0,
+      "request_hash": "94281073740e3fd7d73059883fcbd730eb6bfb96b35d83531d490d3aa07176c6",
+      "responses_body_hash": "837471b38c3ffcc0577397edd44733b50afa92004c17d2e35571582007d34312"
+    },
+    {
+      "case_id": "simple_python_13",
+      "condition_id": "tools_30",
+      "repeat": 0,
+      "request_hash": "79b64812179b61467c7ae9fe1f4fa96d8e97e2ceb4dec9e1c9c9d39473a9f6cd",
+      "responses_body_hash": "6526e3723df8f5d0be244e5a532f454150f34d117c0f0efb87d0abe5dcdbe556"
+    },
+    {
+      "case_id": "irrelevance_0",
+      "condition_id": "tools_5",
+      "repeat": 0,
+      "request_hash": "f353dc83913b29bc5f328840d5e0610a7bf702e46566db2a6b9a1a7da8679c66",
+      "responses_body_hash": "ccb4d352f19c6d57e05c911318b3332f67974e83e2ba1a7925eebb3df4bb5e2e"
+    },
+    {
+      "case_id": "simple_python_0",
+      "condition_id": "tools_30",
+      "repeat": 0,
+      "request_hash": "fd5159f3f414698348c14cbd45c638ff95ca9f0af3cc7c32f73286250264fcca",
+      "responses_body_hash": "571d6cfb9d8523c5fe0e00b0178f80ba40c3ffc44c85331c594d2b8e549077b6"
+    }
+  ]
+}

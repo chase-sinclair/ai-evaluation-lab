@@ -90,8 +90,17 @@ def run(
     live: bool = False,
     run_id: str | None = None,
     provider_factory=None,
+    trial_order: list[tuple[str, str, int]] | None = None,
 ) -> dict:
     cases, trials = validate(experiment)
+    if trial_order is not None:
+        indexed = {
+            (c.id, condition.id, repeat): (c, condition, repeat, request)
+            for c, condition, repeat, request in trials
+        }
+        if len(trial_order) != len(indexed) or set(trial_order) != set(indexed):
+            raise ValueError("Explicit trial order must be an exact permutation of planned trials")
+        trials = [indexed[key] for key in trial_order]
     spec = experiment.spec
     requests = [t[3] for t in trials]
     projected = preflight(spec, requests, mode, live)
@@ -190,7 +199,7 @@ def run(
                 )
             else:
                 try:
-                    grade = experiment.grade(case, response)
+                    grade = experiment.grade(case, response, request=request)
                     if grade.grader_version != spec.grader_version:
                         raise ValueError("Grader version does not match config")
                     trial_status = "passed" if grade.passed else "task_failed"

@@ -44,3 +44,15 @@ See [integration, source audit and reproduction](../../docs/bfcl_phase2_design.m
 [six-request smoke proposal](../../docs/bfcl_smoke_test.md), and
 [third-party attribution](bfcl/NOTICE.md). `bfcl/development_requests.json` is an
 input manifest, not model results. Do not change its request objects during a run.
+
+Phase 2.5 adds `bfcl_smoke.yaml`, a six-request view of the same frozen dataset.
+It uses corrected grader 0.2.1 with the actual request's offered tools. Check it offline:
+
+```text
+uv run --offline python -m experiments.tool_selection.smoke_bfcl --preflight
+```
+
+The `--live` option exists but must only be used after explicit owner approval.
+See [request audit and execution instructions](../../docs/bfcl_smoke_audit.md).
+The original full-development config/manifest stay frozen; current source/grader
+metadata is recorded separately. The full pilot retains its zero-dollar budget.

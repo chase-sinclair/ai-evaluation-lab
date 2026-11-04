@@ -2,6 +2,49 @@
 
 Date: November 3, 2026. Host: Windows, CPython 3.13.0, uv 0.13.7.
 
+## Phase 2.5 — live integration preparation (November 4, 2026)
+
+Implemented keyword-only request context in the generic grading boundary; BFCL grader
+0.2.1 now validates against the actual request's offered tools and refuses missing
+context. Added an exact-permutation trial-order option to retain the frozen smoke
+sequence; default runner ordering is unchanged. A six-request view/configuration
+uses the existing runner, provider, immutable store and spending guards. Explicit
+standard service tier, fixed endpoint, six-call/$0.05 limits, 4096 output tokens,
+zero retries, sequential execution and fixed run ID are preserved/enforced.
+
+Independently re-inspected all six frozen request objects against original pinned
+source questions and keys, plus every rendered distractor schema/template. Documented
+optional fields, unique outcomes, no-call behavior, lack of label leakage and exact
+canonical request hashes in [the audit](bfcl_smoke_audit.md). This was a fresh assistant
+review, not an external human review. The dataset and historical request manifest are
+unchanged; original source/grader metadata is retained while new runs identify 0.2.1.
+
+Initial local suite: **85 passed**, including all previous 74 tests (updated to pass
+actual grading context), all 388 official-checker vectors, and 11 new parameterized
+smoke/context tests. Real SDK tests use local HTTP mock transport with sockets blocked;
+no credentials or paid calls. Valid offered targets, unoffered tools, malformed
+arguments and no-call responses are covered. End-to-end tests prove an unoffered
+warehouse call is invalid at 5 tools but a task failure at 30 tools; captured six-call
+SDK bodies/order match the audit hashes and repeated run IDs cannot call a provider.
+
+Offline spending preflight: **6 planned requests; 43,740 conservative input tokens;
+24,576 output-token ceiling; $0.016662 projected standard cost; zero provider calls**.
+The all-input 30-minute cache-write estimate is $0.0177555, below the $0.05 guard.
+Published Luna availability and prices rechecked November 4; account-specific access,
+actual usage and server acceptance were not probed. Only the alias is published.
+Grading still has the documented BFCL float-list/string-normalization limitations.
+
+Final local checks: `uv sync --locked --offline` succeeded (36 packages);
+`uv run --offline pytest -q` **85 passed**; Ruff lint and format checks passed
+(47 files); the 54-request frozen-manifest check and six-request offline preflight
+passed; `git diff --check` passed. Commands used `py -3.13 -m uv` on Windows.
+Git diff confirms no changes to the frozen cases/requests/source locks or full-development
+configuration. GitHub Actions verification is pending commit/push.
+
+No paid execution authorization is
+inferred from preparation acceptance. Explicit owner approval is the remaining gate;
+see the audit for the exact command and risks. No new experiment or held-out design change.
+
 ## Phase 2 — BFCL integration and experimental preparation
 
 Implemented the audited BFCL development subset inside the existing tool-selection

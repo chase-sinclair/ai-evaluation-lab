@@ -59,7 +59,7 @@ def build_request(case: Case, condition: Condition, spec: ExperimentSpec) -> Mod
 
 
 def validate(cases: list[Case], spec: ExperimentSpec) -> None:
-    if spec.grader_id != "bfcl-python-subset" or spec.grader_version != data.VERSION:
+    if spec.grader_id != "bfcl-python-subset" or spec.grader_version != grader.VERSION:
         raise ValueError("Unknown BFCL grader/version")
     if tuple(case.id for case in cases) != data.SELECTED_IDS:
         raise ValueError("BFCL subset must contain exactly the audited 18 IDs in frozen order")
@@ -87,8 +87,5 @@ def validate(cases: list[Case], spec: ExperimentSpec) -> None:
                     raise ValueError(f"Incompatible answer alternative: {case.id}")
 
 
-def grade(case: Case, response: ModelResponse):
-    # Grade only the case's target plus the audited pool; no math targets from other cases.
-    return grader.grade(
-        case, response, [data.convert_tool(case.task_input["function"]), *distractors()]
-    )
+def grade(case: Case, response: ModelResponse, *, request: ModelRequest):
+    return grader.grade(case, response, request.tools)

@@ -24,6 +24,11 @@ def module(name):
     return importlib.import_module(f"_eval_experiment_tool_selection.{name}")
 
 
+def grade(bfcl, case, response):
+    request = bfcl.build_request(case, bfcl.spec.conditions[-1])
+    return bfcl.grade(case, response, request=request)
+
+
 def test_subset_provenance_and_reimport(bfcl):
     data = module("bfcl_data")
     cases = bfcl.load_cases()
@@ -80,10 +85,10 @@ def test_official_checker_conformance_vectors(bfcl):
     assert evidence["source_sha256"] == lock["checker_sha256"]
     assert len(evidence["vectors"]) == 388
     for vector in evidence["vectors"]:
-        grade = bfcl.grade(
-            cases[vector["case_id"]], ModelResponse(parsed={"tool_calls": [vector["call"]]})
+        result = grade(
+            bfcl, cases[vector["case_id"]], ModelResponse(parsed={"tool_calls": [vector["call"]]})
         )
-        assert grade.passed == vector["official_passed"], vector
+        assert result.passed == vector["official_passed"], vector
 
 
 def test_all_answer_variants_and_target_invariance(bfcl):
@@ -122,26 +127,26 @@ def test_request_builder_cannot_leak_ground_truth_or_provenance(bfcl):
 )
 def test_malformed_is_never_no_call_success(bfcl, parsed):
     case = next(c for c in bfcl.load_cases() if c.id == "irrelevance_0")
-    result = bfcl.grade(case, ModelResponse(parsed=parsed))
+    result = grade(bfcl, case, ModelResponse(parsed=parsed))
     assert not result.passed and not result.valid_output
 
 
 def test_no_call_completed_only_and_refusal_failure(bfcl):
     case = bfcl.load_cases()[-1]
-    assert bfcl.grade(
-        case, ModelResponse(parsed={"tool_calls": [], "text": "No tool fits."})
+    assert grade(
+        bfcl, case, ModelResponse(parsed={"tool_calls": [], "text": "No tool fits."})
     ).passed
     for status in ("incomplete", "error", "unknown"):
-        assert not bfcl.grade(
-            case, ModelResponse(parsed={"tool_calls": []}, finish_status=status)
+        assert not grade(
+            bfcl, case, ModelResponse(parsed={"tool_calls": []}, finish_status=status)
         ).passed
     refusal = ModelResponse(
         parsed={"tool_calls": []},
         raw={"output": [{"type": "message", "content": [{"type": "refusal", "refusal": "No"}]}]},
     )
-    assert not bfcl.grade(case, refusal).passed
+    assert not grade(bfcl, case, refusal).passed
     call = {"name": "lookup_record_invoice", "arguments": {"record_id": "1"}}
-    result = bfcl.grade(case, ModelResponse(parsed={"tool_calls": [call]}))
+    result = grade(bfcl, case, ModelResponse(parsed={"tool_calls": [call]}))
     assert not result.passed and result.valid_output
 
 
@@ -151,7 +156,8 @@ def test_optional_units_wrong_values_types_extra_calls_and_float_rules(bfcl):
     case = cases["simple_python_7"]
 
     def result(args):
-        return bfcl.grade(
+        return grade(
+            bfcl,
             case,
             ModelResponse(
                 parsed={"tool_calls": [{"name": "calculate_circumference", "arguments": args}]}
@@ -165,7 +171,7 @@ def test_optional_units_wrong_values_types_extra_calls_and_float_rules(bfcl):
     assert not result({"radius": 4.0, "unit": "in"}).valid_output
     variant = grader.answer_variants(case)[0]
     variant["tool_calls"] *= 2
-    assert not bfcl.grade(case, ModelResponse(parsed=variant)).passed
+    assert not grade(bfcl, case, ModelResponse(parsed=variant)).passed
     assert grader.compatible_type(2, {"type": "float"})
     assert not grader.compatible_type(True, {"type": "float"})
     assert not grader.compatible_type([1, 3], {"type": "array", "items": {"type": "float"}})
@@ -187,7 +193,8 @@ def test_frozen_manifest_reproduces_offline(bfcl):
     prepare = module("prepare_bfcl")
     actual = prepare.prepare()
     frozen = json.loads(prepare.MANIFEST.read_text(encoding="utf-8"))
-    assert actual == frozen
+    assert prepare.verify_frozen() == frozen
+    assert actual["requests"] == frozen["requests"]
     assert len(actual["requests"]) == 54 and actual["provider_calls"] == 0
     assert sum(row["smoke_proposal"] for row in actual["requests"]) == 6
     for row in actual["requests"]:
@@ -245,7 +252,7 @@ def test_full_bfcl_matrix_runs_through_unchanged_engine_offline(bfcl, tmp_path):
     ]
     assert len(records) == 54
     assert all(r["status"] == "passed" for r in records)
-    assert all(r["grade"]["grader_version"] == "0.2.0" for r in records)
+    assert all(r["grade"]["grader_version"] == "0.2.1" for r in records)
     assert all(r["estimated_cost_usd"] == 0 for r in records)
 
 
@@ -288,7 +295,7 @@ def test_bfcl_real_sdk_offline_transport(bfcl, identifier):
     ) as client:
         request = bfcl.build_request(case, bfcl.spec.conditions[0])
         response = OpenAIProvider(live=True, client=client).generate(request)
-    assert bfcl.grade(case, response).passed
+    assert grade(bfcl, case, response).passed
     assert all(tool["strict"] is False for tool in captured[0]["tools"])
     assert captured[0]["tool_choice"] == "auto"
     assert captured[0]["parallel_tool_calls"] is False
