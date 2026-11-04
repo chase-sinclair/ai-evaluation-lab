@@ -22,7 +22,10 @@ pool and semantic audit, controls, and a conditional 60-call/$1 pilot proposal. 
 additional experiment or frontend was implemented; no paid calls or large archives used.
 Outstanding live-pilot gates: owner approval, exact model/prices, selected-case ambiguity
 review, importer/grader compatibility tests and independent rendered-request review.
-GitHub Actions result will be recorded after the first pushed run completes.
+GitHub Actions [run 41729343742](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41729343742)
+passed for commit `1fc165911f190c989f7ff38fabb2b059000641d6`: both Python 3.12 and
+3.13 jobs completed locked installation, pytest, Ruff lint and formatting checks.
+Phase 1.5 acceptance is complete; the live-pilot approval and compatibility gates remain.
 
 ## Workflow guidance update — November 3, 2026
 
