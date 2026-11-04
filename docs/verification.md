@@ -39,7 +39,11 @@ Final local checks: `uv sync --locked --offline` succeeded (36 packages);
 (47 files); the 54-request frozen-manifest check and six-request offline preflight
 passed; `git diff --check` passed. Commands used `py -3.13 -m uv` on Windows.
 Git diff confirms no changes to the frozen cases/requests/source locks or full-development
-configuration. GitHub Actions verification is pending commit/push.
+configuration. GitHub Actions [run 41869541258](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41869541258)
+passed for implementation commit `dcc2203f183031c71906bcd25726007dd1605674`.
+Both Python 3.12 and 3.13 jobs passed locked installation, offline pytest, Ruff lint
+and formatting. Phase 2.5 preparation acceptance is complete; a documentation-only
+checkpoint records this result. Paid execution remains pending explicit owner approval.
 
 No paid execution authorization is
 inferred from preparation acceptance. Explicit owner approval is the remaining gate;

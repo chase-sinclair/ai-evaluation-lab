@@ -1,7 +1,7 @@
 # Progress — November 4, 2026
 
-Current phase: Phase 2.5 live integration preparation implemented and locally verified;
-GitHub delivery pending. **No paid requests executed or approved.**
+Current phase: Phase 2.5 live integration preparation complete, pushed and CI verified.
+**No paid requests executed or approved. Await explicit owner approval.**
 
 Completed: request-aware grading (BFCL 0.2.1) rejects unoffered tools; generic grading
 context passed by the runner; exact validated trial-order option preserves the frozen
@@ -24,11 +24,14 @@ Model/prices rechecked in official documentation November 4; account access unte
 Files: runner/registry grading context; Responses payload helper/standard tier;
 BFCL integration/grader/prepare updates; smoke_bfcl.py, bfcl_smoke.yaml,
 bfcl/smoke_readiness.json; context/smoke tests; audit/proposal/extension/verification docs.
-Latest previously verified delivery: ee83f0579eda21c18b07ccd15863ac70f250c5f2.
+Latest CI-verified implementation: dcc2203f183031c71906bcd25726007dd1605674.
+CI: https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41869541258
+Both Python 3.12 and 3.13 passed locked installation, offline pytest and Ruff checks.
+A following documentation-only checkpoint records this evidence.
 Final local checks passed: locked offline sync (36 packages), 85 tests, Ruff lint/format
 (47 files), frozen 54-request check, six-request spending preflight and diff whitespace.
-Next: commit/push; verify GitHub Actions and record the result. Then wait for explicit
-owner approval.
+Next: wait for explicit owner approval of the six-call protocol in docs/bfcl_smoke_audit.md.
+No preparation blockers remain; account access/server acceptance remain untested live risks.
 After approval only: `py -3.13 -m uv run --offline python -m experiments.tool_selection.smoke_bfcl --live`.
 This would make paid calls despite uv's dependency-offline flag. Do not execute on
 continuation alone; do not delete results/bfcl-smoke-v1 to retry a failed attempt.
