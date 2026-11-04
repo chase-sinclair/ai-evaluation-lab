@@ -1,5 +1,10 @@
 # BFCL development pilot proposal — Phase 1.5
 
+**Historical proposal. Phase 2 preparation is documented in
+[bfcl_phase2_design.md](bfcl_phase2_design.md) and
+[bfcl_smoke_test.md](bfcl_smoke_test.md). Those documents supersede the 20-case,
+60-request plan, exclusions, payload-approval status and illustrative budget below.**
+
 Reviewed November 3, 2026. **For owner review; no live run authorized.** This is a
 derived expanded-choice-set study, not an official BFCL score. No additional experiment
 module has been implemented. The inspected category and answer files are small text

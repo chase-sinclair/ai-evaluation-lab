@@ -27,3 +27,20 @@ calls and valid calls with wrong values are separately diagnosed. Correct zero-c
 behavior requires an explicit parsed empty call list and a completed provider response.
 
 All cases are development fixtures. They must never become a published held-out benchmark.
+
+## BFCL development preparation
+
+The default five-case mock experiment remains unchanged. Phase 2 adds a separately
+configured 18-case BFCL development subset **inside this same experiment**, with
+54 frozen offline requests. It has a zero live budget and no execution command.
+
+From repository root:
+
+```text
+uv run --offline python -m experiments.tool_selection.prepare_bfcl --check
+```
+
+See [integration, source audit and reproduction](../../docs/bfcl_phase2_design.md),
+[six-request smoke proposal](../../docs/bfcl_smoke_test.md), and
+[third-party attribution](bfcl/NOTICE.md). `bfcl/development_requests.json` is an
+input manifest, not model results. Do not change its request objects during a run.

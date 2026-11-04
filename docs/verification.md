@@ -2,6 +2,56 @@
 
 Date: November 3, 2026. Host: Windows, CPython 3.13.0, uv 0.13.7.
 
+## Phase 2 — BFCL integration and experimental preparation
+
+Implemented the audited BFCL development subset inside the existing tool-selection
+module. No shared runner/provider/contracts were changed. The default five authored
+fixtures remain unchanged. Added bounded offline importer, raw-source/selected-row
+hash locks, provenance and original schemas/answers, Apache-2.0 attribution, narrow
+Python AST-compatible grading, and a complete frozen 54-request manifest. Excluded
+ambiguous simple_python_5 and simple_python_14 before model execution; retained 18
+development IDs, including four no-call cases. Added a source-supported validity
+assessment and a six-request/$0.05 API smoke proposal; no live invocation activated.
+
+Final local checks (November 3, 2026):
+
+| Check | Observed result |
+|---|---|
+| `uv sync --locked --offline` | Resolved/checked 36 locked packages; no dependency additions. |
+| `uv run --offline pytest -q` | **74 passed**, including all 54 existing tests; no skips. |
+| `uv run --offline ruff check .` | All checks passed. |
+| `uv run --offline ruff format --check .` | 44 files already formatted. |
+| `uv run --offline python -m experiments.tool_selection.prepare_bfcl --check` | Exactly reproduces 54 frozen requests; zero provider calls. |
+| Bounded raw-source reimport | Three exact pinned raw files reproduce all 18 committed cases byte-for-byte. |
+| Official checker regeneration | 388 decisions reproduced from the pinned, hash-verified checker; local grader agrees with all frozen vectors. |
+| `git diff --check` | Passed. |
+
+Commands on this Windows host used `py -3.13 -m uv` for the uv executable. Test socket
+connections are blocked and API credentials removed by the existing autouse fixture.
+Actual OpenAI SDK calls use `httpx.MockTransport`, never a remote model. Tests cover
+correct/incorrect calls, alternative strings, optional omissions, typed arguments,
+extra/malformed calls, no-call/refusal/incomplete handling, label-leak resistance,
+source tampering/size limits, target/schema/order invariants and frozen smoke budgets.
+An injected scripted provider also drives all 54 BFCL trials through the unchanged
+runner/store/summary path; these authored outcomes are software checks only.
+
+Source verification corrected a connector-added EOF newline before freezing exact
+raw source hashes. No question, schema, or key content changed. Reproduction tools
+write exclusively to new files; committed artifacts are the frozen Phase 2 release.
+
+GitHub Actions verification is pending this phase's commit/push. The existing workflow
+runs locked installation, offline pytest and Ruff lint/format on Python 3.12 and 3.13.
+
+Remaining limits/gates: this easy mathematical set risks ceiling effects and has
+correlated families; BFCL string normalization is not symbolic equivalence. No held-out
+dataset or new experiment was implemented. No benchmark-wide or real-model performance
+claims. No paid calls, large archives, credentials, caches or raw results committed.
+Owner approval is required for the six frozen smoke requests, GPT-6 Luna alias/default
+settings, dated prices and five-cent cap. The full development config retains a zero
+live budget. Account acceptance/actual usage and independent rendered-request review
+can only be resolved at the approved smoke stage. See
+[research design](bfcl_phase2_design.md) and [smoke protocol](bfcl_smoke_test.md).
+
 ## Phase 1.5 — Research engine hardening
 
 Implemented additive condition summaries and case-paired comparisons with explicit

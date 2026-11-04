@@ -7,6 +7,8 @@ from eval_lab.contracts import Condition, ExperimentSpec, ModelRequest, ModelRes
 from eval_lab.contracts import TestCase as Case
 from eval_lab.core.hashes import digest
 
+from . import bfcl_integration
+from .bfcl_data import DATASET_ID
 from .grader import VERSION, grade
 
 
@@ -83,9 +85,14 @@ class Experiment:
         path = (self.directory / self.spec.dataset.path).resolve()
         if not path.is_relative_to(self.directory):
             raise ValueError("Fixture must be inside experiment directory")
-        return [Case.model_validate(json.loads(line)) for line in path.read_text().splitlines()]
+        return [
+            Case.model_validate(json.loads(line))
+            for line in path.read_text(encoding="utf-8").splitlines()
+        ]
 
     def build_request(self, case: Case, condition: Condition) -> ModelRequest:
+        if self.spec.dataset.id == DATASET_ID:
+            return bfcl_integration.build_request(case, condition, self.spec)
         count = condition.variables["tool_count"]
         tools = TARGETS + DISTRACTORS[: count - len(TARGETS)]
         # One ranking per case: increasing counts add tools and preserve relative target order.
@@ -108,6 +115,9 @@ class Experiment:
         )
 
     def validate(self, cases: list[Case]) -> None:
+        if self.spec.dataset.id == DATASET_ID:
+            bfcl_integration.validate(cases, self.spec)
+            return
         if self.spec.grader_id != "structured-tool-call" or self.spec.grader_version != VERSION:
             raise ValueError("Unknown grader or version")
         settings = {
@@ -148,6 +158,8 @@ class Experiment:
                 )
 
     def grade(self, case: Case, response: ModelResponse):
+        if self.spec.dataset.id == DATASET_ID:
+            return bfcl_integration.grade(case, response)
         result = grade(case, response)
         if result.submetrics["well_formed"]:
             schemas = {t["name"]: t["parameters"] for t in TARGETS + DISTRACTORS}

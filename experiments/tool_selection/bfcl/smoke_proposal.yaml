@@ -1,0 +1,36 @@
+kind: proposal-only-not-an-executable-experiment-spec
+version: 0.2.0
+owner_approval_required: true
+source_manifest: development_requests.json
+selection: requests_with_smoke_proposal_true_in_manifest_order
+provider: openai
+endpoint: /v1/responses
+model: gpt-6-luna
+model_snapshot_status: only_alias_published_in_verified_model_documentation
+pricing_verified_date: '2026-11-03'
+pricing_source: https://developers.openai.com/api/docs/models/gpt-6-luna
+standard_input_usd_per_million: 0.10
+standard_output_usd_per_million: 0.50
+cache_write_input_usd_per_million: 0.125
+max_requests: 6
+max_spend_usd: 0.05
+max_output_tokens_per_request: 4096
+max_retries: 0
+timeout_seconds: 60
+concurrency: 1
+tool_choice: auto
+parallel_tool_calls: false
+strict: false
+store: false
+optional_inference_settings: {}
+reasoning_setting: omitted_server_default_medium_per_model_docs
+case_ids: [simple_python_0, simple_python_13, irrelevance_0]
+tool_counts: [5, 30]
+repetitions: 1
+expected_input_tokens_heuristic_total: 12084
+expected_billed_output_tokens_planning_range: [3000, 9000]
+conservative_input_tokens_total: 43740
+output_token_ceiling_total: 24576
+conservative_standard_cost_usd: 0.016662
+conservative_cache_write_cost_usd: 0.0177555
+approval_scope: smoke_only_full_54_request_development_run_requires_separate_approval
