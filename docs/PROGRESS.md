@@ -1,6 +1,6 @@
 # Progress — November 4, 2026
 
-## Phase 2.6 — implementation verified; delivery in progress
+## Phase 2.6 — complete, pushed and CI verified
 
 Workstream A is complete: cache-aware usage partitions and component pricing,
 source/version/tier/lifetime metadata, unknown-cost stopping, conservative cache
@@ -29,9 +29,11 @@ No 24h price is inferred. Missing lifetime breakdown remains unknown, so a futur
 response matching the smoke telemetry would stop further calls. See
 docs/phase2_6_hardening.md for the accounting boundary and preservation hashes.
 
-Latest previous CI-verified delivery: 1686c9a97112fc428bc1dbb0373277e6397dd551.
-Phase 2.6 commit/push and CI verification are the remaining delivery steps.
-After delivery STOP for owner review. Next work needs approval of the Phase 3
+Latest CI-verified implementation: 991c963d9c57ef30c66dd0a30bc30757dc508b8b.
+CI passed on Python 3.12 and 3.13, including locked install, offline tests and Ruff:
+https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41918593399
+This documentation-only checkpoint records that result. Work is STOPPED for owner
+review. Next work needs approval of the Phase 3
 design, bounded source/label audit and redistribution, independent reviewers and
 split custodian, then exact frozen requests/settings/prices and an accounting policy
 before a separately approved pilot (proposed $0.35 / 36-request cap). Held-out

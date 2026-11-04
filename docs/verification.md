@@ -51,8 +51,11 @@ controls, paired analysis, sample quotas, estimated costs, abort rules and appro
 gates. It does not claim that enough eligible cases or distractors have been audited.
 The held-out experiment is neither implemented nor executed.
 
-Delivery CI verification is pending the implementation push. No implementation
-blockers remain. Live work still needs a reviewed accounting policy for absent write
+Implementation commit `991c963d9c57ef30c66dd0a30bc30757dc508b8b` was pushed to origin/main.
+[GitHub Actions run 41918593399](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41918593399)
+passed on Python 3.12 and 3.13 with locked install, offline pytest, Ruff lint and
+format checks. This documentation-only follow-up records verified CI evidence.
+No implementation blockers remain. Live work still needs a reviewed accounting policy for absent write
 lifetime detail, eligible source/gold audits, a frozen protocol and owner approval.
 
 ## Approved Phase 2.5 execution — November 4, 2026
