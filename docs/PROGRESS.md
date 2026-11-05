@@ -16,8 +16,10 @@ The complete 38-body proposal reserves $0.09235425 against $0.15.
 Paid requests and held-out evaluations this phase: zero.
 
 Verified locally with 149 offline tests, lint, format, source reconstruction,
-the original Phase 3C receipt and the mock end-to-end run. Previous verified
-main was f906180. Next: two independent reviewers use the blinded worksheet.
+the original Phase 3C receipt and the mock end-to-end run. Implementation
+commit 40f58320ec8b93c3754bdc765a12e4e235cebfb8
+[passed GitHub Actions](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/42038565105).
+The next step is for two independent reviewers to use the blinded worksheet.
 Resolve disputes, version any changed cohort, then review the exact cache-aware
 dispatch and spending guard before requesting separate live authorization.
 

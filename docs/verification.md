@@ -17,6 +17,8 @@
 - [Development measurements and review gates](phase3d_crossref_resolution.md).
   Ten exclusions were recorded. Independent human review remains pending for
   the eight provisional NILs. The proposed live dispatcher is approval-gated.
+- Implementation commit 40f58320ec8b93c3754bdc765a12e4e235cebfb8 passed
+  [the GitHub Actions Python 3.12 and 3.13 matrix](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/42038565105).
 
 ## Phase 3C · November 4, 2026
 
