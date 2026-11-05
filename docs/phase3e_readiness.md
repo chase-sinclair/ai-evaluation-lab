@@ -1,5 +1,8 @@
 # Crossref development pilot readiness · November 5, 2026
 
+**Execution update:** the one-shot prefix has completed. The command below is
+the historical protocol. See the [live findings](phase3e_live_findings.md).
+
 **Ready for owner approval.** Chase Sinclair completed the eight-query review on November 5, 2026. The review was human-conducted with AI-assisted research. The existing validator accepted all eight decisions. The one-shot command can send **four** requests, the first four in the existing frozen order. This is the smallest sample that gives distinct, exact 0/25/50/100% policies (0/1/2/4). It can check integration, including abstention. An accuracy or cost-effectiveness conclusion needs a larger reviewed sample.
 
 **For the reviewer:** share only the [identity worksheet](review/funder_identity.md). Save the completed copy as `.verification/phase3e-review.md`. Search the entire checksum-verified April 14 ROR v2.6 snapshot, including aliases, inactive names, and successor relationships. Record one active ROR ID, no supported match, or insufficient evidence for each query. Record sources/searches, reviewer and date. After locking those decisions, use the separate [candidate sheet](review/funder_offers.md) to record whether an offered ID resolves each query. Membership in this focused review set may itself suggest how cases were selected. Both sheets omit original annotations, baseline choices and similarity scores. One human review suffices for development and provides no inter-reviewer agreement estimate.

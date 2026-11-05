@@ -1,5 +1,15 @@
 # Progress — November 5, 2026
 
+## Phase 3E — authorized live prefix completed
+
+Executed the frozen four-query prefix once at revision 1369906. The pricing
+and spending preflight, human review, body hashes and one-shot checks passed.
+Three correct links and one correct abstention. Replay accuracy was 3/4 at
+0%, 25% and 50%, and 4/4 at 100%. Usage-priced estimate $0.0002111. The
+[findings](phase3e_live_findings.md) give each query, cost and policy comparison.
+All receipts remain local. Stop for owner review. Any further requests require
+separate authorization and a protocol accounting for the four existing records.
+
 ## Phase 3E — human review validated, ready for owner approval
 
 Chase Sinclair completed a human-conducted review with AI-assisted research.

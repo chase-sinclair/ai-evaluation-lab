@@ -1,5 +1,16 @@
 # Phase 0 / Phase 1 verification
 
+## November 5, 2026 · live Phase 3E prefix
+
+Reconfirmed standard pricing, unused one-shot claim, approved plan and review
+digests, and $0.00354375 preflight reserve before the single live invocation.
+Matched all four persisted record IDs, logical request hashes and actual
+body receipts to the approved prefix. Independently compared parsed decisions
+to offered IDs and ground truth, and checked API token partitions and all
+four policy rows. Four completed responses, zero errors, no extra acquisitions.
+The [live findings](phase3e_live_findings.md) include receipt integrity hashes.
+All 169 offline tests and both Ruff checks passed after acquisition.
+
 ## Phase 3E completed human review · November 5, 2026
 
 Chase Sinclair conducted the review with AI-assisted research. All eight
