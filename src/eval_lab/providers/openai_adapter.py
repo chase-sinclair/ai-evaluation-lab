@@ -99,8 +99,11 @@ class OpenAIProvider:
             client = OpenAI(max_retries=0, timeout=60.0)
         self.client = client
 
+    def payload(self, request: ModelRequest) -> dict:
+        return request_payload(request)
+
     def generate(self, request: ModelRequest) -> ModelResponse:
-        kwargs = request_payload(request)
+        kwargs = self.payload(request)
         response = self.client.responses.create(**kwargs)
         raw = sanitize(response.model_dump(mode="json"))
         calls = []

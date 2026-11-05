@@ -28,6 +28,9 @@ On Windows, `py -3.13 -m uv` is an equivalent launcher when uv is not on PATH.
 
 ## What works
 
+The [Phase 3E readiness report](docs/phase3e_readiness.md) includes the
+four-query proposal and the [blinded reviewer worksheet](docs/review/funder_identity.md).
+
 Current research status: the substantive BFCL study is deferred and WDC
 development is paused. The [offline Crossref resolution experiment](docs/phase3d_crossref_resolution.md)
 supports baseline evaluation and paired escalation replay. Run

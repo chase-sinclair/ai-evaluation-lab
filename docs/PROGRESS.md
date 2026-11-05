@@ -1,5 +1,23 @@
 # Progress — November 5, 2026
 
+## Phase 3E — dispatch verified offline, human decisions and owner approval pending
+
+The [reviewer worksheet](review/funder_identity.md) covers the eight pending
+queries and separates full ROR v2.6 identity from candidate coverage. No human
+decisions were supplied. The provisional development cohort has 38 queries,
+48 nominations and ten documented exclusions. Baseline correct decisions by
+group are 18/18 registry forms, 8/12 variants and 6/8 provisional no-matches.
+
+The [pilot and exact command](phase3e_readiness.md) propose four queries in the
+original frozen order. The 1,024-output cap gives a $0.00354375 reserve against
+$0.005 for this prefix. The revised 38-request planning reserve is $0.03398625
+against $0.05. Both freezes are reproducible. Prior verified head was 9617e63.
+
+Next: obtain one documented human development review of all eight queries.
+Any changed answer or unresolved case requires a versioned cohort, calibration
+and complete refreeze. Then seek explicit owner approval for the four calls.
+Paid requests and held-out evaluations in this phase: zero.
+
 ## Phase 3D — offline resolution implemented, human review pending
 
 The [Crossref experiment](phase3d_crossref_resolution.md) freezes 48 nominations,

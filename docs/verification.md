@@ -1,5 +1,20 @@
 # Phase 0 / Phase 1 verification
 
+## Phase 3E · November 5, 2026
+
+- Verified the full pinned ROR search, regenerated the prior 24-pair receipt and
+  Phase 3D dataset/calibration/requests, and rebuilt all 38 revised requests.
+  Deterministic baseline: 32/38, Recall@5 29/30. Human-review gate remains open.
+- Exercised the shared runner and OpenAI SDK with a local HTTP mock through the
+  actual dispatch entry logic, blank/changed/fixture review gates, exact body and
+  destination guards, count/budget boundaries, one-shot storage, and replay.
+  The four permitted sends produced four records and 0/1/2/4 selections.
+  Fault injection covered partial cache telemetry, inconsistent totals, 12h
+  writes/policy, wrong tier/model/settings, incomplete/invalid output, refusal,
+  429 and transport failure. The test worksheet is temporary simulated input.
+- Locked offline sync, **169 offline pytest tests**, Ruff lint and format checks passed.
+  See [review status, reserve calculations, abort rules and command](phase3e_readiness.md).
+
 ## Phase 3D · November 5, 2026
 
 - Locked offline installation, **149 pytest tests**, Ruff lint and format checks

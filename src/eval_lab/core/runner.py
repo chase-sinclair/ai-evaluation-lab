@@ -2,12 +2,14 @@
 
 import hashlib
 import importlib.metadata
+import math
 import platform
 import random
 import subprocess
 import sys
 import time
 import uuid
+from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -91,6 +93,7 @@ def run(
     run_id: str | None = None,
     provider_factory=None,
     trial_order: list[tuple[str, str, int]] | None = None,
+    live_record_policy: Callable[[RunRecord], tuple[float, str | None]] | None = None,
 ) -> dict:
     cases, trials = validate(experiment)
     if trial_order is not None:
@@ -244,9 +247,23 @@ def run(
             )
             store.append(record)
             records.append(record)
-            spent += estimated_cost or 0
             if interrupted:
                 raise KeyboardInterrupt
+            if mode == "live" and live_record_policy is not None:
+                charge, reason = live_record_policy(record)
+                floor = (
+                    estimated_cost
+                    if estimated_cost is not None
+                    else estimate_cost(request, spec.pricing)
+                )
+                if not math.isfinite(charge) or charge < floor:
+                    raise ValueError("Invalid conservative spending charge")
+                spent += charge
+                if reason or response.error or response.usage is None or spent > spec.max_spend_usd:
+                    status, error = "failed", reason or "Live response or spending guard failed"
+                    break
+                continue
+            spent += estimated_cost or 0
             if mode == "live" and (response.error or estimated_cost is None):
                 status, error = "failed", "Live usage/cost uncertain; no further requests scheduled"
                 break

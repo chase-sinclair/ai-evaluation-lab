@@ -42,8 +42,9 @@ def save(name, packet, check):
             stream.write("\n")
 
 
-def proposal():
-    exp = experiment(True)
+def proposal(exp=None):
+    if exp is None:
+        exp = experiment(True)
     if (
         exp.spec.conditions[0].variables["calibration"]
         != load("baseline.json")["calibration"]["thresholds"]
