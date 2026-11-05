@@ -35,7 +35,7 @@ Current research status: the substantive BFCL study is deferred and WDC
 development is paused. The [offline Crossref resolution experiment](docs/phase3d_crossref_resolution.md)
 supports baseline evaluation and paired escalation replay. Run
 `uv run --offline python -m experiments.entity_matching.ror demo` from this checkout.
-Independent no-match review is pending. See also the
+The eight no-match decisions passed the human-review gate. See also the
 [dataset decision](docs/entity_matching_dataset_decision.md) and [offline checkpoint](docs/entity_matching_checkpoint.md).
 
 - Typed contracts and YAML validation; automatic trusted local experiment discovery.

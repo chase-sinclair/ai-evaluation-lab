@@ -1,6 +1,15 @@
 # Progress — November 5, 2026
 
-## Phase 3E — dispatch verified offline, human decisions and owner approval pending
+## Phase 3E — human review validated, ready for owner approval
+
+Chase Sinclair completed a human-conducted review with AI-assisted research.
+All eight full-registry decisions and all eight offered-set decisions agree
+with the freeze. The local receipt passed the existing validator after the reviewer
+confirmed the Q01 date. The cohort has 38 queries. The next step is explicit
+owner authorization for the four-request prefix under the $0.005 cap.
+The [readiness report](phase3e_readiness.md) contains the exact command and protocol.
+
+## Earlier Phase 3E checkpoint — dispatch verified offline
 
 The [reviewer worksheet](review/funder_identity.md) covers the eight pending
 queries and separates full ROR v2.6 identity from candidate coverage. No human
