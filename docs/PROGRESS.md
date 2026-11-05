@@ -20,7 +20,8 @@ Next: owner review of the source, organization-identity definition and bounded
 approval would precede any model calls. No further WDC work is scheduled.
 
 Local verification: 143 offline tests, Ruff lint/format and full WDC receipt
-reconstruction passed. Preceding verified main: 4c1956d5124abeb08f45b37e51fa49d44ea19c50.
+reconstruction passed. Verified implementation: 230a2547127933654ffed7f4c8edddb8dfcf31a2;
+[GitHub Actions passed on Python 3.12 and 3.13](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41965569494).
 
 ## Phase 3A — complete, pushed and CI verified
 

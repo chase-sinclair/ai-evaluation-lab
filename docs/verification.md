@@ -19,7 +19,8 @@
   [Decision evidence, limitations and next gates](entity_matching_dataset_decision.md).
   No Crossref/OpenAlex dataset-specific implementation or paid activity.
 - WDC paused; BFCL study deferred. Historical BFCL files and results untouched.
-  CI for this checkpoint is tied to the pushed commit in GitHub Actions.
+  [CI passed for the pushed checkpoint](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41965569494)
+  (230a2547127933654ffed7f4c8edddb8dfcf31a2, Python 3.12 and 3.13).
 
 ## Original verification record
 
