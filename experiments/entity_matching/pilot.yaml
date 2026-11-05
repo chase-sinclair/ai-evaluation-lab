@@ -1,0 +1,29 @@
+id: entity_matching
+version: "1"
+research_question: How does the percentage of ambiguous business records escalated to an LLM affect matching accuracy and operational cost?
+hypothesis: Escalation may improve quality at increased cost.
+primary_variable: escalation_percent
+dataset: {id: wdc-products-validation, version: small-000un-v1, path: development.json}
+conditions:
+  - id: acquire
+    provider: openai
+    model: gpt-6-luna
+    variables: {escalation_percent: 100}
+repetitions: 1
+seed: 42
+max_requests: 12
+max_spend_usd: 0.05
+max_output_tokens: 4096
+grader_id: binary-match
+grader_version: "1"
+pricing:
+  model: gpt-6-luna
+  version: openai-standard-2026-11-04
+  source_url: https://developers.openai.com/api/docs/pricing
+  verified_date: "2026-11-04"
+  input_usd_per_million: 0.10
+  output_usd_per_million: 0.50
+  cache:
+    service_tier: default
+    read_usd_per_million: 0.01
+    write_usd_per_million: {"30m": 0.125, "12h": 0.25}

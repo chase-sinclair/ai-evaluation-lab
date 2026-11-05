@@ -1,5 +1,27 @@
 # Progress — November 4, 2026
 
+## Phase 3B — WDC paused; dataset decision awaits owner review
+
+The substantive BFCL tool-selection study is **deferred**, not completed. Its
+four-case probe was not run. Prior phase notes below are historical.
+
+Preserved the local WDC validation baseline, 180-pair metadata receipt, frozen
+but unauthorized pilot proposal, and the existing authored runner/replay example
+in experiments/entity_matching. No raw records in Git, paid calls, or held-out
+evaluation. WDC external transmission rights remain unresolved. See the
+[checkpoint and baseline measurements](entity_matching_checkpoint.md).
+
+[Dataset decision](entity_matching_dataset_decision.md): recommend Crossref's
+CC0 manually ROR-labeled deposited funder names over registry-only aliases or
+OpenAlex machine-linked affiliations. 220 organizations have two or more
+normalized variants after initial screening. No new experiment or pairs built.
+Next: owner review of the source, organization-identity definition and bounded
+24-pair offline audit; independent reviewers, protocol freeze and separate
+approval would precede any model calls. No further WDC work is scheduled.
+
+Local verification: 143 offline tests, Ruff lint/format and full WDC receipt
+reconstruction passed. Preceding verified main: 4c1956d5124abeb08f45b37e51fa49d44ea19c50.
+
 ## Phase 3A — complete, pushed and CI verified
 
 Audited exactly 40 new BFCL multiple records (57–99 except previously reviewed

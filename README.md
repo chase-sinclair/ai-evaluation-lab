@@ -28,6 +28,10 @@ On Windows, `py -3.13 -m uv` is an equivalent launcher when uv is not on PATH.
 
 ## What works
 
+Current research status: the substantive BFCL study is deferred and WDC
+development is paused. See the [entity-matching dataset decision](docs/entity_matching_dataset_decision.md)
+and [offline checkpoint](docs/entity_matching_checkpoint.md).
+
 - Typed contracts and YAML validation; automatic trusted local experiment discovery.
 - Five synthetic cases × three tool counts = 15 deterministic trials, including no-call.
 - Structured tool-call grading with typed arguments and distinct error categories.

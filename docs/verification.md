@@ -1,5 +1,28 @@
 # Phase 0 / Phase 1 verification
 
+## November 4 — Phase 3B pause and dataset decision checkpoint
+
+- Locked offline sync; 143 offline pytest cases passed with sockets blocked;
+  Ruff lint and formatting passed (64 files). Seven additional cases check
+  binary parsing, label-blind inputs/scoring, shared-runner storage, nested
+  policies, invalid/missing/duplicate predictions and marginal cost metrics.
+- Ran the existing four-pair authored demo: four records, 0/1/2/4 escalation
+  selections; malformed prediction fell back to the baseline. No mock score is
+  a claim about an LLM. Raw artifacts stayed in ignored results/.
+- Rebuilt the local development receipt with
+  `uv run --offline python -m experiments.entity_matching.prepare --check`:
+  all three validation file hashes, 180 selected pairs, baseline measurements,
+  12 proposal request/body hashes and $0.028300 preflight matched.
+- Checked the Crossref v1 JSONL against the published MD5, computed SHA-256
+  and aggregate eligibility counts; inspected an OFR record and an OpenAlex
+  institution record and their providers' licensing/access documentation.
+  [Decision evidence, limitations and next gates](entity_matching_dataset_decision.md).
+  No Crossref/OpenAlex dataset-specific implementation or paid activity.
+- WDC paused; BFCL study deferred. Historical BFCL files and results untouched.
+  CI for this checkpoint is tied to the pushed commit in GitHub Actions.
+
+## Original verification record
+
 Date: November 3, 2026. Host: Windows, CPython 3.13.0, uv 0.13.7.
 
 ## Phase 3A — November 4, 2026

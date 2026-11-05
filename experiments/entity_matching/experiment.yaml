@@ -1,0 +1,13 @@
+id: entity_matching
+version: "1"
+research_question: How does the percentage of ambiguous business records escalated to an LLM affect matching accuracy and operational cost?
+hypothesis: Escalating uncertain pairs may improve matching at increased cost.
+primary_variable: escalation_percent
+dataset: {id: authored-pairs, version: "1", path: fixture.json}
+conditions:
+  - id: acquire
+    variables: {escalation_percent: 100}
+max_requests: 4
+max_output_tokens: 4096
+grader_id: binary-match
+grader_version: "1"
