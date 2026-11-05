@@ -13,6 +13,8 @@
   writes/policy, wrong tier/model/settings, incomplete/invalid output, refusal,
   429 and transport failure. The test worksheet is temporary simulated input.
 - Locked offline sync, **169 offline pytest tests**, Ruff lint and format checks passed.
+  [GitHub Actions passed on Python 3.12 and 3.13](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/42089244990)
+  for implementation commit 8b211ae0651f44bcaa1efec121a81a714fed694c.
   See [review status, reserve calculations, abort rules and command](phase3e_readiness.md).
 
 ## Phase 3D · November 5, 2026

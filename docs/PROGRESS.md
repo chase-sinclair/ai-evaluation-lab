@@ -11,7 +11,9 @@ group are 18/18 registry forms, 8/12 variants and 6/8 provisional no-matches.
 The [pilot and exact command](phase3e_readiness.md) propose four queries in the
 original frozen order. The 1,024-output cap gives a $0.00354375 reserve against
 $0.005 for this prefix. The revised 38-request planning reserve is $0.03398625
-against $0.05. Both freezes are reproducible. Prior verified head was 9617e63.
+against $0.05. Both freezes are reproducible. Implementation commit
+8b211ae0651f44bcaa1efec121a81a714fed694c passed 169 offline tests and
+[the GitHub Actions checks](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/42089244990).
 
 Next: obtain one documented human development review of all eight queries.
 Any changed answer or unresolved case requires a versioned cohort, calibration
