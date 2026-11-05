@@ -1,5 +1,23 @@
 # Phase 0 / Phase 1 verification
 
+## November 5, 2026 · Phase 3F offline escalation analysis
+
+- Rebuilt the source-based development freeze with
+  `uv run --offline python -m experiments.entity_matching.ror check`. Confirmed
+  48 nominated, 38 eligible, 32 correct baseline decisions, 29/30 targets
+  retrieved and 579 quarantined rows. No historical files changed.
+- Ran `uv run --offline python -m scripts.analyze_crossref_escalation` against
+  the committed artifacts. The two audit tests check exact appendix reproduction,
+  allocations, pilot ordering, and the distinction between selection and retrieval.
+  SHA-256 checks on the local records and pilot report matched the published
+  [Phase 3E hashes](phase3e_live_findings.md).
+- `uv run --offline pytest -q` passed all 171 tests. `uv run --offline ruff check .`
+  and `uv run --offline ruff format --check .` passed (88 Python files).
+  No new API requests, model grades or production escalation policy.
+- The [analysis](phase3f_escalation_analysis.md) reports observed live decisions
+  only for the four previously acquired queries and allocation counts across all 38.
+  Holdout eligibility, review, policy comparison and costs remain prospective.
+
 ## November 5, 2026 · live Phase 3E prefix
 
 Reconfirmed standard pricing, unused one-shot claim, approved plan and review

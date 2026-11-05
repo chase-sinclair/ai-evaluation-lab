@@ -1,5 +1,20 @@
 # Progress — November 5, 2026
 
+## Phase 3F — offline escalation analysis complete
+
+Audited all 38 development decisions against the frozen baseline from commit
+`019caffe3ba6251210b49156a0e568534cc8bd63`. Five of six errors were correctable
+with the offered actions. Frozen distance reached four by slot nine. Margin reached
+three by slot nine and five by slot 19. CNPq accounted for the extra opportunity
+at slot 19. The other 34 queries still have no live predictions.
+[Analysis and holdout proposal](phase3f_escalation_analysis.md) · [38-query appendix](phase3f_allocation_audit.md)
+
+Added a read-only audit script and two offline tests. The pinned source rebuild,
+171 tests, lint and format passed. Phase 3E records and pilot report matched
+their published hashes. No live calls or runtime policy changes. Next step is
+owner review of the proposed comparison, followed, if accepted, by a separate
+holdout sampling/adjudication and preregistration milestone before any spending.
+
 ## Phase 3E — authorized live prefix completed
 
 Executed the frozen four-query prefix once at revision 1369906. The pricing
