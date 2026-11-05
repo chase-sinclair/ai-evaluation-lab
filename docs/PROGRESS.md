@@ -1,4 +1,25 @@
-# Progress — November 4, 2026
+# Progress — November 5, 2026
+
+## Phase 3D — offline resolution implemented, human review pending
+
+The [Crossref experiment](phase3d_crossref_resolution.md) freezes 48 nominations,
+including 10 documented exclusions. The development diagnostic uses 30
+source-supported singletons and eight pending empty labels. Independent
+no-match adjudications completed: zero. The requested 36/12 reviewed cohort
+remains open. Retain all 48 nominations and their families on the development side.
+
+The entity-matching module now supports active-registry lexical retrieval,
+an abstaining top-one baseline, immutable shared-runner acquisition and four
+paired replay policies. Recall@5 was 29/30. On the provisional calibration
+set the baseline scored 32/38 correct and asserted-link F1 was .881.
+The complete 38-body proposal reserves $0.09235425 against $0.15.
+Paid requests and held-out evaluations this phase: zero.
+
+Verified locally with 149 offline tests, lint, format, source reconstruction,
+the original Phase 3C receipt and the mock end-to-end run. Previous verified
+main was f906180. Next: two independent reviewers use the blinded worksheet.
+Resolve disputes, version any changed cohort, then review the exact cache-aware
+dispatch and spending guard before requesting separate live authorization.
 
 ## Phase 3C — Crossref audit complete, experiment pending owner review
 

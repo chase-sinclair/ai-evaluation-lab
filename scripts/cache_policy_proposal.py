@@ -14,7 +14,9 @@ from eval_lab.providers.openai_adapter import normalize_usage
 POLICY_VERSION = "phase3a-implicit-30m-v1-proposed"
 
 
-def request_policy_valid(payload: dict, approved_hash: str, pricing: Pricing) -> bool:
+def request_policy_valid(
+    payload: dict, approved_hash: str, pricing: Pricing, *, text_only=False
+) -> bool:
     """Freeze the complete actual wire body; allow only the reviewed stateless form."""
     allowed = {
         "model",
@@ -35,6 +37,23 @@ def request_policy_valid(payload: dict, approved_hash: str, pricing: Pricing) ->
             )
         return isinstance(value, list) and any(has_breakpoint(v) for v in value)
 
+    if text_only:
+        shape_valid = set(payload) == {
+            "model",
+            "input",
+            "max_output_tokens",
+            "store",
+            "service_tier",
+            "prompt_cache_options",
+        }
+    else:
+        shape_valid = (
+            payload.get("parallel_tool_calls") is False
+            and payload.get("tool_choice") == "auto"
+            and isinstance(payload.get("tools"), list)
+            and bool(payload["tools"])
+            and all(isinstance(t, dict) and t.get("type") == "function" for t in payload["tools"])
+        )
     return (
         digest(payload) == approved_hash
         and len(canonical(payload).encode()) <= 8_000
@@ -43,15 +62,11 @@ def request_policy_valid(payload: dict, approved_hash: str, pricing: Pricing) ->
         and payload.get("service_tier") == "default"
         and payload.get("prompt_cache_options") == {"mode": "implicit", "ttl": "30m"}
         and payload.get("store") is False
-        and payload.get("parallel_tool_calls") is False
-        and payload.get("tool_choice") == "auto"
+        and shape_valid
         and type(payload.get("max_output_tokens")) is int
         and 16 <= payload["max_output_tokens"] <= 4096
         and isinstance(payload.get("input"), list)
         and bool(payload["input"])
-        and isinstance(payload.get("tools"), list)
-        and bool(payload["tools"])
-        and all(isinstance(t, dict) and t.get("type") == "function" for t in payload["tools"])
         and not has_breakpoint(payload)
         and pricing.cache is not None
         and pricing.cache.service_tier == "default"
@@ -59,7 +74,9 @@ def request_policy_valid(payload: dict, approved_hash: str, pricing: Pricing) ->
     )
 
 
-def assess(payload: dict, raw: dict, pricing: Pricing, approved_hash: str) -> dict:
+def assess(
+    payload: dict, raw: dict, pricing: Pricing, approved_hash: str, *, text_only=False
+) -> dict:
     """A testable proposal, not a replacement for the runner's current fail-closed policy."""
     result = {
         "policy_version": POLICY_VERSION,
@@ -71,7 +88,7 @@ def assess(payload: dict, raw: dict, pricing: Pricing, approved_hash: str) -> di
         "spending_charge_usd": None,
         "continue_eligible": False,
     }
-    if not request_policy_valid(payload, approved_hash, pricing):
+    if not request_policy_valid(payload, approved_hash, pricing, text_only=text_only):
         return {**result, "stop_reason": "request_or_pricing_policy_violation"}
     rate = max(pricing.input_usd_per_million, *pricing.cache.write_usd_per_million.values())
     reserved = (

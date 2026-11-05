@@ -1,0 +1,15 @@
+id: entity_matching
+version: "ror-1"
+research_question: How does uncertainty-ranked escalation affect organization resolution and cost?
+hypothesis: Escalating uncertain names may improve resolution at additional cost.
+primary_variable: escalation_percent
+dataset: {id: crossref-ror-dev, version: "1", path: ror/dataset.json}
+conditions:
+  - id: acquire
+    variables: {escalation_percent: 100, calibration: [0.75, 0.03], replay_version: ror-dev-v1}
+repetitions: 1
+seed: 42
+max_requests: 48
+max_output_tokens: 4096
+grader_id: offered-ror-or-abstain
+grader_version: "1"

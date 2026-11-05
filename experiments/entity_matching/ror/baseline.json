@@ -1,0 +1,429 @@
+{
+  "calibration": {
+    "thresholds": [
+      0.75,
+      0.03
+    ],
+    "grid": [
+      {
+        "score": 0.45,
+        "margin": 0.03,
+        "correct": 31,
+        "incorrect_links": 4
+      },
+      {
+        "score": 0.45,
+        "margin": 0.08,
+        "correct": 29,
+        "incorrect_links": 2
+      },
+      {
+        "score": 0.45,
+        "margin": 0.15,
+        "correct": 28,
+        "incorrect_links": 0
+      },
+      {
+        "score": 0.55,
+        "margin": 0.03,
+        "correct": 31,
+        "incorrect_links": 4
+      },
+      {
+        "score": 0.55,
+        "margin": 0.08,
+        "correct": 29,
+        "incorrect_links": 2
+      },
+      {
+        "score": 0.55,
+        "margin": 0.15,
+        "correct": 28,
+        "incorrect_links": 0
+      },
+      {
+        "score": 0.65,
+        "margin": 0.03,
+        "correct": 31,
+        "incorrect_links": 4
+      },
+      {
+        "score": 0.65,
+        "margin": 0.08,
+        "correct": 29,
+        "incorrect_links": 2
+      },
+      {
+        "score": 0.65,
+        "margin": 0.15,
+        "correct": 28,
+        "incorrect_links": 0
+      },
+      {
+        "score": 0.75,
+        "margin": 0.03,
+        "correct": 32,
+        "incorrect_links": 3
+      },
+      {
+        "score": 0.75,
+        "margin": 0.08,
+        "correct": 30,
+        "incorrect_links": 1
+      },
+      {
+        "score": 0.75,
+        "margin": 0.15,
+        "correct": 28,
+        "incorrect_links": 0
+      },
+      {
+        "score": 0.85,
+        "margin": 0.03,
+        "correct": 30,
+        "incorrect_links": 0
+      },
+      {
+        "score": 0.85,
+        "margin": 0.08,
+        "correct": 28,
+        "incorrect_links": 0
+      },
+      {
+        "score": 0.85,
+        "margin": 0.15,
+        "correct": 26,
+        "incorrect_links": 0
+      }
+    ],
+    "training_seq": [
+      75,
+      176,
+      242,
+      261,
+      372,
+      462,
+      486,
+      504,
+      524,
+      707,
+      744,
+      830,
+      857,
+      882,
+      970,
+      993,
+      1006,
+      1194,
+      1366,
+      1463,
+      1477,
+      1684,
+      2076,
+      2083,
+      2096,
+      2105,
+      2110,
+      2221,
+      2244,
+      2435,
+      2478,
+      2597,
+      2775,
+      2819,
+      2865,
+      3202,
+      3246,
+      3256
+    ]
+  },
+  "source_label_metrics": {
+    "n": 38,
+    "positive": 30,
+    "retrieved": 29,
+    "correct": 32,
+    "correct_link": 26,
+    "incorrect_link": 3,
+    "missed_link": 4,
+    "correct_abstention": 6,
+    "incorrect_abstention": 3,
+    "accuracy": 0.8421052631578947,
+    "recall_at_5": 0.9666666666666667,
+    "selection_given_retrieved": 0.896551724137931,
+    "precision": 0.896551724137931,
+    "recall": 0.8666666666666667,
+    "f1": 0.8813559322033898
+  },
+  "full_registry_correct": 32,
+  "retrieval_misses": [
+    970
+  ],
+  "query_decisions": [
+    {
+      "id": 75,
+      "target": "https://ror.org/00jb7xy46",
+      "prediction": "https://ror.org/00jb7xy46",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/00jb7xy46"
+    },
+    {
+      "id": 176,
+      "target": "https://ror.org/05b0cyh02",
+      "prediction": "https://ror.org/05b0cyh02",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/05b0cyh02"
+    },
+    {
+      "id": 242,
+      "target": "https://ror.org/05t4nb462",
+      "prediction": "https://ror.org/05t4nb462",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/05t4nb462"
+    },
+    {
+      "id": 261,
+      "target": "https://ror.org/008x57b05",
+      "prediction": "https://ror.org/008x57b05",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/008x57b05"
+    },
+    {
+      "id": 372,
+      "target": "https://ror.org/043z4tv69",
+      "prediction": "https://ror.org/043z4tv69",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/043z4tv69"
+    },
+    {
+      "id": 462,
+      "target": "https://ror.org/019dmpq73",
+      "prediction": "https://ror.org/019dmpq73",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/019dmpq73"
+    },
+    {
+      "id": 486,
+      "target": "ABSTAIN",
+      "prediction": "ABSTAIN",
+      "available": false,
+      "full_registry_prediction": "ABSTAIN"
+    },
+    {
+      "id": 504,
+      "target": "https://ror.org/031tfbz57",
+      "prediction": "https://ror.org/031tfbz57",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/031tfbz57"
+    },
+    {
+      "id": 524,
+      "target": "https://ror.org/0489qz649",
+      "prediction": "https://ror.org/0489qz649",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/0489qz649"
+    },
+    {
+      "id": 707,
+      "target": "ABSTAIN",
+      "prediction": "ABSTAIN",
+      "available": false,
+      "full_registry_prediction": "ABSTAIN"
+    },
+    {
+      "id": 744,
+      "target": "https://ror.org/01r9z8p25",
+      "prediction": "https://ror.org/01r9z8p25",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/01r9z8p25"
+    },
+    {
+      "id": 830,
+      "target": "ABSTAIN",
+      "prediction": "ABSTAIN",
+      "available": false,
+      "full_registry_prediction": "ABSTAIN"
+    },
+    {
+      "id": 857,
+      "target": "ABSTAIN",
+      "prediction": "ABSTAIN",
+      "available": false,
+      "full_registry_prediction": "ABSTAIN"
+    },
+    {
+      "id": 882,
+      "target": "https://ror.org/03a9s6161",
+      "prediction": "https://ror.org/03a9s6161",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/03a9s6161"
+    },
+    {
+      "id": 970,
+      "target": "https://ror.org/00by1q217",
+      "prediction": "ABSTAIN",
+      "available": false,
+      "full_registry_prediction": "ABSTAIN"
+    },
+    {
+      "id": 993,
+      "target": "https://ror.org/02eqrsj93",
+      "prediction": "https://ror.org/02eqrsj93",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/02eqrsj93"
+    },
+    {
+      "id": 1006,
+      "target": "https://ror.org/03ffdsr55",
+      "prediction": "https://ror.org/03ffdsr55",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/03ffdsr55"
+    },
+    {
+      "id": 1194,
+      "target": "ABSTAIN",
+      "prediction": "ABSTAIN",
+      "available": false,
+      "full_registry_prediction": "ABSTAIN"
+    },
+    {
+      "id": 1366,
+      "target": "https://ror.org/03q8dnn23",
+      "prediction": "https://ror.org/03q8dnn23",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/03q8dnn23"
+    },
+    {
+      "id": 1463,
+      "target": "ABSTAIN",
+      "prediction": "https://ror.org/01h0zpd94",
+      "available": false,
+      "full_registry_prediction": "https://ror.org/01h0zpd94"
+    },
+    {
+      "id": 1477,
+      "target": "ABSTAIN",
+      "prediction": "ABSTAIN",
+      "available": false,
+      "full_registry_prediction": "ABSTAIN"
+    },
+    {
+      "id": 1684,
+      "target": "https://ror.org/010k8cs62",
+      "prediction": "https://ror.org/010k8cs62",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/010k8cs62"
+    },
+    {
+      "id": 2076,
+      "target": "https://ror.org/04pz7b180",
+      "prediction": "ABSTAIN",
+      "available": true,
+      "full_registry_prediction": "ABSTAIN"
+    },
+    {
+      "id": 2083,
+      "target": "https://ror.org/00cb9w016",
+      "prediction": "https://ror.org/00cb9w016",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/00cb9w016"
+    },
+    {
+      "id": 2096,
+      "target": "https://ror.org/0439y7842",
+      "prediction": "https://ror.org/0439y7842",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/0439y7842"
+    },
+    {
+      "id": 2105,
+      "target": "https://ror.org/02ap3w078",
+      "prediction": "https://ror.org/02ap3w078",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/02ap3w078"
+    },
+    {
+      "id": 2110,
+      "target": "ABSTAIN",
+      "prediction": "https://ror.org/01h0zpd94",
+      "available": false,
+      "full_registry_prediction": "https://ror.org/01h0zpd94"
+    },
+    {
+      "id": 2221,
+      "target": "https://ror.org/04yqs7e37",
+      "prediction": "https://ror.org/04yqs7e37",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/04yqs7e37"
+    },
+    {
+      "id": 2244,
+      "target": "https://ror.org/05svhj534",
+      "prediction": "https://ror.org/05svhj534",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/05svhj534"
+    },
+    {
+      "id": 2435,
+      "target": "https://ror.org/00y7mag53",
+      "prediction": "https://ror.org/00y7mag53",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/00y7mag53"
+    },
+    {
+      "id": 2478,
+      "target": "https://ror.org/05cshtm26",
+      "prediction": "https://ror.org/05cshtm26",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/05cshtm26"
+    },
+    {
+      "id": 2597,
+      "target": "https://ror.org/04xdr5k48",
+      "prediction": "https://ror.org/04dqgsa85",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/04dqgsa85"
+    },
+    {
+      "id": 2775,
+      "target": "https://ror.org/03swz6y49",
+      "prediction": "ABSTAIN",
+      "available": true,
+      "full_registry_prediction": "ABSTAIN"
+    },
+    {
+      "id": 2819,
+      "target": "https://ror.org/038y3sz68",
+      "prediction": "https://ror.org/038y3sz68",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/038y3sz68"
+    },
+    {
+      "id": 2865,
+      "target": "https://ror.org/00wsjvg44",
+      "prediction": "https://ror.org/00wsjvg44",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/00wsjvg44"
+    },
+    {
+      "id": 3202,
+      "target": "https://ror.org/011kf5r70",
+      "prediction": "https://ror.org/011kf5r70",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/011kf5r70"
+    },
+    {
+      "id": 3246,
+      "target": "https://ror.org/02qsb4r69",
+      "prediction": "https://ror.org/02qsb4r69",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/02qsb4r69"
+    },
+    {
+      "id": 3256,
+      "target": "https://ror.org/04pw6fb54",
+      "prediction": "https://ror.org/04pw6fb54",
+      "available": true,
+      "full_registry_prediction": "https://ror.org/04pw6fb54"
+    }
+  ]
+}

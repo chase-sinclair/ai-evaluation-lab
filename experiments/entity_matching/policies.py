@@ -31,8 +31,7 @@ def metrics(pairs: list[tuple[int, int]]) -> dict:
     )
 
 
-def replay(exp: Experiment, records: list[RunRecord]) -> list[dict]:
-    cases = {c.id: c for c in exp.load_cases()}
+def prediction_ledger(exp: Experiment, records: list[RunRecord], cases: dict) -> dict:
     condition = exp.spec.conditions[0]
     ledger = {}
     if len({r.run_id for r in records}) > 1:
@@ -51,6 +50,12 @@ def replay(exp: Experiment, records: list[RunRecord]) -> list[dict]:
         ):
             raise ValueError("Duplicate or incompatible prediction record")
         ledger[c.id] = r
+    return ledger
+
+
+def replay(exp: Experiment, records: list[RunRecord]) -> list[dict]:
+    cases = {c.id: c for c in exp.load_cases()}
+    ledger = prediction_ledger(exp, records, cases)
     start = perf_counter_ns()
     scores = {i: score(c.task_input) for i, c in cases.items()}
     ranked = sorted(cases, key=lambda i: (-uncertainty(scores[i]), i))

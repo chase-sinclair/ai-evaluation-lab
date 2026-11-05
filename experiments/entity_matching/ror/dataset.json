@@ -1,0 +1,3661 @@
+{
+  "source_sha256": "7c5c4bae3b71d029082a1337299f5a4c21014ddd2012064be38893fda4b5c0c8",
+  "ror_csv_sha256": "526e175ec445002cf6129d862aa59f13a1e95916f81b38b3221ae1163654f052",
+  "registry_version": "2.6",
+  "crossref_record": "19699937",
+  "retrieval": "ror-v2.6-max-trigram-v1",
+  "active_ids": 122562,
+  "split": "development-only",
+  "independent_nil_reviews": 0,
+  "rows": [
+    {
+      "seq_no": 75,
+      "query": "Education Department of Shaanxi Province",
+      "output": [
+        "https://ror.org/00jb7xy46"
+      ],
+      "alternates": [],
+      "source_row_sha256": "62630865e4b4b547af947e7255baf7d992471e5e5d453f99ee70af17e6c42c32",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/00jb7xy46",
+          "name": "Education Department of Shaanxi Province",
+          "aliases": [
+            "陕西省教育厅"
+          ],
+          "country": "CN",
+          "score": 1.0,
+          "matched_form": "Education Department of Shaanxi Province"
+        },
+        {
+          "id": "https://ror.org/04d8xwh61",
+          "name": "Education Department of Jiangxi Province",
+          "aliases": [],
+          "country": "CN",
+          "score": 0.825,
+          "matched_form": "Education Department of Jiangxi Province"
+        },
+        {
+          "id": "https://ror.org/00xvf9d29",
+          "name": "Education Department of Henan Province",
+          "aliases": [
+            "河南省教育厅"
+          ],
+          "country": "CN",
+          "score": 0.79487179,
+          "matched_form": "Education Department of Henan Province"
+        },
+        {
+          "id": "https://ror.org/05ckg3w11",
+          "name": "Education Department of Hunan Province",
+          "aliases": [
+            "湖南省教育厅"
+          ],
+          "country": "CN",
+          "score": 0.79487179,
+          "matched_form": "Education Department of Hunan Province"
+        },
+        {
+          "id": "https://ror.org/01ksk4k18",
+          "name": "Department of Education Shandong Province",
+          "aliases": [
+            "SDPED",
+            "Shandong Province Department of Education"
+          ],
+          "country": "CN",
+          "score": 0.79012346,
+          "matched_form": "Department of Education Shandong Province"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/00jb7xy46",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/04d8xwh61",
+          "score": 0.825
+        }
+      ],
+      "target_display": "Education Department of Shaanxi Province"
+    },
+    {
+      "seq_no": 176,
+      "query": "Princess Nourah bint Abdulrahman University",
+      "output": [
+        "https://ror.org/05b0cyh02"
+      ],
+      "alternates": [],
+      "source_row_sha256": "ba26d8821eb47659cfa59e58fd7baddf4290e08bd9c38f30767c901c327a7b6d",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/05b0cyh02",
+          "name": "Princess Nourah bint Abdulrahman University",
+          "aliases": [
+            "PNU",
+            "Riyadh University for Women"
+          ],
+          "country": "SA",
+          "score": 1.0,
+          "matched_form": "Princess Nourah bint Abdulrahman University"
+        },
+        {
+          "id": "https://ror.org/038cy8j79",
+          "name": "Imam Abdulrahman Bin Faisal University",
+          "aliases": [
+            "University of Dammam",
+            "جامعة الإمام عبدالرحمن بن فيصل"
+          ],
+          "country": "SA",
+          "score": 0.575,
+          "matched_form": "Imam Abdulrahman Bin Faisal University"
+        },
+        {
+          "id": "https://ror.org/05n3gf051",
+          "name": "Abdulrahman Al-Sumait University",
+          "aliases": [
+            "Chuo Kikuu Kishiriki cha Elimu Zanzibar",
+            "UCEZ"
+          ],
+          "country": "TZ",
+          "score": 0.56756757,
+          "matched_form": "Abdulrahman Al-Sumait University"
+        },
+        {
+          "id": "https://ror.org/050pq4m56",
+          "name": "Universiti Tunku Abdul Rahman",
+          "aliases": [
+            "Tunku Abdul Rahman University",
+            "UTAR"
+          ],
+          "country": "MY",
+          "score": 0.56338028,
+          "matched_form": "Tunku Abdul Rahman University"
+        },
+        {
+          "id": "https://ror.org/01k1m6p08",
+          "name": "Rahman Institute of Higher Education",
+          "aliases": [
+            "Rahman University",
+            "دانشگاه رحمان"
+          ],
+          "country": "IR",
+          "score": 0.54237288,
+          "matched_form": "Rahman University"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/05b0cyh02",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/038cy8j79",
+          "score": 0.575
+        }
+      ],
+      "target_display": "Princess Nourah bint Abdulrahman University"
+    },
+    {
+      "seq_no": 242,
+      "query": "Guangzhou Science Technology and Innovation Commission",
+      "output": [
+        "https://ror.org/05t4nb462"
+      ],
+      "alternates": [],
+      "source_row_sha256": "343f3537c8ad09b31b17d66c53591c4392640a1c9d6b6ead1534fdb9f634f2b7",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/05t4nb462",
+          "name": "Guangzhou Science, Technology and Innovation Commission",
+          "aliases": [
+            "广州市科技创新委员会"
+          ],
+          "country": "CN",
+          "score": 1.0,
+          "matched_form": "Guangzhou Science, Technology and Innovation Commission"
+        },
+        {
+          "id": "https://ror.org/03wzc0b85",
+          "name": "National Commission for Science, Technology, and Innovation",
+          "aliases": [
+            "NACOSTI"
+          ],
+          "country": "KE",
+          "score": 0.78846154,
+          "matched_form": "National Commission for Science, Technology, and Innovation"
+        },
+        {
+          "id": "https://ror.org/04gvkax77",
+          "name": "Hangzhou Science and Technology Commission",
+          "aliases": [],
+          "country": "CN",
+          "score": 0.78723404,
+          "matched_form": "Hangzhou Science and Technology Commission"
+        },
+        {
+          "id": "https://ror.org/017n8df75",
+          "name": "Shenzhen Science and Technology Innovation Commission",
+          "aliases": [
+            "深圳市科技创新委员会",
+            "深圳市科技创新局"
+          ],
+          "country": "CN",
+          "score": 0.76470588,
+          "matched_form": "Shenzhen Science and Technology Innovation Commission"
+        },
+        {
+          "id": "https://ror.org/012y9zp98",
+          "name": "Commission for Technology and Innovation",
+          "aliases": [
+            "Kommission für Technologie und Innovation"
+          ],
+          "country": "CH",
+          "score": 0.73333333,
+          "matched_form": "Commission for Technology and Innovation"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/05t4nb462",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/03wzc0b85",
+          "score": 0.78846154
+        }
+      ],
+      "target_display": "Guangzhou Science, Technology and Innovation Commission"
+    },
+    {
+      "seq_no": 261,
+      "query": "University of Antwerp",
+      "output": [
+        "https://ror.org/008x57b05"
+      ],
+      "alternates": [],
+      "source_row_sha256": "d90c0a898cf499fbc3de6f17dc7515610b1f5eea891a8379a1b2ecdf423c5c53",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/008x57b05",
+          "name": "University of Antwerp",
+          "aliases": [
+            "UAntwerp",
+            "Universiteit Antwerpen"
+          ],
+          "country": "BE",
+          "score": 1.0,
+          "matched_form": "University of Antwerp"
+        },
+        {
+          "id": "https://ror.org/03h45ec67",
+          "name": "University of Antique",
+          "aliases": [
+            "Pamantasan ng Antique",
+            "Polytechnic State College of Antique"
+          ],
+          "country": "PH",
+          "score": 0.76190476,
+          "matched_form": "University of Antique"
+        },
+        {
+          "id": "https://ror.org/04yrqp957",
+          "name": "Université d'Angers",
+          "aliases": [
+            "University of Angers"
+          ],
+          "country": "FR",
+          "score": 0.75,
+          "matched_form": "University of Angers"
+        },
+        {
+          "id": "https://ror.org/055a6gk50",
+          "name": "University of Anbar",
+          "aliases": [
+            "جامعة الأنبار"
+          ],
+          "country": "IQ",
+          "score": 0.75,
+          "matched_form": "University of Anbar"
+        },
+        {
+          "id": "https://ror.org/03bp5hc83",
+          "name": "Universidad de Antioquia",
+          "aliases": [
+            "University of Antioquia",
+            "UdeA"
+          ],
+          "country": "CO",
+          "score": 0.72727273,
+          "matched_form": "University of Antioquia"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/008x57b05",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/03h45ec67",
+          "score": 0.76190476
+        }
+      ],
+      "target_display": "University of Antwerp"
+    },
+    {
+      "seq_no": 372,
+      "query": "National Institute of Allergy and Infectious Diseases",
+      "output": [
+        "https://ror.org/043z4tv69"
+      ],
+      "alternates": [],
+      "source_row_sha256": "42233d4ac50227763517510ceaf6fc82b898e0b74c270be366f17dcd454a0472",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/043z4tv69",
+          "name": "National Institute of Allergy and Infectious Diseases",
+          "aliases": [
+            "NIAID"
+          ],
+          "country": "US",
+          "score": 1.0,
+          "matched_form": "National Institute of Allergy and Infectious Diseases"
+        },
+        {
+          "id": "https://ror.org/001ggbx22",
+          "name": "National Institute of Infectious Diseases",
+          "aliases": [
+            "NIID",
+            "厚生労働省国立感染症研究所"
+          ],
+          "country": "JP",
+          "score": 0.84444444,
+          "matched_form": "National Institute of Infectious Diseases"
+        },
+        {
+          "id": "https://ror.org/04f7g6845",
+          "name": "National Institute for Communicable Disease Control and Prevention",
+          "aliases": [
+            "Institute of Infectious Diseases",
+            "ICDC"
+          ],
+          "country": "CN",
+          "score": 0.73170732,
+          "matched_form": "Institute of Infectious Diseases"
+        },
+        {
+          "id": "https://ror.org/02caa0269",
+          "name": "Infectious Diseases Institute",
+          "aliases": [
+            "IDI"
+          ],
+          "country": "UG",
+          "score": 0.6835443,
+          "matched_form": "Infectious Diseases Institute"
+        },
+        {
+          "id": "https://ror.org/00nts2374",
+          "name": "Institut für Infektions- und Tropenmedizin",
+          "aliases": [
+            "Institute of Infectious Diseases and Tropical Medicine"
+          ],
+          "country": "DE",
+          "score": 0.65384615,
+          "matched_form": "Institute of Infectious Diseases and Tropical Medicine"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/043z4tv69",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/001ggbx22",
+          "score": 0.84444444
+        }
+      ],
+      "target_display": "National Institute of Allergy and Infectious Diseases"
+    },
+    {
+      "seq_no": 386,
+      "query": "Department of Social Sciences, Ministry of Education, People’s Republic of China",
+      "output": [
+        "https://ror.org/01mv9t934"
+      ],
+      "alternates": [],
+      "source_row_sha256": "a57602b9d0e0cc8b1c9a52ea71534733226305b21ce9a164ebc2bd075e2c0b34",
+      "selection_group": "variant",
+      "review": "excluded",
+      "review_reason": "Department and ministry may denote separate levels of administration.",
+      "candidates": [
+        {
+          "id": "https://ror.org/01mv9t934",
+          "name": "Ministry of Education of the People's Republic of China",
+          "aliases": [
+            "MOE",
+            "中华人民共和国教育部"
+          ],
+          "country": "CN",
+          "score": 0.72,
+          "matched_form": "Ministry of Education of the People's Republic of China"
+        },
+        {
+          "id": "https://ror.org/027s68j25",
+          "name": "Ministry of Science and Technology of the People's Republic of China",
+          "aliases": [
+            "MOST",
+            "State Science and Technology Commission"
+          ],
+          "country": "CN",
+          "score": 0.61313869,
+          "matched_form": "Ministry of Science and Technology of the People's Republic of China"
+        },
+        {
+          "id": "https://ror.org/03t0a5k13",
+          "name": "Ministry of National Defense of the People's Republic of China",
+          "aliases": [
+            "MOD",
+            "中华人民共和国国防部"
+          ],
+          "country": "CN",
+          "score": 0.60606061,
+          "matched_form": "Ministry of National Defense of the People's Republic of China"
+        },
+        {
+          "id": "https://ror.org/02jnxpg76",
+          "name": "Ministry of Finance of the People's Republic of China",
+          "aliases": [
+            "MOF",
+            "Ministry of Finance"
+          ],
+          "country": "CN",
+          "score": 0.59016393,
+          "matched_form": "Ministry of Finance of the People's Republic of China"
+        },
+        {
+          "id": "https://ror.org/052eegr76",
+          "name": "National Health and Family Planning Commission",
+          "aliases": [
+            "Ministry of Health of the People's Republic of China",
+            "NHFPC"
+          ],
+          "country": "CN",
+          "score": 0.57377049,
+          "matched_form": "Ministry of Health of the People's Republic of China"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/01mv9t934",
+          "score": 0.72
+        },
+        {
+          "id": "https://ror.org/027s68j25",
+          "score": 0.61313869
+        }
+      ],
+      "target_display": "Ministry of Education of the People's Republic of China"
+    },
+    {
+      "seq_no": 462,
+      "query": "Fundación Cellex",
+      "output": [
+        "https://ror.org/019dmpq73"
+      ],
+      "alternates": [],
+      "source_row_sha256": "ceb6e9635e258cd85abc96bf7627b31afa8570f723f0a8278e93bc033b455dd7",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/019dmpq73",
+          "name": "Fundación Cellex",
+          "aliases": [
+            "CELLEX-ICFO-MPQ",
+            "Cellex Foundation"
+          ],
+          "country": "ES",
+          "score": 1.0,
+          "matched_form": "Fundación Cellex"
+        },
+        {
+          "id": "https://ror.org/053zwpg96",
+          "name": "Fundacion Centro De Investigacion De Enfermedades Neurologicas",
+          "aliases": [
+            "Fundación CIEN"
+          ],
+          "country": "ES",
+          "score": 0.66666667,
+          "matched_form": "Fundación CIEN"
+        },
+        {
+          "id": "https://ror.org/04nvpdc40",
+          "name": "Fundación Chile",
+          "aliases": [
+            "FCh"
+          ],
+          "country": "CL",
+          "score": 0.64516129,
+          "matched_form": "Fundación Chile"
+        },
+        {
+          "id": "https://ror.org/00c5kmy11",
+          "name": "Fundación IE",
+          "aliases": [
+            "Fundación Instituto de Empresa",
+            "IE Foundation"
+          ],
+          "country": "ES",
+          "score": 0.64285714,
+          "matched_form": "Fundación IE"
+        },
+        {
+          "id": "https://ror.org/055rn0g18",
+          "name": "Fundación Cerezales Antonino y Cinia",
+          "aliases": [
+            "Fundación Cerezales",
+            "FCAYC"
+          ],
+          "country": "ES",
+          "score": 0.62857143,
+          "matched_form": "Fundación Cerezales"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/019dmpq73",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/053zwpg96",
+          "score": 0.66666667
+        }
+      ],
+      "target_display": "Fundación Cellex"
+    },
+    {
+      "seq_no": 486,
+      "query": "Association Suisse pour la Recherche sur Alzheimer",
+      "output": [],
+      "alternates": [],
+      "source_row_sha256": "e18db21b913599439315ac6c3b1858c6d43249a249d8187c97c8a81da0ee6167",
+      "selection_group": "empty",
+      "review": "pending_independent_nil",
+      "review_reason": "Named Swiss association. Check French/German forms and predecessors.",
+      "candidates": [
+        {
+          "id": "https://ror.org/0489qz649",
+          "name": "Fondation ARC pour la Recherche sur le Cancer",
+          "aliases": [
+            "Association pour la recherche sur le cancer"
+          ],
+          "country": "FR",
+          "score": 0.71264368,
+          "matched_form": "Association pour la recherche sur le cancer"
+        },
+        {
+          "id": "https://ror.org/05v4fng20",
+          "name": "Association Française pour la Recherche Thermale",
+          "aliases": [
+            "AFRETH"
+          ],
+          "country": "FR",
+          "score": 0.62365591,
+          "matched_form": "Association Française pour la Recherche Thermale"
+        },
+        {
+          "id": "https://ror.org/03p7abc05",
+          "name": "Association pour la Recherche au Collégial",
+          "aliases": [
+            "ARC"
+          ],
+          "country": "CA",
+          "score": 0.61363636,
+          "matched_form": "Association pour la Recherche au Collégial"
+        },
+        {
+          "id": "https://ror.org/04snjkd04",
+          "name": "Canadian Association for Theatre Research",
+          "aliases": [
+            "Association Canadienne pour la Recherche Théâtrale",
+            "The Association for Canadian Theatre History"
+          ],
+          "country": "CA",
+          "score": 0.58333333,
+          "matched_form": "Association Canadienne pour la Recherche Théâtrale"
+        },
+        {
+          "id": "https://ror.org/04waxbg79",
+          "name": "Swiss Foundation for Research in Microtechnology",
+          "aliases": [
+            "Fondation Suisse pour la Recherche en Microtechnique",
+            "FSRM"
+          ],
+          "country": "CH",
+          "score": 0.57731959,
+          "matched_form": "Fondation Suisse pour la Recherche en Microtechnique"
+        }
+      ],
+      "full_registry_target_rank": null,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/0489qz649",
+          "score": 0.71264368
+        },
+        {
+          "id": "https://ror.org/05v4fng20",
+          "score": 0.62365591
+        }
+      ],
+      "target_display": null
+    },
+    {
+      "seq_no": 504,
+      "query": "Worldwide Cancer Research",
+      "output": [
+        "https://ror.org/031tfbz57"
+      ],
+      "alternates": [],
+      "source_row_sha256": "3da7f84b84ffd185532e9cb96d4ee4d49f72fe778edc620bd2e4da9fc812f754",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/031tfbz57",
+          "name": "Worldwide Cancer Research",
+          "aliases": [
+            "AICR",
+            "Association for International Cancer Research"
+          ],
+          "country": "GB",
+          "score": 1.0,
+          "matched_form": "Worldwide Cancer Research"
+        },
+        {
+          "id": "https://ror.org/02gc7qc02",
+          "name": "World Cancer Research Fund UK",
+          "aliases": [
+            "WCRF UK"
+          ],
+          "country": "GB",
+          "score": 0.7037037,
+          "matched_form": "World Cancer Research Fund UK"
+        },
+        {
+          "id": "https://ror.org/02771np58",
+          "name": "IB-Cancer Research Foundation",
+          "aliases": [
+            "IB Cancer Research",
+            "IBCR"
+          ],
+          "country": "DE",
+          "score": 0.69767442,
+          "matched_form": "IB Cancer Research"
+        },
+        {
+          "id": "https://ror.org/054225q67",
+          "name": "Cancer Research UK",
+          "aliases": [
+            "CRUK"
+          ],
+          "country": "GB",
+          "score": 0.69767442,
+          "matched_form": "Cancer Research UK"
+        },
+        {
+          "id": "https://ror.org/01e473h50",
+          "name": "Ludwig Cancer Research",
+          "aliases": [
+            "Ludwig Institute for Cancer Research"
+          ],
+          "country": "GB",
+          "score": 0.68085106,
+          "matched_form": "Ludwig Cancer Research"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/031tfbz57",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/02gc7qc02",
+          "score": 0.7037037
+        }
+      ],
+      "target_display": "Worldwide Cancer Research"
+    },
+    {
+      "seq_no": 524,
+      "query": "Association pour la Recherche sur le Cancer",
+      "output": [
+        "https://ror.org/0489qz649"
+      ],
+      "alternates": [],
+      "source_row_sha256": "4a45071e41aa3ce9aad7a5754c293cd2dfea02a118462e18b77fe695727ff26e",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/0489qz649",
+          "name": "Fondation ARC pour la Recherche sur le Cancer",
+          "aliases": [
+            "Association pour la recherche sur le cancer"
+          ],
+          "country": "FR",
+          "score": 1.0,
+          "matched_form": "Association pour la recherche sur le cancer"
+        },
+        {
+          "id": "https://ror.org/005zda847",
+          "name": "Fédération pour la Recherche sur le Cerveau",
+          "aliases": [
+            "FRC"
+          ],
+          "country": "FR",
+          "score": 0.7,
+          "matched_form": "Fédération pour la Recherche sur le Cerveau"
+        },
+        {
+          "id": "https://ror.org/03p7abc05",
+          "name": "Association pour la Recherche au Collégial",
+          "aliases": [
+            "ARC"
+          ],
+          "country": "CA",
+          "score": 0.69135802,
+          "matched_form": "Association pour la Recherche au Collégial"
+        },
+        {
+          "id": "https://ror.org/04snjkd04",
+          "name": "Canadian Association for Theatre Research",
+          "aliases": [
+            "Association Canadienne pour la Recherche Théâtrale",
+            "The Association for Canadian Theatre History"
+          ],
+          "country": "CA",
+          "score": 0.6741573,
+          "matched_form": "Association Canadienne pour la Recherche Théâtrale"
+        },
+        {
+          "id": "https://ror.org/01c8cwz57",
+          "name": "Institut pour la Recherche sur le Cancer de Lille",
+          "aliases": [
+            "IRCL"
+          ],
+          "country": "FR",
+          "score": 0.65882353,
+          "matched_form": "Institut pour la Recherche sur le Cancer de Lille"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/0489qz649",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/005zda847",
+          "score": 0.7
+        }
+      ],
+      "target_display": "Fondation ARC pour la Recherche sur le Cancer"
+    },
+    {
+      "seq_no": 707,
+      "query": "Association Odyssea",
+      "output": [],
+      "alternates": [],
+      "source_row_sha256": "848099d6bf7634d42951a37d7eebc56544be68c567851f3904419cba333b3f76",
+      "selection_group": "empty",
+      "review": "pending_independent_nil",
+      "review_reason": "Check Odysséa spelling and association aliases in France.",
+      "candidates": [
+        {
+          "id": "https://ror.org/0285bze92",
+          "name": "ME Association",
+          "aliases": [],
+          "country": "GB",
+          "score": 0.66666667,
+          "matched_form": "ME Association"
+        },
+        {
+          "id": "https://ror.org/02vaftm28",
+          "name": "Sea Education Association",
+          "aliases": [
+            "SEA"
+          ],
+          "country": "US",
+          "score": 0.65,
+          "matched_form": "Sea Education Association"
+        },
+        {
+          "id": "https://ror.org/00mwp5989",
+          "name": "Amyotrophic Lateral Sclerosis Association",
+          "aliases": [
+            "ALS Association",
+            "ALS"
+          ],
+          "country": "US",
+          "score": 0.64705882,
+          "matched_form": "ALS Association"
+        },
+        {
+          "id": "https://ror.org/017bw3q44",
+          "name": "BMI Association",
+          "aliases": [
+            "BMI"
+          ],
+          "country": "CZ",
+          "score": 0.64705882,
+          "matched_form": "BMI Association"
+        },
+        {
+          "id": "https://ror.org/01srqm736",
+          "name": "Nia Association",
+          "aliases": [],
+          "country": "US",
+          "score": 0.64705882,
+          "matched_form": "Nia Association"
+        }
+      ],
+      "full_registry_target_rank": null,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/0285bze92",
+          "score": 0.66666667
+        },
+        {
+          "id": "https://ror.org/02vaftm28",
+          "score": 0.65
+        }
+      ],
+      "target_display": null
+    },
+    {
+      "seq_no": 744,
+      "query": "Universidad de La Laguna",
+      "output": [
+        "https://ror.org/01r9z8p25"
+      ],
+      "alternates": [],
+      "source_row_sha256": "53d847aa5ba032c9f50b3b7af76060e7c1507ebe6f5e714107f30103401fe61f",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/01r9z8p25",
+          "name": "Universidad de La Laguna",
+          "aliases": [
+            "ULL",
+            "Universidade de La Laguna"
+          ],
+          "country": "ES",
+          "score": 1.0,
+          "matched_form": "Universidad de La Laguna"
+        },
+        {
+          "id": "https://ror.org/05spgdz37",
+          "name": "Universidad Autónoma de La Laguna",
+          "aliases": [
+            "UAL"
+          ],
+          "country": "MX",
+          "score": 0.8,
+          "matched_form": "Universidad Autónoma de La Laguna"
+        },
+        {
+          "id": "https://ror.org/01ht74751",
+          "name": "University of La Serena",
+          "aliases": [
+            "Universidad de La Serena",
+            "ULS"
+          ],
+          "country": "CL",
+          "score": 0.76595745,
+          "matched_form": "Universidad de La Serena"
+        },
+        {
+          "id": "https://ror.org/02sqgkj21",
+          "name": "Universidad de La Sabana",
+          "aliases": [
+            "La Sabana University",
+            "University of La Sabana"
+          ],
+          "country": "CO",
+          "score": 0.76595745,
+          "matched_form": "Universidad de La Sabana"
+        },
+        {
+          "id": "https://ror.org/04204gr61",
+          "name": "University of Havana",
+          "aliases": [
+            "Universidad de La Habana"
+          ],
+          "country": "CU",
+          "score": 0.76595745,
+          "matched_form": "Universidad de La Habana"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/01r9z8p25",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/05spgdz37",
+          "score": 0.8
+        }
+      ],
+      "target_display": "Universidad de La Laguna"
+    },
+    {
+      "seq_no": 830,
+      "query": "Research Grants Council of Hong Kong",
+      "output": [],
+      "alternates": [],
+      "source_row_sha256": "46c1dc854b7fc6af31c8fd7b174198fa3357d7a13b6217de6c76d4219c13be3d",
+      "selection_group": "empty",
+      "review": "pending_independent_nil",
+      "review_reason": "Named Hong Kong council. Check umbrella grants committee, redirects and alternate names.",
+      "candidates": [
+        {
+          "id": "https://ror.org/00vdwj549",
+          "name": "Textile Council of Hong Kong",
+          "aliases": [],
+          "country": "HK",
+          "score": 0.6,
+          "matched_form": "Textile Council of Hong Kong"
+        },
+        {
+          "id": "https://ror.org/03zttf063",
+          "name": "Swedish Research Council",
+          "aliases": [
+            "Research Council of Sweden",
+            "VR"
+          ],
+          "country": "SE",
+          "score": 0.6,
+          "matched_form": "Research Council of Sweden"
+        },
+        {
+          "id": "https://ror.org/05k73zm37",
+          "name": "Research Council of Finland",
+          "aliases": [
+            "Finlands Akademi",
+            "Suomen Akatemia"
+          ],
+          "country": "FI",
+          "score": 0.59016393,
+          "matched_form": "Research Council of Finland"
+        },
+        {
+          "id": "https://ror.org/02c2jyf78",
+          "name": "Research Council of Zimbabwe",
+          "aliases": [
+            "RCZ"
+          ],
+          "country": "ZW",
+          "score": 0.58064516,
+          "matched_form": "Research Council of Zimbabwe"
+        },
+        {
+          "id": "https://ror.org/02gs16m83",
+          "name": "Lietuvos Mokslo Taryba",
+          "aliases": [
+            "Research Council of Lithuania"
+          ],
+          "country": "LT",
+          "score": 0.57142857,
+          "matched_form": "Research Council of Lithuania"
+        }
+      ],
+      "full_registry_target_rank": null,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/00vdwj549",
+          "score": 0.6
+        },
+        {
+          "id": "https://ror.org/03zttf063",
+          "score": 0.6
+        }
+      ],
+      "target_display": null
+    },
+    {
+      "seq_no": 857,
+      "query": "Margaretahemmet foundation",
+      "output": [],
+      "alternates": [],
+      "source_row_sha256": "2023dd7a22e7508d03beb86d805853529d2c5748b6fa0e0da9650bbe3d0d57b7",
+      "selection_group": "empty",
+      "review": "pending_independent_nil",
+      "review_reason": "Check Swedish name and translated foundation forms.",
+      "candidates": [
+        {
+          "id": "https://ror.org/03myshd20",
+          "name": "Margaret Clark Morgan Foundation",
+          "aliases": [],
+          "country": "US",
+          "score": 0.63157895,
+          "matched_form": "Margaret Clark Morgan Foundation"
+        },
+        {
+          "id": "https://ror.org/02efnsc68",
+          "name": "Koret Foundation",
+          "aliases": [
+            "Koret Fund"
+          ],
+          "country": "US",
+          "score": 0.61904762,
+          "matched_form": "Koret Foundation"
+        },
+        {
+          "id": "https://ror.org/00ctsa544",
+          "name": "Princess Margaret Cancer Foundation",
+          "aliases": [],
+          "country": "CA",
+          "score": 0.6,
+          "matched_form": "Princess Margaret Cancer Foundation"
+        },
+        {
+          "id": "https://ror.org/0470nty22",
+          "name": "Albert and Margaret Alkek Foundation",
+          "aliases": [],
+          "country": "US",
+          "score": 0.6,
+          "matched_form": "Albert and Margaret Alkek Foundation"
+        },
+        {
+          "id": "https://ror.org/0471ejv47",
+          "name": "Diakonhjemmet Foundation",
+          "aliases": [],
+          "country": "NO",
+          "score": 0.6,
+          "matched_form": "Diakonhjemmet Foundation"
+        }
+      ],
+      "full_registry_target_rank": null,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/03myshd20",
+          "score": 0.63157895
+        },
+        {
+          "id": "https://ror.org/02efnsc68",
+          "score": 0.61904762
+        }
+      ],
+      "target_display": null
+    },
+    {
+      "seq_no": 872,
+      "query": "Departmental Startup fund, NIH R01",
+      "output": [],
+      "alternates": [],
+      "source_row_sha256": "86f82d61c4f8d0192d0d7f6fdfd0974a61ae893cb3048194a63c2f91b70360fc",
+      "selection_group": "empty",
+      "review": "excluded",
+      "review_reason": "Startup fund and NIH award mechanism combined in one string.",
+      "candidates": [
+        {
+          "id": "https://ror.org/03vvynj75",
+          "name": "United States Department of State",
+          "aliases": [
+            "State Department",
+            "DOS"
+          ],
+          "country": "US",
+          "score": 0.45833333,
+          "matched_form": "State Department"
+        },
+        {
+          "id": "https://ror.org/01y6s8j60",
+          "name": "Cyprus Post",
+          "aliases": [
+            "Department of Postal Services",
+            "Kıbrıs Posta Ofisi"
+          ],
+          "country": "CY",
+          "score": 0.42622951,
+          "matched_form": "Department of Postal Services"
+        },
+        {
+          "id": "https://ror.org/0495zk756",
+          "name": "Conseil Départemental de l’Hérault",
+          "aliases": [
+            "Hérault Departmental Council",
+            "CD34"
+          ],
+          "country": "FR",
+          "score": 0.4,
+          "matched_form": "Hérault Departmental Council"
+        },
+        {
+          "id": "https://ror.org/031fvk530",
+          "name": "Secretaria de Educación del departamento del Atlántico",
+          "aliases": [
+            "Departmental Education Secretariat"
+          ],
+          "country": "CO",
+          "score": 0.39393939,
+          "matched_form": "Departmental Education Secretariat"
+        },
+        {
+          "id": "https://ror.org/024v1qn33",
+          "name": "Arizona State Land Department",
+          "aliases": [
+            "Arizona State Land Commission"
+          ],
+          "country": "US",
+          "score": 0.39344262,
+          "matched_form": "Arizona State Land Department"
+        }
+      ],
+      "full_registry_target_rank": null,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/03vvynj75",
+          "score": 0.45833333
+        },
+        {
+          "id": "https://ror.org/01y6s8j60",
+          "score": 0.42622951
+        }
+      ],
+      "target_display": null
+    },
+    {
+      "seq_no": 882,
+      "query": "Bernard van Leer Foundation",
+      "output": [
+        "https://ror.org/03a9s6161"
+      ],
+      "alternates": [],
+      "source_row_sha256": "49088542011cb0848a56075a08dbb802d5d22507b002813d9553427973f624a2",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/03a9s6161",
+          "name": "Bernard van Leer Foundation",
+          "aliases": [],
+          "country": "NL",
+          "score": 1.0,
+          "matched_form": "Bernard van Leer Foundation"
+        },
+        {
+          "id": "https://ror.org/00w0xq836",
+          "name": "Bernard Osher Foundation",
+          "aliases": [],
+          "country": "US",
+          "score": 0.74509804,
+          "matched_form": "Bernard Osher Foundation"
+        },
+        {
+          "id": "https://ror.org/00ywywm58",
+          "name": "Bevan Foundation",
+          "aliases": [],
+          "country": "GB",
+          "score": 0.60465116,
+          "matched_form": "Bevan Foundation"
+        },
+        {
+          "id": "https://ror.org/04ydnv789",
+          "name": "Vancouver Foundation",
+          "aliases": [],
+          "country": "CA",
+          "score": 0.59574468,
+          "matched_form": "Vancouver Foundation"
+        },
+        {
+          "id": "https://ror.org/03ggcx620",
+          "name": "Gerber Foundation",
+          "aliases": [],
+          "country": "US",
+          "score": 0.59090909,
+          "matched_form": "Gerber Foundation"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/03a9s6161",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/00w0xq836",
+          "score": 0.74509804
+        }
+      ],
+      "target_display": "Bernard van Leer Foundation"
+    },
+    {
+      "seq_no": 970,
+      "query": "Hoffmann - LaRoche Pharmaceuticals",
+      "output": [
+        "https://ror.org/00by1q217"
+      ],
+      "alternates": [],
+      "source_row_sha256": "cd61754f53b18f5ce97ced6475e2fc8fb20b8cc4fb64c695b175543e866ab8a3",
+      "selection_group": "variant",
+      "review": "source_supported",
+      "review_reason": "Pinned Swiss record includes Hoffmann-La Roche as an alias.",
+      "candidates": [
+        {
+          "id": "https://ror.org/0042p7m09",
+          "name": "Nivalis Therapeutics (United States)",
+          "aliases": [
+            "N30 Pharmaceuticals"
+          ],
+          "country": "US",
+          "score": 0.58823529,
+          "matched_form": "N30 Pharmaceuticals"
+        },
+        {
+          "id": "https://ror.org/02rw47d25",
+          "name": "Galena Biopharma (United States)",
+          "aliases": [
+            "RXi Pharmaceuticals"
+          ],
+          "country": "US",
+          "score": 0.58823529,
+          "matched_form": "RXi Pharmaceuticals"
+        },
+        {
+          "id": "https://ror.org/034kn0n30",
+          "name": "Phio Pharmaceuticals (United States)",
+          "aliases": [
+            "RXi Pharmaceuticals"
+          ],
+          "country": "US",
+          "score": 0.58823529,
+          "matched_form": "RXi Pharmaceuticals"
+        },
+        {
+          "id": "https://ror.org/03ybej830",
+          "name": "Aju Pharm (South Korea)",
+          "aliases": [
+            "Aju Pharmaceuticals",
+            "아주약품"
+          ],
+          "country": "KR",
+          "score": 0.58823529,
+          "matched_form": "Aju Pharmaceuticals"
+        },
+        {
+          "id": "https://ror.org/000mrza07",
+          "name": "AVEO Oncology (United States)",
+          "aliases": [
+            "AVEO Pharmaceuticals"
+          ],
+          "country": "US",
+          "score": 0.57692308,
+          "matched_form": "AVEO Pharmaceuticals"
+        }
+      ],
+      "full_registry_target_rank": 8,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/0042p7m09",
+          "score": 0.58823529
+        },
+        {
+          "id": "https://ror.org/02rw47d25",
+          "score": 0.58823529
+        }
+      ],
+      "target_display": "Roche (Switzerland)"
+    },
+    {
+      "seq_no": 993,
+      "query": "Fonds de Recherche du Québec - Santé",
+      "output": [
+        "https://ror.org/02eqrsj93"
+      ],
+      "alternates": [],
+      "source_row_sha256": "2a79165594c337d90711d7096f65ecf4f057bee5f09d4118b36d34399d13aa23",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/02eqrsj93",
+          "name": "Fonds de Recherche du Québec - Santé",
+          "aliases": [
+            "FRQS"
+          ],
+          "country": "CA",
+          "score": 1.0,
+          "matched_form": "Fonds de Recherche du Québec - Santé"
+        },
+        {
+          "id": "https://ror.org/00w3qhf76",
+          "name": "Fonds de recherche du Québec",
+          "aliases": [
+            "Quebec Research Fund"
+          ],
+          "country": "CA",
+          "score": 0.9,
+          "matched_form": "Fonds de recherche du Québec"
+        },
+        {
+          "id": "https://ror.org/00shpc021",
+          "name": "Fonds de Recherche du Québec - Société et culture",
+          "aliases": [
+            "FRQSC"
+          ],
+          "country": "CA",
+          "score": 0.73417722,
+          "matched_form": "Fonds de Recherche du Québec - Société et culture"
+        },
+        {
+          "id": "https://ror.org/00b9f9778",
+          "name": "Fonds de Recherche du Québec – Nature et Technologies",
+          "aliases": [
+            "FRQNT"
+          ],
+          "country": "CA",
+          "score": 0.65853659,
+          "matched_form": "Fonds de Recherche du Québec – Nature et Technologies"
+        },
+        {
+          "id": "https://ror.org/01dsawn50",
+          "name": "The Quebec Population Health Research Network",
+          "aliases": [
+            "Réseau de recherche en santé des populations du Québec"
+          ],
+          "country": "CA",
+          "score": 0.61176471,
+          "matched_form": "Réseau de recherche en santé des populations du Québec"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/02eqrsj93",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/00w3qhf76",
+          "score": 0.9
+        }
+      ],
+      "target_display": "Fonds de Recherche du Québec - Santé"
+    },
+    {
+      "seq_no": 1006,
+      "query": "Science and Engineering Research Board",
+      "output": [
+        "https://ror.org/03ffdsr55"
+      ],
+      "alternates": [],
+      "source_row_sha256": "612c2fc845930aa240f8b5e7fdf833d71fa6c56310b7acebacc3a3f7f5135bb0",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/03ffdsr55",
+          "name": "Science and Engineering Research Board",
+          "aliases": [
+            "SERB"
+          ],
+          "country": "IN",
+          "score": 1.0,
+          "matched_form": "Science and Engineering Research Board"
+        },
+        {
+          "id": "https://ror.org/00zgdb249",
+          "name": "Science and Engineering Research Council",
+          "aliases": [
+            "SERC"
+          ],
+          "country": "SG",
+          "score": 0.82051282,
+          "matched_form": "Science and Engineering Research Council"
+        },
+        {
+          "id": "https://ror.org/01qa5ep47",
+          "name": "Materials Research Science and Engineering Centers",
+          "aliases": [
+            "MRSEC"
+          ],
+          "country": "US",
+          "score": 0.72093023,
+          "matched_form": "Materials Research Science and Engineering Centers"
+        },
+        {
+          "id": "https://ror.org/01gb44154",
+          "name": "Organisasi Riset Energi dan Manufaktur",
+          "aliases": [
+            "Engineering Science Research Organization",
+            "Energy and Manufacture Research Organization"
+          ],
+          "country": "ID",
+          "score": 0.65822785,
+          "matched_form": "Engineering Science Research Organization"
+        },
+        {
+          "id": "https://ror.org/027a3v841",
+          "name": "Organisasi Riset Nanoteknologi dan Material",
+          "aliases": [
+            "Engineering Science Research Organization",
+            "Nanotechnology and Material Research Organization"
+          ],
+          "country": "ID",
+          "score": 0.65822785,
+          "matched_form": "Engineering Science Research Organization"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/03ffdsr55",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/00zgdb249",
+          "score": 0.82051282
+        }
+      ],
+      "target_display": "Science and Engineering Research Board"
+    },
+    {
+      "seq_no": 1194,
+      "query": "Guangxi Nature Science Foundation",
+      "output": [],
+      "alternates": [],
+      "source_row_sha256": "692439c0b9835dba81a90f51972f583b4d0f1a0caee017a1fc5e4f5136416551",
+      "selection_group": "empty",
+      "review": "pending_independent_nil",
+      "review_reason": "Check whether the Guangxi foundation names a program or an active organization.",
+      "candidates": [
+        {
+          "id": "https://ror.org/021nxhr62",
+          "name": "U.S. National Science Foundation",
+          "aliases": [
+            "NSF"
+          ],
+          "country": "US",
+          "score": 0.6557377,
+          "matched_form": "U.S. National Science Foundation"
+        },
+        {
+          "id": "https://ror.org/03sr1ma14",
+          "name": "Iran National Science Foundation",
+          "aliases": [
+            "INSF"
+          ],
+          "country": "IR",
+          "score": 0.64516129,
+          "matched_form": "Iran National Science Foundation"
+        },
+        {
+          "id": "https://ror.org/0238xm951",
+          "name": "Mind Science Foundation",
+          "aliases": [
+            "MSF"
+          ],
+          "country": "US",
+          "score": 0.64285714,
+          "matched_form": "Mind Science Foundation"
+        },
+        {
+          "id": "https://ror.org/045d4st33",
+          "name": "Yoga Science Foundation",
+          "aliases": [
+            "YSF",
+            "Yoga Research & Education Foundation"
+          ],
+          "country": "US",
+          "score": 0.64285714,
+          "matched_form": "Yoga Science Foundation"
+        },
+        {
+          "id": "https://ror.org/04hawx602",
+          "name": "ITOH Science Foundation",
+          "aliases": [
+            "公益財団法人伊藤科学振興会"
+          ],
+          "country": "JP",
+          "score": 0.64285714,
+          "matched_form": "ITOH Science Foundation"
+        }
+      ],
+      "full_registry_target_rank": null,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/021nxhr62",
+          "score": 0.6557377
+        },
+        {
+          "id": "https://ror.org/03sr1ma14",
+          "score": 0.64516129
+        }
+      ],
+      "target_display": null
+    },
+    {
+      "seq_no": 1262,
+      "query": "Thailand Science Research and Innovation Fund",
+      "output": [
+        "https://ror.org/000025p04"
+      ],
+      "alternates": [],
+      "source_row_sha256": "da8566ad522fadf199be1bb1e2390c8b0fd24bdd326220d81d0ce8a30aa09059",
+      "selection_group": "variant",
+      "review": "excluded",
+      "review_reason": "The fund and the named Thai agency can be distinct referents.",
+      "candidates": [
+        {
+          "id": "https://ror.org/000025p04",
+          "name": "Thailand Science Research and Innovation",
+          "aliases": [
+            "TSRI",
+            "สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม"
+          ],
+          "country": "TH",
+          "score": 0.95,
+          "matched_form": "Thailand Science Research and Innovation"
+        },
+        {
+          "id": "https://ror.org/00en9ce74",
+          "name": "Research and Innovation Foundation",
+          "aliases": [
+            "Ίδρυμα Έρευνας και Καινοτομίας"
+          ],
+          "country": "CY",
+          "score": 0.69444444,
+          "matched_form": "Research and Innovation Foundation"
+        },
+        {
+          "id": "https://ror.org/001aqnf71",
+          "name": "UK Research and Innovation",
+          "aliases": [
+            "UKRI",
+            "United Kingdom Resarch and Innovation"
+          ],
+          "country": "GB",
+          "score": 0.67647059,
+          "matched_form": "UK Research and Innovation"
+        },
+        {
+          "id": "https://ror.org/05kqre064",
+          "name": "Fundació Catalana per a la Recerca i la Innovació",
+          "aliases": [
+            "Catalan Foundation for Research and Innovation",
+            "FCRI"
+          ],
+          "country": "ES",
+          "score": 0.63414634,
+          "matched_form": "Catalan Foundation for Research and Innovation"
+        },
+        {
+          "id": "https://ror.org/03cqd2v24",
+          "name": "Ministry of Higher Education, Science, Research and Innovation",
+          "aliases": [
+            "MHESI",
+            "กระทรวงการอุดมศึกษา วิทยาศาสตร์ วิจัยและนวัตกรรม"
+          ],
+          "country": "TH",
+          "score": 0.63265306,
+          "matched_form": "Ministry of Higher Education, Science, Research and Innovation"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/000025p04",
+          "score": 0.95
+        },
+        {
+          "id": "https://ror.org/00en9ce74",
+          "score": 0.69444444
+        }
+      ],
+      "target_display": "Thailand Science Research and Innovation"
+    },
+    {
+      "seq_no": 1366,
+      "query": "City University of Hong Kong",
+      "output": [
+        "https://ror.org/03q8dnn23"
+      ],
+      "alternates": [],
+      "source_row_sha256": "f97ee19d4aa2d17ab33410f0063415dbd27eb6f36e737744c5c3526231f660fd",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/03q8dnn23",
+          "name": "City University of Hong Kong",
+          "aliases": [],
+          "country": "HK",
+          "score": 1.0,
+          "matched_form": "City University of Hong Kong"
+        },
+        {
+          "id": "https://ror.org/02zhqgq86",
+          "name": "University of Hong Kong",
+          "aliases": [
+            "HKU",
+            "Hong Kong University"
+          ],
+          "country": "HK",
+          "score": 0.93333333,
+          "matched_form": "University of Hong Kong"
+        },
+        {
+          "id": "https://ror.org/03hj2gd47",
+          "name": "City University of Hong Kong (Dongguan)",
+          "aliases": [
+            "香港城市大学 (东莞)"
+          ],
+          "country": "CN",
+          "score": 0.85714286,
+          "matched_form": "City University of Hong Kong (Dongguan)"
+        },
+        {
+          "id": "https://ror.org/0349bsm71",
+          "name": "Hong Kong Metropolitan University",
+          "aliases": [
+            "Open University of Hong Kong",
+            "OUHK"
+          ],
+          "country": "HK",
+          "score": 0.84,
+          "matched_form": "Open University of Hong Kong"
+        },
+        {
+          "id": "https://ror.org/00t33hh48",
+          "name": "Chinese University of Hong Kong",
+          "aliases": [
+            "CUHK",
+            "香港中文大學"
+          ],
+          "country": "HK",
+          "score": 0.79245283,
+          "matched_form": "Chinese University of Hong Kong"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/03q8dnn23",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/02zhqgq86",
+          "score": 0.93333333
+        }
+      ],
+      "target_display": "City University of Hong Kong"
+    },
+    {
+      "seq_no": 1463,
+      "query": "Natural Science Foundation of Shaanxi Province, China",
+      "output": [],
+      "alternates": [],
+      "source_row_sha256": "bdcd8b57bf6e9b7d3b14ed48167c6ef52d2b471cc2957f8a998de0d1a48fb0b7",
+      "selection_group": "empty",
+      "review": "pending_independent_nil",
+      "review_reason": "Check Shaanxi provincial agency and award program identity.",
+      "candidates": [
+        {
+          "id": "https://ror.org/01h0zpd94",
+          "name": "National Natural Science Foundation of China",
+          "aliases": [
+            "NSFC",
+            "国家自然科学基金委员会"
+          ],
+          "country": "CN",
+          "score": 0.77272727,
+          "matched_form": "National Natural Science Foundation of China"
+        },
+        {
+          "id": "https://ror.org/04aqat463",
+          "name": "Zhejiang Provincial Natural Science Foundation",
+          "aliases": [
+            "浙江省自然科学基金委员会"
+          ],
+          "country": "CN",
+          "score": 0.67368421,
+          "matched_form": "Zhejiang Provincial Natural Science Foundation"
+        },
+        {
+          "id": "https://ror.org/010xaa060",
+          "name": "National Science Foundation of Sri Lanka",
+          "aliases": [
+            "NSF"
+          ],
+          "country": "LK",
+          "score": 0.59770115,
+          "matched_form": "National Science Foundation of Sri Lanka"
+        },
+        {
+          "id": "https://ror.org/0426zh255",
+          "name": "China Postdoctoral Science Foundation",
+          "aliases": [
+            "中国博士后科学基金会"
+          ],
+          "country": "CN",
+          "score": 0.59770115,
+          "matched_form": "China Postdoctoral Science Foundation"
+        },
+        {
+          "id": "https://ror.org/00yjd3n13",
+          "name": "Swiss National Science Foundation",
+          "aliases": [
+            "National Science Foundation of Switzerland",
+            "Fondo Nazionale Svizzero per la Ricerca Scientifica"
+          ],
+          "country": "CH",
+          "score": 0.58426966,
+          "matched_form": "National Science Foundation of Switzerland"
+        }
+      ],
+      "full_registry_target_rank": null,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/01h0zpd94",
+          "score": 0.77272727
+        },
+        {
+          "id": "https://ror.org/04aqat463",
+          "score": 0.67368421
+        }
+      ],
+      "target_display": null
+    },
+    {
+      "seq_no": 1477,
+      "query": "Shanghai Municipal Natural Science Foundation",
+      "output": [],
+      "alternates": [],
+      "source_row_sha256": "bc7f4a1caf2d23c8b1b6e3abe1d81e16c082ba9d34e95bdab5b81cdb75ffdbc5",
+      "selection_group": "empty",
+      "review": "pending_independent_nil",
+      "review_reason": "Check Shanghai foundation versus administering commission.",
+      "candidates": [
+        {
+          "id": "https://ror.org/01h0zpd94",
+          "name": "National Natural Science Foundation of China",
+          "aliases": [
+            "NSFC",
+            "国家自然科学基金委员会"
+          ],
+          "country": "CN",
+          "score": 0.65853659,
+          "matched_form": "National Natural Science Foundation of China"
+        },
+        {
+          "id": "https://ror.org/04aqat463",
+          "name": "Zhejiang Provincial Natural Science Foundation",
+          "aliases": [
+            "浙江省自然科学基金委员会"
+          ],
+          "country": "CN",
+          "score": 0.62921348,
+          "matched_form": "Zhejiang Provincial Natural Science Foundation"
+        },
+        {
+          "id": "https://ror.org/021nxhr62",
+          "name": "U.S. National Science Foundation",
+          "aliases": [
+            "NSF"
+          ],
+          "country": "US",
+          "score": 0.61111111,
+          "matched_form": "U.S. National Science Foundation"
+        },
+        {
+          "id": "https://ror.org/03sr1ma14",
+          "name": "Iran National Science Foundation",
+          "aliases": [
+            "INSF"
+          ],
+          "country": "IR",
+          "score": 0.60273973,
+          "matched_form": "Iran National Science Foundation"
+        },
+        {
+          "id": "https://ror.org/00yjd3n13",
+          "name": "Swiss National Science Foundation",
+          "aliases": [
+            "Fondo Nazionale Svizzero per la Ricerca Scientifica",
+            "Fonds national suisse de la recherche scientifique"
+          ],
+          "country": "CH",
+          "score": 0.59459459,
+          "matched_form": "Swiss National Science Foundation"
+        }
+      ],
+      "full_registry_target_rank": null,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/01h0zpd94",
+          "score": 0.65853659
+        },
+        {
+          "id": "https://ror.org/04aqat463",
+          "score": 0.62921348
+        }
+      ],
+      "target_display": null
+    },
+    {
+      "seq_no": 1523,
+      "query": "Plant Physiology Laboratory",
+      "output": [],
+      "alternates": [],
+      "source_row_sha256": "47b047bae0f988dd449669396b3826b1e5e2a2a4a6c88358c7df77badca568c2",
+      "selection_group": "empty",
+      "review": "excluded",
+      "review_reason": "Generic laboratory lacks identifying institution or geography.",
+      "candidates": [
+        {
+          "id": "https://ror.org/05fjffm04",
+          "name": "Laboratoire de Physiologie Cellulaire",
+          "aliases": [
+            "Laboratory of Cell Physiology",
+            "PhyCell"
+          ],
+          "country": "FR",
+          "score": 0.71428571,
+          "matched_form": "Laboratory of Cell Physiology"
+        },
+        {
+          "id": "https://ror.org/02yjhrp74",
+          "name": "State Key Laboratory of Plant Physiology and Biochemistry",
+          "aliases": [
+            "State Key Lab of Plant Physiology and Biochemistry",
+            "植物生理学与生物化学国家重点实验室"
+          ],
+          "country": "CN",
+          "score": 0.65060241,
+          "matched_form": "State Key Laboratory of Plant Physiology and Biochemistry"
+        },
+        {
+          "id": "https://ror.org/0271pk470",
+          "name": "Plant and Fungi Biotechnology Laboratory",
+          "aliases": [],
+          "country": "KG",
+          "score": 0.59701493,
+          "matched_form": "Plant and Fungi Biotechnology Laboratory"
+        },
+        {
+          "id": "https://ror.org/05c95bg36",
+          "name": "Laboratoire de Physique des Plasmas",
+          "aliases": [
+            "Laboratory of Plasma Physics"
+          ],
+          "country": "FR",
+          "score": 0.58181818,
+          "matched_form": "Laboratory of Plasma Physics"
+        },
+        {
+          "id": "https://ror.org/04a5aqx80",
+          "name": "Museum of Indian Arts and Culture",
+          "aliases": [
+            "Laboratory of Anthropology",
+            "MIAC"
+          ],
+          "country": "US",
+          "score": 0.56603774,
+          "matched_form": "Laboratory of Anthropology"
+        }
+      ],
+      "full_registry_target_rank": null,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/05fjffm04",
+          "score": 0.71428571
+        },
+        {
+          "id": "https://ror.org/02yjhrp74",
+          "score": 0.65060241
+        }
+      ],
+      "target_display": null
+    },
+    {
+      "seq_no": 1684,
+      "query": "Wilf Family Foundation",
+      "output": [
+        "https://ror.org/010k8cs62"
+      ],
+      "alternates": [],
+      "source_row_sha256": "68aa0c9e260e5d2015d1cee154a74d94be9a70064671f0a607da8396769d2644",
+      "selection_group": "variant",
+      "review": "source_supported",
+      "review_reason": "Singular/plural foundation with the distinctive Wilf family name.",
+      "candidates": [
+        {
+          "id": "https://ror.org/010k8cs62",
+          "name": "Wilf Family Foundations",
+          "aliases": [],
+          "country": "US",
+          "score": 0.93333333,
+          "matched_form": "Wilf Family Foundations"
+        },
+        {
+          "id": "https://ror.org/032v46217",
+          "name": "Self Family Foundation",
+          "aliases": [
+            "SFF",
+            "The Self Family Foundation"
+          ],
+          "country": "US",
+          "score": 0.86363636,
+          "matched_form": "Self Family Foundation"
+        },
+        {
+          "id": "https://ror.org/00y0dmr19",
+          "name": "Clif Family Foundation",
+          "aliases": [
+            "CBFF",
+            "Clif Bar Family Foundation"
+          ],
+          "country": "US",
+          "score": 0.81818182,
+          "matched_form": "Clif Family Foundation"
+        },
+        {
+          "id": "https://ror.org/02cc3ss06",
+          "name": "Huo Family Foundation",
+          "aliases": [],
+          "country": "GB",
+          "score": 0.79069767,
+          "matched_form": "Huo Family Foundation"
+        },
+        {
+          "id": "https://ror.org/054nv4a88",
+          "name": "Ford Family Foundation",
+          "aliases": [],
+          "country": "US",
+          "score": 0.79069767,
+          "matched_form": "Ford Family Foundation"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/010k8cs62",
+          "score": 0.93333333
+        },
+        {
+          "id": "https://ror.org/032v46217",
+          "score": 0.86363636
+        }
+      ],
+      "target_display": "Wilf Family Foundations"
+    },
+    {
+      "seq_no": 2076,
+      "query": "German Ministry for Education and Research",
+      "output": [
+        "https://ror.org/04pz7b180"
+      ],
+      "alternates": [],
+      "source_row_sha256": "ea066208870b0a28373fe4beca4293f5ddd2068e0e6fa775aa997e67f958516b",
+      "selection_group": "variant",
+      "review": "source_supported",
+      "review_reason": "German jurisdiction and the registered former education/research ministry label agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/01pntf040",
+          "name": "Ministry of Education and Research",
+          "aliases": [
+            "Utbildningsdepartementet"
+          ],
+          "country": "SE",
+          "score": 0.78947368,
+          "matched_form": "Ministry of Education and Research"
+        },
+        {
+          "id": "https://ror.org/03wv1cb14",
+          "name": "Ministry of Education and Research",
+          "aliases": [
+            "Royal Norwegian Ministry of Education and Research"
+          ],
+          "country": "NO",
+          "score": 0.78947368,
+          "matched_form": "Ministry of Education and Research"
+        },
+        {
+          "id": "https://ror.org/051aqjh92",
+          "name": "Ministry of Education and Research",
+          "aliases": [
+            "Eesti Vabariigi Haridus- ja Teadusministeerium"
+          ],
+          "country": "EE",
+          "score": 0.78947368,
+          "matched_form": "Ministry of Education and Research"
+        },
+        {
+          "id": "https://ror.org/03sjk9a61",
+          "name": "Ministère de l'Enseignement Supérieur, de la Recherche et de l'Espace",
+          "aliases": [
+            "Ministry of Higher Education and Research",
+            "MESR"
+          ],
+          "country": "FR",
+          "score": 0.74698795,
+          "matched_form": "Ministry of Higher Education and Research"
+        },
+        {
+          "id": "https://ror.org/04pz7b180",
+          "name": "Bundesministerium für Forschung, Technologie und Raumfahrt",
+          "aliases": [
+            "Federal Ministry of Education and Research",
+            "BMBF"
+          ],
+          "country": "DE",
+          "score": 0.71428571,
+          "matched_form": "Federal Ministry of Education and Research"
+        }
+      ],
+      "full_registry_target_rank": 5,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/01pntf040",
+          "score": 0.78947368
+        },
+        {
+          "id": "https://ror.org/03wv1cb14",
+          "score": 0.78947368
+        }
+      ],
+      "target_display": "Bundesministerium für Forschung, Technologie und Raumfahrt"
+    },
+    {
+      "seq_no": 2083,
+      "query": "Ain Shams University",
+      "output": [
+        "https://ror.org/00cb9w016"
+      ],
+      "alternates": [],
+      "source_row_sha256": "cbd284d06e7c09b27709886282c631c1cf3a11b0d59595194f11af3e589e649f",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/00cb9w016",
+          "name": "Ain Shams University",
+          "aliases": [
+            "ASU",
+            "جامعة عين شمس"
+          ],
+          "country": "EG",
+          "score": 1.0,
+          "matched_form": "Ain Shams University"
+        },
+        {
+          "id": "https://ror.org/00p59qs14",
+          "name": "Ain Shams University Hospital",
+          "aliases": [],
+          "country": "EG",
+          "score": 0.81632653,
+          "matched_form": "Ain Shams University Hospital"
+        },
+        {
+          "id": "https://ror.org/023abrt21",
+          "name": "Al Ain University",
+          "aliases": [
+            "AAU",
+            "Al Ain University of Science and Technology"
+          ],
+          "country": "AE",
+          "score": 0.7027027,
+          "matched_form": "Al Ain University"
+        },
+        {
+          "id": "https://ror.org/01cnqpt53",
+          "name": "Jain University",
+          "aliases": [
+            "Sri Bhagawan Mahaveer Jain College"
+          ],
+          "country": "IN",
+          "score": 0.68571429,
+          "matched_form": "Jain University"
+        },
+        {
+          "id": "https://ror.org/01pwpsf61",
+          "name": "Homs University",
+          "aliases": [
+            "Al-Baath University",
+            "جامعة البعث"
+          ],
+          "country": "SY",
+          "score": 0.68571429,
+          "matched_form": "Homs University"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/00cb9w016",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/00p59qs14",
+          "score": 0.81632653
+        }
+      ],
+      "target_display": "Ain Shams University"
+    },
+    {
+      "seq_no": 2096,
+      "query": "UK EPSRC",
+      "output": [
+        "https://ror.org/0439y7842"
+      ],
+      "alternates": [],
+      "source_row_sha256": "89190d8f82f83e50868ef3162c9aaa1c638ec6194cc83130560f5a2e57a65747",
+      "selection_group": "variant",
+      "review": "source_supported",
+      "review_reason": "UK qualifier plus the pinned EPSRC acronym.",
+      "candidates": [
+        {
+          "id": "https://ror.org/0439y7842",
+          "name": "Engineering and Physical Sciences Research Council",
+          "aliases": [
+            "EPSRC"
+          ],
+          "country": "GB",
+          "score": 0.76923077,
+          "matched_form": "EPSRC"
+        },
+        {
+          "id": "https://ror.org/007bsba86",
+          "name": "UK EPC",
+          "aliases": [],
+          "country": "GB",
+          "score": 0.57142857,
+          "matched_form": "UK EPC"
+        },
+        {
+          "id": "https://ror.org/026a5wm88",
+          "name": "Public Schools of Robeson County",
+          "aliases": [
+            "PSRC"
+          ],
+          "country": "US",
+          "score": 0.5,
+          "matched_form": "PSRC"
+        },
+        {
+          "id": "https://ror.org/02stmg653",
+          "name": "Pilipino Senior Resource Center",
+          "aliases": [
+            "PSRC"
+          ],
+          "country": "US",
+          "score": 0.5,
+          "matched_form": "PSRC"
+        },
+        {
+          "id": "https://ror.org/001pma463",
+          "name": "University of Kara",
+          "aliases": [
+            "UK",
+            "Université de Kara"
+          ],
+          "country": "TG",
+          "score": 0.4,
+          "matched_form": "UK"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/0439y7842",
+          "score": 0.76923077
+        },
+        {
+          "id": "https://ror.org/007bsba86",
+          "score": 0.57142857
+        }
+      ],
+      "target_display": "Engineering and Physical Sciences Research Council"
+    },
+    {
+      "seq_no": 2105,
+      "query": "Agencia Nacional de Investigación y Desarrollo ANID, Chile",
+      "output": [
+        "https://ror.org/02ap3w078"
+      ],
+      "alternates": [],
+      "source_row_sha256": "8954c922b93400c3688001a3cfef647fcc8de8a6ff3fd13d89493117b38a2f13",
+      "selection_group": "variant",
+      "review": "source_supported",
+      "review_reason": "Registered Spanish name and ANID with the Chile qualifier.",
+      "candidates": [
+        {
+          "id": "https://ror.org/02ap3w078",
+          "name": "Agencia Nacional de Investigación y Desarrollo",
+          "aliases": [
+            "ANID",
+            "ANID Chile"
+          ],
+          "country": "CL",
+          "score": 0.88888889,
+          "matched_form": "Agencia Nacional de Investigación y Desarrollo"
+        },
+        {
+          "id": "https://ror.org/039vhkg84",
+          "name": "Comisión Nacional de Investigación y Desarrollo Aeroespacial",
+          "aliases": [
+            "CONIDA",
+            "National Commission for Aerospace Research and Development"
+          ],
+          "country": "PE",
+          "score": 0.69724771,
+          "matched_form": "Comisión Nacional de Investigación y Desarrollo Aeroespacial"
+        },
+        {
+          "id": "https://ror.org/03egaj678",
+          "name": "Agencia Nacional de Investigación e Innovación",
+          "aliases": [
+            "ANII",
+            "Agencia Nacional de Investigación e Innovación de Uruguay"
+          ],
+          "country": "UY",
+          "score": 0.68085106,
+          "matched_form": "Agencia Nacional de Investigación e Innovación"
+        },
+        {
+          "id": "https://ror.org/0314ecq26",
+          "name": "Centro Nacional de Investigación y Desarrollo Tecnológico",
+          "aliases": [
+            "CENIDET"
+          ],
+          "country": "MX",
+          "score": 0.65454545,
+          "matched_form": "Centro Nacional de Investigación y Desarrollo Tecnológico"
+        },
+        {
+          "id": "https://ror.org/03stxzb56",
+          "name": "Agencia Nacional de Promoción de la Investigación, el Desarrollo Tecnológico y la Innovación",
+          "aliases": [
+            "ANPCyT"
+          ],
+          "country": "AR",
+          "score": 0.63076923,
+          "matched_form": "Agencia Nacional de Promoción de la Investigación, el Desarrollo Tecnológico y la Innovación"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/02ap3w078",
+          "score": 0.88888889
+        },
+        {
+          "id": "https://ror.org/039vhkg84",
+          "score": 0.69724771
+        }
+      ],
+      "target_display": "Agencia Nacional de Investigación y Desarrollo"
+    },
+    {
+      "seq_no": 2110,
+      "query": "Natural Science Foundation of Jiangxi Province of China",
+      "output": [],
+      "alternates": [],
+      "source_row_sha256": "1d6d06faaf755e7df6d76af17360519586ac5093ad06fbc63b982d3e925f3e92",
+      "selection_group": "empty",
+      "review": "pending_independent_nil",
+      "review_reason": "Check Jiangxi provincial foundation and administering agency.",
+      "candidates": [
+        {
+          "id": "https://ror.org/01h0zpd94",
+          "name": "National Natural Science Foundation of China",
+          "aliases": [
+            "NSFC",
+            "国家自然科学基金委员会"
+          ],
+          "country": "CN",
+          "score": 0.78651685,
+          "matched_form": "National Natural Science Foundation of China"
+        },
+        {
+          "id": "https://ror.org/04aqat463",
+          "name": "Zhejiang Provincial Natural Science Foundation",
+          "aliases": [
+            "浙江省自然科学基金委员会"
+          ],
+          "country": "CN",
+          "score": 0.72916667,
+          "matched_form": "Zhejiang Provincial Natural Science Foundation"
+        },
+        {
+          "id": "https://ror.org/0426zh255",
+          "name": "China Postdoctoral Science Foundation",
+          "aliases": [
+            "中国博士后科学基金会"
+          ],
+          "country": "CN",
+          "score": 0.59090909,
+          "matched_form": "China Postdoctoral Science Foundation"
+        },
+        {
+          "id": "https://ror.org/010xaa060",
+          "name": "National Science Foundation of Sri Lanka",
+          "aliases": [
+            "NSF"
+          ],
+          "country": "LK",
+          "score": 0.56818182,
+          "matched_form": "National Science Foundation of Sri Lanka"
+        },
+        {
+          "id": "https://ror.org/021nxhr62",
+          "name": "U.S. National Science Foundation",
+          "aliases": [
+            "NSF"
+          ],
+          "country": "US",
+          "score": 0.55696203,
+          "matched_form": "U.S. National Science Foundation"
+        }
+      ],
+      "full_registry_target_rank": null,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/01h0zpd94",
+          "score": 0.78651685
+        },
+        {
+          "id": "https://ror.org/04aqat463",
+          "score": 0.72916667
+        }
+      ],
+      "target_display": null
+    },
+    {
+      "seq_no": 2221,
+      "query": "Norwegian Directorate for Children, Youth and Family Affairs",
+      "output": [
+        "https://ror.org/04yqs7e37"
+      ],
+      "alternates": [],
+      "source_row_sha256": "e1032f7d20f27625fa203a66303a7214fd96d7e828c379d5c5aaf23f0c1e5d8a",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/04yqs7e37",
+          "name": "Norwegian Directorate for Children, Youth and Family Affairs",
+          "aliases": [
+            "BUFDIR"
+          ],
+          "country": "NO",
+          "score": 1.0,
+          "matched_form": "Norwegian Directorate for Children, Youth and Family Affairs"
+        },
+        {
+          "id": "https://ror.org/01d2cn965",
+          "name": "Norwegian Directorate of Health",
+          "aliases": [
+            "Norwegian Directorate of Health and Social Affairs",
+            "Helsedirektoratet"
+          ],
+          "country": "NO",
+          "score": 0.60550459,
+          "matched_form": "Norwegian Directorate of Health and Social Affairs"
+        },
+        {
+          "id": "https://ror.org/01hgje476",
+          "name": "Children Youth and Family Collaborative",
+          "aliases": [
+            "CYFC"
+          ],
+          "country": "US",
+          "score": 0.55102041,
+          "matched_form": "Children Youth and Family Collaborative"
+        },
+        {
+          "id": "https://ror.org/0120sbw19",
+          "name": "Utdanningsdirektoratet",
+          "aliases": [
+            "Norwegian Directorate for Education and Training",
+            "UDIR"
+          ],
+          "country": "NO",
+          "score": 0.52336449,
+          "matched_form": "Norwegian Directorate for Education and Training"
+        },
+        {
+          "id": "https://ror.org/02k1hw394",
+          "name": "Directorate for Cultural Heritage",
+          "aliases": [
+            "Norwegian Directorate for Cultural Heritage",
+            "Direktoratet for kulturminneforvaltning"
+          ],
+          "country": "NO",
+          "score": 0.50980392,
+          "matched_form": "Norwegian Directorate for Cultural Heritage"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/04yqs7e37",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/01d2cn965",
+          "score": 0.60550459
+        }
+      ],
+      "target_display": "Norwegian Directorate for Children, Youth and Family Affairs"
+    },
+    {
+      "seq_no": 2244,
+      "query": "Independent Research Fund Denmark",
+      "output": [
+        "https://ror.org/05svhj534"
+      ],
+      "alternates": [],
+      "source_row_sha256": "18a569e98819d20aa5f3e308dbb2fa0764831239a4f7649bd47fd7e7dffdff26",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/05svhj534",
+          "name": "Danmarks Frie Forskningsfond",
+          "aliases": [
+            "Independent Research Fund Denmark",
+            "DFF"
+          ],
+          "country": "DK",
+          "score": 1.0,
+          "matched_form": "Independent Research Fund Denmark"
+        },
+        {
+          "id": "https://ror.org/01wsw8g60",
+          "name": "Independent Research Association",
+          "aliases": [
+            "Asociația Independent Research"
+          ],
+          "country": "RO",
+          "score": 0.63333333,
+          "matched_form": "Asociația Independent Research"
+        },
+        {
+          "id": "https://ror.org/01qfkht77",
+          "name": "Independent Social Research Foundation",
+          "aliases": [
+            "ISRF"
+          ],
+          "country": "GB",
+          "score": 0.58823529,
+          "matched_form": "Independent Social Research Foundation"
+        },
+        {
+          "id": "https://ror.org/04mb1pr47",
+          "name": "Kano Independent Research Centre Trust",
+          "aliases": [
+            "KIRCT"
+          ],
+          "country": "NG",
+          "score": 0.56716418,
+          "matched_form": "Kano Independent Research Centre Trust"
+        },
+        {
+          "id": "https://ror.org/02zxqxw53",
+          "name": "AXA Research Fund",
+          "aliases": [],
+          "country": "FR",
+          "score": 0.54166667,
+          "matched_form": "AXA Research Fund"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/05svhj534",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/01wsw8g60",
+          "score": 0.63333333
+        }
+      ],
+      "target_display": "Danmarks Frie Forskningsfond"
+    },
+    {
+      "seq_no": 2289,
+      "query": "Health, Safety and Environment Office, The Hong Kong Polytechnic University",
+      "output": [
+        "https://ror.org/0030zas98"
+      ],
+      "alternates": [],
+      "source_row_sha256": "5b205336f5913d5a2986278c65329f549475eecc8bf4df5f42cbd87aee8e8e99",
+      "selection_group": "variant",
+      "review": "excluded",
+      "review_reason": "Names a university office rather than an unqualified institution.",
+      "candidates": [
+        {
+          "id": "https://ror.org/01cyr5g02",
+          "name": "Office of Environment, Safety, and Health",
+          "aliases": [
+            "EH"
+          ],
+          "country": "US",
+          "score": 0.61111111,
+          "matched_form": "Office of Environment, Safety, and Health"
+        },
+        {
+          "id": "https://ror.org/04csf5r20",
+          "name": "Office of Environment, Health, Safety and Security",
+          "aliases": [
+            "EHSS"
+          ],
+          "country": "US",
+          "score": 0.60344828,
+          "matched_form": "Office of Environment, Health, Safety and Security"
+        },
+        {
+          "id": "https://ror.org/0030zas98",
+          "name": "Hong Kong Polytechnic University",
+          "aliases": [
+            "HKPU",
+            "PolyU"
+          ],
+          "country": "HK",
+          "score": 0.6,
+          "matched_form": "Hong Kong Polytechnic University"
+        },
+        {
+          "id": "https://ror.org/04ya3kq71",
+          "name": "Polar Environment, Safety and Health Section",
+          "aliases": [
+            "PESH"
+          ],
+          "country": "US",
+          "score": 0.53097345,
+          "matched_form": "Polar Environment, Safety and Health Section"
+        },
+        {
+          "id": "https://ror.org/04vt1n802",
+          "name": "Universidad Politécnica del Mar y la Sierra",
+          "aliases": [
+            "Polytechnic University of the Sea and the Sierra",
+            "UPMyS"
+          ],
+          "country": "MX",
+          "score": 0.50877193,
+          "matched_form": "Polytechnic University of the Sea and the Sierra"
+        }
+      ],
+      "full_registry_target_rank": 3,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/01cyr5g02",
+          "score": 0.61111111
+        },
+        {
+          "id": "https://ror.org/04csf5r20",
+          "score": 0.60344828
+        }
+      ],
+      "target_display": "Hong Kong Polytechnic University"
+    },
+    {
+      "seq_no": 2435,
+      "query": "Southern Marine Science and Engineering Guangdong Laboratory (Guangzhou), China",
+      "output": [
+        "https://ror.org/00y7mag53"
+      ],
+      "alternates": [],
+      "source_row_sha256": "13f9bf6ec700e0733d51e38d75e2415d056392252ef669ea527e542b721ca35e",
+      "selection_group": "variant",
+      "review": "source_supported",
+      "review_reason": "Guangzhou disambiguates the laboratory from similarly named branches.",
+      "candidates": [
+        {
+          "id": "https://ror.org/00y7mag53",
+          "name": "Southern Marine Science and Engineering Guangdong Laboratory (Guangzhou)",
+          "aliases": [
+            "南方海洋科学与工程广东省实验室 (广州)"
+          ],
+          "country": "CN",
+          "score": 0.95454545,
+          "matched_form": "Southern Marine Science and Engineering Guangdong Laboratory (Guangzhou)"
+        },
+        {
+          "id": "https://ror.org/03swgqh13",
+          "name": "Southern Marine Science and Engineering Guangdong Laboratory (Zhuhai)",
+          "aliases": [
+            "SML-Zhuhai",
+            "南方海洋科学与工程广东省实验室 (珠海)"
+          ],
+          "country": "CN",
+          "score": 0.85714286,
+          "matched_form": "Southern Marine Science and Engineering Guangdong Laboratory (Zhuhai)"
+        },
+        {
+          "id": "https://ror.org/03f0z1g15",
+          "name": "Sciences et Ingénierie de la Matière Molle",
+          "aliases": [
+            "Soft Matter Sciences and Engineering Laboratory",
+            "Laboratoire Sciences et Ingénierie de la Matière Molle"
+          ],
+          "country": "FR",
+          "score": 0.5862069,
+          "matched_form": "Soft Matter Sciences and Engineering Laboratory"
+        },
+        {
+          "id": "https://ror.org/006aydy55",
+          "name": "Ji Hua Laboratory",
+          "aliases": [
+            "Advanced Manufacturing Science and Technology GuangDong Laboratory",
+            "JHL"
+          ],
+          "country": "CN",
+          "score": 0.52631579,
+          "matched_form": "Advanced Manufacturing Science and Technology GuangDong Laboratory"
+        },
+        {
+          "id": "https://ror.org/04veekh32",
+          "name": "Autonomous Undersea Systems Institute",
+          "aliases": [
+            "Marine Systems Engineering Laboratory",
+            "AUSI"
+          ],
+          "country": "US",
+          "score": 0.51923077,
+          "matched_form": "Marine Systems Engineering Laboratory"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/00y7mag53",
+          "score": 0.95454545
+        },
+        {
+          "id": "https://ror.org/03swgqh13",
+          "score": 0.85714286
+        }
+      ],
+      "target_display": "Southern Marine Science and Engineering Guangdong Laboratory (Guangzhou)"
+    },
+    {
+      "seq_no": 2478,
+      "query": "Great Lakes Research Consortium",
+      "output": [
+        "https://ror.org/05cshtm26"
+      ],
+      "alternates": [],
+      "source_row_sha256": "9d021fac803901dba6363f6ce9a44a1c6e738581ea767439c5a68775bc442401",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/05cshtm26",
+          "name": "Great Lakes Research Consortium",
+          "aliases": [
+            "GLRC"
+          ],
+          "country": "US",
+          "score": 1.0,
+          "matched_form": "Great Lakes Research Consortium"
+        },
+        {
+          "id": "https://ror.org/041w69847",
+          "name": "Outcomes Research Consortium",
+          "aliases": [],
+          "country": "US",
+          "score": 0.71186441,
+          "matched_form": "Outcomes Research Consortium"
+        },
+        {
+          "id": "https://ror.org/027svba45",
+          "name": "CONSORCIO DE INVESTIGACIÓN SOBRE VIH SIDA TB CISIDAT, A.C.",
+          "aliases": [
+            "Health Research Consortium",
+            "CISIDAT"
+          ],
+          "country": "MX",
+          "score": 0.66666667,
+          "matched_form": "Health Research Consortium"
+        },
+        {
+          "id": "https://ror.org/00f2ymb10",
+          "name": "Chesapeake Research Consortium",
+          "aliases": [
+            "CRC"
+          ],
+          "country": "US",
+          "score": 0.6557377,
+          "matched_form": "Chesapeake Research Consortium"
+        },
+        {
+          "id": "https://ror.org/05eb21k90",
+          "name": "Clinical Research Consortium",
+          "aliases": [
+            "CRC"
+          ],
+          "country": "US",
+          "score": 0.6440678,
+          "matched_form": "Clinical Research Consortium"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/05cshtm26",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/041w69847",
+          "score": 0.71186441
+        }
+      ],
+      "target_display": "Great Lakes Research Consortium"
+    },
+    {
+      "seq_no": 2528,
+      "query": "Bial Foundation",
+      "output": [
+        "https://ror.org/05b75nt23"
+      ],
+      "alternates": [],
+      "source_row_sha256": "55609a8818a6e017b95844cd96ac8a204908594a985ce0a0c6974a2a2b046a83",
+      "selection_group": "variant",
+      "review": "excluded",
+      "review_reason": "Foundation wording is unsupported by the annotated Spanish pharmaceutical company record.",
+      "candidates": [
+        {
+          "id": "https://ror.org/011db8566",
+          "name": "JAL Foundation",
+          "aliases": [
+            "公益財団法人JAL財団"
+          ],
+          "country": "JP",
+          "score": 0.82758621,
+          "matched_form": "JAL Foundation"
+        },
+        {
+          "id": "https://ror.org/01ng0hs47",
+          "name": "American Institute of Bisexuality",
+          "aliases": [
+            "Bisexual Foundation",
+            "AIB"
+          ],
+          "country": "US",
+          "score": 0.76470588,
+          "matched_form": "Bisexual Foundation"
+        },
+        {
+          "id": "https://ror.org/02f0jr828",
+          "name": "Memorial Foundation",
+          "aliases": [],
+          "country": "US",
+          "score": 0.76470588,
+          "matched_form": "Memorial Foundation"
+        },
+        {
+          "id": "https://ror.org/01ahvm174",
+          "name": "NFL Foundation",
+          "aliases": [
+            "NFL"
+          ],
+          "country": "US",
+          "score": 0.75862069,
+          "matched_form": "NFL Foundation"
+        },
+        {
+          "id": "https://ror.org/023xtbz44",
+          "name": "Spiral Foundation",
+          "aliases": [],
+          "country": "US",
+          "score": 0.75,
+          "matched_form": "Spiral Foundation"
+        }
+      ],
+      "full_registry_target_rank": 4603,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/011db8566",
+          "score": 0.82758621
+        },
+        {
+          "id": "https://ror.org/01ng0hs47",
+          "score": 0.76470588
+        }
+      ],
+      "target_display": "Bial (Spain)"
+    },
+    {
+      "seq_no": 2597,
+      "query": "DDL Diagnostics",
+      "output": [
+        "https://ror.org/04xdr5k48"
+      ],
+      "alternates": [],
+      "source_row_sha256": "b7db05753d7f7b782357868c8d97be97d897c88aa5b3e8026d18bc7be2c14aec",
+      "selection_group": "variant",
+      "review": "source_supported",
+      "review_reason": "Registered acronym DDL and diagnostic laboratory activity agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/04dqgsa85",
+          "name": "CS Diagnostics",
+          "aliases": [],
+          "country": "DE",
+          "score": 0.78571429,
+          "matched_form": "CS Diagnostics"
+        },
+        {
+          "id": "https://ror.org/02g9smc25",
+          "name": "VRR Diagnostic Services (India)",
+          "aliases": [
+            "VRR Diagnostics"
+          ],
+          "country": "IN",
+          "score": 0.73333333,
+          "matched_form": "VRR Diagnostics"
+        },
+        {
+          "id": "https://ror.org/02t57sv80",
+          "name": "Atomo Diagnostics",
+          "aliases": [],
+          "country": "AU",
+          "score": 0.6875,
+          "matched_form": "Atomo Diagnostics"
+        },
+        {
+          "id": "https://ror.org/04xdr5k48",
+          "name": "DDL Diagnostic Laboratory",
+          "aliases": [
+            "DDL"
+          ],
+          "country": "NL",
+          "score": 0.65,
+          "matched_form": "DDL Diagnostic Laboratory"
+        },
+        {
+          "id": "https://ror.org/00pwnqr91",
+          "name": "Diagnostics For All",
+          "aliases": [
+            "DFA"
+          ],
+          "country": "US",
+          "score": 0.64705882,
+          "matched_form": "Diagnostics For All"
+        }
+      ],
+      "full_registry_target_rank": 4,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/04dqgsa85",
+          "score": 0.78571429
+        },
+        {
+          "id": "https://ror.org/02g9smc25",
+          "score": 0.73333333
+        }
+      ],
+      "target_display": "DDL Diagnostic Laboratory"
+    },
+    {
+      "seq_no": 2598,
+      "query": "Innovative Research Team in University of Guangdong",
+      "output": [],
+      "alternates": [],
+      "source_row_sha256": "2c8a568dffc03c8b5633bf91fdf5f7e348c3ede314b193d4f45cd2851af47eb7",
+      "selection_group": "empty",
+      "review": "excluded",
+      "review_reason": "Team and unspecified university are insufficient to identify a referent.",
+      "candidates": [
+        {
+          "id": "https://ror.org/0574der91",
+          "name": "Guangdong University of Education",
+          "aliases": [
+            "广东第二师范学院"
+          ],
+          "country": "CN",
+          "score": 0.56097561,
+          "matched_form": "Guangdong University of Education"
+        },
+        {
+          "id": "https://ror.org/04azbjn80",
+          "name": "Guangdong University of Technology",
+          "aliases": [
+            "GDUT",
+            "Guǎngdōng Gōngyè Dàxué"
+          ],
+          "country": "CN",
+          "score": 0.55421687,
+          "matched_form": "Guangdong University of Technology"
+        },
+        {
+          "id": "https://ror.org/0417k2898",
+          "name": "Innovative University of Eurasia",
+          "aliases": [
+            "INEU",
+            "Инновационный Евразийский Университет"
+          ],
+          "country": "KZ",
+          "score": 0.55,
+          "matched_form": "Innovative University of Eurasia"
+        },
+        {
+          "id": "https://ror.org/04grzdh47",
+          "name": "Guangdong University of Finance",
+          "aliases": [
+            "GDUF",
+            "广东金融学院"
+          ],
+          "country": "CN",
+          "score": 0.55,
+          "matched_form": "Guangdong University of Finance"
+        },
+        {
+          "id": "https://ror.org/054fysp39",
+          "name": "Guangdong Open University",
+          "aliases": [
+            "广东开放大学"
+          ],
+          "country": "CN",
+          "score": 0.54054054,
+          "matched_form": "Guangdong Open University"
+        }
+      ],
+      "full_registry_target_rank": null,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/0574der91",
+          "score": 0.56097561
+        },
+        {
+          "id": "https://ror.org/04azbjn80",
+          "score": 0.55421687
+        }
+      ],
+      "target_display": null
+    },
+    {
+      "seq_no": 2757,
+      "query": "Helsinki University Library",
+      "output": [
+        "https://ror.org/040af2s02"
+      ],
+      "alternates": [],
+      "source_row_sha256": "1922b9689e502318e75f9619913c6189fd426c673c5a2bd96cf9a453074a95a5",
+      "selection_group": "variant",
+      "review": "excluded",
+      "review_reason": "The named library may have a separate identity from its parent university.",
+      "candidates": [
+        {
+          "id": "https://ror.org/040af2s02",
+          "name": "University of Helsinki",
+          "aliases": [
+            "Helsingfors Universitet",
+            "Helsingin Yliopisto"
+          ],
+          "country": "FI",
+          "score": 0.73469388,
+          "matched_form": "University of Helsinki"
+        },
+        {
+          "id": "https://ror.org/02e8hzf44",
+          "name": "Helsinki University Hospital",
+          "aliases": [
+            "Helsingfors universitets centralsjukhus",
+            "Helsingin seudun yliopistollinen keskussairaala"
+          ],
+          "country": "FI",
+          "score": 0.69090909,
+          "matched_form": "Helsinki University Hospital"
+        },
+        {
+          "id": "https://ror.org/05qhw9x92",
+          "name": "Central University Library",
+          "aliases": [
+            "BCU",
+            "Biblioteca Centrală Universitară"
+          ],
+          "country": "RO",
+          "score": 0.67924528,
+          "matched_form": "Central University Library"
+        },
+        {
+          "id": "https://ror.org/019ryn279",
+          "name": "State and University Library",
+          "aliases": [
+            "Statsbiblioteket"
+          ],
+          "country": "DK",
+          "score": 0.65454545,
+          "matched_form": "State and University Library"
+        },
+        {
+          "id": "https://ror.org/05kt9ap64",
+          "name": "Kindai University",
+          "aliases": [
+            "Kinki University",
+            "近畿大学"
+          ],
+          "country": "JP",
+          "score": 0.65116279,
+          "matched_form": "Kinki University"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/040af2s02",
+          "score": 0.73469388
+        },
+        {
+          "id": "https://ror.org/02e8hzf44",
+          "score": 0.69090909
+        }
+      ],
+      "target_display": "University of Helsinki"
+    },
+    {
+      "seq_no": 2775,
+      "query": "CNPq process",
+      "output": [
+        "https://ror.org/03swz6y49"
+      ],
+      "alternates": [],
+      "source_row_sha256": "9163c34d6976e4a5fa7fce7830340fd007400561b7cfa97c98ae0ccefb798059",
+      "selection_group": "variant",
+      "review": "source_supported",
+      "review_reason": "Registered CNPq acronym identifies the Brazilian council. Treat process as extraneous wording.",
+      "candidates": [
+        {
+          "id": "https://ror.org/04fd4a013",
+          "name": "Center for Process Studies",
+          "aliases": [
+            "ctr4process",
+            "CPS"
+          ],
+          "country": "US",
+          "score": 0.52173913,
+          "matched_form": "ctr4process"
+        },
+        {
+          "id": "https://ror.org/03swz6y49",
+          "name": "Conselho Nacional de Desenvolvimento Científico e Tecnológico",
+          "aliases": [
+            "CNPq",
+            "National Council for Scientific and Technological Development"
+          ],
+          "country": "BR",
+          "score": 0.5,
+          "matched_form": "CNPq"
+        },
+        {
+          "id": "https://ror.org/03d41qd17",
+          "name": "OiW Process (Norway)",
+          "aliases": [],
+          "country": "NO",
+          "score": 0.46666667,
+          "matched_form": "OiW Process (Norway)"
+        },
+        {
+          "id": "https://ror.org/01sqj1z22",
+          "name": "Pi (United Kingdom)",
+          "aliases": [
+            "Process Instruments"
+          ],
+          "country": "GB",
+          "score": 0.4516129,
+          "matched_form": "Process Instruments"
+        },
+        {
+          "id": "https://ror.org/02v9xb273",
+          "name": "Centro Universitário UniProcessus",
+          "aliases": [
+            "UniProcessus",
+            "CUUP"
+          ],
+          "country": "BR",
+          "score": 0.41666667,
+          "matched_form": "UniProcessus"
+        }
+      ],
+      "full_registry_target_rank": 2,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/04fd4a013",
+          "score": 0.52173913
+        },
+        {
+          "id": "https://ror.org/03swz6y49",
+          "score": 0.5
+        }
+      ],
+      "target_display": "Conselho Nacional de Desenvolvimento Científico e Tecnológico"
+    },
+    {
+      "seq_no": 2819,
+      "query": "Higher Education Commission, Pakistan",
+      "output": [
+        "https://ror.org/038y3sz68"
+      ],
+      "alternates": [],
+      "source_row_sha256": "c3edb7b1b256b27f6e1bc1e85b6148c27f0463b14bef3509b73f994971ff9548",
+      "selection_group": "variant",
+      "review": "source_supported",
+      "review_reason": "Country qualifier anchors the generic commission name to the Pakistani record.",
+      "candidates": [
+        {
+          "id": "https://ror.org/038y3sz68",
+          "name": "Higher Education Commission",
+          "aliases": [
+            "HEC",
+            "لُجنۂ اعلیٰ تعلیم"
+          ],
+          "country": "PK",
+          "score": 0.84745763,
+          "matched_form": "Higher Education Commission"
+        },
+        {
+          "id": "https://ror.org/04s346m05",
+          "name": "Commission on Higher Education",
+          "aliases": [
+            "CHED",
+            "Komisyon sa Lalong Mataas na Edukasyon"
+          ],
+          "country": "PH",
+          "score": 0.78688525,
+          "matched_form": "Commission on Higher Education"
+        },
+        {
+          "id": "https://ror.org/040pmcr47",
+          "name": "Maryland Higher Education Commission",
+          "aliases": [
+            "MHEC"
+          ],
+          "country": "US",
+          "score": 0.73529412,
+          "matched_form": "Maryland Higher Education Commission"
+        },
+        {
+          "id": "https://ror.org/04q3cbc35",
+          "name": "Midwestern Higher Education Compact",
+          "aliases": [
+            "Midwestern Higher Education Commission",
+            "MHEC"
+          ],
+          "country": "US",
+          "score": 0.71428571,
+          "matched_form": "Midwestern Higher Education Commission"
+        },
+        {
+          "id": "https://ror.org/03gzf0d03",
+          "name": "Alabama Commission on Higher Education",
+          "aliases": [
+            "ACHE"
+          ],
+          "country": "US",
+          "score": 0.69565217,
+          "matched_form": "Alabama Commission on Higher Education"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/038y3sz68",
+          "score": 0.84745763
+        },
+        {
+          "id": "https://ror.org/04s346m05",
+          "score": 0.78688525
+        }
+      ],
+      "target_display": "Higher Education Commission"
+    },
+    {
+      "seq_no": 2865,
+      "query": "U.S. Army Engineer (USAE) Waterways Experiment Station",
+      "output": [
+        "https://ror.org/00wsjvg44"
+      ],
+      "alternates": [],
+      "source_row_sha256": "d0d86583469434e9973979841673bb5587ed7c987cc20074fc6b402234959827",
+      "selection_group": "variant",
+      "review": "source_supported",
+      "review_reason": "US Army and Waterways Experiment Station agree with the registry variants.",
+      "candidates": [
+        {
+          "id": "https://ror.org/00wsjvg44",
+          "name": "U.S. Army Corp of Engineers Waterways Experiment Station",
+          "aliases": [
+            "WES"
+          ],
+          "country": "US",
+          "score": 0.81132075,
+          "matched_form": "U.S. Army Corp of Engineers Waterways Experiment Station"
+        },
+        {
+          "id": "https://ror.org/03p8qrw52",
+          "name": "Texas A&M Engineering Experiment Station",
+          "aliases": [
+            "TEES"
+          ],
+          "country": "US",
+          "score": 0.57777778,
+          "matched_form": "Texas A&M Engineering Experiment Station"
+        },
+        {
+          "id": "https://ror.org/053sq3902",
+          "name": "Arizona Experiment Station",
+          "aliases": [
+            "AES"
+          ],
+          "country": "US",
+          "score": 0.49350649,
+          "matched_form": "Arizona Experiment Station"
+        },
+        {
+          "id": "https://ror.org/00drcz023",
+          "name": "Estación Experimental del Zaidín",
+          "aliases": [
+            "Experiment Station of Zaidín",
+            "EEZ"
+          ],
+          "country": "ES",
+          "score": 0.4556962,
+          "matched_form": "Experiment Station of Zaidín"
+        },
+        {
+          "id": "https://ror.org/01pvt8a36",
+          "name": "Experimental Station",
+          "aliases": [],
+          "country": "US",
+          "score": 0.45070423,
+          "matched_form": "Experimental Station"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/00wsjvg44",
+          "score": 0.81132075
+        },
+        {
+          "id": "https://ror.org/03p8qrw52",
+          "score": 0.57777778
+        }
+      ],
+      "target_display": "U.S. Army Corp of Engineers Waterways Experiment Station"
+    },
+    {
+      "seq_no": 3187,
+      "query": "Key Natural Science Foundation of Guangdong",
+      "output": [],
+      "alternates": [],
+      "source_row_sha256": "66116c5e534acd1fa39da52f6aec5a0b00ada7ef7c9581bef37680b7b352bb69",
+      "selection_group": "empty",
+      "review": "excluded",
+      "review_reason": "Key foundation wording may describe an award category rather than an organization.",
+      "candidates": [
+        {
+          "id": "https://ror.org/01h0zpd94",
+          "name": "National Natural Science Foundation of China",
+          "aliases": [
+            "NSFC",
+            "国家自然科学基金委员会"
+          ],
+          "country": "CN",
+          "score": 0.71604938,
+          "matched_form": "National Natural Science Foundation of China"
+        },
+        {
+          "id": "https://ror.org/04aqat463",
+          "name": "Zhejiang Provincial Natural Science Foundation",
+          "aliases": [
+            "浙江省自然科学基金委员会"
+          ],
+          "country": "CN",
+          "score": 0.63636364,
+          "matched_form": "Zhejiang Provincial Natural Science Foundation"
+        },
+        {
+          "id": "https://ror.org/010xaa060",
+          "name": "National Science Foundation of Sri Lanka",
+          "aliases": [
+            "NSF"
+          ],
+          "country": "LK",
+          "score": 0.625,
+          "matched_form": "National Science Foundation of Sri Lanka"
+        },
+        {
+          "id": "https://ror.org/021nxhr62",
+          "name": "U.S. National Science Foundation",
+          "aliases": [
+            "NSF"
+          ],
+          "country": "US",
+          "score": 0.61971831,
+          "matched_form": "U.S. National Science Foundation"
+        },
+        {
+          "id": "https://ror.org/03sr1ma14",
+          "name": "Iran National Science Foundation",
+          "aliases": [
+            "INSF"
+          ],
+          "country": "IR",
+          "score": 0.61111111,
+          "matched_form": "Iran National Science Foundation"
+        }
+      ],
+      "full_registry_target_rank": null,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/01h0zpd94",
+          "score": 0.71604938
+        },
+        {
+          "id": "https://ror.org/04aqat463",
+          "score": 0.63636364
+        }
+      ],
+      "target_display": null
+    },
+    {
+      "seq_no": 3202,
+      "query": "National Health and Medical Research Council, Canberra",
+      "output": [
+        "https://ror.org/011kf5r70"
+      ],
+      "alternates": [],
+      "source_row_sha256": "45cd16a484d356262d6ce0cf07a6d70051826507236539dcbf27bfd2665c6918",
+      "selection_group": "variant",
+      "review": "source_supported",
+      "review_reason": "Registered council name and Canberra agree with the Australian record.",
+      "candidates": [
+        {
+          "id": "https://ror.org/011kf5r70",
+          "name": "National Health and Medical Research Council",
+          "aliases": [
+            "NHMRC"
+          ],
+          "country": "AU",
+          "score": 0.90526316,
+          "matched_form": "National Health and Medical Research Council"
+        },
+        {
+          "id": "https://ror.org/04x3cxs03",
+          "name": "National Medical Research Council",
+          "aliases": [
+            "NMRC"
+          ],
+          "country": "SG",
+          "score": 0.73809524,
+          "matched_form": "National Medical Research Council"
+        },
+        {
+          "id": "https://ror.org/01612ta13",
+          "name": "Aboriginal Health and Medical Research Council of New South Wales",
+          "aliases": [
+            "Aboriginal Health and Medical Research Council of NSW",
+            "AH&MRC"
+          ],
+          "country": "AU",
+          "score": 0.71153846,
+          "matched_form": "Aboriginal Health and Medical Research Council of NSW"
+        },
+        {
+          "id": "https://ror.org/04mte1k06",
+          "name": "National Research Council Canada",
+          "aliases": [
+            "Conseil de recherches du Canada"
+          ],
+          "country": "CA",
+          "score": 0.66666667,
+          "matched_form": "National Research Council Canada"
+        },
+        {
+          "id": "https://ror.org/01p4s0142",
+          "name": "MRC Population Health Research Unit",
+          "aliases": [
+            "Medical Research Council Population Health Research Unit",
+            "PHRU"
+          ],
+          "country": "GB",
+          "score": 0.66,
+          "matched_form": "Medical Research Council Population Health Research Unit"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/011kf5r70",
+          "score": 0.90526316
+        },
+        {
+          "id": "https://ror.org/04x3cxs03",
+          "score": 0.73809524
+        }
+      ],
+      "target_display": "National Health and Medical Research Council"
+    },
+    {
+      "seq_no": 3215,
+      "query": "Office of Basic Energy Sciences, Materials Sciences, and Engineering Division",
+      "output": [
+        "https://ror.org/05mg91w61"
+      ],
+      "alternates": [],
+      "source_row_sha256": "ee458875dce2aae0893e386a6324204785339981487bab8ab9d59eea8b889c4a",
+      "selection_group": "variant",
+      "review": "excluded",
+      "review_reason": "Division and office levels of attribution are unresolved.",
+      "candidates": [
+        {
+          "id": "https://ror.org/03rs0fg31",
+          "name": "Division of Materials Science and Engineering",
+          "aliases": [
+            "CMSE"
+          ],
+          "country": "AU",
+          "score": 0.75925926,
+          "matched_form": "Division of Materials Science and Engineering"
+        },
+        {
+          "id": "https://ror.org/05mg91w61",
+          "name": "Office of Basic Energy Sciences",
+          "aliases": [],
+          "country": "US",
+          "score": 0.63829787,
+          "matched_form": "Office of Basic Energy Sciences"
+        },
+        {
+          "id": "https://ror.org/01k638r21",
+          "name": "Office of International Science and Engineering",
+          "aliases": [
+            "NSF OISE"
+          ],
+          "country": "US",
+          "score": 0.56880734,
+          "matched_form": "Office of International Science and Engineering"
+        },
+        {
+          "id": "https://ror.org/02n3j8t12",
+          "name": "Office of Fusion Energy Sciences",
+          "aliases": [
+            "FES"
+          ],
+          "country": "US",
+          "score": 0.54736842,
+          "matched_form": "Office of Fusion Energy Sciences"
+        },
+        {
+          "id": "https://ror.org/01qa5ep47",
+          "name": "Materials Research Science and Engineering Centers",
+          "aliases": [
+            "MRSEC"
+          ],
+          "country": "US",
+          "score": 0.53571429,
+          "matched_form": "Materials Research Science and Engineering Centers"
+        }
+      ],
+      "full_registry_target_rank": 2,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/03rs0fg31",
+          "score": 0.75925926
+        },
+        {
+          "id": "https://ror.org/05mg91w61",
+          "score": 0.63829787
+        }
+      ],
+      "target_display": "Office of Basic Energy Sciences"
+    },
+    {
+      "seq_no": 3246,
+      "query": "Mastercard Foundation",
+      "output": [
+        "https://ror.org/02qsb4r69"
+      ],
+      "alternates": [],
+      "source_row_sha256": "23704fc813b572f43451b0452754b8f39a29cc84ccd7c21395e9cd045fc61044",
+      "selection_group": "registry_form",
+      "review": "source_supported",
+      "review_reason": "Registry field and single Crossref annotation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/02qsb4r69",
+          "name": "Mastercard Foundation",
+          "aliases": [
+            "MCF"
+          ],
+          "country": "CA",
+          "score": 1.0,
+          "matched_form": "Mastercard Foundation"
+        },
+        {
+          "id": "https://ror.org/02fvtx219",
+          "name": "Ford Foundation",
+          "aliases": [
+            "The Ford Foundation"
+          ],
+          "country": "US",
+          "score": 0.68571429,
+          "matched_form": "Ford Foundation"
+        },
+        {
+          "id": "https://ror.org/02ng6yf94",
+          "name": "Allard Foundation",
+          "aliases": [],
+          "country": "CA",
+          "score": 0.68421053,
+          "matched_form": "Allard Foundation"
+        },
+        {
+          "id": "https://ror.org/054e5vv45",
+          "name": "Girard Foundation",
+          "aliases": [],
+          "country": "US",
+          "score": 0.68421053,
+          "matched_form": "Girard Foundation"
+        },
+        {
+          "id": "https://ror.org/02z8wa502",
+          "name": "Judith Jane Mason and Harold Stannett Williams Memorial Foundation",
+          "aliases": [
+            "Mason Foundation"
+          ],
+          "country": "AU",
+          "score": 0.66666667,
+          "matched_form": "Mason Foundation"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/02qsb4r69",
+          "score": 1.0
+        },
+        {
+          "id": "https://ror.org/02fvtx219",
+          "score": 0.68571429
+        }
+      ],
+      "target_display": "Mastercard Foundation"
+    },
+    {
+      "seq_no": 3256,
+      "query": "United States National Centers for Advancing Translational Sciences",
+      "output": [
+        "https://ror.org/04pw6fb54"
+      ],
+      "alternates": [],
+      "source_row_sha256": "897dca6255930a7118cce8ac9687b60736fe0a7e5c1cdb5d4a4735dfdc53764e",
+      "selection_group": "variant",
+      "review": "source_supported",
+      "review_reason": "Country, distinctive translational sciences name and singular/plural variation agree.",
+      "candidates": [
+        {
+          "id": "https://ror.org/04pw6fb54",
+          "name": "National Center for Advancing Translational Sciences",
+          "aliases": [
+            "NCATS"
+          ],
+          "country": "US",
+          "score": 0.83018868,
+          "matched_form": "National Center for Advancing Translational Sciences"
+        },
+        {
+          "id": "https://ror.org/05g916f28",
+          "name": "Translational Sciences (United States)",
+          "aliases": [],
+          "country": "US",
+          "score": 0.71578947,
+          "matched_form": "Translational Sciences (United States)"
+        },
+        {
+          "id": "https://ror.org/00ghtc020",
+          "name": "Data Sciences International (United States)",
+          "aliases": [
+            "DSI"
+          ],
+          "country": "US",
+          "score": 0.58,
+          "matched_form": "Data Sciences International (United States)"
+        },
+        {
+          "id": "https://ror.org/03spzdh62",
+          "name": "Computational Sciences (United States)",
+          "aliases": [],
+          "country": "US",
+          "score": 0.57446809,
+          "matched_form": "Computational Sciences (United States)"
+        },
+        {
+          "id": "https://ror.org/04gm2d409",
+          "name": "Cellulose Sciences International (United States)",
+          "aliases": [
+            "CSI"
+          ],
+          "country": "US",
+          "score": 0.57142857,
+          "matched_form": "Cellulose Sciences International (United States)"
+        }
+      ],
+      "full_registry_target_rank": 1,
+      "unrestricted_top_two": [
+        {
+          "id": "https://ror.org/04pw6fb54",
+          "score": 0.83018868
+        },
+        {
+          "id": "https://ror.org/05g916f28",
+          "score": 0.71578947
+        }
+      ],
+      "target_display": "National Center for Advancing Translational Sciences"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "excluded": {
+    "386": "Department and ministry may denote separate levels of administration.",
+    "872": "Startup fund and NIH award mechanism combined in one string.",
+    "1262": "The fund and the named Thai agency can be distinct referents.",
+    "1523": "Generic laboratory lacks identifying institution or geography.",
+    "2289": "Names a university office rather than an unqualified institution.",
+    "2528": "Foundation wording is unsupported by the annotated Spanish pharmaceutical company record.",
+    "2598": "Team and unspecified university are insufficient to identify a referent.",
+    "2757": "The named library may have a separate identity from its parent university.",
+    "3187": "Key foundation wording may describe an award category rather than an organization.",
+    "3215": "Division and office levels of attribution are unresolved."
+  },
+  "variant_evidence": {
+    "970": "Pinned Swiss record includes Hoffmann-La Roche as an alias.",
+    "1684": "Singular/plural foundation with the distinctive Wilf family name.",
+    "2076": "German jurisdiction and the registered former education/research ministry label agree.",
+    "2096": "UK qualifier plus the pinned EPSRC acronym.",
+    "2105": "Registered Spanish name and ANID with the Chile qualifier.",
+    "2435": "Guangzhou disambiguates the laboratory from similarly named branches.",
+    "2597": "Registered acronym DDL and diagnostic laboratory activity agree.",
+    "2775": "Registered CNPq acronym identifies the Brazilian council. Treat process as extraneous wording.",
+    "2819": "Country qualifier anchors the generic commission name to the Pakistani record.",
+    "2865": "US Army and Waterways Experiment Station agree with the registry variants.",
+    "3202": "Registered council name and Canberra agree with the Australian record.",
+    "3256": "Country, distinctive translational sciences name and singular/plural variation agree."
+  },
+  "pending": {
+    "486": "Named Swiss association. Check French/German forms and predecessors.",
+    "707": "Check Odysséa spelling and association aliases in France.",
+    "830": "Named Hong Kong council. Check umbrella grants committee, redirects and alternate names.",
+    "857": "Check Swedish name and translated foundation forms.",
+    "1194": "Check whether the Guangxi foundation names a program or an active organization.",
+    "1463": "Check Shaanxi provincial agency and award program identity.",
+    "1477": "Check Shanghai foundation versus administering commission.",
+    "2110": "Check Jiangxi provincial foundation and administering agency."
+  }
+}

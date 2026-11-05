@@ -1,5 +1,23 @@
 # Phase 0 / Phase 1 verification
 
+## Phase 3D · November 5, 2026
+
+- Locked offline installation, **149 pytest tests**, Ruff lint and format checks
+  passed. The socket-blocked suite includes registry alias/tie retrieval, a
+  real rank-eight miss, NIL/invalid/incomplete responses, exposure blocking,
+  stripped model inputs, paired replay, and SDK serialization of the 30m
+  cache body through a local mock transport.
+- Rebuilt the 48-query nomination file, split quarantine, blind worksheet,
+  calibration and 38 complete requests via
+  `uv run --offline python -m experiments.entity_matching.ror check`.
+  The earlier Phase 3C source reproduction also passed. No new data downloads.
+- Ran the mock entry point on real development labels and reread its immutable
+  records. All four policies reused the same 38 acquisitions. Model usage and
+  invoiced costs remain unknown. Conservative full-body preflight: $0.09235425.
+- [Development measurements and review gates](phase3d_crossref_resolution.md).
+  Ten exclusions were recorded. Independent human review remains pending for
+  the eight provisional NILs. The proposed live dispatcher is approval-gated.
+
 ## Phase 3C · November 4, 2026
 
 Rebuilt all 24 development proposals from the checksum-pinned Crossref release

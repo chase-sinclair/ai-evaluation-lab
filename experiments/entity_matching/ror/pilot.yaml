@@ -1,0 +1,29 @@
+id: entity_matching
+version: "ror-1"
+research_question: How does uncertainty-ranked escalation affect organization resolution and cost?
+hypothesis: Escalating uncertain names may improve resolution at additional cost.
+primary_variable: escalation_percent
+dataset: {id: crossref-ror-dev, version: "1", path: ror/dataset.json}
+conditions:
+  - id: acquire
+    provider: openai
+    model: gpt-6-luna
+    variables: {escalation_percent: 100, calibration: [0.75, 0.03], replay_version: ror-dev-v1}
+repetitions: 1
+seed: 42
+max_requests: 38
+max_spend_usd: 0.15
+max_output_tokens: 4096
+grader_id: offered-ror-or-abstain
+grader_version: "1"
+pricing:
+  model: gpt-6-luna
+  version: standard-2026-11-04
+  source_url: https://developers.openai.com/api/docs/pricing
+  verified_date: "2026-11-04"
+  input_usd_per_million: 0.10
+  output_usd_per_million: 0.50
+  cache:
+    service_tier: default
+    read_usd_per_million: 0.01
+    write_usd_per_million: {"30m": 0.125, "12h": 0.25}
