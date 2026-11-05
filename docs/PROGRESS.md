@@ -11,7 +11,8 @@ and overlapping families are development-exposed, including the exclusions.
 
 Files include the pinned evidence packet, source reconstruction script and
 offline receipt test. Locked offline sync, full reconstruction, 144 tests and
-Ruff passed locally. Preceding verified checkpoint: 2930ce3.
+Ruff passed locally. Audit commit e4aad76cf311d14274bb7f158c0f1affd74768b4
+[passed CI on Python 3.12 and 3.13](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41967615964).
 Next owner decision covers formulation B and a bounded offline development
 protocol. Candidate retrieval, independent label review, held-out family counts
 and a separate budget approval remain open. Paid calls this phase: zero.

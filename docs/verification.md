@@ -10,6 +10,8 @@ checks passed. The CI packet test checks source IDs, disjoint organizations,
 scores, relationship flags and agreement with the readable review without
 requiring a data download. Local source reconstruction uses
 `uv run --offline python scripts/audit_crossref_pairs.py --check`.
+The [GitHub Actions audit run](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/41967615964)
+passed for e4aad76cf311d14274bb7f158c0f1affd74768b4 on Python 3.12 and 3.13.
 
 [Pair decisions](audits/phase3c/review.md) and [study recommendation](phase3c_crossref_feasibility.md)
 record exclusions, CC0 terms, source hashes, unmeasured pilot costs and next
