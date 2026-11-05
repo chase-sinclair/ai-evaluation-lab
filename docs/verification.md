@@ -1,5 +1,21 @@
 # Phase 0 / Phase 1 verification
 
+## Phase 3C · November 4, 2026
+
+Rebuilt all 24 development proposals from the checksum-pinned Crossref release
+and the CSV member of ROR v2.6. The source check reproduced the rows, scores,
+original annotations and graph evidence. Local full-suite pytest passed **144**
+tests with sockets blocked. Locked offline sync, Ruff lint and Ruff formatting
+checks passed. The CI packet test checks source IDs, disjoint organizations,
+scores, relationship flags and agreement with the readable review without
+requiring a data download. Local source reconstruction uses
+`uv run --offline python scripts/audit_crossref_pairs.py --check`.
+
+[Pair decisions](audits/phase3c/review.md) and [study recommendation](phase3c_crossref_feasibility.md)
+record exclusions, CC0 terms, source hashes, unmeasured pilot costs and next
+approval gates. The audit involved zero paid requests or independent human
+adjudications. Scope was limited to feasibility and documentation.
+
 ## November 4 — Phase 3B pause and dataset decision checkpoint
 
 - Locked offline sync; 143 offline pytest cases passed with sockets blocked;

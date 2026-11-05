@@ -1,0 +1,1034 @@
+{
+  "crossref_sha256": "7c5c4bae3b71d029082a1337299f5a4c21014ddd2012064be38893fda4b5c0c8",
+  "ror_csv_sha256": "526e175ec445002cf6129d862aa59f13a1e95916f81b38b3221ae1163654f052",
+  "split": "development-only",
+  "selection": "phase3c-v1",
+  "candidates": [
+    {
+      "pair": "P01",
+      "proposed": "same",
+      "left": {
+        "seq_no": 253,
+        "name": "National Research, Development and Innovation Office",
+        "ror": "https://ror.org/03g2am276",
+        "output": [
+          "https://ror.org/03g2am276"
+        ],
+        "alternates": [],
+        "row_sha256": "6bd237824bb2b438a93dc46be21cc0f7941da68df0e5db5d439b4e5574e3fa72",
+        "complete_registry_field": true,
+        "display": "National Research, Development and Innovation Office",
+        "country": "HU",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: NKFIH, NRDI",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 2618,
+        "name": "Nemzeti Kutatási, Fejlesztési és Innovaciós Alap",
+        "ror": "https://ror.org/03g2am276",
+        "output": [
+          "https://ror.org/03g2am276"
+        ],
+        "alternates": [],
+        "row_sha256": "00a47d328581bb32c3e5a7e381390804aabc3c70ba20f550a2fd7a346a690bee",
+        "complete_registry_field": false,
+        "display": "National Research, Development and Innovation Office",
+        "country": "HU",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: NKFIH, NRDI",
+        "parents": []
+      },
+      "similarity": 0.106383,
+      "relationship_check": null
+    },
+    {
+      "pair": "P02",
+      "proposed": "same",
+      "left": {
+        "seq_no": 440,
+        "name": "National Research Foundation of Korea",
+        "ror": "https://ror.org/013aysd81",
+        "output": [
+          "https://ror.org/013aysd81"
+        ],
+        "alternates": [],
+        "row_sha256": "eed2d72e7475c03b9df4db4c5496557a2fe29990934882e547986521bdf2e55c",
+        "complete_registry_field": true,
+        "display": "National Research Foundation of Korea",
+        "country": "KR",
+        "status": "active",
+        "registry_acronyms": "en: NRF",
+        "parents": [
+          "https://ror.org/01wpjm123"
+        ]
+      },
+      "right": {
+        "seq_no": 3462,
+        "name": "NRF by the Korean Goverment",
+        "ror": "https://ror.org/013aysd81",
+        "output": [
+          "https://ror.org/013aysd81"
+        ],
+        "alternates": [],
+        "row_sha256": "309c85408b3975c16be735e5b54dc653afc22a9cfcb34bec027ead0554d53789",
+        "complete_registry_field": false,
+        "display": "National Research Foundation of Korea",
+        "country": "KR",
+        "status": "active",
+        "registry_acronyms": "en: NRF",
+        "parents": [
+          "https://ror.org/01wpjm123"
+        ]
+      },
+      "similarity": 0.131148,
+      "relationship_check": null
+    },
+    {
+      "pair": "P03",
+      "proposed": "same",
+      "left": {
+        "seq_no": 123,
+        "name": "NASA",
+        "ror": "https://ror.org/027ka1x80",
+        "output": [
+          "https://ror.org/027ka1x80"
+        ],
+        "alternates": [],
+        "row_sha256": "33f49e4051e5655a7216065f1b21d3021873f99972d68bad831d2125452f706b",
+        "complete_registry_field": false,
+        "display": "National Aeronautics and Space Administration",
+        "country": "US",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: NASA, NASA HQ",
+        "parents": [
+          "https://ror.org/02rcrvv70"
+        ]
+      },
+      "right": {
+        "seq_no": 350,
+        "name": "National Aeronautics and Space Administration",
+        "ror": "https://ror.org/027ka1x80",
+        "output": [
+          "https://ror.org/027ka1x80"
+        ],
+        "alternates": [],
+        "row_sha256": "063d18a9e21ac778822087eba35b4c6d9cfac9d2b6031182017822ca89767253",
+        "complete_registry_field": true,
+        "display": "National Aeronautics and Space Administration",
+        "country": "US",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: NASA, NASA HQ",
+        "parents": [
+          "https://ror.org/02rcrvv70"
+        ]
+      },
+      "similarity": 0.044444,
+      "relationship_check": null
+    },
+    {
+      "pair": "P04",
+      "proposed": "same",
+      "left": {
+        "seq_no": 2228,
+        "name": "German Research Foundation",
+        "ror": "https://ror.org/018mejw64",
+        "output": [
+          "https://ror.org/018mejw64"
+        ],
+        "alternates": [],
+        "row_sha256": "5657baaa300955fdb093edbc72f5eee682f8ca509dc23f0736eadc71a4eb1d46",
+        "complete_registry_field": true,
+        "display": "Deutsche Forschungsgemeinschaft",
+        "country": "DE",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: DFG",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 2919,
+        "name": "Deutsche ForschungsgemeinschaftDFGhttp://dx.doi.org/10.13039/501100001659http://sws.geonames.org/2921044/DFG",
+        "ror": "https://ror.org/018mejw64",
+        "output": [
+          "https://ror.org/018mejw64"
+        ],
+        "alternates": [],
+        "row_sha256": "bbb79ec07782d6629c79ca3cc8b1a7979a9b93f85d9cb55c1bb40622948bd327",
+        "complete_registry_field": false,
+        "display": "Deutsche Forschungsgemeinschaft",
+        "country": "DE",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: DFG",
+        "parents": []
+      },
+      "similarity": 0.033333,
+      "relationship_check": null
+    },
+    {
+      "pair": "P05",
+      "proposed": "same",
+      "left": {
+        "seq_no": 479,
+        "name": "European Union",
+        "ror": "https://ror.org/019w4f821",
+        "output": [
+          "https://ror.org/019w4f821"
+        ],
+        "alternates": [],
+        "row_sha256": "4f55198d427a32a79f6d589ea5479a4ec9a993703e96d4b4f09d89063bb3d3cf",
+        "complete_registry_field": true,
+        "display": "European Union",
+        "country": "BE",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: EU",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 1461,
+        "name": "European Union and Greek national funds",
+        "ror": "https://ror.org/019w4f821",
+        "output": [
+          "https://ror.org/019w4f821"
+        ],
+        "alternates": [],
+        "row_sha256": "f7c6ae193195cb0fc8870082593bfc01afa14d384345c6ac6cd2ab6f5401f93f",
+        "complete_registry_field": false,
+        "display": "European Union",
+        "country": "BE",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: EU",
+        "parents": []
+      },
+      "similarity": 0.538462,
+      "relationship_check": null
+    },
+    {
+      "pair": "P06",
+      "proposed": "same",
+      "left": {
+        "seq_no": 1059,
+        "name": "Novo Nordisk Foundation",
+        "ror": "https://ror.org/04txyc737",
+        "output": [
+          "https://ror.org/04txyc737"
+        ],
+        "alternates": [],
+        "row_sha256": "c4a1574f12719a23223d4ef1a0fe638c7a314935fa1d26cb0ba69a7b079e10e2",
+        "complete_registry_field": true,
+        "display": "Novo Nordisk Foundation",
+        "country": "DK",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: NNF",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 3417,
+        "name": "Novo Nordisk Fonden",
+        "ror": "https://ror.org/04txyc737",
+        "output": [
+          "https://ror.org/04txyc737"
+        ],
+        "alternates": [],
+        "row_sha256": "24124274f944915256d7899ad5e88b6264da014ab18dc5d68585692c051d36bd",
+        "complete_registry_field": true,
+        "display": "Novo Nordisk Foundation",
+        "country": "DK",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: NNF",
+        "parents": []
+      },
+      "similarity": 0.65,
+      "relationship_check": null
+    },
+    {
+      "pair": "P07",
+      "proposed": "same",
+      "left": {
+        "seq_no": 1882,
+        "name": "University of Manitoba Graduate Fellowship",
+        "ror": "https://ror.org/02gfys938",
+        "output": [
+          "https://ror.org/02gfys938"
+        ],
+        "alternates": [],
+        "row_sha256": "61563b4440a23976eb791941664c49de2035a20c000b75cfaca4fbcc114c33bc",
+        "complete_registry_field": false,
+        "display": "University of Manitoba",
+        "country": "CA",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 3262,
+        "name": "University of Manitoba",
+        "ror": "https://ror.org/02gfys938",
+        "output": [
+          "https://ror.org/02gfys938"
+        ],
+        "alternates": [],
+        "row_sha256": "698ac3635a3717f2bbf9c8bee9e3dca7b78c735365fa1bf59036408f256c2d2f",
+        "complete_registry_field": true,
+        "display": "University of Manitoba",
+        "country": "CA",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "similarity": 0.6875,
+      "relationship_check": null
+    },
+    {
+      "pair": "P08",
+      "proposed": "same",
+      "left": {
+        "seq_no": 649,
+        "name": "National Agency for Research",
+        "ror": "https://ror.org/00rbzpz17",
+        "output": [
+          "https://ror.org/00rbzpz17"
+        ],
+        "alternates": [],
+        "row_sha256": "c0dc9fe81085f28e01f3cdde0cca328e2fd2537f8d4566b05510ce971f42c9d3",
+        "complete_registry_field": true,
+        "display": "Agence Nationale de la Recherche",
+        "country": "FR",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: ANR",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 3068,
+        "name": "Agence Nationale Recherche",
+        "ror": "https://ror.org/00rbzpz17",
+        "output": [
+          "https://ror.org/00rbzpz17"
+        ],
+        "alternates": [],
+        "row_sha256": "7a98d07279610775419ff2c38bacc487440d934db9607a708aedbd364c8c2871",
+        "complete_registry_field": false,
+        "display": "Agence Nationale de la Recherche",
+        "country": "FR",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: ANR",
+        "parents": []
+      },
+      "similarity": 0.490566,
+      "relationship_check": null
+    },
+    {
+      "pair": "P09",
+      "proposed": "same",
+      "left": {
+        "seq_no": 2376,
+        "name": "China Scholarship Council Fellowship",
+        "ror": "https://ror.org/04atp4p48",
+        "output": [
+          "https://ror.org/04atp4p48"
+        ],
+        "alternates": [],
+        "row_sha256": "9c77967069757ac9919ca591af4384235822d3bff5e930f2e1c4f0986148296a",
+        "complete_registry_field": false,
+        "display": "China Scholarship Council",
+        "country": "CN",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: CSC",
+        "parents": [
+          "https://ror.org/01mv9t934"
+        ]
+      },
+      "right": {
+        "seq_no": 2976,
+        "name": "China Scholarship Council",
+        "ror": "https://ror.org/04atp4p48",
+        "output": [
+          "https://ror.org/04atp4p48"
+        ],
+        "alternates": [],
+        "row_sha256": "f383c2f701147fc2ba5dd10b57e1a88694bf773414f83780e451219adbd3f875",
+        "complete_registry_field": true,
+        "display": "China Scholarship Council",
+        "country": "CN",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: CSC",
+        "parents": [
+          "https://ror.org/01mv9t934"
+        ]
+      },
+      "similarity": 0.862069,
+      "relationship_check": null
+    },
+    {
+      "pair": "P10",
+      "proposed": "same",
+      "left": {
+        "seq_no": 2066,
+        "name": "Grant-in-Aid from the Ministry of Education, Culture, Sport, Science and Technology of Japan",
+        "ror": "https://ror.org/048rj2z13",
+        "output": [
+          "https://ror.org/048rj2z13"
+        ],
+        "alternates": [],
+        "row_sha256": "78702d1886c76e59161b0968b51cd743bb9fed35f4205b518fc2445b837151c9",
+        "complete_registry_field": false,
+        "display": "Ministry of Education, Culture, Sports, Science and Technology",
+        "country": "JP",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: MEXT",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 2342,
+        "name": "Ministry of Education, Culture, Sports, Science and Technology",
+        "ror": "https://ror.org/048rj2z13",
+        "output": [
+          "https://ror.org/048rj2z13"
+        ],
+        "alternates": [],
+        "row_sha256": "ce6202e134d317fb9a4865b8270f3ed05546d016909688c3aecd65b8ada31f61",
+        "complete_registry_field": true,
+        "display": "Ministry of Education, Culture, Sports, Science and Technology",
+        "country": "JP",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: MEXT",
+        "parents": []
+      },
+      "similarity": 0.772414,
+      "relationship_check": null
+    },
+    {
+      "pair": "P11",
+      "proposed": "same",
+      "left": {
+        "seq_no": 485,
+        "name": "Japan Society for the Promotion of Science",
+        "ror": "https://ror.org/00hhkn466",
+        "output": [
+          "https://ror.org/00hhkn466"
+        ],
+        "alternates": [],
+        "row_sha256": "0309a6676c4820e97eb3129fa8bda38ff5bb236d1318ec61b952c9406b06eeef",
+        "complete_registry_field": true,
+        "display": "Japan Society for the Promotion of Science",
+        "country": "JP",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: JSPS",
+        "parents": [
+          "https://ror.org/048rj2z13"
+        ]
+      },
+      "right": {
+        "seq_no": 1204,
+        "name": "The Japan Society for the Promotion of Science (JSPS)",
+        "ror": "https://ror.org/00hhkn466",
+        "output": [
+          "https://ror.org/00hhkn466"
+        ],
+        "alternates": [],
+        "row_sha256": "5dfe7c00bf4aefe84653d2cf3227e47d17b48d88b6b87ba885bb5d0ed9a95541",
+        "complete_registry_field": false,
+        "display": "Japan Society for the Promotion of Science",
+        "country": "JP",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: JSPS",
+        "parents": [
+          "https://ror.org/048rj2z13"
+        ]
+      },
+      "similarity": 0.942529,
+      "relationship_check": null
+    },
+    {
+      "pair": "P12",
+      "proposed": "same",
+      "left": {
+        "seq_no": 352,
+        "name": "European Research Council, ERC, Speckle-CARS",
+        "ror": "https://ror.org/0472cxd90",
+        "output": [
+          "https://ror.org/0472cxd90"
+        ],
+        "alternates": [],
+        "row_sha256": "ca28da91dacad09ea130c0fcc7704de53bdb0c94b4b73fbbc874d8d9ff39a4c5",
+        "complete_registry_field": false,
+        "display": "European Research Council",
+        "country": "BE",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: ERC",
+        "parents": [
+          "https://ror.org/00k4n6c32"
+        ]
+      },
+      "right": {
+        "seq_no": 910,
+        "name": "European Research Council",
+        "ror": "https://ror.org/0472cxd90",
+        "output": [
+          "https://ror.org/0472cxd90"
+        ],
+        "alternates": [],
+        "row_sha256": "bfa3722075c227ef45843b64bde3e18fbff91d96c28a53d256427ec9314be21e",
+        "complete_registry_field": true,
+        "display": "European Research Council",
+        "country": "BE",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: ERC",
+        "parents": [
+          "https://ror.org/00k4n6c32"
+        ]
+      },
+      "similarity": 0.746269,
+      "relationship_check": null
+    },
+    {
+      "pair": "N01",
+      "proposed": "different",
+      "left": {
+        "seq_no": 1980,
+        "name": "University of Kashan",
+        "ror": "https://ror.org/015zmr509",
+        "output": [
+          "https://ror.org/015zmr509"
+        ],
+        "alternates": [],
+        "row_sha256": "9cd7d9d9904e0e3029e8845ad164421ed6de19f1dd6c84bb3e17a63e428a6bd7",
+        "complete_registry_field": true,
+        "display": "University of Kashan",
+        "country": "IR",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 2313,
+        "name": "University of Helsinki",
+        "ror": "https://ror.org/040af2s02",
+        "output": [
+          "https://ror.org/040af2s02"
+        ],
+        "alternates": [],
+        "row_sha256": "b300c7983051475824202d47caeec8aad0a2acf901645886c67cd602564869e0",
+        "complete_registry_field": true,
+        "display": "University of Helsinki",
+        "country": "FI",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: UH",
+        "parents": []
+      },
+      "similarity": 0.619048,
+      "relationship_check": {
+        "direct": {
+          "left": [],
+          "right": []
+        },
+        "ancestor": false,
+        "common_ancestors": []
+      }
+    },
+    {
+      "pair": "N02",
+      "proposed": "different",
+      "left": {
+        "seq_no": 1425,
+        "name": "University of Houston",
+        "ror": "https://ror.org/048sx0r50",
+        "output": [
+          "https://ror.org/048sx0r50"
+        ],
+        "alternates": [],
+        "row_sha256": "ec92ce119cc3be46ca62dff8dbb52a22c0f8b5d69534025af5abe011bf552409",
+        "complete_registry_field": true,
+        "display": "University of Houston",
+        "country": "US",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: UH",
+        "parents": [
+          "https://ror.org/040vwpm13"
+        ]
+      },
+      "right": {
+        "seq_no": 3470,
+        "name": "University of Edinburgh",
+        "ror": "https://ror.org/01nrxwf90",
+        "output": [
+          "https://ror.org/01nrxwf90"
+        ],
+        "alternates": [],
+        "row_sha256": "5233038d72fa2eb4f7aa7226f64f3634790978229afe09c650e15b94ee922de3",
+        "complete_registry_field": true,
+        "display": "University of Edinburgh",
+        "country": "GB",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "similarity": 0.590909,
+      "relationship_check": {
+        "direct": {
+          "left": [],
+          "right": []
+        },
+        "ancestor": false,
+        "common_ancestors": []
+      }
+    },
+    {
+      "pair": "N03",
+      "proposed": "different",
+      "left": {
+        "seq_no": 2255,
+        "name": "University of Kerala",
+        "ror": "https://ror.org/05tqa9940",
+        "output": [
+          "https://ror.org/05tqa9940"
+        ],
+        "alternates": [],
+        "row_sha256": "ce5538e46252d4e749cb3326102f2e35c8a5698247f69b16ed6832917049e724",
+        "complete_registry_field": true,
+        "display": "University of Kerala",
+        "country": "IN",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 3223,
+        "name": "University of Saskatchewan",
+        "ror": "https://ror.org/010x8gc63",
+        "output": [
+          "https://ror.org/010x8gc63"
+        ],
+        "alternates": [],
+        "row_sha256": "d9cd7051fea03995dad2aebe006978ce8023f3f5ffe6d5d6b31c7710f2cd3785",
+        "complete_registry_field": true,
+        "display": "University of Saskatchewan",
+        "country": "CA",
+        "status": "active",
+        "registry_acronyms": "en: USASK",
+        "parents": []
+      },
+      "similarity": 0.565217,
+      "relationship_check": {
+        "direct": {
+          "left": [],
+          "right": []
+        },
+        "ancestor": false,
+        "common_ancestors": []
+      }
+    },
+    {
+      "pair": "N04",
+      "proposed": "different",
+      "left": {
+        "seq_no": 2309,
+        "name": "University of Ilorin",
+        "ror": "https://ror.org/032kdwk38",
+        "output": [
+          "https://ror.org/032kdwk38"
+        ],
+        "alternates": [],
+        "row_sha256": "60110fa4f79d544d74f7d9d4a4abd7cbcca4529849e2bf9ec2a2623c71640bfd",
+        "complete_registry_field": true,
+        "display": "University of Ilorin",
+        "country": "NG",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 2455,
+        "name": "Gazi University",
+        "ror": "https://ror.org/054xkpr46",
+        "output": [
+          "https://ror.org/054xkpr46"
+        ],
+        "alternates": [],
+        "row_sha256": "494989352c5dc701bf2c758090d0d3ea8defedea91e33885bede67247306fc03",
+        "complete_registry_field": true,
+        "display": "Gazi University",
+        "country": "TR",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "similarity": 0.571429,
+      "relationship_check": {
+        "direct": {
+          "left": [],
+          "right": []
+        },
+        "ancestor": false,
+        "common_ancestors": []
+      }
+    },
+    {
+      "pair": "N05",
+      "proposed": "different",
+      "left": {
+        "seq_no": 706,
+        "name": "Cairo University",
+        "ror": "https://ror.org/03q21mh05",
+        "output": [
+          "https://ror.org/03q21mh05"
+        ],
+        "alternates": [],
+        "row_sha256": "dca2112961b98f72c7621e0ba189bb5f47de90c371477fed6c2a897a8e439f55",
+        "complete_registry_field": true,
+        "display": "Cairo University",
+        "country": "EG",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 2330,
+        "name": "Aalto University",
+        "ror": "https://ror.org/020hwjq30",
+        "output": [
+          "https://ror.org/020hwjq30"
+        ],
+        "alternates": [],
+        "row_sha256": "5a4016c5e6d598a46cf5f93a57473110f4344c56572fefca26b3c6a26611a0a8",
+        "complete_registry_field": true,
+        "display": "Aalto University",
+        "country": "FI",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "similarity": 0.6875,
+      "relationship_check": {
+        "direct": {
+          "left": [],
+          "right": []
+        },
+        "ancestor": false,
+        "common_ancestors": []
+      }
+    },
+    {
+      "pair": "N06",
+      "proposed": "different",
+      "left": {
+        "seq_no": 2470,
+        "name": "Indian Institute of Technology Kanpur",
+        "ror": "https://ror.org/05pjsgx75",
+        "output": [
+          "https://ror.org/05pjsgx75"
+        ],
+        "alternates": [],
+        "row_sha256": "7dbf050db057acfa1a2c8ea1eb6b43ec7187ad1a835dd9e53697b263d9b780c2",
+        "complete_registry_field": true,
+        "display": "Indian Institute of Technology Kanpur",
+        "country": "IN",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: IITK",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 2641,
+        "name": "Royal Institute of Technology",
+        "ror": "https://ror.org/026vcq606",
+        "output": [
+          "https://ror.org/026vcq606"
+        ],
+        "alternates": [],
+        "row_sha256": "d4488025372ffb834a6be082afc34fa272baed1c9e3bc25697a4334b29b882b5",
+        "complete_registry_field": true,
+        "display": "KTH Royal Institute of Technology",
+        "country": "SE",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: KTH",
+        "parents": []
+      },
+      "similarity": 0.707692,
+      "relationship_check": {
+        "direct": {
+          "left": [],
+          "right": []
+        },
+        "ancestor": false,
+        "common_ancestors": []
+      }
+    },
+    {
+      "pair": "N07",
+      "proposed": "different",
+      "left": {
+        "seq_no": 149,
+        "name": "North China University of Science and Technology",
+        "ror": "https://ror.org/04z4wmb81",
+        "output": [
+          "https://ror.org/04z4wmb81"
+        ],
+        "alternates": [],
+        "row_sha256": "e92ff267283098db0c9192e7da4b9fa0f35715922cdff9dd5843d323691ac671",
+        "complete_registry_field": true,
+        "display": "North China University of Science and Technology",
+        "country": "CN",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 263,
+        "name": "Jiangsu University of Science and Technology",
+        "ror": "https://ror.org/00tyjp878",
+        "output": [
+          "https://ror.org/00tyjp878"
+        ],
+        "alternates": [],
+        "row_sha256": "3f1c3e600ebad66c43f05697e8aaaa205206aaef2353acd5b459337f34061c4a",
+        "complete_registry_field": true,
+        "display": "Jiangsu University of Science and Technology",
+        "country": "CN",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: JUST",
+        "parents": []
+      },
+      "similarity": 0.782609,
+      "relationship_check": {
+        "direct": {
+          "left": [],
+          "right": []
+        },
+        "ancestor": false,
+        "common_ancestors": []
+      }
+    },
+    {
+      "pair": "N08",
+      "proposed": "different",
+      "left": {
+        "seq_no": 1209,
+        "name": "Technische Universität Dresden",
+        "ror": "https://ror.org/042aqky30",
+        "output": [
+          "https://ror.org/042aqky30"
+        ],
+        "alternates": [],
+        "row_sha256": "7b7c0e9cfe5a60fcba5450348a38c0f2febd04c58b876313046f93b550dedb7e",
+        "complete_registry_field": true,
+        "display": "Technische Universität Dresden",
+        "country": "DE",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: TUD",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 1640,
+        "name": "Technische Universität Graz",
+        "ror": "https://ror.org/00d7xrm67",
+        "output": [
+          "https://ror.org/00d7xrm67"
+        ],
+        "alternates": [],
+        "row_sha256": "9257868c01d6307d34c08b77a07905de292ba6651b86527216d81d6a148e7444",
+        "complete_registry_field": true,
+        "display": "Graz University of Technology",
+        "country": "AT",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "similarity": 0.77193,
+      "relationship_check": {
+        "direct": {
+          "left": [],
+          "right": []
+        },
+        "ancestor": false,
+        "common_ancestors": []
+      }
+    },
+    {
+      "pair": "N09",
+      "proposed": "different",
+      "left": {
+        "seq_no": 1366,
+        "name": "City University of Hong Kong",
+        "ror": "https://ror.org/03q8dnn23",
+        "output": [
+          "https://ror.org/03q8dnn23"
+        ],
+        "alternates": [],
+        "row_sha256": "f97ee19d4aa2d17ab33410f0063415dbd27eb6f36e737744c5c3526231f660fd",
+        "complete_registry_field": true,
+        "display": "City University of Hong Kong",
+        "country": "HK",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 3328,
+        "name": "University of Hong Kong",
+        "ror": "https://ror.org/02zhqgq86",
+        "output": [
+          "https://ror.org/02zhqgq86"
+        ],
+        "alternates": [],
+        "row_sha256": "160e0d4dd8ab43e2c395249ff496a10fa933f65856caab54609350f5fb390263",
+        "complete_registry_field": true,
+        "display": "University of Hong Kong",
+        "country": "HK",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: HKU",
+        "parents": []
+      },
+      "similarity": 0.933333,
+      "relationship_check": {
+        "direct": {
+          "left": [],
+          "right": []
+        },
+        "ancestor": false,
+        "common_ancestors": []
+      }
+    },
+    {
+      "pair": "N10",
+      "proposed": "different",
+      "left": {
+        "seq_no": 1316,
+        "name": "Hunan Provincial Science and Technology Department",
+        "ror": "https://ror.org/04qgr7x96",
+        "output": [
+          "https://ror.org/04qgr7x96"
+        ],
+        "alternates": [],
+        "row_sha256": "a79d7f8ea417dddbb2ac76eb9fda6e523b359df2b2a67c2feb615f429f82ed1c",
+        "complete_registry_field": true,
+        "display": "Department of Science and Technology of Hunan Province",
+        "country": "CN",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: HSTD",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 2730,
+        "name": "science and technology department of Sichuan province",
+        "ror": "https://ror.org/04323m874",
+        "output": [
+          "https://ror.org/04323m874"
+        ],
+        "alternates": [],
+        "row_sha256": "3a2ac4945bf0c36f106b37a2577f2f44d396af72ec89b2be824562f64228c54c",
+        "complete_registry_field": true,
+        "display": "Science and Technology Department of Sichuan Province",
+        "country": "CN",
+        "status": "active",
+        "registry_acronyms": "",
+        "parents": []
+      },
+      "similarity": 0.811881,
+      "relationship_check": {
+        "direct": {
+          "left": [],
+          "right": []
+        },
+        "ancestor": false,
+        "common_ancestors": []
+      }
+    },
+    {
+      "pair": "N11",
+      "proposed": "different",
+      "left": {
+        "seq_no": 337,
+        "name": "Swiss National Science Foundation",
+        "ror": "https://ror.org/00yjd3n13",
+        "output": [
+          "https://ror.org/00yjd3n13"
+        ],
+        "alternates": [],
+        "row_sha256": "011d0310e5f67479dadd0c3391a3f3394652062d2a1550de256b6550a70a0b5c",
+        "complete_registry_field": true,
+        "display": "Swiss National Science Foundation",
+        "country": "CH",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: FNS, SNF, SNSF",
+        "parents": []
+      },
+      "right": {
+        "seq_no": 1467,
+        "name": "U.S. National Science Foundation",
+        "ror": "https://ror.org/021nxhr62",
+        "output": [
+          "https://ror.org/021nxhr62"
+        ],
+        "alternates": [],
+        "row_sha256": "62c3b8e365666c748ebdf826566580d16970c24ba4e8394dc3f3c8bd5d60a4ec",
+        "complete_registry_field": true,
+        "display": "U.S. National Science Foundation",
+        "country": "US",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: NSF",
+        "parents": [
+          "https://ror.org/02rcrvv70"
+        ]
+      },
+      "similarity": 0.862069,
+      "relationship_check": {
+        "direct": {
+          "left": [],
+          "right": []
+        },
+        "ancestor": false,
+        "common_ancestors": []
+      }
+    },
+    {
+      "pair": "N12",
+      "proposed": "different",
+      "left": {
+        "seq_no": 596,
+        "name": "Advanced Research Projects Agency - Energy",
+        "ror": "https://ror.org/03q1rgc19",
+        "output": [
+          "https://ror.org/03q1rgc19"
+        ],
+        "alternates": [],
+        "row_sha256": "6628815631b09155eb0e8f10589f749d8945c9c5f8af0cb220825d6c8059d120",
+        "complete_registry_field": true,
+        "display": "Advanced Research Projects Agency - Energy",
+        "country": "US",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: ARPA-E",
+        "parents": [
+          "https://ror.org/01bj3aw27"
+        ]
+      },
+      "right": {
+        "seq_no": 1581,
+        "name": "Defense Advanced Research Projects Agency",
+        "ror": "https://ror.org/02caytj08",
+        "output": [
+          "https://ror.org/02caytj08"
+        ],
+        "alternates": [],
+        "row_sha256": "6345c5163546115a54014ae269e6e98410f4f48924a5ff3aff76272c77fcc74f",
+        "complete_registry_field": true,
+        "display": "Defense Advanced Research Projects Agency",
+        "country": "US",
+        "status": "active",
+        "registry_acronyms": "no_lang_code: ARPA, DARPA",
+        "parents": [
+          "https://ror.org/00q4sx826"
+        ]
+      },
+      "similarity": 0.814815,
+      "relationship_check": {
+        "direct": {
+          "left": [],
+          "right": []
+        },
+        "ancestor": false,
+        "common_ancestors": [
+          "https://ror.org/02rcrvv70"
+        ]
+      }
+    }
+  ]
+}

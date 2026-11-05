@@ -1,5 +1,22 @@
 # Progress — November 4, 2026
 
+## Phase 3C — Crossref audit complete, experiment pending owner review
+
+The [formulation comparison](phase3c_crossref_feasibility.md) recommends direct
+name-to-ROR resolution with abstention. The [24-pair review](audits/phase3c/review.md)
+contains 12 same-ID and 12 similar different-ID proposals from 48 deposited
+names and 36 organizations. AI-assisted review provisionally retained 4 and 11,
+respectively. Independent human adjudications completed: zero. All candidates
+and overlapping families are development-exposed, including the exclusions.
+
+Files include the pinned evidence packet, source reconstruction script and
+offline receipt test. Locked offline sync, full reconstruction, 144 tests and
+Ruff passed locally. Preceding verified checkpoint: 2930ce3.
+Next owner decision covers formulation B and a bounded offline development
+protocol. Candidate retrieval, independent label review, held-out family counts
+and a separate budget approval remain open. Paid calls this phase: zero.
+The WDC implementation is paused and the substantive BFCL study is deferred.
+
 ## Phase 3B — WDC paused; dataset decision awaits owner review
 
 The substantive BFCL tool-selection study is **deferred**, not completed. Its
