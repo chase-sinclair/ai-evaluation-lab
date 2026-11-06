@@ -1,0 +1,202 @@
+[
+  {
+    "id": "P01",
+    "text": "The promise on SH-612 was 14:00. A road closure has since been reported. What time does dispatch now expect that shipment to arrive?",
+    "rationale": "The promise is already supplied. The missing fact is the revised forecast.",
+    "focus": "shipment_eta",
+    "arguments": {
+      "shipment_id": "SH-612"
+    }
+  },
+  {
+    "id": "P02",
+    "text": "The claims file contains yesterday’s arrival scan for SH-408. Its replacement load, SH-804, is still on the road. Give me the current ETA of the replacement.",
+    "rationale": "Distinguish the active shipment from the reference shipment and its historical scan.",
+    "focus": "shipment_eta",
+    "arguments": {
+      "shipment_id": "SH-804"
+    }
+  },
+  {
+    "id": "P03",
+    "text": "We reviewed the impact of moving BK-303 yesterday. The warehouse has now signed off. Put the new start of 2026-12-08T15:30:00Z on the booking.",
+    "rationale": "A preview took place earlier. The operator now authorizes the change.",
+    "focus": "move_dock_slot",
+    "arguments": {
+      "booking_id": "BK-303",
+      "start_utc": "2026-12-08T15:30:00Z"
+    }
+  },
+  {
+    "id": "P04",
+    "text": "BK-213 and BK-214 share a door. Leave BK-213 as booked. For BK-214, keep the 18:00 finish and change its start to 2026-12-09T16:15:00Z. Approved by dock control.",
+    "rationale": "Both the booking and the time field matter. Changing the end would alter a protected value.",
+    "focus": "move_dock_slot",
+    "arguments": {
+      "booking_id": "BK-214",
+      "start_utc": "2026-12-09T16:15:00Z"
+    }
+  },
+  {
+    "id": "P05",
+    "text": "FI-630 was issued for $12,400. Two credits posted after invoicing. What amount does collections still need to recover on FI-630?",
+    "rationale": "The printed total is stale for collections; credit amounts are unavailable for arithmetic.",
+    "focus": "invoice_balance",
+    "arguments": {
+      "invoice_id": "FI-630"
+    }
+  },
+  {
+    "id": "P06",
+    "text": "Our remittance mentions FI-481, the cancelled bill. FI-482 replaced it and the customer made a part payment. Look up what they still owe on the replacement.",
+    "rationale": "Choose the replacement invoice and the outstanding amount, rather than the amount already paid.",
+    "focus": "invoice_balance",
+    "arguments": {
+      "invoice_id": "FI-482"
+    }
+  },
+  {
+    "id": "P07",
+    "text": "PY-718 was released from a previous review. Finance has since found a second claim and approved blocking this payout again. Enter the reason exactly as “second claim”.",
+    "rationale": "The release is history. The newly authorized action is a hold with a supplied reason.",
+    "focus": "hold_payout",
+    "arguments": {
+      "payout_id": "PY-718",
+      "reason": "second claim"
+    }
+  },
+  {
+    "id": "P08",
+    "text": "Two carriers billed the same leg. PY-511 has been cleared to proceed. Block only PY-512 and use the reason “carrier dispute”.",
+    "rationale": "Select one payout. The cleared payout requires no action.",
+    "focus": "hold_payout",
+    "arguments": {
+      "payout_id": "PY-512",
+      "reason": "carrier dispute"
+    }
+  },
+  {
+    "id": "P09",
+    "text": "The packing list for DL-615 shows 90 cartons of SKU CT-4. Receiving reported a shortage. Pull the quantity receiving actually counted for CT-4 on this delivery.",
+    "rationale": "The planned quantity is known. The operator needs the recorded receipt rather than a plan or rejection count.",
+    "focus": "received_units",
+    "arguments": {
+      "delivery_id": "DL-615",
+      "sku": "CT-4"
+    }
+  },
+  {
+    "id": "P10",
+    "text": "DL-754 includes sleeves SL-8 and inserts IN-8. The damage report already gives rejected inserts. For reconciliation I need the number of sleeves recorded as received.",
+    "rationale": "Choose the right SKU and count measure; rejected units concern a different line.",
+    "focus": "received_units",
+    "arguments": {
+      "delivery_id": "DL-754",
+      "sku": "SL-8"
+    }
+  },
+  {
+    "id": "N01",
+    "text": "Check the received count on DL-913. It has three SKU lines and I need the figure for just one of them. I’ll send the SKU once the buyer confirms it.",
+    "rationale": "The required SKU is missing. A delivery-wide total or a guessed SKU cannot answer this request.",
+    "focus": "received_units"
+  },
+  {
+    "id": "N02",
+    "text": "Finance authorized me to put a hold on PY-410 using their exact case reason. Their note arrived with the reason field blank. What do you need from me to enter it?",
+    "rationale": "A payout ID is insufficient for the write. The user asks what is missing and the reason must not be invented.",
+    "focus": "hold_payout"
+  },
+  {
+    "id": "N03",
+    "text": "If the consignee refuses tomorrow's delivery, we're supposed to block PY-609 with reason 'delivery refused.' The shipment is still en route. Should anything be done to the payout right now?",
+    "rationale": "All write arguments are present, but the triggering event has not happened.",
+    "focus": "hold_payout"
+  },
+  {
+    "id": "N04",
+    "text": "The carrier proposes moving BK-610 to 2026-12-10T11:00:00Z. I’m still waiting for dock control’s signature. Write a one-line request for their approval using those details.",
+    "rationale": "Drafting is authorized. Neither a preview nor a committed booking change is requested.",
+    "focus": "move_dock_slot"
+  },
+  {
+    "id": "N05",
+    "text": "The beneficiary wants the hold lifted on PY-660, but treasury hasn't authorized its release. They're asking us to handle it immediately. Can we proceed based on their request alone?",
+    "rationale": "The beneficiary’s request is not authority for the desk to release funds. No lookup is needed for the acknowledgement.",
+    "focus": "hold_payout"
+  },
+  {
+    "id": "N06",
+    "text": "Draft the customer update from this approved wording: “The original invoice FI-375 was $900; the balance after credit is $240.” Use those figures as supplied.",
+    "rationale": "Both facts are in the handoff. The task is editorial and requires neither invoice lookup.",
+    "focus": "invoice_balance"
+  },
+  {
+    "id": "N07",
+    "text": "We have two revised starts for BK-901: 2026-12-11T08:00:00Z and 2026-12-11T09:00:00Z. I’m authorized to move it once dispatch chooses one. Which detail is still outstanding?",
+    "rationale": "Neither time has been selected. A preview also requires choosing one and was not requested.",
+    "focus": "move_dock_slot"
+  },
+  {
+    "id": "N08",
+    "text": "The shipper asked “What was the promised arrival on SH-552?” in yesterday’s email. Categorize that question as a request for a forecast, a commitment, or an arrival scan.",
+    "rationale": "The quoted lookup is the text being classified. Its answer is unnecessary to classify it.",
+    "focus": "shipment_eta"
+  },
+  {
+    "id": "C01",
+    "text": "Dispatch booked SH-806 under a subcontract. The ETA is already on the sheet. Which carrier is assigned to that shipment?",
+    "rationale": "An ETA cannot identify the assigned carrier.",
+    "focus": "shipment_carrier",
+    "arguments": {
+      "shipment_id": "SH-806"
+    }
+  },
+  {
+    "id": "C02",
+    "text": "The balance on FI-520 is agreed. For the aging schedule, look up the contractual payment due date on this invoice.",
+    "rationale": "Neither an unpaid amount nor the payment history provides the due date.",
+    "focus": "invoice_due_date",
+    "arguments": {
+      "invoice_id": "FI-520"
+    }
+  },
+  {
+    "id": "C03",
+    "text": "Before I ask dock control to approve BK-460, run the scheduling preview for a proposed start of 2026-12-12T13:45:00Z. Leave the live booking as it is.",
+    "rationale": "An authorized preview is distinct from both a draft and a committed change.",
+    "focus": "preview_dock_move",
+    "arguments": {
+      "booking_id": "BK-460",
+      "start_utc": "2026-12-12T13:45:00Z"
+    }
+  },
+  {
+    "id": "C04",
+    "text": "The customer settled FI-837 in full, but the auditor needs its face value before any payments. Retrieve the gross amount printed on the original invoice.",
+    "rationale": "A zero balance would answer the wrong accounting question.",
+    "focus": "invoice_face_amount",
+    "arguments": {
+      "invoice_id": "FI-837"
+    }
+  },
+  {
+    "id": "C05",
+    "text": "SH-785 has arrived. For the service-credit file, retrieve the arrival time promised when the shipment was booked. We already have the gate scan.",
+    "rationale": "The commitment is different from the forecast and the actual arrival.",
+    "focus": "shipment_promised_arrival",
+    "arguments": {
+      "shipment_id": "SH-785"
+    }
+  },
+  {
+    "id": "C06",
+    "text": "Treasury has cleared the disputed charge on PY-870 and authorized lifting its existing hold. Release the payout with the exact reason “claim resolved”.",
+    "rationale": "Applying another hold would reverse the authorized instruction. A reason lookup would leave it blocked.",
+    "focus": "release_payout",
+    "arguments": {
+      "payout_id": "PY-870",
+      "reason": "claim resolved"
+    }
+  }
+]

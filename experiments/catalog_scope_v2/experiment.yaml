@@ -1,0 +1,43 @@
+id: catalog_scope_v2
+version: 2.0.0
+research_question: Does expanding a freight operations agent's catalog reduce reliable
+  one-step tool selection?
+hypothesis: Adding related operations can create wrong or unnecessary calls and increases
+  prompt size.
+primary_variable: tool_count
+dataset:
+  id: northline-v2
+  version: 2.0.0
+  path: scenarios.json
+conditions:
+- id: tools_05_A
+  variables:
+    tool_count: 5
+    layout: A
+- id: tools_05_B
+  variables:
+    tool_count: 5
+    layout: B
+- id: tools_10_A
+  variables:
+    tool_count: 10
+    layout: A
+- id: tools_10_B
+  variables:
+    tool_count: 10
+    layout: B
+- id: tools_20_A
+  variables:
+    tool_count: 20
+    layout: A
+- id: tools_20_B
+  variables:
+    tool_count: 20
+    layout: B
+repetitions: 1
+seed: 20261106
+max_requests: 216
+max_spend_usd: 0
+max_output_tokens: 1024
+grader_id: offered-function-and-exact-arguments
+grader_version: 2.0.0

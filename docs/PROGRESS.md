@@ -1,5 +1,15 @@
 # Progress — November 6, 2026
 
+## Experiment 02 V2 · offline implementation complete, awaiting live approval
+
+The [V2 plan](../experiments/catalog_scope_v2/README.md) freezes all 216
+requests, including the revised N03 and N05 and all six capability cases.
+The 12 controls, 18 primary scenarios and six secondary scenarios have
+separate reports. Final conservative reserve $0.33637350; proposed cap
+$0.36. Starting revision `9cb5f7c`. All 193 offline tests and both Ruff
+checks passed. Next decision is separate owner approval of this exact
+manifest, model, request count and cap. No live execution has occurred.
+
 ## Experiment 02 V2 · scenario design awaiting owner review
 
 The [design and complete 24-scenario review packet](experiment02_v2_design.md)

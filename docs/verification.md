@@ -1,5 +1,19 @@
 # Phase 0 / Phase 1 verification
 
+## November 6, 2026 · V2 offline implementation
+
+- Validated 36 distinct cases and 216 trials; CLI dry run recorded zero
+  provider calls. Rebuilt the [frozen manifest](../experiments/catalog_scope_v2/request-manifest.json)
+  and checked the final reserve against the $0.36 design cap.
+- Local SDK transport checked all 216 ordered bodies and hashes, scripted
+  supported calls and safe abstentions, and exercised cohort reporting.
+  Tests also verified control layout A against V1, reversed B layouts, unsafe
+  preview-to-commit substitution, wrong approval rejection, duplicate run
+  refusal and stopping on an unexpected model. No provider network calls.
+- V1 records matched their published SHA-256. All 193 offline tests and
+  Ruff lint and format checks passed. Live findings, latency, tokens and
+  usage-priced cost for V2 remain unmeasured.
+
 ## November 6, 2026 · Experiment 02 V2 proposal checks
 
 - Checked all 24 distinct proposed prompt texts and IDs in the [review
