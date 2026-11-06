@@ -1,5 +1,20 @@
 # Progress — November 6, 2026
 
+## Experiment 02 · offline implementation complete, live approval pending
+
+Added the `catalog_scope` experiment and its [frozen live proposal](../experiments/catalog_scope/README.md).
+Twelve authored freight-desk scenarios (eight calls, four no-calls) are paired
+across 5, 10 and 20 tools. One seeded order, 36 requests, 1,024 output tokens
+each, $0.05571150 conservative reserve, $0.07 proposed estimated-spend cap.
+The experiment uses the shared runner, summaries, immutable storage, budget
+checks and Responses adapter. The exact-wire-path check uses local SDK mock
+transport. No paid calls, external dataset, or new entity-matching work.
+
+Starting verified revision: `54bbc8f`. The [case-study outline](portfolio/tool-catalog-outline.md)
+leaves model findings open. Next decision is owner review of the canonical
+manifest digest, model/settings, request limit and cap. Only after explicit
+approval may the one-shot dispatcher be used. [Verification](verification.md)
+
 ## Recruiter-facing presentation ready for owner review
 
 Revised the [case study](portfolio/entity-matching.md) with three headline

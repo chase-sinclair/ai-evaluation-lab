@@ -6,6 +6,12 @@ AI Evaluation Lab documents applied AI implementation decisions. Each case study
 
 The Phase 3G independent holdout and its first review wave are retired. The feasibility findings and technical record remain available. [Project status](docs/PROGRESS.md) · [Format for future studies](docs/portfolio/study-format.md)
 
+**Experiment 02 · Does Giving an AI Agent More Tools Make It Less Reliable?**
+The freight-desk study pairs 12 fictional requests across catalogs of 5, 10
+and 20 functions. Offline verification is complete; live execution awaits
+owner approval. [Frozen study and budget](experiments/catalog_scope/README.md) ·
+[Portfolio outline](docs/portfolio/tool-catalog-outline.md)
+
 ## Quick start
 
 Install Python 3.12+ and [uv](https://docs.astral.sh/uv/), then run from this checkout:

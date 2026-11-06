@@ -1,0 +1,25 @@
+# Each tier adds operations in the same five domains. Parameter names and types
+# are shared vocabulary. Every field is required; no tool is executed.
+base:
+  - [shipment_eta, Read the current predicted arrival time for a shipment., [shipment_id]]
+  - [move_dock_slot, Reschedule an existing dock appointment to a new UTC start time., [booking_id, start_utc]]
+  - [invoice_balance, Read the unpaid amount remaining on a freight invoice., [invoice_id]]
+  - [hold_payout, Block release of a carrier payout using the supplied reason., [payout_id, reason]]
+  - [received_units, Read the counted units of a SKU received on a delivery., [delivery_id, sku]]
+adjacent:
+  - [shipment_carrier, Read the carrier assigned to a shipment., [shipment_id]]
+  - [dock_door, Read the assigned door for an existing dock appointment., [booking_id]]
+  - [invoice_due_date, Read the payment due date for a freight invoice., [invoice_id]]
+  - [payout_recipient, Read the payee assigned to a carrier payout., [payout_id]]
+  - [delivery_supplier, Read the supplier responsible for a delivery., [delivery_id]]
+near:
+  - [shipment_promised_arrival, Read the originally promised arrival time for a shipment., [shipment_id]]
+  - [shipment_actual_arrival, Read the recorded arrival time after a shipment has arrived., [shipment_id]]
+  - [preview_dock_move, Preview the effect of a proposed start time without changing the dock appointment., [booking_id, start_utc]]
+  - [move_dock_end, Change only the end time of a dock appointment., [booking_id, end_utc]]
+  - [invoice_face_amount, Read the original gross invoice amount before payments., [invoice_id]]
+  - [invoice_paid_amount, Read the sum of payments already applied to a freight invoice., [invoice_id]]
+  - [release_payout, Remove an existing hold and allow a carrier payout to proceed., [payout_id, reason]]
+  - [payout_hold_reason, Read the reason for an existing payout hold., [payout_id]]
+  - [expected_units, Read the planned unit count of a SKU on a delivery., [delivery_id, sku]]
+  - [rejected_units, Read the count of a SKU refused at delivery inspection., [delivery_id, sku]]

@@ -1,5 +1,25 @@
 # Phase 0 / Phase 1 verification
 
+## November 6, 2026 · Experiment 02 approval gate
+
+- `eval-lab validate catalog_scope` validated 12 cases and 36 trials.
+  The CLI dry run planned 36 with zero provider calls. The shared mock
+  ran all 36 with $0 spend; its canned decisions test the plumbing only.
+- `python -m experiments.catalog_scope.freeze` reproduced the committed
+  [manifest](../experiments/catalog_scope/request-manifest.json) and
+  $0.05571150 reserve. Verified all 36 rendered bodies at the SDK boundary
+  against ordered catalog definitions and canonical hashes using local scripted
+  transport. Wrong approval and duplicate execution were refused; an unexpected
+  returned model stopped after one local response.
+- Tests cover matched prompts, nested catalogs, balanced target ranks,
+  expected versus wrong arguments, valid wrong tools, unoffered calls,
+  no-calls, unnecessary calls, refusal, malformed/incomplete output,
+  per-condition metrics and paired summaries. All 190 offline tests passed;
+  Ruff lint and formatting passed. No network/model inference occurred in tests.
+- The [protocol](../experiments/catalog_scope/README.md) documents checked
+  pricing, the estimate versus spending cap, controls and limitations. No
+  live performance, service latency, token usage or billed amount is claimed.
+
 ## November 6, 2026 · recruiter-facing presentation
 
 - Compared the case-study numbers and CNPq trace with the Phase 3D–3F

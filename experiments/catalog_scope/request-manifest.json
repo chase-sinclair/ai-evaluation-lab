@@ -1,0 +1,1376 @@
+{
+  "spec": {
+    "id": "catalog_scope",
+    "version": "1.0.0",
+    "research_question": "Does expanding a freight operations agent's catalog reduce reliable one-step tool selection?",
+    "hypothesis": "Adding related operations can create wrong or unnecessary calls and increases prompt size.",
+    "primary_variable": "tool_count",
+    "dataset": {
+      "id": "northline-desk",
+      "version": "1.0.0",
+      "path": "scenarios.yaml"
+    },
+    "conditions": [
+      {
+        "id": "tools_05",
+        "variables": {
+          "tool_count": 5
+        },
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "options": {}
+      },
+      {
+        "id": "tools_10",
+        "variables": {
+          "tool_count": 10
+        },
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "options": {}
+      },
+      {
+        "id": "tools_20",
+        "variables": {
+          "tool_count": 20
+        },
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "options": {}
+      }
+    ],
+    "repetitions": 1,
+    "seed": 20261106,
+    "max_requests": 36,
+    "max_spend_usd": 0.07,
+    "max_output_tokens": 1024,
+    "grader_id": "offered-function-and-exact-arguments",
+    "grader_version": "1.0.0",
+    "pricing": {
+      "version": "openai-standard-short-2026-11-06",
+      "verified_date": "2026-11-06",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "model": "gpt-6-luna",
+      "input_usd_per_million": 0.1,
+      "output_usd_per_million": 0.5,
+      "cache": {
+        "service_tier": "default",
+        "read_usd_per_million": 0.01,
+        "write_usd_per_million": {
+          "30m": 0.125,
+          "12h": 0.25
+        }
+      }
+    }
+  },
+  "dataset_sha256": "7ae354c83b5cadb21aa7918b75ea355a1f6d8cc340445900138f588dba4c8966",
+  "body_settings": {
+    "model": "gpt-6-luna",
+    "max_output_tokens": 1024,
+    "store": false,
+    "service_tier": "default",
+    "tool_choice": "auto",
+    "parallel_tool_calls": false
+  },
+  "messages_by_case": {
+    "arrival-west": [
+      {
+        "role": "system",
+        "content": "You work at the Northline Freight operations desk. Use at most one function when the user requests a record lookup or an authorized change. Use the supplied identifiers and literal values. Never invent a missing value. If a function is unnecessary or required information is missing, answer or ask for clarification without calling a function."
+      },
+      {
+        "role": "user",
+        "content": "West desk needs the current estimated arrival time of shipment SH-214. What is the latest forecast?"
+      }
+    ],
+    "conditional-hold": [
+      {
+        "role": "system",
+        "content": "You work at the Northline Freight operations desk. Use at most one function when the user requests a record lookup or an authorized change. Use the supplied identifiers and literal values. Never invent a missing value. If a function is unnecessary or required information is missing, answer or ask for clarification without calling a function."
+      },
+      {
+        "role": "user",
+        "content": "We may need to hold payout PY-202 later. Just acknowledge this note. Do not look anything up or change its status."
+      }
+    ],
+    "count-explainer": [
+      {
+        "role": "system",
+        "content": "You work at the Northline Freight operations desk. Use at most one function when the user requests a record lookup or an authorized change. Use the supplied identifiers and literal values. Never invent a missing value. If a function is unnecessary or required information is missing, answer or ask for clarification without calling a function."
+      },
+      {
+        "role": "user",
+        "content": "Explain the difference between expected and received units in one sentence, without looking up a delivery."
+      }
+    ],
+    "delivery-damage": [
+      {
+        "role": "system",
+        "content": "You work at the Northline Freight operations desk. Use at most one function when the user requests a record lookup or an authorized change. Use the supplied identifiers and literal values. Never invent a missing value. If a function is unnecessary or required information is missing, answer or ask for clarification without calling a function."
+      },
+      {
+        "role": "user",
+        "content": "How many units of SKU BX-10 were counted as received on delivery DL-221? I need the actual receipt count."
+      }
+    ],
+    "dock-evening": [
+      {
+        "role": "system",
+        "content": "You work at the Northline Freight operations desk. Use at most one function when the user requests a record lookup or an authorized change. Use the supplied identifiers and literal values. Never invent a missing value. If a function is unnecessary or required information is missing, answer or ask for clarification without calling a function."
+      },
+      {
+        "role": "user",
+        "content": "Commit the revised start time 2026-12-04T18:00:00Z for dock booking BK-119. Leave its end time alone."
+      }
+    ],
+    "dock-morning": [
+      {
+        "role": "system",
+        "content": "You work at the Northline Freight operations desk. Use at most one function when the user requests a record lookup or an authorized change. Use the supplied identifiers and literal values. Never invent a missing value. If a function is unnecessary or required information is missing, answer or ask for clarification without calling a function."
+      },
+      {
+        "role": "user",
+        "content": "Reschedule the start of dock booking BK-083 to 2026-12-02T09:30:00Z. Make the change now."
+      }
+    ],
+    "draft-only": [
+      {
+        "role": "system",
+        "content": "You work at the Northline Freight operations desk. Use at most one function when the user requests a record lookup or an authorized change. Use the supplied identifiers and literal values. Never invent a missing value. If a function is unnecessary or required information is missing, answer or ask for clarification without calling a function."
+      },
+      {
+        "role": "user",
+        "content": "Draft one sentence asking the carrier for shipment SH-460's ETA. Only draft the message."
+      }
+    ],
+    "invoice-collections": [
+      {
+        "role": "system",
+        "content": "You work at the Northline Freight operations desk. Use at most one function when the user requests a record lookup or an authorized change. Use the supplied identifiers and literal values. Never invent a missing value. If a function is unnecessary or required information is missing, answer or ask for clarification without calling a function."
+      },
+      {
+        "role": "user",
+        "content": "Collections is reconciling freight invoice FI-904. Retrieve its outstanding balance as of now."
+      }
+    ],
+    "invoice-residual": [
+      {
+        "role": "system",
+        "content": "You work at the Northline Freight operations desk. Use at most one function when the user requests a record lookup or an authorized change. Use the supplied identifiers and literal values. Never invent a missing value. If a function is unnecessary or required information is missing, answer or ask for clarification without calling a function."
+      },
+      {
+        "role": "user",
+        "content": "Finance has already paid part of invoice FI-771. Look up the amount that remains unpaid."
+      }
+    ],
+    "payout-audit": [
+      {
+        "role": "system",
+        "content": "You work at the Northline Freight operations desk. Use at most one function when the user requests a record lookup or an authorized change. Use the supplied identifiers and literal values. Never invent a missing value. If a function is unnecessary or required information is missing, answer or ask for clarification without calling a function."
+      },
+      {
+        "role": "user",
+        "content": "Place a hold on carrier payout PY-058 pending audit. Use the exact reason \"audit pending\"."
+      }
+    ],
+    "payout-duplicate": [
+      {
+        "role": "system",
+        "content": "You work at the Northline Freight operations desk. Use at most one function when the user requests a record lookup or an authorized change. Use the supplied identifiers and literal values. Never invent a missing value. If a function is unnecessary or required information is missing, answer or ask for clarification without calling a function."
+      },
+      {
+        "role": "user",
+        "content": "Stop payout PY-031 from being released. Record the reason exactly as \"duplicate claim\"."
+      }
+    ],
+    "unspecified-booking": [
+      {
+        "role": "system",
+        "content": "You work at the Northline Freight operations desk. Use at most one function when the user requests a record lookup or an authorized change. Use the supplied identifiers and literal values. Never invent a missing value. If a function is unnecessary or required information is missing, answer or ask for clarification without calling a function."
+      },
+      {
+        "role": "user",
+        "content": "Move my dock appointment to 2026-12-03T14:00:00Z. I haven't told you which booking it is."
+      }
+    ]
+  },
+  "functions_by_name": {
+    "shipment_eta": {
+      "type": "function",
+      "strict": true,
+      "name": "shipment_eta",
+      "description": "Read the current predicted arrival time for a shipment.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "shipment_id"
+        ],
+        "properties": {
+          "shipment_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "move_dock_slot": {
+      "type": "function",
+      "strict": true,
+      "name": "move_dock_slot",
+      "description": "Reschedule an existing dock appointment to a new UTC start time.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "booking_id",
+          "start_utc"
+        ],
+        "properties": {
+          "booking_id": {
+            "type": "string"
+          },
+          "start_utc": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "invoice_balance": {
+      "type": "function",
+      "strict": true,
+      "name": "invoice_balance",
+      "description": "Read the unpaid amount remaining on a freight invoice.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "invoice_id"
+        ],
+        "properties": {
+          "invoice_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "hold_payout": {
+      "type": "function",
+      "strict": true,
+      "name": "hold_payout",
+      "description": "Block release of a carrier payout using the supplied reason.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "payout_id",
+          "reason"
+        ],
+        "properties": {
+          "payout_id": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "received_units": {
+      "type": "function",
+      "strict": true,
+      "name": "received_units",
+      "description": "Read the counted units of a SKU received on a delivery.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "delivery_id",
+          "sku"
+        ],
+        "properties": {
+          "delivery_id": {
+            "type": "string"
+          },
+          "sku": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "shipment_carrier": {
+      "type": "function",
+      "strict": true,
+      "name": "shipment_carrier",
+      "description": "Read the carrier assigned to a shipment.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "shipment_id"
+        ],
+        "properties": {
+          "shipment_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "dock_door": {
+      "type": "function",
+      "strict": true,
+      "name": "dock_door",
+      "description": "Read the assigned door for an existing dock appointment.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "booking_id"
+        ],
+        "properties": {
+          "booking_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "invoice_due_date": {
+      "type": "function",
+      "strict": true,
+      "name": "invoice_due_date",
+      "description": "Read the payment due date for a freight invoice.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "invoice_id"
+        ],
+        "properties": {
+          "invoice_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "payout_recipient": {
+      "type": "function",
+      "strict": true,
+      "name": "payout_recipient",
+      "description": "Read the payee assigned to a carrier payout.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "payout_id"
+        ],
+        "properties": {
+          "payout_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "delivery_supplier": {
+      "type": "function",
+      "strict": true,
+      "name": "delivery_supplier",
+      "description": "Read the supplier responsible for a delivery.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "delivery_id"
+        ],
+        "properties": {
+          "delivery_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "shipment_promised_arrival": {
+      "type": "function",
+      "strict": true,
+      "name": "shipment_promised_arrival",
+      "description": "Read the originally promised arrival time for a shipment.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "shipment_id"
+        ],
+        "properties": {
+          "shipment_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "shipment_actual_arrival": {
+      "type": "function",
+      "strict": true,
+      "name": "shipment_actual_arrival",
+      "description": "Read the recorded arrival time after a shipment has arrived.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "shipment_id"
+        ],
+        "properties": {
+          "shipment_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "preview_dock_move": {
+      "type": "function",
+      "strict": true,
+      "name": "preview_dock_move",
+      "description": "Preview the effect of a proposed start time without changing the dock appointment.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "booking_id",
+          "start_utc"
+        ],
+        "properties": {
+          "booking_id": {
+            "type": "string"
+          },
+          "start_utc": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "move_dock_end": {
+      "type": "function",
+      "strict": true,
+      "name": "move_dock_end",
+      "description": "Change only the end time of a dock appointment.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "booking_id",
+          "end_utc"
+        ],
+        "properties": {
+          "booking_id": {
+            "type": "string"
+          },
+          "end_utc": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "invoice_face_amount": {
+      "type": "function",
+      "strict": true,
+      "name": "invoice_face_amount",
+      "description": "Read the original gross invoice amount before payments.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "invoice_id"
+        ],
+        "properties": {
+          "invoice_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "invoice_paid_amount": {
+      "type": "function",
+      "strict": true,
+      "name": "invoice_paid_amount",
+      "description": "Read the sum of payments already applied to a freight invoice.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "invoice_id"
+        ],
+        "properties": {
+          "invoice_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "release_payout": {
+      "type": "function",
+      "strict": true,
+      "name": "release_payout",
+      "description": "Remove an existing hold and allow a carrier payout to proceed.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "payout_id",
+          "reason"
+        ],
+        "properties": {
+          "payout_id": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "payout_hold_reason": {
+      "type": "function",
+      "strict": true,
+      "name": "payout_hold_reason",
+      "description": "Read the reason for an existing payout hold.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "payout_id"
+        ],
+        "properties": {
+          "payout_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "expected_units": {
+      "type": "function",
+      "strict": true,
+      "name": "expected_units",
+      "description": "Read the planned unit count of a SKU on a delivery.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "delivery_id",
+          "sku"
+        ],
+        "properties": {
+          "delivery_id": {
+            "type": "string"
+          },
+          "sku": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "rejected_units": {
+      "type": "function",
+      "strict": true,
+      "name": "rejected_units",
+      "description": "Read the count of a SKU refused at delivery inspection.",
+      "parameters": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "delivery_id",
+          "sku"
+        ],
+        "properties": {
+          "delivery_id": {
+            "type": "string"
+          },
+          "sku": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "trials_in_run_order": [
+    {
+      "case": "arrival-west",
+      "condition": "tools_20",
+      "tools": [
+        "expected_units",
+        "payout_recipient",
+        "hold_payout",
+        "shipment_carrier",
+        "invoice_due_date",
+        "invoice_balance",
+        "move_dock_slot",
+        "preview_dock_move",
+        "received_units",
+        "move_dock_end",
+        "invoice_face_amount",
+        "shipment_promised_arrival",
+        "dock_door",
+        "rejected_units",
+        "shipment_actual_arrival",
+        "release_payout",
+        "shipment_eta",
+        "payout_hold_reason",
+        "invoice_paid_amount",
+        "delivery_supplier"
+      ],
+      "schema_bytes": 5565,
+      "body_bytes": 6221,
+      "logical_sha256": "42c1ba991dbef973fe616e6bec34d344aa6fc327a57b83d9ee8e655cbfbcad87",
+      "body_sha256": "dbd48421ec7218490f7e37862d44126c75ae7a8ed563a8157dc4a1559cd5f495"
+    },
+    {
+      "case": "payout-duplicate",
+      "condition": "tools_20",
+      "tools": [
+        "invoice_paid_amount",
+        "payout_recipient",
+        "shipment_eta",
+        "invoice_due_date",
+        "release_payout",
+        "shipment_promised_arrival",
+        "shipment_actual_arrival",
+        "shipment_carrier",
+        "preview_dock_move",
+        "expected_units",
+        "invoice_balance",
+        "dock_door",
+        "move_dock_end",
+        "invoice_face_amount",
+        "rejected_units",
+        "received_units",
+        "delivery_supplier",
+        "payout_hold_reason",
+        "hold_payout",
+        "move_dock_slot"
+      ],
+      "schema_bytes": 5565,
+      "body_bytes": 6211,
+      "logical_sha256": "e000a4ca9d740baf7db780852cdb97a43a69e953e70f53fa12a5c17836f92bd5",
+      "body_sha256": "364576956f420cd29fcc63ca5ba2a7e600ae4bd7a40e924640af47810579af74"
+    },
+    {
+      "case": "dock-evening",
+      "condition": "tools_10",
+      "tools": [
+        "dock_door",
+        "hold_payout",
+        "shipment_eta",
+        "payout_recipient",
+        "delivery_supplier",
+        "invoice_balance",
+        "move_dock_slot",
+        "received_units",
+        "shipment_carrier",
+        "invoice_due_date"
+      ],
+      "schema_bytes": 2704,
+      "body_bytes": 3362,
+      "logical_sha256": "ca3d47f3c88157d8f3070bec454eb23b669781ab4ea002337ace450d96e025a8",
+      "body_sha256": "576d36ba3d948d7f882d0e90e3e32ffb165d1b7c179f3b5c4e6cf32fd896aca4"
+    },
+    {
+      "case": "delivery-damage",
+      "condition": "tools_20",
+      "tools": [
+        "release_payout",
+        "delivery_supplier",
+        "shipment_promised_arrival",
+        "invoice_paid_amount",
+        "invoice_due_date",
+        "hold_payout",
+        "received_units",
+        "payout_hold_reason",
+        "preview_dock_move",
+        "move_dock_slot",
+        "rejected_units",
+        "invoice_balance",
+        "shipment_carrier",
+        "move_dock_end",
+        "shipment_actual_arrival",
+        "invoice_face_amount",
+        "expected_units",
+        "dock_door",
+        "payout_recipient",
+        "shipment_eta"
+      ],
+      "schema_bytes": 5565,
+      "body_bytes": 6227,
+      "logical_sha256": "42f6431d8fbc9303a299fba7a001c968828205d4ef8fd2be84f777dd3a55ee4f",
+      "body_sha256": "358f1878c99b278596dbc542fd79803cccb83aeaeb492594c69bbc2eb86efa84"
+    },
+    {
+      "case": "delivery-damage",
+      "condition": "tools_10",
+      "tools": [
+        "delivery_supplier",
+        "invoice_due_date",
+        "hold_payout",
+        "received_units",
+        "move_dock_slot",
+        "invoice_balance",
+        "shipment_carrier",
+        "dock_door",
+        "payout_recipient",
+        "shipment_eta"
+      ],
+      "schema_bytes": 2704,
+      "body_bytes": 3366,
+      "logical_sha256": "a7fe8cc41cbc8da73ffe0a1698559ddbdc3488374546cb80149074f695131832",
+      "body_sha256": "a380f43318bb9c4bb345603623654ffb23b4ecb864aec6716ebc4451fc36946f"
+    },
+    {
+      "case": "count-explainer",
+      "condition": "tools_20",
+      "tools": [
+        "shipment_eta",
+        "received_units",
+        "preview_dock_move",
+        "release_payout",
+        "shipment_promised_arrival",
+        "shipment_actual_arrival",
+        "hold_payout",
+        "move_dock_slot",
+        "invoice_balance",
+        "shipment_carrier",
+        "rejected_units",
+        "payout_hold_reason",
+        "payout_recipient",
+        "invoice_due_date",
+        "dock_door",
+        "expected_units",
+        "invoice_face_amount",
+        "invoice_paid_amount",
+        "move_dock_end",
+        "delivery_supplier"
+      ],
+      "schema_bytes": 5565,
+      "body_bytes": 6228,
+      "logical_sha256": "421cda6d28156156ef4639f69e6dcc0bcb0f8e7bcee8f0640bc9025f0b980119",
+      "body_sha256": "2580d3ec29cd7e5f4b92b72d7f90a400583802cf646a9a86f52768803f9e326f"
+    },
+    {
+      "case": "invoice-collections",
+      "condition": "tools_20",
+      "tools": [
+        "shipment_promised_arrival",
+        "invoice_due_date",
+        "invoice_face_amount",
+        "move_dock_end",
+        "received_units",
+        "dock_door",
+        "hold_payout",
+        "shipment_eta",
+        "delivery_supplier",
+        "move_dock_slot",
+        "shipment_carrier",
+        "invoice_balance",
+        "expected_units",
+        "release_payout",
+        "payout_recipient",
+        "preview_dock_move",
+        "invoice_paid_amount",
+        "rejected_units",
+        "shipment_actual_arrival",
+        "payout_hold_reason"
+      ],
+      "schema_bytes": 5565,
+      "body_bytes": 6216,
+      "logical_sha256": "473220aa2e864ee7f818b914373be8fca463e3e6195eb75bf85893fc25fbd49f",
+      "body_sha256": "f21b1c641df27785f574bb8c7e325466935e3af5d56102e39ef5ef85bfff7dd0"
+    },
+    {
+      "case": "invoice-residual",
+      "condition": "tools_10",
+      "tools": [
+        "shipment_eta",
+        "invoice_due_date",
+        "payout_recipient",
+        "hold_payout",
+        "invoice_balance",
+        "received_units",
+        "move_dock_slot",
+        "dock_door",
+        "shipment_carrier",
+        "delivery_supplier"
+      ],
+      "schema_bytes": 2704,
+      "body_bytes": 3349,
+      "logical_sha256": "800c5df32905cae96dc8da1195f45902910ad5bc176b6679bc89de9ffebd4bdb",
+      "body_sha256": "ab1f250ecd15a36b97ab942f128c84ee2ce405a28a8fd2950995b1c0b73f280b"
+    },
+    {
+      "case": "arrival-west",
+      "condition": "tools_10",
+      "tools": [
+        "payout_recipient",
+        "hold_payout",
+        "shipment_carrier",
+        "invoice_due_date",
+        "invoice_balance",
+        "move_dock_slot",
+        "received_units",
+        "dock_door",
+        "shipment_eta",
+        "delivery_supplier"
+      ],
+      "schema_bytes": 2704,
+      "body_bytes": 3360,
+      "logical_sha256": "e820d7d02f9fb0e652363e77ecbf2148975edb8f104383686b34b6f5170a253e",
+      "body_sha256": "cedd268674d06a38eb5f0a6354aa98cfe05b0e5e5c85de75c80e8a134f043070"
+    },
+    {
+      "case": "unspecified-booking",
+      "condition": "tools_20",
+      "tools": [
+        "invoice_face_amount",
+        "shipment_promised_arrival",
+        "expected_units",
+        "hold_payout",
+        "shipment_eta",
+        "move_dock_end",
+        "received_units",
+        "payout_recipient",
+        "invoice_balance",
+        "preview_dock_move",
+        "shipment_carrier",
+        "delivery_supplier",
+        "release_payout",
+        "rejected_units",
+        "invoice_paid_amount",
+        "payout_hold_reason",
+        "shipment_actual_arrival",
+        "dock_door",
+        "move_dock_slot",
+        "invoice_due_date"
+      ],
+      "schema_bytes": 5565,
+      "body_bytes": 6211,
+      "logical_sha256": "586dbf1c61ddbcf36c25221553214c41631553589b556f01148e8d0f4ffc7539",
+      "body_sha256": "ad4e6a8f304887856c1a7921c84c1ea2e7164e50bcfe26adf648190d4872b3ae"
+    },
+    {
+      "case": "count-explainer",
+      "condition": "tools_05",
+      "tools": [
+        "received_units",
+        "shipment_eta",
+        "hold_payout",
+        "move_dock_slot",
+        "invoice_balance"
+      ],
+      "schema_bytes": 1430,
+      "body_bytes": 2093,
+      "logical_sha256": "a4dd140fed80e0ac8a61268766865bbde49631e4340a43847a7792f344f6312b",
+      "body_sha256": "60cfcd4193af1cb83d5a0956abeebce206000e29f9c375d5b053d8e453b59647"
+    },
+    {
+      "case": "draft-only",
+      "condition": "tools_10",
+      "tools": [
+        "hold_payout",
+        "delivery_supplier",
+        "received_units",
+        "shipment_eta",
+        "shipment_carrier",
+        "invoice_balance",
+        "move_dock_slot",
+        "invoice_due_date",
+        "payout_recipient",
+        "dock_door"
+      ],
+      "schema_bytes": 2704,
+      "body_bytes": 3349,
+      "logical_sha256": "5f7a12efc861519d26868085bab211e2275b48ad61323ed023b264edd2a25925",
+      "body_sha256": "95ebc265ba1e936d2a0cd4e64fb53b7cd66b1a77b30409110892fd4223a2bbb3"
+    },
+    {
+      "case": "invoice-collections",
+      "condition": "tools_10",
+      "tools": [
+        "invoice_due_date",
+        "received_units",
+        "dock_door",
+        "hold_payout",
+        "shipment_eta",
+        "invoice_balance",
+        "delivery_supplier",
+        "move_dock_slot",
+        "shipment_carrier",
+        "payout_recipient"
+      ],
+      "schema_bytes": 2704,
+      "body_bytes": 3355,
+      "logical_sha256": "390ca23b570f6fbbd970801f9d9967f19a042338f01725c7a236790a7b7e3ad6",
+      "body_sha256": "1e4d71f6b35d09211c2fa3c55067555cf34cece49e0b2ebcf66d50aa93153ccc"
+    },
+    {
+      "case": "unspecified-booking",
+      "condition": "tools_10",
+      "tools": [
+        "hold_payout",
+        "shipment_eta",
+        "received_units",
+        "payout_recipient",
+        "invoice_balance",
+        "shipment_carrier",
+        "delivery_supplier",
+        "dock_door",
+        "invoice_due_date",
+        "move_dock_slot"
+      ],
+      "schema_bytes": 2704,
+      "body_bytes": 3350,
+      "logical_sha256": "ea30d9d153079cf9856d01ebfa995ad19a1503b5a2f8767f621e0bc4e2911e1b",
+      "body_sha256": "f634bb363ce524fc5b37571b6a31117a9ba08ef20edb4530ce203027132e6459"
+    },
+    {
+      "case": "dock-evening",
+      "condition": "tools_20",
+      "tools": [
+        "shipment_promised_arrival",
+        "preview_dock_move",
+        "dock_door",
+        "hold_payout",
+        "expected_units",
+        "shipment_actual_arrival",
+        "shipment_eta",
+        "rejected_units",
+        "release_payout",
+        "payout_recipient",
+        "delivery_supplier",
+        "invoice_balance",
+        "received_units",
+        "move_dock_slot",
+        "move_dock_end",
+        "invoice_face_amount",
+        "payout_hold_reason",
+        "shipment_carrier",
+        "invoice_paid_amount",
+        "invoice_due_date"
+      ],
+      "schema_bytes": 5565,
+      "body_bytes": 6223,
+      "logical_sha256": "3b9185cb81c92d046328712afa0d53fdd8b4f698c8120ab196aad408bfc1d8e4",
+      "body_sha256": "d752bf73339b6ced638117a032993ec9596568c259d49fad3c4c2aad0b92c8b5"
+    },
+    {
+      "case": "payout-audit",
+      "condition": "tools_05",
+      "tools": [
+        "hold_payout",
+        "invoice_balance",
+        "received_units",
+        "shipment_eta",
+        "move_dock_slot"
+      ],
+      "schema_bytes": 1430,
+      "body_bytes": 2079,
+      "logical_sha256": "c2ec4c53e5e7cbd551ed50be2a324f0e653c879193500c44a0d703cb1b14dc3c",
+      "body_sha256": "bc0b5689ff756f219af78f4eaa1ffe72f0688dc74c6b73fe09ef32507e7feb36"
+    },
+    {
+      "case": "payout-duplicate",
+      "condition": "tools_05",
+      "tools": [
+        "shipment_eta",
+        "invoice_balance",
+        "received_units",
+        "move_dock_slot",
+        "hold_payout"
+      ],
+      "schema_bytes": 1430,
+      "body_bytes": 2076,
+      "logical_sha256": "198d072ef889dac78acd40e288a2bb7f684ba79ed239513bba392864b89ca23f",
+      "body_sha256": "f2d6e74585c09748526724990c66b41e868b3536b80a7cd2874ef3eb8de10655"
+    },
+    {
+      "case": "conditional-hold",
+      "condition": "tools_10",
+      "tools": [
+        "shipment_carrier",
+        "invoice_due_date",
+        "delivery_supplier",
+        "payout_recipient",
+        "dock_door",
+        "received_units",
+        "hold_payout",
+        "shipment_eta",
+        "move_dock_slot",
+        "invoice_balance"
+      ],
+      "schema_bytes": 2704,
+      "body_bytes": 3375,
+      "logical_sha256": "72889d4ec2028fbfad6aef3a6a345c921e4c98f3e6459aaeb7152013d96f0c8a",
+      "body_sha256": "c4d6a2e8a930aa438052ebb70e0f1f27478962c41457466d32e7523e4cbbfa33"
+    },
+    {
+      "case": "dock-morning",
+      "condition": "tools_10",
+      "tools": [
+        "move_dock_slot",
+        "dock_door",
+        "delivery_supplier",
+        "hold_payout",
+        "received_units",
+        "shipment_eta",
+        "shipment_carrier",
+        "invoice_balance",
+        "invoice_due_date",
+        "payout_recipient"
+      ],
+      "schema_bytes": 2704,
+      "body_bytes": 3350,
+      "logical_sha256": "f47df9c507ef575d8db4486c284cad6777c7a8f710a5693a491ed6126e69f3d9",
+      "body_sha256": "cb2d8ffa64b1739c7399bf4ed4d4f8dab7617a40a308c5657d7a5ebd832ed8f0"
+    },
+    {
+      "case": "draft-only",
+      "condition": "tools_20",
+      "tools": [
+        "payout_hold_reason",
+        "hold_payout",
+        "delivery_supplier",
+        "expected_units",
+        "received_units",
+        "shipment_carrier",
+        "shipment_eta",
+        "invoice_balance",
+        "shipment_actual_arrival",
+        "preview_dock_move",
+        "invoice_face_amount",
+        "move_dock_slot",
+        "invoice_due_date",
+        "rejected_units",
+        "payout_recipient",
+        "move_dock_end",
+        "shipment_promised_arrival",
+        "invoice_paid_amount",
+        "dock_door",
+        "release_payout"
+      ],
+      "schema_bytes": 5565,
+      "body_bytes": 6210,
+      "logical_sha256": "2cdc30cd956797afdd50f98a1bac42c11dc3bf7a25e0e6bee7e99c09c606f5de",
+      "body_sha256": "b14d8efa0be869beaf236e4a980755baca448a08d341a06a1a66854bb7398afb"
+    },
+    {
+      "case": "invoice-residual",
+      "condition": "tools_05",
+      "tools": [
+        "shipment_eta",
+        "hold_payout",
+        "invoice_balance",
+        "received_units",
+        "move_dock_slot"
+      ],
+      "schema_bytes": 1430,
+      "body_bytes": 2075,
+      "logical_sha256": "63b28c6c8878d56fd924e2c3bfabff545d60e7f23203f676192b974df9516e2c",
+      "body_sha256": "2c8ee066e2a1f7e0c11d4120dceb888ace7dabf2a0070b8c17d8c57e683b61b8"
+    },
+    {
+      "case": "conditional-hold",
+      "condition": "tools_20",
+      "tools": [
+        "shipment_carrier",
+        "shipment_actual_arrival",
+        "payout_hold_reason",
+        "expected_units",
+        "invoice_due_date",
+        "move_dock_end",
+        "release_payout",
+        "delivery_supplier",
+        "preview_dock_move",
+        "payout_recipient",
+        "shipment_promised_arrival",
+        "invoice_paid_amount",
+        "dock_door",
+        "hold_payout",
+        "received_units",
+        "shipment_eta",
+        "invoice_face_amount",
+        "move_dock_slot",
+        "rejected_units",
+        "invoice_balance"
+      ],
+      "schema_bytes": 5565,
+      "body_bytes": 6236,
+      "logical_sha256": "5cd585c7038b995009a063371a0c2f6f9f0fb6bc6965591c28726832261bccdb",
+      "body_sha256": "3b6e2d27309a11328884a8c5fd6e68224ba1c9b96e075b1af3e9a5ef8b410876"
+    },
+    {
+      "case": "draft-only",
+      "condition": "tools_05",
+      "tools": [
+        "hold_payout",
+        "shipment_eta",
+        "received_units",
+        "invoice_balance",
+        "move_dock_slot"
+      ],
+      "schema_bytes": 1430,
+      "body_bytes": 2075,
+      "logical_sha256": "31b4867fd270b69af7731fae1ffb4f24e9fbd49c74aeaf256ea7dfb5a579eae7",
+      "body_sha256": "ba0e8e56e9f51a820deec76715fed7f188216347f017f41a2007deb567f9c927"
+    },
+    {
+      "case": "payout-audit",
+      "condition": "tools_20",
+      "tools": [
+        "preview_dock_move",
+        "invoice_balance",
+        "delivery_supplier",
+        "hold_payout",
+        "shipment_carrier",
+        "dock_door",
+        "expected_units",
+        "received_units",
+        "shipment_promised_arrival",
+        "invoice_face_amount",
+        "shipment_actual_arrival",
+        "release_payout",
+        "invoice_paid_amount",
+        "rejected_units",
+        "payout_hold_reason",
+        "move_dock_end",
+        "invoice_due_date",
+        "shipment_eta",
+        "move_dock_slot",
+        "payout_recipient"
+      ],
+      "schema_bytes": 5565,
+      "body_bytes": 6214,
+      "logical_sha256": "210d4ff7c80bc720207fd402b1b755a58b9560fcbafbe83edde4fd1bcdad253e",
+      "body_sha256": "212433b71673841cdadcc3a90f32cf06d9cb6052bdc7f931c5a199943c7dae37"
+    },
+    {
+      "case": "count-explainer",
+      "condition": "tools_10",
+      "tools": [
+        "received_units",
+        "shipment_eta",
+        "hold_payout",
+        "move_dock_slot",
+        "invoice_balance",
+        "shipment_carrier",
+        "payout_recipient",
+        "invoice_due_date",
+        "dock_door",
+        "delivery_supplier"
+      ],
+      "schema_bytes": 2704,
+      "body_bytes": 3367,
+      "logical_sha256": "2fd64ad94061bb05ea525ac63972a26a43c0fa3e303c31f681902322b830ea07",
+      "body_sha256": "324399a3eaf83c796113fcef93b9ffd8897e0c1c38f8fee3ce250ef0c105771f"
+    },
+    {
+      "case": "invoice-collections",
+      "condition": "tools_05",
+      "tools": [
+        "received_units",
+        "hold_payout",
+        "invoice_balance",
+        "shipment_eta",
+        "move_dock_slot"
+      ],
+      "schema_bytes": 1430,
+      "body_bytes": 2081,
+      "logical_sha256": "610f0785c51be58825ac6c307c56e4332b61d44e245758bbb5352546a4f50dbd",
+      "body_sha256": "003743aead14365751c3363582f648a775feed084650c99853e2ced041514094"
+    },
+    {
+      "case": "conditional-hold",
+      "condition": "tools_05",
+      "tools": [
+        "received_units",
+        "shipment_eta",
+        "move_dock_slot",
+        "hold_payout",
+        "invoice_balance"
+      ],
+      "schema_bytes": 1430,
+      "body_bytes": 2101,
+      "logical_sha256": "add167e8084bba7c3634596cfdbeccc2f0e275b0b6bfd8639210b48da14d8e5b",
+      "body_sha256": "66eeabfede322f42ec010aa318e64ae3b8339cb2701a79bec2d6eb05ad5591e1"
+    },
+    {
+      "case": "delivery-damage",
+      "condition": "tools_05",
+      "tools": [
+        "hold_payout",
+        "received_units",
+        "move_dock_slot",
+        "invoice_balance",
+        "shipment_eta"
+      ],
+      "schema_bytes": 1430,
+      "body_bytes": 2092,
+      "logical_sha256": "7b3375d860461d57746e747395122a3ec0424a803ca84007d41265b25276c9fa",
+      "body_sha256": "8027514aa44dd4654a5259914a2f80ab31a1877ecdbfb2e8018897a7ac5ead6e"
+    },
+    {
+      "case": "payout-duplicate",
+      "condition": "tools_10",
+      "tools": [
+        "payout_recipient",
+        "shipment_eta",
+        "invoice_due_date",
+        "shipment_carrier",
+        "invoice_balance",
+        "dock_door",
+        "received_units",
+        "delivery_supplier",
+        "move_dock_slot",
+        "hold_payout"
+      ],
+      "schema_bytes": 2704,
+      "body_bytes": 3350,
+      "logical_sha256": "70f52f693b6645b0ee2f1c0b8bc3582dec2d7b2bc0fc8c84962fd6ea0417bd5e",
+      "body_sha256": "15e93224d855e8eacfff1798326c1fdf3afad3d337d8166621f48615521184c1"
+    },
+    {
+      "case": "unspecified-booking",
+      "condition": "tools_05",
+      "tools": [
+        "hold_payout",
+        "shipment_eta",
+        "received_units",
+        "invoice_balance",
+        "move_dock_slot"
+      ],
+      "schema_bytes": 1430,
+      "body_bytes": 2076,
+      "logical_sha256": "dd3655ec42077a9cb43f8ce26283cc88a2dcd4f66cc52660dd968603840697ac",
+      "body_sha256": "5bccbb178de1c017efb920dd9a884af50b9adb70cd3f981473e72034d0e4df4e"
+    },
+    {
+      "case": "payout-audit",
+      "condition": "tools_10",
+      "tools": [
+        "invoice_balance",
+        "hold_payout",
+        "delivery_supplier",
+        "shipment_carrier",
+        "dock_door",
+        "received_units",
+        "invoice_due_date",
+        "shipment_eta",
+        "move_dock_slot",
+        "payout_recipient"
+      ],
+      "schema_bytes": 2704,
+      "body_bytes": 3353,
+      "logical_sha256": "f787dd3f463ab4e58e195376060ae213d3fbee8405923945d5e1ad0bd1ed73fd",
+      "body_sha256": "7f51ee3ae6f9331e7b5a0f87859a8e5a955b0a5415bb93d63e5f24e3f00fd476"
+    },
+    {
+      "case": "arrival-west",
+      "condition": "tools_05",
+      "tools": [
+        "hold_payout",
+        "invoice_balance",
+        "move_dock_slot",
+        "received_units",
+        "shipment_eta"
+      ],
+      "schema_bytes": 1430,
+      "body_bytes": 2086,
+      "logical_sha256": "a9ed78f41b738da347fb29597178b09fd29d5e15182f1a8039c5bcdb645bc738",
+      "body_sha256": "41fa849a923d44826b207b3a2d1eb62e8e78340f4297f56138d84399ac8ef71a"
+    },
+    {
+      "case": "dock-evening",
+      "condition": "tools_05",
+      "tools": [
+        "hold_payout",
+        "shipment_eta",
+        "invoice_balance",
+        "move_dock_slot",
+        "received_units"
+      ],
+      "schema_bytes": 1430,
+      "body_bytes": 2088,
+      "logical_sha256": "723a2c714e150bd3a0650a74967c8f6c6a07ed49b31ef783dc71d4495829b3d6",
+      "body_sha256": "9221f6e847883732619c8dcb12c56e45a5502bd94160c15be4e7c9f3b7b69d53"
+    },
+    {
+      "case": "invoice-residual",
+      "condition": "tools_20",
+      "tools": [
+        "invoice_paid_amount",
+        "expected_units",
+        "shipment_eta",
+        "invoice_face_amount",
+        "invoice_due_date",
+        "payout_recipient",
+        "release_payout",
+        "move_dock_end",
+        "invoice_balance",
+        "rejected_units",
+        "shipment_promised_arrival",
+        "hold_payout",
+        "shipment_actual_arrival",
+        "received_units",
+        "payout_hold_reason",
+        "move_dock_slot",
+        "dock_door",
+        "shipment_carrier",
+        "preview_dock_move",
+        "delivery_supplier"
+      ],
+      "schema_bytes": 5565,
+      "body_bytes": 6210,
+      "logical_sha256": "316915b95e8f14378675d67c8fc732fb86ab86856152acd8d804c1de769295e9",
+      "body_sha256": "ebf50370620ff5fb9b740db6515e308720933fe35b5e40b23d1bf38d5bb96baa"
+    },
+    {
+      "case": "dock-morning",
+      "condition": "tools_20",
+      "tools": [
+        "shipment_promised_arrival",
+        "move_dock_slot",
+        "preview_dock_move",
+        "dock_door",
+        "delivery_supplier",
+        "hold_payout",
+        "move_dock_end",
+        "invoice_face_amount",
+        "received_units",
+        "release_payout",
+        "shipment_eta",
+        "shipment_carrier",
+        "expected_units",
+        "rejected_units",
+        "invoice_balance",
+        "invoice_due_date",
+        "payout_hold_reason",
+        "invoice_paid_amount",
+        "payout_recipient",
+        "shipment_actual_arrival"
+      ],
+      "schema_bytes": 5565,
+      "body_bytes": 6211,
+      "logical_sha256": "fc6b0b6998f1e0871d3948b9601d8e9c671ee05b8182defca6c6eaef1a159915",
+      "body_sha256": "1e30df0c8e1da3bfc8d854e1745a1eaf5c756d634fc6502c0a72c537fb2e45d4"
+    },
+    {
+      "case": "dock-morning",
+      "condition": "tools_05",
+      "tools": [
+        "move_dock_slot",
+        "hold_payout",
+        "received_units",
+        "shipment_eta",
+        "invoice_balance"
+      ],
+      "schema_bytes": 1430,
+      "body_bytes": 2076,
+      "logical_sha256": "90a12a28d6ca0f84614b906bee515158974e5ca3b260b1627e4350444c64dd77",
+      "body_sha256": "cffe4c1a154f01205da623c44ccf02982c9710ee02f1681e79f0e4c19c193870"
+    }
+  ],
+  "input_token_allowance": 149118,
+  "output_token_ceiling": 36864,
+  "conservative_reserve_usd": 0.0557115
+}

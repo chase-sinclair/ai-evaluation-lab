@@ -1,0 +1,61 @@
+# Fictional Northline Freight desk. Layout slots are assigned before model use.
+- id: arrival-west
+  text: West desk needs the current estimated arrival time of shipment SH-214. What is the latest forecast?
+  focus: shipment_eta
+  slot: 6
+  args: {shipment_id: SH-214}
+- id: dock-morning
+  text: Reschedule the start of dock booking BK-083 to 2026-12-02T09:30:00Z. Make the change now.
+  focus: move_dock_slot
+  slot: 0
+  args: {booking_id: BK-083, start_utc: "2026-12-02T09:30:00Z"}
+- id: invoice-residual
+  text: Finance has already paid part of invoice FI-771. Look up the amount that remains unpaid.
+  focus: invoice_balance
+  slot: 3
+  args: {invoice_id: FI-771}
+- id: payout-duplicate
+  text: Stop payout PY-031 from being released. Record the reason exactly as "duplicate claim".
+  focus: hold_payout
+  slot: 7
+  args: {payout_id: PY-031, reason: duplicate claim}
+- id: delivery-damage
+  text: How many units of SKU BX-10 were counted as received on delivery DL-221? I need the actual receipt count.
+  focus: received_units
+  slot: 2
+  args: {delivery_id: DL-221, sku: BX-10}
+- id: dock-evening
+  text: Commit the revised start time 2026-12-04T18:00:00Z for dock booking BK-119. Leave its end time alone.
+  focus: move_dock_slot
+  slot: 5
+  args: {booking_id: BK-119, start_utc: "2026-12-04T18:00:00Z"}
+- id: payout-audit
+  text: Place a hold on carrier payout PY-058 pending audit. Use the exact reason "audit pending".
+  focus: hold_payout
+  slot: 1
+  args: {payout_id: PY-058, reason: audit pending}
+- id: invoice-collections
+  text: Collections is reconciling freight invoice FI-904. Retrieve its outstanding balance as of now.
+  focus: invoice_balance
+  slot: 4
+  args: {invoice_id: FI-904}
+- id: draft-only
+  text: Draft one sentence asking the carrier for shipment SH-460's ETA. Only draft the message.
+  focus: shipment_eta
+  slot: 2
+  no_call: Drafting from supplied information requires no lookup or send.
+- id: unspecified-booking
+  text: Move my dock appointment to 2026-12-03T14:00:00Z. I haven't told you which booking it is.
+  focus: move_dock_slot
+  slot: 7
+  no_call: A booking ID is required and no tool identifies a booking from this information.
+- id: count-explainer
+  text: Explain the difference between expected and received units in one sentence, without looking up a delivery.
+  focus: received_units
+  slot: 0
+  no_call: General terminology can be explained from the request.
+- id: conditional-hold
+  text: We may need to hold payout PY-202 later. Just acknowledge this note. Do not look anything up or change its status.
+  focus: hold_payout
+  slot: 5
+  no_call: The operator explicitly forbids a lookup or change.
