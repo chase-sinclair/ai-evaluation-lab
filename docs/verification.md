@@ -1,5 +1,19 @@
 # Phase 0 / Phase 1 verification
 
+## November 6, 2026 · recruiter-facing presentation
+
+- Compared the case-study numbers and CNPq trace with the Phase 3D–3F
+  findings, the named label review, and the Phase 3G closure. Compared all
+  four table rows with the local pilot report at published display precision.
+  Rechecked the published records and pilot-report SHA-256 hashes.
+- Rendered both SVG diagrams locally, checked their text and connector
+  layout, parsed their accessible titles and descriptions, and checked
+  the relative link targets in the portfolio materials.
+- `uv run --offline pytest -q` passed all 173 tests. `uv run --offline
+  ruff check .` and `uv run --offline ruff format --check .` passed.
+  The changes are confined to documentation and its figure assets. No
+  experiment was started and no additional model calls were made.
+
 ## November 6, 2026 · portfolio decision study and Phase 3G closure
 
 - Checked the case study's cohort, error counts and queue comparisons against

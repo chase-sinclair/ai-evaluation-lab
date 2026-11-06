@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="590" height="564" viewBox="0 0 590 564" role="img" aria-labelledby="title desc">
+  <title id="title">How a deposited funder name becomes a matching decision</title>
+  <desc id="desc">The implemented workflow retrieves five ROR candidates, links or abstains using score thresholds, then ranks all queries. Policy replay keeps the baseline for unselected queries and uses the model response for selected queries. A dashed box marks a proposed reviewer check before a model correction changes a record.</desc>
+  <style>
+    text { font-family: 'Segoe UI', Arial, sans-serif; fill: #163c39 }
+    .label { font-size: 20px; font-weight: 650 }
+    .detail { font-size: 16px; fill: #374e4b }
+    .box { fill: #fff; stroke: #78968f; stroke-width: 1.5 }
+    .edge { fill: none; stroke: #436860; stroke-width: 2 }
+  </style>
+  <defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#436860"/></marker></defs>
+  <rect width="590" height="564" rx="12" fill="#f3f7f5"/>
+  <g text-anchor="middle">
+    <text x="295" y="32" class="label">Deposited funder name</text>
+    <path class="edge" d="M295 43v21" marker-end="url(#arrow)"/>
+    <rect x="57" y="69" width="476" height="64" rx="7" class="box"/>
+    <text x="295" y="95" class="label">Retrieve five candidates from ROR v2.6</text>
+    <text x="295" y="119" class="detail">Compare name spellings, aliases and acronyms.</text>
+    <path class="edge" d="M295 134v21" marker-end="url(#arrow)"/>
+    <rect x="57" y="160" width="476" height="64" rx="7" class="box"/>
+    <text x="295" y="186" class="label">Link the leader or abstain</text>
+    <text x="295" y="210" class="detail">Link when score ≥ 0.75 and top-two gap ≥ 0.03.</text>
+    <path class="edge" d="M295 225v21" marker-end="url(#arrow)"/>
+    <rect x="57" y="251" width="476" height="64" rx="7" fill="#dcece5" stroke="#51786b"/>
+    <text x="295" y="277" class="label">Rank all queries for escalation</text>
+    <text x="295" y="301" class="detail">Take the first 0%, 25%, 50% or 100% in replay.</text>
+    <path class="edge" d="M295 315v19H147v22" marker-end="url(#arrow)"/>
+    <path class="edge" d="M295 334h145v22" marker-end="url(#arrow)"/>
+    <rect x="17" y="361" width="260" height="80" rx="7" class="box"/>
+    <text x="147" y="389" class="label">Outside budget</text>
+    <text x="147" y="415" class="detail">Keep baseline link or abstention.</text>
+    <rect x="304" y="361" width="272" height="80" rx="7" class="box"/>
+    <text x="440" y="389" class="label">Selected for the LLM</text>
+    <text x="440" y="415" class="detail">Reuse its offered ID or abstention.</text>
+    <path class="edge" stroke-dasharray="5 4" d="M440 442v24" marker-end="url(#arrow)"/>
+    <rect x="57" y="471" width="519" height="72" rx="7" fill="#fff5e2" stroke="#94622b" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="317" y="500" class="label">Proposed · Human review</text>
+    <text x="317" y="526" class="detail">Review an LLM correction before changing a record.</text>
+  </g>
+</svg>

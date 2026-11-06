@@ -1,5 +1,16 @@
 # Progress — November 6, 2026
 
+## Recruiter-facing presentation ready for owner review
+
+Revised the [case study](portfolio/entity-matching.md) with three headline
+metrics, an accessible architecture diagram, a CNPq decision trace, a
+sourced contribution statement and the four pilot replay rows. The proposed
+human correction review is separate from both the implemented evaluation
+and the completed development-label review. Added a [website handoff](portfolio/entity-matching-handoff.md)
+and expanded the [reusable page outline](portfolio/study-format.md).
+Starting revision was `24f286c`. All 173 offline tests and both Ruff checks
+passed. The materials are ready for editorial review before website integration.
+
 ## Portfolio pivot · Phase 3G stopped after feasibility
 
 The owner retired both the 40-family independent review and the proposed
