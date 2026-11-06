@@ -1,5 +1,27 @@
 # Phase 0 / Phase 1 verification
 
+## Phase 3G · offline population audit and preregistration
+
+- Verified the pinned Crossref and ROR SHA-256s and all 115 documented row
+  seeds against the existing 579-row quarantine. Compared the IDs cited in
+  the validated local Phase 3E worksheet with the existing blocklist.
+  The worksheet matched its published digest. Nine additional public IDs
+  appear in pinned ROR and were included in the new audit only.
+- Ran `uv run --offline python -m scripts.audit_crossref_holdout` logic twice
+  on the final inputs and compared the complete JSON with the committed
+  [population receipt](phase3g_population.json). Both family membership
+  digests reproduced. Screened family counts are 416 positive and 335 empty.
+- `uv run --offline pytest -q` passed **173 tests**. New checks exercise
+  transitive exposure, geographic and translated name overlap, active-name
+  conflicts on empty annotations, family collapse, and manifest counts.
+  `uv run --offline ruff check .` and `uv run --offline ruff format --check .`
+  passed. CI uses the small local fixture; full receipt reconstruction uses
+  the ignored pinned source files.
+- No holdout draw, independent human review, new model outcome, or API
+  request. The historical freezes, policies and receipts were not edited.
+  Approval of the [blinded first wave](phase3g_reviewer_workflow.md) and its
+  review capacity is the next gate.
+
 ## November 5, 2026 · Phase 3F offline escalation analysis
 
 - Rebuilt the source-based development freeze with

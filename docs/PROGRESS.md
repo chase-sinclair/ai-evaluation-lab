@@ -1,5 +1,23 @@
 # Progress — November 5, 2026
 
+## Phase 3G — independent holdout feasibility and preregistration
+
+At verified starting revision `aea5a5ab55d70ebabac7223e586923cdc1eccd4a`,
+reconstructed the remaining Crossref population from the two pinned local sources.
+The 579-row quarantine and supplemental review-cited IDs leave a screened frame
+of 416 positive and 335 source-empty families. No family was recruited or
+independently adjudicated in this phase. The 150/50 target is conditional.
+[Feasibility and aggregate audit](phase3g_holdout_feasibility.md) ·
+[Sampling manifest](phase3g_sampling_manifest.json) ·
+[Reviewer workflow](phase3g_reviewer_workflow.md) · [Preregistration](phase3g_protocol.md)
+
+Next decision is whether to authorize a blinded 20+20 feasibility review.
+Keep large-scale review and any later spend behind separate decisions. The
+25% paired contrast needs only the two lists' symmetric difference; obtaining
+absolute quality and costs for both requires their union. A small effect may
+remain unresolved at 200 families. No dispatch, acquisition, label change or
+holdout ranking occurred. The offline checks are recorded in verification.
+
 ## Phase 3F — offline escalation analysis complete
 
 Audited all 38 development decisions against the frozen baseline from commit

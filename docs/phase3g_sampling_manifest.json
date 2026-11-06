@@ -1,0 +1,23 @@
+{
+  "version": "crossref-independent-family-sampling-proposal-v1",
+  "status": "aggregate frame only; no draw, cohort or dispatch authority",
+  "frame_receipt": "phase3g_population.json",
+  "source": "Crossref annotated funder names, Zenodo release 19699937; ROR v2.6",
+  "reference_revision": "aea5a5ab55d70ebabac7223e586923cdc1eccd4a",
+  "unit": "one unambiguous deposited name per independent organization/name family",
+  "eligibility_implementation": "scripts/audit_crossref_holdout.py",
+  "positive": {"frame_families": 416, "target": 150, "first_wave": 20, "review_ceiling": 225},
+  "empty": {"frame_families": 335, "target_verified_no_match": 50, "first_wave": 20, "review_ceiling": 100},
+  "draw_after_approval_only": {
+    "seed": "crossref-3g-independent-v1",
+    "family_key": "decimal seq_no values sorted numerically and joined with comma, no spaces",
+    "family_order": "ascending SHA256 of UTF-8 seed/stratum/family_key, then family_key lexically; stratum is positive or empty",
+    "one_representative": "ascending SHA256 of UTF-8 seed/row/seq_no, then numeric seq_no; take first, with no within-family replacement",
+    "recruitment": "take first 20 in each queue for yield assessment only; after continuation approval use queue order up to quota or ceiling",
+    "collisions": "remove all families overlapping development; merge verified within-holdout collisions and keep earliest eligible nomination using ascending family-order hash across strata; unresolved or label-conflicting components excluded",
+    "no_promotion": "retain source labels; exclude unsupported, disputed or stratum-discordant records; never reassign strata or replace from a different family outside the queue",
+    "outputs_to_lock": ["anonymized family ID", "source seq_no and row SHA256", "stratum", "queue rank", "exposure screen and adjudication receipt", "accepted or first exclusion reason", "final blinded split digest"]
+  },
+  "forbidden_selection_inputs": ["candidate rank or availability", "baseline correctness or uncertainty", "escalation overlap", "model output", "observed costs"],
+  "stop": "any pin or overlap-ledger mismatch, unresolved split integrity, insufficient reviewed yield by ceiling, or failure to meet both quotas; report shortfall and obtain a versioned design decision"
+}

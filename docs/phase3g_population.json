@@ -1,0 +1,42 @@
+{
+  "additional_cited_review_ids": 9,
+  "additional_empty_rows_with_active_name_hit": 11,
+  "after_identity_geo_and_relationship_screen": {
+    "empty": 372,
+    "positive": 681
+  },
+  "after_registry_name_screen": {
+    "empty": 361,
+    "positive": 500
+  },
+  "documented_exposed_seeds": 115,
+  "excluded_mixed_components": 0,
+  "first_exit_after_quarantine": {
+    "annotation": 146,
+    "empty": 405,
+    "empty_without_org_term": 526,
+    "inactive": 27,
+    "name": 851,
+    "positive": 971
+  },
+  "frame": {
+    "empty": {
+      "families": 335,
+      "membership_sha256": "48ade89ffea381bed17e8c0d00b543b6573d632dad162e02d4a409578714570f",
+      "rows": 350
+    },
+    "positive": {
+      "families": 416,
+      "membership_sha256": "85d8152306cf910de715c216d50c7a0dd2257208d8ef8db3b6a96cff424e009d",
+      "rows": 500
+    }
+  },
+  "input_sha256": {
+    "crossref": "7c5c4bae3b71d029082a1337299f5a4c21014ddd2012064be38893fda4b5c0c8",
+    "quarantine": "b8fc74df01fb4ee8f62d6f865808fefa1efc7d576e3f6eef264395f6b6557d9a",
+    "ror": "526e175ec445002cf6129d862aa59f13a1e95916f81b38b3221ae1163654f052"
+  },
+  "quarantined": 579,
+  "remaining_rows": 2926,
+  "source_rows": 3505
+}
