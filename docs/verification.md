@@ -1,5 +1,22 @@
 # Phase 0 / Phase 1 verification
 
+## November 6, 2026 · Experiment 02 live run
+
+- Confirmed clean approved HEAD, unused one-shot directory, account model
+  metadata, standard prices and the expected freeze digest. The 17 targeted
+  offline tests passed before the single live invocation. The full-body
+  spending preflight reserved $0.05571150 under the $0.07 ceiling.
+- Checked all 36 persisted rows in order against both frozen request hashes,
+  parsed native call arguments from raw responses, checked offered schemas
+  and frozen keys, and compared results to the run summary. Verified
+  response ID uniqueness and recomputed cost from reported token partitions.
+  Published the four receipt hashes and all 12 paired outcomes in the
+  [live findings](experiment02_live_findings.md). Results remain local.
+- Post-run `uv run --offline pytest -q` passed all 190 tests. Both
+  `uv run --offline ruff check .` and `uv run --offline ruff format --check .`
+  passed. Results reporting changed documentation only. No additional
+  inference, retries, tool execution or resumed run.
+
 ## November 6, 2026 · Experiment 02 approval gate
 
 - `eval-lab validate catalog_scope` validated 12 cases and 36 trials.

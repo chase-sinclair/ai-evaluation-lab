@@ -1,5 +1,16 @@
 # Progress — November 6, 2026
 
+## Experiment 02 · approved live run complete and closed
+
+Executed the frozen digest once at approved revision `92a8ae98566a97c1646d18f9021c753c68b255f6`.
+All 36 requests completed sequentially with zero retries or tool execution.
+Each catalog scored 12/12. Estimated total API cost was $0.0024521.
+The [findings](experiment02_live_findings.md) give the paired scenario
+outcomes, observed latency, tokens, costs, recommendation and receipt hashes.
+Historical development records and raw live receipts are preserved.
+All 190 offline tests and both Ruff checks passed. Stop for owner review.
+No further calls, retries or expansion are authorized.
+
 ## Experiment 02 · offline implementation complete, live approval pending
 
 Added the `catalog_scope` experiment and its [frozen live proposal](../experiments/catalog_scope/README.md).
