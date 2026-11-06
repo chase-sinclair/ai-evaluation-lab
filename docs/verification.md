@@ -1,5 +1,20 @@
 # Phase 0 / Phase 1 verification
 
+## November 6, 2026 · Experiment 02 V2 proposal checks
+
+- Checked all 24 distinct proposed prompt texts and IDs in the [review
+  packet](experiment02_v2_design.md). For all 16 proposed function calls,
+  validated exact arguments against the V1 schema, checked each value
+  against the literal user message, and checked 5/10/20 membership against
+  the actual catalogs. The other eight cases explicitly require no call.
+- Using the existing V1 request overhead, the largest implied new canonical
+  bodies were 2,163, 3,437 and 6,298 bytes for the three sizes, within the
+  proposed planning guards. Recomputed the 180- and 216-request reserves
+  using the dated V1 assumptions. No V2 requests were frozen or dispatched.
+- All 190 existing offline tests passed. Ruff lint and format checks passed.
+  The local V1 response records matched their published SHA-256. This is
+  a documentation-only proposal with no changes to V1 or the shared engine.
+
 ## November 6, 2026 · Experiment 02 live run
 
 - Confirmed clean approved HEAD, unused one-shot directory, account model

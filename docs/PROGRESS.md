@@ -1,5 +1,17 @@
 # Progress — November 6, 2026
 
+## Experiment 02 V2 · scenario design awaiting owner review
+
+The [design and complete 24-scenario review packet](experiment02_v2_design.md)
+keeps the 12 original scenarios as a distinct control group. It proposes
+18 common-task challenges and six optional capability cases, two paired
+layouts per catalog. The proposed primary-plus-controls scope is 180
+requests; including the optional block would bring the total to 216.
+No V2 fixtures, implementation, live manifest or model calls were created.
+The next decision is approval or revision of the actual prompts, keys,
+catalog eligibility and scope. Live approval would be separate.
+Starting verified revision: `268f41d`. [Design checks](verification.md)
+
 ## Experiment 02 · approved live run complete and closed
 
 Executed the frozen digest once at approved revision `92a8ae98566a97c1646d18f9021c753c68b255f6`.
