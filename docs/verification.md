@@ -1,5 +1,23 @@
 # Phase 0 / Phase 1 verification
 
+## November 6, 2026 · portfolio decision study and Phase 3G closure
+
+- Checked the case study's cohort, error counts and queue comparisons against
+  the existing Phase 3D–3F reports. Checked its four replay rows, token
+  totals, summed latency, usage-priced cost and reserve against the Phase 3E
+  findings. All 14 local run files remain present. The records and pilot
+  report matched their published SHA-256 hashes.
+- Confirmed PR #1 closed without merge and its remote head
+  `phase3g-wave1-review-prep` still points to
+  `1455060339b93973a4f89a061f275beee3cd2653`. The stop notice on the
+  feasibility report precedes the original assessment. The review and
+  holdout did not proceed.
+- Checked the 34 relative links in the README and the two portfolio
+  documents. From the repository root, `uv run --offline pytest -q` passed
+  all 173 tests. `uv run --offline ruff check .` and
+  `uv run --offline ruff format --check .` passed. Changes are Markdown only.
+  This publication used existing evidence and made no model requests.
+
 ## Phase 3G · offline population audit and preregistration
 
 - Verified the pinned Crossref and ROR SHA-256s and all 115 documented row

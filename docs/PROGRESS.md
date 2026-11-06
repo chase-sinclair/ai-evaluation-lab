@@ -1,4 +1,23 @@
-# Progress — November 5, 2026
+# Progress — November 6, 2026
+
+## Portfolio pivot · Phase 3G stopped after feasibility
+
+The owner retired both the 40-family independent review and the proposed
+200-family holdout. The first review wave alone was estimated at 18–32
+person-hours, disproportionate to the goal of demonstrating an applied
+architecture decision. The feasibility assessment at `d0740a3` stands as
+completed work. Independent adjudication and holdout evaluation did not take
+place. The proposals and next steps in earlier entries are historical.
+
+Closed the [wave-1 preparation draft PR #1](https://github.com/chase-sinclair/ai-evaluation-lab/pull/1)
+without merging. Its preparation branch and commit `1455060` retain the
+templates and review history. No further review wave or model run is planned.
+
+Published the [entity-matching case study](portfolio/entity-matching.md) and
+a [future study format and portfolio placement recommendation](portfolio/study-format.md).
+The README points readers to the case study first. The next editorial step
+is to decide where to feature it on the portfolio website. This checkpoint
+changes documentation only. [Offline verification](verification.md)
 
 ## Phase 3G — independent holdout feasibility and preregistration
 

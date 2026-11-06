@@ -1,5 +1,7 @@
 # Independent Crossref holdout feasibility
 
+> **Stopped November 6, 2026, after the feasibility assessment.** The owner retired the proposed 40-family review and 200-family holdout because the validation effort exceeded the needs of the portfolio case study. The assessment and proposed decision gates below record the original plan. [Closure record](PROGRESS.md) · [Portfolio case study](portfolio/entity-matching.md)
+
 **Retain 200 families as a conditional target. Proceed only to a 40-family blinded feasibility review if the owner approves the process.** The automated frame contains 416 positive-label families and 335 empty-annotation families. There is enough numerical headroom for 150 positives and 50 no-matches. The binding uncertainty is whether two reviewers can establish a single identity or a supported registry absence and clear family overlap. This audit certified **zero holdout labels**, selected zero families and made zero model calls.
 
 ## What remains after development exposure

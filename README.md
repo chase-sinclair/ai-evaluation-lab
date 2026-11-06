@@ -1,8 +1,10 @@
 # AI Evaluation Lab
 
-A small Python framework for controlled, objectively graded reliability and cost studies.
-The first working experiment is a **fully offline software fixture**, not research evidence.
-No paid model calls or third-party dataset ingestion are needed.
+AI Evaluation Lab documents applied AI implementation decisions. Each case study compares a baseline with an AI alternative and explains what the observed quality, cost and operational risks justify.
+
+**[When Should Entity Matching Escalate to an LLM?](docs/portfolio/entity-matching.md)** follows a funder name from a missed deterministic match to a successful model correction, then asks whether the system could recognize when to pay for that second look. The evidence covers 38 development queries and four live responses.
+
+The Phase 3G independent holdout and its first review wave are retired. The feasibility findings and technical record remain available. [Project status](docs/PROGRESS.md) · [Format for future studies](docs/portfolio/study-format.md)
 
 ## Quick start
 
@@ -28,8 +30,8 @@ On Windows, `py -3.13 -m uv` is an equivalent launcher when uv is not on PATH.
 
 ## What works
 
-The [Phase 3E readiness report](docs/phase3e_readiness.md) includes the
-four-query proposal and the [blinded reviewer worksheet](docs/review/funder_identity.md).
+The [Phase 3E live findings](docs/phase3e_live_findings.md) document the completed
+four-query pilot. The [readiness report](docs/phase3e_readiness.md) records its controls.
 
 Current research status: the substantive BFCL study is deferred and WDC
 development is paused. The [offline Crossref resolution experiment](docs/phase3d_crossref_resolution.md)
