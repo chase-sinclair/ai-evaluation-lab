@@ -1,5 +1,9 @@
 # Progress — November 9, 2026
 
+## Experiment 03 · evidence-gate design awaiting review
+
+Starting from the approved portfolio revision `95579b7`, the [design proposal](experiment03_design.md) defines a synthetic service-desk corpus, 24 keyed questions, paired replay, human grading and a provisional execution budget. Scope is documentation only. The next decision is whether to approve the dataset, gate behavior and adoption criterion for offline implementation. Live execution requires separate approval. [Verification](verification.md)
+
 ## Experiment 02 · evaluation closed and portfolio article ready
 
 The owner accepted the findings at `0352f51`. The [final case study](portfolio/tool-catalog.md) and [website handoff](portfolio/tool-catalog-handoff.md) cover both runs, the C06 decision trace and the recommended write check. Three figures accompany the article. The earlier outline now directs readers to the completed work. Next step is portfolio editorial review. [Publication checks](verification.md)
