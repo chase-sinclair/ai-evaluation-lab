@@ -1,5 +1,9 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 03 · Phase B design revision
+
+Compared the proposal against `9ad5dd3`. Verified the same 36 question IDs, two ordered excerpts per question, exactly seven changed scenario rows and 29 identical rows including all routine controls. Confirmed C03 dates fall in 2026. A design-only sizing check of the 72 generator/gate inputs using compact UTF-8 bodies plus 256 framing tokens yielded allowances of 1,145–1,562 each, within the proposed 2,300. Actual verifier bodies await generator acquisition. Recomputed the two provisional stage reserves and aggregate $0.092232. All 197 offline tests, Ruff lint and formatting passed. Only design, acceptance status and checkpoint documentation changed.
+
 ## Experiment 03 · AI-assisted review and Phase B design
 
 Replayed the original receipts offline and confirmed equality with all 30 blank worksheet entries. Checked each submitted entry against its original fields and the review schema, claim spans and packet citation IDs. Confirmed the conservative P4 attribution grade on both arms. The existing reviewed-report function accepted the separate validated copy; draft and copy hashes matched. Receipt and blank worksheet hashes remained unchanged. [Aggregate outcomes and review status](experiment03_phase_a_review.md)
