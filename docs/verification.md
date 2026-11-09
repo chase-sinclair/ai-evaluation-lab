@@ -1,5 +1,11 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 03 · AI-assisted review and Phase B design
+
+Replayed the original receipts offline and confirmed equality with all 30 blank worksheet entries. Checked each submitted entry against its original fields and the review schema, claim spans and packet citation IDs. Confirmed the conservative P4 attribution grade on both arms. The existing reviewed-report function accepted the separate validated copy; draft and copy hashes matched. Receipt and blank worksheet hashes remained unchanged. [Aggregate outcomes and review status](experiment03_phase_a_review.md)
+
+Validated 36 unique proposed Phase B scenarios, 12 per stratum, with 72 ordered excerpts, grading keys and workflow-specific consequences. Checked local links and the $0.081432 upper estimate under the proposed token envelope. All 197 offline tests and both Ruff checks passed. No new model responses or Phase B code.
+
 ## Experiment 03 · live acquisition
 
 The clean checkout at `134ce156e676fa06ddaccdbc500033984c3add8a` reproduced the approved digest and $0.02433150 reserve. Confirmed the unused run directory, account model metadata, standard pricing and all body hashes before dispatch. The single sequential run completed with 48 distinct provider responses, zero failures and zero retries. Verified case, stage, model, tier, logical request and reconstructed body hashes, raw usage partitions and receipt cost estimates against the frozen plan. Local records SHA-256: `4dda587eee28c73cecd2926ceb1e48d96b3312723f199bf60c91789b0251c2bd`.

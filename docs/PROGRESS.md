@@ -1,5 +1,9 @@
 # Progress — November 9, 2026
 
+## Experiment 03 · Phase A draft graded and Phase B proposed
+
+From verified checkpoint `1a60818`, validated the supplied AI-assisted worksheet and reproduced the [paired review report](experiment03_phase_a_review.md). The [36-question design](experiment03_phase_b_design.md) and [deployment playbook](fde_deployment_playbook.md) are ready for review. No Phase B implementation or acquisition. Next decisions are final approval of Phase A grades and approval or revision of Phase B before implementation. [Offline checks](verification.md)
+
 ## Experiment 03 · live acquisition complete, awaiting human review
 
 The authorized run at `134ce15` completed all 48 requests. All 24 gate decisions matched their packet-relative keys. The private worksheet at `.verification/alder-review.json` contains 30 distinct question/answer entries with all judgment fields blank. Review a copy using the [review guide](../experiments/evidence_gate/review.md). Answer quality and adoption remain undecided. [Receipt audit and telemetry](verification.md#experiment-03--live-acquisition)
