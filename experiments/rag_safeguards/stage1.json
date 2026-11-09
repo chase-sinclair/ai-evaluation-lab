@@ -1,0 +1,1793 @@
+{
+  "stage": 1,
+  "protocol_hash": "ce0eb649a6f7ef33ea1848086e1ba78104d666aedb71a13fd85fd7db2baf728b",
+  "spec": {
+    "id": "rag_safeguards",
+    "version": "1.0",
+    "research_question": "Which RAG reliability safeguards are worth deploying?",
+    "hypothesis": "Safeguards may suppress unsupported claims or useful responses.",
+    "primary_variable": "stage",
+    "dataset": {
+      "id": "enterprise_packets",
+      "version": "1.0",
+      "path": "protocol.json"
+    },
+    "conditions": [
+      {
+        "id": "generator",
+        "variables": {
+          "stage": "generator"
+        },
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "options": {}
+      },
+      {
+        "id": "gate",
+        "variables": {
+          "stage": "gate"
+        },
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "options": {}
+      }
+    ],
+    "repetitions": 1,
+    "seed": 42,
+    "max_requests": 72,
+    "max_spend_usd": 0.055224,
+    "max_output_tokens": 512,
+    "grader_id": "stage_format",
+    "grader_version": "1.0",
+    "pricing": {
+      "version": "standard-short-2026-11-09",
+      "verified_date": "2026-11-09",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "model": "gpt-6-luna",
+      "input_usd_per_million": 0.1,
+      "output_usd_per_million": 0.5,
+      "cache": {
+        "service_tier": "default",
+        "read_usd_per_million": 0.01,
+        "write_usd_per_million": {
+          "30m": 0.125,
+          "12h": 0.25
+        }
+      }
+    }
+  },
+  "parent": null,
+  "stage_one_spend": 0.0,
+  "cumulative_cap": 0.1,
+  "reserve": 0.0375465,
+  "rows": [
+    {
+      "case": "C01",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Approved FY25 filing: USD 84m revenue.\",\"2\":\"Earlier forecast: USD 90m revenue.\"},\"question\":\"Which FY25 revenue belongs in the board pack?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1031,
+      "body_hash": "32bd6565b5afef6a8f08cda7a90af7e8c9698c53d2e1e8e42a9ccc1b9c9b391e",
+      "request_hash": "f3779b90141c13831d878735406236ca9017bec8be641f5377b1a3378ac26ea9",
+      "source": null
+    },
+    {
+      "case": "C01",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Approved FY25 filing: USD 84m revenue.\",\"2\":\"Earlier forecast: USD 90m revenue.\"},\"question\":\"Which FY25 revenue belongs in the board pack?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 953,
+      "body_hash": "43577b3ec8e372ac55832e2347e34bed3da3d9a12fe32086c775eb6040467780",
+      "request_hash": "6f363c5eb0965c9827d7dd36f356083c09c77ba8b2b5a6a76f3fdd0181afd521",
+      "source": null
+    },
+    {
+      "case": "C02",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Sales guide, revised 2 September 2026: default domestic liability is USD 1,000 per parcel. Account riders govern where applicable; declared-value shipments use a separate schedule.\",\"2\":\"Executed F7 rider effective 1 August through 31 December 2026: ordinary domestic parcels on F7 carry a USD 750 per-parcel cap. Other master terms remain in force.\"},\"question\":\"What contractual cap applies to one ordinary domestic parcel lost on lane F7 in September 2026?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1273,
+      "body_hash": "25bc73c5d4f1f3d6943488d2c3ca9f8da86cddda6259a16a192f0924f7d282cf",
+      "request_hash": "cd259bd6d6cd7a4bcd8d97a937434e8247566170b7fe2bdbf6c42769b9de731d",
+      "source": null
+    },
+    {
+      "case": "C02",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Sales guide, revised 2 September 2026: default domestic liability is USD 1,000 per parcel. Account riders govern where applicable; declared-value shipments use a separate schedule.\",\"2\":\"Executed F7 rider effective 1 August through 31 December 2026: ordinary domestic parcels on F7 carry a USD 750 per-parcel cap. Other master terms remain in force.\"},\"question\":\"What contractual cap applies to one ordinary domestic parcel lost on lane F7 in September 2026?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1351,
+      "body_hash": "9f2de568c8dda98b5476a1ae053e0fec779ad9fc571c6cc2a8fb8c9df4524da2",
+      "request_hash": "a37ed223b37e807290968f38fbd14ee9f541df5657f12a86ea94bb3fa30f2ceb",
+      "source": null
+    },
+    {
+      "case": "C03",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Signed EU schedule v5, published 20 April 2026: effective 1 July 2026, class E files carry a seven-year period. Teams may prepare indexing changes in advance.\",\"2\":\"Signed EU schedule v4, effective 1 January 2025 through 30 June 2026 inclusive: retain class E files for five years.\"},\"question\":\"Which retention period was in force for EU class E files on 1 May 2026?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1259,
+      "body_hash": "2fb9ddb2a2e29b14db4647da2abfe11efc804d801ebf720a2823ddaf162387a0",
+      "request_hash": "f1ce17ba96d69df755f28bfe93992e28e5a1f120ea88ec8959afa8bb5279d967",
+      "source": null
+    },
+    {
+      "case": "C03",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Signed EU schedule v5, published 20 April 2026: effective 1 July 2026, class E files carry a seven-year period. Teams may prepare indexing changes in advance.\",\"2\":\"Signed EU schedule v4, effective 1 January 2025 through 30 June 2026 inclusive: retain class E files for five years.\"},\"question\":\"Which retention period was in force for EU class E files on 1 May 2026?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1181,
+      "body_hash": "e0b7d8eda2c7cc79ef0bd5f8cdb4d8435150526a5f3c82843a87de2f02e19dc3",
+      "request_hash": "8fbb4c6d4cb103c33ccaf20f0063f443dbbb8a662d67bb5a5d281011ae21e86b",
+      "source": null
+    },
+    {
+      "case": "C04",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Approved operations roster for that shift: X primary Chen, secondary Patel. Both acknowledged the shift.\",\"2\":\"Incident bridge sheet approved by the same office for that shift: X primary Patel, secondary Chen. The records carry the same approval timestamp; neither specifies precedence or supersession.\"},\"question\":\"Who is primary for service X on the 22:00–06:00 UTC shift starting 14 June 2026?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1213,
+      "body_hash": "cb12ab2c1a8cc0792ce502a582ec59c505457f122cb447be6f452014e8a4b5cf",
+      "request_hash": "b1db457b7a6d68cdb1ed10eacce54b16bea9fa74de9f24ad3435f93166a7247c",
+      "source": null
+    },
+    {
+      "case": "C04",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Approved operations roster for that shift: X primary Chen, secondary Patel. Both acknowledged the shift.\",\"2\":\"Incident bridge sheet approved by the same office for that shift: X primary Patel, secondary Chen. The records carry the same approval timestamp; neither specifies precedence or supersession.\"},\"question\":\"Who is primary for service X on the 22:00–06:00 UTC shift starting 14 June 2026?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1291,
+      "body_hash": "1e7bea9eb26f32d28975b740ffe6fcaa4fe14877b1b28e4ddffec8ceac0f8bcb",
+      "request_hash": "9cacaf9d50c59b43fa2a1060433c9a4d478c181f946d20e132edf8ce40ba914d",
+      "source": null
+    },
+    {
+      "case": "C05",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Executed T agreement: premium support excluded.\",\"2\":\"Draft amendment: premium support included.\"},\"question\":\"Is premium support included in tenant T's signed agreement?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1062,
+      "body_hash": "3e765813549aee8996d822ab3615473ea360ba6fb1e05034d46074a59c46c41e",
+      "request_hash": "4aa78afd8c1d80e4031851e5b941568468d8dadb9fa4cedaf017ab31821711ec",
+      "source": null
+    },
+    {
+      "case": "C05",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Executed T agreement: premium support excluded.\",\"2\":\"Draft amendment: premium support included.\"},\"question\":\"Is premium support included in tenant T's signed agreement?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 984,
+      "body_hash": "dca50d15544b4f390e829350888f7ade8740fe1c422963afa78db6b7e88b62f1",
+      "request_hash": "f3189e145b8f0c733ab4c8ed7aa3943915d74dd991b21943fd1849d49eb8665a",
+      "source": null
+    },
+    {
+      "case": "C06",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Closing certificate: 11 sites.\",\"2\":\"Corrected closing certificate explicitly replaces original: 10 sites.\"},\"question\":\"How many active sites did the target report at closing?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 990,
+      "body_hash": "3c010a9aebfc627d054daeff5e9b53d28efde41470c830c0e70260790ee1da3c",
+      "request_hash": "6dc0205f15a953296b9021ce930f93924e524e223b4f7f34f58567714df1656e",
+      "source": null
+    },
+    {
+      "case": "C06",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Closing certificate: 11 sites.\",\"2\":\"Corrected closing certificate explicitly replaces original: 10 sites.\"},\"question\":\"How many active sites did the target report at closing?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1068,
+      "body_hash": "348dd2a26e1ceae6dd801ab88e080aa26d51f4e6cec33f2368b2daffe79c7050",
+      "request_hash": "24d5dbe04dace7e348bb373ab202358baa2d8b9a81aad8338b5d8c948d57e41f",
+      "source": null
+    },
+    {
+      "case": "C07",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"London signed policy: no broadband reimbursement.\",\"2\":\"Dublin staff guide: broadband eligible.\"},\"question\":\"Can London staff expense home broadband?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1042,
+      "body_hash": "ced15dcca12854f07f8a271e1073497f5a138d152b0684f6cb84825dfae7122b",
+      "request_hash": "22815e486c0b6f15a37d92b674346ebe2d68bd7d85def30fc0f007b1314fad0c",
+      "source": null
+    },
+    {
+      "case": "C07",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"London signed policy: no broadband reimbursement.\",\"2\":\"Dublin staff guide: broadband eligible.\"},\"question\":\"Can London staff expense home broadband?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 964,
+      "body_hash": "e94b6e2a57af003ec7f4558c1995554c05dcadaf7d4e47deddcc30cc3c549264",
+      "request_hash": "267d6be2f7a9bfd9d319e5271e4dcbea69046f1219ee358586b7bec1b9d5e88b",
+      "source": null
+    },
+    {
+      "case": "C08",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Signed P2 maintenance schedule: every 40 operating hours.\",\"2\":\"Technician note: 40 calendar days usually works.\"},\"question\":\"Which inspection interval governs press P2?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 984,
+      "body_hash": "f41b27421095cdbdfde353202e1b99aabc2a325db6a68bb27b85441397deb2ed",
+      "request_hash": "24bc931d9f754160e044b77ca18d3318c6181f4f17225713a87f9b76d2299864",
+      "source": null
+    },
+    {
+      "case": "C08",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Signed P2 maintenance schedule: every 40 operating hours.\",\"2\":\"Technician note: 40 calendar days usually works.\"},\"question\":\"Which inspection interval governs press P2?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1062,
+      "body_hash": "c5081bb473e633b436a2151b43aa3fd4110fec734e54575a2fe5c2eeeb2b9119",
+      "request_hash": "5e74c26ee7c37a108687ef8c32e7f94b9042adce04ac7d34017146c2e556f7d0",
+      "source": null
+    },
+    {
+      "case": "C09",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Executed K order: 2% service credit.\",\"2\":\"Account chat posted later: probably 5%.\"},\"question\":\"What credit rate did client K sign?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1024,
+      "body_hash": "acda82796462da995ca1edd8ccec5565eefef81777cfa224929caa0f0d88c82e",
+      "request_hash": "22885482804f774a53a4d81bf6a7912c845cde8aa3d7398b739381fa681349c2",
+      "source": null
+    },
+    {
+      "case": "C09",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Executed K order: 2% service credit.\",\"2\":\"Account chat posted later: probably 5%.\"},\"question\":\"What credit rate did client K sign?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 946,
+      "body_hash": "f97ac4508598ada8b02db4110991e1ac871aa76e2ef9587564fc974f05169f85",
+      "request_hash": "b268aeab5c2e8df4a178e66664f8e967ad824153c9753d89e9f0fd1d19bbbab2",
+      "source": null
+    },
+    {
+      "case": "C10",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Executed facility: subtract unrestricted cash from drawn debt at quarter end, then divide by trailing covenant EBITDA. Restricted cash cannot be deducted.\",\"2\":\"September monitoring pack (USD m): drawn debt 64, covenant EBITDA 20, combined restricted and unrestricted cash 10. Gross leverage 3.2x. Treasury’s cash restriction reconciliation is pending.\"},\"question\":\"What covenant leverage ratio can we report for borrower L at September 2026 quarter end?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1271,
+      "body_hash": "431cbd08b898f926d30fadac80f80114f98c2759f9c1cda337acc1eded017cb5",
+      "request_hash": "d22943ff111337672088460c3d533d5b632630ebec4ed42d3a51800f143cebb1",
+      "source": null
+    },
+    {
+      "case": "C10",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Executed facility: subtract unrestricted cash from drawn debt at quarter end, then divide by trailing covenant EBITDA. Restricted cash cannot be deducted.\",\"2\":\"September monitoring pack (USD m): drawn debt 64, covenant EBITDA 20, combined restricted and unrestricted cash 10. Gross leverage 3.2x. Treasury’s cash restriction reconciliation is pending.\"},\"question\":\"What covenant leverage ratio can we report for borrower L at September 2026 quarter end?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1349,
+      "body_hash": "45fcba2e41b16be1210db1fd99c3c6b6ee8dd34de6b701fd3035976ab96bbb53",
+      "request_hash": "d11b509849baf9cbfde6a292fabb6ddaee45e32cbaa3685efe922a686874594d",
+      "source": null
+    },
+    {
+      "case": "C11",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Approved map revision 4 for Z: code V1.\",\"2\":\"Approved map revision 4 for Z: code V2.\"},\"question\":\"Which VAT code did the approved mapping assign to SKU Z?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1048,
+      "body_hash": "19f47a8fc31bfe52c930aff94d4ffb454bafb4526fb796bb00d7cb6a11d8b298",
+      "request_hash": "a5abeafeee411bb362cd54ae49f145ceff5b04704ded38c239ec586fefb50ebb",
+      "source": null
+    },
+    {
+      "case": "C11",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Approved map revision 4 for Z: code V1.\",\"2\":\"Approved map revision 4 for Z: code V2.\"},\"question\":\"Which VAT code did the approved mapping assign to SKU Z?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 970,
+      "body_hash": "60e063312d573d925387dcf11eeac91dfc492269a6da2a96b0766e7abfda47ab",
+      "request_hash": "1e548d6f206a7d77f0a6705fd0f06824337bef0c5c916bf67dcf9919b02fe858",
+      "source": null
+    },
+    {
+      "case": "C12",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Building-wide notice: normal contractor hours.\",\"2\":\"Signed Annex B closure for this week: no contractor entry during works.\"},\"question\":\"Is contractor entry permitted at Annex B this week?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1004,
+      "body_hash": "5359c07aec4e435feeb900f460625da1406b94ce352d87c75cfa52d1725f1e20",
+      "request_hash": "db0e7b759fc3507906c15b421b2b59ee2f35b1a59b4d48fbe9fae2a11cb5bcd2",
+      "source": null
+    },
+    {
+      "case": "C12",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Building-wide notice: normal contractor hours.\",\"2\":\"Signed Annex B closure for this week: no contractor entry during works.\"},\"question\":\"Is contractor entry permitted at Annex B this week?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1082,
+      "body_hash": "5180037bcdec2986c8924a1be5f13407ed53234b917986801ca4166c8a0a4688",
+      "request_hash": "39e99286c96e964579861ba1733a003d3dfd37fcb55cc0d9b33cf80c1669a7e3",
+      "source": null
+    },
+    {
+      "case": "I01",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Service guide: notice 30 days before renewal.\",\"2\":\"Discounts require a signed quote.\"},\"question\":\"When does my renewal notice go out, and what discount will I get?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1057,
+      "body_hash": "c0e9681fd1f4e498f68a14bea50320a8e81a50d3a62e76ca8f8fb08a2dd6bc93",
+      "request_hash": "7e9e60b1535f3e6a5954163ad0534ea2ebf39c60cbe97f726f8d101f041bc691",
+      "source": null
+    },
+    {
+      "case": "I01",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Service guide: notice 30 days before renewal.\",\"2\":\"Discounts require a signed quote.\"},\"question\":\"When does my renewal notice go out, and what discount will I get?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 979,
+      "body_hash": "428128bbd3b89d12bcf05e626f6d4323f64ffa94aeca063908e3b353548f9998",
+      "request_hash": "b9dbd1e5c5b921336181340cea2e5f090ebd550bae32f9950f4ab292957700e1",
+      "source": null
+    },
+    {
+      "case": "I02",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Domestic wires close at 16:00 UTC.\",\"2\":\"Cross-border wires close at 14:00 UTC.\"},\"question\":\"What is my transfer cutoff?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 935,
+      "body_hash": "949a812f7b37d8404b821939f89d43d6061f2f1dd95ff01543cc4560e0859c5c",
+      "request_hash": "1fb9c127e3e85cd02625262c321e65395da5f933724b88e6957fb1a35e17cb53",
+      "source": null
+    },
+    {
+      "case": "I02",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Domestic wires close at 16:00 UTC.\",\"2\":\"Cross-border wires close at 14:00 UTC.\"},\"question\":\"What is my transfer cutoff?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1013,
+      "body_hash": "0c9e3ef2bcb326c711990ede516102aa5eed85df911019a3535e860a3f2eb185",
+      "request_hash": "1837db3bda3e717766adf8bdc240b7bb773164896af466123a17290d765928ce",
+      "source": null
+    },
+    {
+      "case": "I03",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Refrigerated claims require temperature logs.\",\"2\":\"Dry-freight cap is USD 500.\"},\"question\":\"What is the maximum payout for this refrigerated shipment?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1044,
+      "body_hash": "740b2a1c71a9ca8cf3873dedce0500a4ba2ba6eaf80d537016c2b8f63850e3ac",
+      "request_hash": "3d85ba7099cfcd706bfe77200fa308b966de5469a6fbeae891b0415c48533312",
+      "source": null
+    },
+    {
+      "case": "I03",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Refrigerated claims require temperature logs.\",\"2\":\"Dry-freight cap is USD 500.\"},\"question\":\"What is the maximum payout for this refrigerated shipment?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 966,
+      "body_hash": "feb65fdc5a459babcc0e679148a26bde27b0cc15293f5b74eaeba4a6777a7cd7",
+      "request_hash": "167a969b31e0d6a3b3cbfbace1fbeca034d0f0a39140d3f17aa4a2aa1a4b3de3",
+      "source": null
+    },
+    {
+      "case": "I04",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"P1 first acknowledgment target is 15 minutes.\",\"2\":\"Engineers triage acknowledged incidents.\"},\"question\":\"How quickly will my incident be fixed?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 959,
+      "body_hash": "19dafacabde8e07be5d6351d27006fbf23f50afd5532c67e222e62d3c445c143",
+      "request_hash": "4ae89a011f1003e095682ba9105a0beb015c455bfee6c89c8c6194279ae38f37",
+      "source": null
+    },
+    {
+      "case": "I04",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"P1 first acknowledgment target is 15 minutes.\",\"2\":\"Engineers triage acknowledged incidents.\"},\"question\":\"How quickly will my incident be fixed?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1037,
+      "body_hash": "377721f03117bca1fddef1c5f10f8c2c94df685d036ce33735ef580f0312ab2d",
+      "request_hash": "c554f2890c8a7e175ee79810050fbd3c8997fc1236d4431c24b7f90afdcba83c",
+      "source": null
+    },
+    {
+      "case": "I05",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Executed facility §8.4: assignment requires prior written lender consent. Transfer papers may be prepared before consent is delivered.\",\"2\":\"Counsel’s closing tracker, 12 May: transfer papers signed by seller and buyer; consent request sent to lender on 9 May. Item 14 contains the outgoing request and delivery receipt.\"},\"question\":\"As of 12 May 2026, can we mark lender consent to the Atlas assignment complete?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1309,
+      "body_hash": "e6fbd0788a115560aa7bd9eabb0a8e865e5ee97357d4158be75d3e99bf718f5f",
+      "request_hash": "a73bbf98dbb755c9c052ccb3ee45c7841f1f25bb5e9dd9b04414fec3c3c681c2",
+      "source": null
+    },
+    {
+      "case": "I05",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Executed facility §8.4: assignment requires prior written lender consent. Transfer papers may be prepared before consent is delivered.\",\"2\":\"Counsel’s closing tracker, 12 May: transfer papers signed by seller and buyer; consent request sent to lender on 9 May. Item 14 contains the outgoing request and delivery receipt.\"},\"question\":\"As of 12 May 2026, can we mark lender consent to the Atlas assignment complete?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1231,
+      "body_hash": "5da5fd58b4b8eb26234693b73335f216cc8941aa91b9a8110e36732c6684d558",
+      "request_hash": "1e2ba5dc3eba3ea754c7ea875b9008b6a578e9659e46d23b81a3f6ba88220b98",
+      "source": null
+    },
+    {
+      "case": "I06",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Controller-approved Q2 cash-flow extract (USD millions): operating activities 12; total investing outflow 7, including equipment and a minority investment. No split is shown.\",\"2\":\"Q2 fixed-asset roll-forward: additions 5, including assets obtained under finance leases; depreciation 3. The purchases ledger reconciles cash payments separately.\"},\"question\":\"What Q2 free cash flow can we report using operating cash flow less cash paid for capex?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1261,
+      "body_hash": "af7caa8b4be2677b8acee60f2646bb281f1578d7a5638a815b293353392c0b2e",
+      "request_hash": "7ad886140a283e2ee686d4defb99f3db76ee1a885cbd236f88771561b4fcad15",
+      "source": null
+    },
+    {
+      "case": "I06",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Controller-approved Q2 cash-flow extract (USD millions): operating activities 12; total investing outflow 7, including equipment and a minority investment. No split is shown.\",\"2\":\"Q2 fixed-asset roll-forward: additions 5, including assets obtained under finance leases; depreciation 3. The purchases ledger reconciles cash payments separately.\"},\"question\":\"What Q2 free cash flow can we report using operating cash flow less cash paid for capex?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1339,
+      "body_hash": "fdaa138af7206d334bca68e600b8b311826513e0c0b96893ac391a5123662de4",
+      "request_hash": "e8d001775580e76602d16b91fdb63015f73c369f90a7332129230350bdce37ff",
+      "source": null
+    },
+    {
+      "case": "I07",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Reusable sensors return to the depot.\",\"2\":\"Single-use sensors go to clinical disposal.\"},\"question\":\"Do I return this sensor or discard it?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1032,
+      "body_hash": "6695dceda537e64bcd9d8128cede1925d572ffc7a45f61017018dd38d64ea786",
+      "request_hash": "31aa05f4f27c867454fb683ca23927913393e575ed664fdc47084af989f8def9",
+      "source": null
+    },
+    {
+      "case": "I07",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Reusable sensors return to the depot.\",\"2\":\"Single-use sensors go to clinical disposal.\"},\"question\":\"Do I return this sensor or discard it?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 954,
+      "body_hash": "b6b8bcaeef8ea502029f8855b5129533176b9bf09a294004090b7d288602da2a",
+      "request_hash": "ff711cafaac41a026c174e2f9c705a619ed9c59d91695763977379980d075370",
+      "source": null
+    },
+    {
+      "case": "I08",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Unopened items may be returned within 21 days of purchase.\",\"2\":\"Receipt says unopened, purchased 8 days ago.\"},\"question\":\"Can I return this item, and who pays shipping?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 984,
+      "body_hash": "973efac100a6a03dc725d58fc5cd2b5e8ec33b2346189c3ecb8faa172f5123b5",
+      "request_hash": "9af08ab6224c2cd622f935cbf2725eb0e1435075697e8dd5faab5bd2d5822303",
+      "source": null
+    },
+    {
+      "case": "I08",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Unopened items may be returned within 21 days of purchase.\",\"2\":\"Receipt says unopened, purchased 8 days ago.\"},\"question\":\"Can I return this item, and who pays shipping?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1062,
+      "body_hash": "f11c0e5d196f5ef2df5576b41c58d4d2ec2001f2fb311be5446582c246d99143",
+      "request_hash": "3570429f4a6ff8741d2cba980d78a58bc8d556cc8fd01a31768fd27a6c2b2396",
+      "source": null
+    },
+    {
+      "case": "I09",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Approved onboarding SOP v3: Compliance records a dated final disposition against the supplier legal entity after reviewing automated hits. Intake acknowledgment opens the case.\",\"2\":\"Nova Parts Ltd log, 18 August: intake acknowledged; automated search returned a potential name match. Analyst requested incorporation details. Latest event: supplier uploaded them.\"},\"question\":\"Can procurement mark Nova Parts Ltd cleared for onboarding on 18 August 2026?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1347,
+      "body_hash": "0aafc54f892d0075b73bc386e5f89e017b3cf551703808104d2ca1223feb4766",
+      "request_hash": "09bd63d4b332692e7f304de5ab398684a2ba8f348f237f669e5d15160a4da6bc",
+      "source": null
+    },
+    {
+      "case": "I09",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Approved onboarding SOP v3: Compliance records a dated final disposition against the supplier legal entity after reviewing automated hits. Intake acknowledgment opens the case.\",\"2\":\"Nova Parts Ltd log, 18 August: intake acknowledged; automated search returned a potential name match. Analyst requested incorporation details. Latest event: supplier uploaded them.\"},\"question\":\"Can procurement mark Nova Parts Ltd cleared for onboarding on 18 August 2026?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1269,
+      "body_hash": "9f64c6e4f763d0b7ad6b1bfa979fb77ad661896dfe1ebf58fe9ed24f6054e0c4",
+      "request_hash": "f2cd759f061b8bd834e617f18030cc5b8c7423795ac3ce310f6b8aae5c01e8ee",
+      "source": null
+    },
+    {
+      "case": "I10",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"North campus keys: Security.\",\"2\":\"South campus keys: Facilities.\"},\"question\":\"Which office handles my key replacement?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 934,
+      "body_hash": "d7d0d9a0306b88408340c46d5ed97424f44ecd38773af2043e64beb658f22a92",
+      "request_hash": "b6a44910374ad844a8123344d8ccb29d0f020c177d0f18a955a022dfe088a1df",
+      "source": null
+    },
+    {
+      "case": "I10",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"North campus keys: Security.\",\"2\":\"South campus keys: Facilities.\"},\"question\":\"Which office handles my key replacement?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1012,
+      "body_hash": "42a8d0d9556fb5b357c717f78c1650d4bb78a96393e720beb3a78da179f59fdc",
+      "request_hash": "824b947b82d4a3ca8000bb3c82e3a740ab1dd72282978ca00d46e3cab2f5e5a9",
+      "source": null
+    },
+    {
+      "case": "I11",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Grade B night differential: 8%.\",\"2\":\"Grade C roster lists night shifts.\"},\"question\":\"How much is the night differential for grade C?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1026,
+      "body_hash": "3d2bd2f89866855f2fa22a2c822854145778c64d4b0c0919dbe1bd62c704cd94",
+      "request_hash": "c57ef1a424c2fc716f769e4f52efd7da0e8c3d22b89e3a8ac1b7c0a3bd2a6cef",
+      "source": null
+    },
+    {
+      "case": "I11",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Grade B night differential: 8%.\",\"2\":\"Grade C roster lists night shifts.\"},\"question\":\"How much is the night differential for grade C?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 948,
+      "body_hash": "dba9a5794811084eada325a0abb535e20f0d9498e59d3cbe4853b64e1987a292",
+      "request_hash": "29e6a85ff70e5c0fdf79d6d9aa99b0fbbd2b14881114ed7b2d10cb0c8d6be8c2",
+      "source": null
+    },
+    {
+      "case": "I12",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Stock bulletin: reagent available for order today.\",\"2\":\"Carrier window is confirmed only after dispatch.\"},\"question\":\"Can I order today and get delivery by Friday?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 979,
+      "body_hash": "042faa85aaaac09c8dd7c2f20158df08d73b5a4b574a7f4fe377198fa0fddbc9",
+      "request_hash": "bf93c9330a6f443c705cc1cad54c36700b6e0a755d2f936d3b4163857e5994eb",
+      "source": null
+    },
+    {
+      "case": "I12",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Stock bulletin: reagent available for order today.\",\"2\":\"Carrier window is confirmed only after dispatch.\"},\"question\":\"Can I order today and get delivery by Friday?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1057,
+      "body_hash": "2017eacde0d79d4be1a3f1a918bf97a631c58df3e2112be845fc2c343d4c5c8c",
+      "request_hash": "eb504d2b134a1a4624ba00fa0946ad3482a451236f4817df50c9a10c04571498",
+      "source": null
+    },
+    {
+      "case": "R01",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Pro guide: exports expire after 14 calendar days.\",\"2\":\"Pro guide: fresh exports can be requested.\"},\"question\":\"How long do Pro audit exports stay downloadable?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1053,
+      "body_hash": "87158d07df018b52c9245920d1232b879f6d3054fd6c7f6f7a80a513fc78a8ed",
+      "request_hash": "62d804634e1e2f9d8bc34cedc6b1ae580044fb63f7de30d2208db2f224de3b35",
+      "source": null
+    },
+    {
+      "case": "R01",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Pro guide: exports expire after 14 calendar days.\",\"2\":\"Pro guide: fresh exports can be requested.\"},\"question\":\"How long do Pro audit exports stay downloadable?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 975,
+      "body_hash": "11a76eba93e37dd01d7c315477311d94cee2801933948ab95d1e5443ce16d68c",
+      "request_hash": "74a1f100e5189b9ac193d8b60d76a2f783db7713f647c53f06bf879ab08cef17",
+      "source": null
+    },
+    {
+      "case": "R02",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Purchasing policy: over EUR 20,000 requires controller signature.\",\"2\":\"Intake guide: buyer prepares the requisition.\"},\"question\":\"Who signs orders above EUR 20,000?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 980,
+      "body_hash": "60dbf2bc72aacc8929ce0d70aa33d73d6c30ff1cc9b5bc101fd4a8ed09c7abdd",
+      "request_hash": "5ba1c5d7eb8e2a04a6a9e2d0ccd10fe9711b7c0021c7de8952f8ed6e8c4d2893",
+      "source": null
+    },
+    {
+      "case": "R02",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Purchasing policy: over EUR 20,000 requires controller signature.\",\"2\":\"Intake guide: buyer prepares the requisition.\"},\"question\":\"Who signs orders above EUR 20,000?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1058,
+      "body_hash": "007bf5842adc1114058fb345c38d9f4e355775449e92c7ea691cac1f5486f286",
+      "request_hash": "978a0b984a0196c28b18d928ee02b24354e631829f5bf16c8291a44d291c4bce",
+      "source": null
+    },
+    {
+      "case": "R03",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Q2 approved cash-flow statement: operating cash flow EUR 8m.\",\"2\":\"Q2 earnings release: operating profit EUR 11m.\"},\"question\":\"What was Q2 operating cash flow?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1052,
+      "body_hash": "4361fe03f29e8b94984d8dc82b5e7cd084eebe062c2e5b6deb9157539a013cdb",
+      "request_hash": "e44790115982e09fc5ff73396e0cb6df38251d33ce93a032eb39d8c134a465b8",
+      "source": null
+    },
+    {
+      "case": "R03",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Q2 approved cash-flow statement: operating cash flow EUR 8m.\",\"2\":\"Q2 earnings release: operating profit EUR 11m.\"},\"question\":\"What was Q2 operating cash flow?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 974,
+      "body_hash": "05bec233f18164bde2fb4fde8a4197062de340a1c3a98085e276c85af07de730",
+      "request_hash": "855fa6c028281cee33a05caa2b3873d7d4be3566db0b8b0710e1062496bc60cd",
+      "source": null
+    },
+    {
+      "case": "R04",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Domestic carriage terms: within 3 business days of delivery.\",\"2\":\"Claims guide: attach photos.\"},\"question\":\"When must a domestic damage claim be filed?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 967,
+      "body_hash": "277d7e8bc2ef90bcf60af84ab54c2d20734f36ffae436458b300cbaa081d382f",
+      "request_hash": "42deeb78530b053158b726d13520ea6503bf9b190aafb23e791bd2cefae1800b",
+      "source": null
+    },
+    {
+      "case": "R04",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Domestic carriage terms: within 3 business days of delivery.\",\"2\":\"Claims guide: attach photos.\"},\"question\":\"When must a domestic damage claim be filed?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1045,
+      "body_hash": "6d377e2dec85e97dcd0544cf08f1a1f367b1dd92cfab5243cd37f0ab9ef2b7a7",
+      "request_hash": "31e74eb1e7243c557a5bb909cd00a589a9435637e078e69185d0cb1fa46aeaeb",
+      "source": null
+    },
+    {
+      "case": "R05",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Store operations handbook: rota exceptions go to Workforce Desk.\",\"2\":\"IT handbook: login failures go to IT Desk.\"},\"question\":\"Where do managers submit a rota exception?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1062,
+      "body_hash": "343e80329db8ca135a318f78710b68ebcbc9c9b6840cd72177a77d7e2c24c29a",
+      "request_hash": "f16afd7d9c405c5acfb322cf9df76ab9685b691632f88174ad990abc46b80038",
+      "source": null
+    },
+    {
+      "case": "R05",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Store operations handbook: rota exceptions go to Workforce Desk.\",\"2\":\"IT handbook: login failures go to IT Desk.\"},\"question\":\"Where do managers submit a rota exception?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 984,
+      "body_hash": "2b9e2695cc3336305dd4b5b89819ca7260d80a8cf1ab6d0bd8e7574f0d6c60e9",
+      "request_hash": "6e67e992c2f2baf229256dca84a2e5969fbbf3173f3b0ab513ef260e1c78041d",
+      "source": null
+    },
+    {
+      "case": "R06",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Executed Atlas lease: renewal requires written election.\",\"2\":\"Lease schedule: premises occupied through June.\"},\"question\":\"Is Atlas's lease renewal automatic?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 974,
+      "body_hash": "06ac303bcbdc3c0eb5f52ab5c67c3a2744280a1ec7b9184ac0013536b4c9303b",
+      "request_hash": "a4d2b4da1b78247241bacf45f6778f94cf3a2244c3a92b3cc12213560ecbfbfb",
+      "source": null
+    },
+    {
+      "case": "R06",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Executed Atlas lease: renewal requires written election.\",\"2\":\"Lease schedule: premises occupied through June.\"},\"question\":\"Is Atlas's lease renewal automatic?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1052,
+      "body_hash": "c87d8e26b7b8d60a27cf7bad2cbd6bc23ad0529e38d0df9d34e6f0d764cb0d12",
+      "request_hash": "c54d47c997545f02b7482356f47fa71d28815b0542513b36fa2de58ec8abd71e",
+      "source": null
+    },
+    {
+      "case": "R07",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Reconciliation dictionary: batch_ref identifies a settlement batch.\",\"2\":\"transfer_ref identifies an individual transfer.\"},\"question\":\"Which field identifies a settlement batch?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1070,
+      "body_hash": "a5a3ee3cc4214804a461a416c437de2dfd6ccb7380fe1baa1f9ef276f5fd2bb3",
+      "request_hash": "0c2d00dd9130f926ce2ae7405feaf2690f580faa49eb07a151549f5d597e9c38",
+      "source": null
+    },
+    {
+      "case": "R07",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Reconciliation dictionary: batch_ref identifies a settlement batch.\",\"2\":\"transfer_ref identifies an individual transfer.\"},\"question\":\"Which field identifies a settlement batch?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 992,
+      "body_hash": "ee477a0aef549061adb6fd28c11ff7cf6a650d44c92f2cea60909146db411fba",
+      "request_hash": "1a6577cd1529e213e7dd81899bb1f2e602185ea492983546c4717c321c7ec93e",
+      "source": null
+    },
+    {
+      "case": "R08",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Site access SOP: visitor badges expire at closing on issue day.\",\"2\":\"Staff badges expire annually.\"},\"question\":\"How long are visitor badges valid?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 962,
+      "body_hash": "e17092e962b6ea5128216de3670d9c18a3e76e15d3654d5fe7e800f251d76388",
+      "request_hash": "32546a88c88edf3d3e6cca3834fc58afdbdf90088e75c3b27c30b2fb1ecfa216",
+      "source": null
+    },
+    {
+      "case": "R08",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Site access SOP: visitor badges expire at closing on issue day.\",\"2\":\"Staff badges expire annually.\"},\"question\":\"How long are visitor badges valid?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1040,
+      "body_hash": "f20e9e5e90ed3249aa0977555f7a52692f6ea1304716a57c4c9524885499671a",
+      "request_hash": "4c4536f8314710440805ee88a740a5d29b85081a5c69efc9d0797c23aa231c0c",
+      "source": null
+    },
+    {
+      "case": "R09",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Fleet service manual: send address changes to fleet servicing.\",\"2\":\"Claims triage accepts loss notices.\"},\"question\":\"Which desk receives a fleet address change?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1054,
+      "body_hash": "e9108a94f2e84ef0bd56885ee14eb198c48923c4d38f89281f9ad2f1abc08fa9",
+      "request_hash": "18b3cda5199cc02b7132f3201eac46366cf6382dd78c543c6af64f8e7eb53577",
+      "source": null
+    },
+    {
+      "case": "R09",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Fleet service manual: send address changes to fleet servicing.\",\"2\":\"Claims triage accepts loss notices.\"},\"question\":\"Which desk receives a fleet address change?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 976,
+      "body_hash": "e55d35cb4455c69911d748c9699294f125d85de98bf8403522b35307b89613ec",
+      "request_hash": "2a292239b005bc2767fcb438e90c7d005a2e6bdc4b2427d6dc7166ee7f8f817e",
+      "source": null
+    },
+    {
+      "case": "R10",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Lab archive SOP: signed assay reports use PDF/A.\",\"2\":\"Raw readings are CSV.\"},\"question\":\"Which file format is required for signed assay reports?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 960,
+      "body_hash": "c75b770e7cef7b944b5c4d21571e52aa6f01562d3f2dcffaa59ff3d4b5c0f965",
+      "request_hash": "87dcabc487031cd1d81d769dc149a91f1832362ab6ca377f67ff3374db85b5a0",
+      "source": null
+    },
+    {
+      "case": "R10",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Lab archive SOP: signed assay reports use PDF/A.\",\"2\":\"Raw readings are CSV.\"},\"question\":\"Which file format is required for signed assay reports?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1038,
+      "body_hash": "a3bb25c4256b76b9bff845440350924dd439fc4a6d94ba43221ed4b302b578c2",
+      "request_hash": "1a07398a7f77d8e5edf911abe13369de9c89f0ee3b0cb8077e86b5c6d98e8f33",
+      "source": null
+    },
+    {
+      "case": "R11",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Executed SLA: exclude announced planned maintenance.\",\"2\":\"Status page logs all outages.\"},\"question\":\"Does planned maintenance count toward the contractual uptime calculation?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1068,
+      "body_hash": "e489c3fff17f2b2f0ac88debcc1c78fdf9cac168feb0dbc35a1eb3efa99b7ab1",
+      "request_hash": "95181391994e0c1922789bb7e497e7457439d3364652f04515a748fe03158159",
+      "source": null
+    },
+    {
+      "case": "R11",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"Executed SLA: exclude announced planned maintenance.\",\"2\":\"Status page logs all outages.\"},\"question\":\"Does planned maintenance count toward the contractual uptime calculation?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 990,
+      "body_hash": "254d71faf5b5982cd1f6081d2282f6fe05e9ae72c8a5ccc0653d5ef4b30911ff",
+      "request_hash": "70f3d8d9272bcd5bf6928b26cdedf0f4cb29210efeef18e666447c63084dd7ca",
+      "source": null
+    },
+    {
+      "case": "R12",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nReturn exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"EMEA pack cover: all amounts in EUR unless marked otherwise.\",\"2\":\"US pack cover: USD.\"},\"question\":\"What currency does the EMEA margin pack use?\"}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 959,
+      "body_hash": "0589abc840662e36878c45e2002deff8d87bf67d5102e9ff28ad4c272c2db2bd",
+      "request_hash": "8e27a738c6c00734041a394496bba0500013c0d73f2e1dc04683c20dcedc4531",
+      "source": null
+    },
+    {
+      "case": "R12",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.\nAnswer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action."
+          },
+          {
+            "role": "user",
+            "content": "{\"excerpts\":{\"1\":\"EMEA pack cover: all amounts in EUR unless marked otherwise.\",\"2\":\"US pack cover: USD.\"},\"question\":\"What currency does the EMEA margin pack use?\"}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "bytes": 1037,
+      "body_hash": "4b74c0438fc36e9598f958d8c676179dffd9de15317d5dd8db3af38e370268ff",
+      "request_hash": "f9a9759af1c013f6dd324e8606bcdb2166d226324997e125d34e914e82b63fa6",
+      "source": null
+    }
+  ]
+}

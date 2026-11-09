@@ -1,0 +1,14 @@
+id: rag_safeguards
+version: '1.0'
+research_question: Which RAG reliability safeguards are worth deploying?
+hypothesis: Safeguards may suppress unsupported claims or useful responses.
+primary_variable: stage
+dataset: {id: enterprise_packets, version: '1.0', path: protocol.json}
+conditions:
+  - {id: generator, variables: {stage: generator}}
+  - {id: gate, variables: {stage: gate}}
+max_requests: 72
+max_output_tokens: 512
+max_spend_usd: 0
+grader_id: stage_format
+grader_version: '1.0'

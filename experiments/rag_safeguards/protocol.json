@@ -1,0 +1,407 @@
+{
+  "prompts": {
+    "common": "Use only the supplied packet. For the requested subject, scope and date, apply the governing source: executed terms over drafts, signed policy over commentary, approved filings over estimates, and a correction over the item it explicitly replaces. A later date alone does not establish authority. Where equally authoritative applicable sources disagree without resolution, identify the conflict. Do not infer missing terms.",
+    "generator": "Answer the customer. Cite each factual policy or numerical claim with its passage ID. Answer supported parts and identify unknowns. Ask a focused clarification or explain conditional alternatives if needed. You may decline when the packet cannot answer. Never promise an action.",
+    "gate": "Return exactly PASS if the packet supports a useful answer, supported part, focused clarification, or specific explanation of a documented conflict. Otherwise return BLOCK. Do not answer the customer.",
+    "verifier": "Given the customer question, evidence and candidate reply, return exactly PASS if every substantive claim is supported by its cited passage under the authority rules, and the reply respects material qualifications, missing facts and conflicts. A justified abstention or focused clarification may pass without factual citations. Block a gratuitous refusal when the packet clearly supports a useful response. Otherwise return BLOCK. Do not correct, rewrite or answer."
+  },
+  "referral": "The available evidence does not establish a response I can release. Please ask the responsible desk to review.",
+  "cases": [
+    {
+      "id": "R01",
+      "workflow": "R01 · software support",
+      "question": "How long do Pro audit exports stay downloadable?",
+      "packet": [
+        "Pro guide: exports expire after 14 calendar days.",
+        "Pro guide: fresh exports can be requested."
+      ],
+      "key": "Give 14 calendar days [1].",
+      "risk": "Unit confusion can lose a download. Tests cost of checking a direct lookup."
+    },
+    {
+      "id": "R02",
+      "workflow": "R02 · manufacturing procurement",
+      "question": "Who signs orders above EUR 20,000?",
+      "packet": [
+        "Purchasing policy: over EUR 20,000 requires controller signature.",
+        "Intake guide: buyer prepares the requisition."
+      ],
+      "key": "Controller [1].",
+      "risk": "Preparer mistaken for signer delays purchase. Tests role attribution."
+    },
+    {
+      "id": "R03",
+      "workflow": "R03 · fund reporting",
+      "question": "What was Q2 operating cash flow?",
+      "packet": [
+        "Q2 approved cash-flow statement: operating cash flow EUR 8m.",
+        "Q2 earnings release: operating profit EUR 11m."
+      ],
+      "key": "EUR 8m [1].",
+      "risk": "Metric swap misstates liquidity. Can an answer check justify its overhead?"
+    },
+    {
+      "id": "R04",
+      "workflow": "R04 · logistics support",
+      "question": "When must a domestic damage claim be filed?",
+      "packet": [
+        "Domestic carriage terms: within 3 business days of delivery.",
+        "Claims guide: attach photos."
+      ],
+      "key": "State trigger, duration and business-day unit [1].",
+      "risk": "Deadline error can forfeit a claim. Tests low ambiguity with real stakes."
+    },
+    {
+      "id": "R05",
+      "workflow": "R05 · retail workforce",
+      "question": "Where do managers submit a rota exception?",
+      "packet": [
+        "Store operations handbook: rota exceptions go to Workforce Desk.",
+        "IT handbook: login failures go to IT Desk."
+      ],
+      "key": "Workforce Desk [1].",
+      "risk": "Misrouting costs staff time. Tests cheap, reversible advice."
+    },
+    {
+      "id": "R06",
+      "workflow": "R06 · corporate diligence",
+      "question": "Is Atlas's lease renewal automatic?",
+      "packet": [
+        "Executed Atlas lease: renewal requires written election.",
+        "Lease schedule: premises occupied through June."
+      ],
+      "key": "No; written election [1].",
+      "risk": "Unfounded renewal enters a deal model. Tests a short authoritative clause."
+    },
+    {
+      "id": "R07",
+      "workflow": "R07 · payments operations",
+      "question": "Which field identifies a settlement batch?",
+      "packet": [
+        "Reconciliation dictionary: batch_ref identifies a settlement batch.",
+        "transfer_ref identifies an individual transfer."
+      ],
+      "key": "batch_ref [1].",
+      "risk": "Wrong join corrupts reconciliation. Tests similar field names."
+    },
+    {
+      "id": "R08",
+      "workflow": "R08 · healthcare administration",
+      "question": "How long are visitor badges valid?",
+      "packet": [
+        "Site access SOP: visitor badges expire at closing on issue day.",
+        "Staff badges expire annually."
+      ],
+      "key": "Closing on issue day [1].",
+      "risk": "Access advice could strand a visitor. Tests scope selection."
+    },
+    {
+      "id": "R09",
+      "workflow": "R09 · insurance servicing",
+      "question": "Which desk receives a fleet address change?",
+      "packet": [
+        "Fleet service manual: send address changes to fleet servicing.",
+        "Claims triage accepts loss notices."
+      ],
+      "key": "Fleet servicing [1].",
+      "risk": "Misdirection delays updates. Measures refusal overhead."
+    },
+    {
+      "id": "R10",
+      "workflow": "R10 · R&D records",
+      "question": "Which file format is required for signed assay reports?",
+      "packet": [
+        "Lab archive SOP: signed assay reports use PDF/A.",
+        "Raw readings are CSV."
+      ],
+      "key": "PDF/A [1].",
+      "risk": "Wrong format fails archive intake. Tests clear document types."
+    },
+    {
+      "id": "R11",
+      "workflow": "R11 · infrastructure service",
+      "question": "Does planned maintenance count toward the contractual uptime calculation?",
+      "packet": [
+        "Executed SLA: exclude announced planned maintenance.",
+        "Status page logs all outages."
+      ],
+      "key": "Exclude announced planned maintenance [1]; retain announced qualifier.",
+      "risk": "Unqualified exclusion distorts credits. Tests useful precision."
+    },
+    {
+      "id": "R12",
+      "workflow": "R12 · wholesale finance",
+      "question": "What currency does the EMEA margin pack use?",
+      "packet": [
+        "EMEA pack cover: all amounts in EUR unless marked otherwise.",
+        "US pack cover: USD."
+      ],
+      "key": "EUR unless marked otherwise [1].",
+      "risk": "Lost qualifier can misprice a line. Tests unnecessary checking."
+    },
+    {
+      "id": "I01",
+      "workflow": "I01 · SaaS renewals",
+      "question": "When does my renewal notice go out, and what discount will I get?",
+      "packet": [
+        "Service guide: notice 30 days before renewal.",
+        "Discounts require a signed quote."
+      ],
+      "key": "Give notice interval [1]; discount unknown without quote [2].",
+      "risk": "Missing customer term; broad block loses useful timing."
+    },
+    {
+      "id": "I02",
+      "workflow": "I02 · banking operations",
+      "question": "What is my transfer cutoff?",
+      "packet": [
+        "Domestic wires close at 16:00 UTC.",
+        "Cross-border wires close at 14:00 UTC."
+      ],
+      "key": "Ask transfer type or give both scoped times.",
+      "risk": "Missing transaction type; unconditional time risks missed settlement."
+    },
+    {
+      "id": "I03",
+      "workflow": "I03 · freight claims",
+      "question": "What is the maximum payout for this refrigerated shipment?",
+      "packet": [
+        "Refrigerated claims require temperature logs.",
+        "Dry-freight cap is USD 500."
+      ],
+      "key": "Decline the amount; dry cap inapplicable.",
+      "risk": "Retrieval miss: refrigerated schedule omitted. Gate might avoid unsupported extrapolation."
+    },
+    {
+      "id": "I04",
+      "workflow": "I04 · enterprise IT",
+      "question": "How quickly will my incident be fixed?",
+      "packet": [
+        "P1 first acknowledgment target is 15 minutes.",
+        "Engineers triage acknowledged incidents."
+      ],
+      "key": "No fix-time commitment; distinguish acknowledgment if mentioned.",
+      "risk": "No resolution SLA; wrong promise affects incident communications."
+    },
+    {
+      "id": "I05",
+      "workflow": "I05 · deal diligence",
+      "question": "As of 12 May 2026, can we mark lender consent to the Atlas assignment complete?",
+      "packet": [
+        "Executed facility §8.4: assignment requires prior written lender consent. Transfer papers may be prepared before consent is delivered.",
+        "Counsel’s closing tracker, 12 May: transfer papers signed by seller and buyer; consent request sent to lender on 9 May. Item 14 contains the outgoing request and delivery receipt."
+      ],
+      "key": "Keep consent open. Delivery of the request and signatures on transfer papers do not establish written lender consent [1,2]. Request the consent; do not assert denial.",
+      "risk": "A closing checklist needs proof of approval; a partial answer can identify what remains outstanding."
+    },
+    {
+      "id": "I06",
+      "workflow": "I06 · treasury analysis",
+      "question": "What Q2 free cash flow can we report using operating cash flow less cash paid for capex?",
+      "packet": [
+        "Controller-approved Q2 cash-flow extract (USD millions): operating activities 12; total investing outflow 7, including equipment and a minority investment. No split is shown.",
+        "Q2 fixed-asset roll-forward: additions 5, including assets obtained under finance leases; depreciation 3. The purchases ledger reconciles cash payments separately."
+      ],
+      "key": "Give USD 12m operating cash flow [1]. Neither total investing outflow nor asset additions isolates cash capex [1,2]. Request the cash capex figure before reporting FCF.",
+      "risk": "Confusing cash flows with accruals misstates cash available. A broad block also loses the supported operand."
+    },
+    {
+      "id": "I07",
+      "workflow": "I07 · medical-device servicing",
+      "question": "Do I return this sensor or discard it?",
+      "packet": [
+        "Reusable sensors return to the depot.",
+        "Single-use sensors go to clinical disposal."
+      ],
+      "key": "Ask sensor class or explain branches.",
+      "risk": "Missing SKU class; refusal loses safe routing guidance."
+    },
+    {
+      "id": "I08",
+      "workflow": "I08 · retail returns",
+      "question": "Can I return this item, and who pays shipping?",
+      "packet": [
+        "Unopened items may be returned within 21 days of purchase.",
+        "Receipt says unopened, purchased 8 days ago."
+      ],
+      "key": "Eligible under supplied rule [1,2]; shipping payer unknown.",
+      "risk": "Incomplete terms; compare partial answer retention."
+    },
+    {
+      "id": "I09",
+      "workflow": "I09 · compliance intake",
+      "question": "Can procurement mark Nova Parts Ltd cleared for onboarding on 18 August 2026?",
+      "packet": [
+        "Approved onboarding SOP v3: Compliance records a dated final disposition against the supplier legal entity after reviewing automated hits. Intake acknowledgment opens the case.",
+        "Nova Parts Ltd log, 18 August: intake acknowledged; automated search returned a potential name match. Analyst requested incorporation details. Latest event: supplier uploaded them."
+      ],
+      "key": "Clearance is unestablished. Request Compliance’s final disposition [1,2]. A potential hit also does not establish a confirmed match.",
+      "risk": "Treating procedural progress as clearance or a hit as final could harm a supplier."
+    },
+    {
+      "id": "I10",
+      "workflow": "I10 · property management",
+      "question": "Which office handles my key replacement?",
+      "packet": [
+        "North campus keys: Security.",
+        "South campus keys: Facilities."
+      ],
+      "key": "Ask campus or state both branches.",
+      "risk": "Missing location; clarification avoids misrouting."
+    },
+    {
+      "id": "I11",
+      "workflow": "I11 · payroll support",
+      "question": "How much is the night differential for grade C?",
+      "packet": [
+        "Grade B night differential: 8%.",
+        "Grade C roster lists night shifts."
+      ],
+      "key": "No grade C rate; request grade C pay table.",
+      "risk": "Retrieval miss: grade C schedule omitted. A guessed rate affects wages."
+    },
+    {
+      "id": "I12",
+      "workflow": "I12 · research procurement",
+      "question": "Can I order today and get delivery by Friday?",
+      "packet": [
+        "Stock bulletin: reagent available for order today.",
+        "Carrier window is confirmed only after dispatch."
+      ],
+      "key": "Order available [1]; Friday unconfirmed [2].",
+      "risk": "Missing delivery commitment; checks should preserve availability answer."
+    },
+    {
+      "id": "C01",
+      "workflow": "C01 · finance reporting",
+      "question": "Which FY25 revenue belongs in the board pack?",
+      "packet": [
+        "Approved FY25 filing: USD 84m revenue.",
+        "Earlier forecast: USD 90m revenue."
+      ],
+      "key": "USD 84m [1], actual controls.",
+      "risk": "Forecast substituted for actual; post-check can inspect the chosen figure."
+    },
+    {
+      "id": "C02",
+      "workflow": "C02 · freight contracting",
+      "question": "What contractual cap applies to one ordinary domestic parcel lost on lane F7 in September 2026?",
+      "packet": [
+        "Sales guide, revised 2 September 2026: default domestic liability is USD 1,000 per parcel. Account riders govern where applicable; declared-value shipments use a separate schedule.",
+        "Executed F7 rider effective 1 August through 31 December 2026: ordinary domestic parcels on F7 carry a USD 750 per-parcel cap. Other master terms remain in force."
+      ],
+      "key": "USD 750 per parcel [2]. The later guide defers to the rider [1]. A cap alone cannot establish the actual payout.",
+      "risk": "A claims handler needs the scoped contract term even when a newer default is available."
+    },
+    {
+      "id": "C03",
+      "workflow": "C03 · records compliance",
+      "question": "Which retention period was in force for EU class E files on 1 May 2026?",
+      "packet": [
+        "Signed EU schedule v5, published 20 April 2026: effective 1 July 2026, class E files carry a seven-year period. Teams may prepare indexing changes in advance.",
+        "Signed EU schedule v4, effective 1 January 2025 through 30 June 2026 inclusive: retain class E files for five years."
+      ],
+      "key": "Five years under v4 [2]. Publication in April did not advance v5’s July effective date [1].",
+      "risk": "Confusing publication with effect changes the answer to a historical compliance query."
+    },
+    {
+      "id": "C04",
+      "workflow": "C04 · incident response",
+      "question": "Who is primary for service X on the 22:00–06:00 UTC shift starting 14 June 2026?",
+      "packet": [
+        "Approved operations roster for that shift: X primary Chen, secondary Patel. Both acknowledged the shift.",
+        "Incident bridge sheet approved by the same office for that shift: X primary Patel, secondary Chen. The records carry the same approval timestamp; neither specifies precedence or supersession."
+      ],
+      "key": "Cite both records [1,2], identify the conflict and seek the duty manager. Acknowledgment establishes availability only.",
+      "risk": "A live incident needs a named responder. A checker lacks evidence to resolve equally authoritative assignments."
+    },
+    {
+      "id": "C05",
+      "workflow": "C05 · software billing",
+      "question": "Is premium support included in tenant T's signed agreement?",
+      "packet": [
+        "Executed T agreement: premium support excluded.",
+        "Draft amendment: premium support included."
+      ],
+      "key": "Excluded [1]; draft changes nothing.",
+      "risk": "Sales promise exceeds entitlement; tests source status."
+    },
+    {
+      "id": "C06",
+      "workflow": "C06 · acquisition diligence",
+      "question": "How many active sites did the target report at closing?",
+      "packet": [
+        "Closing certificate: 11 sites.",
+        "Corrected closing certificate explicitly replaces original: 10 sites."
+      ],
+      "key": "Ten [2].",
+      "risk": "Superseded count changes valuation inputs."
+    },
+    {
+      "id": "C07",
+      "workflow": "C07 · HR operations",
+      "question": "Can London staff expense home broadband?",
+      "packet": [
+        "London signed policy: no broadband reimbursement.",
+        "Dublin staff guide: broadband eligible."
+      ],
+      "key": "No under London policy [1].",
+      "risk": "Geographic mismatch risks improper reimbursement."
+    },
+    {
+      "id": "C08",
+      "workflow": "C08 · industrial safety",
+      "question": "Which inspection interval governs press P2?",
+      "packet": [
+        "Signed P2 maintenance schedule: every 40 operating hours.",
+        "Technician note: 40 calendar days usually works."
+      ],
+      "key": "Forty operating hours [1].",
+      "risk": "Unit and authority error could delay inspection."
+    },
+    {
+      "id": "C09",
+      "workflow": "C09 · customer credits",
+      "question": "What credit rate did client K sign?",
+      "packet": [
+        "Executed K order: 2% service credit.",
+        "Account chat posted later: probably 5%."
+      ],
+      "key": "Two percent [1].",
+      "risk": "Recency without authority; unnecessary refusal also delays resolution."
+    },
+    {
+      "id": "C10",
+      "workflow": "C10 · credit analysis",
+      "question": "What covenant leverage ratio can we report for borrower L at September 2026 quarter end?",
+      "packet": [
+        "Executed facility: subtract unrestricted cash from drawn debt at quarter end, then divide by trailing covenant EBITDA. Restricted cash cannot be deducted.",
+        "September monitoring pack (USD m): drawn debt 64, covenant EBITDA 20, combined restricted and unrestricted cash 10. Gross leverage 3.2x. Treasury’s cash restriction reconciliation is pending."
+      ],
+      "key": "Give (64 minus unrestricted cash) divided by 20 [1,2]. Without the cash split neither 3.2x gross nor 2.7x after deducting all cash is established as covenant leverage.",
+      "risk": "A dashboard value looks ready for a credit memo although the signed definition needs another input."
+    },
+    {
+      "id": "C11",
+      "workflow": "C11 · tax operations",
+      "question": "Which VAT code did the approved mapping assign to SKU Z?",
+      "packet": [
+        "Approved map revision 4 for Z: code V1.",
+        "Approved map revision 4 for Z: code V2."
+      ],
+      "key": "Identify unresolved equal-version collision [1,2]; seek mapping owner.",
+      "risk": "Choosing either code risks miscoding. Data repair may dominate inference."
+    },
+    {
+      "id": "C12",
+      "workflow": "C12 · facilities access",
+      "question": "Is contractor entry permitted at Annex B this week?",
+      "packet": [
+        "Building-wide notice: normal contractor hours.",
+        "Signed Annex B closure for this week: no contractor entry during works."
+      ],
+      "key": "Entry prohibited [2]; scoped closure governs.",
+      "risk": "General rule hides local exception; tests whether answer cites exception."
+    }
+  ]
+}

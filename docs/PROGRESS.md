@@ -1,5 +1,9 @@
 # Progress — November 9, 2026
 
+## Experiment 03 Phase B · Stage 1 freeze awaiting approval
+
+Built the isolated [staged experiment](../experiments/rag_safeguards/README.md) from accepted design revision `963cade`. The frozen first stage has 72 bodies, a $0.03754650 reserve and no live receipts. Mock-only tests cover the separate verifier materialization, dispatch and human-reviewed paired reporting. All 203 offline tests and both Ruff checks passed. Next decision: review the Stage 1 digest, settings and funding limit. Stage 2 requires a new manifest and separate approval after Stage 1. [Verification](verification.md)
+
 ## Experiment 03 · Phase A accepted, revised Phase B design awaiting review
 
 From reviewed revision `9ad5dd3`, recorded Phase A acceptance as AI-assisted, owner-reviewed findings with the P4 judgment retained. Updated [seven scenarios and the staged approval procedure](experiment03_phase_b_design.md) and added a [deployment decision matrix and customer advisories](fde_deployment_playbook.md). Phase B remains design-only. Next decision is owner review of these revisions before implementation. [Verification](verification.md)

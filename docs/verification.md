@@ -1,5 +1,13 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 03 Phase B · offline implementation verification
+
+Rebuilt the [Stage 1 freeze](../experiments/rag_safeguards/stage1.json) from the approved 36-row design. Checked question text, ordered excerpt pairs, keys, risk notes and prompts against the design. Serialized bodies use 76,458 canonical UTF-8 bytes. The 72 rows reproduce approval digest `ae2cedf7359d017a94a3be1d4b973bdf05ad784168f8e3a44c995bc0bcf4c92f` and reserve $0.03754650. Read-only account metadata and the official standard pricing table confirmed the proposed model and rates. No inference request was sent.
+
+Local SDK mock transport exercised both single-use dispatchers with 72 then 36 requests. Verified every transmitted mock body against its stage manifest, packet equivalence, verifier input allowlist and exact generator text. Repeated materialization reproduced the same dynamic plan from sealed receipts. Tested incorrect and cross-stage digests, changed body hashes and ledger bytes, duplicate runs, insufficient remaining budget, excessive reported usage, wrong model/tier, incomplete responses and missing usage. Confirmed stop behavior and unavailable-outcome denominators. Scripted reviewers exercised all three paired comparisons without assigning any real quality grades.
+
+Commands: `uv run --offline pytest -q` (203 passed), `uv run --offline ruff check .` and `uv run --offline ruff format --check .` (passed), and `uv run --offline python -m experiments.rag_safeguards.stages verify --stage 1` (freeze matched). The [approval packet and review instructions](../experiments/rag_safeguards/README.md) describe the limits. Actual verifier inputs and their separate reserve depend on a future approved Stage 1 acquisition.
+
 ## Experiment 03 · Phase B design revision
 
 Compared the proposal against `9ad5dd3`. Verified the same 36 question IDs, two ordered excerpts per question, exactly seven changed scenario rows and 29 identical rows including all routine controls. Confirmed C03 dates fall in 2026. A design-only sizing check of the 72 generator/gate inputs using compact UTF-8 bodies plus 256 framing tokens yielded allowances of 1,145–1,562 each, within the proposed 2,300. Actual verifier bodies await generator acquisition. Recomputed the two provisional stage reserves and aggregate $0.092232. All 197 offline tests, Ruff lint and formatting passed. Only design, acceptance status and checkpoint documentation changed.
