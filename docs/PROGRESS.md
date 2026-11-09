@@ -1,4 +1,8 @@
-# Progress — November 6, 2026
+# Progress — November 9, 2026
+
+## Experiment 02 V2 · live run complete and audited
+
+The November 6 run at verified revision `19329ab` completed the approved 216 requests. All primary and control scenarios passed. C06 at 10B proposed an unsafe substitution. The [findings](experiment02_v2_live_findings.md) include the unsupported-reply review, paired outcomes, telemetry and architecture recommendation. Published the report and README link after 193 passing offline tests, both Ruff checks and frozen-manifest reproduction. Raw receipts remain local. Next step is owner review of the findings. Any further execution requires separate authorization.
 
 ## Experiment 02 V2 · offline implementation complete, awaiting live approval
 

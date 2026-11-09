@@ -12,6 +12,8 @@ The 20-tool catalog used 2.25× as many input tokens as the 5-tool catalog
 on the same tasks. [Live findings and per-scenario results](docs/experiment02_live_findings.md) ·
 [Frozen study and budget](experiments/catalog_scope/README.md)
 
+V2 tested 18 harder shared scenarios in two mirrored orders. All passed at each catalog size. A separate capability test exposed an opposite-direction payout write proposal when the release function was missing. [V2 results, costs and reply audit](docs/experiment02_v2_live_findings.md)
+
 ## Quick start
 
 Install Python 3.12+ and [uv](https://docs.astral.sh/uv/), then run from this checkout:

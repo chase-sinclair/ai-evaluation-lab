@@ -1,5 +1,11 @@
 # Phase 0 / Phase 1 verification
 
+## November 9, 2026 · Experiment 02 V2 live receipt audit
+
+- Matched all 216 unique provider response IDs to the frozen ordered trials. Rebuilt the logical and canonical body hashes from recorded requests, verified completed responses on the expected model and tier, and independently compared native calls and decoded arguments against the offered functions and conditional keys. The frozen cohort report loaded without warnings.
+- Reconciled costs from raw token usage for each receipt. Read all 19 unsupported no-call messages and reviewed the one wrong write proposal. The [findings](experiment02_v2_live_findings.md) distinguish action grades, supported coverage and communication review.
+- Ran `uv run --offline pytest -q` (193 passed), `ruff check .` (passed), `ruff format --check .` (111 formatted files), and the offline V2 freeze check (216 body entries, approved digest and $0.33637350 reserve). V1 records retained their published SHA-256. V2 receipt files remain ignored and local.
+
 ## November 6, 2026 · V2 offline implementation
 
 - Validated 36 distinct cases and 216 trials; CLI dry run recorded zero
