@@ -1,5 +1,11 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 03 · offline implementation
+
+Reproduced the [48-request manifest](../experiments/evidence_gate/manifest.json) using `uv run --offline python -m experiments.evidence_gate.plan`. Verified every serialized body in a local SDK transport, the packet-relative gate keys, the two retrieval misses, one-shot guards, pre-dispatch approval rejection, and accounting-failure stop. Exercised both replay branches, unchanged PASS text, the fixed BLOCK referral, deduplicated review, citation diagnostics and the paired prevention/loss accounting. Test judgments are scripted software fixtures. No model or human evaluation occurred.
+
+Full offline pytest: 197 passed. Ruff lint and format checks passed. The exact freeze, dated prices, limits, and prerequisites for a separately approved run are in the [execution plan](../experiments/evidence_gate/README.md).
+
 ## Experiment 03 · design proposal review
 
 Checked the [proposed fixture](experiment03_design.md) for 12 unique passages, 24 unique question IDs across four families and three distinct, resolvable passage references per question. Recalculated the provisional reserve from 96,000 input and 18,432 output tokens. Offline pytest passed all 193 existing tests. Ruff lint and formatting checks passed. These checks cover the repository and document structure. No gate, grader or study outcomes exist yet.

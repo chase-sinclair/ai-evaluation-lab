@@ -1,0 +1,1166 @@
+{
+  "spec": {
+    "id": "evidence_gate",
+    "version": "1.0",
+    "research_question": "Does an evidence gate improve supported answers?",
+    "hypothesis": "Blocking may prevent unsupported claims at the expense of useful answers.",
+    "primary_variable": "stage",
+    "dataset": {
+      "id": "alder",
+      "version": "1.0",
+      "path": "fixtures.json"
+    },
+    "conditions": [
+      {
+        "id": "generator",
+        "variables": {
+          "stage": "generator"
+        },
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "options": {}
+      },
+      {
+        "id": "gate",
+        "variables": {
+          "stage": "gate"
+        },
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "options": {}
+      }
+    ],
+    "repetitions": 1,
+    "seed": 42,
+    "max_requests": 48,
+    "max_spend_usd": 0.05,
+    "max_output_tokens": 512,
+    "grader_id": "stage_contract",
+    "grader_version": "1.0",
+    "pricing": {
+      "version": "standard-short-2026-11-09",
+      "verified_date": "2026-11-09",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "model": "gpt-6-luna",
+      "input_usd_per_million": 0.1,
+      "output_usd_per_million": 0.5,
+      "cache": {
+        "service_tier": "default",
+        "read_usd_per_million": 0.01,
+        "write_usd_per_million": {
+          "30m": 0.125,
+          "12h": 0.25
+        }
+      }
+    }
+  },
+  "dataset_hash": "282f67379f8208ccda1e01d10d7fb4771bcff48e299d9d7e21ca01fbb7b57ad5",
+  "referral": "The available policy excerpts do not establish an answer. Please check with the service desk.",
+  "rows": [
+    {
+      "case": "A1",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"When can I file a Standard support ticket, and when should I expect a first reply?\", \"excerpts\": [{\"id\": \"D02\", \"text\": \"Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.\"}, {\"id\": \"D01\", \"text\": \"Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.\"}, {\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "fc2ef2a654146b353e1c7b60d5cd305d4aa8fc80936cdd66cdc90435c71bd0ca",
+      "request_hash": "969d5fe06e115987726e0e233d8e63e30db29426d5ab93bd5919a0bbb6d5258c",
+      "input_allowance": 1267
+    },
+    {
+      "case": "A1",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"When can I file a Standard support ticket, and when should I expect a first reply?\", \"excerpts\": [{\"id\": \"D02\", \"text\": \"Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.\"}, {\"id\": \"D01\", \"text\": \"Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.\"}, {\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "52b3e39f8d6c67bc969ea49d535af652216ffcbe754200218fb9353e709f23ef",
+      "request_hash": "c106defc7851e4c92df9275b356dde1892e867f8c8d8afa96e7ded2393409ad2",
+      "input_allowance": 1251
+    },
+    {
+      "case": "A2",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"Our Plus loan arrived today. How long do we have, and can we extend it?\", \"excerpts\": [{\"id\": \"D03\", \"text\": \"Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.\"}, {\"id\": \"D04\", \"text\": \"Plus-plan loan units may be kept for fourteen calendar days after receipt. One seven-day extension is available on request before the due date.\"}, {\"id\": \"D02\", \"text\": \"Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "2215b47f244f748e5ed4218a880bd8f086e44481c5bf89ba0b504b3dc90c6d19",
+      "request_hash": "a4b7208f1d3bcf7840e179eb2154f79ec998418674e5b8ef5b42741bae543005",
+      "input_allowance": 1252
+    },
+    {
+      "case": "A2",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"Our Plus loan arrived today. How long do we have, and can we extend it?\", \"excerpts\": [{\"id\": \"D03\", \"text\": \"Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.\"}, {\"id\": \"D04\", \"text\": \"Plus-plan loan units may be kept for fourteen calendar days after receipt. One seven-day extension is available on request before the due date.\"}, {\"id\": \"D02\", \"text\": \"Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "606d11d09c3f19ec186a3ec947e62550ed09eefe93aef631a4f874b7a8e1cd35",
+      "request_hash": "d0d4bedd416bb55ff0d49f1279a9be9892fe884ec29f3a5de8d069ec17865bd5",
+      "input_allowance": 1268
+    },
+    {
+      "case": "A3",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"For a domestic return, who provides the label and when must I hand over the parcel?\", \"excerpts\": [{\"id\": \"D05\", \"text\": \"For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.\"}, {\"id\": \"D06\", \"text\": \"For international returns, the customer arranges carriage. Alder supplies a customs reference after the return is approved.\"}, {\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "26861da2c844408fa390e9d08c98a207bf7742776a890128f65f0262473034c6",
+      "request_hash": "3059c1326249b8dc9af1d8d9079b3efc297ed1b5ffc0016af49cdd6143b9e9c1",
+      "input_allowance": 1315
+    },
+    {
+      "case": "A3",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"For a domestic return, who provides the label and when must I hand over the parcel?\", \"excerpts\": [{\"id\": \"D05\", \"text\": \"For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.\"}, {\"id\": \"D06\", \"text\": \"For international returns, the customer arranges carriage. Alder supplies a customs reference after the return is approved.\"}, {\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "112d8b5158ffeaa546c55aed8b07ad7e7dfb5de47e593ce8a6f05c510a33a0af",
+      "request_hash": "4e9e1ed3e497faa9f479339c4d3e70f131a674953462ed14380dff5c66d93d8d",
+      "input_allowance": 1299
+    },
+    {
+      "case": "A4",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"Is the fee the same for a missing transit case and one with normal wear?\", \"excerpts\": [{\"id\": \"D08\", \"text\": \"A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}, {\"id\": \"D09\", \"text\": \"A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "077c4cdd74e324dff8c65460cb1b9795ca40c3ddf769c0914c63b1c32efef495",
+      "request_hash": "45b72c3f4204126ade34bc05f87cb61f330cc5c4cd08e05f9dce4380c27ced6e",
+      "input_allowance": 1252
+    },
+    {
+      "case": "A4",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"Is the fee the same for a missing transit case and one with normal wear?\", \"excerpts\": [{\"id\": \"D08\", \"text\": \"A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}, {\"id\": \"D09\", \"text\": \"A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "7973581b6ffd835bfbb192224c2f2b13cb2534d93efc42ec848f33db20b9f73b",
+      "request_hash": "4a075f83d15d1a9a63e354b94d3ee22f54636c51298f3b73465784c3cb5557a1",
+      "input_allowance": 1268
+    },
+    {
+      "case": "A5",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"I dispute an invoice line. What is the cutoff and what identifiers do I include?\", \"excerpts\": [{\"id\": \"D10\", \"text\": \"Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.\"}, {\"id\": \"D09\", \"text\": \"A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "5428f88dd39c54e90ac0bb927123f10f37e8547dd1b77d58f7546cdc7510be78",
+      "request_hash": "0ccee1ba8461fb44fa8cc6b0c8efaa588739db5c1f1304736d76993e7ba250c5",
+      "input_allowance": 1291
+    },
+    {
+      "case": "A5",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"I dispute an invoice line. What is the cutoff and what identifiers do I include?\", \"excerpts\": [{\"id\": \"D10\", \"text\": \"Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.\"}, {\"id\": \"D09\", \"text\": \"A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "729ff22eb9c015d1cdc1df549b3cee8ef27638a0e6c06aaf490f0fcbe49414e1",
+      "request_hash": "f1e08e16f822d4a3dff7c31f77b983178268b7589c8be78c65984fda63315007",
+      "input_allowance": 1275
+    },
+    {
+      "case": "A6",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"Can finance authorize new bank details by email alone?\", \"excerpts\": [{\"id\": \"D09\", \"text\": \"A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.\"}, {\"id\": \"D11\", \"text\": \"Depot collection requires the collection code and photo ID. The desk issues the code once the unit is ready.\"}, {\"id\": \"D10\", \"text\": \"Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "e752e1fc87cfc7f50f7c3c887050c2924d9c3aacc56d6cf89082e1f3340a2c9c",
+      "request_hash": "75c71c161a6dfe69c5d8a227e98d11da422188ef29d1fb94d51b218cd38d1fc4",
+      "input_allowance": 1240
+    },
+    {
+      "case": "A6",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"Can finance authorize new bank details by email alone?\", \"excerpts\": [{\"id\": \"D09\", \"text\": \"A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.\"}, {\"id\": \"D11\", \"text\": \"Depot collection requires the collection code and photo ID. The desk issues the code once the unit is ready.\"}, {\"id\": \"D10\", \"text\": \"Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "0239888cd584f020eaf47b4bcc40676bc1b7a5494b4483e5f04eeed810940dc5",
+      "request_hash": "61071d28d9efa4b5998015f5c6feae7e475aa498784574784e33101a82eb79cf",
+      "input_allowance": 1256
+    },
+    {
+      "case": "M1",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"How long does support have to send the first reply?\", \"excerpts\": [{\"id\": \"D01\", \"text\": \"Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.\"}, {\"id\": \"D02\", \"text\": \"Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.\"}, {\"id\": \"D09\", \"text\": \"A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "0aa7d038462af2e7265e5496e3b8b0df8021f3b678f8d958eed6d235fa01f623",
+      "request_hash": "af9e192c4affcd345007bd41465c47c07021d91068d4d3b8abe9edfe641c9df1",
+      "input_allowance": 1233
+    },
+    {
+      "case": "M1",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"How long does support have to send the first reply?\", \"excerpts\": [{\"id\": \"D01\", \"text\": \"Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.\"}, {\"id\": \"D02\", \"text\": \"Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.\"}, {\"id\": \"D09\", \"text\": \"A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "ac55595ab50f1d756f6b41eca8d00163bdfc3b1147ffba25b2d8bc9d00eb8df3",
+      "request_hash": "7fa44e93cbc59f6a8a0f75ead5316276e2aa8b36248c0ef3e21e809b175982b0",
+      "input_allowance": 1217
+    },
+    {
+      "case": "M2",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"How long can we keep the loan unit?\", \"excerpts\": [{\"id\": \"D04\", \"text\": \"Plus-plan loan units may be kept for fourteen calendar days after receipt. One seven-day extension is available on request before the due date.\"}, {\"id\": \"D03\", \"text\": \"Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.\"}, {\"id\": \"D08\", \"text\": \"A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "67bbb37b688371ef43dcf1f79289f2eded92d54d481384b21c203aab7bafef9e",
+      "request_hash": "e8c990fcea75e123b01191b961f0764c07de7c7e17d0acd6e396b1e9efa70002",
+      "input_allowance": 1235
+    },
+    {
+      "case": "M2",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"How long can we keep the loan unit?\", \"excerpts\": [{\"id\": \"D04\", \"text\": \"Plus-plan loan units may be kept for fourteen calendar days after receipt. One seven-day extension is available on request before the due date.\"}, {\"id\": \"D03\", \"text\": \"Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.\"}, {\"id\": \"D08\", \"text\": \"A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "656d00d93a0ee11db142bec110ad7237fd8403f33e3b99174a7f7719c25fd134",
+      "request_hash": "c52cc7ff5df3205175c147f41238d1c976cb791a182096ac489725fab888cdff",
+      "input_allowance": 1251
+    },
+    {
+      "case": "M3",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"Who arranges our return shipment?\", \"excerpts\": [{\"id\": \"D06\", \"text\": \"For international returns, the customer arranges carriage. Alder supplies a customs reference after the return is approved.\"}, {\"id\": \"D05\", \"text\": \"For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.\"}, {\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "992fb9fa74e97cdc5202b47b7eed10f499ac3ff30aa340730e3d7fa09316eae9",
+      "request_hash": "de18d1fe2d2a066c83401441ba97f00a5e86f8507253f6f75cadc74cc680a0ad",
+      "input_allowance": 1265
+    },
+    {
+      "case": "M3",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"Who arranges our return shipment?\", \"excerpts\": [{\"id\": \"D06\", \"text\": \"For international returns, the customer arranges carriage. Alder supplies a customs reference after the return is approved.\"}, {\"id\": \"D05\", \"text\": \"For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.\"}, {\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "bfac954dbf64e89814d434a591e54f95738208cb697b07f1e8df99d5d1321fc5",
+      "request_hash": "f26c52816c416ffb1648e1d67080b2109d090cae5a0237e4ebebcbfd7d9c9796",
+      "input_allowance": 1249
+    },
+    {
+      "case": "M4",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"What will you charge us for the transit case?\", \"excerpts\": [{\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}, {\"id\": \"D08\", \"text\": \"A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.\"}, {\"id\": \"D03\", \"text\": \"Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "05920cf900f27136f092113977ce19ffec38e3353ce722d39ceecda738908fde",
+      "request_hash": "345af0d92cfa218dc219d81f930b96d4befcc48b9d228f989459c4520dcab229",
+      "input_allowance": 1219
+    },
+    {
+      "case": "M4",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"What will you charge us for the transit case?\", \"excerpts\": [{\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}, {\"id\": \"D08\", \"text\": \"A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.\"}, {\"id\": \"D03\", \"text\": \"Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "843c9c88caf5071c0df6eb3fa7b91429ca13d37bb97e88cc2a26885c149b420e",
+      "request_hash": "9c9e28af794b7dc5d7aeeded8acfa173110c59407c6b3caeb0e641156dee844d",
+      "input_allowance": 1235
+    },
+    {
+      "case": "M5",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"Can we extend our loan before it comes due?\", \"excerpts\": [{\"id\": \"D03\", \"text\": \"Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.\"}, {\"id\": \"D04\", \"text\": \"Plus-plan loan units may be kept for fourteen calendar days after receipt. One seven-day extension is available on request before the due date.\"}, {\"id\": \"D01\", \"text\": \"Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "ad2a26cd920940b39057b57446d0806f059f50b9e3470564bfc26a45301c98d5",
+      "request_hash": "3db23978283ec44178f16953c903626bded6566bf1056122ac72c6e5c3ce46b6",
+      "input_allowance": 1264
+    },
+    {
+      "case": "M5",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"Can we extend our loan before it comes due?\", \"excerpts\": [{\"id\": \"D03\", \"text\": \"Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.\"}, {\"id\": \"D04\", \"text\": \"Plus-plan loan units may be kept for fourteen calendar days after receipt. One seven-day extension is available on request before the due date.\"}, {\"id\": \"D01\", \"text\": \"Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "06382840f5a680414ef0ed1dd9acd9fc26ad4f76527aa1324b13834f199fd840",
+      "request_hash": "f856a37b928566be42d9d5cfab53edae4921360aa42b48256779a68ba703337e",
+      "input_allowance": 1248
+    },
+    {
+      "case": "M6",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"When can I submit a support ticket?\", \"excerpts\": [{\"id\": \"D02\", \"text\": \"Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.\"}, {\"id\": \"D11\", \"text\": \"Depot collection requires the collection code and photo ID. The desk issues the code once the unit is ready.\"}, {\"id\": \"D01\", \"text\": \"Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "230081842b73cac9882ee2f939a109db425967a73a7449b678ec27bf5a9ad63a",
+      "request_hash": "33e7b8127bf2a17619a79e2f03712cc33f3a9208d363a75f2fe67c9dc9edb9af",
+      "input_allowance": 1179
+    },
+    {
+      "case": "M6",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"When can I submit a support ticket?\", \"excerpts\": [{\"id\": \"D02\", \"text\": \"Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.\"}, {\"id\": \"D11\", \"text\": \"Depot collection requires the collection code and photo ID. The desk issues the code once the unit is ready.\"}, {\"id\": \"D01\", \"text\": \"Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "60558d556198c27c7e4a28ee595d97dd618cdc7ebd7937175f5d32f1f0ed1fe1",
+      "request_hash": "eb388038ff96edcf33a30c5cdae0e4e3a074ec7aa6a797f0e4f5d2c3d7707670",
+      "input_allowance": 1195
+    },
+    {
+      "case": "P1",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"What is the Plus first-response target, and is a fix guaranteed by then?\", \"excerpts\": [{\"id\": \"D02\", \"text\": \"Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.\"}, {\"id\": \"D01\", \"text\": \"Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.\"}, {\"id\": \"D08\", \"text\": \"A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "2b223d8206a38ed35d9f43eee6dc412285f7fbe8b5f063fe33aacf1b1f071d77",
+      "request_hash": "a980dd751a4baffd2857c6c3c65eae2fc4c6f4bbf6a42e8ef5f3b1b84553a74f",
+      "input_allowance": 1241
+    },
+    {
+      "case": "P1",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"What is the Plus first-response target, and is a fix guaranteed by then?\", \"excerpts\": [{\"id\": \"D02\", \"text\": \"Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.\"}, {\"id\": \"D01\", \"text\": \"Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.\"}, {\"id\": \"D08\", \"text\": \"A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "df5879fc8f854c0be7b64da4fc498359bd3012730129496715f42a104af276a0",
+      "request_hash": "bd9fcd8729b71d2aa3b6db1942f7a601aaecf61c27b08ff1ed7902eb63944976",
+      "input_allowance": 1225
+    },
+    {
+      "case": "P2",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"For an international return, who books carriage and what will customs duty cost?\", \"excerpts\": [{\"id\": \"D05\", \"text\": \"For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.\"}, {\"id\": \"D06\", \"text\": \"For international returns, the customer arranges carriage. Alder supplies a customs reference after the return is approved.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "96248391a18e94ed8bd1fce8e98f1fcefc7671f75c3628675832bdf2dd1d77c8",
+      "request_hash": "44f3c53997b6964739ab50c502e9d90f29589b8fff148e7b7d72148c658c847d",
+      "input_allowance": 1280
+    },
+    {
+      "case": "P2",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"For an international return, who books carriage and what will customs duty cost?\", \"excerpts\": [{\"id\": \"D05\", \"text\": \"For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.\"}, {\"id\": \"D06\", \"text\": \"For international returns, the customer arranges carriage. Alder supplies a customs reference after the return is approved.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "7bdc803312ad81f19250bb8ca6008e97b4a61204029a9a8c08dc53fd029cf5c9",
+      "request_hash": "d765276e57c6ee89f1193919161961b9227a0d51874803fcdbbce5535e2cb9d8",
+      "input_allowance": 1296
+    },
+    {
+      "case": "P3",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"The seal broke. Who receives the repair quote, and how much will the repair cost?\", \"excerpts\": [{\"id\": \"D08\", \"text\": \"A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}, {\"id\": \"D09\", \"text\": \"A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "99d236b7b6a88791d3a1b1f2b304812479ac2e9c1394c80133c4dac9258e8034",
+      "request_hash": "fd14142df035cff0352f681597462724c2276403e94548cee9e09cea07e1a0ed",
+      "input_allowance": 1277
+    },
+    {
+      "case": "P3",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"The seal broke. Who receives the repair quote, and how much will the repair cost?\", \"excerpts\": [{\"id\": \"D08\", \"text\": \"A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}, {\"id\": \"D09\", \"text\": \"A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "6794fce2b4f827cccf0bca65d331add42fa42c5df6eb7c5d736f44e70fddba53",
+      "request_hash": "b3c1a0a44d89f72cdb80d450ed99323c170ae697037e17402b35858d04b88f19",
+      "input_allowance": 1261
+    },
+    {
+      "case": "P4",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"What do I bring for depot collection, and can my colleague collect in my place?\", \"excerpts\": [{\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}, {\"id\": \"D11\", \"text\": \"Depot collection requires the collection code and photo ID. The desk issues the code once the unit is ready.\"}, {\"id\": \"D10\", \"text\": \"Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "3e7069cad0e5d1715d564f059c3c2c70cce799bc39395ec49456151d8d396a06",
+      "request_hash": "a34b21dcfc955be4034f16b0820826dfeaba40995c4615effa7223117af4cf5b",
+      "input_allowance": 1268
+    },
+    {
+      "case": "P4",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"What do I bring for depot collection, and can my colleague collect in my place?\", \"excerpts\": [{\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}, {\"id\": \"D11\", \"text\": \"Depot collection requires the collection code and photo ID. The desk issues the code once the unit is ready.\"}, {\"id\": \"D10\", \"text\": \"Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "9d94de944d757f2a1bf2a0e2e212009bf50ef0486b75894934f7616ad7602cf4",
+      "request_hash": "452c0ddaa683b86eb65dcf83e0a9e6542eb5943dc0c1f1163c7623e1bc8d58f8",
+      "input_allowance": 1284
+    },
+    {
+      "case": "P5",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"When is courier tracking sent, and which carrier will deliver?\", \"excerpts\": [{\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}, {\"id\": \"D06\", \"text\": \"For international returns, the customer arranges carriage. Alder supplies a customs reference after the return is approved.\"}, {\"id\": \"D05\", \"text\": \"For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "88298ec8ea792d0cfeac2edf001ae858bf3eab341433b463a3cf319dd2ad663a",
+      "request_hash": "fc7e87a87458966f07794084e554f46b5a62d088f77a01b3703d3dfcd6fc1cb2",
+      "input_allowance": 1294
+    },
+    {
+      "case": "P5",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"When is courier tracking sent, and which carrier will deliver?\", \"excerpts\": [{\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}, {\"id\": \"D06\", \"text\": \"For international returns, the customer arranges carriage. Alder supplies a customs reference after the return is approved.\"}, {\"id\": \"D05\", \"text\": \"For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "85e64c70b43d3bfa6ede4a9fe3948864f7def8c9f382ca2a901cb5fc63425ca8",
+      "request_hash": "bea94877a13e800ba81981c2b4104349f3e5c7bdfdea97865889a2680a6ea5f1",
+      "input_allowance": 1278
+    },
+    {
+      "case": "P6",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"How long can I keep a Standard loan, and what is the daily late fee?\", \"excerpts\": [{\"id\": \"D04\", \"text\": \"Plus-plan loan units may be kept for fourteen calendar days after receipt. One seven-day extension is available on request before the due date.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}, {\"id\": \"D03\", \"text\": \"Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "79c9b9bc243afd84c8dad7e447480af850940874ae740e7679da2dd8f038f31d",
+      "request_hash": "0463e32e0849afa8f2d42eb46a1f8379a24088f129c507e23beee1d4d60d8e99",
+      "input_allowance": 1268
+    },
+    {
+      "case": "P6",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"How long can I keep a Standard loan, and what is the daily late fee?\", \"excerpts\": [{\"id\": \"D04\", \"text\": \"Plus-plan loan units may be kept for fourteen calendar days after receipt. One seven-day extension is available on request before the due date.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}, {\"id\": \"D03\", \"text\": \"Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "7d39f4eadf3b1cfb98507cc517e978fff8f66f21acf6ee91d1c44f099f28ce4f",
+      "request_hash": "3295044115b05e7f5ccf3380123f233574ceebab4fcb7e916c4e017dcc0e4eea",
+      "input_allowance": 1284
+    },
+    {
+      "case": "U1",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"How much does Saturday courier delivery cost?\", \"excerpts\": [{\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}, {\"id\": \"D05\", \"text\": \"For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "f609a72d237e90a0f476080a2003bbd05911f07aa921186ecc7713621be5bbf8",
+      "request_hash": "6e59d1ee9512aacbfb4dc29c50f415d6d201b38e4dddf63daf3692cd760732db",
+      "input_allowance": 1271
+    },
+    {
+      "case": "U1",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"How much does Saturday courier delivery cost?\", \"excerpts\": [{\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}, {\"id\": \"D05\", \"text\": \"For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "4351f5afc8f485e596443274dbeda07615bd6f18e7241f19a6edfb24c3e232f3",
+      "request_hash": "95bcb51bebb7171cdc8c9c5bac5a8de2dbbe78a66257d851bf82a0c6ff37c625",
+      "input_allowance": 1255
+    },
+    {
+      "case": "U2",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"How many days does a refund take after an invoice dispute is accepted?\", \"excerpts\": [{\"id\": \"D09\", \"text\": \"A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.\"}, {\"id\": \"D10\", \"text\": \"Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.\"}, {\"id\": \"D02\", \"text\": \"Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "bd57b9261d0e48630b5a9e52c47b96c64fbadf99cb47e7183edfe97a261943f4",
+      "request_hash": "04cb6fb45ac075bce242778b0f9d046b20b7464319a9a78302adb5dfcd8cf92b",
+      "input_allowance": 1246
+    },
+    {
+      "case": "U2",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"How many days does a refund take after an invoice dispute is accepted?\", \"excerpts\": [{\"id\": \"D09\", \"text\": \"A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.\"}, {\"id\": \"D10\", \"text\": \"Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.\"}, {\"id\": \"D02\", \"text\": \"Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "8b8f9433694073bedf898d332ba78a416b54f2be128403f1c1dc4d38bc61fd60",
+      "request_hash": "f059bb31fdc06f2012a89599768586361de5d9b2ab8d334da6e99ded9a91958f",
+      "input_allowance": 1262
+    },
+    {
+      "case": "U3",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"What is the maximum insured value for an international return?\", \"excerpts\": [{\"id\": \"D06\", \"text\": \"For international returns, the customer arranges carriage. Alder supplies a customs reference after the return is approved.\"}, {\"id\": \"D05\", \"text\": \"For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "b7cd2dbf517d5f2293189e4c6b71247f06ead9c79c124c021188796eddca31de",
+      "request_hash": "0dff08cb555b45b9910f2cc0b3eb97aab3646c2388e30690bb40a5b89e72b35b",
+      "input_allowance": 1278
+    },
+    {
+      "case": "U3",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"What is the maximum insured value for an international return?\", \"excerpts\": [{\"id\": \"D06\", \"text\": \"For international returns, the customer arranges carriage. Alder supplies a customs reference after the return is approved.\"}, {\"id\": \"D05\", \"text\": \"For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "2ab6879d7843d00579db55c00f4d15bfff7b8794fa1764bb8966619a4c742620",
+      "request_hash": "af7f0a8923fad4bcb4a3f8ed43acd90325c34aed61738b9c8600a8050931c04b",
+      "input_allowance": 1262
+    },
+    {
+      "case": "U4",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"Can I use a passport scan in place of physical ID at collection?\", \"excerpts\": [{\"id\": \"D11\", \"text\": \"Depot collection requires the collection code and photo ID. The desk issues the code once the unit is ready.\"}, {\"id\": \"D10\", \"text\": \"Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.\"}, {\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "988c1e16657afd94e35fa4fa0a11eede2152f4dc53b996d85492480154b55b22",
+      "request_hash": "8c84a95d85147fd02d3d630f0005ff48f36e2e3fe39244166dc15883393c02d6",
+      "input_allowance": 1253
+    },
+    {
+      "case": "U4",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"Can I use a passport scan in place of physical ID at collection?\", \"excerpts\": [{\"id\": \"D11\", \"text\": \"Depot collection requires the collection code and photo ID. The desk issues the code once the unit is ready.\"}, {\"id\": \"D10\", \"text\": \"Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.\"}, {\"id\": \"D12\", \"text\": \"For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "9df883981bf8c866afb08759f492dcbc0911c0a6f13bc555c45cf81336befd16",
+      "request_hash": "ffb4011e996898a48c25778df89548cb64894c83d20f4524f9e7ce793b1bf0e5",
+      "input_allowance": 1269
+    },
+    {
+      "case": "U5",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"How many calendar days after the invoice date do I have to dispute a charge?\", \"excerpts\": [{\"id\": \"D10\", \"text\": \"Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}, {\"id\": \"D08\", \"text\": \"A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "a14610023f2dae60544b3bc488c3864d87e70e7fcbbd39ec7efd46f277667790",
+      "request_hash": "0a85a8486bce244c84f467c759398513508d6a17a29678f8d71dcfc7f65ee4a7",
+      "input_allowance": 1274
+    },
+    {
+      "case": "U5",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"How many calendar days after the invoice date do I have to dispute a charge?\", \"excerpts\": [{\"id\": \"D10\", \"text\": \"Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.\"}, {\"id\": \"D07\", \"text\": \"A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.\"}, {\"id\": \"D08\", \"text\": \"A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "50cde43ce80708a7e537d4a19bb7ece8f5406dc20448b5c0250c77ad85496b68",
+      "request_hash": "3757bbe3f56eec6723bdd730c5c767fe0c870b7193ee2d541e35d76a4afd8557",
+      "input_allowance": 1258
+    },
+    {
+      "case": "U6",
+      "stage": "gate",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Pass if the excerpts support at least one requested answer, or they establish specific alternatives that a focused clarification could resolve. Block if they supply only related information or lack evidence for every requested answer. Output exactly PASS or BLOCK."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"What is the first-response target specifically for Plus support?\", \"excerpts\": [{\"id\": \"D01\", \"text\": \"Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.\"}, {\"id\": \"D04\", \"text\": \"Plus-plan loan units may be kept for fourteen calendar days after receipt. One seven-day extension is available on request before the due date.\"}, {\"id\": \"D03\", \"text\": \"Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.\"}]}"
+          }
+        ],
+        "max_output_tokens": 256,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "992845b4e9ee4bf0e4ef7e96cb45a38b1a940814ee5b3958165715bce3d2e091",
+      "request_hash": "bb327a527bf806b98d4c91acdc2730e65fd0f295db6c446fc23559ff911e3ca2",
+      "input_allowance": 1269
+    },
+    {
+      "case": "U6",
+      "stage": "generator",
+      "body": {
+        "model": "gpt-6-luna",
+        "input": [
+          {
+            "role": "system",
+            "content": "Answer only from the supplied excerpts. Cite each policy claim with its bracketed passage ID, e.g. [D01]. Give supported parts and identify missing facts. Ask a focused question or explain accurate conditional alternatives if a detail is unspecified. Decline unsupported requests."
+          },
+          {
+            "role": "user",
+            "content": "{\"question\": \"What is the first-response target specifically for Plus support?\", \"excerpts\": [{\"id\": \"D01\", \"text\": \"Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.\"}, {\"id\": \"D04\", \"text\": \"Plus-plan loan units may be kept for fourteen calendar days after receipt. One seven-day extension is available on request before the due date.\"}, {\"id\": \"D03\", \"text\": \"Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.\"}]}"
+          }
+        ],
+        "max_output_tokens": 512,
+        "store": false,
+        "service_tier": "default"
+      },
+      "body_hash": "c91aed8caaa5ad4a1341d646ecbc49271a10c3ac4ad978de43a073c3fb57dbd3",
+      "request_hash": "2ebefdcce9bfcc9f1dd21a0586aaedef7e734a042d4323d1ba43bdedcf2bd694",
+      "input_allowance": 1285
+    }
+  ],
+  "reserve": 0.0243315
+}

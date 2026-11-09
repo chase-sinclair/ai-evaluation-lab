@@ -1,5 +1,9 @@
 # Progress — November 9, 2026
 
+## Experiment 03 · offline implementation complete
+
+Starting from approved design `a1d9445`, the [Alder Desk implementation and frozen plan](../experiments/evidence_gate/README.md) add paired replay, human review and a 48-request one-shot dispatcher. The runner now permits a stage to use a tighter output limit than the experiment maximum. The 512/256 stage limits and reserve of $0.02433150 reproduce offline. All 197 tests and both Ruff checks passed. Next decision is owner review of this exact freeze before any paid use. Human grading and observed outcomes remain pending.
+
 ## Experiment 03 · evidence-gate design awaiting review
 
 Starting from the approved portfolio revision `95579b7`, the [design proposal](experiment03_design.md) defines a synthetic service-desk corpus, 24 keyed questions, paired replay, human grading and a provisional execution budget. Scope is documentation only. The next decision is whether to approve the dataset, gate behavior and adoption criterion for offline implementation. Live execution requires separate approval. [Verification](verification.md)

@@ -1,0 +1,14 @@
+id: evidence_gate
+version: '1.0'
+research_question: Does an evidence gate improve supported answers?
+hypothesis: Blocking may prevent unsupported claims at the expense of useful answers.
+primary_variable: stage
+dataset: {id: alder, version: '1.0', path: fixtures.json}
+conditions:
+  - {id: generator, variables: {stage: generator}}
+  - {id: gate, variables: {stage: gate}}
+max_requests: 48
+max_output_tokens: 512
+max_spend_usd: 0
+grader_id: stage_contract
+grader_version: '1.0'

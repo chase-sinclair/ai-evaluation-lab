@@ -1,0 +1,306 @@
+{
+  "corpus": {
+    "D01": "Standard-plan support accepts tickets on business days, 09:00–17:00 UTC. Its first-response target is two business days.",
+    "D02": "Plus-plan support accepts tickets around the clock. Its first-response target is four clock hours.",
+    "D03": "Standard-plan loan units may be kept for seven calendar days after receipt. Extensions require approval before the due date.",
+    "D04": "Plus-plan loan units may be kept for fourteen calendar days after receipt. One seven-day extension is available on request before the due date.",
+    "D05": "For domestic returns, Alder supplies a prepaid ground label. Drop the parcel at the carrier within five business days after the label is issued.",
+    "D06": "For international returns, the customer arranges carriage. Alder supplies a customs reference after the return is approved.",
+    "D07": "A missing reusable transit case incurs a USD 35 replacement charge. Normal wear on a returned case is free of charge.",
+    "D08": "A broken security seal requires inspection before a repair quote. The desk sends the quote to the registered contact.",
+    "D09": "A billing dispute must be submitted within thirty calendar days of the invoice date. Include the invoice number and disputed line.",
+    "D10": "Bank-detail changes require callback verification with the registered finance contact. An email alone does not authorize the change.",
+    "D11": "Depot collection requires the collection code and photo ID. The desk issues the code once the unit is ready.",
+    "D12": "For courier delivery, tracking is sent after dispatch. An estimated arrival is advisory until the carrier confirms a delivery window."
+  },
+  "questions": [
+    {
+      "id": "A1",
+      "question": "When can I file a Standard support ticket, and when should I expect a first reply?",
+      "packet": [
+        "D02",
+        "D01",
+        "D12"
+      ],
+      "key": "Business days 09:00–17:00 UTC and two business days (01).",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "A2",
+      "question": "Our Plus loan arrived today. How long do we have, and can we extend it?",
+      "packet": [
+        "D03",
+        "D04",
+        "D02"
+      ],
+      "key": "Fourteen calendar days from receipt, one seven-day extension on request before due (04).",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "A3",
+      "question": "For a domestic return, who provides the label and when must I hand over the parcel?",
+      "packet": [
+        "D05",
+        "D06",
+        "D12"
+      ],
+      "key": "Alder prepaid ground label, five business days from issue (05).",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "A4",
+      "question": "Is the fee the same for a missing transit case and one with normal wear?",
+      "packet": [
+        "D08",
+        "D07",
+        "D09"
+      ],
+      "key": "Missing USD 35, normal wear free (07).",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "A5",
+      "question": "I dispute an invoice line. What is the cutoff and what identifiers do I include?",
+      "packet": [
+        "D10",
+        "D09",
+        "D07"
+      ],
+      "key": "Thirty calendar days from invoice date, invoice number and disputed line (09).",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "A6",
+      "question": "Can finance authorize new bank details by email alone?",
+      "packet": [
+        "D09",
+        "D11",
+        "D10"
+      ],
+      "key": "No, callback with registered finance contact required (10).",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "P1",
+      "question": "What is the Plus first-response target, and is a fix guaranteed by then?",
+      "packet": [
+        "D02",
+        "D01",
+        "D08"
+      ],
+      "key": "Four clock hours (02). Resolution guarantee unspecified.",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "P2",
+      "question": "For an international return, who books carriage and what will customs duty cost?",
+      "packet": [
+        "D05",
+        "D06",
+        "D07"
+      ],
+      "key": "Customer arranges carriage (06). Duty amount unknown.",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "P3",
+      "question": "The seal broke. Who receives the repair quote, and how much will the repair cost?",
+      "packet": [
+        "D08",
+        "D07",
+        "D09"
+      ],
+      "key": "Registered contact after inspection (08). No price.",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "P4",
+      "question": "What do I bring for depot collection, and can my colleague collect in my place?",
+      "packet": [
+        "D12",
+        "D11",
+        "D10"
+      ],
+      "key": "Code and photo ID (11). Delegation unspecified.",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "P5",
+      "question": "When is courier tracking sent, and which carrier will deliver?",
+      "packet": [
+        "D12",
+        "D06",
+        "D05"
+      ],
+      "key": "After dispatch (12). No named carrier.",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "P6",
+      "question": "How long can I keep a Standard loan, and what is the daily late fee?",
+      "packet": [
+        "D04",
+        "D07",
+        "D03"
+      ],
+      "key": "Seven calendar days from receipt (03). No late fee amount.",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "M1",
+      "question": "How long does support have to send the first reply?",
+      "packet": [
+        "D01",
+        "D02",
+        "D09"
+      ],
+      "key": "Ask which plan or conditionally give both targets (01,02).",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "M2",
+      "question": "How long can we keep the loan unit?",
+      "packet": [
+        "D04",
+        "D03",
+        "D08"
+      ],
+      "key": "Ask which plan or conditionally give both periods (03,04).",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "M3",
+      "question": "Who arranges our return shipment?",
+      "packet": [
+        "D06",
+        "D05",
+        "D12"
+      ],
+      "key": "Ask domestic or international, or give both branches (05,06).",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "M4",
+      "question": "What will you charge us for the transit case?",
+      "packet": [
+        "D07",
+        "D08",
+        "D03"
+      ],
+      "key": "Ask missing or returned with normal wear, or explain both (07).",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "M5",
+      "question": "Can we extend our loan before it comes due?",
+      "packet": [
+        "D03",
+        "D04",
+        "D01"
+      ],
+      "key": "Ask plan or distinguish Standard approval from Plus extension terms (03,04).",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "M6",
+      "question": "When can I submit a support ticket?",
+      "packet": [
+        "D02",
+        "D11",
+        "D01"
+      ],
+      "key": "Ask plan or conditionally give both intake schedules (01,02).",
+      "expected_gate": "PASS",
+      "gap": null
+    },
+    {
+      "id": "U1",
+      "question": "How much does Saturday courier delivery cost?",
+      "packet": [
+        "D12",
+        "D05",
+        "D07"
+      ],
+      "key": "Abstain. No weekend delivery tariff.",
+      "expected_gate": "BLOCK",
+      "gap": "corpus_gap"
+    },
+    {
+      "id": "U2",
+      "question": "How many days does a refund take after an invoice dispute is accepted?",
+      "packet": [
+        "D09",
+        "D10",
+        "D02"
+      ],
+      "key": "Abstain. Filing deadline and response target cannot supply refund timing.",
+      "expected_gate": "BLOCK",
+      "gap": "corpus_gap"
+    },
+    {
+      "id": "U3",
+      "question": "What is the maximum insured value for an international return?",
+      "packet": [
+        "D06",
+        "D05",
+        "D07"
+      ],
+      "key": "Abstain. No insurance ceiling.",
+      "expected_gate": "BLOCK",
+      "gap": "corpus_gap"
+    },
+    {
+      "id": "U4",
+      "question": "Can I use a passport scan in place of physical ID at collection?",
+      "packet": [
+        "D11",
+        "D10",
+        "D12"
+      ],
+      "key": "Abstain on substitution. Photo ID requirement alone cannot settle it.",
+      "expected_gate": "BLOCK",
+      "gap": "corpus_gap"
+    },
+    {
+      "id": "U5",
+      "question": "How many calendar days after the invoice date do I have to dispute a charge?",
+      "packet": [
+        "D10",
+        "D07",
+        "D08"
+      ],
+      "key": "Abstain. Retrieval miss: D09 exists outside the packet.",
+      "expected_gate": "BLOCK",
+      "gap": "retrieval_miss"
+    },
+    {
+      "id": "U6",
+      "question": "What is the first-response target specifically for Plus support?",
+      "packet": [
+        "D01",
+        "D04",
+        "D03"
+      ],
+      "key": "Abstain. Retrieval miss: D02 exists outside the packet.",
+      "expected_gate": "BLOCK",
+      "gap": "retrieval_miss"
+    }
+  ]
+}

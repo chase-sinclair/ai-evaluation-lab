@@ -45,8 +45,8 @@ def validate(experiment: Experiment):
                 request = experiment.build_request(case, condition)
                 if request.model != condition.model or request.options != condition.options:
                     raise ValueError("Request must preserve configured model/options")
-                if request.max_output_tokens != spec.max_output_tokens:
-                    raise ValueError("Request must preserve the output limit")
+                if request.max_output_tokens > spec.max_output_tokens:
+                    raise ValueError("Request exceeds the configured output limit")
                 trials.append((case, condition, repeat, request))
     random.Random(spec.seed).shuffle(trials)
     return cases, trials
@@ -113,7 +113,7 @@ def run(
         "mode": mode,
         "projected_cost_usd": projected,
         "estimated_input_tokens": sum(estimate_input_tokens(r) for r in requests),
-        "output_token_ceiling": len(trials) * spec.max_output_tokens,
+        "output_token_ceiling": sum(r.max_output_tokens for r in requests),
         "provider_calls": 0,
     }
     if dry_run:
