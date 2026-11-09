@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="610" height="290" viewBox="0 0 610 290" role="img" aria-labelledby="title desc">
+<title id="title">Shared accuracy and capability coverage</title>
+<desc id="desc">Both layouts scored 18/18 at all sizes. The catalogs offered the target function for zero, two and six of six capability tasks.</desc>
+<rect width="610" height="290" fill="#f5f8f8"/>
+<g font-family="Arial, sans-serif">
+<text x="22" y="37" font-size="24" font-weight="700" fill="#163548">Which tasks did each catalog support?</text>
+<text x="22" y="73" font-size="16" font-weight="700" fill="#163548">Catalog</text>
+<text x="158" y="73" font-size="16" font-weight="700" fill="#163548">Shared decisions</text>
+<text x="382" y="73" font-size="16" font-weight="700" fill="#163548">Capabilities offered</text>
+<text x="22" y="109" font-size="18" font-weight="700" fill="#163548">5 tools</text>
+<text x="158" y="109" font-size="16" fill="#163548">18/18 in A and B</text>
+<text x="382" y="109" font-size="16" fill="#163548">0 of 6</text>
+<rect x="382" y="117" width="18" height="8" rx="3" fill="#cbd6d9"/>
+<rect x="404" y="117" width="18" height="8" rx="3" fill="#cbd6d9"/>
+<rect x="426" y="117" width="18" height="8" rx="3" fill="#cbd6d9"/>
+<rect x="448" y="117" width="18" height="8" rx="3" fill="#cbd6d9"/>
+<rect x="470" y="117" width="18" height="8" rx="3" fill="#cbd6d9"/>
+<rect x="492" y="117" width="18" height="8" rx="3" fill="#cbd6d9"/>
+<text x="22" y="164" font-size="18" font-weight="700" fill="#163548">10 tools</text>
+<text x="158" y="164" font-size="16" fill="#163548">18/18 in A and B</text>
+<text x="382" y="164" font-size="16" fill="#163548">2 of 6</text>
+<rect x="382" y="172" width="18" height="8" rx="3" fill="#157568"/>
+<rect x="404" y="172" width="18" height="8" rx="3" fill="#157568"/>
+<rect x="426" y="172" width="18" height="8" rx="3" fill="#cbd6d9"/>
+<rect x="448" y="172" width="18" height="8" rx="3" fill="#cbd6d9"/>
+<rect x="470" y="172" width="18" height="8" rx="3" fill="#cbd6d9"/>
+<rect x="492" y="172" width="18" height="8" rx="3" fill="#cbd6d9"/>
+<text x="22" y="219" font-size="18" font-weight="700" fill="#163548">20 tools</text>
+<text x="158" y="219" font-size="16" fill="#163548">18/18 in A and B</text>
+<text x="382" y="219" font-size="16" fill="#163548">6 of 6</text>
+<rect x="382" y="227" width="18" height="8" rx="3" fill="#157568"/>
+<rect x="404" y="227" width="18" height="8" rx="3" fill="#157568"/>
+<rect x="426" y="227" width="18" height="8" rx="3" fill="#157568"/>
+<rect x="448" y="227" width="18" height="8" rx="3" fill="#157568"/>
+<rect x="470" y="227" width="18" height="8" rx="3" fill="#157568"/>
+<rect x="492" y="227" width="18" height="8" rx="3" fill="#157568"/>
+<text x="22" y="267" font-size="16" fill="#506576">Coverage counts distinct tasks with the required function available.</text>
+</g>
+</svg>

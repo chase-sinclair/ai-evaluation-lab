@@ -6,7 +6,7 @@ AI Evaluation Lab documents applied AI implementation decisions. Each case study
 
 The Phase 3G independent holdout and its first review wave are retired. The feasibility findings and technical record remain available. [Project status](docs/PROGRESS.md) · [Format for future studies](docs/portfolio/study-format.md)
 
-**Experiment 02 · Does Giving an AI Agent More Tools Make It Less Reliable?**
+**[Does Giving an AI Agent More Tools Make It Less Reliable?](docs/portfolio/tool-catalog.md)**
 The freight-desk pilot scored 12/12 at each of 5, 10 and 20 functions.
 The 20-tool catalog used 2.25× as many input tokens as the 5-tool catalog
 on the same tasks. [Live findings and per-scenario results](docs/experiment02_live_findings.md) ·

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="610" height="365" viewBox="0 0 610 365" role="img" aria-labelledby="title desc">
+<title id="title">Primary token usage and cost</title>
+<desc id="desc">Zero-based bars within each panel show primary input and estimated cost totals across both layouts.</desc>
+<rect width="610" height="365" fill="#f5f8f8"/>
+<g font-family="Arial, sans-serif">
+<text x="22" y="37" font-size="24" font-weight="700" fill="#163548">What did the larger catalog cost?</text>
+<text x="22" y="66" font-size="16" fill="#506576">Same 18 shared tasks × two layouts per catalog</text>
+<text x="22" y="109" font-size="18" font-weight="700" fill="#163548">Input tokens</text>
+<text x="22" y="138" font-size="16" fill="#163548">5 tools</text>
+<rect x="108" y="125" width="139" height="16" rx="3" fill="#157568"/>
+<text x="432" y="138" font-size="16" font-weight="700" fill="#163548">12,668</text>
+<text x="22" y="168" font-size="16" fill="#163548">10 tools</text>
+<rect x="108" y="155" width="189" height="16" rx="3" fill="#157568"/>
+<text x="432" y="168" font-size="16" font-weight="700" fill="#163548">17,168</text>
+<text x="22" y="198" font-size="16" fill="#163548">20 tools</text>
+<rect x="108" y="185" width="306" height="16" rx="3" fill="#157568"/>
+<text x="432" y="198" font-size="16" font-weight="700" fill="#163548">27,860</text>
+<text x="22" y="251" font-size="18" font-weight="700" fill="#163548">Estimated API cost (USD)</text>
+<text x="22" y="280" font-size="16" fill="#163548">5 tools</text>
+<rect x="108" y="267" width="168" height="16" rx="3" fill="#163548"/>
+<text x="432" y="280" font-size="16" font-weight="700" fill="#163548">$0.0020848</text>
+<text x="22" y="310" font-size="16" fill="#163548">10 tools</text>
+<rect x="108" y="297" width="215" height="16" rx="3" fill="#163548"/>
+<text x="432" y="310" font-size="16" font-weight="700" fill="#163548">$0.0026703</text>
+<text x="22" y="340" font-size="16" fill="#163548">20 tools</text>
+<rect x="108" y="327" width="306" height="16" rx="3" fill="#163548"/>
+<text x="432" y="340" font-size="16" font-weight="700" fill="#163548">$0.0037980</text>
+</g>
+</svg>

@@ -1,5 +1,11 @@
 # Phase 0 / Phase 1 verification
 
+## November 9, 2026 · Experiment 02 portfolio publication
+
+The [article](portfolio/tool-catalog.md) and [site handoff](portfolio/tool-catalog-handoff.md) use the V1 and V2 findings accepted at `0352f51`. Checked cohort denominators, paired layouts, token totals, cost estimates and the C06 action against the published tables. The raw records for both runs retained their published SHA-256 hashes.
+
+Offline pytest passed all 193 tests. Ruff lint and formatting checks passed. Checked local links in the article, retired outline and handoff. Parsed all three SVG assets and checked rendered text bounds and same-row overlaps in headless Edge. The changes cover portfolio presentation and project documentation only.
+
 ## November 9, 2026 · Experiment 02 V2 live receipt audit
 
 - Matched all 216 unique provider response IDs to the frozen ordered trials. Rebuilt the logical and canonical body hashes from recorded requests, verified completed responses on the expected model and tier, and independently compared native calls and decoded arguments against the offered functions and conditional keys. The frozen cohort report loaded without warnings.

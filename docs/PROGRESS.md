@@ -1,5 +1,9 @@
 # Progress — November 9, 2026
 
+## Experiment 02 · evaluation closed and portfolio article ready
+
+The owner accepted the findings at `0352f51`. The [final case study](portfolio/tool-catalog.md) and [website handoff](portfolio/tool-catalog-handoff.md) cover both runs, the C06 decision trace and the recommended write check. Three figures accompany the article. The earlier outline now directs readers to the completed work. Next step is portfolio editorial review. [Publication checks](verification.md)
+
 ## Experiment 02 V2 · live run complete and audited
 
 The November 6 run at verified revision `19329ab` completed the approved 216 requests. All primary and control scenarios passed. C06 at 10B proposed an unsafe substitution. The [findings](experiment02_v2_live_findings.md) include the unsupported-reply review, paired outcomes, telemetry and architecture recommendation. Published the report and README link after 193 passing offline tests, both Ruff checks and frozen-manifest reproduction. Raw receipts remain local. Next step is owner review of the findings. Any further execution requires separate authorization.
