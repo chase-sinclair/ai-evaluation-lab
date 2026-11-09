@@ -1,5 +1,18 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 03 · live acquisition
+
+The clean checkout at `134ce156e676fa06ddaccdbc500033984c3add8a` reproduced the approved digest and $0.02433150 reserve. Confirmed the unused run directory, account model metadata, standard pricing and all body hashes before dispatch. The single sequential run completed with 48 distinct provider responses, zero failures and zero retries. Verified case, stage, model, tier, logical request and reconstructed body hashes, raw usage partitions and receipt cost estimates against the frozen plan. Local records SHA-256: `4dda587eee28c73cecd2926ceb1e48d96b3312723f199bf60c91789b0251c2bd`.
+
+| Stage | Responses | Input / output tokens | Observed median latency | Estimated USD |
+|---|---:|---:|---:|---:|
+| Generator | 24 | 4,574 / 2,441 | 1.833 s | 0.0016779 |
+| Gate | 24 | 4,358 / 989 | 1.053 s | 0.0009303 |
+
+A1–A6, P1–P6 and M1–M6 all returned the expected PASS. U1–U6 returned the expected BLOCK, including both retrieval misses. The 48 requests cost an estimated $0.0026082 in total. Across 24 paired queries, gated replay costs an estimated $0.0021694 versus $0.0016779 for standard RAG. Modeled serial gated latency has a median of 2.750 s and median paired added latency of 0.969 s. These timings exclude retrieval.
+
+Generated the blinded worksheet once and confirmed that all judgment fields were empty across 30 entries. A human must assess both arms before interpreting any quality difference. Raw receipts and worksheet remain local. Offline pytest passed all 197 tests, and Ruff lint and formatting checks passed.
+
 ## Experiment 03 · offline implementation
 
 Reproduced the [48-request manifest](../experiments/evidence_gate/manifest.json) using `uv run --offline python -m experiments.evidence_gate.plan`. Verified every serialized body in a local SDK transport, the packet-relative gate keys, the two retrieval misses, one-shot guards, pre-dispatch approval rejection, and accounting-failure stop. Exercised both replay branches, unchanged PASS text, the fixed BLOCK referral, deduplicated review, citation diagnostics and the paired prevention/loss accounting. Test judgments are scripted software fixtures. No model or human evaluation occurred.

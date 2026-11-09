@@ -1,5 +1,9 @@
 # Progress — November 9, 2026
 
+## Experiment 03 · live acquisition complete, awaiting human review
+
+The authorized run at `134ce15` completed all 48 requests. All 24 gate decisions matched their packet-relative keys. The private worksheet at `.verification/alder-review.json` contains 30 distinct question/answer entries with all judgment fields blank. Review a copy using the [review guide](../experiments/evidence_gate/review.md). Answer quality and adoption remain undecided. [Receipt audit and telemetry](verification.md#experiment-03--live-acquisition)
+
 ## Experiment 03 · offline implementation complete
 
 Starting from approved design `a1d9445`, the [Alder Desk implementation and frozen plan](../experiments/evidence_gate/README.md) add paired replay, human review and a 48-request one-shot dispatcher. The runner now permits a stage to use a tighter output limit than the experiment maximum. The 512/256 stage limits and reserve of $0.02433150 reproduce offline. All 197 tests and both Ruff checks passed. Next decision is owner review of this exact freeze before any paid use. Human grading and observed outcomes remain pending.
