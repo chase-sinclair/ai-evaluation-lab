@@ -1,0 +1,8 @@
+{
+  "revision": "491abff8797ed268a4b9ff18a49b754dbcce50d3",
+  "files": {
+    "experiments/recovery/manual.md": "6ac4c59b068a7919ff58bbdd312c5f675db37a3e2a7d51aee7cad6aa7c5ff7c2",
+    "experiments/recovery/rules.py": "fad0f1e87ea6d67a3b0a059f4a147f6b6dfd870efe70882d614677e565f2c32f",
+    "tests/test_recovery_development.py": "3152c3975266bf74ee2fef54a11260147556c6c5bd8afdf4bcf2939928792674"
+  }
+}

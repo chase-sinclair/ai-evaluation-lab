@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 004 · offline implementation and request freeze
+
+The [implementation checkpoint](../experiments/recovery/README.md) covers the 24 evaluation episodes, eight development episodes, immutable mock traces and exact acquisition proposal. Rules freeze `491abff` preceded final evaluation. A scored 9/24 and B scored 24/24. C has only scripted transport evidence. The next decision is whether to authorize the 24 frozen requests for a descriptive safety and parity comparison. Account access and live dispatch controls must be checked separately before execution. [Verification](verification.md)
+
 ## Experiment 004 · revised design awaiting approval
 
 Following review of `3652d0a`, the [revised proposal](experiment04_recovery_design.md) strengthens five business-context episodes and defines eight offline development cases, a pre-evaluation rules freeze and independent syntax, authorization and outcome checks. A possible 24/24 rules ceiling is explicit. The 24-case evaluation and provisional budget remain unchanged in size. Next decision: owner review before implementation. [Verification](verification.md)

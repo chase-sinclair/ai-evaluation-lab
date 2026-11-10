@@ -1,5 +1,11 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 004 · offline implementation
+
+Passed 264 offline tests including 25 parameterized development checks and 36 recovery evaluation/contract checks. Ruff lint and format checks passed (142 files). Used `py -3.13 -m uv run --offline` for pytest, Ruff, the manifest rebuild and the local SDK transport. Verified all 24 ordered bodies, identical checkpoint seals across arms, repeatable state/effect traces, receipt bindings, fault handling, partial-run denominators, one-use directory and one-action budget. Rules were committed before final evaluation. A fictional principal collided with the shared adapter’s credential scrubber during the first transport test; replacing that identifier resolved the round-trip discrepancy. Both runs remain in ignored local storage.
+
+The exact digest, spend preflight and interpretation limits are recorded in the [checkpoint](../experiments/recovery/README.md). Model suitability and pricing were checked against official documentation without accessing a live account. The next gate is owner approval of this manifest; there is no enabled paid acquisition command.
+
 ## Experiment 004 · targeted design revision
 
 Checked the inventory against `3652d0a`: all 24 evaluation IDs retained, five substantive revisions and two wording changes to enforce identical public timeout inputs. Verified eight development IDs, local links and provisional reserve arithmetic. The existing offline suite passed (203 tests), as did Ruff lint and format checks (134 files). These checks validate the documentation and existing repository; the proposed controls and case grades await implementation.
