@@ -1,5 +1,9 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 004 · 2,048-token prospective freeze
+
+Verified parent and follow-up manifest hashes, all 24 ordered body comparisons and the unused destination. Replayed the first acquisition audit against its original seal. Rechecked standard pricing and confirmed account access using a read-only model lookup. Mock HTTP transport exercised the full 24-request path, accounting, incomplete and failed responses, model/tier/cache mismatches, duplicate IDs, budget and token limits, interruptions and refusal to resume. The original approval cannot dispatch the follow-up. Offline pytest passed 287 tests; Ruff lint and formatting passed. [Ordered hashes, budget and approval target](experiment04_followup_plan.md)
+
 ## Experiment 004 · live dispatcher and sealed acquisition audit
 
 Verified the frozen file, external approval digest, 24 reconstructed body/checkpoint bindings, clean dispatcher-only extension to the approved revision, standard pricing, reserve, account model metadata and unused directory. SDK mock HTTP tests checked exact outgoing JSON including TTL, approval rejection, zero retries, interrupted single-use runs, provider errors, incomplete responses, wrong model/tier/cache, duplicate IDs, accounting and spending guards. The pre-dispatch suite passed 275 tests. Live dispatch stopped on receipt six and preserved the incomplete response.

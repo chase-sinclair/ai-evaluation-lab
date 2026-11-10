@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 004 · separately configured follow-up awaiting owner decision
+
+The first acquisition at `ae4c116` is permanently closed. Its six receipts and seal reverified. The [new approval checkpoint](experiment04_followup_plan.md) freezes the same 24 requests in order with the output cap raised to 2,048. Estimated reserve $0.038285, proposed cap $0.05. Next decision is separate owner approval or rejection. No paid follow-up requests have been sent. [Verification](verification.md)
+
 ## Experiment 004 · live acquisition sealed at mandatory stop
 
 From approved freeze `b8a6fca` and clean dispatcher `8ee89e7`, six of 24 requests were sent once. P3 reached the 512-token limit and returned incomplete. Five completed proposals were replayed offline; C scored 4/5 evaluable, with four verified successes against 24 planned. P8 missed confirmed completion. Total usage-priced spend was $0.0011733. [Partial paired results and receipt audit](experiment04_live_acquisition.md) · [Verification](verification.md). Next step is owner review. The run cannot resume.
