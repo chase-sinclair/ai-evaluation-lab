@@ -1,5 +1,9 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 004 · targeted design revision
+
+Checked the inventory against `3652d0a`: all 24 evaluation IDs retained, five substantive revisions and two wording changes to enforce identical public timeout inputs. Verified eight development IDs, local links and provisional reserve arithmetic. The existing offline suite passed (203 tests), as did Ruff lint and format checks (134 files). These checks validate the documentation and existing repository; the proposed controls and case grades await implementation.
+
 ## Experiment 004 · design proposal
 
 Reviewed the original roadmap, published 001–003 findings, single-turn runner, provider path and earlier bounded acquisition pattern. Checked 24 unique scenario IDs, local source links and the provisional $0.018144 reserve arithmetic. The 203 existing offline tests passed; Ruff lint and format checks passed using `py -3.13 -m uv run --offline`. These checks cover the existing repository. Experiment 004 fixtures, APIs, grades and live manifest are proposed work pending approval.

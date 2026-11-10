@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 004 · revised design awaiting approval
+
+Following review of `3652d0a`, the [revised proposal](experiment04_recovery_design.md) strengthens five business-context episodes and defines eight offline development cases, a pre-evaluation rules freeze and independent syntax, authorization and outcome checks. A possible 24/24 rules ceiling is explicit. The 24-case evaluation and provisional budget remain unchanged in size. Next decision: owner review before implementation. [Verification](verification.md)
+
 ## Experiment 004 · recovery design awaiting owner review
 
 The owner approved the Experiment 03 publication package at `c41025d`. Portfolio website integration is deferred until the owner explicitly declares the Lab complete. The [Experiment 004 design](experiment04_recovery_design.md) proposes 24 paired mock failure episodes across procurement, financial operations and SaaS administration. The next decision is approval of the proposed scenarios, recovery authority and scoring before any implementation. A later live run requires a separate frozen-manifest approval. [Verification](verification.md)
