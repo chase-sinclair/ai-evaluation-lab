@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="513" viewBox="0 0 360 513" role="img" aria-labelledby="title desc">
+  <title id="title">Where the second check sits</title>
+  <desc id="desc">Each path starts with a question and preselected evidence. The gate checks evidence before generation. The verifier checks the generated answer. PASS releases the shared answer and BLOCK yields a fixed referral.</desc>
+  <rect width="360" height="513" fill="#fff"/>
+  <g font-family="Arial, sans-serif">
+    <text x="12" y="31" font-size="22" font-weight="700" fill="#163844">Where the second check sits</text>
+    <text x="12" y="60" font-size="16" fill="#163844">Shared input · Question + frozen packet</text>
+    <rect x="8" y="80" width="344" height="92" rx="8" fill="#eef4f4"/>
+    <text x="20" y="106" font-size="18" font-weight="700" fill="#163844">A · Standard RAG</text>
+    <text x="20" y="132" font-size="17" fill="#163844">Generate reply</text>
+    <text x="22" y="158" font-size="17" font-weight="700" fill="#163844">→ Release reply</text>
+    <rect x="8" y="188" width="344" height="140" rx="8" fill="#eef4f4"/>
+    <text x="20" y="214" font-size="18" font-weight="700" fill="#163844">B · Pre-generation gate</text>
+    <text x="20" y="240" font-size="17" fill="#163844">Check evidence</text>
+    <rect x="22" y="249" width="70" height="23" rx="4" fill="#185b51"/>
+    <text x="29" y="266" font-size="15" font-weight="700" fill="#fff">PASS</text>
+    <text x="102" y="266" font-size="16" fill="#163844">Generate → Release reply</text>
+    <rect x="22" y="281" width="70" height="23" rx="4" fill="#823a24"/>
+    <text x="29" y="298" font-size="15" font-weight="700" fill="#fff">BLOCK</text>
+    <text x="102" y="298" font-size="16" fill="#163844">Return fixed referral</text>
+    <rect x="8" y="344" width="344" height="150" rx="8" fill="#eef4f4"/>
+    <text x="20" y="370" font-size="18" font-weight="700" fill="#163844">C · Post-generation verifier</text>
+    <text x="20" y="396" font-size="17" fill="#163844">Generate reply → Verify answer</text>
+    <rect x="22" y="405" width="70" height="23" rx="4" fill="#185b51"/>
+    <text x="29" y="422" font-size="15" font-weight="700" fill="#fff">PASS</text>
+    <text x="102" y="422" font-size="16" fill="#163844">Release original reply</text>
+    <rect x="22" y="437" width="70" height="23" rx="4" fill="#823a24"/>
+    <text x="29" y="454" font-size="15" font-weight="700" fill="#fff">BLOCK</text>
+    <text x="102" y="454" font-size="16" fill="#163844">Return fixed referral</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="565" viewBox="0 0 360 565" role="img" aria-labelledby="title desc">
+  <title id="title">C12 · Contractor access</title>
+  <desc id="desc">The supplied Annex B closure supports the scoped answer. The verifier returned BLOCK and the application substituted a referral. Any workplace delay is hypothetical.</desc>
+  <rect width="360" height="565" fill="#fff"/>
+  <g font-family="Arial, sans-serif">
+    <text x="12" y="31" font-size="22" font-weight="700" fill="#163844">C12 · Contractor access</text>
+    <text x="14" y="60" font-size="16" font-weight="700" fill="#163844">Question</text>
+    <text x="14" y="83" font-size="17" fill="#163844">Is contractor entry permitted at Annex B</text>
+    <text x="14" y="105" font-size="17" fill="#163844">this week?</text>
+    <text x="14" y="137" font-size="16" font-weight="700" fill="#163844">Passage 1 · Building notice</text>
+    <text x="14" y="161" font-size="16" fill="#163844">Building-wide notice: normal contractor</text>
+    <text x="14" y="182" font-size="16" fill="#163844">hours.</text>
+    <text x="14" y="216" font-size="16" font-weight="700" fill="#163844">Passage 2 · Signed local closure</text>
+    <text x="14" y="240" font-size="16" fill="#163844">Signed Annex B closure for this week: no</text>
+    <text x="14" y="261" font-size="16" fill="#163844">contractor entry during works.</text>
+    <rect x="8" y="283" width="344" height="115" rx="8" fill="#154c48"/>
+    <text x="20" y="312" font-size="21" font-weight="700" fill="#fff">Correct generated answer</text>
+    <text x="20" y="338" font-size="16" fill="#fff">No. The signed Annex B closure prohibits</text>
+    <text x="20" y="359" font-size="16" fill="#fff">contractor entry during works this week</text>
+    <text x="20" y="380" font-size="16" fill="#fff">(passage 2).</text>
+    <rect x="8" y="407" width="344" height="141" rx="8" fill="#f9ebe5"/>
+    <text x="20" y="436" font-size="21" font-weight="700" fill="#812f18">Verifier decision · BLOCK</text>
+    <text x="20" y="462" font-size="16" font-weight="700" fill="#163844">Application referral</text>
+    <text x="20" y="485" font-size="16" fill="#163844">The available evidence does not establish</text>
+    <text x="20" y="506" font-size="16" fill="#163844">a response I can release. Please ask the</text>
+    <text x="20" y="527" font-size="16" fill="#163844">responsible desk to review.</text>
+  </g>
+</svg>

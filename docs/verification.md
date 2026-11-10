@@ -1,5 +1,9 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 03 · final editorial and visual checks
+
+Verified the article and handoff links and matched all five C12 quotations in both layouts to the frozen protocol or generator receipt. Headless Edge selected the intended figure sources at 320, 375, 759, 760 and 1024 CSS pixels. Rendered SVG text stayed within figure bounds without overlapping other labels. The outcomes chart retains its existing asset and scale. The full offline suite passed (203 tests), as did Ruff lint and formatting (133 files), using `py -3.13 -m uv run --offline`. This pass changed publication materials and checkpoint documentation only.
+
 ## Experiment 03 · portfolio publication package
 
 Checked the article and handoff links, matched the C12 question, both excerpts and referral to the protocol, and matched the scoped generator quotation to the Stage 1 receipt. Checked the figure values against the accepted paired findings. Rendered all three inline SVGs in Edge with 320, 375 and 1024 CSS-pixel page widths and 24 pixels reserved for page margins. Text bounds stayed inside each figure with no text overlaps. All three figures have accessible titles, descriptions and article alt text. The comparison table retains full precision and units.

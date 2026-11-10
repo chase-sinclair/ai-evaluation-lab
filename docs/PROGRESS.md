@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 03 · final publication-preparation pass
+
+Following design review of `1005df3`, the [article](portfolio/rag-safeguards.md) and [website handoff](portfolio/rag-safeguards-handoff.md) explicitly scope the comparison to preselected evidence. The workflow and Annex B figures now have wide and compact layouts. The accepted findings and FDE guidance carry forward. The package is ready for website integration as a separate activity. [Rendering and offline checks](verification.md)
+
 ## Experiment 03 · publication package ready for final design review
 
 The owner accepted the grading and technical findings at `7532f34` and approved the FDE playbook as engineering guidance. The [article](portfolio/rag-safeguards.md), three accessible figures and [website handoff](portfolio/rag-safeguards-handoff.md) are ready for design review. The C12 quotations match the source packet, generator receipt and application referral. The package passed the full offline suite, Ruff and responsive figure checks. The next decision is owner approval of the presentation. [Verification](verification.md)
