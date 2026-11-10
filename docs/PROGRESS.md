@@ -1,5 +1,9 @@
 # Progress — November 9, 2026
 
+## Experiment 03 · paired analysis ready for owner adjudication
+
+From acquisition checkpoint `2627169`, validated the supplied 40-entry AI-assisted review, replayed both sealed stages offline, and reconciled 32/36, 32/36 and 28/36 fully correct decisions. The [grading audit](experiment03_phase_b_review.md), [technical draft](experiment03_paired_findings.md), [deployment playbook](fde_deployment_playbook.md) and [portfolio draft](portfolio/rag-safeguards.md) await owner review. Priority decisions concern I03 referral sufficiency and I04 scope/citation treatment. No new acquisition or website changes. [Verification](verification.md)
+
 ## Experiment 03 Phase B · acquisition complete; masked review pending
 
 At approved revision `6fd092f`, the verifier completed 36 requests once. Four replies were blocked. The local blank worksheet at `.verification/enterprise-phase-b-blank-review.json` covers all 108 derived arm outcomes in 40 distinct entries. Review a copy before interpreting quality or recommending an architecture. [Acquisition audit](verification.md#experiment-03-phase-b--stage-2-live-checkpoint)

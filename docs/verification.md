@@ -1,5 +1,9 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 03 Phase B · reviewed replay
+
+Preserved the archive, blank worksheet, draft and sealed ledgers. Validated the 40 unique entries against immutable question/reply data and schema, checked claim spans, citations and packet authority, and ran the existing offline reviewed-report workflow using the byte-identical private validation copy. Independently recounted fully correct replies and unsupported spans from the 108 review-ID joins. All headline counts reconciled; the [adjudication notes](experiment03_phase_b_review.md) flag substantive alternatives without changing submitted labels. Verified local document links, all 203 offline tests, Ruff lint and formatting. No inference or new data acquisition.
+
 ## Experiment 03 Phase B · Stage 2 live checkpoint
 
 Before dispatch the clean approved revision reproduced the sealed 72-receipt Stage 1 ledger, the exact verifier manifest file and its canonical digest. Verified every source receipt/response ID, generator text hash, packet, prompt, allowed payload fields, order, body hash, model settings, remaining budget, model access, rates and unused run directory. One sequential dispatch completed all 36 requests. The audit matched each unique response ID, completed verdict, raw usage partition, returned model/tier, price estimate and request body to its approved row and source. Zero failures, incomplete or malformed outputs, retries or omissions.

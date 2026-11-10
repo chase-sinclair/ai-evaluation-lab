@@ -8,6 +8,10 @@ On Alder Desk, pre-checking 24 packets yielded 24 correct packet classifications
 
 ## Candidate deployment patterns
 
+**Phase B, pending owner approval.** On 36 fixed enterprise questions, the pre-gate forwarded all baseline replies. The post-check suppressed four, including the contractually correct maintenance exclusion and the question needed to route a campus key request. Strict scores were 32/36, 32/36 and 28/36. No observed unsupported answer was prevented. A stricter reading of I04 would give all three arms the same additional error. The checks added 73% and 102% estimated inference cost relative to standard RAG. This supports a grounded baseline for this mix; selective verification was never tested. [Paired analysis](experiment03_paired_findings.md)
+
+**How I would scope a customer pilot.** For internal enterprise search, inspect failed searches and escalations by document family. A missing current handbook calls for access-aware retrieval and effective-date filtering. For customer support, sample what happens after a response: a technically safe refusal can still cause a repeat contact. Track whether the user reaches the right team after a clarification. For compliance and private equity diligence, distinguish proof of clearance or consent from a checklist entry recording a request. Ask the responsible officer which artifact satisfies the control. Use a deterministic presence, entity and date check where possible, then escalate unresolved exceptions to that officer. A text verdict alone cannot authorize onboarding or closing.
+
 These are engineering hypotheses. For each client, sample representative requests, label real failure causes, estimate traffic and harm by workflow, then shadow a candidate against the current system before changing what customers see.
 
 | Architecture | When it earns consideration | Prerequisites, trade-offs and production signals | Adoption or rejection evidence |
@@ -46,6 +50,8 @@ Use costs per 1,000 representative requests in the same period. Let **E** be mat
 
 For illustration only, suppose a prevented error avoids $40 in expected loss, eight needless refusals cost users $2 each, ten additional reviews cost $4 each, inference adds $1, latency adds $3 and monitoring adds $20 per 1,000. Added cost is $80. Two prevented errors break even; three yield $40 net under those assumptions. If expected loss is $10, eight preventions are needed to break even. A referral following an already correct abstention earns zero avoided loss. For a pre-gate subtract generator cost avoided on actual blocks; for a post-check charge verification on every candidate. Replace every assumption with client data and consider tail harm and mandatory controls independently of average dollars.
 
+Estimate E separately for each failure type as traffic × observed baseline failure prevalence × the fraction of naturally occurring failures the check actually intercepts. With zero qualifying errors in a pilot, that last fraction is unknown. Sample live traffic in shadow mode, including bypassed queries and correct replies, before estimating it. Negotiate thresholds with service owners for severe errors, useful answers blocked, human handling minutes, p95 latency and cost per resolved request. Stop or narrow rollout if the added queue exceeds capacity or the same severe errors reach the customer under both architectures.
+
 ## Reusable portfolio section · Where I Would Deploy This Architecture
 
 Use five short lines: workflow and decision owner; failure worth preventing; observed evidence and its denominator; proposed deployment boundary; client metric or finding that would reverse the recommendation.
@@ -55,4 +61,4 @@ Use five short lines: workflow and decision owner; failure worth preventing; obs
 | 01 · Entity matching | I would trial advisory matching with a master-data steward who can inspect candidate IDs. One observed repair in four requests supports examining uncertain links. A missing target still requires retrieval repair. Measure false links, missed links, queue coverage and review time before automating acceptance. |
 | 02 · Tool access | I would scope a freight agent's catalog to its authorized workflow and independently validate write direction. All 18 shared challenges passed across sizes and layouts, but one payout release request produced a hold proposal. Measure task coverage, safe handling of unavailable actions, incorrect write proposals and operational cost before granting broader access. |
 
-Phase B will compare the first three answer architectures on deliberately stratified fictional packets. A client decision still requires representative prevalence, severity, referral capacity, access controls and measured deployment latency. [Proposed experiment](experiment03_phase_b_design.md)
+Phase B compared the first three answer architectures on deliberately stratified fictional packets. The workflow and industry examples above are engineering recommendations to validate with a client. [Frozen study design](experiment03_phase_b_design.md)
