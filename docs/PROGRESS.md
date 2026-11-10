@@ -1,5 +1,9 @@
 # Progress — November 9, 2026
 
+## Experiment 03 Phase B · acquisition complete; masked review pending
+
+At approved revision `6fd092f`, the verifier completed 36 requests once. Four replies were blocked. The local blank worksheet at `.verification/enterprise-phase-b-blank-review.json` covers all 108 derived arm outcomes in 40 distinct entries. Review a copy before interpreting quality or recommending an architecture. [Acquisition audit](verification.md#experiment-03-phase-b--stage-2-live-checkpoint)
+
 ## Experiment 03 Phase B · Stage 1 complete; Stage 2 awaiting approval
 
 The authorized run at `d027aeb` completed all 72 requests once. Each gate returned PASS. Total acquisition cost was an estimated $0.00427860. The private 36-body verifier manifest is materialized and verified offline. Next decision: review the [exact Stage 2 digest, limits and receipt audit](verification.md#experiment-03-phase-b--stage-1-live-checkpoint). No verifier inference or quality grading has occurred.

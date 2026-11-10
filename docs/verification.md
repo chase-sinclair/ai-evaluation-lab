@@ -1,5 +1,37 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 03 Phase B · Stage 2 live checkpoint
+
+Before dispatch the clean approved revision reproduced the sealed 72-receipt Stage 1 ledger, the exact verifier manifest file and its canonical digest. Verified every source receipt/response ID, generator text hash, packet, prompt, allowed payload fields, order, body hash, model settings, remaining budget, model access, rates and unused run directory. One sequential dispatch completed all 36 requests. The audit matched each unique response ID, completed verdict, raw usage partition, returned model/tier, price estimate and request body to its approved row and source. Zero failures, incomplete or malformed outputs, retries or omissions.
+
+| Workload | PASS | BLOCK | Blocked questions |
+|---|---:|---:|---|
+| Routine | 11 | 1 | R11 |
+| Incomplete evidence | 10 | 2 | I03, I10 |
+| Conflicting or misleading evidence | 11 | 1 | C12 |
+
+Verifier usage was 9,231 input and 3,206 output tokens, zero cache reads or writes. Estimated Stage 2 cost was $0.00252610. Observed median verifier latency was 1.479 s and summed request time was 62.460 s. Both stages together cost an estimated $0.00680470.
+
+| Modeled serial workflow | Estimated cost for 36 | Median latency per question |
+|---|---:|---:|
+| A · Standard | $0.0024700 | 1.522 s |
+| B · Gate then generation on PASS | $0.0042786 | 2.767 s |
+| C · Generation then verification | $0.0049961 | 3.025 s |
+
+Serial latencies combine the measured stages for each question before taking the median; retrieval and deployment overhead are excluded. These architectures share generator draws. Their cost totals represent alternatives.
+
+| Integrity artifact | SHA-256 |
+|---|---|
+| Stage 1 receipt ledger | `5b1c96d0ea4930b86eeefc7fc141f8fe750ff01ee3a12b152d7978d3c99071eb` |
+| Stage 2 approval manifest file | `5eac3d50b1e04f80d556015316ebbf7da7e8589338896f7def7aad1e2afe81ab` |
+| Stage 2 canonical approval digest | `4425a0bc40cfae3724628591fc7a27aebbf833159a5c6a1a7e487561c6ff6f46` |
+| Stage 2 receipt ledger | `12afaf68cb7084d14d4d99230d9ed4f30a5550f4714a16193bb87623730178dd` |
+| Stage 2 run manifest file | `746ad60b18663794a62371c229585607bbeafa1405df85973e06f4f09d0df23f` |
+| Private per-receipt hash index | `da1f7b2a6535142cc1513ac5b9a2db2c1b474a78e5fb5510c2043a26bf89a9cc` |
+| Original masked worksheet | `a2dee657008d5b8df0ea016c2efe83f7772ce2cb2135fce5b0c0e8fed11c06d3` |
+
+Generated a new write-once worksheet covering all 36 paired questions and verified every subjective field is blank. All 203 offline tests and both Ruff checks passed. Verdicts describe routing only; the four blocks require review alongside the passed replies. No further acquisition or publication of portfolio conclusions.
+
 ## Experiment 03 Phase B · Stage 1 live checkpoint
 
 Clean approved revision `d027aeb4b28e11b4df5e0be52f7d31b6777d0c1c`, unused run directory, account model access, current standard rates, all frozen body hashes and $0.03754650 reserve were confirmed before one sequential dispatch. All 72 receipts match the approved order, case, stage, logical and canonical body hashes. Independently reconciled raw provider IDs (72 unique), completed statuses, extracted text, model, standard tier, token partitions and estimated costs. No incomplete, malformed, failed, repeated or missing responses. Sealed ledger SHA-256: `5b1c96d0ea4930b86eeefc7fc141f8fe750ff01ee3a12b152d7978d3c99071eb`.
