@@ -1,5 +1,9 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 004 · final publication refinements
+
+Verified the README case-study link, full article title and distinct listing title. Reviewed the publication diff against `d1c1347`. The offline suite passed all 287 tests, and Ruff lint and formatting passed.
+
 ## Experiment 004 · publication package
 
 Checked both sealed receipt ledgers against their published digests and reconciled the accepted scores, effect counts, input/output tokens, estimated costs and latency without regrading. Matched the quoted P8 request to its frozen fixture and the two status values to their respective receipts. Validated the relative article, handoff, asset and technical evidence links. Edge rendered all three figures in wide and compact layouts at 320, 375, 759, 760 and 1024 CSS pixels, selecting the correct image sources without clipped or overlapping text. Offline pytest passed 287 tests; Ruff lint and formatting passed. Only Lab documentation and visual assets changed. [Editorial package](portfolio/recovery-handoff.md)

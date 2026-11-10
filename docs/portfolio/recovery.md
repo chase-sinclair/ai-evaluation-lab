@@ -2,7 +2,7 @@
 
 *AI Evaluation Lab · Experiment 004*
 
-A purchasing desk submits an order and the API reports a duplicate. Trying again could order the goods twice. Sending the buyer to investigate could also waste time if the desk already has a receipt proving the first submission succeeded. What should the assistant tell the buyer, and should it touch the order again?
+In this simulation, a purchasing desk submits an order and the API reports a duplicate. Trying again could order the goods twice. Sending the buyer to investigate could also waste time if the desk already has a receipt proving the first submission succeeded. What should the assistant tell the buyer, and should it touch the order again?
 
 **For workflows like the ones I tested, I would automate documented corrections with rules and give the desk a clear path for exceptions.** In the completed study, frozen rules and a model each made the correct decision on **24 of 24** episodes. Stopping and reporting the failure scored **9 of 24**. Calling the model added a median **1.980 seconds** per episode and recovered no additional task over rules.
 

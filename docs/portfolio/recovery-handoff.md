@@ -2,9 +2,9 @@
 
 Place this study after the RAG safeguards article in the future **Applied AI Decisions** collection once the owner declares the Lab complete and approves integration. Use the [article](recovery.md) for final editorial copy.
 
-**Project-card headline** — When Should an Enterprise AI Agent Recover Automatically—and When Should It Stop?
+**Project-card headline** — When Should AI Agents Retry—or Stop?
 
-**Card copy** — A payment timeout can mean the money already moved. Across 24 simulated enterprise failures, deterministic rules and an AI recovery handler both made every required decision. A purchase-order receipt shows why stopping safely still requires reporting the right status.
+**Card copy** — A payment can go through even when the API times out. See how rules and an AI agent each chose correctly when to retry, stop or confirm completion across 24 simulated failures.
 
 **Action** — Read the case study.
 

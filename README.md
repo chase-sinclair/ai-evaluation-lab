@@ -16,6 +16,8 @@ V2 tested 18 harder shared scenarios in two mirrored orders. All passed at each 
 
 **[Which RAG Reliability Safeguards Are Worth Deploying?](docs/portfolio/rag-safeguards.md)** compares three workflows on the same 36 synthetic enterprise questions and traces why a verifier withheld a correct facilities answer.
 
+**[When Should an Enterprise AI Agent Recover Automatically—and When Should It Stop?](docs/portfolio/recovery.md)** compares three responses to 24 simulated failures. Stop-and-report scored 9/24. Deterministic rules and the AI agent each scored 24/24. Model inference cost an estimated $0.0029715 across the follow-up, with a median API latency of 1.980 seconds per request.
+
 ## Quick start
 
 Install Python 3.12+ and [uv](https://docs.astral.sh/uv/), then run from this checkout:

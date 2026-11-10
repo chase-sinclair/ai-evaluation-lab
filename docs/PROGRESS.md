@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 004 · publication package complete
+
+Final review approved the package at `d1c1347` subject to three editorial edits. The article now opens in the simulation, the handoff uses the shorter listing title, and the root README lists the study. The next owner decision is whether the Lab needs Experiment 005. Website integration remains deferred. [Verification](verification.md)
+
 ## Experiment 004 · publication materials ready for editorial and design review
 
 The owner accepted the technical findings at `b4054a1`. The [final findings](experiment04_final_findings.md), [case study](portfolio/recovery.md), three responsive figures and [website handoff](portfolio/recovery-handoff.md) are ready for review. The recommendation favors rules for comparable normalized inputs and documented recoveries. Maintenance costs remain unmeasured. The next decision is owner approval of the presentation. Website integration remains deferred until the Lab is declared complete. [Verification](verification.md)
