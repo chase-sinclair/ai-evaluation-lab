@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 005 · checkpoint 1 ready for owner review
+
+Implemented the offline 22-table warehouse, 32 paired Python/SQL keys, four clarification witnesses and eight development tasks. The sealed source-manifest bindings reproduced across two builds. The bounded Docker worker handled every reference query. The discovery audit supports raising the tool budget and reserving more output for reasoning. The current decision is owner review of the evidence and proposed limits before context-package work. Prior verified design commit `7d4771cd98db01493adfedcc49bf9ca134d7040f`. [Checkpoint, budgets and reproduction](experiment05_checkpoint1.md) · [Verification](verification.md)
+
 ## Experiment 005 · FinOps SQL design awaiting review
 
 Following the completed Experiment 004 checkpoint at `ab58549`, the [Experiment 005 proposal](experiment05_sql_context_design.md) specifies a fictional 22-table warehouse, 36 paired questions, three preloaded-context conditions and a separate bounded discovery workflow. Next decision is owner review before warehouse or experiment implementation. [Verification](verification.md)
