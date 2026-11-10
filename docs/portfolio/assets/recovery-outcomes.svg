@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="325" viewBox="0 0 780 325" role="img" aria-labelledby="title desc">
+  <title id="title">Follow-up · 24 episodes</title>
+  <desc id="desc">Correct scores are 9, 24 and 24 out of 24. Only C incurs inference spend and API time. Total operating costs were unmeasured.</desc>
+  <rect width="780" height="325" fill="#fff"/>
+  <g font-family="Arial, sans-serif">
+    <text x="12" y="34" font-size="28" fill="#17394b" font-weight="700">Follow-up · 24 episodes</text>
+    <text x="12" y="71" font-size="19" fill="#17394b" font-weight="700">Policy-correct decisions out of 24</text>
+    <text x="12" y="109" font-size="16" fill="#17394b">A · Stop/report</text>
+    <rect x="176" y="97" width="485" height="12" rx="8" fill="#dde6e8"/>
+    <rect x="176" y="97" width="181.875" height="12" rx="8" fill="#126158"/>
+    <text x="669" y="109" font-size="16" fill="#17394b" font-weight="700">9/24</text>
+    <text x="12" y="143" font-size="16" fill="#17394b">B · Rules</text>
+    <rect x="176" y="131" width="485" height="12" rx="8" fill="#dde6e8"/>
+    <rect x="176" y="131" width="485" height="12" rx="8" fill="#126158"/>
+    <text x="669" y="143" font-size="16" fill="#17394b" font-weight="700">24/24</text>
+    <text x="12" y="177" font-size="16" fill="#17394b">C · Model</text>
+    <rect x="176" y="165" width="485" height="12" rx="8" fill="#dde6e8"/>
+    <rect x="176" y="165" width="485" height="12" rx="8" fill="#126158"/>
+    <text x="669" y="177" font-size="16" fill="#17394b" font-weight="700">24/24</text>
+    <rect x="10" y="218" width="373" height="96" rx="8" fill="#edf4f4"/>
+    <text x="24" y="247" font-size="19" fill="#17394b" font-weight="700">Estimated inference cost</text>
+    <text x="24" y="274" font-size="16" fill="#17394b">A and B     $0</text>
+    <text x="24" y="297" font-size="16" fill="#17394b">C                $0.0029715 per 24 episodes</text>
+    <rect x="397" y="218" width="373" height="96" rx="8" fill="#edf4f4"/>
+    <text x="411" y="247" font-size="19" fill="#17394b" font-weight="700">Median API time</text>
+    <text x="411" y="274" font-size="16" fill="#17394b">A and B     No API call</text>
+    <text x="411" y="297" font-size="16" fill="#17394b">C                1.980 s per episode</text>
+  </g>
+</svg>

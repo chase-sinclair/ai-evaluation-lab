@@ -1,5 +1,9 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 004 · publication package
+
+Checked both sealed receipt ledgers against their published digests and reconciled the accepted scores, effect counts, input/output tokens, estimated costs and latency without regrading. Matched the quoted P8 request to its frozen fixture and the two status values to their respective receipts. Validated the relative article, handoff, asset and technical evidence links. Edge rendered all three figures in wide and compact layouts at 320, 375, 759, 760 and 1024 CSS pixels, selecting the correct image sources without clipped or overlapping text. Offline pytest passed 287 tests; Ruff lint and formatting passed. Only Lab documentation and visual assets changed. [Editorial package](portfolio/recovery-handoff.md)
+
 ## Experiment 004 · completed follow-up acquisition
 
 Verified the approved clean revision, external digest, manifest bytes, 24 single-field parent comparisons, original pilot seal, current pricing and unused destination. All 12 targeted dispatcher tests passed before acquisition. The dispatcher confirmed model access and acquired 24 unique completed responses in order without retries. Offline audit reproduced all 72 decisions, verified the source and request bindings, ledger, receipt IDs and individual digests, and reconciled reported tokens and estimated cost. The old pilot audit also reproduced. Full pytest passed 287 tests; Ruff lint and formatting passed. [Reproduction command, seal and case-level telemetry](experiment04_followup_acquisition.md)

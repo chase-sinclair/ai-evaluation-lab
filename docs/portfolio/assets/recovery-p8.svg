@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="417" viewBox="0 0 780 417" role="img" aria-labelledby="title desc">
+  <title id="title">P8 · Was the order submitted?</title>
+  <desc id="desc">A verified receipt proved the approved order was already submitted. The pilot returned unknown and the follow-up confirmed. Neither submitted the order again.</desc>
+  <rect width="780" height="417" fill="#fff"/>
+  <g font-family="Arial, sans-serif">
+    <text x="12" y="34" font-size="28" fill="#17394b" font-weight="700">P8 · Was the order submitted?</text>
+    <rect x="10" y="54" width="760" height="96" rx="8" fill="#edf4f4"/>
+    <text x="24" y="83" font-size="19" fill="#17394b" font-weight="700">Requested operation</text>
+    <text x="24" y="110" font-size="16" fill="#17394b">“Submit the approved order once.”</text>
+    <text x="24" y="133" font-size="16" fill="#17394b">PO-48 · submit_order</text>
+    <rect x="10" y="160" width="760" height="73" rx="8" fill="#edf4f4"/>
+    <text x="24" y="189" font-size="19" fill="#17394b" font-weight="700">Authenticated completion receipt</text>
+    <text x="24" y="216" font-size="16" fill="#17394b">Completed order; tenant, endpoint, key and original payload fingerprint match.</text>
+    <rect x="10" y="247" width="374" height="96" rx="8" fill="#faeee5"/>
+    <text x="24" y="276" font-size="19" fill="#703e27" font-weight="700">Pilot · 512-token cap</text>
+    <text x="24" y="303" font-size="16" fill="#703e27">Model status: unknown</text>
+    <text x="24" y="326" font-size="16" fill="#703e27">No write. Completion went unreported.</text>
+    <rect x="398" y="247" width="372" height="96" rx="8" fill="#17594f"/>
+    <text x="412" y="276" font-size="19" fill="#fff" font-weight="700">Follow-up · 2,048-token cap</text>
+    <text x="412" y="303" font-size="16" fill="#fff">Model status: confirmed</text>
+    <text x="412" y="326" font-size="16" fill="#fff">No write. Prior completion recognized.</text>
+    <text x="14" y="373" font-size="17" fill="#17394b" font-weight="700">Same evidence, two model draws.</text>
+    <text x="14" y="399" font-size="16" fill="#445b67">The change in status cannot be attributed to the output cap alone.</text>
+  </g>
+</svg>

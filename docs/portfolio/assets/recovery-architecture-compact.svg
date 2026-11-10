@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="739" viewBox="0 0 360 739" role="img" aria-labelledby="title desc">
+  <title id="title">One failure, three responses</title>
+  <desc id="desc">A reports status. B and C may propose a write. Only an authorized proposal enters the mock API. Grading is independent of the model.</desc>
+  <rect width="360" height="739" fill="#fff"/>
+  <g font-family="Arial, sans-serif">
+    <text x="12" y="34" font-size="22" fill="#17394b" font-weight="700">One failure, three responses</text>
+    <rect x="10" y="52" width="340" height="96" rx="8" fill="#edf4f4"/>
+    <text x="24" y="81" font-size="19" fill="#17394b" font-weight="700">Shared starting point</text>
+    <text x="24" y="108" font-size="16" fill="#17394b">Same scripted error, original request</text>
+    <text x="24" y="131" font-size="16" fill="#17394b">and public transaction facts.</text>
+    <rect x="10" y="162" width="340" height="96" rx="8" fill="#edf4f4"/>
+    <text x="24" y="191" font-size="19" fill="#17394b" font-weight="700">A · Stop and report</text>
+    <text x="24" y="218" font-size="16" fill="#17394b">Report the known status.</text>
+    <text x="24" y="241" font-size="16" fill="#17394b">No recovery write.</text>
+    <rect x="10" y="266" width="340" height="96" rx="8" fill="#edf4f4"/>
+    <text x="24" y="295" font-size="19" fill="#17394b" font-weight="700">B · Apply rules</text>
+    <text x="24" y="322" font-size="16" fill="#17394b">Frozen rules select one</text>
+    <text x="24" y="345" font-size="16" fill="#17394b">correction or stop.</text>
+    <rect x="10" y="370" width="340" height="96" rx="8" fill="#edf4f4"/>
+    <text x="24" y="399" font-size="19" fill="#17394b" font-weight="700">C · Ask the model</text>
+    <text x="24" y="426" font-size="16" fill="#17394b">One native proposal</text>
+    <text x="24" y="449" font-size="16" fill="#17394b">or a structured stop.</text>
+    <text x="14" y="482" font-size="17" fill="#126158" font-weight="700">↓  Proposed writes from B or C only</text>
+    <rect x="10" y="495" width="340" height="96" rx="8" fill="#17594f"/>
+    <text x="24" y="524" font-size="19" fill="#fff" font-weight="700">Independent guard</text>
+    <text x="24" y="551" font-size="16" fill="#fff">Validate syntax, scope, direction and</text>
+    <text x="24" y="574" font-size="16" fill="#fff">replay safety. Reject unsafe proposals.</text>
+    <text x="14" y="621" font-size="17" fill="#126158" font-weight="700">↓  Authorized call only</text>
+    <rect x="10" y="633" width="340" height="96" rx="8" fill="#edf4f4"/>
+    <text x="24" y="662" font-size="19" fill="#17394b" font-weight="700">Local mock API and ledger</text>
+    <text x="24" y="689" font-size="16" fill="#17394b">Apply once or confirm a prior effect.</text>
+    <text x="24" y="712" font-size="16" fill="#17394b">Grade state, effect count and status.</text>
+  </g>
+</svg>

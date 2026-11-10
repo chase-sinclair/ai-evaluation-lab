@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 004 · publication materials ready for editorial and design review
+
+The owner accepted the technical findings at `b4054a1`. The [final findings](experiment04_final_findings.md), [case study](portfolio/recovery.md), three responsive figures and [website handoff](portfolio/recovery-handoff.md) are ready for review. The recommendation favors rules for comparable normalized inputs and documented recoveries. Maintenance costs remain unmeasured. The next decision is owner approval of the presentation. Website integration remains deferred until the Lab is declared complete. [Verification](verification.md)
+
 ## Experiment 004 · completed follow-up awaiting owner review
 
 The approved 2,048-token acquisition at `8a4074b` completed all 24 requests once. The live model and frozen rules each scored 24/24, against 9/24 for stop-and-report. Estimated follow-up spend was $0.0029715. Both acquisitions retain separate seals, receipts and denominators. [Case results and receipt ledger](experiment04_followup_acquisition.md). The next decision is owner review of the technical findings.
