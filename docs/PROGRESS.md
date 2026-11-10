@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 005 · FinOps SQL design awaiting review
+
+Following the completed Experiment 004 checkpoint at `ab58549`, the [Experiment 005 proposal](experiment05_sql_context_design.md) specifies a fictional 22-table warehouse, 36 paired questions, three preloaded-context conditions and a separate bounded discovery workflow. Next decision is owner review before warehouse or experiment implementation. [Verification](verification.md)
+
 ## Experiment 004 · publication package complete
 
 Final review approved the package at `d1c1347` subject to three editorial edits. The article now opens in the simulation, the handoff uses the shorter listing title, and the root README lists the study. The next owner decision is whether the Lab needs Experiment 005. Website integration remains deferred. [Verification](verification.md)

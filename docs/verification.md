@@ -1,5 +1,9 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 005 · design proposal
+
+Checked the 36 unique question IDs, 22 proposed table names, four condition budgets and aggregate planning arithmetic. Reviewed official FOCUS 1.2 and DuckDB dialect/security references. The existing repository passed 287 offline tests and both Ruff checks. Numeric answer keys, exact serialized contexts, discovery feasibility and sandbox enforcement require the proposed offline implementation and freeze. [Design](experiment05_sql_context_design.md)
+
 ## Experiment 004 · final publication refinements
 
 Verified the README case-study link, full article title and distinct listing title. Reviewed the publication diff against `d1c1347`. The offline suite passed all 287 tests, and Ruff lint and formatting passed.
