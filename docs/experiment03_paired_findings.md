@@ -1,4 +1,4 @@
-# Which RAG reliability safeguards were worth their cost? · technical findings draft
+# Which RAG reliability safeguards were worth their cost? · accepted technical findings
 
 **Decision for the tested workloads:** keep grounded standard RAG as the reference architecture. It allowed citations, clarification and abstention. Neither additional check prevented an observed unsupported answer under the submitted Phase B grades. Post-generation verification withheld four appropriate original replies. These results guide a local architecture decision; customer adoption requires evidence from representative traffic.
 
@@ -8,7 +8,7 @@ On 24 fictional Alder Desk queries the pre-gate classified all packets as expect
 
 ## Phase B · 36 enterprise questions
 
-A generated once per question. B checked the packet before forwarding the same reply or a fixed referral. C checked the actual reply against the packet, then forwarded the reply unchanged or substituted that referral. The gate passed all 36. The verifier passed 32 and blocked four. Every architecture was evaluable on all 36 paired units. The 108 acquired stage responses and 108 derived arm outcomes yield 40 distinct question/reply pairs for review. Quality measures below use the AI-assisted draft pending owner approval.
+A generated once per question. B checked the packet before forwarding the same reply or a fixed referral. C checked the actual reply against the packet, then forwarded the reply unchanged or substituted that referral. The gate passed all 36. The verifier passed 32 and blocked four. Every architecture was evaluable on all 36 paired units. The 108 acquired stage responses and 108 derived arm outcomes yield 40 distinct question/reply pairs for review. The owner accepted the AI-assisted grades and documented sensitivities. There was no independent human adjudication.
 
 | Workload | A · standard | B · pre-gate | C · post-check |
 |---|---:|---:|---:|

@@ -14,6 +14,8 @@ on the same tasks. [Live findings and per-scenario results](docs/experiment02_li
 
 V2 tested 18 harder shared scenarios in two mirrored orders. All passed at each catalog size. A separate capability test exposed an opposite-direction payout write proposal when the release function was missing. [V2 results, costs and reply audit](docs/experiment02_v2_live_findings.md)
 
+**[Which RAG Reliability Safeguards Are Worth Deploying?](docs/portfolio/rag-safeguards.md)** compares three workflows on the same 36 synthetic enterprise questions and traces why a verifier withheld a correct facilities answer.
+
 ## Quick start
 
 Install Python 3.12+ and [uv](https://docs.astral.sh/uv/), then run from this checkout:

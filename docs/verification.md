@@ -1,5 +1,11 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 03 · portfolio publication package
+
+Checked the article and handoff links, matched the C12 question, both excerpts and referral to the protocol, and matched the scoped generator quotation to the Stage 1 receipt. Checked the figure values against the accepted paired findings. Rendered all three inline SVGs in Edge with 320, 375 and 1024 CSS-pixel page widths and 24 pixels reserved for page margins. Text bounds stayed inside each figure with no text overlaps. All three figures have accessible titles, descriptions and article alt text. The comparison table retains full precision and units.
+
+Offline verification using `py -3.13 -m uv run --offline` passed for `pytest -q` (203 tests), `ruff check .` and `ruff format --check .` (133 files). Changes cover publication materials, navigation and approval status. Historical worksheets, experiment definitions and receipts remain at their accepted versions. Final presentation review is pending.
+
 ## Experiment 03 Phase B · reviewed replay
 
 Preserved the archive, blank worksheet, draft and sealed ledgers. Validated the 40 unique entries against immutable question/reply data and schema, checked claim spans, citations and packet authority, and ran the existing offline reviewed-report workflow using the byte-identical private validation copy. Independently recounted fully correct replies and unsupported spans from the 108 review-ID joins. All headline counts reconciled; the [adjudication notes](experiment03_phase_b_review.md) flag substantive alternatives without changing submitted labels. Verified local document links, all 203 offline tests, Ruff lint and formatting. No inference or new data acquisition.

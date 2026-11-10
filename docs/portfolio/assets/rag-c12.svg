@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="804" viewBox="0 0 384 804" role="img" aria-labelledby="title desc">
+  <title id="title">C12 · Contractor access</title>
+  <desc id="desc">The signed Annex B restriction prevailed over normal building hours. The verifier blocked the correct scoped answer. A delay is hypothetical.</desc>
+  <rect width="384" height="804" fill="#fff"/>
+  <g font-family="Arial, sans-serif">
+    <text x="18" y="34" font-size="23" font-weight="700" fill="#13344a">C12 · Contractor access</text>
+    <rect x="8" y="51" width="368" height="90" rx="8" fill="#eef5f5"/>
+    <text x="20" y="72" font-size="17" font-weight="700" fill="#125760">Question</text>
+    <text x="20" y="96" font-size="16" fill="#13344a">Is contractor entry permitted at Annex B</text>
+    <text x="20" y="119" font-size="16" fill="#13344a">this week?</text>
+    <rect x="8" y="149" width="368" height="90" rx="8" fill="#eef5f5"/>
+    <text x="20" y="170" font-size="17" font-weight="700" fill="#125760">Passage 1 · Building scope</text>
+    <text x="20" y="194" font-size="16" fill="#13344a">Building-wide notice: normal contractor</text>
+    <text x="20" y="217" font-size="16" fill="#13344a">hours.</text>
+    <rect x="8" y="247" width="368" height="90" rx="8" fill="#eef5f5"/>
+    <text x="20" y="268" font-size="17" font-weight="700" fill="#125760">Passage 2 · Annex scope</text>
+    <text x="20" y="292" font-size="16" fill="#13344a">Signed Annex B closure for this week: no</text>
+    <text x="20" y="315" font-size="16" fill="#13344a">contractor entry during works.</text>
+    <rect x="8" y="345" width="368" height="113" rx="8" fill="#eef5f5"/>
+    <text x="20" y="366" font-size="17" font-weight="700" fill="#125760">Generated answer · Released by A and B</text>
+    <text x="20" y="390" font-size="16" fill="#13344a">No. The signed Annex B closure prohibits</text>
+    <text x="20" y="413" font-size="16" fill="#13344a">contractor entry during works this week</text>
+    <text x="20" y="436" font-size="16" fill="#13344a">(passage 2).</text>
+    <rect x="8" y="466" width="368" height="90" rx="8" fill="#eef5f5"/>
+    <text x="20" y="487" font-size="17" font-weight="700" fill="#125760">C · Observed verifier decision: BLOCK</text>
+    <text x="20" y="511" font-size="16" fill="#13344a">The application replaced the answer with</text>
+    <text x="20" y="534" font-size="16" fill="#13344a">its fixed referral:</text>
+    <rect x="8" y="564" width="368" height="113" rx="8" fill="#eef5f5"/>
+    <text x="20" y="585" font-size="17" font-weight="700" fill="#125760">Customer-facing referral</text>
+    <text x="20" y="609" font-size="16" fill="#13344a">The available evidence does not establish</text>
+    <text x="20" y="632" font-size="16" fill="#13344a">a response I can release. Please ask the</text>
+    <text x="20" y="655" font-size="16" fill="#13344a">responsible desk to review.</text>
+    <rect x="8" y="685" width="368" height="90" rx="8" fill="#eef5f5"/>
+    <text x="20" y="706" font-size="17" font-weight="700" fill="#125760">Hypothetical operational effect</text>
+    <text x="20" y="730" font-size="16" fill="#13344a">A desk referral could delay a decision.</text>
+    <text x="20" y="753" font-size="16" fill="#13344a">No workplace delay was measured.</text>
+  </g>
+</svg>

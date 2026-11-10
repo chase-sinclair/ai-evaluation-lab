@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="602" viewBox="0 0 384 602" role="img" aria-labelledby="title desc">
+  <title id="title">Where the second check sits</title>
+  <desc id="desc">In paired replay, all workflows share a packet and generator answer. Only a BLOCK replaces that answer.</desc>
+  <rect width="384" height="602" fill="#fff"/>
+  <g font-family="Arial, sans-serif">
+    <text x="18" y="34" font-size="23" font-weight="700" fill="#13344a">Where the second check sits</text>
+    <rect x="8" y="51" width="368" height="67" rx="8" fill="#eef5f5"/>
+    <text x="20" y="72" font-size="17" font-weight="700" fill="#125760">Input shared by all three workflows</text>
+    <text x="20" y="96" font-size="16" fill="#13344a">User question + frozen evidence packet</text>
+    <rect x="8" y="126" width="368" height="136" rx="8" fill="#eef5f5"/>
+    <text x="20" y="147" font-size="17" font-weight="700" fill="#125760">A · Standard RAG</text>
+    <text x="20" y="171" font-size="16" fill="#13344a">Generate a grounded reply</text>
+    <text x="20" y="194" font-size="16" fill="#13344a">↓</text>
+    <text x="20" y="217" font-size="16" fill="#13344a">Release the reply, which can include</text>
+    <text x="20" y="240" font-size="16" fill="#13344a">a clarification or an abstention.</text>
+    <rect x="8" y="270" width="368" height="136" rx="8" fill="#eef5f5"/>
+    <text x="20" y="291" font-size="17" font-weight="700" fill="#125760">B · Check evidence before generation</text>
+    <text x="20" y="315" font-size="16" fill="#13344a">Assess the question and packet</text>
+    <text x="20" y="338" font-size="16" fill="#13344a">↓</text>
+    <text x="20" y="361" font-size="16" fill="#13344a">PASS → Generate and release reply</text>
+    <text x="20" y="384" font-size="16" fill="#13344a">BLOCK → Return fixed referral</text>
+    <rect x="8" y="414" width="368" height="159" rx="8" fill="#eef5f5"/>
+    <text x="20" y="435" font-size="17" font-weight="700" fill="#125760">C · Verify answer before release</text>
+    <text x="20" y="459" font-size="16" fill="#13344a">Generate a reply, then verify its claims</text>
+    <text x="20" y="482" font-size="16" fill="#13344a">against the question and packet</text>
+    <text x="20" y="505" font-size="16" fill="#13344a">↓</text>
+    <text x="20" y="528" font-size="16" fill="#13344a">PASS → Release original reply</text>
+    <text x="20" y="551" font-size="16" fill="#13344a">BLOCK → Return fixed referral</text>
+  </g>
+</svg>

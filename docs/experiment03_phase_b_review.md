@@ -1,6 +1,6 @@
-# Experiment 03 Phase B · grading validation for owner approval
+# Experiment 03 Phase B · owner-reviewed grading validation
 
-The supplied AI-assisted draft passes structural validation. Its four verifier blocks all replace replies that use the offered evidence appropriately. Three remove an answer or clarification; the fourth replaces a specific, justified abstention with a generic referral. The grades are reproducible. Their interpretation still requires owner approval.
+The supplied AI-assisted draft passes structural validation. Its four verifier blocks all replace replies that use the offered evidence appropriately. Three remove an answer or clarification; the fourth replaces a specific, justified abstention with a generic referral. The grades are reproducible. The owner accepted the submitted scores and sensitivities, retaining the incomplete I03 referral grade, stricter I04 alternative and C06 ambiguity.
 
 ## What was verified
 

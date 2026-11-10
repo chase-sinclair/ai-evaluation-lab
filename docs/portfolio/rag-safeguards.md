@@ -1,39 +1,64 @@
 # Which RAG Reliability Safeguards Are Worth Deploying?
 
-*Draft for owner review · AI Evaluation Lab, Experiment 03*
+*AI Evaluation Lab · Experiment 03*
 
-A facilities employee asked whether a contractor could enter Annex B during a closure. The generator correctly cited the signed restriction and said no. A second model checking that answer blocked it. In a deployed desk, the employee would have received a referral instead of the site-specific instruction.
+In a synthetic facilities case, an employee asked whether contractors could enter Annex B that week. The assistant found the signed closure and correctly said no. A model assigned to verify that answer blocked it. The employee-facing reply became “Please ask the responsible desk to review.”
 
-**My recommendation for this workload is to start with standard retrieval-augmented generation (RAG), with citations and permission to ask a question or abstain.** Across 36 enterprise scenarios, it produced 32 fully correct decisions. Checking evidence before answering produced the same 32. Checking answers before release reduced that count to 28 and roughly doubled estimated inference cost. Four referrals are observable; the value of each depends on what it replaced.
+**I would start with standard retrieval-augmented generation (RAG) for this workload.** It gave a fully correct reply on **32 of 36** questions. Checking the evidence first preserved all 32. Checking the answer before release reduced the count to **28 of 36** and increased estimated inference cost by **102.3%**. Neither safeguard caught an unsupported answer that the baseline would have delivered.
 
-## The implementation decision
+## Three ways to answer the same question
 
-An enterprise can pay for a second model call on every employee or customer question. Before generation, it can check whether the evidence is sufficient and sometimes avoid generating an answer. After generation, it can inspect the actual claims, but the generation cost has already been incurred. I wanted to know when either check earns its place in the workflow.
+For a support desk, a referral has a cost. Someone else has to interpret the policy, and a user may have to wait. The implementation decision was whether a second model call catches enough consequential errors to justify the useful replies it withholds.
 
-## How I evaluated the choice
+![Three workflows share a question and evidence packet. Standard RAG releases the generator reply. A pre-gate checks the packet first. A post-check inspects the generated reply before release. Either check can substitute a fixed referral.](assets/rag-workflows.svg)
 
-A first pilot used 24 fictional service-desk requests. The evidence gate blocked six. Standard RAG had already abstained appropriately on all six, and both paths shared a minor error naming who issues a collection code.
+The baseline could cite the packet, explain what it supported, ask for clarification or abstain. The pre-gate could identify missing evidence before paying for generation. The post-check could inspect a specific claim or citation, but generation had already occurred. Neither check could retrieve another document or rewrite the answer.
 
-The second study used 36 new questions: 12 routine, 12 with incomplete or ambiguous evidence, and 12 with conflicting, stale or misleading evidence. Each question had a fixed packet. We generated one answer and reused its exact text across architectures so a different generator draw could not explain a gain or loss. The verifier saw the real answer only after generation. Its 36 request bodies were frozen and separately approved before dispatch. The 108 resulting customer outcomes resolved to 40 distinct replies for AI-assisted, source-relative review.
+## How I isolated the effect of a check
 
-## What the extra checks bought
+The first pilot used **24 fictional service-desk questions**. The gate blocked six, and the baseline had already abstained appropriately on every one. Both workflows scored 23/24. Both also attributed a collection code to the wrong issuer. That left a practical question open. Would checking the *actual reply* help on harder evidence conflicts?
 
-| Phase B workflow | Fully correct | Estimated cost for 36 | Median modeled response time |
+Phase B used **36 new synthetic questions** with equal groups of routine requests, incomplete or ambiguous evidence, and conflicting or outdated documents. For each question, all three workflows used the same frozen packet and one shared generator reply. A PASS forwarded that reply verbatim. A BLOCK substituted the same fixed referral. The verifier saw the generated answer alongside the evidence. The 108 workflow outcomes reduced to 40 distinct question/reply pairs for masked grading. The unit of comparison was the question.
+
+## What changed for the user
+
+| Workflow | Fully correct replies | Estimated inference cost for 36 questions | Median modeled serial latency per question |
 |---|---:|---:|---:|
-| Standard RAG | 32/36 | $0.0024700 | 1.52 s |
-| Evidence check before generation | 32/36 | $0.0042786 | 2.77 s |
-| Answer verification before release | 28/36 | $0.0049961 | 3.03 s |
+| Standard RAG | 32/36 | $0.0024700 | 1.522 s |
+| Pre-generation gate | 32/36 | $0.0042786 | 2.767 s |
+| Post-generation verifier | 28/36 | $0.0049961 | 3.025 s |
 
-The pre-gate passed every packet. The verifier withheld two supported policy answers, a useful clarification about which campus handled a key replacement, and an abstention that explained why a dry-freight payout cap could not be applied to refrigerated goods. The generic freight referral was still safe. Giving it full credit would raise the verifier to 29/36. Neither check prevented an observed unsupported answer under the supplied grades.
+![Comparison of the three workflows. The pre-gate added 73.2% estimated inference cost and 81.8% median modeled latency. The verifier added 102.3% and 98.8%, respectively, while losing four fully correct replies.](assets/rag-outcomes.svg)
 
-Four baseline replies missed strict completeness requirements. For example, the credit analyst got a sound explanation of why the covenant ratio could not be computed, but the reply omitted the requested formula. The appropriate fix depends on whether the customer needs a safe warning, a reproducible calculation, or an authorized decision.
+The cost estimates apply the study’s prices to recorded token usage. Latency adds the measured stages for each question before taking the median. Retrieval, queueing and staff handling time were outside the measurement.
 
-## My contribution
+The gate passed all 36 packets. The verifier changed four replies. It withheld two correct policy answers (maintenance and Annex B access), a question that would have identified the right campus for a key replacement, and an explanation of why a dry-freight payout limit could not settle a refrigerated claim. The last case, I03, remained safe after referral but lost the reason for abstaining. Its generic referral is incomplete under the frozen key.
 
-I directed the architecture comparison, reviewed and strengthened the scenarios, approved the two acquisition stages separately, and required that an unnecessary refusal count against a safeguard. Codex assisted with the implementation, acquisition audits and offline paired reporting. The Phase B judgments are AI-assisted and await my approval.
+The baseline’s four misses were safe but incomplete. For example, one reply correctly declined to compute a covenant ratio from incomplete records but omitted the requested formula. Counting only invented facts would have missed that failure to help the user.
+
+## C12 · When a verifier suppressed the governing rule
+
+![Annex B decision trace with the original question, both supplied passages, the generator’s scoped answer, and the verifier’s BLOCK followed by the application referral. The signed local closure governs contractor entry that week.](assets/rag-c12.svg)
+
+The building-wide notice set normal hours. The signed closure applied to this annex, this week, during the works. Standard RAG cited that narrower rule, and the evidence gate allowed the same answer through. The observed verifier decision was BLOCK. The resulting referral asked the user to contact the desk. **A delay while someone rechecks the closure is a hypothetical business consequence.** The study measured the reply change. It did not observe an employee, a site visit or a delay.
 
 ## What I would recommend to a customer
 
-Ask the support owner for recent failures that changed a customer decision. Trace each to the retrieved packet, the generated claim and the action someone took. A missing signed rider points toward document retrieval. A wrong number copied from an otherwise adequate filing is a reason to shadow an answer verifier. A discretionary approval belongs with the authorized decision maker. Compare consequential errors actually prevented with correct replies delayed or suppressed, and include handling time for every new referral.
+Start with a grounded baseline that can say what the evidence establishes and where it runs out. Sample real questions with the desk owner and trace each material error back to the packet, the reply and the decision it informed.
 
-These figures come from fictional packets, one generator draw per question and one model family. Reviewers can reasonably disagree about completeness and citation scope. Modeled latency excludes retrieval and queueing; no customer ROI was measured. Before deployment, repeat the comparison on representative traffic, measure failure prevalence and severity, and audit the replies that any proposed check would suppress. [Technical evidence](../experiment03_paired_findings.md) · [Grading sensitivities](../experiment03_phase_b_review.md) · [Deployment playbook](../fde_deployment_playbook.md)
+| What the trace shows | What I would pilot |
+|---|---|
+| A current signed rider never reached the assistant, or a draft outranked it. | Repair retrieval, document status and scope. Check how often the governing document reaches the packet. A second model reading the same documents cannot supply the missing rider. |
+| Support routinely promises an exception without the required evidence. | Shadow a pre-gate with explicit sufficiency criteria. Count unsafe promises it would prevent and useful partial answers or clarifications it would withhold. |
+| Finance summaries repeatedly misquote a term even with the governing document in view. | Use a deterministic check for a defined calculation. For interpretation errors, shadow a verifier selectively on the consequential claims and inspect both its catches and its misses. |
+| The documents leave a discretionary or high-impact approval unresolved. | Route the evidence and open decision to a named person with authority. Measure queue time and whether the referral leads to a decision. |
+
+I would add verification only if representative traffic shows that the frequency and severity of errors it actually prevents outweigh useful answers lost, review labor, inference cost and delay. I would track those quantities alongside tail latency and audit a sample of both passed and blocked replies. Selective verification is a proposed customer pilot. This experiment evaluated checks applied to every question. [FDE Deployment Decision Playbook](../fde_deployment_playbook.md)
+
+## My contribution and the limits of the evidence
+
+I directed the architecture comparison, reviewed and strengthened the scenarios, approved the two acquisition stages separately, and required the evaluation to count useful answers a safeguard withheld. Codex assisted with implementation, acquisition audits and paired reporting. I reviewed and accepted the AI-assisted judgments and their documented sensitivities. There was no independent human adjudication.
+
+One case matters to the interpretation. I04 used invalid citation IDs and omitted the severity qualifier on a 15-minute acknowledgment target. Counting it incorrect lowers the scores to **31/36, 31/36 and 27/36**. All three workflows released the same text. On C06, the question asked for active sites, but the source established only total sites. The accepted grade credits the reply for making that distinction explicit.
+
+These 36 synthetic questions used fixed evidence packets, one generator draw per question and one model family. A conservatively prompted baseline left few opportunities to demonstrate prevention. A checker from the same family can share the generator’s mistakes. The study establishes a cost and usefulness trade-off on this workload. Production error rates, business ROI and the value of verification where serious errors are more common remain open. [Accepted paired findings](../experiment03_paired_findings.md) · [Grading audit and sensitivities](../experiment03_phase_b_review.md) · [Phase A findings](../experiment03_phase_a_review.md)

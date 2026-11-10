@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="477" viewBox="0 0 384 477" role="img" aria-labelledby="title desc">
+  <title id="title">Quality and operating overhead</title>
+  <desc id="desc">Three zero-based scales. Correctness counts out of 36. Estimated cost uses recorded tokens. Latency sums measured stages for each question before taking the median.</desc>
+  <rect width="384" height="477" fill="#fff"/>
+  <g font-family="Arial, sans-serif">
+    <text x="18" y="34" font-size="23" font-weight="700" fill="#13344a">Quality and operating overhead</text>
+    <text x="18" y="72" font-size="18" font-weight="700" fill="#13344a">Fully correct replies</text>
+    <text x="18" y="97" font-size="15" fill="#13344a">36 paired questions per workflow</text>
+    <text x="18" y="119" font-size="16" fill="#13344a">Standard</text>
+    <rect x="100" y="106" width="153" height="12" rx="2" fill="#e0e9ea"/>
+    <rect x="100" y="106" width="136.00" height="12" rx="2" fill="#246474"/>
+    <text x="264" y="119" font-size="16" fill="#13344a">32/36</text>
+    <text x="18" y="142" font-size="16" fill="#13344a">Pre-gate</text>
+    <rect x="100" y="129" width="153" height="12" rx="2" fill="#e0e9ea"/>
+    <rect x="100" y="129" width="136.00" height="12" rx="2" fill="#246474"/>
+    <text x="264" y="142" font-size="16" fill="#13344a">32/36</text>
+    <text x="18" y="165" font-size="16" fill="#13344a">Verifier</text>
+    <rect x="100" y="152" width="153" height="12" rx="2" fill="#e0e9ea"/>
+    <rect x="100" y="152" width="119.00" height="12" rx="2" fill="#246474"/>
+    <text x="264" y="165" font-size="16" fill="#13344a">28/36</text>
+    <text x="18" y="207" font-size="18" font-weight="700" fill="#13344a">Estimated inference cost</text>
+    <text x="18" y="232" font-size="15" fill="#13344a">USD per 36 questions · scale $0–$0.005</text>
+    <text x="18" y="254" font-size="16" fill="#13344a">Standard</text>
+    <rect x="100" y="241" width="153" height="12" rx="2" fill="#e0e9ea"/>
+    <rect x="100" y="241" width="75.58" height="12" rx="2" fill="#246474"/>
+    <text x="264" y="254" font-size="16" fill="#13344a">$0.0024700</text>
+    <text x="18" y="277" font-size="16" fill="#13344a">Pre-gate</text>
+    <rect x="100" y="264" width="153" height="12" rx="2" fill="#e0e9ea"/>
+    <rect x="100" y="264" width="130.93" height="12" rx="2" fill="#246474"/>
+    <text x="264" y="277" font-size="16" fill="#13344a">$0.0042786</text>
+    <text x="18" y="300" font-size="16" fill="#13344a">Verifier</text>
+    <rect x="100" y="287" width="153" height="12" rx="2" fill="#e0e9ea"/>
+    <rect x="100" y="287" width="152.88" height="12" rx="2" fill="#246474"/>
+    <text x="264" y="300" font-size="16" fill="#13344a">$0.0049961</text>
+    <text x="18" y="342" font-size="18" font-weight="700" fill="#13344a">Median modeled serial latency</text>
+    <text x="18" y="367" font-size="15" fill="#13344a">Seconds per question · scale 0–3.1 s</text>
+    <text x="18" y="389" font-size="16" fill="#13344a">Standard</text>
+    <rect x="100" y="376" width="153" height="12" rx="2" fill="#e0e9ea"/>
+    <rect x="100" y="376" width="75.12" height="12" rx="2" fill="#246474"/>
+    <text x="264" y="389" font-size="16" fill="#13344a">1.522 s</text>
+    <text x="18" y="412" font-size="16" fill="#13344a">Pre-gate</text>
+    <rect x="100" y="399" width="153" height="12" rx="2" fill="#e0e9ea"/>
+    <rect x="100" y="399" width="136.56" height="12" rx="2" fill="#246474"/>
+    <text x="264" y="412" font-size="16" fill="#13344a">2.767 s</text>
+    <text x="18" y="435" font-size="16" fill="#13344a">Verifier</text>
+    <rect x="100" y="422" width="153" height="12" rx="2" fill="#e0e9ea"/>
+    <rect x="100" y="422" width="149.30" height="12" rx="2" fill="#246474"/>
+    <text x="264" y="435" font-size="16" fill="#13344a">3.025 s</text>
+  </g>
+</svg>

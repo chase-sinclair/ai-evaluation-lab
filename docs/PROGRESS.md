@@ -1,4 +1,8 @@
-# Progress — November 9, 2026
+# Progress — November 10, 2026
+
+## Experiment 03 · publication package ready for final design review
+
+The owner accepted the grading and technical findings at `7532f34` and approved the FDE playbook as engineering guidance. The [article](portfolio/rag-safeguards.md), three accessible figures and [website handoff](portfolio/rag-safeguards-handoff.md) are ready for design review. The C12 quotations match the source packet, generator receipt and application referral. The package passed the full offline suite, Ruff and responsive figure checks. The next decision is owner approval of the presentation. [Verification](verification.md)
 
 ## Experiment 03 · paired analysis ready for owner adjudication
 
