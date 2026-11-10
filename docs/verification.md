@@ -1,5 +1,9 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 004 · design proposal
+
+Reviewed the original roadmap, published 001–003 findings, single-turn runner, provider path and earlier bounded acquisition pattern. Checked 24 unique scenario IDs, local source links and the provisional $0.018144 reserve arithmetic. The 203 existing offline tests passed; Ruff lint and format checks passed using `py -3.13 -m uv run --offline`. These checks cover the existing repository. Experiment 004 fixtures, APIs, grades and live manifest are proposed work pending approval.
+
 ## Experiment 03 · final editorial and visual checks
 
 Verified the article and handoff links and matched all five C12 quotations in both layouts to the frozen protocol or generator receipt. Headless Edge selected the intended figure sources at 320, 375, 759, 760 and 1024 CSS pixels. Rendered SVG text stayed within figure bounds without overlapping other labels. The outcomes chart retains its existing asset and scale. The full offline suite passed (203 tests), as did Ruff lint and formatting (133 files), using `py -3.13 -m uv run --offline`. This pass changed publication materials and checkpoint documentation only.

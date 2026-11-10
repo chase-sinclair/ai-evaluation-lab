@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 004 · recovery design awaiting owner review
+
+The owner approved the Experiment 03 publication package at `c41025d`. Portfolio website integration is deferred until the owner explicitly declares the Lab complete. The [Experiment 004 design](experiment04_recovery_design.md) proposes 24 paired mock failure episodes across procurement, financial operations and SaaS administration. The next decision is approval of the proposed scenarios, recovery authority and scoring before any implementation. A later live run requires a separate frozen-manifest approval. [Verification](verification.md)
+
 ## Experiment 03 · final publication-preparation pass
 
 Following design review of `1005df3`, the [article](portfolio/rag-safeguards.md) and [website handoff](portfolio/rag-safeguards-handoff.md) explicitly scope the comparison to preselected evidence. The workflow and Annex B figures now have wide and compact layouts. The accepted findings and FDE guidance carry forward. The package is ready for website integration as a separate activity. [Rendering and offline checks](verification.md)
