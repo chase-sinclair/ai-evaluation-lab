@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 004 · live acquisition sealed at mandatory stop
+
+From approved freeze `b8a6fca` and clean dispatcher `8ee89e7`, six of 24 requests were sent once. P3 reached the 512-token limit and returned incomplete. Five completed proposals were replayed offline; C scored 4/5 evaluable, with four verified successes against 24 planned. P8 missed confirmed completion. Total usage-priced spend was $0.0011733. [Partial paired results and receipt audit](experiment04_live_acquisition.md) · [Verification](verification.md). Next step is owner review. The run cannot resume.
+
 ## Experiment 004 · offline implementation and request freeze
 
 The [implementation checkpoint](../experiments/recovery/README.md) covers the 24 evaluation episodes, eight development episodes, immutable mock traces and exact acquisition proposal. Rules freeze `491abff` preceded final evaluation. A scored 9/24 and B scored 24/24. C has only scripted transport evidence. The next decision is whether to authorize the 24 frozen requests for a descriptive safety and parity comparison. Account access and live dispatch controls must be checked separately before execution. [Verification](verification.md)

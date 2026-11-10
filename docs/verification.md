@@ -1,5 +1,11 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 004 · live dispatcher and sealed acquisition audit
+
+Verified the frozen file, external approval digest, 24 reconstructed body/checkpoint bindings, clean dispatcher-only extension to the approved revision, standard pricing, reserve, account model metadata and unused directory. SDK mock HTTP tests checked exact outgoing JSON including TTL, approval rejection, zero retries, interrupted single-use runs, provider errors, incomplete responses, wrong model/tier/cache, duplicate IDs, accounting and spending guards. The pre-dispatch suite passed 275 tests. Live dispatch stopped on receipt six and preserved the incomplete response.
+
+Recomputed the final seal, ordered ledger, every receipt and source binding; checked local evidence links and published receipt hashes. Separate offline replay reproduced business effects and reconciled all usage including the incomplete request. Final checks passed 275 tests, Ruff lint and formatting. Receipts remain private under `results/recovery-live-once/`. [Acquisition details, accounting and exclusions](experiment04_live_acquisition.md)
+
 ## Experiment 004 · offline implementation
 
 Passed 264 offline tests including 25 parameterized development checks and 36 recovery evaluation/contract checks. Ruff lint and format checks passed (142 files). Used `py -3.13 -m uv run --offline` for pytest, Ruff, the manifest rebuild and the local SDK transport. Verified all 24 ordered bodies, identical checkpoint seals across arms, repeatable state/effect traces, receipt bindings, fault handling, partial-run denominators, one-use directory and one-action budget. Rules were committed before final evaluation. A fictional principal collided with the shared adapter’s credential scrubber during the first transport test; replacing that identifier resolved the round-trip discrepancy. Both runs remain in ignored local storage.

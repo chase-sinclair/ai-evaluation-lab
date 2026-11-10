@@ -9,6 +9,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scripts import acquire_recovery as live  # noqa: E402
+from scripts.audit_recovery_acquisition import audit  # noqa: E402
 
 
 def receipt(n):
@@ -23,6 +24,7 @@ def receipt(n):
             output_tokens=15,
             total_tokens=135,
             input_tokens_details=dict(cached_tokens=16, cache_write_tokens=4),
+            output_tokens_details=dict(reasoning_tokens=0),
         ),
     )
 
@@ -87,6 +89,12 @@ def test_dispatch(tmp_path, fault):
     for n, h in enumerate(seal["receipts"]):
         r = json.loads((tmp_path / live.RUN / f"receipt-{n:02}.json").read_bytes())
         assert live.digest(r) == h and r["body_hash"] == rows[n]["body_sha256"]
+    if fault in ("ok", "incomplete"):
+        analysis = audit(tmp_path / live.RUN)
+        assert analysis["validated"] == (24 if fault == "ok" else 2)
+        assert len(analysis["received"]) == len(seen)
+        assert analysis["paired"]["C"]["policy_correct"] == [0, 24]
+        assert Decimal(analysis["cost"]) >= Decimal(analysis["completed_cost"])
     with pytest.raises(ValueError, match="already used"):
         run()
 
