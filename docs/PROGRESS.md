@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 004 · completed follow-up awaiting owner review
+
+The approved 2,048-token acquisition at `8a4074b` completed all 24 requests once. The live model and frozen rules each scored 24/24, against 9/24 for stop-and-report. Estimated follow-up spend was $0.0029715. Both acquisitions retain separate seals, receipts and denominators. [Case results and receipt ledger](experiment04_followup_acquisition.md). The next decision is owner review of the technical findings.
+
 ## Experiment 004 · separately configured follow-up awaiting owner decision
 
 The first acquisition at `ae4c116` is permanently closed. Its six receipts and seal reverified. The [new approval checkpoint](experiment04_followup_plan.md) freezes the same 24 requests in order with the output cap raised to 2,048. Estimated reserve $0.038285, proposed cap $0.05. Next decision is separate owner approval or rejection. No paid follow-up requests have been sent. [Verification](verification.md)

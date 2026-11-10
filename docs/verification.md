@@ -1,5 +1,9 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 004 · completed follow-up acquisition
+
+Verified the approved clean revision, external digest, manifest bytes, 24 single-field parent comparisons, original pilot seal, current pricing and unused destination. All 12 targeted dispatcher tests passed before acquisition. The dispatcher confirmed model access and acquired 24 unique completed responses in order without retries. Offline audit reproduced all 72 decisions, verified the source and request bindings, ledger, receipt IDs and individual digests, and reconciled reported tokens and estimated cost. The old pilot audit also reproduced. Full pytest passed 287 tests; Ruff lint and formatting passed. [Reproduction command, seal and case-level telemetry](experiment04_followup_acquisition.md)
+
 ## Experiment 004 · 2,048-token prospective freeze
 
 Verified parent and follow-up manifest hashes, all 24 ordered body comparisons and the unused destination. Replayed the first acquisition audit against its original seal. Rechecked standard pricing and confirmed account access using a read-only model lookup. Mock HTTP transport exercised the full 24-request path, accounting, incomplete and failed responses, model/tier/cache mismatches, duplicate IDs, budget and token limits, interruptions and refusal to resume. The original approval cannot dispatch the follow-up. Offline pytest passed 287 tests; Ruff lint and formatting passed. [Ordered hashes, budget and approval target](experiment04_followup_plan.md)
