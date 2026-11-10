@@ -1,5 +1,20 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 03 Phase B · Stage 1 live checkpoint
+
+Clean approved revision `d027aeb4b28e11b4df5e0be52f7d31b6777d0c1c`, unused run directory, account model access, current standard rates, all frozen body hashes and $0.03754650 reserve were confirmed before one sequential dispatch. All 72 receipts match the approved order, case, stage, logical and canonical body hashes. Independently reconciled raw provider IDs (72 unique), completed statuses, extracted text, model, standard tier, token partitions and estimated costs. No incomplete, malformed, failed, repeated or missing responses. Sealed ledger SHA-256: `5b1c96d0ea4930b86eeefc7fc141f8fe750ff01ee3a12b152d7978d3c99071eb`.
+
+| Stage | Count | Input / output tokens | Median observed latency | Summed latency | Usage-priced USD |
+|---|---:|---:|---:|---:|---:|
+| Generator | 36 | 6,590 / 3,622 | 1.522 s | 60.064 s | 0.0024700 |
+| Evidence gate | 36 | 6,086 / 2,400 | 1.125 s | 42.743 s | 0.0018086 |
+
+R01–R12 (routine), I01–I12 (incomplete/ambiguous) and C01–C12 (conflict/misleading) each produced 12 PASS and zero BLOCK. For all 36 cases, the pre-gated workflow therefore forwards the original generator reply. Verdict counts measure routing behavior. Human grading of support, citations, authority and usefulness remains pending.
+
+The offline materializer created `results/enterprise-rag-stage1-once/stage2-proposal.json`. Rebuilt and checked all 36 ordered bodies against the sealed generator text and original packet, verifying each source receipt hash, response ID, request hash, extracted-text hash and verifier body hash. Exact file SHA-256: `5eac3d50b1e04f80d556015316ebbf7da7e8589338896f7def7aad1e2afe81ab`. Canonical **Stage 2 approval digest**: `4425a0bc40cfae3724628591fc7a27aebbf833159a5c6a1a7e487561c6ff6f46`. Raw receipts and the proposal containing private generator replies remain in ignored local storage.
+
+Proposed Stage 2: 36 sequential standard-tier GPT-6 Luna verifier requests, 256 output tokens each, zero retries or resume, no tools. Total body bytes 53,470; input allowance 62,686 and output ceiling 9,216. Exact reserve $0.02027950, Stage 2 spending limit $0.037008. Stage 1 used an estimated $0.00427860 of $0.10, leaving $0.09572140 cumulative allowance before Stage 2. No verifier requests were dispatched. Offline pytest passed 203 tests and both Ruff checks passed.
+
 ## Experiment 03 Phase B · offline implementation verification
 
 Rebuilt the [Stage 1 freeze](../experiments/rag_safeguards/stage1.json) from the approved 36-row design. Checked question text, ordered excerpt pairs, keys, risk notes and prompts against the design. Serialized bodies use 76,458 canonical UTF-8 bytes. The 72 rows reproduce approval digest `ae2cedf7359d017a94a3be1d4b973bdf05ad784168f8e3a44c995bc0bcf4c92f` and reserve $0.03754650. Read-only account metadata and the official standard pricing table confirmed the proposed model and rates. No inference request was sent.

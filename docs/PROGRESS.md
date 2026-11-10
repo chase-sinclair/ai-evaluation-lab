@@ -1,5 +1,9 @@
 # Progress — November 9, 2026
 
+## Experiment 03 Phase B · Stage 1 complete; Stage 2 awaiting approval
+
+The authorized run at `d027aeb` completed all 72 requests once. Each gate returned PASS. Total acquisition cost was an estimated $0.00427860. The private 36-body verifier manifest is materialized and verified offline. Next decision: review the [exact Stage 2 digest, limits and receipt audit](verification.md#experiment-03-phase-b--stage-1-live-checkpoint). No verifier inference or quality grading has occurred.
+
 ## Experiment 03 Phase B · Stage 1 freeze awaiting approval
 
 Built the isolated [staged experiment](../experiments/rag_safeguards/README.md) from accepted design revision `963cade`. The frozen first stage has 72 bodies, a $0.03754650 reserve and no live receipts. Mock-only tests cover the separate verifier materialization, dispatch and human-reviewed paired reporting. All 203 offline tests and both Ruff checks passed. Next decision: review the Stage 1 digest, settings and funding limit. Stage 2 requires a new manifest and separate approval after Stage 1. [Verification](verification.md)
