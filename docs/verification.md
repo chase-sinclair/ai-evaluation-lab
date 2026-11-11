@@ -10,6 +10,10 @@ Ran `uv run --offline python -m experiments.finops_sql.v3.development .verificat
 
 Final local check with `FINOPS_VERIFIED_ROOT=.verification/finops-verified`: `uv run --offline pytest -q` passed **360 tests** in 142.18 s. Both `uv run --offline ruff check .` and `uv run --offline ruff format --check .` passed. Live dispatch integration, pilot evidence, account checks and separate owner decisions remain outstanding.
 
+Proposal commit `4098197b86253fc5bdb55f9c7b8a67f024987a5a` was pushed to main. A CI follow-up adds the v3 image and development suite to the existing warehouse workflow, which builds fresh fixtures on Linux. The ordinary matrix skips local fixture-dependent tests. Both proposal identities and both body archives are unchanged by the CI follow-up. [Warehouse workflow](../.github/workflows/finops-checkpoint.yml)
+
+The CI follow-up passed the complete fixture-enabled suite again (360 tests, 176.41 s), Ruff lint/format and the Git whitespace check locally. At this checkpoint GitHub had queued both original runs without starting jobs and reported degraded Actions availability. [GitHub incident](https://stspg.io/jdjlq5zjyl48)
+
 ## Experiment 005 · interrupted live acquisition sealed
 
 The approved one-time run stopped on Q23C at the output limit. Verified all receipts, reconciled usage and graded all 21 completed episodes offline. No retry or resume. The full offline suite passed 329 tests and both Ruff checks passed. Next step is owner review. [Case-level audit and integrity evidence](finops_acquisition_audit.md)
