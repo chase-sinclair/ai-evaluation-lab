@@ -22,7 +22,7 @@ def report(root, design):
     for name in ("evaluation_a", "evaluation_b"):
         folder = root / name
         verify_sources(folder)
-        records = json.loads((folder / "checkpoint.json").read_bytes())
+        records = json.loads((folder / "checkpoint-v2.json").read_bytes())
         python = answers(folder)
         for i, rows in python.items():
             result = records[str(i)]
@@ -30,7 +30,7 @@ def report(root, design):
                 raise ValueError(f"{name} Q{i:02} contract or oracle discrepancy")
         snapshots.append(records)
     lines = [
-        "# Meridian reviewer packet · checkpoint 2",
+        "# Meridian reviewer packet · pre-acquisition v2",
         (
             "Each cell gives one representative row and the total row count. Both Decimal and "
             "DuckDB calculations agreed on **every row of Q01–32 on both snapshots**, "
@@ -44,9 +44,9 @@ def report(root, design):
             "Review Q07–09 for signed decomposition, Q10–12 for ratio denominators, "
             "Q13–16 for fiscal and invoice boundaries, Q18–19 for delivery precedence, "
             "Q20–24 for allocation and ownership, and Q25–28 for commitment cash versus "
-            "expense. The approved variance_pct implementation reports percentage points. The "
-            "shorthand ratio in the Q14 design table omits the ×100 shown in the accepted "
-            "fiscal policy."
+            "expense. A variance_pct value of 888.14 means actual spending exceeded budget by "
+            "888.14% of budget. Q16 is a balanced-ledger task: copying the controls and "
+            "returning zero residuals also passes on both snapshots."
         ),
         (
             "| Question | Business definition | Output fields and units | Evaluation A | "

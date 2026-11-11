@@ -206,7 +206,7 @@ def answers(folder):
             [(s, t["service", 5, s] - t["service", 4, s]) for s in services],
             key=lambda row: (-row[1], row[0]),
         )[:1],
-        7: [[(qty(6, 0) - qty(5, 0)) * rate(5, 0), qty(6, 0) * (rate(6, 0) - rate(5, 0))]],
+        7: [[(qty(7, 0) - qty(6, 0)) * rate(6, 0), qty(7, 0) * (rate(7, 0) - rate(6, 0))]],
         8: [
             [
                 (v1 - v0) * sum(t["contracted", 6, g] for g in regions) / v0,

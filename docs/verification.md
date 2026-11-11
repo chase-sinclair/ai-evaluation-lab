@@ -1,5 +1,11 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 005 · targeted pre-acquisition revision
+
+Ran the isolated checkpoint against the three source-verified snapshots, both independent numeric oracles and all four clarification witnesses. Q07 now fails the volume-only control on both snapshots and its two components reconcile to the direct contracted-charge delta. Q16's control-copy shortcut matches 16 invoice rows on each snapshot. Only Q07's private numeric bindings changed. The v2 reviewer packet validated all 64 typed reference outputs.
+
+With FINOPS_VERIFIED_ROOT configured, 317 offline tests passed, including all 32 discovery paths, actual four-condition mock transport through the isolated grader, v2 manifest reproduction and exact comparison against all 144 archived v1 bodies. Ruff lint and formatting passed. No live acquisition. [Scope, budgets, limitations and artifacts](experiment05_preacquisition_v2.md)
+
 ## Experiment 005 · context and offline acquisition readiness
 
 Rebuilt the pinned Linux worker and ran `uv run --offline python -m experiments.finops_sql.checkpoint .verification/finops-verified` on the original three snapshots. All controls and comparisons passed. Regenerated the reviewer packet against the independent Decimal implementation and verified all 64 reference outputs against their typed contracts. Checked sample records against development exports and exercised all 32 discovery witnesses under the session provenance and response-size limits.

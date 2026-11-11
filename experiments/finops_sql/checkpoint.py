@@ -3,11 +3,21 @@
 import argparse
 import hashlib
 import json
+from decimal import Decimal
 from pathlib import Path
 
 from .audit import sandbox
 from .compare import normalize
-from .controls import CLARIFICATIONS, DENIED, DEVELOPMENT, INTEGRITY, MUTATIONS
+from .controls import (
+    CLARIFICATIONS,
+    DENIED,
+    DEVELOPMENT,
+    EAST_CONTRACTED_CHANGE,
+    INTEGRITY,
+    INVOICE_SHORTCUT,
+    MUTATIONS,
+)
+from .grading import matches
 from .oracle import answers
 from .references import QUERIES
 
@@ -40,13 +50,14 @@ def check(folder):
     if dev:
         queries.update({k: v for k, (_, v) in DEVELOPMENT.items() if v})
     else:
+        queries.update(east_delta=EAST_CONTRACTED_CHANGE, invoice_shortcut=INVOICE_SHORTCUT)
         queries.update({str(k): v for k, v in QUERIES.items()})
         queries.update({f"wrong_{k}": q for k, (_, q) in MUTATIONS.items()})
         for i, (_, left, right) in CLARIFICATIONS.items():
             queries[f"{i}a"] = left
             queries[f"{i}b"] = right
     data = sandbox(folder, queries)
-    (folder / "checkpoint.json").write_text(json.dumps(data, sort_keys=True, indent=2))
+    (folder / "checkpoint-v2.json").write_text(json.dumps(data, sort_keys=True, indent=2))
     if verify_sources(folder) != original_db:
         raise ValueError("database changed during audit")
     errors = []
@@ -64,6 +75,12 @@ def check(folder):
         for k, (i, _) in MUTATIONS.items():
             if normalize(i, data[f"wrong_{k}"]["rows"]) == normalize(i, oracle[i]):
                 errors.append((k, "undetected mutation"))
+        volume, rate = map(Decimal, normalize(7, data["7"]["rows"])[0])
+        delta = Decimal(str(data["east_delta"]["rows"][0][0]))
+        if min(abs(volume), abs(rate)) < 1 or volume + rate != delta:
+            errors.append((7, "immaterial terms or unreconciled contracted change"))
+        if not matches(16, data["invoice_shortcut"], data["16"]):
+            errors.append((16, "balanced-ledger shortcut no longer matches"))
         for i in CLARIFICATIONS:
             if data[f"{i}a"]["rows"] == data[f"{i}b"]["rows"]:
                 errors.append((i, "equal interpretations"))

@@ -126,12 +126,26 @@ def test_result_contract():
 
 def test_frozen_proposal():
     plan, bodies = build()
-    frozen = ROOT / "proposals" / "v1"
+    frozen = ROOT / "proposals" / "v2"
     assert json.loads((frozen / "manifest.json").read_bytes()) == plan | {
         "proposal_digest": digest(plan)
     }
     assert json.loads(gzip.decompress((frozen / "bodies.json.gz").read_bytes())) == bodies
     assert len(bodies) == 144
+    previous = ROOT / "proposals" / "v1"
+    v1 = json.loads((previous / "manifest.json").read_bytes())
+    assert v1["context_sha256"] == plan["context_sha256"]
+    originals = json.loads(gzip.decompress((previous / "bodies.json.gz").read_bytes()))
+    for old, new, before, after in zip(
+        originals, bodies, v1["requests"], plan["requests"], strict=True
+    ):
+        assert (before["question"], before["arm"]) == (after["question"], after["arm"])
+        old["input"][0]["content"] = old["input"][0]["content"].replace(
+            "percentages in percentage points", "percentages as percent of the stated base", 1
+        )
+        if before["question"] == "Q07":
+            old["input"][1]["content"] = old["input"][1]["content"].replace("May–June", "June–July")
+        assert old == new
     assert sum(len(r["turn_input_bounds"]) for r in plan["requests"]) == 360
     assert all(
         b["input"][1] == body("D", q)["input"][1]

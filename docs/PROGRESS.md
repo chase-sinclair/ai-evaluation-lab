@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 005 · pre-acquisition v2 awaiting owner review
+
+Following the accepted infrastructure at `0e35794`, Q07 now spans the July rate change, Q14 uses percent-of-budget terminology and Q16 is classified as a balanced-ledger output task. The stateless discovery workflow remains the secondary architecture. The separately frozen v2 proposal reserves $0.8432640 under a proposed $1.00 cap. Next step is owner review before live acquisition. [Case-level changes, hashes and verification](experiment05_preacquisition_v2.md) · [Reviewer packet](experiment05_oracle_review_v2.md)
+
 ## Experiment 005 · checkpoint 2 pending owner review
 
 The accepted checkpoint-1 revision was `df74a10321df6697f89849c915bdcae4b828d8f3`. The four context conditions, provenance-enforced discovery, typed two-snapshot grading, masked clarification checkpoint, reviewer packet and offline SDK workflow are implemented. The proposal freezes 144 initial bodies and the deterministic construction of up to 216 later D bodies. The proposed reserve is $0.842857750. Review the oracle packet, budget, tokenization limitation and exact digest before considering a live dispatcher or granting execution authority. [Checkpoint and artifact index](experiment05_checkpoint2.md) · [Verification](verification.md)

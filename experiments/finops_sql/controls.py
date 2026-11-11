@@ -132,7 +132,16 @@ INTEGRITY = {
         "WHERE a.end_day<>b.first_day"
     ),
 }
+EAST_CONTRACTED_CHANGE = with_tables(
+    LEDGER,
+    "SELECT sum(CASE WHEN m=7 THEN contracted ELSE -contracted END) AS delta "
+    "FROM ledger WHERE sku_id=0 AND region_id=0 AND category='usage' AND m IN (6,7)",
+)
+INVOICE_SHORTCUT = (
+    "SELECT id, control AS actual, control, 0 AS residual FROM invoice WHERE posting_month=9"
+)
 MUTATIONS = {
+    "volume_only": (7, QUERIES[7].replace("b.q*(b.rate-a.rate) AS price", "0 AS price")),
     "raw": (1, QUERIES[1].replace("rn=1", "rn>=1")),
     "basis": (2, QUERIES[2].replace("sum(effective)", "sum(list_cost)")),
     "join": (20, QUERIES[20].replace("effective*weight", "effective")),

@@ -70,14 +70,29 @@ def build():
         for arm, n in allowances.items()
     }
     plan = {
-        "version": "meridian-context-v1",
+        "version": "meridian-context-v2",
         "model": "gpt-6-luna",
+        "source_locations": {
+            name: (
+                "schema.sql"
+                if name == "schema.sql"
+                else f"public/{'v2' if name == 'questions.json' else 'v1'}/{name}"
+            )
+            for name in fileinfo
+        },
+        "discovery_history": {
+            "mode": "stateless user-role discovery records",
+            "max_records": 6,
+            "max_escaped_bytes_per_record": HISTORY_LIMIT,
+            "final_tools_disabled": True,
+            "constructor_sha256": sha((ROOT / "episode.py").read_text(encoding="utf8").encode()),
+        },
         "request_ceiling": 360,
         "tool_ceiling": 216,
         "output_per_turn": 2048,
         "sources": fileinfo,
         "oracle_bindings_sha256": sha(
-            (ROOT / "oracle-bindings.json").read_text(encoding="utf8").encode()
+            (ROOT / "oracle-bindings-v2.json").read_text(encoding="utf8").encode()
         ),
         "package_order": FILES,
         "context_sha256": {arm: sha(package(arm).encode()) for arm in "ABCD"},

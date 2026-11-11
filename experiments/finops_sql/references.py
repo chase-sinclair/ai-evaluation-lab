@@ -99,7 +99,7 @@ add(
     (
         "SELECT (b.q-a.q)*a.rate AS volume,b.q*(b.rate-a.rate) AS price FROM "
         "rates a JOIN rates b ON a.region_id=b.region_id WHERE a.region_id=0 AND "
-        "a.m=5 AND b.m=6"
+        "a.m=6 AND b.m=7"
     ),
 )
 add(

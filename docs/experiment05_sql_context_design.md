@@ -60,16 +60,16 @@ The table gives the intended user request and result contract. Freeze literal qu
 | 04 | What was May list minus contracted cost for storage usage? | USD gap summed only on storage usage. |
 | 05 | Which accounts increased net billed cost from March to April? | Account ID and positive dollar delta, absent month treated as zero. |
 | 06 | Which service contributed most to the April–May effective-cost increase? | Service and largest signed delta, including services present in only one month. |
-| 07 | Split East compute SKU X’s May–June contracted-cost change into volume and rate effects. | Two USD terms: (Q1−Q0)R0 and Q1(R1−R0), realized rates = contracted usage cost / units. |
+| 07 | Split East compute SKU X’s June–July contracted-cost change into volume and rate effects. | Two USD terms: (Q1−Q0)R0 and Q1(R1−R0), realized rates = contracted usage cost / units. |
 | 08 | For SKU X, bridge June–July regional spend into volume, mix and rate. | Base-rate volume at old mix, new total × change in regional shares × old rates, and new regional units × rate changes. Sum equals contracted-cost delta. Seed both periods in each region. |
 | 09 | What portion of June’s billed change from May came from credits? | Signed credit delta divided by signed total delta. |
 | 10 | What was Atlas’s June effective cost per 1,000 completed transactions? | Project cost × 1,000 / total project output, aggregate each side first. |
 | 11 | Which projects had July spend but no completed output? | Project IDs and effective cost, include missing output as zero. |
 | 12 | How did Atlas unit cost change between Q2 and Q3? | Two weighted period rates and signed difference per transaction. |
 | 13 | Which centers exceeded fiscal period 6 budget after allocation? | IDs and positive effective actual minus approved budget. |
-| 14 | What was Engineering’s fiscal year-to-period-8 variance percentage? | (Sum allocated actual − sum budget) / sum budget. |
+| 14 | What was Engineering’s fiscal year-to-period-8 variance percentage? | 100 × (sum allocated actual − sum budget) / sum budget, expressed as percent variance relative to budget. |
 | 15 | Which centers had a Q3 fiscal budget but no allocated actual? | Center and unused budget, preserve budget side of join. |
-| 16 | Reconcile September net billed to invoice controls by invoice. | ID, latest signed postings, control and residual. Check totals as well as residual. |
+| 16 | Reconcile September net billed to invoice controls by invoice. | ID, latest signed postings, control and residual. Check totals as well as residual. Both snapshots balance; copying the controls can produce the same output. |
 | 17 | How much October-posted credit refers to September usage? | Signed USD via original charge and posting invoice. |
 | 18 | What was April billed as known May 1 versus at final close? | Two totals and revision delta, cutoff midnight UTC May 1 inclusive. |
 | 19 | How much would summing raw June exports overstate net billed? | Raw sum minus latest-version sum for June invoice lines. |

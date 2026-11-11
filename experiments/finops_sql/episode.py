@@ -21,7 +21,7 @@ You are an analyst for Meridian Cloud Services. Use DuckDB 1.4.4 and UTC as of J
 2026. Return exactly one JSON object. For a supported request return
 {"kind":"sql","query":"..."} with one read-only SELECT or WITH query. Use the listed report
 field aliases in order when returning SQL. Return numeric IDs, amounts in USD, counts in
-units, percentages in percentage points and fractions on a 0–1 scale. Use NULL for
+units, percentages as percent of the stated base and fractions on a 0–1 scale. Use NULL for
 undefined ratios. Identify before/after phases with 0/1. Break ranking ties by ascending ID.
 For an ambiguous request ask one focused question using
 {"kind":"clarify","dimensions":[...],"question":"..."}. Allowed dimensions are period,
@@ -186,7 +186,7 @@ def save_receipt(destination, turn, receipt):
 
 
 def mock_episode(arm, question, handler, destination: Path):
-    frozen = json.loads((ROOT / "proposals/v1/manifest.json").read_bytes())
+    frozen = json.loads((ROOT / "proposals/v2/manifest.json").read_bytes())
     seal = frozen.pop("proposal_digest")
     if digest(frozen) != seal:
         raise ValueError("proposal digest mismatch")

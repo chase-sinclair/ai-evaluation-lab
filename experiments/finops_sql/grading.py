@@ -33,7 +33,7 @@ UNITS = {
     9: "fraction",
     10: "USD/1,000 transactions",
     12: "USD/transaction",
-    14: "percentage points",
+    14: "% variance relative to budget",
     25: "fraction",
     29: "fraction",
 }
@@ -88,9 +88,11 @@ def grade(number, reply, root: Path, execute=sandbox):
     for name in ("evaluation_a", "evaluation_b"):
         folder = root / name
         actual = execute(folder, {"candidate": reply["query"]})["candidate"]
-        key = json.loads((folder / "checkpoint.json").read_text()).get(str(number))
+        key = json.loads((folder / "checkpoint-v2.json").read_text()).get(str(number))
         if number <= 32:
-            expected = json.loads((ROOT / "oracle-bindings.json").read_bytes())[name][str(number)]
+            expected = json.loads((ROOT / "oracle-bindings-v2.json").read_bytes())[name][
+                str(number)
+            ]
             if (
                 not key
                 or digest({"columns": key["columns"], "rows": normalize(number, key["rows"])})

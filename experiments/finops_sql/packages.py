@@ -16,12 +16,15 @@ FILES = {
     "B": ["dictionary.curated.json", "metrics.md", "joins.md", "policy.md"],
     "C": ["dictionary.full.json", "lineage.md", "operations.md", "registry.json"],
 }
-QUESTIONS = json.loads((PUBLIC / "questions.json").read_bytes())
+QUESTION_FILE = ROOT / "public/v2/questions.json"
+QUESTIONS = json.loads(QUESTION_FILE.read_bytes())
 OBJECTS = json.loads((PUBLIC / "dictionary.full.json").read_bytes())
 SAMPLES = json.loads((PUBLIC / "registry.json").read_bytes())
 
 
 def source(name):
+    if name == "questions.json":
+        return QUESTION_FILE.read_text(encoding="utf8")
     return (
         ((ROOT if name == "schema.sql" else PUBLIC) / name)
         .read_text(encoding="utf8")

@@ -1,0 +1,1799 @@
+{
+  "version": "meridian-context-v2",
+  "model": "gpt-6-luna",
+  "source_locations": {
+    "questions.json": "public/v2/questions.json",
+    "schema.sql": "schema.sql",
+    "dictionary.curated.json": "public/v1/dictionary.curated.json",
+    "metrics.md": "public/v1/metrics.md",
+    "joins.md": "public/v1/joins.md",
+    "policy.md": "public/v1/policy.md",
+    "dictionary.full.json": "public/v1/dictionary.full.json",
+    "lineage.md": "public/v1/lineage.md",
+    "operations.md": "public/v1/operations.md",
+    "registry.json": "public/v1/registry.json"
+  },
+  "discovery_history": {
+    "mode": "stateless user-role discovery records",
+    "max_records": 6,
+    "max_escaped_bytes_per_record": 2048,
+    "final_tools_disabled": true,
+    "constructor_sha256": "37a27b622ba6d2949c274567304d5558f9b29f0c351db5019fbc1ef68287de93"
+  },
+  "request_ceiling": 360,
+  "tool_ceiling": 216,
+  "output_per_turn": 2048,
+  "sources": {
+    "questions.json": {
+      "bytes": 4112,
+      "tokens": 948,
+      "sha256": "9d944aa4339d889dc42b9983c22c028c0f4a6f0cc5502d46cb6cd6de79d040ae"
+    },
+    "schema.sql": {
+      "bytes": 4655,
+      "tokens": 1073,
+      "sha256": "f83aaa505b387a3e2f3252e3c0c56ec79647f5bc830a8a898db50461560fd092"
+    },
+    "dictionary.curated.json": {
+      "bytes": 569,
+      "tokens": 143,
+      "sha256": "a83177353ed45034f96c909af98a003f174961559d5a78a6d3100c7d4c862c93"
+    },
+    "metrics.md": {
+      "bytes": 1409,
+      "tokens": 247,
+      "sha256": "c062e80755a09a2c70f25846f6e8c854cce5f7d4fbcae6a6ada0dd17e10b85f5"
+    },
+    "joins.md": {
+      "bytes": 1755,
+      "tokens": 344,
+      "sha256": "417e7f0da796b770d87d5d5326ac251ac442899c1c06d27092208e17f945edf1"
+    },
+    "policy.md": {
+      "bytes": 1058,
+      "tokens": 214,
+      "sha256": "ada30238e7ec63fe7432cc8a568caae92d0811bd3333019b3a539b3ccff7e709"
+    },
+    "dictionary.full.json": {
+      "bytes": 8131,
+      "tokens": 1861,
+      "sha256": "b56ff217fc9977bc5da139e424cca6d6bb22fc81c4b563d2ed282ef8c3fd9e38"
+    },
+    "lineage.md": {
+      "bytes": 334,
+      "tokens": 54,
+      "sha256": "8e81bce287c09e9b3b54eb24e6b5d22c05af3269a5262b98a16427947a54ef62"
+    },
+    "operations.md": {
+      "bytes": 338,
+      "tokens": 61,
+      "sha256": "411335c8e272e3a4afd4cab89f3c34d2f720b37c71a41f3da6a94a9e9d02f762"
+    },
+    "registry.json": {
+      "bytes": 4901,
+      "tokens": 1567,
+      "sha256": "d1a97fbe04f93a36dd7a7ad7b10aba6f79a17db1b2003992a2055f80a279f616"
+    }
+  },
+  "oracle_bindings_sha256": "590a59da4c054a8136a7538b1f5d19c810a1e036592b7ce2717ff50148b79dc0",
+  "package_order": {
+    "A": [
+      "schema.sql"
+    ],
+    "B": [
+      "dictionary.curated.json",
+      "metrics.md",
+      "joins.md",
+      "policy.md"
+    ],
+    "C": [
+      "dictionary.full.json",
+      "lineage.md",
+      "operations.md",
+      "registry.json"
+    ]
+  },
+  "context_sha256": {
+    "A": "d6748ae2ba35fbbee60185d025cabf2c0f18a1ce40939f9aa7f7cb643fead762",
+    "B": "6759d086d1088c38dd5e4844240f30211a0e6416cf8a8cf6f2a6bfb8d88587e5",
+    "C": "4944dac7683f649806d575d9e1f0e826410abdea6c436cc00c609cafcd890ed4",
+    "D": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "requests": [
+    {
+      "question": "Q30",
+      "arm": "A",
+      "body_hash": "8bb7e7f02b231b12bafaa7d227e4c62770b7268eb5299c83e62c1bade385cb2c",
+      "bytes": 6381,
+      "serialized_tokens": 1669,
+      "turn_input_bounds": [
+        6637
+      ]
+    },
+    {
+      "question": "Q30",
+      "arm": "B",
+      "body_hash": "a7637ea3994bc145d9643ab273a092d49970926c0e870a6aa7cba941f70048e7",
+      "bytes": 11403,
+      "serialized_tokens": 2694,
+      "turn_input_bounds": [
+        11659
+      ]
+    },
+    {
+      "question": "Q30",
+      "arm": "C",
+      "body_hash": "b0747861ddf2caa0191e41b2bd3d2452bd9294a43d8f4183d46953e2df18c64a",
+      "bytes": 26683,
+      "serialized_tokens": 6570,
+      "turn_input_bounds": [
+        26939
+      ]
+    },
+    {
+      "question": "Q30",
+      "arm": "D",
+      "body_hash": "bab96bead015bcd66a4e6ffd6e418898bb0969dc6bca97d9ddd9d1ed3a39c093",
+      "bytes": 2333,
+      "serialized_tokens": 508,
+      "turn_input_bounds": [
+        2589,
+        4637,
+        6685,
+        8733,
+        10781,
+        12829,
+        14043
+      ]
+    },
+    {
+      "question": "Q01",
+      "arm": "B",
+      "body_hash": "c78b6574b5ce81039e33106d16270f980b9e37f9bc08bea0f59e83e6890e5d52",
+      "bytes": 11357,
+      "serialized_tokens": 2687,
+      "turn_input_bounds": [
+        11613
+      ]
+    },
+    {
+      "question": "Q01",
+      "arm": "C",
+      "body_hash": "d15007ebc51232f465badc65499c56332ea69abd6877b575b2ffdd738bb92e7a",
+      "bytes": 26637,
+      "serialized_tokens": 6563,
+      "turn_input_bounds": [
+        26893
+      ]
+    },
+    {
+      "question": "Q01",
+      "arm": "D",
+      "body_hash": "225bfe8b592ed1339e1ae07c21da181f8d7264f03bc21774aab14310b3be8562",
+      "bytes": 2287,
+      "serialized_tokens": 501,
+      "turn_input_bounds": [
+        2543,
+        4591,
+        6639,
+        8687,
+        10735,
+        12783,
+        13997
+      ]
+    },
+    {
+      "question": "Q01",
+      "arm": "A",
+      "body_hash": "bc96863f0917f543cf781efd43ce8d164fd894651dcdeab4083ffd519dc88ff8",
+      "bytes": 6335,
+      "serialized_tokens": 1662,
+      "turn_input_bounds": [
+        6591
+      ]
+    },
+    {
+      "question": "Q22",
+      "arm": "C",
+      "body_hash": "001006b50d6daa6129fbc8fecd46e1508149f46efdc52b66829e6852dc902605",
+      "bytes": 26666,
+      "serialized_tokens": 6567,
+      "turn_input_bounds": [
+        26922
+      ]
+    },
+    {
+      "question": "Q22",
+      "arm": "D",
+      "body_hash": "358dd6f87904c881c6f570d393a9de34ac22f893eb32271c15065452598278e3",
+      "bytes": 2316,
+      "serialized_tokens": 505,
+      "turn_input_bounds": [
+        2572,
+        4620,
+        6668,
+        8716,
+        10764,
+        12812,
+        14026
+      ]
+    },
+    {
+      "question": "Q22",
+      "arm": "A",
+      "body_hash": "5c66097b04d1816e58d8aabec23712caea5ecdbe7392e086bcd9251fcccf03fa",
+      "bytes": 6364,
+      "serialized_tokens": 1666,
+      "turn_input_bounds": [
+        6620
+      ]
+    },
+    {
+      "question": "Q22",
+      "arm": "B",
+      "body_hash": "30d7049ba414b31234155bb54bad9eddb21fbb8dfe0d51835fc2d4cfb7ded5e3",
+      "bytes": 11386,
+      "serialized_tokens": 2691,
+      "turn_input_bounds": [
+        11642
+      ]
+    },
+    {
+      "question": "Q07",
+      "arm": "D",
+      "body_hash": "55cf563a0b757170f52b1b163c20651111e95a9e9997484bd49b27be43c4700f",
+      "bytes": 2361,
+      "serialized_tokens": 515,
+      "turn_input_bounds": [
+        2617,
+        4665,
+        6713,
+        8761,
+        10809,
+        12857,
+        14071
+      ]
+    },
+    {
+      "question": "Q07",
+      "arm": "A",
+      "body_hash": "bfb399109b4868fbc1eb82421b982947d30a79ba9def478953508c0c2f2ced9a",
+      "bytes": 6409,
+      "serialized_tokens": 1676,
+      "turn_input_bounds": [
+        6665
+      ]
+    },
+    {
+      "question": "Q07",
+      "arm": "B",
+      "body_hash": "63c2fc8bf7283ebcb42f19ee489eb6638dc7e02dcebc0fa3cfa269d291e6122c",
+      "bytes": 11431,
+      "serialized_tokens": 2701,
+      "turn_input_bounds": [
+        11687
+      ]
+    },
+    {
+      "question": "Q07",
+      "arm": "C",
+      "body_hash": "9b7dbd13c98e453b87b2ffbfecbb20181a032bc627028e26d1451a1077e4d595",
+      "bytes": 26711,
+      "serialized_tokens": 6577,
+      "turn_input_bounds": [
+        26967
+      ]
+    },
+    {
+      "question": "Q10",
+      "arm": "A",
+      "body_hash": "b05165caaa3430eb99c01af93923aa734498a9a6069bbc08975aaf68a6c23ef7",
+      "bytes": 6381,
+      "serialized_tokens": 1671,
+      "turn_input_bounds": [
+        6637
+      ]
+    },
+    {
+      "question": "Q10",
+      "arm": "B",
+      "body_hash": "2ca84aec68b4e2c13aa5e6d423fde6204a16547ebb8226f0d1fc09ed3d343be7",
+      "bytes": 11403,
+      "serialized_tokens": 2696,
+      "turn_input_bounds": [
+        11659
+      ]
+    },
+    {
+      "question": "Q10",
+      "arm": "C",
+      "body_hash": "6bbe3d76d428097a5ae90a22015f8c6d85277c36ae2cf9159d50d3ca3e468dae",
+      "bytes": 26683,
+      "serialized_tokens": 6572,
+      "turn_input_bounds": [
+        26939
+      ]
+    },
+    {
+      "question": "Q10",
+      "arm": "D",
+      "body_hash": "bd354638656b301bfbd96291e4d0482da52665db53d4045b7cc6454af0354c4b",
+      "bytes": 2333,
+      "serialized_tokens": 510,
+      "turn_input_bounds": [
+        2589,
+        4637,
+        6685,
+        8733,
+        10781,
+        12829,
+        14043
+      ]
+    },
+    {
+      "question": "Q23",
+      "arm": "B",
+      "body_hash": "c2c062b187030f81f2cb7b082caadd638cdeccf2b82c6c35de48f661ed2c9029",
+      "bytes": 11420,
+      "serialized_tokens": 2701,
+      "turn_input_bounds": [
+        11676
+      ]
+    },
+    {
+      "question": "Q23",
+      "arm": "C",
+      "body_hash": "842957a9472f34f888eafae12cea0a30081c0ddada8a2ae2de8d237b26a2524d",
+      "bytes": 26700,
+      "serialized_tokens": 6577,
+      "turn_input_bounds": [
+        26956
+      ]
+    },
+    {
+      "question": "Q23",
+      "arm": "D",
+      "body_hash": "d8c7553d59533c2f676b899ce044f62809707d08436fcf29b6f65ffe0ae10141",
+      "bytes": 2350,
+      "serialized_tokens": 515,
+      "turn_input_bounds": [
+        2606,
+        4654,
+        6702,
+        8750,
+        10798,
+        12846,
+        14060
+      ]
+    },
+    {
+      "question": "Q23",
+      "arm": "A",
+      "body_hash": "beb95c38a1598fb30fd04adc45da4a6137cbcfa7a32c08eaf5e6a9432e5e1f4a",
+      "bytes": 6398,
+      "serialized_tokens": 1676,
+      "turn_input_bounds": [
+        6654
+      ]
+    },
+    {
+      "question": "Q35",
+      "arm": "C",
+      "body_hash": "90fa1b8ea6693e8d7a844dbe4fe25a315c8afad8ce77ad8820a155bc2e23f3ff",
+      "bytes": 26644,
+      "serialized_tokens": 6563,
+      "turn_input_bounds": [
+        26900
+      ]
+    },
+    {
+      "question": "Q35",
+      "arm": "D",
+      "body_hash": "805b219f29064a8e38f4b2eb8f5d9cf9d4b3836acbf0db9232ee945edc109722",
+      "bytes": 2294,
+      "serialized_tokens": 501,
+      "turn_input_bounds": [
+        2550,
+        4598,
+        6646,
+        8694,
+        10742,
+        12790,
+        14004
+      ]
+    },
+    {
+      "question": "Q35",
+      "arm": "A",
+      "body_hash": "6e28676a50f99c28b0865d524c5269cbcbcc1e4a7efb967b0341a8fe73614b36",
+      "bytes": 6342,
+      "serialized_tokens": 1662,
+      "turn_input_bounds": [
+        6598
+      ]
+    },
+    {
+      "question": "Q35",
+      "arm": "B",
+      "body_hash": "634419176e946f517973e427a9fea4923b7d6cdf301077af53c7496ecd92c151",
+      "bytes": 11364,
+      "serialized_tokens": 2687,
+      "turn_input_bounds": [
+        11620
+      ]
+    },
+    {
+      "question": "Q21",
+      "arm": "D",
+      "body_hash": "e0fffedbe7e9fe8a3b8305b10048480b7c4320e443304acfaed03c49cac35065",
+      "bytes": 2330,
+      "serialized_tokens": 510,
+      "turn_input_bounds": [
+        2586,
+        4634,
+        6682,
+        8730,
+        10778,
+        12826,
+        14040
+      ]
+    },
+    {
+      "question": "Q21",
+      "arm": "A",
+      "body_hash": "b880625b43b5b877e8529bbef55b620fae2b9a38ca544209ca704a4f7fa99699",
+      "bytes": 6378,
+      "serialized_tokens": 1671,
+      "turn_input_bounds": [
+        6634
+      ]
+    },
+    {
+      "question": "Q21",
+      "arm": "B",
+      "body_hash": "d7e7b75f113c949bca3909658ed3d871b46ad10c2ef11ddf04cc6dbf89813035",
+      "bytes": 11400,
+      "serialized_tokens": 2696,
+      "turn_input_bounds": [
+        11656
+      ]
+    },
+    {
+      "question": "Q21",
+      "arm": "C",
+      "body_hash": "e9339237bd412d422162c509fae1a9954dff4b4c3b72cb83cdc68c0a431da0ba",
+      "bytes": 26680,
+      "serialized_tokens": 6572,
+      "turn_input_bounds": [
+        26936
+      ]
+    },
+    {
+      "question": "Q15",
+      "arm": "A",
+      "body_hash": "4d393df29b80244df388726d80fe30bfe9393d4d362898884260cf5dd9c0844a",
+      "bytes": 6381,
+      "serialized_tokens": 1671,
+      "turn_input_bounds": [
+        6637
+      ]
+    },
+    {
+      "question": "Q15",
+      "arm": "B",
+      "body_hash": "f9bbe4fd2b2fecfd9750e5c15f1ced8749465ffe493d15c45fc512d9ed318dc2",
+      "bytes": 11403,
+      "serialized_tokens": 2696,
+      "turn_input_bounds": [
+        11659
+      ]
+    },
+    {
+      "question": "Q15",
+      "arm": "C",
+      "body_hash": "7102d8875097ea5c0fd58e9bb07579ac63f7a4c2bc5b19d08a49611e2840bf88",
+      "bytes": 26683,
+      "serialized_tokens": 6572,
+      "turn_input_bounds": [
+        26939
+      ]
+    },
+    {
+      "question": "Q15",
+      "arm": "D",
+      "body_hash": "6c9e9ac861adcf5e7a2bce21080298f794e677660ab43898723dafd4e186765e",
+      "bytes": 2333,
+      "serialized_tokens": 510,
+      "turn_input_bounds": [
+        2589,
+        4637,
+        6685,
+        8733,
+        10781,
+        12829,
+        14043
+      ]
+    },
+    {
+      "question": "Q32",
+      "arm": "B",
+      "body_hash": "153311df2568347905de0a879dbdd75021fcc86ee326e34c8973c06998c1deb5",
+      "bytes": 11445,
+      "serialized_tokens": 2700,
+      "turn_input_bounds": [
+        11701
+      ]
+    },
+    {
+      "question": "Q32",
+      "arm": "C",
+      "body_hash": "85ef505f6d3d8697035313e29a20844a7aeec54eee9648dc2bbd6d07423b11cf",
+      "bytes": 26725,
+      "serialized_tokens": 6576,
+      "turn_input_bounds": [
+        26981
+      ]
+    },
+    {
+      "question": "Q32",
+      "arm": "D",
+      "body_hash": "f3bb2ad2a9aa6fba176eec6d4da908ca01825acd4495ad1857eceaec7a4a7ef5",
+      "bytes": 2375,
+      "serialized_tokens": 514,
+      "turn_input_bounds": [
+        2631,
+        4679,
+        6727,
+        8775,
+        10823,
+        12871,
+        14085
+      ]
+    },
+    {
+      "question": "Q32",
+      "arm": "A",
+      "body_hash": "f05b04707f1fdb51f5879498092effea439b3a2682005f2696197916009c776d",
+      "bytes": 6423,
+      "serialized_tokens": 1675,
+      "turn_input_bounds": [
+        6679
+      ]
+    },
+    {
+      "question": "Q12",
+      "arm": "C",
+      "body_hash": "a7519fa6adc86492b2b9d4d1ab842f0a7c7c42e4ed30828a992415a9956439c9",
+      "bytes": 26670,
+      "serialized_tokens": 6575,
+      "turn_input_bounds": [
+        26926
+      ]
+    },
+    {
+      "question": "Q12",
+      "arm": "D",
+      "body_hash": "44d038792bd3d1c7a90f5c89e72e5c01812b311794ca12d6715746b3930a3f12",
+      "bytes": 2320,
+      "serialized_tokens": 513,
+      "turn_input_bounds": [
+        2576,
+        4624,
+        6672,
+        8720,
+        10768,
+        12816,
+        14030
+      ]
+    },
+    {
+      "question": "Q12",
+      "arm": "A",
+      "body_hash": "b3a95f3100678bd45a16f261a6b8ea650044dc39974cd393dc10694cccab2e67",
+      "bytes": 6368,
+      "serialized_tokens": 1674,
+      "turn_input_bounds": [
+        6624
+      ]
+    },
+    {
+      "question": "Q12",
+      "arm": "B",
+      "body_hash": "6772213a84a9a4f005f29e5710b68e55579df5b50e0f9c75721d1924110f20b9",
+      "bytes": 11390,
+      "serialized_tokens": 2699,
+      "turn_input_bounds": [
+        11646
+      ]
+    },
+    {
+      "question": "Q33",
+      "arm": "D",
+      "body_hash": "2b916b4d479e6f77ee3a55263e34f5c4742b559eb877b1c6f8ba58a965a85944",
+      "bytes": 2294,
+      "serialized_tokens": 503,
+      "turn_input_bounds": [
+        2550,
+        4598,
+        6646,
+        8694,
+        10742,
+        12790,
+        14004
+      ]
+    },
+    {
+      "question": "Q33",
+      "arm": "A",
+      "body_hash": "4ee348dbba54a4e6ce3d29c65dbedba742958e41345baad6f54ef923f078620f",
+      "bytes": 6342,
+      "serialized_tokens": 1664,
+      "turn_input_bounds": [
+        6598
+      ]
+    },
+    {
+      "question": "Q33",
+      "arm": "B",
+      "body_hash": "de1bc5e6b2bf9ffbbf2fa089c30f87961b6328ba46b6d68b2c45bf9fdf771753",
+      "bytes": 11364,
+      "serialized_tokens": 2689,
+      "turn_input_bounds": [
+        11620
+      ]
+    },
+    {
+      "question": "Q33",
+      "arm": "C",
+      "body_hash": "76eee6d86e2d16c0376ef58d6d057dee688b12f9ef08b299a8c1b21596ea806d",
+      "bytes": 26644,
+      "serialized_tokens": 6565,
+      "turn_input_bounds": [
+        26900
+      ]
+    },
+    {
+      "question": "Q31",
+      "arm": "A",
+      "body_hash": "056a205da30f53564b99394c8fceae5745ea846fe52d437160dbe8e163bfdef0",
+      "bytes": 6369,
+      "serialized_tokens": 1668,
+      "turn_input_bounds": [
+        6625
+      ]
+    },
+    {
+      "question": "Q31",
+      "arm": "B",
+      "body_hash": "95fe13190c72f69965734f5edfd36d8a49b9afe98bcc9c60269b64ba06555fc7",
+      "bytes": 11391,
+      "serialized_tokens": 2693,
+      "turn_input_bounds": [
+        11647
+      ]
+    },
+    {
+      "question": "Q31",
+      "arm": "C",
+      "body_hash": "21740b9ea2e161ed84165abb9cf7a23902a106907adee280c7b9de5cc49de848",
+      "bytes": 26671,
+      "serialized_tokens": 6569,
+      "turn_input_bounds": [
+        26927
+      ]
+    },
+    {
+      "question": "Q31",
+      "arm": "D",
+      "body_hash": "94f2d4c44d2f0ef73455d7b8bb8ce6978c279c6d29b82d373fb9bb72971c7b55",
+      "bytes": 2321,
+      "serialized_tokens": 507,
+      "turn_input_bounds": [
+        2577,
+        4625,
+        6673,
+        8721,
+        10769,
+        12817,
+        14031
+      ]
+    },
+    {
+      "question": "Q18",
+      "arm": "B",
+      "body_hash": "c698992a0fb18da7466ea90219a36758df2ff794f3993c44992a13b37cc1995d",
+      "bytes": 11406,
+      "serialized_tokens": 2699,
+      "turn_input_bounds": [
+        11662
+      ]
+    },
+    {
+      "question": "Q18",
+      "arm": "C",
+      "body_hash": "a71747281a7656a2f4c5b433f5fcfd77374f196214a89fa653ff50aabdd35aed",
+      "bytes": 26686,
+      "serialized_tokens": 6575,
+      "turn_input_bounds": [
+        26942
+      ]
+    },
+    {
+      "question": "Q18",
+      "arm": "D",
+      "body_hash": "89134af18e59c9c2dc2fab6369f7d00c6d9be97a52f2dc1bc071f35b92b127d5",
+      "bytes": 2336,
+      "serialized_tokens": 513,
+      "turn_input_bounds": [
+        2592,
+        4640,
+        6688,
+        8736,
+        10784,
+        12832,
+        14046
+      ]
+    },
+    {
+      "question": "Q18",
+      "arm": "A",
+      "body_hash": "8a991056780dd12a2f7a143047cd974b80c584536c104b42020fe4b97878f680",
+      "bytes": 6384,
+      "serialized_tokens": 1674,
+      "turn_input_bounds": [
+        6640
+      ]
+    },
+    {
+      "question": "Q08",
+      "arm": "C",
+      "body_hash": "97087f1189a7b284cd96855c11761071092681c23bb72a388a5653af363c9ff4",
+      "bytes": 26697,
+      "serialized_tokens": 6578,
+      "turn_input_bounds": [
+        26953
+      ]
+    },
+    {
+      "question": "Q08",
+      "arm": "D",
+      "body_hash": "94c82436ec3444a2e1948830584229be65e59a73a8a935c12d71f4bc1d45899d",
+      "bytes": 2347,
+      "serialized_tokens": 516,
+      "turn_input_bounds": [
+        2603,
+        4651,
+        6699,
+        8747,
+        10795,
+        12843,
+        14057
+      ]
+    },
+    {
+      "question": "Q08",
+      "arm": "A",
+      "body_hash": "4872e57bc5bba2763f8e23d0606f5f06b55e43a94c291e76018fe666e50a2a53",
+      "bytes": 6395,
+      "serialized_tokens": 1677,
+      "turn_input_bounds": [
+        6651
+      ]
+    },
+    {
+      "question": "Q08",
+      "arm": "B",
+      "body_hash": "f8d5d1a21fd52130ec86726b172eca35779eb828fd598e95e0587110c05b70a9",
+      "bytes": 11417,
+      "serialized_tokens": 2702,
+      "turn_input_bounds": [
+        11673
+      ]
+    },
+    {
+      "question": "Q17",
+      "arm": "D",
+      "body_hash": "520f68cefdddc15861c83d0e84b8f5a7dfcfe2c2c8bc6e5523f43e4fbb9565db",
+      "bytes": 2315,
+      "serialized_tokens": 505,
+      "turn_input_bounds": [
+        2571,
+        4619,
+        6667,
+        8715,
+        10763,
+        12811,
+        14025
+      ]
+    },
+    {
+      "question": "Q17",
+      "arm": "A",
+      "body_hash": "97370439b1237cd3e9e9ecb0a534df1f0ef56a78db2a47e57d5ee2822581914e",
+      "bytes": 6363,
+      "serialized_tokens": 1666,
+      "turn_input_bounds": [
+        6619
+      ]
+    },
+    {
+      "question": "Q17",
+      "arm": "B",
+      "body_hash": "cecd88a965efab38872ea185f2e80b55658e0390a72a93140ce5e5af0286c63e",
+      "bytes": 11385,
+      "serialized_tokens": 2691,
+      "turn_input_bounds": [
+        11641
+      ]
+    },
+    {
+      "question": "Q17",
+      "arm": "C",
+      "body_hash": "dfbbd36cd5acdb0082dfc6cea025551dc5e3e0909d64d0db734a21b69f444c8c",
+      "bytes": 26665,
+      "serialized_tokens": 6567,
+      "turn_input_bounds": [
+        26921
+      ]
+    },
+    {
+      "question": "Q05",
+      "arm": "A",
+      "body_hash": "0d979c4f4925dd0f02fa9bb5cdbbf260def3884a9d104fce9bf630e5fc408be8",
+      "bytes": 6381,
+      "serialized_tokens": 1669,
+      "turn_input_bounds": [
+        6637
+      ]
+    },
+    {
+      "question": "Q05",
+      "arm": "B",
+      "body_hash": "1e213a984e3436237ba804fc9f50076c69455666daafc8a51769ad4370233fba",
+      "bytes": 11403,
+      "serialized_tokens": 2694,
+      "turn_input_bounds": [
+        11659
+      ]
+    },
+    {
+      "question": "Q05",
+      "arm": "C",
+      "body_hash": "85ce96e9ea5ab933d5c3327aa651a3ccfba1dd54490457bb06791ee1179ebebb",
+      "bytes": 26683,
+      "serialized_tokens": 6570,
+      "turn_input_bounds": [
+        26939
+      ]
+    },
+    {
+      "question": "Q05",
+      "arm": "D",
+      "body_hash": "4278c93d8321d09abe961c1b283f00b217c0842db67ea80929739a07a80aee97",
+      "bytes": 2333,
+      "serialized_tokens": 508,
+      "turn_input_bounds": [
+        2589,
+        4637,
+        6685,
+        8733,
+        10781,
+        12829,
+        14043
+      ]
+    },
+    {
+      "question": "Q34",
+      "arm": "B",
+      "body_hash": "c945cd02a530a0680da5f16bd64efd71ee21df6c5f94377b30032cd5209d5dff",
+      "bytes": 11367,
+      "serialized_tokens": 2691,
+      "turn_input_bounds": [
+        11623
+      ]
+    },
+    {
+      "question": "Q34",
+      "arm": "C",
+      "body_hash": "98e019e5b643a6af3b20065b9ccd5cb0fcba705dd5a1a25e6066dea06b32cb53",
+      "bytes": 26647,
+      "serialized_tokens": 6567,
+      "turn_input_bounds": [
+        26903
+      ]
+    },
+    {
+      "question": "Q34",
+      "arm": "D",
+      "body_hash": "27413721f25576e242ca07621da9f961d34cd1d5eed4fd1ca1f3cbd620fd5b09",
+      "bytes": 2297,
+      "serialized_tokens": 505,
+      "turn_input_bounds": [
+        2553,
+        4601,
+        6649,
+        8697,
+        10745,
+        12793,
+        14007
+      ]
+    },
+    {
+      "question": "Q34",
+      "arm": "A",
+      "body_hash": "696a65933506c0f9ef770a46e261cf8afea203ecc786070de990e1a2f2dcf1a7",
+      "bytes": 6345,
+      "serialized_tokens": 1666,
+      "turn_input_bounds": [
+        6601
+      ]
+    },
+    {
+      "question": "Q02",
+      "arm": "C",
+      "body_hash": "4233f7da6d4145ba2d4c62c5fabe1b81d3af9dcdfe0f2664a5b7a67228185938",
+      "bytes": 26679,
+      "serialized_tokens": 6569,
+      "turn_input_bounds": [
+        26935
+      ]
+    },
+    {
+      "question": "Q02",
+      "arm": "D",
+      "body_hash": "20fe61cf0ae41dba2860bb06d896192aa58e48f3160b4982af17a8deaf05f34b",
+      "bytes": 2329,
+      "serialized_tokens": 507,
+      "turn_input_bounds": [
+        2585,
+        4633,
+        6681,
+        8729,
+        10777,
+        12825,
+        14039
+      ]
+    },
+    {
+      "question": "Q02",
+      "arm": "A",
+      "body_hash": "abfde41944fc299817f10bd57e4d91672bf095ae4843574c5d44663f73f86d7b",
+      "bytes": 6377,
+      "serialized_tokens": 1668,
+      "turn_input_bounds": [
+        6633
+      ]
+    },
+    {
+      "question": "Q02",
+      "arm": "B",
+      "body_hash": "25fe24225a3f7eeced165abbd10d253fcff81c49fad0cd289cc500d9e5881fc6",
+      "bytes": 11399,
+      "serialized_tokens": 2693,
+      "turn_input_bounds": [
+        11655
+      ]
+    },
+    {
+      "question": "Q19",
+      "arm": "D",
+      "body_hash": "c57655161713702f9eff19a46450263c77dffe4cead52aadd3f2a21e36c11990",
+      "bytes": 2319,
+      "serialized_tokens": 508,
+      "turn_input_bounds": [
+        2575,
+        4623,
+        6671,
+        8719,
+        10767,
+        12815,
+        14029
+      ]
+    },
+    {
+      "question": "Q19",
+      "arm": "A",
+      "body_hash": "59aaf9648a310101f8a30a040efdd3b42f80c5e30a4b4b8d3d65fdbdbfb70897",
+      "bytes": 6367,
+      "serialized_tokens": 1669,
+      "turn_input_bounds": [
+        6623
+      ]
+    },
+    {
+      "question": "Q19",
+      "arm": "B",
+      "body_hash": "ac8a87a6047787e2aac3b2ec32f8fdf4b80efa12100917d100bcb21e42545de6",
+      "bytes": 11389,
+      "serialized_tokens": 2694,
+      "turn_input_bounds": [
+        11645
+      ]
+    },
+    {
+      "question": "Q19",
+      "arm": "C",
+      "body_hash": "c4f1a94e994d189974590aae4ac157390c223579e4daa0f138f33c958ccbb951",
+      "bytes": 26669,
+      "serialized_tokens": 6570,
+      "turn_input_bounds": [
+        26925
+      ]
+    },
+    {
+      "question": "Q26",
+      "arm": "A",
+      "body_hash": "8617cd708780269b62822240072545edaaa0bf76d73338377e4f0c1465f9f9e3",
+      "bytes": 6375,
+      "serialized_tokens": 1670,
+      "turn_input_bounds": [
+        6631
+      ]
+    },
+    {
+      "question": "Q26",
+      "arm": "B",
+      "body_hash": "3bb5fa7fba02cd4ea25d430c98f23227fe1840658e894db10fd7941a72091bf8",
+      "bytes": 11397,
+      "serialized_tokens": 2695,
+      "turn_input_bounds": [
+        11653
+      ]
+    },
+    {
+      "question": "Q26",
+      "arm": "C",
+      "body_hash": "60e89344cc5842abb5db3dc84893cdada056546916b3dd0868e664ffafb18436",
+      "bytes": 26677,
+      "serialized_tokens": 6571,
+      "turn_input_bounds": [
+        26933
+      ]
+    },
+    {
+      "question": "Q26",
+      "arm": "D",
+      "body_hash": "7d3095dca93cdcf816b81e12360e9d059ed51e92df49ea4e3677d3520de2bf23",
+      "bytes": 2327,
+      "serialized_tokens": 509,
+      "turn_input_bounds": [
+        2583,
+        4631,
+        6679,
+        8727,
+        10775,
+        12823,
+        14037
+      ]
+    },
+    {
+      "question": "Q20",
+      "arm": "B",
+      "body_hash": "1a37e3d2686ba97c85e21e4c8174cb9e987b787c64c71a0c9300f5fc37d97746",
+      "bytes": 11399,
+      "serialized_tokens": 2694,
+      "turn_input_bounds": [
+        11655
+      ]
+    },
+    {
+      "question": "Q20",
+      "arm": "C",
+      "body_hash": "97923f2e77e0bc1192166ea1cd35818c35f3c318339546499ccc2ff433c89989",
+      "bytes": 26679,
+      "serialized_tokens": 6570,
+      "turn_input_bounds": [
+        26935
+      ]
+    },
+    {
+      "question": "Q20",
+      "arm": "D",
+      "body_hash": "e076c64506085e5af6550a501f76f9ea3d8527e924d971c3974bec926cb46568",
+      "bytes": 2329,
+      "serialized_tokens": 508,
+      "turn_input_bounds": [
+        2585,
+        4633,
+        6681,
+        8729,
+        10777,
+        12825,
+        14039
+      ]
+    },
+    {
+      "question": "Q20",
+      "arm": "A",
+      "body_hash": "2ce1bbd7ae7d17a0ba113e5ae42eecd2c41ca1134b8042de9081a5ecb10b1d5b",
+      "bytes": 6377,
+      "serialized_tokens": 1669,
+      "turn_input_bounds": [
+        6633
+      ]
+    },
+    {
+      "question": "Q25",
+      "arm": "C",
+      "body_hash": "886c1f66b56e64aa407ae0b337945af3085a702e297a8596771649a755ab43c8",
+      "bytes": 26673,
+      "serialized_tokens": 6570,
+      "turn_input_bounds": [
+        26929
+      ]
+    },
+    {
+      "question": "Q25",
+      "arm": "D",
+      "body_hash": "e2bb3537d33e493a55f3f52a6687cb959301b0dc04a8b4bb71fb9737e0a88a43",
+      "bytes": 2323,
+      "serialized_tokens": 508,
+      "turn_input_bounds": [
+        2579,
+        4627,
+        6675,
+        8723,
+        10771,
+        12819,
+        14033
+      ]
+    },
+    {
+      "question": "Q25",
+      "arm": "A",
+      "body_hash": "c5ecd7438d5894734352930b0e37ac5eb1fd0e50662bca56e94bcd50843ef13c",
+      "bytes": 6371,
+      "serialized_tokens": 1669,
+      "turn_input_bounds": [
+        6627
+      ]
+    },
+    {
+      "question": "Q25",
+      "arm": "B",
+      "body_hash": "e3e145b51b0f28eee10057aac44e94c1ff5ec3a5df0655732b48925ddbe59a0b",
+      "bytes": 11393,
+      "serialized_tokens": 2694,
+      "turn_input_bounds": [
+        11649
+      ]
+    },
+    {
+      "question": "Q24",
+      "arm": "D",
+      "body_hash": "290b5e6df33ad444a6ef32b6aa5770acc279417de3a799623166d3940957cd61",
+      "bytes": 2340,
+      "serialized_tokens": 511,
+      "turn_input_bounds": [
+        2596,
+        4644,
+        6692,
+        8740,
+        10788,
+        12836,
+        14050
+      ]
+    },
+    {
+      "question": "Q24",
+      "arm": "A",
+      "body_hash": "52967e869198effaa9cd5f2ea9d05dcaac144f9153bcda5867592d0e03805eeb",
+      "bytes": 6388,
+      "serialized_tokens": 1672,
+      "turn_input_bounds": [
+        6644
+      ]
+    },
+    {
+      "question": "Q24",
+      "arm": "B",
+      "body_hash": "da8d270ab198d0fd798617d36d2587fdad3ba870c536bafa0b3ff6acf071f6a5",
+      "bytes": 11410,
+      "serialized_tokens": 2697,
+      "turn_input_bounds": [
+        11666
+      ]
+    },
+    {
+      "question": "Q24",
+      "arm": "C",
+      "body_hash": "06cc3b4910ae509e12e3790483d02f700b8c41a64512a4f875a9cb5aef114a3e",
+      "bytes": 26690,
+      "serialized_tokens": 6573,
+      "turn_input_bounds": [
+        26946
+      ]
+    },
+    {
+      "question": "Q27",
+      "arm": "A",
+      "body_hash": "9b7bb68b255d8309546120b61fb27094e9735f8491230439d077ccdea9727cc4",
+      "bytes": 6378,
+      "serialized_tokens": 1673,
+      "turn_input_bounds": [
+        6634
+      ]
+    },
+    {
+      "question": "Q27",
+      "arm": "B",
+      "body_hash": "ba26856c8885c7c3ddd5fdaf0d66b8a2d8ef8d3476d2d552d438e2e9a92ff773",
+      "bytes": 11400,
+      "serialized_tokens": 2698,
+      "turn_input_bounds": [
+        11656
+      ]
+    },
+    {
+      "question": "Q27",
+      "arm": "C",
+      "body_hash": "c178569907c89ab2fe6c44e3ab539ba8a77a4e8f6f7256c632c74557911cd9ad",
+      "bytes": 26680,
+      "serialized_tokens": 6574,
+      "turn_input_bounds": [
+        26936
+      ]
+    },
+    {
+      "question": "Q27",
+      "arm": "D",
+      "body_hash": "b83d0ddc894e627b1f50c976f10f981da92f6abdc45ff8ba59591241a2d45f7d",
+      "bytes": 2330,
+      "serialized_tokens": 512,
+      "turn_input_bounds": [
+        2586,
+        4634,
+        6682,
+        8730,
+        10778,
+        12826,
+        14040
+      ]
+    },
+    {
+      "question": "Q28",
+      "arm": "B",
+      "body_hash": "8a914ba456fa7800f5a9e47fa1897dda1d0947df403dd2cf9e185a330c99ced4",
+      "bytes": 11407,
+      "serialized_tokens": 2695,
+      "turn_input_bounds": [
+        11663
+      ]
+    },
+    {
+      "question": "Q28",
+      "arm": "C",
+      "body_hash": "84119fbe28109747fb44ce45bb3550f2b3c48d4edbcd3ef0fe1fc1c122404c62",
+      "bytes": 26687,
+      "serialized_tokens": 6571,
+      "turn_input_bounds": [
+        26943
+      ]
+    },
+    {
+      "question": "Q28",
+      "arm": "D",
+      "body_hash": "597bbde3e3e93df420a299f01df0e6409df82b7068a1a79487248acb83fa6126",
+      "bytes": 2337,
+      "serialized_tokens": 509,
+      "turn_input_bounds": [
+        2593,
+        4641,
+        6689,
+        8737,
+        10785,
+        12833,
+        14047
+      ]
+    },
+    {
+      "question": "Q28",
+      "arm": "A",
+      "body_hash": "5ab7d7760d61f4f8ac8ce97e93cd819e287e02f86b4f3f4a6ed5cd955a72df05",
+      "bytes": 6385,
+      "serialized_tokens": 1670,
+      "turn_input_bounds": [
+        6641
+      ]
+    },
+    {
+      "question": "Q03",
+      "arm": "C",
+      "body_hash": "cb3bc845b70a745f3efd93f95a5b45b7a60c48095601e10ae61e354f7431dcab",
+      "bytes": 26654,
+      "serialized_tokens": 6566,
+      "turn_input_bounds": [
+        26910
+      ]
+    },
+    {
+      "question": "Q03",
+      "arm": "D",
+      "body_hash": "3409ab81f851cbb9081bcde479fee50dbaca68794b089c551dc6297313453b5e",
+      "bytes": 2304,
+      "serialized_tokens": 504,
+      "turn_input_bounds": [
+        2560,
+        4608,
+        6656,
+        8704,
+        10752,
+        12800,
+        14014
+      ]
+    },
+    {
+      "question": "Q03",
+      "arm": "A",
+      "body_hash": "095026b4c148b2c74e54d2b917337eb31e36a026dcdd953bb0860838ebc194fa",
+      "bytes": 6352,
+      "serialized_tokens": 1665,
+      "turn_input_bounds": [
+        6608
+      ]
+    },
+    {
+      "question": "Q03",
+      "arm": "B",
+      "body_hash": "eefaa76650943974d93470188ee65717bbc04072bb520b22def34b6be6d8dde1",
+      "bytes": 11374,
+      "serialized_tokens": 2690,
+      "turn_input_bounds": [
+        11630
+      ]
+    },
+    {
+      "question": "Q06",
+      "arm": "D",
+      "body_hash": "5171b0f97c5d265ae0d785e77d6df6fbfeebefe7818cea637b169c0aa877079b",
+      "bytes": 2346,
+      "serialized_tokens": 510,
+      "turn_input_bounds": [
+        2602,
+        4650,
+        6698,
+        8746,
+        10794,
+        12842,
+        14056
+      ]
+    },
+    {
+      "question": "Q06",
+      "arm": "A",
+      "body_hash": "9dca22e3332540b407e8146f0654fbf5dbf6cd79f4054791b2f3fb88d58c209d",
+      "bytes": 6394,
+      "serialized_tokens": 1671,
+      "turn_input_bounds": [
+        6650
+      ]
+    },
+    {
+      "question": "Q06",
+      "arm": "B",
+      "body_hash": "071f2c8a0657420a9c2e347370b864f401f015000419573213f4692614b8c780",
+      "bytes": 11416,
+      "serialized_tokens": 2696,
+      "turn_input_bounds": [
+        11672
+      ]
+    },
+    {
+      "question": "Q06",
+      "arm": "C",
+      "body_hash": "81de17318ffce6dda84524d1ef2e73a76f6e7fbc5ca44922573c2486d8885e59",
+      "bytes": 26696,
+      "serialized_tokens": 6572,
+      "turn_input_bounds": [
+        26952
+      ]
+    },
+    {
+      "question": "Q09",
+      "arm": "A",
+      "body_hash": "8b42e9bfcc01847a3d087315767766023c296215fd8b0ff6be19f729ebc0a5b5",
+      "bytes": 6374,
+      "serialized_tokens": 1668,
+      "turn_input_bounds": [
+        6630
+      ]
+    },
+    {
+      "question": "Q09",
+      "arm": "B",
+      "body_hash": "66f506054660eeede8818456ad756b64c70f0fbdce0e30f94a59d9197ad77489",
+      "bytes": 11396,
+      "serialized_tokens": 2693,
+      "turn_input_bounds": [
+        11652
+      ]
+    },
+    {
+      "question": "Q09",
+      "arm": "C",
+      "body_hash": "11c5d64f9437bbd34d15073c7955eb4f9d1489e01e09a3f6bbbe2061d16dd0e0",
+      "bytes": 26676,
+      "serialized_tokens": 6569,
+      "turn_input_bounds": [
+        26932
+      ]
+    },
+    {
+      "question": "Q09",
+      "arm": "D",
+      "body_hash": "03567d14a574e7eeb78e3d863652c3fc68f684b25d01a54dee15b2758d76b44f",
+      "bytes": 2326,
+      "serialized_tokens": 507,
+      "turn_input_bounds": [
+        2582,
+        4630,
+        6678,
+        8726,
+        10774,
+        12822,
+        14036
+      ]
+    },
+    {
+      "question": "Q11",
+      "arm": "B",
+      "body_hash": "268d4bbc7cf9dda18a6e5c63c062f6a824fd3a12d986bcdd530b4ed236afa5be",
+      "bytes": 11395,
+      "serialized_tokens": 2693,
+      "turn_input_bounds": [
+        11651
+      ]
+    },
+    {
+      "question": "Q11",
+      "arm": "C",
+      "body_hash": "f34604b14cda38e21cd98a823cb9e03f511fd8f2e214f8b8cfc661b250920b38",
+      "bytes": 26675,
+      "serialized_tokens": 6569,
+      "turn_input_bounds": [
+        26931
+      ]
+    },
+    {
+      "question": "Q11",
+      "arm": "D",
+      "body_hash": "3d1c3d84129bc08995bfc451601227e390e20f3f1edf2c3818d129cdea2b6796",
+      "bytes": 2325,
+      "serialized_tokens": 507,
+      "turn_input_bounds": [
+        2581,
+        4629,
+        6677,
+        8725,
+        10773,
+        12821,
+        14035
+      ]
+    },
+    {
+      "question": "Q11",
+      "arm": "A",
+      "body_hash": "e22e079bbc9b353ff3d428daebdb6a17e9d8402d6a5c9f2fabbc2d679ea38d2a",
+      "bytes": 6373,
+      "serialized_tokens": 1668,
+      "turn_input_bounds": [
+        6629
+      ]
+    },
+    {
+      "question": "Q16",
+      "arm": "C",
+      "body_hash": "7ab013aa249f1060058f22b337a4fa2631e391f2284131cce7414e7995d910ed",
+      "bytes": 26702,
+      "serialized_tokens": 6576,
+      "turn_input_bounds": [
+        26958
+      ]
+    },
+    {
+      "question": "Q16",
+      "arm": "D",
+      "body_hash": "8bc2bbe96472173b95176b753c608e668e181e518ae4ebc4323249bfb5d78572",
+      "bytes": 2352,
+      "serialized_tokens": 514,
+      "turn_input_bounds": [
+        2608,
+        4656,
+        6704,
+        8752,
+        10800,
+        12848,
+        14062
+      ]
+    },
+    {
+      "question": "Q16",
+      "arm": "A",
+      "body_hash": "e48c9630ca7e8d574171082ec7ea91a8194637d83e2c2dea665e5fc240c76481",
+      "bytes": 6400,
+      "serialized_tokens": 1675,
+      "turn_input_bounds": [
+        6656
+      ]
+    },
+    {
+      "question": "Q16",
+      "arm": "B",
+      "body_hash": "397e187c829bc956f6e31f1f43647e50568705ea71e7b8886a7cc50989649a4a",
+      "bytes": 11422,
+      "serialized_tokens": 2700,
+      "turn_input_bounds": [
+        11678
+      ]
+    },
+    {
+      "question": "Q29",
+      "arm": "D",
+      "body_hash": "a772f93caf82e293fdb1043a5c390573ef3262a141be0c1bfffbea46940a11bc",
+      "bytes": 2330,
+      "serialized_tokens": 506,
+      "turn_input_bounds": [
+        2586,
+        4634,
+        6682,
+        8730,
+        10778,
+        12826,
+        14040
+      ]
+    },
+    {
+      "question": "Q29",
+      "arm": "A",
+      "body_hash": "475cfa77b7753d63ebff8d2de2921db96ecdf8a719f5127ac2d0c72219a92fa9",
+      "bytes": 6378,
+      "serialized_tokens": 1667,
+      "turn_input_bounds": [
+        6634
+      ]
+    },
+    {
+      "question": "Q29",
+      "arm": "B",
+      "body_hash": "d989c5da121966222ee1b09d47bf62f1ad2c059e44efcaa8698238e9caa61d15",
+      "bytes": 11400,
+      "serialized_tokens": 2692,
+      "turn_input_bounds": [
+        11656
+      ]
+    },
+    {
+      "question": "Q29",
+      "arm": "C",
+      "body_hash": "6f693767cf5c6037049bd00f3971f5d7812402f1a667b795ca9c3cac1e0580c1",
+      "bytes": 26680,
+      "serialized_tokens": 6568,
+      "turn_input_bounds": [
+        26936
+      ]
+    },
+    {
+      "question": "Q36",
+      "arm": "A",
+      "body_hash": "91b4295bbbb828922f0809765d1fb6e976e3efdac2c4fa5b6faf94b990ae47f8",
+      "bytes": 6351,
+      "serialized_tokens": 1665,
+      "turn_input_bounds": [
+        6607
+      ]
+    },
+    {
+      "question": "Q36",
+      "arm": "B",
+      "body_hash": "7d9505e5a3a53d727b7178035cf2988f245324e467946777e9e352056c1a5bbd",
+      "bytes": 11373,
+      "serialized_tokens": 2690,
+      "turn_input_bounds": [
+        11629
+      ]
+    },
+    {
+      "question": "Q36",
+      "arm": "C",
+      "body_hash": "709792047c82748181f65d973dc96815c562264184256f960d8156bb0284f4ca",
+      "bytes": 26653,
+      "serialized_tokens": 6566,
+      "turn_input_bounds": [
+        26909
+      ]
+    },
+    {
+      "question": "Q36",
+      "arm": "D",
+      "body_hash": "0150334b5a7e5fef9b28bb58d004747c861572c184d7bcbda3ad52dbeb34fe50",
+      "bytes": 2303,
+      "serialized_tokens": 504,
+      "turn_input_bounds": [
+        2559,
+        4607,
+        6655,
+        8703,
+        10751,
+        12799,
+        14013
+      ]
+    },
+    {
+      "question": "Q04",
+      "arm": "B",
+      "body_hash": "bf4d11a746a13c8438a4cc97e4126de357df44f157b7494193553f6648061e9e",
+      "bytes": 11383,
+      "serialized_tokens": 2691,
+      "turn_input_bounds": [
+        11639
+      ]
+    },
+    {
+      "question": "Q04",
+      "arm": "C",
+      "body_hash": "88818effd79f2b52dc3c2990a61cf0cd8ac054c1a760b7c2996505819ec4705c",
+      "bytes": 26663,
+      "serialized_tokens": 6567,
+      "turn_input_bounds": [
+        26919
+      ]
+    },
+    {
+      "question": "Q04",
+      "arm": "D",
+      "body_hash": "fbe210e9cabc2bd9fe267bb5ba12314ebbca5351d05b72c96d4cb0e9bf72fbd6",
+      "bytes": 2313,
+      "serialized_tokens": 505,
+      "turn_input_bounds": [
+        2569,
+        4617,
+        6665,
+        8713,
+        10761,
+        12809,
+        14023
+      ]
+    },
+    {
+      "question": "Q04",
+      "arm": "A",
+      "body_hash": "a05768973baa987fdc684331f741564c1d87857f20d47778eb0d7237d2a36c37",
+      "bytes": 6361,
+      "serialized_tokens": 1666,
+      "turn_input_bounds": [
+        6617
+      ]
+    },
+    {
+      "question": "Q13",
+      "arm": "C",
+      "body_hash": "043ae0f9718727fe616128e5ed2342abcd71ea94c4b6b5ed93b05008880932e8",
+      "bytes": 26681,
+      "serialized_tokens": 6569,
+      "turn_input_bounds": [
+        26937
+      ]
+    },
+    {
+      "question": "Q13",
+      "arm": "D",
+      "body_hash": "f033fab29b4d3adbbd5e509e85df7fafcc000e8c0c34557ecdffe20dc9a7121a",
+      "bytes": 2331,
+      "serialized_tokens": 507,
+      "turn_input_bounds": [
+        2587,
+        4635,
+        6683,
+        8731,
+        10779,
+        12827,
+        14041
+      ]
+    },
+    {
+      "question": "Q13",
+      "arm": "A",
+      "body_hash": "8ae22ec559a55c15a139c756650b1c8f6aa16c13637da920319912f7558411ce",
+      "bytes": 6379,
+      "serialized_tokens": 1668,
+      "turn_input_bounds": [
+        6635
+      ]
+    },
+    {
+      "question": "Q13",
+      "arm": "B",
+      "body_hash": "81cd8039f7b7133f59a370c685c15aed0dfba86cbf2abee1b5580ba7b96f2b69",
+      "bytes": 11401,
+      "serialized_tokens": 2693,
+      "turn_input_bounds": [
+        11657
+      ]
+    },
+    {
+      "question": "Q14",
+      "arm": "D",
+      "body_hash": "5e345dbfbdaa16655fe49636cdc525603661a2ab615daf2cb3234a07eb4a7821",
+      "bytes": 2333,
+      "serialized_tokens": 509,
+      "turn_input_bounds": [
+        2589,
+        4637,
+        6685,
+        8733,
+        10781,
+        12829,
+        14043
+      ]
+    },
+    {
+      "question": "Q14",
+      "arm": "A",
+      "body_hash": "df30bb96a0943138ed642ae552d0b2ec4b2dcf6e7849b0464dfdde48c314c01c",
+      "bytes": 6381,
+      "serialized_tokens": 1670,
+      "turn_input_bounds": [
+        6637
+      ]
+    },
+    {
+      "question": "Q14",
+      "arm": "B",
+      "body_hash": "6be7d4f5396d211b8661d4eedb9082971743be8b720f81999dd56ca7e052230f",
+      "bytes": 11403,
+      "serialized_tokens": 2695,
+      "turn_input_bounds": [
+        11659
+      ]
+    },
+    {
+      "question": "Q14",
+      "arm": "C",
+      "body_hash": "d2193c201ba08720fe52ca8762171bba0b90f41a92cce30687cffdd50c609255",
+      "bytes": 26683,
+      "serialized_tokens": 6571,
+      "turn_input_bounds": [
+        26939
+      ]
+    }
+  ],
+  "input_by_arm": {
+    "A": 238716,
+    "B": 419508,
+    "C": 969588,
+    "D": 2169180
+  },
+  "cost_by_arm": {
+    "A": "0.0667035",
+    "B": "0.0893025",
+    "C": "0.1580625",
+    "D": "0.5291955"
+  },
+  "reserve_usd": "0.8432640",
+  "proposed_cap_usd": "1.00",
+  "pricing_date": "2026-11-10",
+  "usd_per_million": {
+    "input": "0.10",
+    "cached": "0.01",
+    "30m_write": "0.125",
+    "output": "0.50"
+  },
+  "bodies_sha256": "c12b6d4dfa80eb767e1427b71bd788e10a59d36e658b598b8a6bde2b49cc0183",
+  "implementation_sha256": {
+    "audit.py": "82c573a4ac3288905d3eecec3f1660fcd6423220eb6c4ea40f73f6e6248c08c6",
+    "checkpoint.py": "3351099799c8c46184a0bf1aa8698c6f8f07d0095b5e879b5a523d561c97bc69",
+    "compare.py": "fae843db9d94a4a4085f8d4f4f8ccf9d092d6107872ea149d0fcb86fd0f810b8",
+    "controls.py": "3a8d740ddb56ca54321da8a5ed281825f82440367795a6a331cd6801f4f1ec2c",
+    "discovery.py": "f13bf3ded9c114789fe4deb97cafede918130716eacee3f0c65c33db657bed22",
+    "episode.py": "37a27b622ba6d2949c274567304d5558f9b29f0c351db5019fbc1ef68287de93",
+    "generate.py": "06e17c619a35f22c57b9d35310863444a0b693e2b032e1d246f23b142d83038c",
+    "grading.py": "8ca7e27a77f8e7997ac7b2711d1aa220219a2cb48784a17b2913d702b6c868a2",
+    "oracle.py": "674c99e89be4531a76422a417e75aa147560cd36d15ddc8f4684fc127b67c4b5",
+    "packages.py": "212aba86d348ccc8306572b67136f5ec7352b7c724b27541a27d00643e0abbdb",
+    "proposal.py": "6758b09a719c3f327b394c9a56878cde377a822b22f6e05ef80f1d30dd237a4c",
+    "references.py": "9b1915314f9e32e886f5f466639902e3c6f8ffed00056fe87a4f77554fa6e350",
+    "review.py": "f4351e774a1ee1ab7610a7f1194e52a60fee2564938d4049da2c6b7ac83a54fa",
+    "worker.py": "625241c5e9d34388eab03590104f51bb3aa9cb00f3e866f583272535ec8cd828"
+  },
+  "proposal_digest": "82539bc63c44e9bced2111989c9fcd59f7b867941d70b3e3d943479778e31733"
+}
