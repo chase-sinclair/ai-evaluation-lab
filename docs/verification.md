@@ -1,5 +1,9 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 005 · dispatcher review
+
+Rebuilt the frozen proposal and compared the manifest file, ordered initial body array and construction bindings. The maximum-depth mock finished 144 episodes, issued exactly 360 HTTP requests and served 216 discovery calls. Checked every outgoing initial and dynamic body at mock transport. With FINOPS_VERIFIED_ROOT configured, all 329 offline tests passed. Ruff lint and format checks passed. The metadata check and standard pricing review used no paid inference. [Dispatch checkpoint](finops_dispatch.md)
+
 ## Experiment 005 · targeted pre-acquisition revision
 
 Ran the isolated checkpoint against the three source-verified snapshots, both independent numeric oracles and all four clarification witnesses. Q07 now fails the volume-only control on both snapshots and its two components reconcile to the direct contracted-charge delta. Q16's control-copy shortcut matches 16 invoice rows on each snapshot. Only Q07's private numeric bindings changed. The v2 reviewer packet validated all 64 typed reference outputs.

@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 005 · dispatcher review
+
+The v2 dispatcher and mocked acquisition are ready for owner review. The next decision is separate authorization against the exact digest, reviewed extension SHA and confirmed spend allowance. [Dispatch checkpoint](finops_dispatch.md)
+
 ## Experiment 005 · pre-acquisition v2 awaiting owner review
 
 Following the accepted infrastructure at `0e35794`, Q07 now spans the July rate change, Q14 uses percent-of-budget terminology and Q16 is classified as a balanced-ledger output task. The stateless discovery workflow remains the secondary architecture. The separately frozen v2 proposal reserves $0.8432640 under a proposed $1.00 cap. Next step is owner review before live acquisition. [Case-level changes, hashes and verification](experiment05_preacquisition_v2.md) · [Reviewer packet](experiment05_oracle_review_v2.md)
