@@ -1,5 +1,9 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 005 · interrupted live acquisition sealed
+
+The approved one-time run stopped on Q23C at the output limit. Verified all receipts, reconciled usage and graded all 21 completed episodes offline. No retry or resume. The full offline suite passed 329 tests and both Ruff checks passed. Next step is owner review. [Case-level audit and integrity evidence](finops_acquisition_audit.md)
+
 ## Experiment 005 · dispatcher review
 
 Rebuilt the frozen proposal and compared the manifest file, ordered initial body array and construction bindings. The maximum-depth mock finished 144 episodes, issued exactly 360 HTTP requests and served 216 discovery calls. Checked every outgoing initial and dynamic body at mock transport. With FINOPS_VERIFIED_ROOT configured, all 329 offline tests passed. Ruff lint and format checks passed. The metadata check and standard pricing review used no paid inference. [Dispatch checkpoint](finops_dispatch.md)

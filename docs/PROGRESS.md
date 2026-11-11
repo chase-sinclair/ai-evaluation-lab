@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 005 · interrupted live acquisition sealed
+
+The approved one-time run stopped on Q23C at the output limit. Verified all receipts, reconciled usage and graded all 21 completed episodes offline. No retry or resume. The full offline suite passed 329 tests and both Ruff checks passed. Next step is owner review. [Case-level audit and integrity evidence](finops_acquisition_audit.md)
+
 ## Experiment 005 · dispatcher review
 
 The v2 dispatcher and mocked acquisition are ready for owner review. The next decision is separate authorization against the exact digest, reviewed extension SHA and confirmed spend allowance. [Dispatch checkpoint](finops_dispatch.md)
