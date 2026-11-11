@@ -1,0 +1,154 @@
+{
+  "version": "meridian-v3-development-once",
+  "result_directory": "results/meridian-v3-development-once",
+  "historical_proposal": "82539bc63c44e9bced2111989c9fcd59f7b867941d70b3e3d943479778e31733",
+  "source_sha256": {
+    "Dockerfile": "eebc260751047cecc9fb3b5336b860f0bd03374b0c2c97c9166b49f220bf21e3",
+    "audit.py": "82c573a4ac3288905d3eecec3f1660fcd6423220eb6c4ea40f73f6e6248c08c6",
+    "checkpoint.py": "3351099799c8c46184a0bf1aa8698c6f8f07d0095b5e879b5a523d561c97bc69",
+    "compare.py": "fae843db9d94a4a4085f8d4f4f8ccf9d092d6107872ea149d0fcb86fd0f810b8",
+    "controls.py": "3a8d740ddb56ca54321da8a5ed281825f82440367795a6a331cd6801f4f1ec2c",
+    "discovery.py": "f13bf3ded9c114789fe4deb97cafede918130716eacee3f0c65c33db657bed22",
+    "episode.py": "37a27b622ba6d2949c274567304d5558f9b29f0c351db5019fbc1ef68287de93",
+    "generate.py": "06e17c619a35f22c57b9d35310863444a0b693e2b032e1d246f23b142d83038c",
+    "grading.py": "8ca7e27a77f8e7997ac7b2711d1aa220219a2cb48784a17b2913d702b6c868a2",
+    "oracle-bindings-v2.json": "590a59da4c054a8136a7538b1f5d19c810a1e036592b7ce2717ff50148b79dc0",
+    "oracle.py": "674c99e89be4531a76422a417e75aa147560cd36d15ddc8f4684fc127b67c4b5",
+    "packages.py": "212aba86d348ccc8306572b67136f5ec7352b7c724b27541a27d00643e0abbdb",
+    "proposal.py": "6758b09a719c3f327b394c9a56878cde377a822b22f6e05ef80f1d30dd237a4c",
+    "public/v1/dictionary.curated.json": "a83177353ed45034f96c909af98a003f174961559d5a78a6d3100c7d4c862c93",
+    "public/v1/dictionary.full.json": "b56ff217fc9977bc5da139e424cca6d6bb22fc81c4b563d2ed282ef8c3fd9e38",
+    "public/v1/joins.md": "417e7f0da796b770d87d5d5326ac251ac442899c1c06d27092208e17f945edf1",
+    "public/v1/lineage.md": "8e81bce287c09e9b3b54eb24e6b5d22c05af3269a5262b98a16427947a54ef62",
+    "public/v1/metrics.md": "c062e80755a09a2c70f25846f6e8c854cce5f7d4fbcae6a6ada0dd17e10b85f5",
+    "public/v1/operations.md": "411335c8e272e3a4afd4cab89f3c34d2f720b37c71a41f3da6a94a9e9d02f762",
+    "public/v1/policy.md": "ada30238e7ec63fe7432cc8a568caae92d0811bd3333019b3a539b3ccff7e709",
+    "public/v1/registry.json": "d1a97fbe04f93a36dd7a7ad7b10aba6f79a17db1b2003992a2055f80a279f616",
+    "public/v2/questions.json": "9d944aa4339d889dc42b9983c22c028c0f4a6f0cc5502d46cb6cd6de79d040ae",
+    "references.py": "9b1915314f9e32e886f5f466639902e3c6f8ffed00056fe87a4f77554fa6e350",
+    "review.py": "f4351e774a1ee1ab7610a7f1194e52a60fee2564938d4049da2c6b7ac83a54fa",
+    "schema.sql": "f83aaa505b387a3e2f3252e3c0c56ec79647f5bc830a8a898db50461560fd092",
+    "v3/Dockerfile": "0958a64131b1267fb972c0df0664be58d5299ac682e3f7df740f2e615b454f80",
+    "v3/accounting.py": "e3c52735333941029bde988a9dcb28888db1006df432098c5cca72a0e322a209",
+    "v3/development.py": "d1de1156afc2c6001cd431017c08df574e2622a850a120524e56131d685b9497",
+    "v3/grading.py": "d324163ab33571e2f6de1d16e68167a3873be0e3881a86427ca73dd03b50485f",
+    "v3/proposal.py": "8baadaaff76a643184c9b2c4174790607e1d8705c8a7603f4fe7d8752a687958",
+    "v3/protocol.md": "472f5cea10a6f63abc3d2158fabbedb8147cb4315330daadfbc96490202c4825",
+    "v3/reporting.md": "315f51fc5fb9944311b885877e9ef7853523943e0403e8aa16d3b7a83ca185c1",
+    "v3/worker.py": "59ff2beaa74777a4c01e06efa84e2b7f9dbf0b3cbfbe1638d7417380bb0dc8d3",
+    "worker.py": "625241c5e9d34388eab03590104f51bb3aa9cb00f3e866f583272535ec8cd828"
+  },
+  "snapshot_manifests": {
+    "development": "43db891725b1f1a58aeb4f9a606d62caa8e816e87db1db6eca9ca0ed2002e369"
+  },
+  "developer_message_sha256": {
+    "A": "5362aaea42d285496e58d0eb1a408f24542f381f9083c9bd4456d5a64c4a3a32",
+    "B": "169b0f247464d84203f3d831e8bb57e4ca8b4fff107c9f0074eb1a3bb51d743f",
+    "C": "c43bad2069d3eaaaf407debf069e8ac3e42b47d0b21c5c6d72ba9162779b61e8",
+    "D": "78dc96045f3aa37e2b07282b604fff7b48c83196bcb5031022cf206bc9c01c50"
+  },
+  "model": "gpt-6-luna",
+  "reasoning": "medium",
+  "service_tier": "default",
+  "output_per_turn": 25000,
+  "discovery_calls_per_episode": 6,
+  "max_escaped_bytes_per_record": 2048,
+  "tool_free_final_turn": true,
+  "http_timeout_seconds": {
+    "read": 900,
+    "connect": 10,
+    "write": 30,
+    "pool": 10
+  },
+  "sdk_retries": 0,
+  "request_ceiling": 11,
+  "tool_ceiling": 6,
+  "requests": [
+    {
+      "question": "D01",
+      "arm": "A",
+      "body_hash": "0b12ce27304daba0d5a8a56fe5e4f2479c8811219ade7868a6d89708dfc0b1ef",
+      "serialized_tokens": 1814,
+      "turn_input_bounds": [
+        7349
+      ]
+    },
+    {
+      "question": "D03",
+      "arm": "B",
+      "body_hash": "0734873ffcc6531260cda2d0d4a9acb3f72b2a6365d57e4f86b7c93f7dfd23c1",
+      "serialized_tokens": 2844,
+      "turn_input_bounds": [
+        12378
+      ]
+    },
+    {
+      "question": "D04",
+      "arm": "C",
+      "body_hash": "98d02b824504831297713eb56e4205a66a1d37a1d747cf0fe0e2ecf74abd552a",
+      "serialized_tokens": 6722,
+      "turn_input_bounds": [
+        27693
+      ]
+    },
+    {
+      "question": "D06",
+      "arm": "D",
+      "body_hash": "3fd22ff63fd85a02b82f8de275dd0a80ca53a0377dc34029f0bb8e66d5a5e0ec",
+      "serialized_tokens": 660,
+      "turn_input_bounds": [
+        3331,
+        5379,
+        7427,
+        9475,
+        11523,
+        13571,
+        14785
+      ]
+    },
+    {
+      "question": "D08",
+      "arm": "B",
+      "body_hash": "f0a4fabb9de2999093d662900c0328419a88a065222af081624f161dbade1a8b",
+      "serialized_tokens": 2838,
+      "turn_input_bounds": [
+        12366
+      ]
+    }
+  ],
+  "bodies_sha256": "a479525fa80ecf3ef824d35e2d2ec84001298917beb01464e08bd8279520c44c",
+  "bounds_by_arm": {
+    "A": {
+      "input": 7349,
+      "turns": 1
+    },
+    "B": {
+      "input": 24744,
+      "turns": 2
+    },
+    "C": {
+      "input": 27693,
+      "turns": 1
+    },
+    "D": {
+      "input": 65491,
+      "turns": 7
+    }
+  },
+  "cost_by_arm_usd": {
+    "A": "0.013418625",
+    "B": "0.028093",
+    "C": "0.015961625",
+    "D": "0.095686375"
+  },
+  "usd_per_million": {
+    "input": "0.10",
+    "cached": "0.01",
+    "30m_write": "0.125",
+    "output": "0.50"
+  },
+  "pricing_date": "2026-11-11",
+  "reserve_usd": "0.153159625",
+  "proposed_cap_usd": "0.17",
+  "proposal_digest": "1e89f432dd61667ada0743d42d301142313513bb126438231d49c788b3ac20f8"
+}

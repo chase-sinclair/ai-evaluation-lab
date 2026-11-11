@@ -1,4 +1,12 @@
-# Progress — November 10, 2026
+# Progress — November 11, 2026
+
+## Experiment 005 · v2 accepted, prospective v3 ready for owner review
+
+The permanent historical checkpoint is `c6fb697d359778260fb9f6dcfb5745b18ad0077d`. Its 188 receipt files and ledger matched the published seal. The read-only response diagnosis, common reporting-year convention, separately versioned DuckDB worker, development rehearsal and exact archives are complete. The v3 files are under `experiments/finops_sql/v3`, `experiments/finops_sql/proposals/v3` and `tests/test_finops_v3.py`. The two-snapshot numeric and ambiguity keys carry forward. The owner packet identifies all 17 clarification replies and the three operational/grammar failures. [Findings, differences and budgets](experiment05_prospective_v3.md) · [Verification](verification.md)
+
+All 32 scripted development episodes completed. Seven distinct SQL results matched the existing development keys, and the eighth task retained material ambiguity. These are software checks. All 360 local tests passed with both Docker images, and both Ruff checks passed. Hosted CI uses its portable subset. The prior CI-verified commit is the historical checkpoint above. To resolve the delivered v3 checkpoint after checkout, use `git log -1 --format=%H -- experiments/finops_sql/proposals/v3/evaluation/manifest.json`.
+
+**Next step is owner review of the separate five-episode development pilot**, reserve $0.153159625, proposed cap $0.17. Full evaluation reserves $5.008329 under a proposed $5.50 cap. Live execution integration, review of its exact revision, cohort-specific authorization, current API credit and applicable project limits are outstanding. At resumption, read the owner packet and protocol and check the frozen hashes. No inference is authorized by this checkpoint.
 
 ## Experiment 005 · interrupted live acquisition sealed
 

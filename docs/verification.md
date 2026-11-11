@@ -1,5 +1,15 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 005 · prospective v3 and development rehearsal
+
+Verified the seal file, all 188 listed files and the ledger SHA-256 against the accepted historical commit. Inspected original response bytes for all 17 answerable clarifications, both AST rejections and the incomplete response. The v2 results directory was read only. Both proposed v3 result paths were unused. The archive test rebuilds all 144 evaluation and five pilot initial bodies, and checks the versioned manifests, ordering, dynamic turn bounds, per-arm totals and exact reserves. Independently decompressed both archives and compared their canonical bytes; checked for private key/result markers. [Owner review packet](experiment05_prospective_v3.md)
+
+Built the v3 Docker image with `docker build --network=none --pull=false -f experiments/finops_sql/v3/Dockerfile -t meridian-worker:v3 experiments/finops_sql` using the existing checkpoint1 image. The initial attempt to install the pinned packages offline had no cached install layer. Inheriting and verifying the versions in the existing image avoided the download. Local v3 image identity `sha256:c50b100afbc0be5f15f60f82baca751b2d185c6512ccdccc50f2548f344ba9d7`. Both evaluation CSV manifests and economic streams reverified without querying the sealed responses. The development harness verifies its source files, saved key digest and database identity before/after execution.
+
+Ran `uv run --offline python -m experiments.finops_sql.v3.development .verification/finops-verified/development`. All eight development questions completed in all four scripted conditions. Seven SQL results matched; D08 preserved both clarification dimensions. The test suite also runs ten analytical formulations and adverse cases in the isolated development worker. SDK mock tests exercise the 25,000 output boundary, reasoning accounting, actual transport timeout settings, no retry after timeout and stop on incomplete. No provider completion, latency or model quality is inferred from these checks.
+
+Final local check with `FINOPS_VERIFIED_ROOT=.verification/finops-verified`: `uv run --offline pytest -q` passed **360 tests** in 142.18 s. Both `uv run --offline ruff check .` and `uv run --offline ruff format --check .` passed. Live dispatch integration, pilot evidence, account checks and separate owner decisions remain outstanding.
+
 ## Experiment 005 · interrupted live acquisition sealed
 
 The approved one-time run stopped on Q23C at the output limit. Verified all receipts, reconciled usage and graded all 21 completed episodes offline. No retry or resume. The full offline suite passed 329 tests and both Ruff checks passed. Next step is owner review. [Case-level audit and integrity evidence](finops_acquisition_audit.md)
