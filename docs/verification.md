@@ -1,5 +1,11 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 005 · context and offline acquisition readiness
+
+Rebuilt the pinned Linux worker and ran `uv run --offline python -m experiments.finops_sql.checkpoint .verification/finops-verified` on the original three snapshots. All controls and comparisons passed. Regenerated the reviewer packet against the independent Decimal implementation and verified all 64 reference outputs against their typed contracts. Checked sample records against development exports and exercised all 32 discovery witnesses under the session provenance and response-size limits.
+
+The SDK mock suite exercised all four conditions through both isolated databases, including a policy rejection, binder error and wrong financial result. The full offline suite with `FINOPS_VERIFIED_ROOT` configured passed 317 tests; Ruff lint and formatting passed. The proposal test reproduces ordered bodies, hashes, construction-source bindings and per-turn limits. Verified model visibility with a metadata-only request and checked published standard pricing on November 10, 2026. No paid inference or model-performance measurements. Review remains open for the exact manifest, clarification handling and prospective spend. [Readiness report](experiment05_checkpoint2.md) · [Reviewer packet](experiment05_oracle_review.md)
+
 ## Experiment 005 · offline warehouse and oracle checkpoint
 
 Generated three full-size DuckDB fixtures twice and compared the 22 table hashes and economic-stream hash for each. Ran the isolated Docker checkpoint on all three, including the 64 evaluation reference executions, six financial mutations and four alternative clarification pairs per evaluation snapshot. Both independently implemented oracles agreed at the declared grading precision. All 32 result sets differ across evaluation snapshots. Eight disallowed or over-limit operations were rejected per snapshot. Verified the 32 discovery paths from public responses and measured the reference envelopes with a local tokenizer proxy. The full offline suite passed 297 tests. Both Ruff checks passed. Numeric keys, CSVs and database files are local verification artifacts. The owner still needs to review the business assumptions and proposed budgets. [Checkpoint report and commands](experiment05_checkpoint1.md)

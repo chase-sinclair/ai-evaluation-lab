@@ -1,0 +1,1 @@
+Economic events produce versioned charge deliveries. A delivery identifier distinguishes physical exports of the same charge. Invoice control amounts originate before export duplication. Meter records retain original units. Purchase rows may have no resource, while the usage ledger may have multiple applications against one charge.

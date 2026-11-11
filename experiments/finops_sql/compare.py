@@ -36,4 +36,8 @@ def normalize(number, rows):
         return str(abs(rounded) if rounded == 0 else rounded)
 
     result = [tuple(value(i, v) for i, v in enumerate(row)) for row in rows]
-    return result if number in {2, 6} else sorted(result)
+    return (
+        result
+        if number in {2, 6}
+        else sorted(result, key=lambda row: tuple((v is not None, v) for v in row))
+    )

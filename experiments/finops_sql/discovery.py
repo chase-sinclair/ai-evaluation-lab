@@ -4,6 +4,8 @@ import json
 import re
 from pathlib import Path
 
+from .packages import catalog
+
 # Each glossary entry describes a reusable warehouse convention.
 POLICY = {
     "closing": (
@@ -154,19 +156,6 @@ def entries():
         }
     objects.update({"@" + p: {"definition": v} for p, (_, v) in POLICY.items()})
     return objects
-
-
-def catalog(query, objects):
-    if not query.strip():
-        return {k: v["grain"] for k, v in sorted(objects.items()) if "grain" in v}
-    words = set(re.findall(r"[a-z0-9]+", query.lower()))
-    ranked = []
-    for k, v in objects.items():
-        fields = k + " " + v.get("ddl", "")
-        score = len(words.intersection(re.findall(r"[a-z0-9]+", fields.lower())))
-        if score:
-            ranked.append((-score, k))
-    return [k for _, k in sorted(ranked)[:8]]
 
 
 def describe(ids, objects):

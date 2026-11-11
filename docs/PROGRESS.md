@@ -1,5 +1,9 @@
 # Progress — November 10, 2026
 
+## Experiment 005 · checkpoint 2 pending owner review
+
+The accepted checkpoint-1 revision was `df74a10321df6697f89849c915bdcae4b828d8f3`. The four context conditions, provenance-enforced discovery, typed two-snapshot grading, masked clarification checkpoint, reviewer packet and offline SDK workflow are implemented. The proposal freezes 144 initial bodies and the deterministic construction of up to 216 later D bodies. The proposed reserve is $0.842857750. Review the oracle packet, budget, tokenization limitation and exact digest before considering a live dispatcher or granting execution authority. [Checkpoint and artifact index](experiment05_checkpoint2.md) · [Verification](verification.md)
+
 ## Experiment 005 · checkpoint 1 ready for owner review
 
 Implemented the offline 22-table warehouse, 32 paired Python/SQL keys, four clarification witnesses and eight development tasks. The sealed source-manifest bindings reproduced across two builds. The bounded Docker worker handled every reference query. The discovery audit supports raising the tool budget and reserving more output for reasoning. The current decision is owner review of the evidence and proposed limits before context-package work. Prior verified design commit `7d4771cd98db01493adfedcc49bf9ca134d7040f`. [Checkpoint, budgets and reproduction](experiment05_checkpoint1.md) · [Verification](verification.md)

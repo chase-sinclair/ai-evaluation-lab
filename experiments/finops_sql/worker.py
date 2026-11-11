@@ -68,8 +68,10 @@ def execute(sql, pipe):
     import resource
 
     start = time.perf_counter()
+    valid = False
     try:
         sql = validate(sql)
+        valid = True
         db = duckdb.connect(
             "/warehouse.db",
             read_only=True,
@@ -87,12 +89,17 @@ def execute(sql, pipe):
         rows = cur.fetchmany(1001)
         if len(rows) > 1000:
             raise ValueError("row limit")
-        result = {"columns": [c[0] for c in cur.description], "rows": rows}
+        result = {
+            "columns": [c[0] for c in cur.description],
+            "rows": rows,
+            "types": [str(c[1]) for c in cur.description],
+        }
         if len(json.dumps(result, default=str).encode()) > 1048576:
             raise ValueError("byte limit")
         result["rss_mib"] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024
     except Exception as e:
         result = {"error": str(e)}
+    result["sql_valid"] = valid
     result["seconds"] = time.perf_counter() - start
     pipe.send(result)
 

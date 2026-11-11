@@ -1,0 +1,1 @@
+Single fiscal reporting currency USD. Date fields use UTC days. The warehouse contains a complete 2025 usage year. The closing feed includes subsequent postings. Staged billing memos describe releases or corrections in free text. Tag values preserve source spelling and whitespace. Resource lifecycle lives inside JSON and can be absent.

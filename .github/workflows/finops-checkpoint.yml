@@ -21,3 +21,9 @@ jobs:
       - run: docker build -t meridian-worker:checkpoint1 experiments/finops_sql
       - run: uv run --offline python -m experiments.finops_sql.generate .verification/finops
       - run: uv run --offline python -m experiments.finops_sql.checkpoint .verification/finops
+      - name: Provision tokenizer for the offline SDK transport
+        run: uv run --offline python -c "import tiktoken; tiktoken.get_encoding('cl100k_base')"
+      - name: Run four-condition SDK-to-database verification
+        env:
+          FINOPS_VERIFIED_ROOT: .verification/finops
+        run: uv run --offline pytest -q tests/test_finops_readiness.py
