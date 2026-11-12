@@ -1,5 +1,12 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 005 · development pilot sealed and independently audited
+
+The one-time development pilot from approved revision `b2e15eb3610455e15e634836b439b80bff193203` completed all five episodes, 11 requests and six discovery calls. All 56 covered files, the ledger, wire bodies and $0.003635530 usage estimate reconciled. Two SQL outputs matched financial references, one executed incorrectly, one expected SQL answer was a clarification and the required clarification omitted scope. Owner review is next. Full evaluation implementation and acquisition are outstanding. [Case-level results, hashes and readiness](finops_pilot_audit.md)
+
+
+Verification passed all 379 offline tests with FINOPS_VERIFIED_ROOT set, Ruff lint/format and whitespace checks. Only the audit and continuity documents changed.
+
 ## Experiment 005 · development pilot dispatcher, revision 1
 
 From accepted checkpoint `5caa79e50fe2d07787bfbd043ad31eaf25c9f904`, added the pilot-only dispatcher, accounting and protocol extension, separately bound manifest and transport tests. Both original v3 archives remain intact. Rehashed all 188 sealed v2 entries against the original seal SHA-256. No historical candidate was executed. Verified identical five initial request bodies and regenerated dynamic bounds. Next step is owner review of the exact revision, account limits and credit before any paid execution. [Identity, command, mocked evidence and remaining risks](finops_pilot_dispatch.md)
