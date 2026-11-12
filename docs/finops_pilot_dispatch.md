@@ -1,0 +1,15 @@
+# Meridian development pilot dispatcher, revision 1
+
+Implementation approval covers offline work. Live execution requires a separate owner decision naming the digest, exact reviewed revision, $0.153159625 reserve, $0.17 spending ceiling, current rates, sufficient API credit and applicable project limits. Use the literal reviewed SHA printed in the delivery report. The run directory must be unused. The sole live destination is `results/meridian-v3-development-r1-once`.
+
+```text
+uv run --offline python -m scripts.acquire_finops_pilot --approval 2f3c71d44627c0bb2542be5b1c0f8b68d4329c8cd42903ec12b9a7d3b5bcd492 --reviewed-revision REVIEWED_SHA --available-usd 0.17 --confirm-current-standard-rates 0.10/0.01/0.125/0.50 --confirm-credit-and-project-limits
+```
+
+The updated manifest SHA-256 is `5f143b5107b513f103819f7952cab949743e6a77d9a598709c8d7c09a56a09f3`. The parent pilot digest is `1e89f432dd61667ada0743d42d301142313513bb126438231d49c788b3ac20f8`. The original v3 proposal constructor, archives and protocols remain reproducible. The pilot extension rebuilds the accepted parent before binding revised accounting and review instructions. Both archives contain identical request bodies. The five episodes allow 125,277 input tokens at $0.125/million and 275,000 output at $0.50/million. No evaluation dispatcher is included.
+
+The official Response object permits optional maximum output, reasoning configuration and applied cache settings. All 47 original v2 raw responses actually carried these fields, usage and service tier. The legacy echo pattern describes this acquisition only. Require an exact checked wire body, and compare any non-null configuration echo to the approved setting. Require model and standard service tier in the response, complete nonnegative integer usage including cache reads/writes and reasoning, reconciled totals and bounded inputs/outputs. Reasoning is charged inside output. Any returned cache-write lifetime partition must reconcile to the 30-minute policy. Missing accounting or a contradiction stops and seals the run. [Official response object](https://developers.openai.com/api/reference/resources/responses/methods/retrieve)
+
+The mock path uses independent expected wire bodies, a maximum-depth D06 episode, four scripted SQL answers and the D08 clarification. A second run terminates D after one discovery. HTTP errors, duplicate IDs, output exhaustion, inconsistent accounting, excess allowances, conflicting output/effort/lifetime, insufficient budget and reuse are covered. Accountable incomplete usage contributes to spend; attempts with unknown billing are counted separately. The seal hashes exact outgoing wire bytes, response bytes, parsed events and plan. Exclusive writes prevent reuse through the dispatcher. Local hashes are tamper-evident against a trusted seal; a host crash can leave a partial directory. Keep it for audit.
+
+Judge operational completion separately from SQL admission, execution, clock interpretation, discovery and financial correctness. Return substantive model failures to the owner. [Revised pilot criteria](../experiments/finops_sql/pilot_v3_1/protocol.md)

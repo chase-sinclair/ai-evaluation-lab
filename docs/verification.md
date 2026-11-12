@@ -1,5 +1,12 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 005 · development pilot dispatcher, revision 1
+
+From accepted checkpoint `5caa79e50fe2d07787bfbd043ad31eaf25c9f904`, added the pilot-only dispatcher, accounting and protocol extension, separately bound manifest and transport tests. Both original v3 archives remain intact. Rehashed all 188 sealed v2 entries against the original seal SHA-256. No historical candidate was executed. Verified identical five initial request bodies and regenerated dynamic bounds. Next step is owner review of the exact revision, account limits and credit before any paid execution. [Identity, command, mocked evidence and remaining risks](finops_pilot_dispatch.md)
+
+
+Local verification passed all 379 tests with FINOPS_VERIFIED_ROOT set (114.63 s), including 19 pilot dispatcher tests. Ruff lint and format and staged whitespace checks passed. Full- and early-depth mocked acquisitions completed 5/5 episodes in 11 and 6 requests respectively. No provider inference or model-quality measurement occurred.
+
 ## Experiment 005 · prospective v3 and development rehearsal
 
 Verified the seal file, all 188 listed files and the ledger SHA-256 against the accepted historical commit. Inspected original response bytes for all 17 answerable clarifications, both AST rejections and the incomplete response. The v2 results directory was read only. Both proposed v3 result paths were unused. The archive test rebuilds all 144 evaluation and five pilot initial bodies, and checks the versioned manifests, ordering, dynamic turn bounds, per-arm totals and exact reserves. Independently decompressed both archives and compared their canonical bytes; checked for private key/result markers. [Owner review packet](experiment05_prospective_v3.md)

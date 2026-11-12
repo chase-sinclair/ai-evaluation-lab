@@ -1,5 +1,12 @@
 # Progress — November 11, 2026
 
+## Experiment 005 · development pilot dispatcher, revision 1
+
+From accepted checkpoint `5caa79e50fe2d07787bfbd043ad31eaf25c9f904`, added the pilot-only dispatcher, accounting and protocol extension, separately bound manifest and transport tests. Both original v3 archives remain intact. Rehashed all 188 sealed v2 entries against the original seal SHA-256. No historical candidate was executed. Verified identical five initial request bodies and regenerated dynamic bounds. Next step is owner review of the exact revision, account limits and credit before any paid execution. [Identity, command, mocked evidence and remaining risks](finops_pilot_dispatch.md)
+
+
+Local verification passed all 379 tests with FINOPS_VERIFIED_ROOT set (114.63 s), including 19 pilot dispatcher tests. Ruff lint and format and staged whitespace checks passed. Full- and early-depth mocked acquisitions completed 5/5 episodes in 11 and 6 requests respectively. No provider inference or model-quality measurement occurred.
+
 ## Experiment 005 · v2 accepted, prospective v3 ready for owner review
 
 The permanent historical checkpoint is `c6fb697d359778260fb9f6dcfb5745b18ad0077d`. Its 188 receipt files and ledger matched the published seal. The read-only response diagnosis, common reporting-year convention, separately versioned DuckDB worker, development rehearsal and exact archives are complete. The v3 files are under `experiments/finops_sql/v3`, `experiments/finops_sql/proposals/v3` and `tests/test_finops_v3.py`. The two-snapshot numeric and ambiguity keys carry forward. The owner packet identifies all 17 clarification replies and the three operational/grammar failures. [Findings, differences and budgets](experiment05_prospective_v3.md) · [Verification](verification.md)
