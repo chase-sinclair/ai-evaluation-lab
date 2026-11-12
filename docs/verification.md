@@ -1,5 +1,10 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 005 · scored offline, pending architecture review
+
+At sealed checkpoint ff9d0036192a4630c450c8ab451f985efe315120, validated both worksheets, the complete ledger, snapshots and grader image. Ran the frozen evaluation_r1.analysis command with the completed review and both evaluation snapshots. The 144 case grades and per-arm metrics are in the ignored .verification/evaluation-report.json. Its SHA-256 is d6986bcf9d2f5b509e4f36af1c29d9c745ed3e5c7348117f238a61d6168399f4. All 399 fixture-enabled offline tests and Ruff lint/format passed. Only analytical documentation changed. Next step is owner architectural review before any publication. [Comparative report and case ledger](experiment05_scored_results.md)
+
+
 ## Experiment 005 · full evaluation sealed, blinded review pending
 
 Executed once at approved clean revision `46c15339f9dcbe767ae7e3dba6cd986ee2099205` with owner-confirmed credit and project settings. All 144 planned episodes produced terminal decisions. There were 350 model requests, 206 local discovery calls, zero retries, output exhaustions, interruptions, unsent episodes or unaccounted attempts. Usage-estimated cost was $0.103640710 under the $5.50 ceiling.
