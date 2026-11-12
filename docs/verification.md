@@ -1,4 +1,13 @@
 # Phase 0 / Phase 1 verification
+## Experiment 005 · publication preparation, November 12
+
+Prepared the [case study](portfolio/finops-sql.md), [integration handoff and figures](portfolio/finops-sql-handoff.md) and [five-study summary](portfolio/lab-summary.md) from the scored checkpoint `3bc4558556980df4e589d10413dbbabfcaea21cf`. The analytical documentation corrects the attribution of the wording review and clarifies that both snapshots used the same submitted SQL.
+
+- Matched the approved SHA-256 values for the report, original worksheet, reviewed copy and acquisition seal. Recomputed the hashes of all 1,751 sealed members. Compared all 144 ledger cells with the machine report, all four comparison-table rows with the arm metrics, and the paired changes and discovery distribution with the case evidence. Inspected the Q01 terminal submissions for the two date filters.
+- Regenerated all six SVGs from the digest-bound report and verified byte-identical output. Checked internal targets in the article, handoff, Lab summary, analytical report and README. Rendered the Markdown in local Edge at 320, 375 and 1024 pixels. Verified responsive image selection, descriptive alt text, article fit, table presence and figure text bounds, and visually inspected the compact figures.
+- Ran `uv run --offline pytest -q` with the verified warehouse fixture root (399 passed) and without it (392 passed, seven fixture-dependent skips). Ruff lint, format and staged diff whitespace checks passed. The package changes documentation and figure source/assets only. Raw evidence stays local. No inference or website integration was performed.
+
+The owner will decide publication acceptance and Lab closure. The synthetic workload, shared accounting assumptions and one model draw per case limit deployment claims.
 
 ## Experiment 005 · scored offline, pending architecture review
 

@@ -18,6 +18,8 @@ V2 tested 18 harder shared scenarios in two mirrored orders. All passed at each 
 
 **[When Should an Enterprise AI Agent Recover Automatically—and When Should It Stop?](docs/portfolio/recovery.md)** compares three responses to 24 simulated failures. Stop-and-report scored 9/24. Deterministic rules and the AI agent each scored 24/24. Model inference cost an estimated $0.0029715 across the follow-up, with a median API latency of 1.980 seconds per request.
 
+**[How Much Business Context Does an AI SQL Assistant Need?](docs/portfolio/finops-sql.md)** follows a March invoice question through four context designs. Curated and expanded context each scored 18/36, with four questions passing only under each design. Bounded discovery scored 5/36. [Five Lab deployment decisions](docs/portfolio/lab-summary.md)
+
 ## Quick start
 
 Install Python 3.12+ and [uv](https://docs.astral.sh/uv/), then run from this checkout:

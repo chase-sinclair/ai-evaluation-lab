@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="311" viewBox="0 0 720 311" role="img" aria-labelledby="title desc">
+<title id="title">Correct business decisions</title>
+<desc id="desc">A · Schema: 1 of 36. B · Curated: 18 of 36. C · Expanded: 18 of 36. D · Discovery: 5 of 36. 32 financial tasks · 4 required clarifications</desc>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#17394b">
+<text x="24" y="31" font-size="21" font-weight="700">Correct business decisions</text>
+<text x="24" y="55" font-size="15" font-weight="400">Same 36 questions per condition</text>
+<text x="24" y="86" font-size="17" font-weight="700">A · Schema   1/36</text>
+<rect x="24" y="93" width="672" height="10" fill="#e4ecee"/>
+<rect x="24" y="93" width="18.67" height="10" fill="#176c70"/>
+<text x="24" y="135" font-size="17" font-weight="700">B · Curated   18/36</text>
+<rect x="24" y="142" width="672" height="10" fill="#e4ecee"/>
+<rect x="24" y="142" width="336.00" height="10" fill="#176c70"/>
+<text x="24" y="184" font-size="17" font-weight="700">C · Expanded   18/36</text>
+<rect x="24" y="191" width="672" height="10" fill="#e4ecee"/>
+<rect x="24" y="191" width="336.00" height="10" fill="#176c70"/>
+<text x="24" y="233" font-size="17" font-weight="700">D · Discovery   5/36</text>
+<rect x="24" y="240" width="672" height="10" fill="#e4ecee"/>
+<rect x="24" y="240" width="93.33" height="10" fill="#176c70"/>
+<text x="24" y="296" font-size="14" font-weight="400">32 financial tasks · 4 required clarifications</text>
+</g></svg>

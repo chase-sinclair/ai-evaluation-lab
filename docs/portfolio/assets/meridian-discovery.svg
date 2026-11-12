@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="311" viewBox="0 0 720 311" role="img" aria-labelledby="title desc">
+<title id="title">How far discovery went</title>
+<desc id="desc">1 of 6 calls used: 1 of 36. 2 of 6 calls used: 1 of 36. 5 of 6 calls used: 1 of 36. 6 of 6 calls used: 33 of 36. 242 model requests · $0.04544 estimated</desc>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#17394b">
+<text x="24" y="31" font-size="21" font-weight="700">How far discovery went</text>
+<text x="24" y="55" font-size="15" font-weight="400">206 local metadata calls across 36 episodes</text>
+<text x="24" y="86" font-size="17" font-weight="700">1 of 6 calls used   1/36</text>
+<rect x="24" y="93" width="672" height="10" fill="#e4ecee"/>
+<rect x="24" y="93" width="18.67" height="10" fill="#176c70"/>
+<text x="24" y="135" font-size="17" font-weight="700">2 of 6 calls used   1/36</text>
+<rect x="24" y="142" width="672" height="10" fill="#e4ecee"/>
+<rect x="24" y="142" width="18.67" height="10" fill="#176c70"/>
+<text x="24" y="184" font-size="17" font-weight="700">5 of 6 calls used   1/36</text>
+<rect x="24" y="191" width="672" height="10" fill="#e4ecee"/>
+<rect x="24" y="191" width="18.67" height="10" fill="#176c70"/>
+<text x="24" y="233" font-size="17" font-weight="700">6 of 6 calls used   33/36</text>
+<rect x="24" y="240" width="672" height="10" fill="#e4ecee"/>
+<rect x="24" y="240" width="616.00" height="10" fill="#176c70"/>
+<text x="24" y="296" font-size="14" font-weight="400">242 model requests · $0.04544 estimated</text>
+</g></svg>

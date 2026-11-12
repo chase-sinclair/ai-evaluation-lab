@@ -1,4 +1,10 @@
-# Progress — November 11, 2026
+# Progress — November 12, 2026
+
+## Experiment 005 · publication package ready for owner review
+
+The owner accepted the sealed scores and completed architectural review at scored checkpoint `3bc4558556980df4e589d10413dbbabfcaea21cf`. The [case study](portfolio/finops-sql.md), [responsive figures and integration handoff](portfolio/finops-sql-handoff.md), README entry and [five-study decision summary](portfolio/lab-summary.md) prepare the Lab for closure review. The analytical report now identifies the wording review as arm-masked and AI-assisted. The publication uses the existing case ledger and verified machine report. See [verification](verification.md) for the integrity and layout checks.
+
+Next step is final owner acceptance of the publication package and a separate decision on Lab closure and website integration. Historical records below retain their status at the time of each checkpoint.
 
 ## Experiment 005 · scored offline, pending architecture review
 

@@ -52,7 +52,7 @@ On Q34, B and C supplied SQL despite unspecified scope. D explicitly asked wheth
 
 ## Clarification adjudication
 
-Eleven distinct question/wording entries received five adequate and six inadequate independent judgments. They map to twelve clarification episodes on required-clarification questions: five had adequate wording and seven inadequate wording. Four earned credit: Q33B, Q33C, Q33D and Q34D. Q33A also had adequate wording, but declared scope in addition to the required period and cost basis. On Q35, A/B/C named the expected savings-basis dimension but all three wordings were judged inadequate. Neither wording nor dimension labels alone establish credit.
+Eleven distinct question/wording entries received five adequate and six inadequate judgments in arm-masked, AI-assisted adjudication accepted by the owner. They map to twelve clarification episodes on required-clarification questions: five had adequate wording and seven inadequate wording. Four earned credit: Q33B, Q33C, Q33D and Q34D. Q33A also had adequate wording, but declared scope in addition to the required period and cost basis. On Q35, A/B/C named the expected savings-basis dimension but all three wordings were judged inadequate. Neither wording nor dimension labels alone establish credit.
 
 ## Usage and observed latency
 
@@ -67,7 +67,7 @@ Cache reads and writes partition input; reasoning is included in output. C used 
 
 ## Case-level scoring ledger
 
-Each cell identifies the disposition and whether it satisfied the entire contract. SQL is graded on both independent evaluation snapshots.
+Each cell identifies the disposition and whether it satisfied the entire contract. SQL is graded on both evaluation snapshots using the same submitted query.
 
 | Question | A | B | C | D |
 |---|---|---|---|---|
@@ -123,4 +123,4 @@ All 144 planned outcomes were terminal and reconciled to 350 unique requests and
 | Verified evaluation B database | 4e8252dbd761fd4fccd303f17ce231486806f6890c9086ac24d7cadf25a0820d |
 | Machine report | d6986bcf9d2f5b509e4f36af1c29d9c745ed3e5c7348117f238a61d6168399f4 |
 
-The frozen command checked source manifests, warehouse CSVs, economic streams, per-question financial key bindings and database identity around isolated execution. This synthetic warehouse tests output agreement on two snapshots, not general SQL equivalence. Only four questions required clarification. Each question/condition was sampled once; neither repeated-run variability nor a causal effect of context size alone can be estimated. V3 reused questions after inspecting the v2 prefix. Historical and pilot observations are excluded. Costs are usage estimates and latency is observed API time. Architecture selection and publication remain pending owner review.
+The frozen command checked source manifests, warehouse CSVs, economic streams, per-question financial key bindings and database identity around isolated execution. This synthetic warehouse tests output agreement on two snapshots, not general SQL equivalence. Only four questions required clarification. Each question/condition was sampled once; neither repeated-run variability nor a causal effect of context size alone can be estimated. V3 reused questions after inspecting the v2 prefix. Historical and pilot observations are excluded. Costs are usage estimates and latency is observed API time. Editorial update after architecture review: the wording above identifies the adjudication method and clarifies snapshot reuse. The grades and original worksheets are unchanged. The [publication package](portfolio/finops-sql.md) awaits final owner review.
