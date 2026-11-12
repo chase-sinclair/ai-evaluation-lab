@@ -1,5 +1,12 @@
 # Progress — November 11, 2026
 
+## Experiment 005 · full evaluation dispatcher awaiting owner review
+
+Based on accepted pilot audit `a145d01d326a2d9242a3e1b7071fb9ac07fedede`, added the separate evaluation-r1 proposal, dispatcher, fail-stop and exhaustion tests, and sealed two-snapshot analysis with masked clarification review. Raw evidence and original manifests remain untouched. Maximum-depth, early-terminal and exhaustion mocks cover all 144 episodes. The evaluation reserve remains $5.008329. Next step is separate owner review of the exact commit, digest and $5.50 cap before any inference. [Review packet, identities, mocked evidence and commands](finops_evaluation_dispatch.md)
+
+
+The final fixture-enabled local suite passed 399 tests in 178.44 s. Ruff lint and format, staged whitespace, archive identity, historical seals and extension scope passed. No live result directory exists.
+
 ## Experiment 005 · development pilot sealed and independently audited
 
 The one-time development pilot from approved revision `b2e15eb3610455e15e634836b439b80bff193203` completed all five episodes, 11 requests and six discovery calls. All 56 covered files, the ledger, wire bodies and $0.003635530 usage estimate reconciled. Two SQL outputs matched financial references, one executed incorrectly, one expected SQL answer was a clarification and the required clarification omitted scope. Owner review is next. Full evaluation implementation and acquisition are outstanding. [Case-level results, hashes and readiness](finops_pilot_audit.md)

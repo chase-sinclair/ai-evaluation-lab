@@ -4,6 +4,7 @@ on:
     paths:
       - 'experiments/finops_sql/**'
       - 'tests/test_finops_v3.py'
+      - 'tests/test_acquire_finops_evaluation.py'
       - '.github/workflows/finops-checkpoint.yml'
       - 'uv.lock'
 permissions:
@@ -29,4 +30,4 @@ jobs:
       - name: Run four-condition SDK-to-database verification
         env:
           FINOPS_VERIFIED_ROOT: .verification/finops
-        run: uv run --offline pytest -q tests/test_finops_readiness.py tests/test_finops_v3.py
+        run: uv run --offline pytest -q tests/test_finops_readiness.py tests/test_finops_v3.py tests/test_acquire_finops_evaluation.py

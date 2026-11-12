@@ -1,0 +1,1622 @@
+{
+  "version": "meridian-v3-evaluation-r1-once",
+  "result_directory": "results/meridian-v3-evaluation-r1-once",
+  "historical_proposal": "82539bc63c44e9bced2111989c9fcd59f7b867941d70b3e3d943479778e31733",
+  "source_sha256": {
+    "Dockerfile": "eebc260751047cecc9fb3b5336b860f0bd03374b0c2c97c9166b49f220bf21e3",
+    "audit.py": "82c573a4ac3288905d3eecec3f1660fcd6423220eb6c4ea40f73f6e6248c08c6",
+    "checkpoint.py": "3351099799c8c46184a0bf1aa8698c6f8f07d0095b5e879b5a523d561c97bc69",
+    "compare.py": "fae843db9d94a4a4085f8d4f4f8ccf9d092d6107872ea149d0fcb86fd0f810b8",
+    "controls.py": "3a8d740ddb56ca54321da8a5ed281825f82440367795a6a331cd6801f4f1ec2c",
+    "discovery.py": "f13bf3ded9c114789fe4deb97cafede918130716eacee3f0c65c33db657bed22",
+    "episode.py": "37a27b622ba6d2949c274567304d5558f9b29f0c351db5019fbc1ef68287de93",
+    "generate.py": "06e17c619a35f22c57b9d35310863444a0b693e2b032e1d246f23b142d83038c",
+    "grading.py": "8ca7e27a77f8e7997ac7b2711d1aa220219a2cb48784a17b2913d702b6c868a2",
+    "oracle-bindings-v2.json": "590a59da4c054a8136a7538b1f5d19c810a1e036592b7ce2717ff50148b79dc0",
+    "oracle.py": "674c99e89be4531a76422a417e75aa147560cd36d15ddc8f4684fc127b67c4b5",
+    "packages.py": "212aba86d348ccc8306572b67136f5ec7352b7c724b27541a27d00643e0abbdb",
+    "proposal.py": "6758b09a719c3f327b394c9a56878cde377a822b22f6e05ef80f1d30dd237a4c",
+    "public/v1/dictionary.curated.json": "a83177353ed45034f96c909af98a003f174961559d5a78a6d3100c7d4c862c93",
+    "public/v1/dictionary.full.json": "b56ff217fc9977bc5da139e424cca6d6bb22fc81c4b563d2ed282ef8c3fd9e38",
+    "public/v1/joins.md": "417e7f0da796b770d87d5d5326ac251ac442899c1c06d27092208e17f945edf1",
+    "public/v1/lineage.md": "8e81bce287c09e9b3b54eb24e6b5d22c05af3269a5262b98a16427947a54ef62",
+    "public/v1/metrics.md": "c062e80755a09a2c70f25846f6e8c854cce5f7d4fbcae6a6ada0dd17e10b85f5",
+    "public/v1/operations.md": "411335c8e272e3a4afd4cab89f3c34d2f720b37c71a41f3da6a94a9e9d02f762",
+    "public/v1/policy.md": "ada30238e7ec63fe7432cc8a568caae92d0811bd3333019b3a539b3ccff7e709",
+    "public/v1/registry.json": "d1a97fbe04f93a36dd7a7ad7b10aba6f79a17db1b2003992a2055f80a279f616",
+    "public/v2/questions.json": "9d944aa4339d889dc42b9983c22c028c0f4a6f0cc5502d46cb6cd6de79d040ae",
+    "references.py": "9b1915314f9e32e886f5f466639902e3c6f8ffed00056fe87a4f77554fa6e350",
+    "review.py": "f4351e774a1ee1ab7610a7f1194e52a60fee2564938d4049da2c6b7ac83a54fa",
+    "schema.sql": "f83aaa505b387a3e2f3252e3c0c56ec79647f5bc830a8a898db50461560fd092",
+    "v3/Dockerfile": "0958a64131b1267fb972c0df0664be58d5299ac682e3f7df740f2e615b454f80",
+    "v3/accounting.py": "e3c52735333941029bde988a9dcb28888db1006df432098c5cca72a0e322a209",
+    "v3/development.py": "d1de1156afc2c6001cd431017c08df574e2622a850a120524e56131d685b9497",
+    "v3/grading.py": "d324163ab33571e2f6de1d16e68167a3873be0e3881a86427ca73dd03b50485f",
+    "v3/proposal.py": "8baadaaff76a643184c9b2c4174790607e1d8705c8a7603f4fe7d8752a687958",
+    "v3/protocol.md": "472f5cea10a6f63abc3d2158fabbedb8147cb4315330daadfbc96490202c4825",
+    "v3/reporting.md": "315f51fc5fb9944311b885877e9ef7853523943e0403e8aa16d3b7a83ca185c1",
+    "v3/worker.py": "59ff2beaa74777a4c01e06efa84e2b7f9dbf0b3cbfbe1638d7417380bb0dc8d3",
+    "worker.py": "625241c5e9d34388eab03590104f51bb3aa9cb00f3e866f583272535ec8cd828",
+    "evaluation_r1/proposal.py": "39a18af41b75c7b1dc444b79175cbf8d774adce017f966b41a509eda5a08fdba",
+    "pilot_v3_1/accounting.py": "c1d781501b4b8d770a5cb4f1370096fd488399ce9d48f5f89b8f8e2d33bc6429",
+    "evaluation_r1/protocol.md": "85585329b278b1d1c63f3ff8b1acddbfad85785f9b5e676a6a3edeaa25a6f7dc",
+    "evaluation_r1/analysis.py": "c189c9638b09994a5d61a91b1582e082a64b3f953e335ae2e7d2c382e415dbcb"
+  },
+  "snapshot_manifests": {
+    "development": "43db891725b1f1a58aeb4f9a606d62caa8e816e87db1db6eca9ca0ed2002e369",
+    "evaluation_a": "3e484882533f9bb72a0b0d4ef829fbe8a51e197f6b233342b7f02e641dfb4d1c",
+    "evaluation_b": "585f34eb81530cbf55dd77f2cd9830c2a477988c57799201c371073d0175f835"
+  },
+  "developer_message_sha256": {
+    "A": "5362aaea42d285496e58d0eb1a408f24542f381f9083c9bd4456d5a64c4a3a32",
+    "B": "169b0f247464d84203f3d831e8bb57e4ca8b4fff107c9f0074eb1a3bb51d743f",
+    "C": "c43bad2069d3eaaaf407debf069e8ac3e42b47d0b21c5c6d72ba9162779b61e8",
+    "D": "78dc96045f3aa37e2b07282b604fff7b48c83196bcb5031022cf206bc9c01c50"
+  },
+  "model": "gpt-6-luna",
+  "reasoning": "medium",
+  "service_tier": "default",
+  "output_per_turn": 25000,
+  "discovery_calls_per_episode": 6,
+  "max_escaped_bytes_per_record": 2048,
+  "tool_free_final_turn": true,
+  "http_timeout_seconds": {
+    "read": 900,
+    "connect": 10,
+    "write": 30,
+    "pool": 10
+  },
+  "sdk_retries": 0,
+  "request_ceiling": 360,
+  "tool_ceiling": 216,
+  "requests": [
+    {
+      "question": "Q30",
+      "arm": "A",
+      "body_hash": "9823bcd8043780442608157593a41adb0985d9a6f0317ff32f7a6171dd0956e2",
+      "serialized_tokens": 1820,
+      "turn_input_bounds": [
+        7386
+      ]
+    },
+    {
+      "question": "Q30",
+      "arm": "B",
+      "body_hash": "2e15538dd8ac0a77a9b6d97a3b56bfae7cca3334ecc55b795eeb559115208e0d",
+      "serialized_tokens": 2845,
+      "turn_input_bounds": [
+        12408
+      ]
+    },
+    {
+      "question": "Q30",
+      "arm": "C",
+      "body_hash": "95ae00cf2f1fd29761ef8d428974d0394a3934f88b1318a3819b81df95b7f574",
+      "serialized_tokens": 6721,
+      "turn_input_bounds": [
+        27688
+      ]
+    },
+    {
+      "question": "Q30",
+      "arm": "D",
+      "body_hash": "93178976cd4b691ff93a140ce2eb18f335aca6c6f46c485e870c9ca67d0914ae",
+      "serialized_tokens": 659,
+      "turn_input_bounds": [
+        3338,
+        5386,
+        7434,
+        9482,
+        11530,
+        13578,
+        14792
+      ]
+    },
+    {
+      "question": "Q01",
+      "arm": "B",
+      "body_hash": "e1a3c19b959e8577c4352499c169d10ebe155256c015fe9f6635014dcb55d3b5",
+      "serialized_tokens": 2838,
+      "turn_input_bounds": [
+        12362
+      ]
+    },
+    {
+      "question": "Q01",
+      "arm": "C",
+      "body_hash": "00e69c1a1f844b95cb3e3aa0cb44a787d7c2249681004ec5fc8e1b722072d0ca",
+      "serialized_tokens": 6714,
+      "turn_input_bounds": [
+        27642
+      ]
+    },
+    {
+      "question": "Q01",
+      "arm": "D",
+      "body_hash": "e2ec7e8ef55ab545772ec90ccdda7adccd88fa34fec8823261effbc681933e91",
+      "serialized_tokens": 652,
+      "turn_input_bounds": [
+        3292,
+        5340,
+        7388,
+        9436,
+        11484,
+        13532,
+        14746
+      ]
+    },
+    {
+      "question": "Q01",
+      "arm": "A",
+      "body_hash": "f2b940be1a08107de6f0ba16c24fd9947d4de97d871d49617acd0e8e5432eddb",
+      "serialized_tokens": 1813,
+      "turn_input_bounds": [
+        7340
+      ]
+    },
+    {
+      "question": "Q22",
+      "arm": "C",
+      "body_hash": "4d9bc6ae46e03e5b02ec2256c5c1e9e316e83b54577e552b3daad11810b7d3d5",
+      "serialized_tokens": 6718,
+      "turn_input_bounds": [
+        27671
+      ]
+    },
+    {
+      "question": "Q22",
+      "arm": "D",
+      "body_hash": "f78b41659b69607b89b4a4be42811edbf8aef9e068c804ff21ba906161bdab81",
+      "serialized_tokens": 656,
+      "turn_input_bounds": [
+        3321,
+        5369,
+        7417,
+        9465,
+        11513,
+        13561,
+        14775
+      ]
+    },
+    {
+      "question": "Q22",
+      "arm": "A",
+      "body_hash": "3c5a18f999b3744475a47a29ad8cd2da618b76dff52e16a368b3b3d40ef324dd",
+      "serialized_tokens": 1817,
+      "turn_input_bounds": [
+        7369
+      ]
+    },
+    {
+      "question": "Q22",
+      "arm": "B",
+      "body_hash": "ef33994a14ab00fd95eb3da1116783ccd9c37083be3a94e8473d9006891f111f",
+      "serialized_tokens": 2842,
+      "turn_input_bounds": [
+        12391
+      ]
+    },
+    {
+      "question": "Q07",
+      "arm": "D",
+      "body_hash": "71ca72162851f50c7106587c3fdbe8f9b6423eda6cfc5e5795647927837a37ab",
+      "serialized_tokens": 666,
+      "turn_input_bounds": [
+        3366,
+        5414,
+        7462,
+        9510,
+        11558,
+        13606,
+        14820
+      ]
+    },
+    {
+      "question": "Q07",
+      "arm": "A",
+      "body_hash": "588159d64a7e974c7e42c088648333fbb4aef2830a50bf37cea6b05ac588f792",
+      "serialized_tokens": 1827,
+      "turn_input_bounds": [
+        7414
+      ]
+    },
+    {
+      "question": "Q07",
+      "arm": "B",
+      "body_hash": "468644a7b1fc0cd57a5ac8f31fc16f7888e1326e7b9fa838d47bed296d9180cb",
+      "serialized_tokens": 2852,
+      "turn_input_bounds": [
+        12436
+      ]
+    },
+    {
+      "question": "Q07",
+      "arm": "C",
+      "body_hash": "359179d64f8c6d5d7ce05ab73c527b8cf202bd2d5c9e9c93f2acf7a556dbf436",
+      "serialized_tokens": 6728,
+      "turn_input_bounds": [
+        27716
+      ]
+    },
+    {
+      "question": "Q10",
+      "arm": "A",
+      "body_hash": "35adf5d6f77914c4ec8658605fad03925c5a3d75b22e023b7c2f3b0d969d7f39",
+      "serialized_tokens": 1822,
+      "turn_input_bounds": [
+        7386
+      ]
+    },
+    {
+      "question": "Q10",
+      "arm": "B",
+      "body_hash": "c64b5aacd6687356d6ed7be0afb4c5455ce8d0ae65ade47dcf27ceaf09676512",
+      "serialized_tokens": 2847,
+      "turn_input_bounds": [
+        12408
+      ]
+    },
+    {
+      "question": "Q10",
+      "arm": "C",
+      "body_hash": "a42ccac50a9cba7032b5a62a9274d5be11088ce18a420f8fc07aade83376cd85",
+      "serialized_tokens": 6723,
+      "turn_input_bounds": [
+        27688
+      ]
+    },
+    {
+      "question": "Q10",
+      "arm": "D",
+      "body_hash": "8f666f9e25023c3e6ba96a7bfd5af9247cd6c3d5f8d48efdfb090d88c4908545",
+      "serialized_tokens": 661,
+      "turn_input_bounds": [
+        3338,
+        5386,
+        7434,
+        9482,
+        11530,
+        13578,
+        14792
+      ]
+    },
+    {
+      "question": "Q23",
+      "arm": "B",
+      "body_hash": "67d565f5a57c587fcb681e7b92136333f0d8ed581574bb9f13d2942e29935155",
+      "serialized_tokens": 2852,
+      "turn_input_bounds": [
+        12425
+      ]
+    },
+    {
+      "question": "Q23",
+      "arm": "C",
+      "body_hash": "b952171e870764f94cf8e5ffb9f94b9c69f3a0af14a0336670e86a6c981f3bbe",
+      "serialized_tokens": 6728,
+      "turn_input_bounds": [
+        27705
+      ]
+    },
+    {
+      "question": "Q23",
+      "arm": "D",
+      "body_hash": "59dcf584cfed77e7ba17cf1ffe64cfa62bc1dd3fabfc17283399bc2b19cddb8b",
+      "serialized_tokens": 666,
+      "turn_input_bounds": [
+        3355,
+        5403,
+        7451,
+        9499,
+        11547,
+        13595,
+        14809
+      ]
+    },
+    {
+      "question": "Q23",
+      "arm": "A",
+      "body_hash": "eb614555049d0738d02ac3ae5cdf520366031f4f67878e60bbfb5136986998e0",
+      "serialized_tokens": 1827,
+      "turn_input_bounds": [
+        7403
+      ]
+    },
+    {
+      "question": "Q35",
+      "arm": "C",
+      "body_hash": "3190def5d8d1227392c66878d29ce4f4461632b1c188263b8bd251ba30e2902d",
+      "serialized_tokens": 6714,
+      "turn_input_bounds": [
+        27649
+      ]
+    },
+    {
+      "question": "Q35",
+      "arm": "D",
+      "body_hash": "f8a0e6e4d4126820606ff21ae8e6ddb613168aa752b785ad3df7722269a7e85b",
+      "serialized_tokens": 652,
+      "turn_input_bounds": [
+        3299,
+        5347,
+        7395,
+        9443,
+        11491,
+        13539,
+        14753
+      ]
+    },
+    {
+      "question": "Q35",
+      "arm": "A",
+      "body_hash": "850192c3b397eec7685ed27e88f4b5da86f73dc547c1e223dbbee43e9837a8ac",
+      "serialized_tokens": 1813,
+      "turn_input_bounds": [
+        7347
+      ]
+    },
+    {
+      "question": "Q35",
+      "arm": "B",
+      "body_hash": "6c9b06c993a337a73ba760f21f5248136cccf9931658c1a97b3743811cb73427",
+      "serialized_tokens": 2838,
+      "turn_input_bounds": [
+        12369
+      ]
+    },
+    {
+      "question": "Q21",
+      "arm": "D",
+      "body_hash": "b2cb88939036eb949ff7981704f946e9a5f4aec5588ba4d574ac1e4698e6ecd0",
+      "serialized_tokens": 661,
+      "turn_input_bounds": [
+        3335,
+        5383,
+        7431,
+        9479,
+        11527,
+        13575,
+        14789
+      ]
+    },
+    {
+      "question": "Q21",
+      "arm": "A",
+      "body_hash": "644805a44054108adb7e2b1b52bfc4b830a7e98997b23ef6dd4376dc76994de5",
+      "serialized_tokens": 1822,
+      "turn_input_bounds": [
+        7383
+      ]
+    },
+    {
+      "question": "Q21",
+      "arm": "B",
+      "body_hash": "7346d1df8a7d12c33ac72ff1e6ffdd58ae880f00a9841a7032d8ddbc573f74cc",
+      "serialized_tokens": 2847,
+      "turn_input_bounds": [
+        12405
+      ]
+    },
+    {
+      "question": "Q21",
+      "arm": "C",
+      "body_hash": "1292d6d817901698729f16cec1232d12dbdeed0ffe6020ab4269a8cf68a0be4c",
+      "serialized_tokens": 6723,
+      "turn_input_bounds": [
+        27685
+      ]
+    },
+    {
+      "question": "Q15",
+      "arm": "A",
+      "body_hash": "ae67ed27bd603599cdf0b09c4f4107c046d99c25e7fb66ffbd274729ce656da8",
+      "serialized_tokens": 1822,
+      "turn_input_bounds": [
+        7386
+      ]
+    },
+    {
+      "question": "Q15",
+      "arm": "B",
+      "body_hash": "e4f0e39ef6ae25f2dbe07dfc814957a22f1e97e9ad2f53cee44a231f19b4d8d2",
+      "serialized_tokens": 2847,
+      "turn_input_bounds": [
+        12408
+      ]
+    },
+    {
+      "question": "Q15",
+      "arm": "C",
+      "body_hash": "01799b09634501e8052f93e82c8e9409fe04b2c04acc6e4e5f06c312c0fe1844",
+      "serialized_tokens": 6723,
+      "turn_input_bounds": [
+        27688
+      ]
+    },
+    {
+      "question": "Q15",
+      "arm": "D",
+      "body_hash": "3c6edeb9dbc327eccc11c8a57a69ef41998dad8c5e8661e9304593d8b5466a63",
+      "serialized_tokens": 661,
+      "turn_input_bounds": [
+        3338,
+        5386,
+        7434,
+        9482,
+        11530,
+        13578,
+        14792
+      ]
+    },
+    {
+      "question": "Q32",
+      "arm": "B",
+      "body_hash": "0bd1b37cac44cb3eb8deeedac675dd11af42f28753cde28490f5e0ff47d59cb6",
+      "serialized_tokens": 2851,
+      "turn_input_bounds": [
+        12450
+      ]
+    },
+    {
+      "question": "Q32",
+      "arm": "C",
+      "body_hash": "33f63bd0523eb75e050a250134f1134fbdf158c6fd31e57628ce779bf370f9df",
+      "serialized_tokens": 6727,
+      "turn_input_bounds": [
+        27730
+      ]
+    },
+    {
+      "question": "Q32",
+      "arm": "D",
+      "body_hash": "1f3eaa9628b780d0e53199e8e4833fd6732a056e277fe1c80b2e5341335343f3",
+      "serialized_tokens": 665,
+      "turn_input_bounds": [
+        3380,
+        5428,
+        7476,
+        9524,
+        11572,
+        13620,
+        14834
+      ]
+    },
+    {
+      "question": "Q32",
+      "arm": "A",
+      "body_hash": "1b47c8b8497790500f31323158c31b874690994961cd7b6322d4eecf0f1808d9",
+      "serialized_tokens": 1826,
+      "turn_input_bounds": [
+        7428
+      ]
+    },
+    {
+      "question": "Q12",
+      "arm": "C",
+      "body_hash": "08998536fc28756152269017d76bf3c0f3deac19aee42e20f1ca28a05455868b",
+      "serialized_tokens": 6726,
+      "turn_input_bounds": [
+        27675
+      ]
+    },
+    {
+      "question": "Q12",
+      "arm": "D",
+      "body_hash": "2ac0ea213e919212f21e7700555c53e2dba0b9e274b501aa585507d2c5cf845a",
+      "serialized_tokens": 664,
+      "turn_input_bounds": [
+        3325,
+        5373,
+        7421,
+        9469,
+        11517,
+        13565,
+        14779
+      ]
+    },
+    {
+      "question": "Q12",
+      "arm": "A",
+      "body_hash": "2a1510d583e413854dbea0445412668ac2d7c9c5d0d777c33a1bd8fdd888243c",
+      "serialized_tokens": 1825,
+      "turn_input_bounds": [
+        7373
+      ]
+    },
+    {
+      "question": "Q12",
+      "arm": "B",
+      "body_hash": "60b4ea060eb6e556d4f3091bb3cdcc1173f591afc1fceba34e6bcb6524237606",
+      "serialized_tokens": 2850,
+      "turn_input_bounds": [
+        12395
+      ]
+    },
+    {
+      "question": "Q33",
+      "arm": "D",
+      "body_hash": "6ddb992fc66b2e51a43f62fcc998749b24b4aeacd73558a02c41c7d581730049",
+      "serialized_tokens": 654,
+      "turn_input_bounds": [
+        3299,
+        5347,
+        7395,
+        9443,
+        11491,
+        13539,
+        14753
+      ]
+    },
+    {
+      "question": "Q33",
+      "arm": "A",
+      "body_hash": "c19ca22be4386c07e094efc23a143bc7d767f75fe6a3d01a9126e9190c2abd0d",
+      "serialized_tokens": 1815,
+      "turn_input_bounds": [
+        7347
+      ]
+    },
+    {
+      "question": "Q33",
+      "arm": "B",
+      "body_hash": "435bef9baacb6ce3a2d64e1938dfd2234eda9b8469e8612774f521beadd600be",
+      "serialized_tokens": 2840,
+      "turn_input_bounds": [
+        12369
+      ]
+    },
+    {
+      "question": "Q33",
+      "arm": "C",
+      "body_hash": "5fde03c6112d44b0b390dda0bd3bb2e656dda2b1289a405cd7a0945905ab6f6a",
+      "serialized_tokens": 6716,
+      "turn_input_bounds": [
+        27649
+      ]
+    },
+    {
+      "question": "Q31",
+      "arm": "A",
+      "body_hash": "851385280cf62ec683c6a72a6d25ee39e4bcf20daccad1dbbf5c6e7f01ca66d1",
+      "serialized_tokens": 1819,
+      "turn_input_bounds": [
+        7374
+      ]
+    },
+    {
+      "question": "Q31",
+      "arm": "B",
+      "body_hash": "6e2af64ddd5e9a1b846d647b1ed16d89c2bc443da6b5b96625c682455d9fa23a",
+      "serialized_tokens": 2844,
+      "turn_input_bounds": [
+        12396
+      ]
+    },
+    {
+      "question": "Q31",
+      "arm": "C",
+      "body_hash": "c668f62164b9adf05489a8e0db433dbbee3ce4b0f38fe65454fbff1289103080",
+      "serialized_tokens": 6720,
+      "turn_input_bounds": [
+        27676
+      ]
+    },
+    {
+      "question": "Q31",
+      "arm": "D",
+      "body_hash": "d6f8e27fa80ccd6b9c9e4be7427261f1930255b8a905c310e627f0e4229487d3",
+      "serialized_tokens": 658,
+      "turn_input_bounds": [
+        3326,
+        5374,
+        7422,
+        9470,
+        11518,
+        13566,
+        14780
+      ]
+    },
+    {
+      "question": "Q18",
+      "arm": "B",
+      "body_hash": "8bb533e44a69ae61eeb8a4ca08e1ffdc433ae546806b25227dc4eddab47c89c6",
+      "serialized_tokens": 2850,
+      "turn_input_bounds": [
+        12411
+      ]
+    },
+    {
+      "question": "Q18",
+      "arm": "C",
+      "body_hash": "51805e0f5f4c1f2cb60c95b06e62143ae4eb4bf2f299a5785367e105018bea42",
+      "serialized_tokens": 6726,
+      "turn_input_bounds": [
+        27691
+      ]
+    },
+    {
+      "question": "Q18",
+      "arm": "D",
+      "body_hash": "97a499439028ab493da54216541c3ccccd45ecf46da4495edffb82b6eafa9c13",
+      "serialized_tokens": 664,
+      "turn_input_bounds": [
+        3341,
+        5389,
+        7437,
+        9485,
+        11533,
+        13581,
+        14795
+      ]
+    },
+    {
+      "question": "Q18",
+      "arm": "A",
+      "body_hash": "6cc8176148c057ca2daacd1c74010c358e67698c3e5f4294b1c0821bca7671b5",
+      "serialized_tokens": 1825,
+      "turn_input_bounds": [
+        7389
+      ]
+    },
+    {
+      "question": "Q08",
+      "arm": "C",
+      "body_hash": "4806d497d7dbb17fc7410c4bd7c878c794bbcb3d46109458fcdd184c6f2e6fe3",
+      "serialized_tokens": 6729,
+      "turn_input_bounds": [
+        27702
+      ]
+    },
+    {
+      "question": "Q08",
+      "arm": "D",
+      "body_hash": "f43068b73795ded8704f4a5c044bd86cb5710d78b3dcf5bdbd92060e0142e74a",
+      "serialized_tokens": 667,
+      "turn_input_bounds": [
+        3352,
+        5400,
+        7448,
+        9496,
+        11544,
+        13592,
+        14806
+      ]
+    },
+    {
+      "question": "Q08",
+      "arm": "A",
+      "body_hash": "d4bfe8364b1a416dd156e16d543e4563ac5ccd7ec590ea7dba1fb20ddfd25d3d",
+      "serialized_tokens": 1828,
+      "turn_input_bounds": [
+        7400
+      ]
+    },
+    {
+      "question": "Q08",
+      "arm": "B",
+      "body_hash": "21b6df43d2f6fedd072d36802e05deb1756f6a398eb469b2d9dc53dd8f655150",
+      "serialized_tokens": 2853,
+      "turn_input_bounds": [
+        12422
+      ]
+    },
+    {
+      "question": "Q17",
+      "arm": "D",
+      "body_hash": "5aeedd8fe52c763700fd2ebfa1bb1fbabb03782e1fce4657c87078ffd0588752",
+      "serialized_tokens": 656,
+      "turn_input_bounds": [
+        3320,
+        5368,
+        7416,
+        9464,
+        11512,
+        13560,
+        14774
+      ]
+    },
+    {
+      "question": "Q17",
+      "arm": "A",
+      "body_hash": "03bfa61be657a595c990d67d92238f02c4c7a2f3ca5dc3d8cb2a60cead4a6127",
+      "serialized_tokens": 1817,
+      "turn_input_bounds": [
+        7368
+      ]
+    },
+    {
+      "question": "Q17",
+      "arm": "B",
+      "body_hash": "0fa6bc273a0118cf50e8584c420a7c2fd11f67fe34c4d6ecce4418d1ad09518e",
+      "serialized_tokens": 2842,
+      "turn_input_bounds": [
+        12390
+      ]
+    },
+    {
+      "question": "Q17",
+      "arm": "C",
+      "body_hash": "f7f832367d3dc02ec7d9f0049d3edca14eb0aba35c475ba8c7ff0e6095e3842f",
+      "serialized_tokens": 6718,
+      "turn_input_bounds": [
+        27670
+      ]
+    },
+    {
+      "question": "Q05",
+      "arm": "A",
+      "body_hash": "c36b8f5982da3ba3bd3629c1d28a88f9e406044a777e1bb257c7ecdc48e43cf1",
+      "serialized_tokens": 1820,
+      "turn_input_bounds": [
+        7386
+      ]
+    },
+    {
+      "question": "Q05",
+      "arm": "B",
+      "body_hash": "4ec3794d5aaa88fe04f1b15cdf800c0cc015f353e579a4f353d5c5dd740e96fe",
+      "serialized_tokens": 2845,
+      "turn_input_bounds": [
+        12408
+      ]
+    },
+    {
+      "question": "Q05",
+      "arm": "C",
+      "body_hash": "db14bff47f50cb9a2669be4de228f6aa6b92ab81b7b057d8123bca1e93122a3c",
+      "serialized_tokens": 6721,
+      "turn_input_bounds": [
+        27688
+      ]
+    },
+    {
+      "question": "Q05",
+      "arm": "D",
+      "body_hash": "cbb6d5f8af3ea2d3f780b378359e7b86b3216378bf41b9cc6478820dd3544694",
+      "serialized_tokens": 659,
+      "turn_input_bounds": [
+        3338,
+        5386,
+        7434,
+        9482,
+        11530,
+        13578,
+        14792
+      ]
+    },
+    {
+      "question": "Q34",
+      "arm": "B",
+      "body_hash": "cf1e261584e2e5b69f9758c279c244c67390a472932241a9ff82712e6a13375a",
+      "serialized_tokens": 2842,
+      "turn_input_bounds": [
+        12372
+      ]
+    },
+    {
+      "question": "Q34",
+      "arm": "C",
+      "body_hash": "52a6d105d9f1e6ec194c2820a3d9f0fc5f69fdc2a486b9199eb5611ef36cad95",
+      "serialized_tokens": 6718,
+      "turn_input_bounds": [
+        27652
+      ]
+    },
+    {
+      "question": "Q34",
+      "arm": "D",
+      "body_hash": "b6f1299f97e7748689825d22584ea03a42459156819fc3360981e06d3a0b63c0",
+      "serialized_tokens": 656,
+      "turn_input_bounds": [
+        3302,
+        5350,
+        7398,
+        9446,
+        11494,
+        13542,
+        14756
+      ]
+    },
+    {
+      "question": "Q34",
+      "arm": "A",
+      "body_hash": "81e72343d55616fe943ebba7b30360b632312b01809a6cd0be025d9bd9b41352",
+      "serialized_tokens": 1817,
+      "turn_input_bounds": [
+        7350
+      ]
+    },
+    {
+      "question": "Q02",
+      "arm": "C",
+      "body_hash": "0880961855c5f0182ca4b189f683c0f418467c507ee60e671aca4ec9e20050c5",
+      "serialized_tokens": 6720,
+      "turn_input_bounds": [
+        27684
+      ]
+    },
+    {
+      "question": "Q02",
+      "arm": "D",
+      "body_hash": "46da0b136d08e2f023bc40495054b0624587824964fa5ed28131440fc3e22c30",
+      "serialized_tokens": 658,
+      "turn_input_bounds": [
+        3334,
+        5382,
+        7430,
+        9478,
+        11526,
+        13574,
+        14788
+      ]
+    },
+    {
+      "question": "Q02",
+      "arm": "A",
+      "body_hash": "a9d5d5a0b6a9444e24536cea94dcedc8f01e0fe5e49336d84a14bd91cc3d3320",
+      "serialized_tokens": 1819,
+      "turn_input_bounds": [
+        7382
+      ]
+    },
+    {
+      "question": "Q02",
+      "arm": "B",
+      "body_hash": "82f82a7eb79ca8bad3039ad936b2e7382c8f1d7a52e5e96dad30dd4be0df913c",
+      "serialized_tokens": 2844,
+      "turn_input_bounds": [
+        12404
+      ]
+    },
+    {
+      "question": "Q19",
+      "arm": "D",
+      "body_hash": "48c694cf7e3601128645524ee27b4daa36b255abf39d7cf2b39e416303115410",
+      "serialized_tokens": 659,
+      "turn_input_bounds": [
+        3324,
+        5372,
+        7420,
+        9468,
+        11516,
+        13564,
+        14778
+      ]
+    },
+    {
+      "question": "Q19",
+      "arm": "A",
+      "body_hash": "101fcff7c0d9fb4f844f8af1b6fa12d7a2a96e2e77b31b6cfe20d381c8f46b91",
+      "serialized_tokens": 1820,
+      "turn_input_bounds": [
+        7372
+      ]
+    },
+    {
+      "question": "Q19",
+      "arm": "B",
+      "body_hash": "abcc844964bd75a7db5adeb4483a7ebd4a1ae60ff869db723be9a1bf52ebd7f9",
+      "serialized_tokens": 2845,
+      "turn_input_bounds": [
+        12394
+      ]
+    },
+    {
+      "question": "Q19",
+      "arm": "C",
+      "body_hash": "ac2733757d92de466faed376c4825d7a56e53d1b87e88f50da3df0a31fd12b46",
+      "serialized_tokens": 6721,
+      "turn_input_bounds": [
+        27674
+      ]
+    },
+    {
+      "question": "Q26",
+      "arm": "A",
+      "body_hash": "f20f6e3c59c614b2ed14d4fa26cee0bbe3b474ee4ff029fe968b5e3db6c89d9b",
+      "serialized_tokens": 1821,
+      "turn_input_bounds": [
+        7380
+      ]
+    },
+    {
+      "question": "Q26",
+      "arm": "B",
+      "body_hash": "a52413aa94a19d712c76e578bf4e1bac8925b8c1b6828a124fe41a0bdec24a34",
+      "serialized_tokens": 2846,
+      "turn_input_bounds": [
+        12402
+      ]
+    },
+    {
+      "question": "Q26",
+      "arm": "C",
+      "body_hash": "1372e6aead3cc1b35ca544c6b84d4ae9e5f0b4206b37e45d50dfe08014d392aa",
+      "serialized_tokens": 6722,
+      "turn_input_bounds": [
+        27682
+      ]
+    },
+    {
+      "question": "Q26",
+      "arm": "D",
+      "body_hash": "e2cbe2cd32e1ccb1bb6e4eb88196bd051a91f627b907d237374bae2b48456fe4",
+      "serialized_tokens": 660,
+      "turn_input_bounds": [
+        3332,
+        5380,
+        7428,
+        9476,
+        11524,
+        13572,
+        14786
+      ]
+    },
+    {
+      "question": "Q20",
+      "arm": "B",
+      "body_hash": "ae213c24a58140abe2dad60b63575647a1194111b05348a9180674af78ef3fcc",
+      "serialized_tokens": 2845,
+      "turn_input_bounds": [
+        12404
+      ]
+    },
+    {
+      "question": "Q20",
+      "arm": "C",
+      "body_hash": "40f8abdc80e47da5ab7ff0ce14b8256da321806d6b16e89ccf9d07742d2d1565",
+      "serialized_tokens": 6721,
+      "turn_input_bounds": [
+        27684
+      ]
+    },
+    {
+      "question": "Q20",
+      "arm": "D",
+      "body_hash": "b89194616ebba9356c4eb550324c1ae31f993f00d8c9a5dc72d85e59ca289b12",
+      "serialized_tokens": 659,
+      "turn_input_bounds": [
+        3334,
+        5382,
+        7430,
+        9478,
+        11526,
+        13574,
+        14788
+      ]
+    },
+    {
+      "question": "Q20",
+      "arm": "A",
+      "body_hash": "a77427c4ace19d612b70de9f8befc9a3cc2d6ed635ee280c7f002686465a7d5d",
+      "serialized_tokens": 1820,
+      "turn_input_bounds": [
+        7382
+      ]
+    },
+    {
+      "question": "Q25",
+      "arm": "C",
+      "body_hash": "dd2377b110a9b5012ff514840d0384898a7ede3c71ef3f62ccd730b4b34b77e4",
+      "serialized_tokens": 6721,
+      "turn_input_bounds": [
+        27678
+      ]
+    },
+    {
+      "question": "Q25",
+      "arm": "D",
+      "body_hash": "da01f92d71405431d70f67c9ae589af3eb81cd7f426f3cf57d1b22a6ed87503d",
+      "serialized_tokens": 659,
+      "turn_input_bounds": [
+        3328,
+        5376,
+        7424,
+        9472,
+        11520,
+        13568,
+        14782
+      ]
+    },
+    {
+      "question": "Q25",
+      "arm": "A",
+      "body_hash": "a251e8f19b5682e5f014e1ac3e7241a868941765a890424f416e2c0e24f9ffbc",
+      "serialized_tokens": 1820,
+      "turn_input_bounds": [
+        7376
+      ]
+    },
+    {
+      "question": "Q25",
+      "arm": "B",
+      "body_hash": "72fe8f2dd70ae58b6f6308cbf169785860a5d2959da2513be3ebb665b8d87474",
+      "serialized_tokens": 2845,
+      "turn_input_bounds": [
+        12398
+      ]
+    },
+    {
+      "question": "Q24",
+      "arm": "D",
+      "body_hash": "c92f6b94a60070a046006555e776cdbd427e4600fb19b3ef8942f7b0b5a15178",
+      "serialized_tokens": 662,
+      "turn_input_bounds": [
+        3345,
+        5393,
+        7441,
+        9489,
+        11537,
+        13585,
+        14799
+      ]
+    },
+    {
+      "question": "Q24",
+      "arm": "A",
+      "body_hash": "207bb282058f3ef6344c8c9d0e900d37b5528480f90c2bf18fbda07468ce5730",
+      "serialized_tokens": 1823,
+      "turn_input_bounds": [
+        7393
+      ]
+    },
+    {
+      "question": "Q24",
+      "arm": "B",
+      "body_hash": "3251dc53385441b8b282530e2ab42a973781caaa853e84a4f5086f7db7be7fc1",
+      "serialized_tokens": 2848,
+      "turn_input_bounds": [
+        12415
+      ]
+    },
+    {
+      "question": "Q24",
+      "arm": "C",
+      "body_hash": "b2f10e2cb9b3094f28b542385bab01b5f03d7472294fe043f93d3e9eaf5a4750",
+      "serialized_tokens": 6724,
+      "turn_input_bounds": [
+        27695
+      ]
+    },
+    {
+      "question": "Q27",
+      "arm": "A",
+      "body_hash": "e00fdaa7f785358a18879a4e8c3599575075820072e35c300ef9cb2b0dc1935a",
+      "serialized_tokens": 1824,
+      "turn_input_bounds": [
+        7383
+      ]
+    },
+    {
+      "question": "Q27",
+      "arm": "B",
+      "body_hash": "c88be7c1628e69b0e2e2ec11436beeb9365a416d49daba0ae3c41af1d3f87032",
+      "serialized_tokens": 2849,
+      "turn_input_bounds": [
+        12405
+      ]
+    },
+    {
+      "question": "Q27",
+      "arm": "C",
+      "body_hash": "eb46db69ed6a9b04c5987fc0dcbb0a788d039d314fbe9819a38c068085228902",
+      "serialized_tokens": 6725,
+      "turn_input_bounds": [
+        27685
+      ]
+    },
+    {
+      "question": "Q27",
+      "arm": "D",
+      "body_hash": "04555469c5b2f5a0df127af5130ab912a7a9cf4f3d16cece9ad0fbcca5811413",
+      "serialized_tokens": 663,
+      "turn_input_bounds": [
+        3335,
+        5383,
+        7431,
+        9479,
+        11527,
+        13575,
+        14789
+      ]
+    },
+    {
+      "question": "Q28",
+      "arm": "B",
+      "body_hash": "33715a35bc460f48c043118955ab8cdd9fe26ce96a6bab8303796145cf3f6b0c",
+      "serialized_tokens": 2846,
+      "turn_input_bounds": [
+        12412
+      ]
+    },
+    {
+      "question": "Q28",
+      "arm": "C",
+      "body_hash": "ed9109a251923086a7a6403f470c11f64054bf2e170b5b97a8af966dcf7d10c0",
+      "serialized_tokens": 6722,
+      "turn_input_bounds": [
+        27692
+      ]
+    },
+    {
+      "question": "Q28",
+      "arm": "D",
+      "body_hash": "6e46648387cab943e47ac20033c37b89dd5c02749dfaf3c5788bca38c00452c1",
+      "serialized_tokens": 660,
+      "turn_input_bounds": [
+        3342,
+        5390,
+        7438,
+        9486,
+        11534,
+        13582,
+        14796
+      ]
+    },
+    {
+      "question": "Q28",
+      "arm": "A",
+      "body_hash": "190cb543a8214bc1abd1e545ca6dcebd62ba57d8977fb92b322064923b317f28",
+      "serialized_tokens": 1821,
+      "turn_input_bounds": [
+        7390
+      ]
+    },
+    {
+      "question": "Q03",
+      "arm": "C",
+      "body_hash": "05d6581647cb8dc583275040376b9e577f26f1ea62a3601cca5e8642740b0fba",
+      "serialized_tokens": 6717,
+      "turn_input_bounds": [
+        27659
+      ]
+    },
+    {
+      "question": "Q03",
+      "arm": "D",
+      "body_hash": "8ae53cd4a39d635fa17aba05f75ba76dedc8b1dfba1aa3a6cdab5daf78f8c249",
+      "serialized_tokens": 655,
+      "turn_input_bounds": [
+        3309,
+        5357,
+        7405,
+        9453,
+        11501,
+        13549,
+        14763
+      ]
+    },
+    {
+      "question": "Q03",
+      "arm": "A",
+      "body_hash": "7eeb11476e09041c8bd1e236b63ada95713c5a1117357041c86902b277582cc1",
+      "serialized_tokens": 1816,
+      "turn_input_bounds": [
+        7357
+      ]
+    },
+    {
+      "question": "Q03",
+      "arm": "B",
+      "body_hash": "8e93fda3091e049ed8c67d2402b9d0ac4a5b47ba46c56cec11ac994b4d6c4d29",
+      "serialized_tokens": 2841,
+      "turn_input_bounds": [
+        12379
+      ]
+    },
+    {
+      "question": "Q06",
+      "arm": "D",
+      "body_hash": "5ad93075f4073beb69d7dbe717b62407068ede7eb93523e0635c0c96fb662b1b",
+      "serialized_tokens": 661,
+      "turn_input_bounds": [
+        3351,
+        5399,
+        7447,
+        9495,
+        11543,
+        13591,
+        14805
+      ]
+    },
+    {
+      "question": "Q06",
+      "arm": "A",
+      "body_hash": "0f7d1526d56f0269d5f1efc8c5954269c8fdd0afcd3715e5f36f91e050d31be7",
+      "serialized_tokens": 1822,
+      "turn_input_bounds": [
+        7399
+      ]
+    },
+    {
+      "question": "Q06",
+      "arm": "B",
+      "body_hash": "11ced0f75968b037c9e0d671188f633724fef7c195be6115b8447b970653aa0c",
+      "serialized_tokens": 2847,
+      "turn_input_bounds": [
+        12421
+      ]
+    },
+    {
+      "question": "Q06",
+      "arm": "C",
+      "body_hash": "351d9dd7a42c63b5a060d8d2b7c78d4617b324334edf4d90b4df8cc39f5fff32",
+      "serialized_tokens": 6723,
+      "turn_input_bounds": [
+        27701
+      ]
+    },
+    {
+      "question": "Q09",
+      "arm": "A",
+      "body_hash": "48ca1d3b40c7f70990933d6a056980fce544c1c903cd527f8f2552c1b4c58443",
+      "serialized_tokens": 1819,
+      "turn_input_bounds": [
+        7379
+      ]
+    },
+    {
+      "question": "Q09",
+      "arm": "B",
+      "body_hash": "9f55dbdd9b2e3da15162fe22018e4c68bf455fa006a855b2c8363719a7ddb934",
+      "serialized_tokens": 2844,
+      "turn_input_bounds": [
+        12401
+      ]
+    },
+    {
+      "question": "Q09",
+      "arm": "C",
+      "body_hash": "a43a73099ac9d3afd25482793d3cfdc1249b996bea73dfb493c55e91577de559",
+      "serialized_tokens": 6720,
+      "turn_input_bounds": [
+        27681
+      ]
+    },
+    {
+      "question": "Q09",
+      "arm": "D",
+      "body_hash": "04b087165c5e61cc532a9ec2a4bb908b36a6b774d2c1ab80e2b2b7deba4d69a5",
+      "serialized_tokens": 658,
+      "turn_input_bounds": [
+        3331,
+        5379,
+        7427,
+        9475,
+        11523,
+        13571,
+        14785
+      ]
+    },
+    {
+      "question": "Q11",
+      "arm": "B",
+      "body_hash": "204c7e42b99175a2d61f4d54a6eb5b271eab00abbb6018c9a53ce4a324d49ca3",
+      "serialized_tokens": 2844,
+      "turn_input_bounds": [
+        12400
+      ]
+    },
+    {
+      "question": "Q11",
+      "arm": "C",
+      "body_hash": "b527c276a6fbc095ed1e6adcafd27fbf82e1ab9ba6df47215af1fdcd169b5081",
+      "serialized_tokens": 6720,
+      "turn_input_bounds": [
+        27680
+      ]
+    },
+    {
+      "question": "Q11",
+      "arm": "D",
+      "body_hash": "5e33bff3e2d706fda975235f0293527b51fc99592d8dbf107246c1676eda61dd",
+      "serialized_tokens": 658,
+      "turn_input_bounds": [
+        3330,
+        5378,
+        7426,
+        9474,
+        11522,
+        13570,
+        14784
+      ]
+    },
+    {
+      "question": "Q11",
+      "arm": "A",
+      "body_hash": "4a96e0cb6c5d010fddb54befc95ece86d2eb2e95c4043a24734c6980efd5dc6a",
+      "serialized_tokens": 1819,
+      "turn_input_bounds": [
+        7378
+      ]
+    },
+    {
+      "question": "Q16",
+      "arm": "C",
+      "body_hash": "880ed2752c197fd1da0e74242ddae7b290ca53a8b5e98f01cbc7b92c1ea06648",
+      "serialized_tokens": 6727,
+      "turn_input_bounds": [
+        27707
+      ]
+    },
+    {
+      "question": "Q16",
+      "arm": "D",
+      "body_hash": "bbeabc032aece39834cf3b5958a401506f7aa70f781af87bd93885ad0694938d",
+      "serialized_tokens": 665,
+      "turn_input_bounds": [
+        3357,
+        5405,
+        7453,
+        9501,
+        11549,
+        13597,
+        14811
+      ]
+    },
+    {
+      "question": "Q16",
+      "arm": "A",
+      "body_hash": "046f1a57fa296f33c212a70be406b755c7d76518e0f74688eea5bd58d1131ddd",
+      "serialized_tokens": 1826,
+      "turn_input_bounds": [
+        7405
+      ]
+    },
+    {
+      "question": "Q16",
+      "arm": "B",
+      "body_hash": "b75d836dd438b7170531dfacbc251e6e7aba8a44054199d61ffce573c95fb036",
+      "serialized_tokens": 2851,
+      "turn_input_bounds": [
+        12427
+      ]
+    },
+    {
+      "question": "Q29",
+      "arm": "D",
+      "body_hash": "d4897a51706b0b7203c801e96576c65d264151d2c8b181e841f6c69eea6636fc",
+      "serialized_tokens": 657,
+      "turn_input_bounds": [
+        3335,
+        5383,
+        7431,
+        9479,
+        11527,
+        13575,
+        14789
+      ]
+    },
+    {
+      "question": "Q29",
+      "arm": "A",
+      "body_hash": "cd365e4f4b8c5c2813822cdfe5601a01989435a4e93b6d8b139519130a9ff7ef",
+      "serialized_tokens": 1818,
+      "turn_input_bounds": [
+        7383
+      ]
+    },
+    {
+      "question": "Q29",
+      "arm": "B",
+      "body_hash": "47fbc6cb08648db2bd2c3dd94788e9a2e629eb2db01adf076cf8aa67a700889e",
+      "serialized_tokens": 2843,
+      "turn_input_bounds": [
+        12405
+      ]
+    },
+    {
+      "question": "Q29",
+      "arm": "C",
+      "body_hash": "a5acee7ac2fba392a130c192ba72782e1abe53269bea6fac917a747ab4c219cc",
+      "serialized_tokens": 6719,
+      "turn_input_bounds": [
+        27685
+      ]
+    },
+    {
+      "question": "Q36",
+      "arm": "A",
+      "body_hash": "2bb011db2e3b52d05346dbb5ff20ff53f5fef1c3798e624a22850ef6e71c0b8c",
+      "serialized_tokens": 1816,
+      "turn_input_bounds": [
+        7356
+      ]
+    },
+    {
+      "question": "Q36",
+      "arm": "B",
+      "body_hash": "fa4caffc4a9ad7f079235c0b0973556ca157ac5d62e408a506f901374477d53c",
+      "serialized_tokens": 2841,
+      "turn_input_bounds": [
+        12378
+      ]
+    },
+    {
+      "question": "Q36",
+      "arm": "C",
+      "body_hash": "01ce9223c99670d4b42cbd2f0bf1bd69e638304c032726a3752f6c3abb03cdb7",
+      "serialized_tokens": 6717,
+      "turn_input_bounds": [
+        27658
+      ]
+    },
+    {
+      "question": "Q36",
+      "arm": "D",
+      "body_hash": "f9b28a95b53080c8af35de16815d45763c2040f379194bcf03f99a8947353ea3",
+      "serialized_tokens": 655,
+      "turn_input_bounds": [
+        3308,
+        5356,
+        7404,
+        9452,
+        11500,
+        13548,
+        14762
+      ]
+    },
+    {
+      "question": "Q04",
+      "arm": "B",
+      "body_hash": "11284047e2d3bf7688d91baa2b0ea835b4e868549357fa183590201c4a42d35e",
+      "serialized_tokens": 2842,
+      "turn_input_bounds": [
+        12388
+      ]
+    },
+    {
+      "question": "Q04",
+      "arm": "C",
+      "body_hash": "12d0e6ced5b5a2f00529dcb0ac5c19c543f64a20d39a1f2b3fa823b06e438cdc",
+      "serialized_tokens": 6718,
+      "turn_input_bounds": [
+        27668
+      ]
+    },
+    {
+      "question": "Q04",
+      "arm": "D",
+      "body_hash": "58090d1b926b87848aac5ca58e1e6d2f120fc1264bc883500c94a7663efa9f36",
+      "serialized_tokens": 656,
+      "turn_input_bounds": [
+        3318,
+        5366,
+        7414,
+        9462,
+        11510,
+        13558,
+        14772
+      ]
+    },
+    {
+      "question": "Q04",
+      "arm": "A",
+      "body_hash": "c4b3f0881346991b975977054249e7b1d853fda51769ebafccd38895fe567d2d",
+      "serialized_tokens": 1817,
+      "turn_input_bounds": [
+        7366
+      ]
+    },
+    {
+      "question": "Q13",
+      "arm": "C",
+      "body_hash": "f40b584c56504593388c210350f0cda1868389793750b1bf1f186e10ba47c6d4",
+      "serialized_tokens": 6720,
+      "turn_input_bounds": [
+        27686
+      ]
+    },
+    {
+      "question": "Q13",
+      "arm": "D",
+      "body_hash": "aef239bd6c3d7bc7adc47079551f6c9cd5fa00ee63659fe953c127bb89bf1f34",
+      "serialized_tokens": 658,
+      "turn_input_bounds": [
+        3336,
+        5384,
+        7432,
+        9480,
+        11528,
+        13576,
+        14790
+      ]
+    },
+    {
+      "question": "Q13",
+      "arm": "A",
+      "body_hash": "22c40f3dec96a9c7de885b210509158213bd9f3e078880fb38f875ea8deb223e",
+      "serialized_tokens": 1819,
+      "turn_input_bounds": [
+        7384
+      ]
+    },
+    {
+      "question": "Q13",
+      "arm": "B",
+      "body_hash": "8de5ee861ce939277a69d15b05f8675bf43da991600c03e2847cddf318ba7280",
+      "serialized_tokens": 2844,
+      "turn_input_bounds": [
+        12406
+      ]
+    },
+    {
+      "question": "Q14",
+      "arm": "D",
+      "body_hash": "cf5648b976d4952e2cad2ca1dcf578a08cc89734f64e14e5b9b2954c8d7f3d52",
+      "serialized_tokens": 660,
+      "turn_input_bounds": [
+        3338,
+        5386,
+        7434,
+        9482,
+        11530,
+        13578,
+        14792
+      ]
+    },
+    {
+      "question": "Q14",
+      "arm": "A",
+      "body_hash": "53c59a5d564239115aaed04e69f3a21fbf3ed86e28592214c70749c2b86c1d36",
+      "serialized_tokens": 1821,
+      "turn_input_bounds": [
+        7386
+      ]
+    },
+    {
+      "question": "Q14",
+      "arm": "B",
+      "body_hash": "98114830b9c2275ff577857f427b0b44d92fea623f423d28fa8f9c06dfc0b140",
+      "serialized_tokens": 2846,
+      "turn_input_bounds": [
+        12408
+      ]
+    },
+    {
+      "question": "Q14",
+      "arm": "C",
+      "body_hash": "00d7d51207e7ffd1dd8f0d02a0b581ff0b31762814a41eb256310254dd96ebcd",
+      "serialized_tokens": 6722,
+      "turn_input_bounds": [
+        27688
+      ]
+    }
+  ],
+  "bodies_sha256": "78a96d669a01f0509a4add647df452daf6126e5709316ff7c646544a84bdb986",
+  "bounds_by_arm": {
+    "A": {
+      "input": 265680,
+      "turns": 36
+    },
+    "B": {
+      "input": 446472,
+      "turns": 36
+    },
+    "C": {
+      "input": 996552,
+      "turns": 36
+    },
+    "D": {
+      "input": 2357928,
+      "turns": 252
+    }
+  },
+  "cost_by_arm_usd": {
+    "A": "0.48321",
+    "B": "0.505809",
+    "C": "0.574569",
+    "D": "3.444741"
+  },
+  "usd_per_million": {
+    "input": "0.10",
+    "cached": "0.01",
+    "30m_write": "0.125",
+    "output": "0.50"
+  },
+  "pricing_date": "2026-11-11",
+  "reserve_usd": "5.008329",
+  "proposed_cap_usd": "5.50",
+  "parent_evaluation_digest": "1b3a5529069e19c9d219a58d4891c39c4fb51676a7ef548a482bd59ddddb61b1",
+  "proposal_digest": "4eb6e593374585e11b349cc1341c82bda22048eb2a6ff69560dc7a82d214d36f"
+}
