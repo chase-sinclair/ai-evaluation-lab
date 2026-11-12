@@ -1,5 +1,14 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 005 · full evaluation sealed, blinded review pending
+
+Executed once at approved clean revision `46c15339f9dcbe767ae7e3dba6cd986ee2099205` with owner-confirmed credit and project settings. All 144 planned episodes produced terminal decisions. There were 350 model requests, 206 local discovery calls, zero retries, output exhaustions, interruptions, unsent episodes or unaccounted attempts. Usage-estimated cost was $0.103640710 under the $5.50 ceiling.
+
+Verified all 1,751 sealed files, frozen and dynamic wire bodies, discovery histories, unique response IDs, settings, receipt usage partitions and individual charges. Input was 576,292 tokens including 390,766 cache reads and 51,318 short-cache writes. Output was 159,795 including 128,367 reasoning tokens. The ledger digest is `ba05d8c60ce0dd58043c044d7a39e276a76f5a1b8668f891c0355237188b3c4b`. Seal SHA-256 is `5f136beda3c3cdd97d3daa55e4e174b746594b5b2492a1f56099ae5f5d5bec79`.
+
+The frozen replay generated 11 distinct masked worksheet entries in the ignored local file `.verification/evaluation-clarifications.json`, SHA-256 `affd0375b0f3da89e2873aa9722ff628e69add15623a24852fc5a8826ef4982e`. Give the reviewer only the worksheet. Return a copy with each adequate field set to true or false, preserving identifiers and wording. Final scoring awaits that review. The live directory is consumed. All 399 local tests passed, including warehouse fixtures. No model-quality results are reported at this checkpoint.
+
+
 ## Experiment 005 · full evaluation dispatcher awaiting owner review
 
 Based on accepted pilot audit `a145d01d326a2d9242a3e1b7071fb9ac07fedede`, added the separate evaluation-r1 proposal, dispatcher, fail-stop and exhaustion tests, and sealed two-snapshot analysis with masked clarification review. Raw evidence and original manifests remain untouched. Maximum-depth, early-terminal and exhaustion mocks cover all 144 episodes. The evaluation reserve remains $5.008329. Next step is separate owner review of the exact commit, digest and $5.50 cap before any inference. [Review packet, identities, mocked evidence and commands](finops_evaluation_dispatch.md)
