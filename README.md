@@ -1,5 +1,7 @@
 # AI Evaluation Lab
 
+The five-experiment AI Evaluation Lab initiative is complete and closed following final owner acceptance. All five case studies and publication packages are accepted. Experiment 005's accepted publication revision is `15273a79f05f54675f648d9daedb0592c6351b54`. [Accepted studies and handoffs](docs/portfolio/lab-summary.md) · [Closure and verification record](docs/verification.md)
+
 AI Evaluation Lab documents applied AI implementation decisions. Each case study compares a baseline with an AI alternative and explains what the observed quality, cost and operational risks justify.
 
 **[When Should Entity Matching Escalate to an LLM?](docs/portfolio/entity-matching.md)** follows a funder name from a missed deterministic match to a successful model correction, then asks whether the system could recognize when to pay for that second look. The evidence covers 38 development queries and four live responses.
@@ -47,7 +49,7 @@ On Windows, `py -3.13 -m uv` is an equivalent launcher when uv is not on PATH.
 The [Phase 3E live findings](docs/phase3e_live_findings.md) document the completed
 four-query pilot. The [readiness report](docs/phase3e_readiness.md) records its controls.
 
-Current research status: the substantive BFCL study is deferred and WDC
+Historical research disposition at closure: the substantive BFCL study is deferred and WDC
 development is paused. The [offline Crossref resolution experiment](docs/phase3d_crossref_resolution.md)
 supports baseline evaluation and paired escalation replay. Run
 `uv run --offline python -m experiments.entity_matching.ror demo` from this checkout.

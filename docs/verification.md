@@ -1,4 +1,13 @@
 # Phase 0 / Phase 1 verification
+## Final owner acceptance and Lab closure · November 12
+
+The owner accepted Experiment 005's publication revision `15273a79f05f54675f648d9daedb0592c6351b54` and all five planned experiments and publication packages. Architectural, methodological and publication review is complete. The current AI Evaluation Lab initiative is formally closed. Website integration remains a separate initiative requiring authorization.
+
+Updated README, current progress and the five-study summary to record completion. Historical checkpoints retain their original wording. The accepted revision's [hosted CI run 43274121204](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/43274121204) completed successfully on Python 3.12 and 3.13. Its publication checks include 399 fixture-enabled offline tests, integrity verification of the scored evidence and responsive asset validation.
+
+Closeout validation passed with `uv run --offline pytest -q` (392 passed, seven fixture-dependent skips), `uv run --offline ruff check .`, `uv run --offline ruff format --check .` (213 files) and diff whitespace checks. Checked all five case studies and five handoffs for existence and resolved their local document and asset links, together with the closeout documents. Reviewed the diff and confirmed it contains only these four Markdown status documents. Frozen implementations, contracts, evidence and publication assets retain the accepted revision's contents.
+
+All tasks in the current initiative are complete. The accepted studies retain their recorded methodological limitations. [Five accepted studies and handoffs](portfolio/lab-summary.md)
 ## Experiment 005 · publication preparation, November 12
 
 Prepared the [case study](portfolio/finops-sql.md), [integration handoff and figures](portfolio/finops-sql-handoff.md) and [five-study summary](portfolio/lab-summary.md) from the scored checkpoint `3bc4558556980df4e589d10413dbbabfcaea21cf`. The analytical documentation corrects the attribution of the wording review and clarifies that both snapshots used the same submitted SQL.

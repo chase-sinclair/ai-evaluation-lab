@@ -1,6 +1,6 @@
 # Five deployment decisions from AI Evaluation Lab
 
-Five completed experiments address different decisions. Each uses its own workload, baseline and outcome definition. The package is ready for owner review before Lab closure or website integration.
+Five completed experiments address different decisions. Each uses its own workload, baseline and outcome definition. The owner has accepted all five experiments and their publication packages, completing architectural, methodological and publication review. The current Lab initiative is closed. Experiment 005's accepted publication revision is `15273a79f05f54675f648d9daedb0592c6351b54`. Website integration is a separate initiative requiring authorization. [Acceptance and verification record](../verification.md)
 
 | Study | Deployment decision | Evidence and remaining limit |
 |---|---|---|
@@ -11,3 +11,5 @@ Five completed experiments address different decisions. Each uses its own worklo
 | [Financial SQL context](finops-sql.md) | Start controlled development with curated financial definitions. Keep expanded context under consideration and require independent checks before release. | Both reached 18/36, with four questions passing only under each design. Discovery reached 5/36. Shared financial rules and synthetic data limit what agreement on two snapshots establishes. |
 
 The common deployment question is who can act on a model’s answer and what evidence that person needs. A valid tool call can request the wrong write, just as an executable query can count the wrong dollars. Across these studies, measured quantities include task outcomes, recorded usage and observed times. Production adoption, review labor, maintenance savings and return on investment remain unmeasured. [Study format](study-format.md) · [Project record](../PROGRESS.md)
+
+The accepted packages also include website handoffs for [entity matching](entity-matching-handoff.md), [tool catalog scope](tool-catalog-handoff.md), [RAG safeguards](rag-safeguards-handoff.md), [tool recovery](recovery-handoff.md) and [financial SQL context](finops-sql-handoff.md).

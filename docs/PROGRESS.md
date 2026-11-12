@@ -1,5 +1,13 @@
 # Progress — November 12, 2026
 
+## Final owner acceptance · Lab complete
+
+The owner accepted Experiment 005's publication package at revision `15273a79f05f54675f648d9daedb0592c6351b54` and confirmed completion of architectural, methodological and publication review for all five planned experiments. The current AI Evaluation Lab initiative is formally closed. All five accepted [case studies](portfolio/lab-summary.md) and their website handoffs remain available.
+
+The accepted publication revision passed both hosted Python CI jobs in [run 43274121204](https://github.com/chase-sinclair/ai-evaluation-lab/actions/runs/43274121204). Its verification includes 399 fixture-enabled offline tests, preserved evidence hashes, all 144 scored outcomes and responsive figure checks. This documentation closeout records acceptance in README, the Lab summary, progress and verification notes. Historical checkpoints below retain their status as originally recorded.
+
+There are no remaining tasks in this initiative. Website integration is a separate initiative requiring its own authorization. The accepted findings retain their documented limitations. [Closeout checks](verification.md)
+
 ## Experiment 005 · publication package ready for owner review
 
 The owner accepted the sealed scores and completed architectural review at scored checkpoint `3bc4558556980df4e589d10413dbbabfcaea21cf`. The [case study](portfolio/finops-sql.md), [responsive figures and integration handoff](portfolio/finops-sql-handoff.md), README entry and [five-study decision summary](portfolio/lab-summary.md) prepare the Lab for closure review. The analytical report now identifies the wording review as arm-masked and AI-assisted. The publication uses the existing case ledger and verified machine report. See [verification](verification.md) for the integrity and layout checks.
