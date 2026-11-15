@@ -1,8 +1,8 @@
 # Progress — November 15, 2026
 
-## Experiment 006 · scored offline, pending owner acceptance
+## Experiment 006 · scored, clarification adjudication accepted
 
-**Status:** graded offline. The clarification adjudication is an AI-assisted draft, and the results are provisional until the owner accepts it. [Scored results](experiment06_scored_results.md)
+**Status:** graded offline. On November 15 the owner accepted the AI-assisted clarification judgments (9 of 17 adequate) without amendment, so the scores below are final for this run. Next is owner architectural review and a decision on publication. A cross-provider replication with Claude models is under discussion. [Scored results](experiment06_scored_results.md)
 
 **Result.** Mean correct decisions out of 36 over three draws:
 - Luna with curated context: 15.3 (draws 20, 14, 12)
@@ -17,8 +17,8 @@ Paired on the same question and draw, Luna with curated context gained 30 decisi
 **Evidence.** The report is `.verification/model-context-report.json`, SHA-256 `4fcf8385ff23ed143b085624704b3964fc66b71e8557d44dbfd12b92b734764e`. The reviewed worksheet SHA-256 is `c3cd39772f04bba5c9b8ec7727c870f163948c32bf8422fcf5aa1edb0c1353f4`. Per-request grades are in `.verification/model-context-cases.json`. All are ignored and local.
 
 **Next steps.**
-1. The owner accepts or amends the drafted judgments in `.verification/model-context-review-notes.json`. If any are amended, rerun the scoring command.
-2. Owner architectural review of the scored results.
+1. Owner architectural review of the scored results.
+2. Decide on a Claude-model replication before publication.
 3. Publication package and portfolio update, as a separate decision.
 
 ## Experiment 006 · acquisition sealed, masked review and grading pending

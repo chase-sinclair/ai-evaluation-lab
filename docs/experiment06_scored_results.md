@@ -1,6 +1,6 @@
-# Experiment 006 · scored results, pending owner acceptance
+# Experiment 006 · scored results
 
-*Scored offline from the sealed one-time run. The clarification adjudication is an AI-assisted draft awaiting owner acceptance. These results are provisional until the owner accepts them.*
+*Scored offline from the sealed one-time run. On November 15 the owner accepted the AI-assisted clarification adjudication without amendment.*
 
 ## Answer
 
@@ -63,7 +63,7 @@ Required clarifications contribute at most 4 per draw, and observed credit was 0
 
 - The acquisition, seal and replay are described in [verification](verification.md). Proposal digest `f9fd35762130871a80c4a24d28dae47a3bf9f500c5d4f7185cb77fe21ba458f0`, seal SHA-256 `54a0290a8aea3b1712e0ff8670e1b16d95b266016051a7640a55c0850d5707c7`.
 - SQL ran in the `meridian-worker:v3` sandbox and had to match the typed key on both evaluation snapshots, the same grading as Experiment 005.
-- **Clarification adjudication.** Claude drafted judgments on the 17 distinct masked wordings, seeing only question and wording. Nine were judged adequate. The rubric came from the owner-accepted 005 precedents. Q33 needs both period and cost basis. Q34 needs cost center or scope. Q35 needs both the list-minus-contracted discount and commitment savings named as the alternative. The judgments and a rationale for each are in the ignored files `.verification/model-context-reviewed.json` (SHA-256 `c3cd39772f04bba5c9b8ec7727c870f163948c32bf8422fcf5aa1edb0c1353f4`) and `.verification/model-context-review-notes.json`. The drafter also designed and implemented the study, so this is not an independent adjudication.
+- **Clarification adjudication.** Claude drafted judgments on the 17 distinct masked wordings, seeing only question and wording. Nine were judged adequate, and the owner accepted all 17 judgments without amendment. The rubric came from the owner-accepted 005 precedents. Q33 needs both period and cost basis. Q34 needs cost center or scope. Q35 needs both the list-minus-contracted discount and commitment savings named as the alternative. The judgments and a rationale for each are in the ignored files `.verification/model-context-reviewed.json` (SHA-256 `c3cd39772f04bba5c9b8ec7727c870f163948c32bf8422fcf5aa1edb0c1353f4`) and `.verification/model-context-review-notes.json`. The drafter also designed and implemented the study, so this is not an independent adjudication.
 - The machine report is `.verification/model-context-report.json`, SHA-256 `4fcf8385ff23ed143b085624704b3964fc66b71e8557d44dbfd12b92b734764e`. Per-request grades are in `.verification/model-context-cases.json`.
 
 ## Limitations

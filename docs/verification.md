@@ -1,4 +1,8 @@
 # Phase 0 / Phase 1 verification
+## Experiment 006 · clarification adjudication accepted, November 15
+
+The owner accepted all 17 drafted judgments in `.verification/model-context-reviewed.json` (SHA-256 `c3cd39772f04bba5c9b8ec7727c870f163948c32bf8422fcf5aa1edb0c1353f4`) without amendment. The scored report is unchanged (SHA-256 `4fcf8385ff23ed143b085624704b3964fc66b71e8557d44dbfd12b92b734764e`). Only documentation changed.
+
 ## Experiment 006 · offline scoring, November 15
 
 Drafted masked adequacy judgments for the 17 clarification wordings (AI-assisted, pending owner acceptance). Ran `python -m experiments.model_context.analysis results/meridian-model-context-r1-once --review .verification/model-context-reviewed.json --snapshots .verification/finops-verified`. The scoring re-verified the sealed ledger, both evaluation snapshot manifests before and after execution, and the review binding. It graded every SQL answer in `meridian-worker:v3` on `evaluation_a` and `evaluation_b`.
