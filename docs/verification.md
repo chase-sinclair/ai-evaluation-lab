@@ -1,4 +1,12 @@
 # Phase 0 / Phase 1 verification
+## Experiment 006 · offline scoring, November 15
+
+Drafted masked adequacy judgments for the 17 clarification wordings (AI-assisted, pending owner acceptance). Ran `python -m experiments.model_context.analysis results/meridian-model-context-r1-once --review .verification/model-context-reviewed.json --snapshots .verification/finops-verified`. The scoring re-verified the sealed ledger, both evaluation snapshot manifests before and after execution, and the review binding. It graded every SQL answer in `meridian-worker:v3` on `evaluation_a` and `evaluation_b`.
+
+- Report SHA-256 `4fcf8385ff23ed143b085624704b3964fc66b71e8557d44dbfd12b92b734764e`. Reviewed worksheet SHA-256 `c3cd39772f04bba5c9b8ec7727c870f163948c32bf8422fcf5aa1edb0c1353f4`.
+- Cross-checked the cell totals in [scored results](experiment06_scored_results.md) against an independent recount from the per-request grades in `.verification/model-context-cases.json`. The SQL and clarification subtotals sum to each draw score.
+- No code changed. Only documentation was added.
+
 ## Experiment 006 · one-time acquisition sealed, November 15
 
 Ran `scripts.acquire_model_context` once, with owner approval of proposal `f9fd35762130871a80c4a24d28dae47a3bf9f500c5d4f7185cb77fe21ba458f0` and a $15.00 cap, at clean revision `402067955cbc2930d9d3f6b32a2ed104ad2015a2` (also `origin/main`). The 432 requests all finished. There were no failures, exhaustions, guard stops or unaccounted attempts. Accounted usage-priced spend was $0.825245080.

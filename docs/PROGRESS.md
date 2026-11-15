@@ -1,5 +1,26 @@
 # Progress — November 15, 2026
 
+## Experiment 006 · scored offline, pending owner acceptance
+
+**Status:** graded offline. The clarification adjudication is an AI-assisted draft, and the results are provisional until the owner accepts it. [Scored results](experiment06_scored_results.md)
+
+**Result.** Mean correct decisions out of 36 over three draws:
+- Luna with curated context: 15.3 (draws 20, 14, 12)
+- Sol with schema only: 6.7 (8, 6, 6)
+- Sol with curated context: 24.0 (26, 23, 23)
+- Luna with schema only: 3.7 (4, 4, 3)
+
+Paired on the same question and draw, Luna with curated context gained 30 decisions and lost 4 against Sol with schema only, at about 29% of its usage-priced cost.
+
+**Adjudication.** Claude drafted judgments on the 17 masked clarification wordings, using a rubric from the owner-accepted 005 precedents: 9 adequate. Clarification credit was 0–2 per draw, and every ordering holds on financial SQL alone.
+
+**Evidence.** The report is `.verification/model-context-report.json`, SHA-256 `4fcf8385ff23ed143b085624704b3964fc66b71e8557d44dbfd12b92b734764e`. The reviewed worksheet SHA-256 is `c3cd39772f04bba5c9b8ec7727c870f163948c32bf8422fcf5aa1edb0c1353f4`. Per-request grades are in `.verification/model-context-cases.json`. All are ignored and local.
+
+**Next steps.**
+1. The owner accepts or amends the drafted judgments in `.verification/model-context-review-notes.json`. If any are amended, rerun the scoring command.
+2. Owner architectural review of the scored results.
+3. Publication package and portfolio update, as a separate decision.
+
 ## Experiment 006 · acquisition sealed, masked review and grading pending
 
 **Status:** the one-time run is complete and sealed. No scores are reported at this checkpoint.
