@@ -1,4 +1,12 @@
 # Phase 0 / Phase 1 verification
+## Experiment 006 · one-time acquisition sealed, November 15
+
+Ran `scripts.acquire_model_context` once, with owner approval of proposal `f9fd35762130871a80c4a24d28dae47a3bf9f500c5d4f7185cb77fe21ba458f0` and a $15.00 cap, at clean revision `402067955cbc2930d9d3f6b32a2ed104ad2015a2` (also `origin/main`). The 432 requests all finished. There were no failures, exhaustions, guard stops or unaccounted attempts. Accounted usage-priced spend was $0.825245080.
+
+- Seal SHA-256 `54a0290a8aea3b1712e0ff8670e1b16d95b266016051a7640a55c0850d5707c7`. Ledger digest `b7f8195d716fb62cdfd87fb052e8bbd45f298a7c0fe3443bcc8d4f0aed25939f`. 2,162 files.
+- `python -m experiments.model_context.analysis` replayed the ledger without error. Every served model matched its request alias. The masked worksheet has 17 items, SHA-256 `accf654190f8b5f91d0464af6bfe47041deb524a81806139caf34cdef4e32c35`.
+- Raw results and the worksheet are local and gitignored. No grading or scores yet.
+
 ## Experiment 006 · offline implementation and freeze, November 15
 
 Built and froze the 432-request proposal at `experiments/model_context/proposals/r1`. Proposal digest `f9fd35762130871a80c4a24d28dae47a3bf9f500c5d4f7185cb77fe21ba458f0`, manifest file SHA-256 `ee5915f50fc4c4b433a50d7e016d249e1f0ba370be95d8bdc4cfe476af024a6d`, bodies digest `f019425b0b4072066009579f758fb7b60bedc6fecb616ba5a6b8223c85e57c58`. The build verifies the accepted 005 evaluation-r1 proposal digest and body bindings, then requires every Luna body to equal its 005 body. Tests confirm each Sol body differs only in `model`.

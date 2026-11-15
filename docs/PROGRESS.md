@@ -1,5 +1,27 @@
 # Progress — November 15, 2026
 
+## Experiment 006 · acquisition sealed, masked review and grading pending
+
+**Status:** the one-time run is complete and sealed. No scores are reported at this checkpoint.
+
+The owner approved proposal `f9fd35762130871a80c4a24d28dae47a3bf9f500c5d4f7185cb77fe21ba458f0` with a $15.00 cap. The run used clean revision `402067955cbc2930d9d3f6b32a2ed104ad2015a2`.
+
+**Run.** All 432 planned requests finished. There were zero failures, output exhaustions, guard stops, unsent requests or unaccounted attempts. Usage-priced cost was $0.825245080. Every response was served as the requested alias: `gpt-6-luna` and `gpt-6.1-sol`.
+
+**Seal.** Ledger digest `b7f8195d716fb62cdfd87fb052e8bbd45f298a7c0fe3443bcc8d4f0aed25939f`. Seal SHA-256 `54a0290a8aea3b1712e0ff8670e1b16d95b266016051a7640a55c0850d5707c7`. The 2,162 result files remain local and gitignored.
+
+**Replay.** `experiments.model_context.analysis` verified every request, wire body, receipt, charge and terminal answer against the frozen bodies and the seal. It wrote 17 distinct masked clarification wordings to the ignored file `.verification/model-context-clarifications.json`, SHA-256 `accf654190f8b5f91d0464af6bfe47041deb524a81806139caf34cdef4e32c35`.
+
+**Blockers.**
+- Owner adequacy review of the masked worksheet.
+- Docker Desktop running with the `meridian-worker:v3` image, needed for SQL grading on both evaluation snapshots.
+
+**Next steps.**
+1. The owner reviews the worksheet, setting `adequate` true or false for each item without changing anything else.
+2. Build the v3 worker image.
+3. Run `python -m experiments.model_context.analysis results/meridian-model-context-r1-once --review <reviewed.json> --snapshots .verification/finops-verified`.
+4. Owner review of the scored results before any publication.
+
 ## Experiment 006 · model tier against context, frozen and awaiting owner approval
 
 **Status:** offline implementation complete. No inference has been sent.
