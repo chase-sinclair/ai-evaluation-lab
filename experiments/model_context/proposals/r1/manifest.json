@@ -1,0 +1,4394 @@
+{
+  "version": "meridian-model-context-r1-once",
+  "result_directory": "results/meridian-model-context-r1-once",
+  "design": "docs/experiment06_model_context_design.md",
+  "parent_evaluation_proposal": "4eb6e593374585e11b349cc1341c82bda22048eb2a6ff69560dc7a82d214d36f",
+  "models": {
+    "luna": "gpt-6-luna",
+    "sol": "gpt-6.1-sol"
+  },
+  "arms": [
+    "A",
+    "B"
+  ],
+  "draws": 3,
+  "order_seed": 6006,
+  "reasoning": "medium",
+  "service_tier": "default",
+  "output_per_request": 25000,
+  "sdk_retries": 0,
+  "http_timeout_seconds": {
+    "read": 900,
+    "connect": 10,
+    "write": 30,
+    "pool": 10
+  },
+  "request_ceiling": 432,
+  "requests": [
+    {
+      "id": "Q11-luna-A-1",
+      "question": "Q11",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "4a96e0cb6c5d010fddb54befc95ece86d2eb2e95c4043a24734c6980efd5dc6a",
+      "input_bound": 7378,
+      "worst_case_usd": "0.01342225"
+    },
+    {
+      "id": "Q11-luna-B-1",
+      "question": "Q11",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "204c7e42b99175a2d61f4d54a6eb5b271eab00abbb6018c9a53ce4a324d49ca3",
+      "input_bound": 12400,
+      "worst_case_usd": "0.01405"
+    },
+    {
+      "id": "Q11-sol-A-1",
+      "question": "Q11",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "f1f5c871c82d3402df68512037aa340a1b43e0b918879d7fce42484771e27c40",
+      "input_bound": 7379,
+      "worst_case_usd": "0.2684475"
+    },
+    {
+      "id": "Q11-sol-B-1",
+      "question": "Q11",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "9c4f1de2a7e6af1545210a84b1089c2029f5a61e897f419334dc4ca851375801",
+      "input_bound": 12401,
+      "worst_case_usd": "0.2810025"
+    },
+    {
+      "id": "Q10-luna-B-1",
+      "question": "Q10",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "c64b5aacd6687356d6ed7be0afb4c5455ce8d0ae65ade47dcf27ceaf09676512",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q10-sol-A-1",
+      "question": "Q10",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "223d083bb49154437b233350d379f391f627e8936dadb1b5e0a10d0f6e361384",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q10-sol-B-1",
+      "question": "Q10",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "48be4e7efff248e295d3575b596315751ec2a6aed7e674eaa77e51df83bf0b43",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q10-luna-A-1",
+      "question": "Q10",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "35adf5d6f77914c4ec8658605fad03925c5a3d75b22e023b7c2f3b0d969d7f39",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q20-sol-A-1",
+      "question": "Q20",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "ced9cc3a2e5c7a6e58da13536a1086a5976209820e8cdf45618d2065f4f3b577",
+      "input_bound": 7383,
+      "worst_case_usd": "0.2684575"
+    },
+    {
+      "id": "Q20-sol-B-1",
+      "question": "Q20",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "f468f0eae8cfb6b76fbcd130a08d7ad8f8b45b9649ec63290a87e21e08866f18",
+      "input_bound": 12405,
+      "worst_case_usd": "0.2810125"
+    },
+    {
+      "id": "Q20-luna-A-1",
+      "question": "Q20",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "a77427c4ace19d612b70de9f8befc9a3cc2d6ed635ee280c7f002686465a7d5d",
+      "input_bound": 7382,
+      "worst_case_usd": "0.01342275"
+    },
+    {
+      "id": "Q20-luna-B-1",
+      "question": "Q20",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "ae213c24a58140abe2dad60b63575647a1194111b05348a9180674af78ef3fcc",
+      "input_bound": 12404,
+      "worst_case_usd": "0.0140505"
+    },
+    {
+      "id": "Q24-sol-B-1",
+      "question": "Q24",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "c8e1e6b141393cfdc7c8dc269445d14311814de9a57b594c17f8bcb9917fd4d9",
+      "input_bound": 12416,
+      "worst_case_usd": "0.28104"
+    },
+    {
+      "id": "Q24-luna-A-1",
+      "question": "Q24",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "207bb282058f3ef6344c8c9d0e900d37b5528480f90c2bf18fbda07468ce5730",
+      "input_bound": 7393,
+      "worst_case_usd": "0.013424125"
+    },
+    {
+      "id": "Q24-luna-B-1",
+      "question": "Q24",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "3251dc53385441b8b282530e2ab42a973781caaa853e84a4f5086f7db7be7fc1",
+      "input_bound": 12415,
+      "worst_case_usd": "0.014051875"
+    },
+    {
+      "id": "Q24-sol-A-1",
+      "question": "Q24",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "2cf3e700e34c87562026f973e84cdeb87277c374972de493b46971fe12c6b8d6",
+      "input_bound": 7394,
+      "worst_case_usd": "0.268485"
+    },
+    {
+      "id": "Q16-luna-A-1",
+      "question": "Q16",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "046f1a57fa296f33c212a70be406b755c7d76518e0f74688eea5bd58d1131ddd",
+      "input_bound": 7405,
+      "worst_case_usd": "0.013425625"
+    },
+    {
+      "id": "Q16-luna-B-1",
+      "question": "Q16",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "b75d836dd438b7170531dfacbc251e6e7aba8a44054199d61ffce573c95fb036",
+      "input_bound": 12427,
+      "worst_case_usd": "0.014053375"
+    },
+    {
+      "id": "Q16-sol-A-1",
+      "question": "Q16",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "9a651701579415d4a5455b88d40eff9f241f3130163169880c18bfeb943fd6b6",
+      "input_bound": 7406,
+      "worst_case_usd": "0.268515"
+    },
+    {
+      "id": "Q16-sol-B-1",
+      "question": "Q16",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "4364b6ade9f7ff8c79fd52bf1fa7bf1a1181b0ef9f06e4d176c6f997730cf88a",
+      "input_bound": 12428,
+      "worst_case_usd": "0.28107"
+    },
+    {
+      "id": "Q09-luna-B-1",
+      "question": "Q09",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "9f55dbdd9b2e3da15162fe22018e4c68bf455fa006a855b2c8363719a7ddb934",
+      "input_bound": 12401,
+      "worst_case_usd": "0.014050125"
+    },
+    {
+      "id": "Q09-sol-A-1",
+      "question": "Q09",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "2966ef15166c2dc297f8d4aac7ee713fb76ff1fe1704df738d60894c27362eda",
+      "input_bound": 7380,
+      "worst_case_usd": "0.26845"
+    },
+    {
+      "id": "Q09-sol-B-1",
+      "question": "Q09",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "c4991aa46a7818426572c2978d74de7ffe98a8187dedb771db97bfbb0c1d505d",
+      "input_bound": 12402,
+      "worst_case_usd": "0.281005"
+    },
+    {
+      "id": "Q09-luna-A-1",
+      "question": "Q09",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "48ca1d3b40c7f70990933d6a056980fce544c1c903cd527f8f2552c1b4c58443",
+      "input_bound": 7379,
+      "worst_case_usd": "0.013422375"
+    },
+    {
+      "id": "Q21-sol-A-1",
+      "question": "Q21",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "14d113a32f9937050334d512683bf4ad05f1572ce1df6ead7f843a17120bfb81",
+      "input_bound": 7384,
+      "worst_case_usd": "0.26846"
+    },
+    {
+      "id": "Q21-sol-B-1",
+      "question": "Q21",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "7d11089c60ebef50daa7e30131ea4bc4a5fc8455cddfb7a3866d0e416eb116ac",
+      "input_bound": 12406,
+      "worst_case_usd": "0.281015"
+    },
+    {
+      "id": "Q21-luna-A-1",
+      "question": "Q21",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "644805a44054108adb7e2b1b52bfc4b830a7e98997b23ef6dd4376dc76994de5",
+      "input_bound": 7383,
+      "worst_case_usd": "0.013422875"
+    },
+    {
+      "id": "Q21-luna-B-1",
+      "question": "Q21",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "7346d1df8a7d12c33ac72ff1e6ffdd58ae880f00a9841a7032d8ddbc573f74cc",
+      "input_bound": 12405,
+      "worst_case_usd": "0.014050625"
+    },
+    {
+      "id": "Q35-sol-B-1",
+      "question": "Q35",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "3e201ca27f2d8634247534a59ca364f93942e4c9c81c4f4a429e8d742189f393",
+      "input_bound": 12370,
+      "worst_case_usd": "0.280925"
+    },
+    {
+      "id": "Q35-luna-A-1",
+      "question": "Q35",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "850192c3b397eec7685ed27e88f4b5da86f73dc547c1e223dbbee43e9837a8ac",
+      "input_bound": 7347,
+      "worst_case_usd": "0.013418375"
+    },
+    {
+      "id": "Q35-luna-B-1",
+      "question": "Q35",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "6c9b06c993a337a73ba760f21f5248136cccf9931658c1a97b3743811cb73427",
+      "input_bound": 12369,
+      "worst_case_usd": "0.014046125"
+    },
+    {
+      "id": "Q35-sol-A-1",
+      "question": "Q35",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "269909fd80f39232b53c7869962b87281c6dcb3b22495a6ab5445e97dcd600f4",
+      "input_bound": 7348,
+      "worst_case_usd": "0.26837"
+    },
+    {
+      "id": "Q28-luna-A-1",
+      "question": "Q28",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "190cb543a8214bc1abd1e545ca6dcebd62ba57d8977fb92b322064923b317f28",
+      "input_bound": 7390,
+      "worst_case_usd": "0.01342375"
+    },
+    {
+      "id": "Q28-luna-B-1",
+      "question": "Q28",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "33715a35bc460f48c043118955ab8cdd9fe26ce96a6bab8303796145cf3f6b0c",
+      "input_bound": 12412,
+      "worst_case_usd": "0.0140515"
+    },
+    {
+      "id": "Q28-sol-A-1",
+      "question": "Q28",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "8832b45e9b3e3b77bc3191b5b336a9c60cc954dd349e0b749451b67605a20acf",
+      "input_bound": 7391,
+      "worst_case_usd": "0.2684775"
+    },
+    {
+      "id": "Q28-sol-B-1",
+      "question": "Q28",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "605269584f3203dcf6e24434f7ca1d13beebee7a99923b828459db56c990dad9",
+      "input_bound": 12413,
+      "worst_case_usd": "0.2810325"
+    },
+    {
+      "id": "Q18-luna-B-1",
+      "question": "Q18",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "8bb533e44a69ae61eeb8a4ca08e1ffdc433ae546806b25227dc4eddab47c89c6",
+      "input_bound": 12411,
+      "worst_case_usd": "0.014051375"
+    },
+    {
+      "id": "Q18-sol-A-1",
+      "question": "Q18",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "0d1524141d0758586adbba935ef096f5e8ea044f795edeebc4ca8a50e429b0e3",
+      "input_bound": 7390,
+      "worst_case_usd": "0.268475"
+    },
+    {
+      "id": "Q18-sol-B-1",
+      "question": "Q18",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "1adcb05e5d036d763991e03a19a750f3c8916cda258b7d5cd4b4d4c0e015c5d9",
+      "input_bound": 12412,
+      "worst_case_usd": "0.28103"
+    },
+    {
+      "id": "Q18-luna-A-1",
+      "question": "Q18",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "6cc8176148c057ca2daacd1c74010c358e67698c3e5f4294b1c0821bca7671b5",
+      "input_bound": 7389,
+      "worst_case_usd": "0.013423625"
+    },
+    {
+      "id": "Q01-sol-A-1",
+      "question": "Q01",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "f4719b4fed3121fccde98011bfba2e481d46ef056f0b9f0b76693f63a33bfccd",
+      "input_bound": 7341,
+      "worst_case_usd": "0.2683525"
+    },
+    {
+      "id": "Q01-sol-B-1",
+      "question": "Q01",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "773232c324b07be6b2cfbbc752b4466c841dea9eadc03b331d4cd5337ad7ec88",
+      "input_bound": 12363,
+      "worst_case_usd": "0.2809075"
+    },
+    {
+      "id": "Q01-luna-A-1",
+      "question": "Q01",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "f2b940be1a08107de6f0ba16c24fd9947d4de97d871d49617acd0e8e5432eddb",
+      "input_bound": 7340,
+      "worst_case_usd": "0.0134175"
+    },
+    {
+      "id": "Q01-luna-B-1",
+      "question": "Q01",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "e1a3c19b959e8577c4352499c169d10ebe155256c015fe9f6635014dcb55d3b5",
+      "input_bound": 12362,
+      "worst_case_usd": "0.01404525"
+    },
+    {
+      "id": "Q23-sol-B-1",
+      "question": "Q23",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "afbeca9217ed546ca6c139e6dd3271abab82e49cdf5cfe62975cca3bb3c3dd14",
+      "input_bound": 12426,
+      "worst_case_usd": "0.281065"
+    },
+    {
+      "id": "Q23-luna-A-1",
+      "question": "Q23",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "eb614555049d0738d02ac3ae5cdf520366031f4f67878e60bbfb5136986998e0",
+      "input_bound": 7403,
+      "worst_case_usd": "0.013425375"
+    },
+    {
+      "id": "Q23-luna-B-1",
+      "question": "Q23",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "67d565f5a57c587fcb681e7b92136333f0d8ed581574bb9f13d2942e29935155",
+      "input_bound": 12425,
+      "worst_case_usd": "0.014053125"
+    },
+    {
+      "id": "Q23-sol-A-1",
+      "question": "Q23",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "5006ca23bd92b0c0edcd17087e8f23e9595b4c343b4a4110f486eea8e94599ad",
+      "input_bound": 7404,
+      "worst_case_usd": "0.26851"
+    },
+    {
+      "id": "Q02-luna-A-1",
+      "question": "Q02",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "a9d5d5a0b6a9444e24536cea94dcedc8f01e0fe5e49336d84a14bd91cc3d3320",
+      "input_bound": 7382,
+      "worst_case_usd": "0.01342275"
+    },
+    {
+      "id": "Q02-luna-B-1",
+      "question": "Q02",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "82f82a7eb79ca8bad3039ad936b2e7382c8f1d7a52e5e96dad30dd4be0df913c",
+      "input_bound": 12404,
+      "worst_case_usd": "0.0140505"
+    },
+    {
+      "id": "Q02-sol-A-1",
+      "question": "Q02",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "6f2e2053617a8c5afc339f61276eabf90b68ba2d6f4087cd5206a12050000abd",
+      "input_bound": 7383,
+      "worst_case_usd": "0.2684575"
+    },
+    {
+      "id": "Q02-sol-B-1",
+      "question": "Q02",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "5fafb15c4cf00adb75830cac3a34b6ebd6eadf9639fdafbe760863ce34c37802",
+      "input_bound": 12405,
+      "worst_case_usd": "0.2810125"
+    },
+    {
+      "id": "Q06-luna-B-1",
+      "question": "Q06",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "11ced0f75968b037c9e0d671188f633724fef7c195be6115b8447b970653aa0c",
+      "input_bound": 12421,
+      "worst_case_usd": "0.014052625"
+    },
+    {
+      "id": "Q06-sol-A-1",
+      "question": "Q06",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "b403b05a80fab5da6b500f8de58fcce06eaccb2f2045729f1a99cbc3ca0e3b91",
+      "input_bound": 7400,
+      "worst_case_usd": "0.2685"
+    },
+    {
+      "id": "Q06-sol-B-1",
+      "question": "Q06",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "c3ae03e712b08d7e89a55b0b265c977488ad1f8148402335b642e9d739e7623b",
+      "input_bound": 12422,
+      "worst_case_usd": "0.281055"
+    },
+    {
+      "id": "Q06-luna-A-1",
+      "question": "Q06",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "0f7d1526d56f0269d5f1efc8c5954269c8fdd0afcd3715e5f36f91e050d31be7",
+      "input_bound": 7399,
+      "worst_case_usd": "0.013424875"
+    },
+    {
+      "id": "Q32-sol-A-1",
+      "question": "Q32",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "aa8622b5e73d2057dcdfa883bc5a4b847349454a49dd8e82ca64f5cd1d0f98e2",
+      "input_bound": 7429,
+      "worst_case_usd": "0.2685725"
+    },
+    {
+      "id": "Q32-sol-B-1",
+      "question": "Q32",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "7e346e83e5988971b8a981e88e2ef134405e6d8a5a3bb331b7ea2b2618d8026a",
+      "input_bound": 12451,
+      "worst_case_usd": "0.2811275"
+    },
+    {
+      "id": "Q32-luna-A-1",
+      "question": "Q32",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "1b47c8b8497790500f31323158c31b874690994961cd7b6322d4eecf0f1808d9",
+      "input_bound": 7428,
+      "worst_case_usd": "0.0134285"
+    },
+    {
+      "id": "Q32-luna-B-1",
+      "question": "Q32",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "0bd1b37cac44cb3eb8deeedac675dd11af42f28753cde28490f5e0ff47d59cb6",
+      "input_bound": 12450,
+      "worst_case_usd": "0.01405625"
+    },
+    {
+      "id": "Q30-sol-B-1",
+      "question": "Q30",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "c492b9cabd2ac665738014b2dc3e80f3d346db07645778ec3f947a25a5f71621",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q30-luna-A-1",
+      "question": "Q30",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "9823bcd8043780442608157593a41adb0985d9a6f0317ff32f7a6171dd0956e2",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q30-luna-B-1",
+      "question": "Q30",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "2e15538dd8ac0a77a9b6d97a3b56bfae7cca3334ecc55b795eeb559115208e0d",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q30-sol-A-1",
+      "question": "Q30",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "b6c042dfaf2b45f33dc08ef26154193295eb48c289cb606d72f7a576ee33e4d3",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q05-luna-A-1",
+      "question": "Q05",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "c36b8f5982da3ba3bd3629c1d28a88f9e406044a777e1bb257c7ecdc48e43cf1",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q05-luna-B-1",
+      "question": "Q05",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "4ec3794d5aaa88fe04f1b15cdf800c0cc015f353e579a4f353d5c5dd740e96fe",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q05-sol-A-1",
+      "question": "Q05",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "2e0bdd6235aed31b03d2b2e5390875569417718a758cbff09d331afeff013d5a",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q05-sol-B-1",
+      "question": "Q05",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "9af688621a2912d3687371ed857a08c1b8011822c0da1b8360eb70ed1756e2e7",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q03-luna-B-1",
+      "question": "Q03",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "8e93fda3091e049ed8c67d2402b9d0ac4a5b47ba46c56cec11ac994b4d6c4d29",
+      "input_bound": 12379,
+      "worst_case_usd": "0.014047375"
+    },
+    {
+      "id": "Q03-sol-A-1",
+      "question": "Q03",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "53006788b4daff2b6e7935c6a764bb0dfd7e19e33c2b59f0a9e5c862dcca2dfd",
+      "input_bound": 7358,
+      "worst_case_usd": "0.268395"
+    },
+    {
+      "id": "Q03-sol-B-1",
+      "question": "Q03",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "9664df3d909b9bfd2d9d38213a23a7eea7665dd466920cb5d9c451824ba4c02f",
+      "input_bound": 12380,
+      "worst_case_usd": "0.28095"
+    },
+    {
+      "id": "Q03-luna-A-1",
+      "question": "Q03",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "7eeb11476e09041c8bd1e236b63ada95713c5a1117357041c86902b277582cc1",
+      "input_bound": 7357,
+      "worst_case_usd": "0.013419625"
+    },
+    {
+      "id": "Q25-sol-A-1",
+      "question": "Q25",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "cd02b6da950a02e7f24523c8a2fb998dc9033c510704306e258f2394d7c2d9c6",
+      "input_bound": 7377,
+      "worst_case_usd": "0.2684425"
+    },
+    {
+      "id": "Q25-sol-B-1",
+      "question": "Q25",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "d5fc399467e5767a79aecac4ec033397ca2c9d79c88ffe8cbca2dc5b21e1e32a",
+      "input_bound": 12399,
+      "worst_case_usd": "0.2809975"
+    },
+    {
+      "id": "Q25-luna-A-1",
+      "question": "Q25",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "a251e8f19b5682e5f014e1ac3e7241a868941765a890424f416e2c0e24f9ffbc",
+      "input_bound": 7376,
+      "worst_case_usd": "0.013422"
+    },
+    {
+      "id": "Q25-luna-B-1",
+      "question": "Q25",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "72fe8f2dd70ae58b6f6308cbf169785860a5d2959da2513be3ebb665b8d87474",
+      "input_bound": 12398,
+      "worst_case_usd": "0.01404975"
+    },
+    {
+      "id": "Q17-sol-B-1",
+      "question": "Q17",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "a8e1527801fae7c488082331d823fce6d4ce33720aacbafe0ec92134170c44db",
+      "input_bound": 12391,
+      "worst_case_usd": "0.2809775"
+    },
+    {
+      "id": "Q17-luna-A-1",
+      "question": "Q17",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "03bfa61be657a595c990d67d92238f02c4c7a2f3ca5dc3d8cb2a60cead4a6127",
+      "input_bound": 7368,
+      "worst_case_usd": "0.013421"
+    },
+    {
+      "id": "Q17-luna-B-1",
+      "question": "Q17",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "0fa6bc273a0118cf50e8584c420a7c2fd11f67fe34c4d6ecce4418d1ad09518e",
+      "input_bound": 12390,
+      "worst_case_usd": "0.01404875"
+    },
+    {
+      "id": "Q17-sol-A-1",
+      "question": "Q17",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "6bbe04c99959d59082c56fdaf7b3fa9e76607beac7cf7d246396b328b56aae06",
+      "input_bound": 7369,
+      "worst_case_usd": "0.2684225"
+    },
+    {
+      "id": "Q08-luna-A-1",
+      "question": "Q08",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "d4bfe8364b1a416dd156e16d543e4563ac5ccd7ec590ea7dba1fb20ddfd25d3d",
+      "input_bound": 7400,
+      "worst_case_usd": "0.013425"
+    },
+    {
+      "id": "Q08-luna-B-1",
+      "question": "Q08",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "21b6df43d2f6fedd072d36802e05deb1756f6a398eb469b2d9dc53dd8f655150",
+      "input_bound": 12422,
+      "worst_case_usd": "0.01405275"
+    },
+    {
+      "id": "Q08-sol-A-1",
+      "question": "Q08",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "ba4d0a8fb25a756dce92230344017e7321c59744685c8a44b7bd6d0c1b93edd1",
+      "input_bound": 7401,
+      "worst_case_usd": "0.2685025"
+    },
+    {
+      "id": "Q08-sol-B-1",
+      "question": "Q08",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "b651bc86d7126edb1396d7767b9f07a7df288c5d7847bcddd8df74392b9e9496",
+      "input_bound": 12423,
+      "worst_case_usd": "0.2810575"
+    },
+    {
+      "id": "Q13-luna-B-1",
+      "question": "Q13",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "8de5ee861ce939277a69d15b05f8675bf43da991600c03e2847cddf318ba7280",
+      "input_bound": 12406,
+      "worst_case_usd": "0.01405075"
+    },
+    {
+      "id": "Q13-sol-A-1",
+      "question": "Q13",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "83ca4cce315f3f3deb9f0e06b18ec264bac1770aa154ccadbfc88d7bd7fd56ad",
+      "input_bound": 7385,
+      "worst_case_usd": "0.2684625"
+    },
+    {
+      "id": "Q13-sol-B-1",
+      "question": "Q13",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "0a378ccfd0976efd36b19da0a38aee7cd6051bbf1a17e15744e692885b950d74",
+      "input_bound": 12407,
+      "worst_case_usd": "0.2810175"
+    },
+    {
+      "id": "Q13-luna-A-1",
+      "question": "Q13",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "22c40f3dec96a9c7de885b210509158213bd9f3e078880fb38f875ea8deb223e",
+      "input_bound": 7384,
+      "worst_case_usd": "0.013423"
+    },
+    {
+      "id": "Q34-sol-A-1",
+      "question": "Q34",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "3c78d0d04e6611f12b12483fb816e47606fc08a969b81a65d752bb0fb1347376",
+      "input_bound": 7351,
+      "worst_case_usd": "0.2683775"
+    },
+    {
+      "id": "Q34-sol-B-1",
+      "question": "Q34",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "c4ec04e94d3bc7f9e0ed89244804ae4f5072b952b811aabad7d1798093e27222",
+      "input_bound": 12373,
+      "worst_case_usd": "0.2809325"
+    },
+    {
+      "id": "Q34-luna-A-1",
+      "question": "Q34",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "81e72343d55616fe943ebba7b30360b632312b01809a6cd0be025d9bd9b41352",
+      "input_bound": 7350,
+      "worst_case_usd": "0.01341875"
+    },
+    {
+      "id": "Q34-luna-B-1",
+      "question": "Q34",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "cf1e261584e2e5b69f9758c279c244c67390a472932241a9ff82712e6a13375a",
+      "input_bound": 12372,
+      "worst_case_usd": "0.0140465"
+    },
+    {
+      "id": "Q22-sol-B-1",
+      "question": "Q22",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "094630bb1bfe96c62d1abe23fc42871397eaab5930f19cbda8bff3a61075b9ac",
+      "input_bound": 12392,
+      "worst_case_usd": "0.28098"
+    },
+    {
+      "id": "Q22-luna-A-1",
+      "question": "Q22",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "3c5a18f999b3744475a47a29ad8cd2da618b76dff52e16a368b3b3d40ef324dd",
+      "input_bound": 7369,
+      "worst_case_usd": "0.013421125"
+    },
+    {
+      "id": "Q22-luna-B-1",
+      "question": "Q22",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "ef33994a14ab00fd95eb3da1116783ccd9c37083be3a94e8473d9006891f111f",
+      "input_bound": 12391,
+      "worst_case_usd": "0.014048875"
+    },
+    {
+      "id": "Q22-sol-A-1",
+      "question": "Q22",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "56fcb39a93550ae9dea43738f7ba9f398cb933865e28ca529d62491c5018c6e2",
+      "input_bound": 7370,
+      "worst_case_usd": "0.268425"
+    },
+    {
+      "id": "Q26-luna-A-1",
+      "question": "Q26",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "f20f6e3c59c614b2ed14d4fa26cee0bbe3b474ee4ff029fe968b5e3db6c89d9b",
+      "input_bound": 7380,
+      "worst_case_usd": "0.0134225"
+    },
+    {
+      "id": "Q26-luna-B-1",
+      "question": "Q26",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "a52413aa94a19d712c76e578bf4e1bac8925b8c1b6828a124fe41a0bdec24a34",
+      "input_bound": 12402,
+      "worst_case_usd": "0.01405025"
+    },
+    {
+      "id": "Q26-sol-A-1",
+      "question": "Q26",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "fb5a75cf6391f6f17a23af26c5990d3d5ee240682a4d5170eb940346559d02e3",
+      "input_bound": 7381,
+      "worst_case_usd": "0.2684525"
+    },
+    {
+      "id": "Q26-sol-B-1",
+      "question": "Q26",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "b9eb1bdf3a3a706f54f6b5bc5cd2ebe784adbcdebfe77b5d29555a0e2726d239",
+      "input_bound": 12403,
+      "worst_case_usd": "0.2810075"
+    },
+    {
+      "id": "Q14-luna-B-1",
+      "question": "Q14",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "98114830b9c2275ff577857f427b0b44d92fea623f423d28fa8f9c06dfc0b140",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q14-sol-A-1",
+      "question": "Q14",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "3433edaefc5e98ed7a0d8f75dea6c2c4e3c61147f6e08b0944322bea52cab2f2",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q14-sol-B-1",
+      "question": "Q14",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "74f8f7b39ae17ac063e6ef8c32a5febcb882aa1d85515f339987f1ab9e756361",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q14-luna-A-1",
+      "question": "Q14",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "53c59a5d564239115aaed04e69f3a21fbf3ed86e28592214c70749c2b86c1d36",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q07-sol-A-1",
+      "question": "Q07",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "21376629ec96861ca79b50ad85f1539d53abab9709fc9656e2cb2735ef3970ee",
+      "input_bound": 7415,
+      "worst_case_usd": "0.2685375"
+    },
+    {
+      "id": "Q07-sol-B-1",
+      "question": "Q07",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "6ddc5e230f7eee35d876c7b2a4840fafd1370fd4a003d2c38ec7f9df0fdd28f6",
+      "input_bound": 12437,
+      "worst_case_usd": "0.2810925"
+    },
+    {
+      "id": "Q07-luna-A-1",
+      "question": "Q07",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "588159d64a7e974c7e42c088648333fbb4aef2830a50bf37cea6b05ac588f792",
+      "input_bound": 7414,
+      "worst_case_usd": "0.01342675"
+    },
+    {
+      "id": "Q07-luna-B-1",
+      "question": "Q07",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "468644a7b1fc0cd57a5ac8f31fc16f7888e1326e7b9fa838d47bed296d9180cb",
+      "input_bound": 12436,
+      "worst_case_usd": "0.0140545"
+    },
+    {
+      "id": "Q12-sol-B-1",
+      "question": "Q12",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "57b8cab0ed20d8b4d98b2c304532d96217bba1eb7c0e6469b67bcc730685c071",
+      "input_bound": 12396,
+      "worst_case_usd": "0.28099"
+    },
+    {
+      "id": "Q12-luna-A-1",
+      "question": "Q12",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "2a1510d583e413854dbea0445412668ac2d7c9c5d0d777c33a1bd8fdd888243c",
+      "input_bound": 7373,
+      "worst_case_usd": "0.013421625"
+    },
+    {
+      "id": "Q12-luna-B-1",
+      "question": "Q12",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "60b4ea060eb6e556d4f3091bb3cdcc1173f591afc1fceba34e6bcb6524237606",
+      "input_bound": 12395,
+      "worst_case_usd": "0.014049375"
+    },
+    {
+      "id": "Q12-sol-A-1",
+      "question": "Q12",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "4bd198afea7e6c70203071b29a51c94b3f11ee9361c03ffe95bd36b07c45b772",
+      "input_bound": 7374,
+      "worst_case_usd": "0.268435"
+    },
+    {
+      "id": "Q27-luna-A-1",
+      "question": "Q27",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "e00fdaa7f785358a18879a4e8c3599575075820072e35c300ef9cb2b0dc1935a",
+      "input_bound": 7383,
+      "worst_case_usd": "0.013422875"
+    },
+    {
+      "id": "Q27-luna-B-1",
+      "question": "Q27",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "c88be7c1628e69b0e2e2ec11436beeb9365a416d49daba0ae3c41af1d3f87032",
+      "input_bound": 12405,
+      "worst_case_usd": "0.014050625"
+    },
+    {
+      "id": "Q27-sol-A-1",
+      "question": "Q27",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "b473a77e317cab80260a33a896691bd868119e88f1d43d82254d1d80801163c8",
+      "input_bound": 7384,
+      "worst_case_usd": "0.26846"
+    },
+    {
+      "id": "Q27-sol-B-1",
+      "question": "Q27",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "969c4491618ee0c625da86418d36acc43f1e6147350c74a443e0ebc9e69075be",
+      "input_bound": 12406,
+      "worst_case_usd": "0.281015"
+    },
+    {
+      "id": "Q29-luna-B-1",
+      "question": "Q29",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "47fbc6cb08648db2bd2c3dd94788e9a2e629eb2db01adf076cf8aa67a700889e",
+      "input_bound": 12405,
+      "worst_case_usd": "0.014050625"
+    },
+    {
+      "id": "Q29-sol-A-1",
+      "question": "Q29",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "806ac2cb516e6ea33c94265b60bab32270cd6a549ee7f1855cff50dde93cf7b0",
+      "input_bound": 7384,
+      "worst_case_usd": "0.26846"
+    },
+    {
+      "id": "Q29-sol-B-1",
+      "question": "Q29",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "c10bf1380c7126156f8a36934a9b428c6b46bb46618d3c35f4896e1493aea0d9",
+      "input_bound": 12406,
+      "worst_case_usd": "0.281015"
+    },
+    {
+      "id": "Q29-luna-A-1",
+      "question": "Q29",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "cd365e4f4b8c5c2813822cdfe5601a01989435a4e93b6d8b139519130a9ff7ef",
+      "input_bound": 7383,
+      "worst_case_usd": "0.013422875"
+    },
+    {
+      "id": "Q31-sol-A-1",
+      "question": "Q31",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "0653876711264b2a7afe568c2ded33ffae1ac5850fa009a99440ca85faafa53e",
+      "input_bound": 7375,
+      "worst_case_usd": "0.2684375"
+    },
+    {
+      "id": "Q31-sol-B-1",
+      "question": "Q31",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "d3a70df4d0342ad0b24605cbc62953d9885d4351ea61f724330dee730afea6cc",
+      "input_bound": 12397,
+      "worst_case_usd": "0.2809925"
+    },
+    {
+      "id": "Q31-luna-A-1",
+      "question": "Q31",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "851385280cf62ec683c6a72a6d25ee39e4bcf20daccad1dbbf5c6e7f01ca66d1",
+      "input_bound": 7374,
+      "worst_case_usd": "0.01342175"
+    },
+    {
+      "id": "Q31-luna-B-1",
+      "question": "Q31",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "6e2af64ddd5e9a1b846d647b1ed16d89c2bc443da6b5b96625c682455d9fa23a",
+      "input_bound": 12396,
+      "worst_case_usd": "0.0140495"
+    },
+    {
+      "id": "Q15-sol-B-1",
+      "question": "Q15",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "21d20481b16bbffc3d9fa19a7c07daa026eca5778b6095044cea37bdbb41b61f",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q15-luna-A-1",
+      "question": "Q15",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "ae67ed27bd603599cdf0b09c4f4107c046d99c25e7fb66ffbd274729ce656da8",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q15-luna-B-1",
+      "question": "Q15",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "e4f0e39ef6ae25f2dbe07dfc814957a22f1e97e9ad2f53cee44a231f19b4d8d2",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q15-sol-A-1",
+      "question": "Q15",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "4417f468961c12546fca6c17f64c4cdd530e414bfe68436997052fd2d3e91248",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q04-luna-A-1",
+      "question": "Q04",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "c4b3f0881346991b975977054249e7b1d853fda51769ebafccd38895fe567d2d",
+      "input_bound": 7366,
+      "worst_case_usd": "0.01342075"
+    },
+    {
+      "id": "Q04-luna-B-1",
+      "question": "Q04",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "11284047e2d3bf7688d91baa2b0ea835b4e868549357fa183590201c4a42d35e",
+      "input_bound": 12388,
+      "worst_case_usd": "0.0140485"
+    },
+    {
+      "id": "Q04-sol-A-1",
+      "question": "Q04",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "69f261464c0ef4e88bf58e9d788b153646b1628bd586561de767562e0ffc31b3",
+      "input_bound": 7367,
+      "worst_case_usd": "0.2684175"
+    },
+    {
+      "id": "Q04-sol-B-1",
+      "question": "Q04",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "22180cf917b850675f7cf24903b22d1a304c75cf93d058a3dcee3a834bd62818",
+      "input_bound": 12389,
+      "worst_case_usd": "0.2809725"
+    },
+    {
+      "id": "Q33-luna-B-1",
+      "question": "Q33",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "435bef9baacb6ce3a2d64e1938dfd2234eda9b8469e8612774f521beadd600be",
+      "input_bound": 12369,
+      "worst_case_usd": "0.014046125"
+    },
+    {
+      "id": "Q33-sol-A-1",
+      "question": "Q33",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "05e2624d4be82c3647eb80a84da913670f814e2b273e1b4fc64e28c08b8bf62d",
+      "input_bound": 7348,
+      "worst_case_usd": "0.26837"
+    },
+    {
+      "id": "Q33-sol-B-1",
+      "question": "Q33",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "0e5b1313cc94f49e812ea39e896d41569d6df6b103be96eb059f1ebf897314f7",
+      "input_bound": 12370,
+      "worst_case_usd": "0.280925"
+    },
+    {
+      "id": "Q33-luna-A-1",
+      "question": "Q33",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "c19ca22be4386c07e094efc23a143bc7d767f75fe6a3d01a9126e9190c2abd0d",
+      "input_bound": 7347,
+      "worst_case_usd": "0.013418375"
+    },
+    {
+      "id": "Q19-sol-A-1",
+      "question": "Q19",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "8974dfdecf8b3d46fb924ae62caf5c675e5e0a4cddd753e52f5a2e8bf50ffefb",
+      "input_bound": 7373,
+      "worst_case_usd": "0.2684325"
+    },
+    {
+      "id": "Q19-sol-B-1",
+      "question": "Q19",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "bd6668094f8f3a634ab3be69c36b9c2e86734358a4a76e8977b8d818fac0e277",
+      "input_bound": 12395,
+      "worst_case_usd": "0.2809875"
+    },
+    {
+      "id": "Q19-luna-A-1",
+      "question": "Q19",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "101fcff7c0d9fb4f844f8af1b6fa12d7a2a96e2e77b31b6cfe20d381c8f46b91",
+      "input_bound": 7372,
+      "worst_case_usd": "0.0134215"
+    },
+    {
+      "id": "Q19-luna-B-1",
+      "question": "Q19",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "abcc844964bd75a7db5adeb4483a7ebd4a1ae60ff869db723be9a1bf52ebd7f9",
+      "input_bound": 12394,
+      "worst_case_usd": "0.01404925"
+    },
+    {
+      "id": "Q36-sol-B-1",
+      "question": "Q36",
+      "model": "sol",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "6deb14ccf21f4484428c37b70d2a6ec502cb484e34b1c3a27cdb19a0a4c26ef7",
+      "input_bound": 12379,
+      "worst_case_usd": "0.2809475"
+    },
+    {
+      "id": "Q36-luna-A-1",
+      "question": "Q36",
+      "model": "luna",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "2bb011db2e3b52d05346dbb5ff20ff53f5fef1c3798e624a22850ef6e71c0b8c",
+      "input_bound": 7356,
+      "worst_case_usd": "0.0134195"
+    },
+    {
+      "id": "Q36-luna-B-1",
+      "question": "Q36",
+      "model": "luna",
+      "arm": "B",
+      "draw": 1,
+      "body_hash": "fa4caffc4a9ad7f079235c0b0973556ca157ac5d62e408a506f901374477d53c",
+      "input_bound": 12378,
+      "worst_case_usd": "0.01404725"
+    },
+    {
+      "id": "Q36-sol-A-1",
+      "question": "Q36",
+      "model": "sol",
+      "arm": "A",
+      "draw": 1,
+      "body_hash": "a890bf9adb8bcf9b6e233f9d2fc16c09c4c8bb6e2ce7382da455c414716164df",
+      "input_bound": 7357,
+      "worst_case_usd": "0.2683925"
+    },
+    {
+      "id": "Q05-luna-A-2",
+      "question": "Q05",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "c36b8f5982da3ba3bd3629c1d28a88f9e406044a777e1bb257c7ecdc48e43cf1",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q05-luna-B-2",
+      "question": "Q05",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "4ec3794d5aaa88fe04f1b15cdf800c0cc015f353e579a4f353d5c5dd740e96fe",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q05-sol-A-2",
+      "question": "Q05",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "2e0bdd6235aed31b03d2b2e5390875569417718a758cbff09d331afeff013d5a",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q05-sol-B-2",
+      "question": "Q05",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "9af688621a2912d3687371ed857a08c1b8011822c0da1b8360eb70ed1756e2e7",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q27-luna-B-2",
+      "question": "Q27",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "c88be7c1628e69b0e2e2ec11436beeb9365a416d49daba0ae3c41af1d3f87032",
+      "input_bound": 12405,
+      "worst_case_usd": "0.014050625"
+    },
+    {
+      "id": "Q27-sol-A-2",
+      "question": "Q27",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "b473a77e317cab80260a33a896691bd868119e88f1d43d82254d1d80801163c8",
+      "input_bound": 7384,
+      "worst_case_usd": "0.26846"
+    },
+    {
+      "id": "Q27-sol-B-2",
+      "question": "Q27",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "969c4491618ee0c625da86418d36acc43f1e6147350c74a443e0ebc9e69075be",
+      "input_bound": 12406,
+      "worst_case_usd": "0.281015"
+    },
+    {
+      "id": "Q27-luna-A-2",
+      "question": "Q27",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "e00fdaa7f785358a18879a4e8c3599575075820072e35c300ef9cb2b0dc1935a",
+      "input_bound": 7383,
+      "worst_case_usd": "0.013422875"
+    },
+    {
+      "id": "Q08-sol-A-2",
+      "question": "Q08",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "ba4d0a8fb25a756dce92230344017e7321c59744685c8a44b7bd6d0c1b93edd1",
+      "input_bound": 7401,
+      "worst_case_usd": "0.2685025"
+    },
+    {
+      "id": "Q08-sol-B-2",
+      "question": "Q08",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "b651bc86d7126edb1396d7767b9f07a7df288c5d7847bcddd8df74392b9e9496",
+      "input_bound": 12423,
+      "worst_case_usd": "0.2810575"
+    },
+    {
+      "id": "Q08-luna-A-2",
+      "question": "Q08",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "d4bfe8364b1a416dd156e16d543e4563ac5ccd7ec590ea7dba1fb20ddfd25d3d",
+      "input_bound": 7400,
+      "worst_case_usd": "0.013425"
+    },
+    {
+      "id": "Q08-luna-B-2",
+      "question": "Q08",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "21b6df43d2f6fedd072d36802e05deb1756f6a398eb469b2d9dc53dd8f655150",
+      "input_bound": 12422,
+      "worst_case_usd": "0.01405275"
+    },
+    {
+      "id": "Q09-sol-B-2",
+      "question": "Q09",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "c4991aa46a7818426572c2978d74de7ffe98a8187dedb771db97bfbb0c1d505d",
+      "input_bound": 12402,
+      "worst_case_usd": "0.281005"
+    },
+    {
+      "id": "Q09-luna-A-2",
+      "question": "Q09",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "48ca1d3b40c7f70990933d6a056980fce544c1c903cd527f8f2552c1b4c58443",
+      "input_bound": 7379,
+      "worst_case_usd": "0.013422375"
+    },
+    {
+      "id": "Q09-luna-B-2",
+      "question": "Q09",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "9f55dbdd9b2e3da15162fe22018e4c68bf455fa006a855b2c8363719a7ddb934",
+      "input_bound": 12401,
+      "worst_case_usd": "0.014050125"
+    },
+    {
+      "id": "Q09-sol-A-2",
+      "question": "Q09",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "2966ef15166c2dc297f8d4aac7ee713fb76ff1fe1704df738d60894c27362eda",
+      "input_bound": 7380,
+      "worst_case_usd": "0.26845"
+    },
+    {
+      "id": "Q18-luna-A-2",
+      "question": "Q18",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "6cc8176148c057ca2daacd1c74010c358e67698c3e5f4294b1c0821bca7671b5",
+      "input_bound": 7389,
+      "worst_case_usd": "0.013423625"
+    },
+    {
+      "id": "Q18-luna-B-2",
+      "question": "Q18",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "8bb533e44a69ae61eeb8a4ca08e1ffdc433ae546806b25227dc4eddab47c89c6",
+      "input_bound": 12411,
+      "worst_case_usd": "0.014051375"
+    },
+    {
+      "id": "Q18-sol-A-2",
+      "question": "Q18",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "0d1524141d0758586adbba935ef096f5e8ea044f795edeebc4ca8a50e429b0e3",
+      "input_bound": 7390,
+      "worst_case_usd": "0.268475"
+    },
+    {
+      "id": "Q18-sol-B-2",
+      "question": "Q18",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "1adcb05e5d036d763991e03a19a750f3c8916cda258b7d5cd4b4d4c0e015c5d9",
+      "input_bound": 12412,
+      "worst_case_usd": "0.28103"
+    },
+    {
+      "id": "Q14-luna-B-2",
+      "question": "Q14",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "98114830b9c2275ff577857f427b0b44d92fea623f423d28fa8f9c06dfc0b140",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q14-sol-A-2",
+      "question": "Q14",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "3433edaefc5e98ed7a0d8f75dea6c2c4e3c61147f6e08b0944322bea52cab2f2",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q14-sol-B-2",
+      "question": "Q14",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "74f8f7b39ae17ac063e6ef8c32a5febcb882aa1d85515f339987f1ab9e756361",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q14-luna-A-2",
+      "question": "Q14",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "53c59a5d564239115aaed04e69f3a21fbf3ed86e28592214c70749c2b86c1d36",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q10-sol-A-2",
+      "question": "Q10",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "223d083bb49154437b233350d379f391f627e8936dadb1b5e0a10d0f6e361384",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q10-sol-B-2",
+      "question": "Q10",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "48be4e7efff248e295d3575b596315751ec2a6aed7e674eaa77e51df83bf0b43",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q10-luna-A-2",
+      "question": "Q10",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "35adf5d6f77914c4ec8658605fad03925c5a3d75b22e023b7c2f3b0d969d7f39",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q10-luna-B-2",
+      "question": "Q10",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "c64b5aacd6687356d6ed7be0afb4c5455ce8d0ae65ade47dcf27ceaf09676512",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q35-sol-B-2",
+      "question": "Q35",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "3e201ca27f2d8634247534a59ca364f93942e4c9c81c4f4a429e8d742189f393",
+      "input_bound": 12370,
+      "worst_case_usd": "0.280925"
+    },
+    {
+      "id": "Q35-luna-A-2",
+      "question": "Q35",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "850192c3b397eec7685ed27e88f4b5da86f73dc547c1e223dbbee43e9837a8ac",
+      "input_bound": 7347,
+      "worst_case_usd": "0.013418375"
+    },
+    {
+      "id": "Q35-luna-B-2",
+      "question": "Q35",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "6c9b06c993a337a73ba760f21f5248136cccf9931658c1a97b3743811cb73427",
+      "input_bound": 12369,
+      "worst_case_usd": "0.014046125"
+    },
+    {
+      "id": "Q35-sol-A-2",
+      "question": "Q35",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "269909fd80f39232b53c7869962b87281c6dcb3b22495a6ab5445e97dcd600f4",
+      "input_bound": 7348,
+      "worst_case_usd": "0.26837"
+    },
+    {
+      "id": "Q12-luna-A-2",
+      "question": "Q12",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "2a1510d583e413854dbea0445412668ac2d7c9c5d0d777c33a1bd8fdd888243c",
+      "input_bound": 7373,
+      "worst_case_usd": "0.013421625"
+    },
+    {
+      "id": "Q12-luna-B-2",
+      "question": "Q12",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "60b4ea060eb6e556d4f3091bb3cdcc1173f591afc1fceba34e6bcb6524237606",
+      "input_bound": 12395,
+      "worst_case_usd": "0.014049375"
+    },
+    {
+      "id": "Q12-sol-A-2",
+      "question": "Q12",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "4bd198afea7e6c70203071b29a51c94b3f11ee9361c03ffe95bd36b07c45b772",
+      "input_bound": 7374,
+      "worst_case_usd": "0.268435"
+    },
+    {
+      "id": "Q12-sol-B-2",
+      "question": "Q12",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "57b8cab0ed20d8b4d98b2c304532d96217bba1eb7c0e6469b67bcc730685c071",
+      "input_bound": 12396,
+      "worst_case_usd": "0.28099"
+    },
+    {
+      "id": "Q04-luna-B-2",
+      "question": "Q04",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "11284047e2d3bf7688d91baa2b0ea835b4e868549357fa183590201c4a42d35e",
+      "input_bound": 12388,
+      "worst_case_usd": "0.0140485"
+    },
+    {
+      "id": "Q04-sol-A-2",
+      "question": "Q04",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "69f261464c0ef4e88bf58e9d788b153646b1628bd586561de767562e0ffc31b3",
+      "input_bound": 7367,
+      "worst_case_usd": "0.2684175"
+    },
+    {
+      "id": "Q04-sol-B-2",
+      "question": "Q04",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "22180cf917b850675f7cf24903b22d1a304c75cf93d058a3dcee3a834bd62818",
+      "input_bound": 12389,
+      "worst_case_usd": "0.2809725"
+    },
+    {
+      "id": "Q04-luna-A-2",
+      "question": "Q04",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "c4b3f0881346991b975977054249e7b1d853fda51769ebafccd38895fe567d2d",
+      "input_bound": 7366,
+      "worst_case_usd": "0.01342075"
+    },
+    {
+      "id": "Q07-sol-A-2",
+      "question": "Q07",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "21376629ec96861ca79b50ad85f1539d53abab9709fc9656e2cb2735ef3970ee",
+      "input_bound": 7415,
+      "worst_case_usd": "0.2685375"
+    },
+    {
+      "id": "Q07-sol-B-2",
+      "question": "Q07",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "6ddc5e230f7eee35d876c7b2a4840fafd1370fd4a003d2c38ec7f9df0fdd28f6",
+      "input_bound": 12437,
+      "worst_case_usd": "0.2810925"
+    },
+    {
+      "id": "Q07-luna-A-2",
+      "question": "Q07",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "588159d64a7e974c7e42c088648333fbb4aef2830a50bf37cea6b05ac588f792",
+      "input_bound": 7414,
+      "worst_case_usd": "0.01342675"
+    },
+    {
+      "id": "Q07-luna-B-2",
+      "question": "Q07",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "468644a7b1fc0cd57a5ac8f31fc16f7888e1326e7b9fa838d47bed296d9180cb",
+      "input_bound": 12436,
+      "worst_case_usd": "0.0140545"
+    },
+    {
+      "id": "Q15-sol-B-2",
+      "question": "Q15",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "21d20481b16bbffc3d9fa19a7c07daa026eca5778b6095044cea37bdbb41b61f",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q15-luna-A-2",
+      "question": "Q15",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "ae67ed27bd603599cdf0b09c4f4107c046d99c25e7fb66ffbd274729ce656da8",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q15-luna-B-2",
+      "question": "Q15",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "e4f0e39ef6ae25f2dbe07dfc814957a22f1e97e9ad2f53cee44a231f19b4d8d2",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q15-sol-A-2",
+      "question": "Q15",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "4417f468961c12546fca6c17f64c4cdd530e414bfe68436997052fd2d3e91248",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q24-luna-A-2",
+      "question": "Q24",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "207bb282058f3ef6344c8c9d0e900d37b5528480f90c2bf18fbda07468ce5730",
+      "input_bound": 7393,
+      "worst_case_usd": "0.013424125"
+    },
+    {
+      "id": "Q24-luna-B-2",
+      "question": "Q24",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "3251dc53385441b8b282530e2ab42a973781caaa853e84a4f5086f7db7be7fc1",
+      "input_bound": 12415,
+      "worst_case_usd": "0.014051875"
+    },
+    {
+      "id": "Q24-sol-A-2",
+      "question": "Q24",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "2cf3e700e34c87562026f973e84cdeb87277c374972de493b46971fe12c6b8d6",
+      "input_bound": 7394,
+      "worst_case_usd": "0.268485"
+    },
+    {
+      "id": "Q24-sol-B-2",
+      "question": "Q24",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "c8e1e6b141393cfdc7c8dc269445d14311814de9a57b594c17f8bcb9917fd4d9",
+      "input_bound": 12416,
+      "worst_case_usd": "0.28104"
+    },
+    {
+      "id": "Q22-luna-B-2",
+      "question": "Q22",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "ef33994a14ab00fd95eb3da1116783ccd9c37083be3a94e8473d9006891f111f",
+      "input_bound": 12391,
+      "worst_case_usd": "0.014048875"
+    },
+    {
+      "id": "Q22-sol-A-2",
+      "question": "Q22",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "56fcb39a93550ae9dea43738f7ba9f398cb933865e28ca529d62491c5018c6e2",
+      "input_bound": 7370,
+      "worst_case_usd": "0.268425"
+    },
+    {
+      "id": "Q22-sol-B-2",
+      "question": "Q22",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "094630bb1bfe96c62d1abe23fc42871397eaab5930f19cbda8bff3a61075b9ac",
+      "input_bound": 12392,
+      "worst_case_usd": "0.28098"
+    },
+    {
+      "id": "Q22-luna-A-2",
+      "question": "Q22",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "3c5a18f999b3744475a47a29ad8cd2da618b76dff52e16a368b3b3d40ef324dd",
+      "input_bound": 7369,
+      "worst_case_usd": "0.013421125"
+    },
+    {
+      "id": "Q23-sol-A-2",
+      "question": "Q23",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "5006ca23bd92b0c0edcd17087e8f23e9595b4c343b4a4110f486eea8e94599ad",
+      "input_bound": 7404,
+      "worst_case_usd": "0.26851"
+    },
+    {
+      "id": "Q23-sol-B-2",
+      "question": "Q23",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "afbeca9217ed546ca6c139e6dd3271abab82e49cdf5cfe62975cca3bb3c3dd14",
+      "input_bound": 12426,
+      "worst_case_usd": "0.281065"
+    },
+    {
+      "id": "Q23-luna-A-2",
+      "question": "Q23",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "eb614555049d0738d02ac3ae5cdf520366031f4f67878e60bbfb5136986998e0",
+      "input_bound": 7403,
+      "worst_case_usd": "0.013425375"
+    },
+    {
+      "id": "Q23-luna-B-2",
+      "question": "Q23",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "67d565f5a57c587fcb681e7b92136333f0d8ed581574bb9f13d2942e29935155",
+      "input_bound": 12425,
+      "worst_case_usd": "0.014053125"
+    },
+    {
+      "id": "Q30-sol-B-2",
+      "question": "Q30",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "c492b9cabd2ac665738014b2dc3e80f3d346db07645778ec3f947a25a5f71621",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q30-luna-A-2",
+      "question": "Q30",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "9823bcd8043780442608157593a41adb0985d9a6f0317ff32f7a6171dd0956e2",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q30-luna-B-2",
+      "question": "Q30",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "2e15538dd8ac0a77a9b6d97a3b56bfae7cca3334ecc55b795eeb559115208e0d",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q30-sol-A-2",
+      "question": "Q30",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "b6c042dfaf2b45f33dc08ef26154193295eb48c289cb606d72f7a576ee33e4d3",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q29-luna-A-2",
+      "question": "Q29",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "cd365e4f4b8c5c2813822cdfe5601a01989435a4e93b6d8b139519130a9ff7ef",
+      "input_bound": 7383,
+      "worst_case_usd": "0.013422875"
+    },
+    {
+      "id": "Q29-luna-B-2",
+      "question": "Q29",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "47fbc6cb08648db2bd2c3dd94788e9a2e629eb2db01adf076cf8aa67a700889e",
+      "input_bound": 12405,
+      "worst_case_usd": "0.014050625"
+    },
+    {
+      "id": "Q29-sol-A-2",
+      "question": "Q29",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "806ac2cb516e6ea33c94265b60bab32270cd6a549ee7f1855cff50dde93cf7b0",
+      "input_bound": 7384,
+      "worst_case_usd": "0.26846"
+    },
+    {
+      "id": "Q29-sol-B-2",
+      "question": "Q29",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "c10bf1380c7126156f8a36934a9b428c6b46bb46618d3c35f4896e1493aea0d9",
+      "input_bound": 12406,
+      "worst_case_usd": "0.281015"
+    },
+    {
+      "id": "Q28-luna-B-2",
+      "question": "Q28",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "33715a35bc460f48c043118955ab8cdd9fe26ce96a6bab8303796145cf3f6b0c",
+      "input_bound": 12412,
+      "worst_case_usd": "0.0140515"
+    },
+    {
+      "id": "Q28-sol-A-2",
+      "question": "Q28",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "8832b45e9b3e3b77bc3191b5b336a9c60cc954dd349e0b749451b67605a20acf",
+      "input_bound": 7391,
+      "worst_case_usd": "0.2684775"
+    },
+    {
+      "id": "Q28-sol-B-2",
+      "question": "Q28",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "605269584f3203dcf6e24434f7ca1d13beebee7a99923b828459db56c990dad9",
+      "input_bound": 12413,
+      "worst_case_usd": "0.2810325"
+    },
+    {
+      "id": "Q28-luna-A-2",
+      "question": "Q28",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "190cb543a8214bc1abd1e545ca6dcebd62ba57d8977fb92b322064923b317f28",
+      "input_bound": 7390,
+      "worst_case_usd": "0.01342375"
+    },
+    {
+      "id": "Q20-sol-A-2",
+      "question": "Q20",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "ced9cc3a2e5c7a6e58da13536a1086a5976209820e8cdf45618d2065f4f3b577",
+      "input_bound": 7383,
+      "worst_case_usd": "0.2684575"
+    },
+    {
+      "id": "Q20-sol-B-2",
+      "question": "Q20",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "f468f0eae8cfb6b76fbcd130a08d7ad8f8b45b9649ec63290a87e21e08866f18",
+      "input_bound": 12405,
+      "worst_case_usd": "0.2810125"
+    },
+    {
+      "id": "Q20-luna-A-2",
+      "question": "Q20",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "a77427c4ace19d612b70de9f8befc9a3cc2d6ed635ee280c7f002686465a7d5d",
+      "input_bound": 7382,
+      "worst_case_usd": "0.01342275"
+    },
+    {
+      "id": "Q20-luna-B-2",
+      "question": "Q20",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "ae213c24a58140abe2dad60b63575647a1194111b05348a9180674af78ef3fcc",
+      "input_bound": 12404,
+      "worst_case_usd": "0.0140505"
+    },
+    {
+      "id": "Q01-sol-B-2",
+      "question": "Q01",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "773232c324b07be6b2cfbbc752b4466c841dea9eadc03b331d4cd5337ad7ec88",
+      "input_bound": 12363,
+      "worst_case_usd": "0.2809075"
+    },
+    {
+      "id": "Q01-luna-A-2",
+      "question": "Q01",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "f2b940be1a08107de6f0ba16c24fd9947d4de97d871d49617acd0e8e5432eddb",
+      "input_bound": 7340,
+      "worst_case_usd": "0.0134175"
+    },
+    {
+      "id": "Q01-luna-B-2",
+      "question": "Q01",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "e1a3c19b959e8577c4352499c169d10ebe155256c015fe9f6635014dcb55d3b5",
+      "input_bound": 12362,
+      "worst_case_usd": "0.01404525"
+    },
+    {
+      "id": "Q01-sol-A-2",
+      "question": "Q01",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "f4719b4fed3121fccde98011bfba2e481d46ef056f0b9f0b76693f63a33bfccd",
+      "input_bound": 7341,
+      "worst_case_usd": "0.2683525"
+    },
+    {
+      "id": "Q19-luna-A-2",
+      "question": "Q19",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "101fcff7c0d9fb4f844f8af1b6fa12d7a2a96e2e77b31b6cfe20d381c8f46b91",
+      "input_bound": 7372,
+      "worst_case_usd": "0.0134215"
+    },
+    {
+      "id": "Q19-luna-B-2",
+      "question": "Q19",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "abcc844964bd75a7db5adeb4483a7ebd4a1ae60ff869db723be9a1bf52ebd7f9",
+      "input_bound": 12394,
+      "worst_case_usd": "0.01404925"
+    },
+    {
+      "id": "Q19-sol-A-2",
+      "question": "Q19",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "8974dfdecf8b3d46fb924ae62caf5c675e5e0a4cddd753e52f5a2e8bf50ffefb",
+      "input_bound": 7373,
+      "worst_case_usd": "0.2684325"
+    },
+    {
+      "id": "Q19-sol-B-2",
+      "question": "Q19",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "bd6668094f8f3a634ab3be69c36b9c2e86734358a4a76e8977b8d818fac0e277",
+      "input_bound": 12395,
+      "worst_case_usd": "0.2809875"
+    },
+    {
+      "id": "Q36-luna-B-2",
+      "question": "Q36",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "fa4caffc4a9ad7f079235c0b0973556ca157ac5d62e408a506f901374477d53c",
+      "input_bound": 12378,
+      "worst_case_usd": "0.01404725"
+    },
+    {
+      "id": "Q36-sol-A-2",
+      "question": "Q36",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "a890bf9adb8bcf9b6e233f9d2fc16c09c4c8bb6e2ce7382da455c414716164df",
+      "input_bound": 7357,
+      "worst_case_usd": "0.2683925"
+    },
+    {
+      "id": "Q36-sol-B-2",
+      "question": "Q36",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "6deb14ccf21f4484428c37b70d2a6ec502cb484e34b1c3a27cdb19a0a4c26ef7",
+      "input_bound": 12379,
+      "worst_case_usd": "0.2809475"
+    },
+    {
+      "id": "Q36-luna-A-2",
+      "question": "Q36",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "2bb011db2e3b52d05346dbb5ff20ff53f5fef1c3798e624a22850ef6e71c0b8c",
+      "input_bound": 7356,
+      "worst_case_usd": "0.0134195"
+    },
+    {
+      "id": "Q25-sol-A-2",
+      "question": "Q25",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "cd02b6da950a02e7f24523c8a2fb998dc9033c510704306e258f2394d7c2d9c6",
+      "input_bound": 7377,
+      "worst_case_usd": "0.2684425"
+    },
+    {
+      "id": "Q25-sol-B-2",
+      "question": "Q25",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "d5fc399467e5767a79aecac4ec033397ca2c9d79c88ffe8cbca2dc5b21e1e32a",
+      "input_bound": 12399,
+      "worst_case_usd": "0.2809975"
+    },
+    {
+      "id": "Q25-luna-A-2",
+      "question": "Q25",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "a251e8f19b5682e5f014e1ac3e7241a868941765a890424f416e2c0e24f9ffbc",
+      "input_bound": 7376,
+      "worst_case_usd": "0.013422"
+    },
+    {
+      "id": "Q25-luna-B-2",
+      "question": "Q25",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "72fe8f2dd70ae58b6f6308cbf169785860a5d2959da2513be3ebb665b8d87474",
+      "input_bound": 12398,
+      "worst_case_usd": "0.01404975"
+    },
+    {
+      "id": "Q02-sol-B-2",
+      "question": "Q02",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "5fafb15c4cf00adb75830cac3a34b6ebd6eadf9639fdafbe760863ce34c37802",
+      "input_bound": 12405,
+      "worst_case_usd": "0.2810125"
+    },
+    {
+      "id": "Q02-luna-A-2",
+      "question": "Q02",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "a9d5d5a0b6a9444e24536cea94dcedc8f01e0fe5e49336d84a14bd91cc3d3320",
+      "input_bound": 7382,
+      "worst_case_usd": "0.01342275"
+    },
+    {
+      "id": "Q02-luna-B-2",
+      "question": "Q02",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "82f82a7eb79ca8bad3039ad936b2e7382c8f1d7a52e5e96dad30dd4be0df913c",
+      "input_bound": 12404,
+      "worst_case_usd": "0.0140505"
+    },
+    {
+      "id": "Q02-sol-A-2",
+      "question": "Q02",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "6f2e2053617a8c5afc339f61276eabf90b68ba2d6f4087cd5206a12050000abd",
+      "input_bound": 7383,
+      "worst_case_usd": "0.2684575"
+    },
+    {
+      "id": "Q32-luna-A-2",
+      "question": "Q32",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "1b47c8b8497790500f31323158c31b874690994961cd7b6322d4eecf0f1808d9",
+      "input_bound": 7428,
+      "worst_case_usd": "0.0134285"
+    },
+    {
+      "id": "Q32-luna-B-2",
+      "question": "Q32",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "0bd1b37cac44cb3eb8deeedac675dd11af42f28753cde28490f5e0ff47d59cb6",
+      "input_bound": 12450,
+      "worst_case_usd": "0.01405625"
+    },
+    {
+      "id": "Q32-sol-A-2",
+      "question": "Q32",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "aa8622b5e73d2057dcdfa883bc5a4b847349454a49dd8e82ca64f5cd1d0f98e2",
+      "input_bound": 7429,
+      "worst_case_usd": "0.2685725"
+    },
+    {
+      "id": "Q32-sol-B-2",
+      "question": "Q32",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "7e346e83e5988971b8a981e88e2ef134405e6d8a5a3bb331b7ea2b2618d8026a",
+      "input_bound": 12451,
+      "worst_case_usd": "0.2811275"
+    },
+    {
+      "id": "Q17-luna-B-2",
+      "question": "Q17",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "0fa6bc273a0118cf50e8584c420a7c2fd11f67fe34c4d6ecce4418d1ad09518e",
+      "input_bound": 12390,
+      "worst_case_usd": "0.01404875"
+    },
+    {
+      "id": "Q17-sol-A-2",
+      "question": "Q17",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "6bbe04c99959d59082c56fdaf7b3fa9e76607beac7cf7d246396b328b56aae06",
+      "input_bound": 7369,
+      "worst_case_usd": "0.2684225"
+    },
+    {
+      "id": "Q17-sol-B-2",
+      "question": "Q17",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "a8e1527801fae7c488082331d823fce6d4ce33720aacbafe0ec92134170c44db",
+      "input_bound": 12391,
+      "worst_case_usd": "0.2809775"
+    },
+    {
+      "id": "Q17-luna-A-2",
+      "question": "Q17",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "03bfa61be657a595c990d67d92238f02c4c7a2f3ca5dc3d8cb2a60cead4a6127",
+      "input_bound": 7368,
+      "worst_case_usd": "0.013421"
+    },
+    {
+      "id": "Q31-sol-A-2",
+      "question": "Q31",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "0653876711264b2a7afe568c2ded33ffae1ac5850fa009a99440ca85faafa53e",
+      "input_bound": 7375,
+      "worst_case_usd": "0.2684375"
+    },
+    {
+      "id": "Q31-sol-B-2",
+      "question": "Q31",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "d3a70df4d0342ad0b24605cbc62953d9885d4351ea61f724330dee730afea6cc",
+      "input_bound": 12397,
+      "worst_case_usd": "0.2809925"
+    },
+    {
+      "id": "Q31-luna-A-2",
+      "question": "Q31",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "851385280cf62ec683c6a72a6d25ee39e4bcf20daccad1dbbf5c6e7f01ca66d1",
+      "input_bound": 7374,
+      "worst_case_usd": "0.01342175"
+    },
+    {
+      "id": "Q31-luna-B-2",
+      "question": "Q31",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "6e2af64ddd5e9a1b846d647b1ed16d89c2bc443da6b5b96625c682455d9fa23a",
+      "input_bound": 12396,
+      "worst_case_usd": "0.0140495"
+    },
+    {
+      "id": "Q34-sol-B-2",
+      "question": "Q34",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "c4ec04e94d3bc7f9e0ed89244804ae4f5072b952b811aabad7d1798093e27222",
+      "input_bound": 12373,
+      "worst_case_usd": "0.2809325"
+    },
+    {
+      "id": "Q34-luna-A-2",
+      "question": "Q34",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "81e72343d55616fe943ebba7b30360b632312b01809a6cd0be025d9bd9b41352",
+      "input_bound": 7350,
+      "worst_case_usd": "0.01341875"
+    },
+    {
+      "id": "Q34-luna-B-2",
+      "question": "Q34",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "cf1e261584e2e5b69f9758c279c244c67390a472932241a9ff82712e6a13375a",
+      "input_bound": 12372,
+      "worst_case_usd": "0.0140465"
+    },
+    {
+      "id": "Q34-sol-A-2",
+      "question": "Q34",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "3c78d0d04e6611f12b12483fb816e47606fc08a969b81a65d752bb0fb1347376",
+      "input_bound": 7351,
+      "worst_case_usd": "0.2683775"
+    },
+    {
+      "id": "Q06-luna-A-2",
+      "question": "Q06",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "0f7d1526d56f0269d5f1efc8c5954269c8fdd0afcd3715e5f36f91e050d31be7",
+      "input_bound": 7399,
+      "worst_case_usd": "0.013424875"
+    },
+    {
+      "id": "Q06-luna-B-2",
+      "question": "Q06",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "11ced0f75968b037c9e0d671188f633724fef7c195be6115b8447b970653aa0c",
+      "input_bound": 12421,
+      "worst_case_usd": "0.014052625"
+    },
+    {
+      "id": "Q06-sol-A-2",
+      "question": "Q06",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "b403b05a80fab5da6b500f8de58fcce06eaccb2f2045729f1a99cbc3ca0e3b91",
+      "input_bound": 7400,
+      "worst_case_usd": "0.2685"
+    },
+    {
+      "id": "Q06-sol-B-2",
+      "question": "Q06",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "c3ae03e712b08d7e89a55b0b265c977488ad1f8148402335b642e9d739e7623b",
+      "input_bound": 12422,
+      "worst_case_usd": "0.281055"
+    },
+    {
+      "id": "Q11-luna-B-2",
+      "question": "Q11",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "204c7e42b99175a2d61f4d54a6eb5b271eab00abbb6018c9a53ce4a324d49ca3",
+      "input_bound": 12400,
+      "worst_case_usd": "0.01405"
+    },
+    {
+      "id": "Q11-sol-A-2",
+      "question": "Q11",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "f1f5c871c82d3402df68512037aa340a1b43e0b918879d7fce42484771e27c40",
+      "input_bound": 7379,
+      "worst_case_usd": "0.2684475"
+    },
+    {
+      "id": "Q11-sol-B-2",
+      "question": "Q11",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "9c4f1de2a7e6af1545210a84b1089c2029f5a61e897f419334dc4ca851375801",
+      "input_bound": 12401,
+      "worst_case_usd": "0.2810025"
+    },
+    {
+      "id": "Q11-luna-A-2",
+      "question": "Q11",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "4a96e0cb6c5d010fddb54befc95ece86d2eb2e95c4043a24734c6980efd5dc6a",
+      "input_bound": 7378,
+      "worst_case_usd": "0.01342225"
+    },
+    {
+      "id": "Q33-sol-A-2",
+      "question": "Q33",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "05e2624d4be82c3647eb80a84da913670f814e2b273e1b4fc64e28c08b8bf62d",
+      "input_bound": 7348,
+      "worst_case_usd": "0.26837"
+    },
+    {
+      "id": "Q33-sol-B-2",
+      "question": "Q33",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "0e5b1313cc94f49e812ea39e896d41569d6df6b103be96eb059f1ebf897314f7",
+      "input_bound": 12370,
+      "worst_case_usd": "0.280925"
+    },
+    {
+      "id": "Q33-luna-A-2",
+      "question": "Q33",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "c19ca22be4386c07e094efc23a143bc7d767f75fe6a3d01a9126e9190c2abd0d",
+      "input_bound": 7347,
+      "worst_case_usd": "0.013418375"
+    },
+    {
+      "id": "Q33-luna-B-2",
+      "question": "Q33",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "435bef9baacb6ce3a2d64e1938dfd2234eda9b8469e8612774f521beadd600be",
+      "input_bound": 12369,
+      "worst_case_usd": "0.014046125"
+    },
+    {
+      "id": "Q26-sol-B-2",
+      "question": "Q26",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "b9eb1bdf3a3a706f54f6b5bc5cd2ebe784adbcdebfe77b5d29555a0e2726d239",
+      "input_bound": 12403,
+      "worst_case_usd": "0.2810075"
+    },
+    {
+      "id": "Q26-luna-A-2",
+      "question": "Q26",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "f20f6e3c59c614b2ed14d4fa26cee0bbe3b474ee4ff029fe968b5e3db6c89d9b",
+      "input_bound": 7380,
+      "worst_case_usd": "0.0134225"
+    },
+    {
+      "id": "Q26-luna-B-2",
+      "question": "Q26",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "a52413aa94a19d712c76e578bf4e1bac8925b8c1b6828a124fe41a0bdec24a34",
+      "input_bound": 12402,
+      "worst_case_usd": "0.01405025"
+    },
+    {
+      "id": "Q26-sol-A-2",
+      "question": "Q26",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "fb5a75cf6391f6f17a23af26c5990d3d5ee240682a4d5170eb940346559d02e3",
+      "input_bound": 7381,
+      "worst_case_usd": "0.2684525"
+    },
+    {
+      "id": "Q13-luna-A-2",
+      "question": "Q13",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "22c40f3dec96a9c7de885b210509158213bd9f3e078880fb38f875ea8deb223e",
+      "input_bound": 7384,
+      "worst_case_usd": "0.013423"
+    },
+    {
+      "id": "Q13-luna-B-2",
+      "question": "Q13",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "8de5ee861ce939277a69d15b05f8675bf43da991600c03e2847cddf318ba7280",
+      "input_bound": 12406,
+      "worst_case_usd": "0.01405075"
+    },
+    {
+      "id": "Q13-sol-A-2",
+      "question": "Q13",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "83ca4cce315f3f3deb9f0e06b18ec264bac1770aa154ccadbfc88d7bd7fd56ad",
+      "input_bound": 7385,
+      "worst_case_usd": "0.2684625"
+    },
+    {
+      "id": "Q13-sol-B-2",
+      "question": "Q13",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "0a378ccfd0976efd36b19da0a38aee7cd6051bbf1a17e15744e692885b950d74",
+      "input_bound": 12407,
+      "worst_case_usd": "0.2810175"
+    },
+    {
+      "id": "Q03-luna-B-2",
+      "question": "Q03",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "8e93fda3091e049ed8c67d2402b9d0ac4a5b47ba46c56cec11ac994b4d6c4d29",
+      "input_bound": 12379,
+      "worst_case_usd": "0.014047375"
+    },
+    {
+      "id": "Q03-sol-A-2",
+      "question": "Q03",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "53006788b4daff2b6e7935c6a764bb0dfd7e19e33c2b59f0a9e5c862dcca2dfd",
+      "input_bound": 7358,
+      "worst_case_usd": "0.268395"
+    },
+    {
+      "id": "Q03-sol-B-2",
+      "question": "Q03",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "9664df3d909b9bfd2d9d38213a23a7eea7665dd466920cb5d9c451824ba4c02f",
+      "input_bound": 12380,
+      "worst_case_usd": "0.28095"
+    },
+    {
+      "id": "Q03-luna-A-2",
+      "question": "Q03",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "7eeb11476e09041c8bd1e236b63ada95713c5a1117357041c86902b277582cc1",
+      "input_bound": 7357,
+      "worst_case_usd": "0.013419625"
+    },
+    {
+      "id": "Q21-sol-A-2",
+      "question": "Q21",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "14d113a32f9937050334d512683bf4ad05f1572ce1df6ead7f843a17120bfb81",
+      "input_bound": 7384,
+      "worst_case_usd": "0.26846"
+    },
+    {
+      "id": "Q21-sol-B-2",
+      "question": "Q21",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "7d11089c60ebef50daa7e30131ea4bc4a5fc8455cddfb7a3866d0e416eb116ac",
+      "input_bound": 12406,
+      "worst_case_usd": "0.281015"
+    },
+    {
+      "id": "Q21-luna-A-2",
+      "question": "Q21",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "644805a44054108adb7e2b1b52bfc4b830a7e98997b23ef6dd4376dc76994de5",
+      "input_bound": 7383,
+      "worst_case_usd": "0.013422875"
+    },
+    {
+      "id": "Q21-luna-B-2",
+      "question": "Q21",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "7346d1df8a7d12c33ac72ff1e6ffdd58ae880f00a9841a7032d8ddbc573f74cc",
+      "input_bound": 12405,
+      "worst_case_usd": "0.014050625"
+    },
+    {
+      "id": "Q16-sol-B-2",
+      "question": "Q16",
+      "model": "sol",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "4364b6ade9f7ff8c79fd52bf1fa7bf1a1181b0ef9f06e4d176c6f997730cf88a",
+      "input_bound": 12428,
+      "worst_case_usd": "0.28107"
+    },
+    {
+      "id": "Q16-luna-A-2",
+      "question": "Q16",
+      "model": "luna",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "046f1a57fa296f33c212a70be406b755c7d76518e0f74688eea5bd58d1131ddd",
+      "input_bound": 7405,
+      "worst_case_usd": "0.013425625"
+    },
+    {
+      "id": "Q16-luna-B-2",
+      "question": "Q16",
+      "model": "luna",
+      "arm": "B",
+      "draw": 2,
+      "body_hash": "b75d836dd438b7170531dfacbc251e6e7aba8a44054199d61ffce573c95fb036",
+      "input_bound": 12427,
+      "worst_case_usd": "0.014053375"
+    },
+    {
+      "id": "Q16-sol-A-2",
+      "question": "Q16",
+      "model": "sol",
+      "arm": "A",
+      "draw": 2,
+      "body_hash": "9a651701579415d4a5455b88d40eff9f241f3130163169880c18bfeb943fd6b6",
+      "input_bound": 7406,
+      "worst_case_usd": "0.268515"
+    },
+    {
+      "id": "Q35-luna-A-3",
+      "question": "Q35",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "850192c3b397eec7685ed27e88f4b5da86f73dc547c1e223dbbee43e9837a8ac",
+      "input_bound": 7347,
+      "worst_case_usd": "0.013418375"
+    },
+    {
+      "id": "Q35-luna-B-3",
+      "question": "Q35",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "6c9b06c993a337a73ba760f21f5248136cccf9931658c1a97b3743811cb73427",
+      "input_bound": 12369,
+      "worst_case_usd": "0.014046125"
+    },
+    {
+      "id": "Q35-sol-A-3",
+      "question": "Q35",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "269909fd80f39232b53c7869962b87281c6dcb3b22495a6ab5445e97dcd600f4",
+      "input_bound": 7348,
+      "worst_case_usd": "0.26837"
+    },
+    {
+      "id": "Q35-sol-B-3",
+      "question": "Q35",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "3e201ca27f2d8634247534a59ca364f93942e4c9c81c4f4a429e8d742189f393",
+      "input_bound": 12370,
+      "worst_case_usd": "0.280925"
+    },
+    {
+      "id": "Q08-luna-B-3",
+      "question": "Q08",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "21b6df43d2f6fedd072d36802e05deb1756f6a398eb469b2d9dc53dd8f655150",
+      "input_bound": 12422,
+      "worst_case_usd": "0.01405275"
+    },
+    {
+      "id": "Q08-sol-A-3",
+      "question": "Q08",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "ba4d0a8fb25a756dce92230344017e7321c59744685c8a44b7bd6d0c1b93edd1",
+      "input_bound": 7401,
+      "worst_case_usd": "0.2685025"
+    },
+    {
+      "id": "Q08-sol-B-3",
+      "question": "Q08",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "b651bc86d7126edb1396d7767b9f07a7df288c5d7847bcddd8df74392b9e9496",
+      "input_bound": 12423,
+      "worst_case_usd": "0.2810575"
+    },
+    {
+      "id": "Q08-luna-A-3",
+      "question": "Q08",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "d4bfe8364b1a416dd156e16d543e4563ac5ccd7ec590ea7dba1fb20ddfd25d3d",
+      "input_bound": 7400,
+      "worst_case_usd": "0.013425"
+    },
+    {
+      "id": "Q17-sol-A-3",
+      "question": "Q17",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "6bbe04c99959d59082c56fdaf7b3fa9e76607beac7cf7d246396b328b56aae06",
+      "input_bound": 7369,
+      "worst_case_usd": "0.2684225"
+    },
+    {
+      "id": "Q17-sol-B-3",
+      "question": "Q17",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "a8e1527801fae7c488082331d823fce6d4ce33720aacbafe0ec92134170c44db",
+      "input_bound": 12391,
+      "worst_case_usd": "0.2809775"
+    },
+    {
+      "id": "Q17-luna-A-3",
+      "question": "Q17",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "03bfa61be657a595c990d67d92238f02c4c7a2f3ca5dc3d8cb2a60cead4a6127",
+      "input_bound": 7368,
+      "worst_case_usd": "0.013421"
+    },
+    {
+      "id": "Q17-luna-B-3",
+      "question": "Q17",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "0fa6bc273a0118cf50e8584c420a7c2fd11f67fe34c4d6ecce4418d1ad09518e",
+      "input_bound": 12390,
+      "worst_case_usd": "0.01404875"
+    },
+    {
+      "id": "Q31-sol-B-3",
+      "question": "Q31",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "d3a70df4d0342ad0b24605cbc62953d9885d4351ea61f724330dee730afea6cc",
+      "input_bound": 12397,
+      "worst_case_usd": "0.2809925"
+    },
+    {
+      "id": "Q31-luna-A-3",
+      "question": "Q31",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "851385280cf62ec683c6a72a6d25ee39e4bcf20daccad1dbbf5c6e7f01ca66d1",
+      "input_bound": 7374,
+      "worst_case_usd": "0.01342175"
+    },
+    {
+      "id": "Q31-luna-B-3",
+      "question": "Q31",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "6e2af64ddd5e9a1b846d647b1ed16d89c2bc443da6b5b96625c682455d9fa23a",
+      "input_bound": 12396,
+      "worst_case_usd": "0.0140495"
+    },
+    {
+      "id": "Q31-sol-A-3",
+      "question": "Q31",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "0653876711264b2a7afe568c2ded33ffae1ac5850fa009a99440ca85faafa53e",
+      "input_bound": 7375,
+      "worst_case_usd": "0.2684375"
+    },
+    {
+      "id": "Q09-luna-A-3",
+      "question": "Q09",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "48ca1d3b40c7f70990933d6a056980fce544c1c903cd527f8f2552c1b4c58443",
+      "input_bound": 7379,
+      "worst_case_usd": "0.013422375"
+    },
+    {
+      "id": "Q09-luna-B-3",
+      "question": "Q09",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "9f55dbdd9b2e3da15162fe22018e4c68bf455fa006a855b2c8363719a7ddb934",
+      "input_bound": 12401,
+      "worst_case_usd": "0.014050125"
+    },
+    {
+      "id": "Q09-sol-A-3",
+      "question": "Q09",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "2966ef15166c2dc297f8d4aac7ee713fb76ff1fe1704df738d60894c27362eda",
+      "input_bound": 7380,
+      "worst_case_usd": "0.26845"
+    },
+    {
+      "id": "Q09-sol-B-3",
+      "question": "Q09",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "c4991aa46a7818426572c2978d74de7ffe98a8187dedb771db97bfbb0c1d505d",
+      "input_bound": 12402,
+      "worst_case_usd": "0.281005"
+    },
+    {
+      "id": "Q29-luna-B-3",
+      "question": "Q29",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "47fbc6cb08648db2bd2c3dd94788e9a2e629eb2db01adf076cf8aa67a700889e",
+      "input_bound": 12405,
+      "worst_case_usd": "0.014050625"
+    },
+    {
+      "id": "Q29-sol-A-3",
+      "question": "Q29",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "806ac2cb516e6ea33c94265b60bab32270cd6a549ee7f1855cff50dde93cf7b0",
+      "input_bound": 7384,
+      "worst_case_usd": "0.26846"
+    },
+    {
+      "id": "Q29-sol-B-3",
+      "question": "Q29",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "c10bf1380c7126156f8a36934a9b428c6b46bb46618d3c35f4896e1493aea0d9",
+      "input_bound": 12406,
+      "worst_case_usd": "0.281015"
+    },
+    {
+      "id": "Q29-luna-A-3",
+      "question": "Q29",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "cd365e4f4b8c5c2813822cdfe5601a01989435a4e93b6d8b139519130a9ff7ef",
+      "input_bound": 7383,
+      "worst_case_usd": "0.013422875"
+    },
+    {
+      "id": "Q23-sol-A-3",
+      "question": "Q23",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "5006ca23bd92b0c0edcd17087e8f23e9595b4c343b4a4110f486eea8e94599ad",
+      "input_bound": 7404,
+      "worst_case_usd": "0.26851"
+    },
+    {
+      "id": "Q23-sol-B-3",
+      "question": "Q23",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "afbeca9217ed546ca6c139e6dd3271abab82e49cdf5cfe62975cca3bb3c3dd14",
+      "input_bound": 12426,
+      "worst_case_usd": "0.281065"
+    },
+    {
+      "id": "Q23-luna-A-3",
+      "question": "Q23",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "eb614555049d0738d02ac3ae5cdf520366031f4f67878e60bbfb5136986998e0",
+      "input_bound": 7403,
+      "worst_case_usd": "0.013425375"
+    },
+    {
+      "id": "Q23-luna-B-3",
+      "question": "Q23",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "67d565f5a57c587fcb681e7b92136333f0d8ed581574bb9f13d2942e29935155",
+      "input_bound": 12425,
+      "worst_case_usd": "0.014053125"
+    },
+    {
+      "id": "Q03-sol-B-3",
+      "question": "Q03",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "9664df3d909b9bfd2d9d38213a23a7eea7665dd466920cb5d9c451824ba4c02f",
+      "input_bound": 12380,
+      "worst_case_usd": "0.28095"
+    },
+    {
+      "id": "Q03-luna-A-3",
+      "question": "Q03",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "7eeb11476e09041c8bd1e236b63ada95713c5a1117357041c86902b277582cc1",
+      "input_bound": 7357,
+      "worst_case_usd": "0.013419625"
+    },
+    {
+      "id": "Q03-luna-B-3",
+      "question": "Q03",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "8e93fda3091e049ed8c67d2402b9d0ac4a5b47ba46c56cec11ac994b4d6c4d29",
+      "input_bound": 12379,
+      "worst_case_usd": "0.014047375"
+    },
+    {
+      "id": "Q03-sol-A-3",
+      "question": "Q03",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "53006788b4daff2b6e7935c6a764bb0dfd7e19e33c2b59f0a9e5c862dcca2dfd",
+      "input_bound": 7358,
+      "worst_case_usd": "0.268395"
+    },
+    {
+      "id": "Q32-luna-A-3",
+      "question": "Q32",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "1b47c8b8497790500f31323158c31b874690994961cd7b6322d4eecf0f1808d9",
+      "input_bound": 7428,
+      "worst_case_usd": "0.0134285"
+    },
+    {
+      "id": "Q32-luna-B-3",
+      "question": "Q32",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "0bd1b37cac44cb3eb8deeedac675dd11af42f28753cde28490f5e0ff47d59cb6",
+      "input_bound": 12450,
+      "worst_case_usd": "0.01405625"
+    },
+    {
+      "id": "Q32-sol-A-3",
+      "question": "Q32",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "aa8622b5e73d2057dcdfa883bc5a4b847349454a49dd8e82ca64f5cd1d0f98e2",
+      "input_bound": 7429,
+      "worst_case_usd": "0.2685725"
+    },
+    {
+      "id": "Q32-sol-B-3",
+      "question": "Q32",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "7e346e83e5988971b8a981e88e2ef134405e6d8a5a3bb331b7ea2b2618d8026a",
+      "input_bound": 12451,
+      "worst_case_usd": "0.2811275"
+    },
+    {
+      "id": "Q04-luna-B-3",
+      "question": "Q04",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "11284047e2d3bf7688d91baa2b0ea835b4e868549357fa183590201c4a42d35e",
+      "input_bound": 12388,
+      "worst_case_usd": "0.0140485"
+    },
+    {
+      "id": "Q04-sol-A-3",
+      "question": "Q04",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "69f261464c0ef4e88bf58e9d788b153646b1628bd586561de767562e0ffc31b3",
+      "input_bound": 7367,
+      "worst_case_usd": "0.2684175"
+    },
+    {
+      "id": "Q04-sol-B-3",
+      "question": "Q04",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "22180cf917b850675f7cf24903b22d1a304c75cf93d058a3dcee3a834bd62818",
+      "input_bound": 12389,
+      "worst_case_usd": "0.2809725"
+    },
+    {
+      "id": "Q04-luna-A-3",
+      "question": "Q04",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "c4b3f0881346991b975977054249e7b1d853fda51769ebafccd38895fe567d2d",
+      "input_bound": 7366,
+      "worst_case_usd": "0.01342075"
+    },
+    {
+      "id": "Q36-sol-A-3",
+      "question": "Q36",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "a890bf9adb8bcf9b6e233f9d2fc16c09c4c8bb6e2ce7382da455c414716164df",
+      "input_bound": 7357,
+      "worst_case_usd": "0.2683925"
+    },
+    {
+      "id": "Q36-sol-B-3",
+      "question": "Q36",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "6deb14ccf21f4484428c37b70d2a6ec502cb484e34b1c3a27cdb19a0a4c26ef7",
+      "input_bound": 12379,
+      "worst_case_usd": "0.2809475"
+    },
+    {
+      "id": "Q36-luna-A-3",
+      "question": "Q36",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "2bb011db2e3b52d05346dbb5ff20ff53f5fef1c3798e624a22850ef6e71c0b8c",
+      "input_bound": 7356,
+      "worst_case_usd": "0.0134195"
+    },
+    {
+      "id": "Q36-luna-B-3",
+      "question": "Q36",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "fa4caffc4a9ad7f079235c0b0973556ca157ac5d62e408a506f901374477d53c",
+      "input_bound": 12378,
+      "worst_case_usd": "0.01404725"
+    },
+    {
+      "id": "Q14-sol-B-3",
+      "question": "Q14",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "74f8f7b39ae17ac063e6ef8c32a5febcb882aa1d85515f339987f1ab9e756361",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q14-luna-A-3",
+      "question": "Q14",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "53c59a5d564239115aaed04e69f3a21fbf3ed86e28592214c70749c2b86c1d36",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q14-luna-B-3",
+      "question": "Q14",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "98114830b9c2275ff577857f427b0b44d92fea623f423d28fa8f9c06dfc0b140",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q14-sol-A-3",
+      "question": "Q14",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "3433edaefc5e98ed7a0d8f75dea6c2c4e3c61147f6e08b0944322bea52cab2f2",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q16-luna-A-3",
+      "question": "Q16",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "046f1a57fa296f33c212a70be406b755c7d76518e0f74688eea5bd58d1131ddd",
+      "input_bound": 7405,
+      "worst_case_usd": "0.013425625"
+    },
+    {
+      "id": "Q16-luna-B-3",
+      "question": "Q16",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "b75d836dd438b7170531dfacbc251e6e7aba8a44054199d61ffce573c95fb036",
+      "input_bound": 12427,
+      "worst_case_usd": "0.014053375"
+    },
+    {
+      "id": "Q16-sol-A-3",
+      "question": "Q16",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "9a651701579415d4a5455b88d40eff9f241f3130163169880c18bfeb943fd6b6",
+      "input_bound": 7406,
+      "worst_case_usd": "0.268515"
+    },
+    {
+      "id": "Q16-sol-B-3",
+      "question": "Q16",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "4364b6ade9f7ff8c79fd52bf1fa7bf1a1181b0ef9f06e4d176c6f997730cf88a",
+      "input_bound": 12428,
+      "worst_case_usd": "0.28107"
+    },
+    {
+      "id": "Q20-luna-B-3",
+      "question": "Q20",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "ae213c24a58140abe2dad60b63575647a1194111b05348a9180674af78ef3fcc",
+      "input_bound": 12404,
+      "worst_case_usd": "0.0140505"
+    },
+    {
+      "id": "Q20-sol-A-3",
+      "question": "Q20",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "ced9cc3a2e5c7a6e58da13536a1086a5976209820e8cdf45618d2065f4f3b577",
+      "input_bound": 7383,
+      "worst_case_usd": "0.2684575"
+    },
+    {
+      "id": "Q20-sol-B-3",
+      "question": "Q20",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "f468f0eae8cfb6b76fbcd130a08d7ad8f8b45b9649ec63290a87e21e08866f18",
+      "input_bound": 12405,
+      "worst_case_usd": "0.2810125"
+    },
+    {
+      "id": "Q20-luna-A-3",
+      "question": "Q20",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "a77427c4ace19d612b70de9f8befc9a3cc2d6ed635ee280c7f002686465a7d5d",
+      "input_bound": 7382,
+      "worst_case_usd": "0.01342275"
+    },
+    {
+      "id": "Q30-sol-A-3",
+      "question": "Q30",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "b6c042dfaf2b45f33dc08ef26154193295eb48c289cb606d72f7a576ee33e4d3",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q30-sol-B-3",
+      "question": "Q30",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "c492b9cabd2ac665738014b2dc3e80f3d346db07645778ec3f947a25a5f71621",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q30-luna-A-3",
+      "question": "Q30",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "9823bcd8043780442608157593a41adb0985d9a6f0317ff32f7a6171dd0956e2",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q30-luna-B-3",
+      "question": "Q30",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "2e15538dd8ac0a77a9b6d97a3b56bfae7cca3334ecc55b795eeb559115208e0d",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q27-sol-B-3",
+      "question": "Q27",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "969c4491618ee0c625da86418d36acc43f1e6147350c74a443e0ebc9e69075be",
+      "input_bound": 12406,
+      "worst_case_usd": "0.281015"
+    },
+    {
+      "id": "Q27-luna-A-3",
+      "question": "Q27",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "e00fdaa7f785358a18879a4e8c3599575075820072e35c300ef9cb2b0dc1935a",
+      "input_bound": 7383,
+      "worst_case_usd": "0.013422875"
+    },
+    {
+      "id": "Q27-luna-B-3",
+      "question": "Q27",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "c88be7c1628e69b0e2e2ec11436beeb9365a416d49daba0ae3c41af1d3f87032",
+      "input_bound": 12405,
+      "worst_case_usd": "0.014050625"
+    },
+    {
+      "id": "Q27-sol-A-3",
+      "question": "Q27",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "b473a77e317cab80260a33a896691bd868119e88f1d43d82254d1d80801163c8",
+      "input_bound": 7384,
+      "worst_case_usd": "0.26846"
+    },
+    {
+      "id": "Q15-luna-A-3",
+      "question": "Q15",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "ae67ed27bd603599cdf0b09c4f4107c046d99c25e7fb66ffbd274729ce656da8",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q15-luna-B-3",
+      "question": "Q15",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "e4f0e39ef6ae25f2dbe07dfc814957a22f1e97e9ad2f53cee44a231f19b4d8d2",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q15-sol-A-3",
+      "question": "Q15",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "4417f468961c12546fca6c17f64c4cdd530e414bfe68436997052fd2d3e91248",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q15-sol-B-3",
+      "question": "Q15",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "21d20481b16bbffc3d9fa19a7c07daa026eca5778b6095044cea37bdbb41b61f",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q34-luna-B-3",
+      "question": "Q34",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "cf1e261584e2e5b69f9758c279c244c67390a472932241a9ff82712e6a13375a",
+      "input_bound": 12372,
+      "worst_case_usd": "0.0140465"
+    },
+    {
+      "id": "Q34-sol-A-3",
+      "question": "Q34",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "3c78d0d04e6611f12b12483fb816e47606fc08a969b81a65d752bb0fb1347376",
+      "input_bound": 7351,
+      "worst_case_usd": "0.2683775"
+    },
+    {
+      "id": "Q34-sol-B-3",
+      "question": "Q34",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "c4ec04e94d3bc7f9e0ed89244804ae4f5072b952b811aabad7d1798093e27222",
+      "input_bound": 12373,
+      "worst_case_usd": "0.2809325"
+    },
+    {
+      "id": "Q34-luna-A-3",
+      "question": "Q34",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "81e72343d55616fe943ebba7b30360b632312b01809a6cd0be025d9bd9b41352",
+      "input_bound": 7350,
+      "worst_case_usd": "0.01341875"
+    },
+    {
+      "id": "Q26-sol-A-3",
+      "question": "Q26",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "fb5a75cf6391f6f17a23af26c5990d3d5ee240682a4d5170eb940346559d02e3",
+      "input_bound": 7381,
+      "worst_case_usd": "0.2684525"
+    },
+    {
+      "id": "Q26-sol-B-3",
+      "question": "Q26",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "b9eb1bdf3a3a706f54f6b5bc5cd2ebe784adbcdebfe77b5d29555a0e2726d239",
+      "input_bound": 12403,
+      "worst_case_usd": "0.2810075"
+    },
+    {
+      "id": "Q26-luna-A-3",
+      "question": "Q26",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "f20f6e3c59c614b2ed14d4fa26cee0bbe3b474ee4ff029fe968b5e3db6c89d9b",
+      "input_bound": 7380,
+      "worst_case_usd": "0.0134225"
+    },
+    {
+      "id": "Q26-luna-B-3",
+      "question": "Q26",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "a52413aa94a19d712c76e578bf4e1bac8925b8c1b6828a124fe41a0bdec24a34",
+      "input_bound": 12402,
+      "worst_case_usd": "0.01405025"
+    },
+    {
+      "id": "Q02-sol-B-3",
+      "question": "Q02",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "5fafb15c4cf00adb75830cac3a34b6ebd6eadf9639fdafbe760863ce34c37802",
+      "input_bound": 12405,
+      "worst_case_usd": "0.2810125"
+    },
+    {
+      "id": "Q02-luna-A-3",
+      "question": "Q02",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "a9d5d5a0b6a9444e24536cea94dcedc8f01e0fe5e49336d84a14bd91cc3d3320",
+      "input_bound": 7382,
+      "worst_case_usd": "0.01342275"
+    },
+    {
+      "id": "Q02-luna-B-3",
+      "question": "Q02",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "82f82a7eb79ca8bad3039ad936b2e7382c8f1d7a52e5e96dad30dd4be0df913c",
+      "input_bound": 12404,
+      "worst_case_usd": "0.0140505"
+    },
+    {
+      "id": "Q02-sol-A-3",
+      "question": "Q02",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "6f2e2053617a8c5afc339f61276eabf90b68ba2d6f4087cd5206a12050000abd",
+      "input_bound": 7383,
+      "worst_case_usd": "0.2684575"
+    },
+    {
+      "id": "Q06-luna-A-3",
+      "question": "Q06",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "0f7d1526d56f0269d5f1efc8c5954269c8fdd0afcd3715e5f36f91e050d31be7",
+      "input_bound": 7399,
+      "worst_case_usd": "0.013424875"
+    },
+    {
+      "id": "Q06-luna-B-3",
+      "question": "Q06",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "11ced0f75968b037c9e0d671188f633724fef7c195be6115b8447b970653aa0c",
+      "input_bound": 12421,
+      "worst_case_usd": "0.014052625"
+    },
+    {
+      "id": "Q06-sol-A-3",
+      "question": "Q06",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "b403b05a80fab5da6b500f8de58fcce06eaccb2f2045729f1a99cbc3ca0e3b91",
+      "input_bound": 7400,
+      "worst_case_usd": "0.2685"
+    },
+    {
+      "id": "Q06-sol-B-3",
+      "question": "Q06",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "c3ae03e712b08d7e89a55b0b265c977488ad1f8148402335b642e9d739e7623b",
+      "input_bound": 12422,
+      "worst_case_usd": "0.281055"
+    },
+    {
+      "id": "Q11-luna-B-3",
+      "question": "Q11",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "204c7e42b99175a2d61f4d54a6eb5b271eab00abbb6018c9a53ce4a324d49ca3",
+      "input_bound": 12400,
+      "worst_case_usd": "0.01405"
+    },
+    {
+      "id": "Q11-sol-A-3",
+      "question": "Q11",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "f1f5c871c82d3402df68512037aa340a1b43e0b918879d7fce42484771e27c40",
+      "input_bound": 7379,
+      "worst_case_usd": "0.2684475"
+    },
+    {
+      "id": "Q11-sol-B-3",
+      "question": "Q11",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "9c4f1de2a7e6af1545210a84b1089c2029f5a61e897f419334dc4ca851375801",
+      "input_bound": 12401,
+      "worst_case_usd": "0.2810025"
+    },
+    {
+      "id": "Q11-luna-A-3",
+      "question": "Q11",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "4a96e0cb6c5d010fddb54befc95ece86d2eb2e95c4043a24734c6980efd5dc6a",
+      "input_bound": 7378,
+      "worst_case_usd": "0.01342225"
+    },
+    {
+      "id": "Q28-sol-A-3",
+      "question": "Q28",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "8832b45e9b3e3b77bc3191b5b336a9c60cc954dd349e0b749451b67605a20acf",
+      "input_bound": 7391,
+      "worst_case_usd": "0.2684775"
+    },
+    {
+      "id": "Q28-sol-B-3",
+      "question": "Q28",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "605269584f3203dcf6e24434f7ca1d13beebee7a99923b828459db56c990dad9",
+      "input_bound": 12413,
+      "worst_case_usd": "0.2810325"
+    },
+    {
+      "id": "Q28-luna-A-3",
+      "question": "Q28",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "190cb543a8214bc1abd1e545ca6dcebd62ba57d8977fb92b322064923b317f28",
+      "input_bound": 7390,
+      "worst_case_usd": "0.01342375"
+    },
+    {
+      "id": "Q28-luna-B-3",
+      "question": "Q28",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "33715a35bc460f48c043118955ab8cdd9fe26ce96a6bab8303796145cf3f6b0c",
+      "input_bound": 12412,
+      "worst_case_usd": "0.0140515"
+    },
+    {
+      "id": "Q21-sol-B-3",
+      "question": "Q21",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "7d11089c60ebef50daa7e30131ea4bc4a5fc8455cddfb7a3866d0e416eb116ac",
+      "input_bound": 12406,
+      "worst_case_usd": "0.281015"
+    },
+    {
+      "id": "Q21-luna-A-3",
+      "question": "Q21",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "644805a44054108adb7e2b1b52bfc4b830a7e98997b23ef6dd4376dc76994de5",
+      "input_bound": 7383,
+      "worst_case_usd": "0.013422875"
+    },
+    {
+      "id": "Q21-luna-B-3",
+      "question": "Q21",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "7346d1df8a7d12c33ac72ff1e6ffdd58ae880f00a9841a7032d8ddbc573f74cc",
+      "input_bound": 12405,
+      "worst_case_usd": "0.014050625"
+    },
+    {
+      "id": "Q21-sol-A-3",
+      "question": "Q21",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "14d113a32f9937050334d512683bf4ad05f1572ce1df6ead7f843a17120bfb81",
+      "input_bound": 7384,
+      "worst_case_usd": "0.26846"
+    },
+    {
+      "id": "Q10-luna-A-3",
+      "question": "Q10",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "35adf5d6f77914c4ec8658605fad03925c5a3d75b22e023b7c2f3b0d969d7f39",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q10-luna-B-3",
+      "question": "Q10",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "c64b5aacd6687356d6ed7be0afb4c5455ce8d0ae65ade47dcf27ceaf09676512",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q10-sol-A-3",
+      "question": "Q10",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "223d083bb49154437b233350d379f391f627e8936dadb1b5e0a10d0f6e361384",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q10-sol-B-3",
+      "question": "Q10",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "48be4e7efff248e295d3575b596315751ec2a6aed7e674eaa77e51df83bf0b43",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q22-luna-B-3",
+      "question": "Q22",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "ef33994a14ab00fd95eb3da1116783ccd9c37083be3a94e8473d9006891f111f",
+      "input_bound": 12391,
+      "worst_case_usd": "0.014048875"
+    },
+    {
+      "id": "Q22-sol-A-3",
+      "question": "Q22",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "56fcb39a93550ae9dea43738f7ba9f398cb933865e28ca529d62491c5018c6e2",
+      "input_bound": 7370,
+      "worst_case_usd": "0.268425"
+    },
+    {
+      "id": "Q22-sol-B-3",
+      "question": "Q22",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "094630bb1bfe96c62d1abe23fc42871397eaab5930f19cbda8bff3a61075b9ac",
+      "input_bound": 12392,
+      "worst_case_usd": "0.28098"
+    },
+    {
+      "id": "Q22-luna-A-3",
+      "question": "Q22",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "3c5a18f999b3744475a47a29ad8cd2da618b76dff52e16a368b3b3d40ef324dd",
+      "input_bound": 7369,
+      "worst_case_usd": "0.013421125"
+    },
+    {
+      "id": "Q07-sol-A-3",
+      "question": "Q07",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "21376629ec96861ca79b50ad85f1539d53abab9709fc9656e2cb2735ef3970ee",
+      "input_bound": 7415,
+      "worst_case_usd": "0.2685375"
+    },
+    {
+      "id": "Q07-sol-B-3",
+      "question": "Q07",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "6ddc5e230f7eee35d876c7b2a4840fafd1370fd4a003d2c38ec7f9df0fdd28f6",
+      "input_bound": 12437,
+      "worst_case_usd": "0.2810925"
+    },
+    {
+      "id": "Q07-luna-A-3",
+      "question": "Q07",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "588159d64a7e974c7e42c088648333fbb4aef2830a50bf37cea6b05ac588f792",
+      "input_bound": 7414,
+      "worst_case_usd": "0.01342675"
+    },
+    {
+      "id": "Q07-luna-B-3",
+      "question": "Q07",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "468644a7b1fc0cd57a5ac8f31fc16f7888e1326e7b9fa838d47bed296d9180cb",
+      "input_bound": 12436,
+      "worst_case_usd": "0.0140545"
+    },
+    {
+      "id": "Q01-sol-B-3",
+      "question": "Q01",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "773232c324b07be6b2cfbbc752b4466c841dea9eadc03b331d4cd5337ad7ec88",
+      "input_bound": 12363,
+      "worst_case_usd": "0.2809075"
+    },
+    {
+      "id": "Q01-luna-A-3",
+      "question": "Q01",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "f2b940be1a08107de6f0ba16c24fd9947d4de97d871d49617acd0e8e5432eddb",
+      "input_bound": 7340,
+      "worst_case_usd": "0.0134175"
+    },
+    {
+      "id": "Q01-luna-B-3",
+      "question": "Q01",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "e1a3c19b959e8577c4352499c169d10ebe155256c015fe9f6635014dcb55d3b5",
+      "input_bound": 12362,
+      "worst_case_usd": "0.01404525"
+    },
+    {
+      "id": "Q01-sol-A-3",
+      "question": "Q01",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "f4719b4fed3121fccde98011bfba2e481d46ef056f0b9f0b76693f63a33bfccd",
+      "input_bound": 7341,
+      "worst_case_usd": "0.2683525"
+    },
+    {
+      "id": "Q33-luna-A-3",
+      "question": "Q33",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "c19ca22be4386c07e094efc23a143bc7d767f75fe6a3d01a9126e9190c2abd0d",
+      "input_bound": 7347,
+      "worst_case_usd": "0.013418375"
+    },
+    {
+      "id": "Q33-luna-B-3",
+      "question": "Q33",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "435bef9baacb6ce3a2d64e1938dfd2234eda9b8469e8612774f521beadd600be",
+      "input_bound": 12369,
+      "worst_case_usd": "0.014046125"
+    },
+    {
+      "id": "Q33-sol-A-3",
+      "question": "Q33",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "05e2624d4be82c3647eb80a84da913670f814e2b273e1b4fc64e28c08b8bf62d",
+      "input_bound": 7348,
+      "worst_case_usd": "0.26837"
+    },
+    {
+      "id": "Q33-sol-B-3",
+      "question": "Q33",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "0e5b1313cc94f49e812ea39e896d41569d6df6b103be96eb059f1ebf897314f7",
+      "input_bound": 12370,
+      "worst_case_usd": "0.280925"
+    },
+    {
+      "id": "Q05-luna-B-3",
+      "question": "Q05",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "4ec3794d5aaa88fe04f1b15cdf800c0cc015f353e579a4f353d5c5dd740e96fe",
+      "input_bound": 12408,
+      "worst_case_usd": "0.014051"
+    },
+    {
+      "id": "Q05-sol-A-3",
+      "question": "Q05",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "2e0bdd6235aed31b03d2b2e5390875569417718a758cbff09d331afeff013d5a",
+      "input_bound": 7387,
+      "worst_case_usd": "0.2684675"
+    },
+    {
+      "id": "Q05-sol-B-3",
+      "question": "Q05",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "9af688621a2912d3687371ed857a08c1b8011822c0da1b8360eb70ed1756e2e7",
+      "input_bound": 12409,
+      "worst_case_usd": "0.2810225"
+    },
+    {
+      "id": "Q05-luna-A-3",
+      "question": "Q05",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "c36b8f5982da3ba3bd3629c1d28a88f9e406044a777e1bb257c7ecdc48e43cf1",
+      "input_bound": 7386,
+      "worst_case_usd": "0.01342325"
+    },
+    {
+      "id": "Q18-sol-A-3",
+      "question": "Q18",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "0d1524141d0758586adbba935ef096f5e8ea044f795edeebc4ca8a50e429b0e3",
+      "input_bound": 7390,
+      "worst_case_usd": "0.268475"
+    },
+    {
+      "id": "Q18-sol-B-3",
+      "question": "Q18",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "1adcb05e5d036d763991e03a19a750f3c8916cda258b7d5cd4b4d4c0e015c5d9",
+      "input_bound": 12412,
+      "worst_case_usd": "0.28103"
+    },
+    {
+      "id": "Q18-luna-A-3",
+      "question": "Q18",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "6cc8176148c057ca2daacd1c74010c358e67698c3e5f4294b1c0821bca7671b5",
+      "input_bound": 7389,
+      "worst_case_usd": "0.013423625"
+    },
+    {
+      "id": "Q18-luna-B-3",
+      "question": "Q18",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "8bb533e44a69ae61eeb8a4ca08e1ffdc433ae546806b25227dc4eddab47c89c6",
+      "input_bound": 12411,
+      "worst_case_usd": "0.014051375"
+    },
+    {
+      "id": "Q12-sol-B-3",
+      "question": "Q12",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "57b8cab0ed20d8b4d98b2c304532d96217bba1eb7c0e6469b67bcc730685c071",
+      "input_bound": 12396,
+      "worst_case_usd": "0.28099"
+    },
+    {
+      "id": "Q12-luna-A-3",
+      "question": "Q12",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "2a1510d583e413854dbea0445412668ac2d7c9c5d0d777c33a1bd8fdd888243c",
+      "input_bound": 7373,
+      "worst_case_usd": "0.013421625"
+    },
+    {
+      "id": "Q12-luna-B-3",
+      "question": "Q12",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "60b4ea060eb6e556d4f3091bb3cdcc1173f591afc1fceba34e6bcb6524237606",
+      "input_bound": 12395,
+      "worst_case_usd": "0.014049375"
+    },
+    {
+      "id": "Q12-sol-A-3",
+      "question": "Q12",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "4bd198afea7e6c70203071b29a51c94b3f11ee9361c03ffe95bd36b07c45b772",
+      "input_bound": 7374,
+      "worst_case_usd": "0.268435"
+    },
+    {
+      "id": "Q19-luna-A-3",
+      "question": "Q19",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "101fcff7c0d9fb4f844f8af1b6fa12d7a2a96e2e77b31b6cfe20d381c8f46b91",
+      "input_bound": 7372,
+      "worst_case_usd": "0.0134215"
+    },
+    {
+      "id": "Q19-luna-B-3",
+      "question": "Q19",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "abcc844964bd75a7db5adeb4483a7ebd4a1ae60ff869db723be9a1bf52ebd7f9",
+      "input_bound": 12394,
+      "worst_case_usd": "0.01404925"
+    },
+    {
+      "id": "Q19-sol-A-3",
+      "question": "Q19",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "8974dfdecf8b3d46fb924ae62caf5c675e5e0a4cddd753e52f5a2e8bf50ffefb",
+      "input_bound": 7373,
+      "worst_case_usd": "0.2684325"
+    },
+    {
+      "id": "Q19-sol-B-3",
+      "question": "Q19",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "bd6668094f8f3a634ab3be69c36b9c2e86734358a4a76e8977b8d818fac0e277",
+      "input_bound": 12395,
+      "worst_case_usd": "0.2809875"
+    },
+    {
+      "id": "Q25-luna-B-3",
+      "question": "Q25",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "72fe8f2dd70ae58b6f6308cbf169785860a5d2959da2513be3ebb665b8d87474",
+      "input_bound": 12398,
+      "worst_case_usd": "0.01404975"
+    },
+    {
+      "id": "Q25-sol-A-3",
+      "question": "Q25",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "cd02b6da950a02e7f24523c8a2fb998dc9033c510704306e258f2394d7c2d9c6",
+      "input_bound": 7377,
+      "worst_case_usd": "0.2684425"
+    },
+    {
+      "id": "Q25-sol-B-3",
+      "question": "Q25",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "d5fc399467e5767a79aecac4ec033397ca2c9d79c88ffe8cbca2dc5b21e1e32a",
+      "input_bound": 12399,
+      "worst_case_usd": "0.2809975"
+    },
+    {
+      "id": "Q25-luna-A-3",
+      "question": "Q25",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "a251e8f19b5682e5f014e1ac3e7241a868941765a890424f416e2c0e24f9ffbc",
+      "input_bound": 7376,
+      "worst_case_usd": "0.013422"
+    },
+    {
+      "id": "Q24-sol-A-3",
+      "question": "Q24",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "2cf3e700e34c87562026f973e84cdeb87277c374972de493b46971fe12c6b8d6",
+      "input_bound": 7394,
+      "worst_case_usd": "0.268485"
+    },
+    {
+      "id": "Q24-sol-B-3",
+      "question": "Q24",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "c8e1e6b141393cfdc7c8dc269445d14311814de9a57b594c17f8bcb9917fd4d9",
+      "input_bound": 12416,
+      "worst_case_usd": "0.28104"
+    },
+    {
+      "id": "Q24-luna-A-3",
+      "question": "Q24",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "207bb282058f3ef6344c8c9d0e900d37b5528480f90c2bf18fbda07468ce5730",
+      "input_bound": 7393,
+      "worst_case_usd": "0.013424125"
+    },
+    {
+      "id": "Q24-luna-B-3",
+      "question": "Q24",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "3251dc53385441b8b282530e2ab42a973781caaa853e84a4f5086f7db7be7fc1",
+      "input_bound": 12415,
+      "worst_case_usd": "0.014051875"
+    },
+    {
+      "id": "Q13-sol-B-3",
+      "question": "Q13",
+      "model": "sol",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "0a378ccfd0976efd36b19da0a38aee7cd6051bbf1a17e15744e692885b950d74",
+      "input_bound": 12407,
+      "worst_case_usd": "0.2810175"
+    },
+    {
+      "id": "Q13-luna-A-3",
+      "question": "Q13",
+      "model": "luna",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "22c40f3dec96a9c7de885b210509158213bd9f3e078880fb38f875ea8deb223e",
+      "input_bound": 7384,
+      "worst_case_usd": "0.013423"
+    },
+    {
+      "id": "Q13-luna-B-3",
+      "question": "Q13",
+      "model": "luna",
+      "arm": "B",
+      "draw": 3,
+      "body_hash": "8de5ee861ce939277a69d15b05f8675bf43da991600c03e2847cddf318ba7280",
+      "input_bound": 12406,
+      "worst_case_usd": "0.01405075"
+    },
+    {
+      "id": "Q13-sol-A-3",
+      "question": "Q13",
+      "model": "sol",
+      "arm": "A",
+      "draw": 3,
+      "body_hash": "83ca4cce315f3f3deb9f0e06b18ec264bac1770aa154ccadbfc88d7bd7fd56ad",
+      "input_bound": 7385,
+      "worst_case_usd": "0.2684625"
+    }
+  ],
+  "bodies_sha256": "f019425b0b4072066009579f758fb7b60bedc6fecb616ba5a6b8223c85e57c58",
+  "usd_per_million": {
+    "gpt-6-luna": {
+      "input": "0.10",
+      "cached": "0.01",
+      "30m_write": "0.125",
+      "output": "0.50"
+    },
+    "gpt-6.1-sol": {
+      "input": "2.00",
+      "cached": "0.10",
+      "30m_write": "2.50",
+      "output": "10.00"
+    }
+  },
+  "pricing_date": "2026-11-15",
+  "pricing_source": "https://developers.openai.com/api/docs/pricing",
+  "worst_case_by_cell_usd": {
+    "luna-A": "1.449630000",
+    "luna-B": "1.517427000",
+    "sol-A": "28.9928700",
+    "sol-B": "30.3488100"
+  },
+  "worst_case_reserve_usd": "62.308737000",
+  "spending_guard": "send only if accounted spend plus this request's worst case <= cap",
+  "proposed_cap_usd": "15.00",
+  "source_sha256": {
+    "experiments/model_context/proposal.py": "05338145182e3cdf4f188420f57ab83bfd82b17c25681341284d82338ee3cc6d",
+    "experiments/model_context/accounting.py": "9b1d120fee4913272d3a8c2905cd80554df28d27903d9762ca0d5f408f1e32b8",
+    "experiments/model_context/analysis.py": "79dcd3a167abe01960ce076535ce319cd6273ba9d11719755d8c1e8171fb1937",
+    "experiments/model_context/protocol.md": "05aacf3d59c3e0236864876a2c2f582fd800e96835af383f21b155650a42b073",
+    "experiments/finops_sql/episode.py": "37a27b622ba6d2949c274567304d5558f9b29f0c351db5019fbc1ef68287de93",
+    "experiments/finops_sql/packages.py": "212aba86d348ccc8306572b67136f5ec7352b7c724b27541a27d00643e0abbdb",
+    "experiments/finops_sql/grading.py": "8ca7e27a77f8e7997ac7b2711d1aa220219a2cb48784a17b2913d702b6c868a2",
+    "experiments/finops_sql/compare.py": "fae843db9d94a4a4085f8d4f4f8ccf9d092d6107872ea149d0fcb86fd0f810b8",
+    "experiments/finops_sql/checkpoint.py": "3351099799c8c46184a0bf1aa8698c6f8f07d0095b5e879b5a523d561c97bc69",
+    "experiments/finops_sql/oracle-bindings-v2.json": "590a59da4c054a8136a7538b1f5d19c810a1e036592b7ce2717ff50148b79dc0",
+    "experiments/finops_sql/v3/proposal.py": "8baadaaff76a643184c9b2c4174790607e1d8705c8a7603f4fe7d8752a687958",
+    "experiments/finops_sql/v3/grading.py": "d324163ab33571e2f6de1d16e68167a3873be0e3881a86427ca73dd03b50485f",
+    "experiments/finops_sql/v3/worker.py": "59ff2beaa74777a4c01e06efa84e2b7f9dbf0b3cbfbe1638d7417380bb0dc8d3",
+    "experiments/finops_sql/v3/Dockerfile": "0958a64131b1267fb972c0df0664be58d5299ac682e3f7df740f2e615b454f80",
+    "experiments/finops_sql/v3/reporting.md": "315f51fc5fb9944311b885877e9ef7853523943e0403e8aa16d3b7a83ca185c1",
+    "experiments/finops_sql/public/v2/questions.json": "9d944aa4339d889dc42b9983c22c028c0f4a6f0cc5502d46cb6cd6de79d040ae"
+  },
+  "proposal_digest": "f9fd35762130871a80c4a24d28dae47a3bf9f500c5d4f7185cb77fe21ba458f0"
+}

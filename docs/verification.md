@@ -1,4 +1,15 @@
 # Phase 0 / Phase 1 verification
+## Experiment 006 · offline implementation and freeze, November 15
+
+Built and froze the 432-request proposal at `experiments/model_context/proposals/r1`. Proposal digest `f9fd35762130871a80c4a24d28dae47a3bf9f500c5d4f7185cb77fe21ba458f0`, manifest file SHA-256 `ee5915f50fc4c4b433a50d7e016d249e1f0ba370be95d8bdc4cfe476af024a6d`, bodies digest `f019425b0b4072066009579f758fb7b60bedc6fecb616ba5a6b8223c85e57c58`. The build verifies the accepted 005 evaluation-r1 proposal digest and body bindings, then requires every Luna body to equal its 005 body. Tests confirm each Sol body differs only in `model`.
+
+- `pytest -q -p no:cacheprovider`: 405 passed, 7 fixture-dependent skips (13 new tests in `tests/test_model_context.py`).
+- `ruff check .` and `ruff format --check .` passed.
+- Mocked acquisitions covered the clean run, output exhaustion, a spending-guard stop, HTTP 503, read timeout, a mismatched served model, a duplicate response ID and a non-default tier. Each sealed and was replayed by `analysis.replay`, with matching ledger hashes, accounted spend and unsent counts. Authority and budget refusals sent no HTTP.
+- Pricing checks: Luna $0.000018725 and Sol $0.0003735 for the same usage at 2026-11-15 rates. Dated Sol snapshots are accepted; other model names are rejected.
+
+No inference was sent. Grading of a real run needs the v3 worker image and verified snapshots, which these tests do not exercise.
+
 ## Final owner acceptance and Lab closure · November 12
 
 The owner accepted Experiment 005's publication revision `15273a79f05f54675f648d9daedb0592c6351b54` and all five planned experiments and publication packages. Architectural, methodological and publication review is complete. The current AI Evaluation Lab initiative is formally closed. Website integration remains a separate initiative requiring authorization.

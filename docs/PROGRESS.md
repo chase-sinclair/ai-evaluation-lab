@@ -1,4 +1,35 @@
-# Progress — November 12, 2026
+# Progress — November 15, 2026
+
+## Experiment 006 · model tier against context, frozen and awaiting owner approval
+
+**Status:** offline implementation complete. No inference has been sent.
+
+The owner opened a new initiative after the Lab's closure and chose its design: `gpt-6.1-sol` against `gpt-6-luna`, schema-only (A) and curated (B) context, and three draws per question on the 36 Meridian evaluation questions. That is 432 single-turn requests. [Design](experiment06_model_context_design.md)
+
+**Implemented.** `experiments/model_context/` (proposal, accounting, analysis, protocol, README), the frozen proposal in `experiments/model_context/proposals/r1/`, the dispatcher `scripts/acquire_model_context.py`, and tests in `tests/test_model_context.py`.
+
+**Decisions.**
+- Luna bodies are byte-identical to the accepted 005 evaluation bodies. Sol bodies differ only in `model`. Tests enforce both.
+- The order is draw-major, with a fixed shuffle per draw and cells rotating per question.
+- Self-discovery (D) is excluded.
+- The full worst-case reserve is $62.308737 because of Sol's output price and the 25,000-token limit. Instead of holding it, the dispatcher refuses any request whose worst case would push accounted spend past the cap. The proposed cap is $15.00 against an expected $3–6.
+- Prices are from the OpenAI pricing page on 2026-11-15, standard tier, short context.
+
+**Frozen identities.**
+- Proposal digest: `f9fd35762130871a80c4a24d28dae47a3bf9f500c5d4f7185cb77fe21ba458f0`
+- Manifest file SHA-256: `ee5915f50fc4c4b433a50d7e016d249e1f0ba370be95d8bdc4cfe476af024a6d`
+- Bodies digest: `f019425b0b4072066009579f758fb7b60bedc6fecb616ba5a6b8223c85e57c58`
+
+**Verification.** `pytest -q` passed 405 tests with 7 fixture-dependent skips; 13 of the passes are new. Ruff lint and format passed. Mocked runs covered completion, output exhaustion, a spending-guard stop, and failures from HTTP errors, timeouts, the wrong served model, duplicate IDs and the wrong tier. Each was sealed and replayed.
+
+**Blockers.** Owner approval of the exact digest, reviewed revision and cap. Confirmation of current rates, credit and project access for both models. The `meridian-worker:v3` image and verified snapshots are needed for grading after acquisition.
+
+**Next steps.**
+1. Owner reviews the design, the proposal digest and the $15 cap.
+2. Commit, push and confirm CI on that revision.
+3. Run once: `python -m scripts.acquire_model_context --approval <digest> --reviewed-revision <sha> --cap-usd 15.00 --confirm-current-standard-rates "luna 0.10/0.01/0.125/0.50 sol 2.00/0.10/2.50/10.00" --confirm-credit-and-project-limits`
+4. Replay and produce the masked worksheet. Owner review follows, then scoring.
+
 
 ## Final owner acceptance · Lab complete
 
