@@ -1,8 +1,39 @@
 # Progress — November 15, 2026
 
-## Experiment 007 · Claude replication design awaiting owner review
+## Experiment 007 · frozen and awaiting run approval
 
-**Status:** design only. No implementation, dependency change or inference. [Design](experiment07_claude_replication_design.md)
+**Status:** the owner approved the design on November 15. The offline implementation is complete and the proposal is frozen. No Claude request has been sent.
+
+**Implemented.**
+- `experiments/claude_context/`: proposal, accounting, analysis, protocol and README
+- The frozen proposal in `experiments/claude_context/proposals/r1/`
+- The dispatcher, `scripts/acquire_claude_context.py`
+- Tests in `tests/test_claude_context.py`
+- The `anthropic==2.8.0` dev dependency (Apache-2.0), which runs on `httpx2`
+
+**Decisions made during implementation.**
+- `inference_geo: "global"` is now set explicitly. An omitted value would follow the workspace default, which could be US-only at 1.1× prices.
+- The 900-second explicit timeout matches 006 and keeps the 25,000-token limit on non-streaming requests. The SDK's long-request guard applies only at its default timeout.
+- Experiment 006's frozen analysis functions are imported unchanged, because editing them would invalidate 006's replay.
+
+**Frozen identities.**
+- Proposal digest: `1d0f60453140362f1f0ddc50a089066d80b093ccac14e2c063d3074447affdef`
+- Manifest file SHA-256: `933936714bb02dee4b6cac4479c4c1c5ea9d6bfa683fb1d8432648f7b162cb3a`
+- Bodies digest: `fdd81300b540c3d66d2792d3a6a7f55835b85be2cfad9939930be8f8775324fa`
+- Full worst-case reserve: $62.323479, under the per-request guard with a proposed $15 cap.
+
+**Verification.** `pytest -q` passed 421 tests with 7 fixture-dependent skips; 16 are new. Ruff lint and format passed. The 005 and 006 sources are unchanged.
+
+**Blockers.**
+- Owner approval of the digest, revision and cap.
+- The owner sets `ANTHROPIC_API_KEY` in their own environment before the run.
+- The owner confirms current rates and Anthropic credit and workspace limits.
+
+**Next step.** Run once with `python -m scripts.acquire_claude_context --approval <digest> --reviewed-revision <sha> --cap-usd 15.00 --confirm-current-standard-rates "haiku 0.10/0.01/0.125/0.50 sonnet 2.00/0.10/2.50/10.00" --confirm-credit-and-workspace-limits`. Then replay, produce the masked worksheet with 006 carry-overs, and have the owner or a non-Anthropic drafter review it.
+
+## Experiment 007 · Claude replication design approved
+
+**Status:** design approved by the owner on November 15. Implementation follows in the checkpoint above. [Design](experiment07_claude_replication_design.md)
 
 The study replicates Experiment 006's 2 × 2 on `claude-haiku-5-5` (cheap) and `claude-sonnet-5-5` (expensive). Their standard rates match `gpt-6-luna` and `gpt-6.1-sol` exactly; they were checked on November 15 on the Anthropic pricing page. It keeps the same 36 questions, three draws, order and grading, for 432 requests. Request texts are derived mechanically from the frozen 006 bodies, with medium effort set explicitly and no server-side fallbacks.
 

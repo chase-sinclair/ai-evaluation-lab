@@ -1,4 +1,16 @@
 # Phase 0 / Phase 1 verification
+## Experiment 007 · offline implementation and freeze, November 15
+
+Added `anthropic==2.8.0` to the dev group with `uv add --dev` (Apache-2.0). Froze the 432-request proposal at `experiments/claude_context/proposals/r1`. Proposal digest `1d0f60453140362f1f0ddc50a089066d80b093ccac14e2c063d3074447affdef`, manifest file SHA-256 `933936714bb02dee4b6cac4479c4c1c5ea9d6bfa683fb1d8432648f7b162cb3a`, bodies digest `fdd81300b540c3d66d2792d3a6a7f55835b85be2cfad9939930be8f8775324fa`. The build verifies the approved 006 proposal and bodies digests first.
+
+- `pytest -q -p no:cacheprovider`: 421 passed, 7 fixture-dependent skips. The 16 new tests are in `tests/test_claude_context.py`.
+- `ruff check .` and `ruff format --check .` passed. `git status` showed no change to `experiments/finops_sql` or `experiments/model_context`.
+- Tests confirm that every body's system and user text equal the 006 developer and user text at the same position, with the counterpart model and the mapped settings.
+- Pricing checks: Haiku $0.000018225 and Sonnet $0.0003635 for the same usage. Receipts are rejected for a US region, fast speed, priority tier, a 1-hour cache write, the wrong model, prompts over the bound or the 100K threshold, or excess output.
+- Mocked `httpx2` acquisitions covered a clean run, output exhaustion, a refusal, a spending-guard stop, HTTP 500, read timeout, the wrong served model, a duplicate ID and a US-region receipt. Each sealed and was replayed. Recorded request headers exclude authentication. Authority and budget refusals sent no HTTP.
+
+No inference was sent.
+
 ## Experiment 006 · clarification adjudication accepted, November 15
 
 The owner accepted all 17 drafted judgments in `.verification/model-context-reviewed.json` (SHA-256 `c3cd39772f04bba5c9b8ec7727c870f163948c32bf8422fcf5aa1edb0c1353f4`) without amendment. The scored report is unchanged (SHA-256 `4fcf8385ff23ed143b085624704b3964fc66b71e8557d44dbfd12b92b734764e`). Only documentation changed.

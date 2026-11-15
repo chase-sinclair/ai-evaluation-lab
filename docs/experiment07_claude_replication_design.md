@@ -17,7 +17,7 @@ Current standard rates on the Claude API, prompts up to 100,000 tokens, USD per 
 | Cheap | `claude-haiku-5-5` | 0.10 | 0.125 | 0.01 | 0.50 | `gpt-6-luna`, identical rates |
 | Expensive | `claude-sonnet-5-5` | 2.00 | 2.50 | 0.10 | 10.00 | `gpt-6.1-sol`, identical rates |
 
-The rates match 006 line for line, so cost comparisons across the two studies need no adjustment. Requests use global routing, the default. US-only inference would add a 1.1× multiplier, and the dispatcher rejects any receipt that reports it. Every prompt in this study is under 5,000 tokens, far below Haiku's 100,000-token threshold for higher prices. The dispatcher still checks each receipt against it.
+The rates match 006 line for line, so cost comparisons across the two studies need no adjustment. Requests set global routing explicitly. US-only inference would add a 1.1× multiplier, and the dispatcher rejects any receipt that reports a region other than global. Every prompt in this study is under 5,000 tokens, far below Haiku's 100,000-token threshold for higher prices. The dispatcher still checks each receipt against it.
 
 ## Design
 
@@ -43,7 +43,7 @@ Each Claude request is derived mechanically from the frozen 006 request in the s
 | `max_output_tokens: 25000` | `max_tokens: 25000` |
 | `reasoning: {effort: "medium"}` | `thinking: {type: "adaptive"}` and `output_config: {effort: "medium"}`, set explicitly because Sonnet 5.5 defaults to `high` |
 | `prompt_cache_options: {ttl: "30m"}` | `cache_control: {type: "ephemeral"}` on the system block (5-minute lifetime) |
-| `service_tier: "default"` | Standard tier, global routing. No `speed`, `inference_geo` or `fallbacks` |
+| `service_tier: "default"` | Standard tier. `inference_geo: "global"` is set explicitly, because an omitted value falls back to the workspace default, which could be US-only at 1.1× prices. No `speed` or `fallbacks` |
 
 **No server-side fallbacks.** Fallbacks would let a declined request be re-run on a different model, which would put another model's answers inside a cell. The parameter is deliberately left out. Any refusal is recorded as that model's outcome.
 
@@ -102,7 +102,7 @@ Everything below is offline until the owner approves a frozen digest.
 
 | Component | Location | Notes |
 |---|---|---|
-| Anthropic SDK | `pyproject.toml` dev group, `uv.lock` | The official `anthropic` Python package, MIT-licensed and pinned. Live use only. Tests run offline with a mock transport. |
+| Anthropic SDK | `pyproject.toml` dev group, `uv.lock` | The official `anthropic` Python package, Apache-2.0, pinned at 2.8.0. It runs on `httpx2`, so mocks and wire capture use `httpx2`. Live use only. Tests run offline with a mock transport. |
 | Request builder and freeze | `experiments/claude_context/proposal.py`, `proposals/r1/` | Derives the 432 bodies from the frozen 006 proposal and verifies its digest first. |
 | Receipt checks and pricing | `experiments/claude_context/accounting.py` | Checks model identity, `stop_reason`, the usage fields (`input_tokens`, `cache_creation_input_tokens` split by lifetime, `cache_read_input_tokens`, `output_tokens`), the global inference region and the 100K threshold. |
 | Dispatcher | `scripts/acquire_claude_context.py` | Same freeze, approval, guard, seal and fail-stop pattern as 006. It sends with the SDK's raw-response interface and stores the raw HTTP body. It sets an explicit 900-second timeout, matching 006's read timeout, with zero SDK retries. |
