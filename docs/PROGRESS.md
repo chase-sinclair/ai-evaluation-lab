@@ -1,5 +1,24 @@
 # Progress — November 15, 2026
 
+## Experiment 007 · Claude replication design awaiting owner review
+
+**Status:** design only. No implementation, dependency change or inference. [Design](experiment07_claude_replication_design.md)
+
+The study replicates Experiment 006's 2 × 2 on `claude-haiku-5-5` (cheap) and `claude-sonnet-5-5` (expensive). Their standard rates match `gpt-6-luna` and `gpt-6.1-sol` exactly; they were checked on November 15 on the Anthropic pricing page. It keeps the same 36 questions, three draws, order and grading, for 432 requests. Request texts are derived mechanically from the frozen 006 bodies, with medium effort set explicitly and no server-side fallbacks.
+
+**Pre-registered primary criterion.** Haiku with curated context outscores Sonnet with schema only in every draw.
+
+**Conflict of interest.** Claude designed the study, so Claude will not draft the clarification judgments. The owner reviews them directly, or a non-Anthropic model drafts them.
+
+**Proposed budget.** Expected $1–3, with a $15 cap under the same per-request guard as 006.
+
+**Blockers.**
+- Owner review of the design.
+- An `ANTHROPIC_API_KEY`, or an `ant auth login` profile, in the owner's environment. Neither is configured.
+- Adding the `anthropic` SDK as a pinned dev dependency.
+
+**Next step.** After design approval, implement offline (proposal, accounting, dispatcher, analysis, tests), freeze, and return for run approval.
+
 ## Experiment 006 · scored, clarification adjudication accepted
 
 **Status:** graded offline. On November 15 the owner accepted the AI-assisted clarification judgments (9 of 17 adequate) without amendment, so the scores below are final for this run. Next is owner architectural review and a decision on publication. A cross-provider replication with Claude models is under discussion. [Scored results](experiment06_scored_results.md)
