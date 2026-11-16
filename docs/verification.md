@@ -1,4 +1,12 @@
 # Phase 0 / Phase 1 verification
+## Experiment 007 · owner review and offline scoring, November 16
+
+The owner judged 11 masked wordings for the official score (8 adequate, 3 not adequate, with reasons) and 3 for the sensitivity score (all adequate). Ran `python -m experiments.claude_context.analysis ... --review .verification/claude-context-reviewed.json --snapshots .verification/finops-verified`. Report SHA-256 `e69151b3567ea7288ae69ba69e47dbcb14988c893f19c59dc6c0bd3ac9bc6ef5`. Every pre-registered replication criterion evaluated true.
+
+- Added the post-hoc `experiments/claude_context/sensitivity.py`, which re-scores only malformed answers with lenient JSON extraction. Output SHA-256 `af208cec22652eedd12320f7df289f9a99cacf9d212d7e3537983193cce70611`.
+- An independent recount from `.verification/claude-context-cases.json` matched every draw score. The SQL and clarification subtotals sum to each draw.
+- `pytest -q -p no:cacheprovider`: 422 passed, 7 skipped. `ruff check .` and `ruff format --check .` passed. The frozen sources are unchanged, and the proposal still verifies.
+
 ## Experiment 007 · one-time acquisition sealed, November 15
 
 Ran `scripts.acquire_claude_context` once at approved clean revision `32eafc3d984e6019ba5eb2b287fad273f4dd6e0c` (also `origin/main`), with approval `1d0f60453140362f1f0ddc50a089066d80b093ccac14e2c063d3074447affdef` and a $15.00 cap. The 432 requests all finished. There were no failures, refusals, exhaustions, guard stops or unaccounted attempts. Accounted usage-priced spend was $1.609131245.

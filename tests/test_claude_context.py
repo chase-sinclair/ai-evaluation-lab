@@ -319,3 +319,16 @@ def test_summarize_and_replication_criteria():
     failed = build([16, 6, 12], [7, 6, 6])["replication"]
     assert failed["primary_haiku_curated_beats_sonnet_schema_every_draw"] is False
     assert failed["primary_draws"] == {"haiku_B": [16, 6, 12], "sonnet_A": [7, 6, 6]}
+
+
+def test_post_hoc_lenient_extraction():
+    from experiments.claude_context.sensitivity import lenient
+
+    sql = '{"kind":"sql","query":"SELECT 1"}'
+    assert lenient("```json\n" + sql + "\n```") == {"kind": "sql", "query": "SELECT 1"}
+    assert lenient("Interpretation: use posting month.\n" + sql)["kind"] == "sql"
+    assert lenient(sql + "\nThis uses the invoice clock.")["kind"] == "sql"
+    # A non-answer object first, then the answer.
+    assert lenient('{"note": 1} then ' + sql)["kind"] == "sql"
+    assert lenient("no json here") == {"kind": "malformed"}
+    assert lenient('{"kind":"sql","query":""}') == {"kind": "malformed"}

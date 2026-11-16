@@ -1,4 +1,23 @@
-# Progress — November 15, 2026
+# Progress — November 16, 2026
+
+
+## Experiment 007 · scored, replication held
+
+**Status:** graded offline with the owner's masked clarification review, which the owner gave item by item without AI drafting. [Scored results](experiment07_scored_results.md)
+
+**Result.** Every pre-registered criterion held.
+- Haiku with curated context beat Sonnet with schema only in all three draws: 16, 17 and 18 against 8, 8 and 10.
+- On the same question and draw, it gained 32 decisions and lost 7, at 23% of the cost.
+- Context raised each model in every draw.
+- Sonnet with curated context finished 18.0, against Haiku's 17.0.
+
+**Post-hoc format sensitivity.** This is labelled and not pre-registered. Claude broke the JSON output contract in 44 answers, 18 of them from Sonnet with curated context. Lenient extraction gives Haiku 19.0 and Sonnet 22.7 with curated context, and the primary criterion still holds.
+
+**Implementation.** The post-hoc module is `experiments/claude_context/sensitivity.py`. Its test brings the suite to 422 passed and 7 skipped. Ruff is clean.
+
+**Next steps.**
+1. Owner review of the 006 and 007 results together.
+2. Decide on publication: a case study for the Lab, and the portfolio scorecard and /projects chart.
 
 ## Experiment 007 · acquisition sealed, owner clarification review pending
 
