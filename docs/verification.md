@@ -1,4 +1,16 @@
 # Phase 0 / Phase 1 verification
+## Experiments 006 and 007 · review edits to the combined package, November 16
+
+After a review of `c7c9106` found no factual errors, the owner approved two edits:
+- The case study now says the expensive GPT model with context "averaged" 24 of 36 correct decisions. The figure is a three-draw mean (26, 23, 23).
+- The paired figure has a gained, lost and tied colour key. `render_context_tier.py` draws it, and both paired SVGs were regenerated from the same digest-checked reports.
+
+Checks:
+- A second regeneration was byte-identical, and the means figures were unchanged.
+- In the browser, both paired SVGs had no element outside the canvas and no overlapping text at 720 and 330 px.
+- All relative links still resolve.
+- Ruff lint and format passed, and pytest passed.
+
 ## Experiments 006 and 007 · combined portfolio case study and handoff, November 16
 
 Prepared the combined sixth study from scored checkpoint `aecdee0` (`Record Experiment 007 scored results: replication held`): [case study](portfolio/model-vs-context.md), [website handoff](portfolio/model-vs-context-handoff.md), [figure renderer](portfolio/render_context_tier.py), four responsive SVG figures (`context-tier-means.svg`, `context-tier-means-compact.svg`, `context-tier-paired.svg`, `context-tier-paired-compact.svg`), the updated [six-study Lab summary](portfolio/lab-summary.md) and root `README.md`.

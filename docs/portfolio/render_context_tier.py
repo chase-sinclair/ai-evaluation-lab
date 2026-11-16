@@ -127,8 +127,17 @@ def paired_chart(reports):
     footer = "108 paired outcomes per provider"
     for width, suffix, title_size in SIZES:
         track = width - 48
-        height = 75 + 76 * len(rows) + 30
+        height = 75 + 76 * len(rows) + 56
         body = [text(24, 31, title, title_size, True), text(24, 55, unit, 13 if suffix else 15)]
+        # Colour key, so the bars read without the count line beneath them.
+        key_y = height - 44
+        for slot, (label, fill) in enumerate((("Gained", BAR), ("Lost", LOSS), ("Tied", TRACK))):
+            x = 24 + 86 * slot
+            body.append(
+                f'<rect x="{x}" y="{key_y - 10}" width="12" height="12" fill="{fill}" '
+                f'stroke="{TICK}" stroke-opacity="0.25" stroke-width="0.75"/>'
+            )
+            body.append(text(x + 18, key_y, label, 13))
         for index, (provider, gain, loss, tie) in enumerate(rows):
             y = 90 + 76 * index
             gain_w, loss_w = track * gain / 108, track * loss / 108

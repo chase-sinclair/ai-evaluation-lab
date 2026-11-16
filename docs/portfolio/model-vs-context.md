@@ -6,7 +6,7 @@
 
 A team building a finance SQL assistant has a limited budget. It can move to a model that costs about 20 times more per token, or it can spend analyst time writing down what its financial terms mean. Experiment 005 showed that curated definitions lifted a low-cost model from 1 to 18 correct decisions out of 36. It did not show whether a larger model would close that gap without the definitions.
 
-**I would invest in curated context first, and price a larger model only once the context exists.** On the same 36 questions, three draws each, the low-cost model with curated context beat the expensive model with the schema alone in every draw, on two providers. GPT models scored 15.3 against 6.7 on average, Claude models 17.0 against 8.7. The cheaper configuration cost 29% and 23% as much, respectively. Even the best configuration, the expensive GPT model with context, made 24 of 36 correct decisions. None of these results supports unreviewed financial reporting.
+**I would invest in curated context first, and price a larger model only once the context exists.** On the same 36 questions, three draws each, the low-cost model with curated context beat the expensive model with the schema alone in every draw, on two providers. GPT models scored 15.3 against 6.7 on average, Claude models 17.0 against 8.7. The cheaper configuration cost 29% and 23% as much, respectively. Even the best configuration, the expensive GPT model with context, averaged 24 of 36 correct decisions. None of these results supports unreviewed financial reporting.
 
 ## Alternatives and workflow
 
