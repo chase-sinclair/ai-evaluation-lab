@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="257" viewBox="0 0 330 257" role="img" aria-labelledby="title desc">
+<title id="title">Same question, same draw</title>
+<desc id="desc">GPT models: cheap model with curated context gained 30, lost 4 and tied 74 of 108. Claude models: cheap model with curated context gained 32, lost 7 and tied 69 of 108. 108 paired outcomes per provider</desc>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#17394b">
+<text x="24" y="31" font-size="18" font-weight="700">Same question, same draw</text>
+<text x="24" y="55" font-size="13" font-weight="400">Cheap + curated against expensive + schema</text>
+<text x="24" y="90" font-size="15" font-weight="700">GPT models</text>
+<rect x="24" y="98" width="282" height="14" fill="#e4ecee"/>
+<rect x="24" y="98" width="78.33" height="14" fill="#176c70"/>
+<rect x="102.33" y="98" width="10.44" height="14" fill="#b4532a"/>
+<text x="24" y="132" font-size="14" font-weight="400">30 gained · 4 lost · 74 tied</text>
+<text x="24" y="166" font-size="15" font-weight="700">Claude models</text>
+<rect x="24" y="174" width="282" height="14" fill="#e4ecee"/>
+<rect x="24" y="174" width="83.56" height="14" fill="#176c70"/>
+<rect x="107.56" y="174" width="18.28" height="14" fill="#b4532a"/>
+<text x="24" y="208" font-size="14" font-weight="400">32 gained · 7 lost · 69 tied</text>
+<text x="24" y="242" font-size="13" font-weight="400">108 paired outcomes per provider</text>
+</g></svg>

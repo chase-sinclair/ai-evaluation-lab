@@ -1,6 +1,22 @@
 # Progress — November 16, 2026
 
 
+## Experiments 006 and 007 · combined publication package ready for owner review
+
+**Status:** the combined sixth case study, website handoff, figure renderer and responsive SVGs are complete and verified offline from scored checkpoint `aecdee0`. [Case study](portfolio/model-vs-context.md) · [Website handoff](portfolio/model-vs-context-handoff.md) · [Six-study summary](portfolio/lab-summary.md)
+
+**Implemented.**
+- `docs/portfolio/model-vs-context.md`: combined case study covering the 2 × 2 GPT (006) and Claude (007) runs, paired outcomes, labelled post-hoc format sensitivity, Q17 credit-sign trace, contribution attribution and limitations.
+- `docs/portfolio/model-vs-context-handoff.md`: website integration handoff with listing copy, asset table and claims to keep intact.
+- `docs/portfolio/render_context_tier.py` and `docs/portfolio/assets/context-tier-{means,paired}{,-compact}.svg`: digest-bound SVG generator and wide/compact figures.
+- Updated `docs/portfolio/lab-summary.md` and `README.md` from five studies to six.
+
+**Verification.** Regenerated all four SVGs and verified byte-identical output and headless Edge rendering. All relative links resolve. `ruff check .` and `ruff format --check .` (235 files) passed; `pytest -q -p no:cacheprovider` passed 422 tests with 7 skips. [Verification](verification.md)
+
+**Next steps.**
+1. Owner editorial and architectural review of the sixth study publication package.
+2. Separate decision on portfolio website integration in `career-intelligence-agent` (scorecard, `/projects` entry and interactive chart).
+
 ## Experiment 007 · scored, replication held
 
 **Status:** graded offline with the owner's masked clarification review, which the owner gave item by item without AI drafting. [Scored results](experiment07_scored_results.md)

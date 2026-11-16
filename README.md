@@ -1,6 +1,6 @@
 # AI Evaluation Lab
 
-The five-experiment AI Evaluation Lab initiative is complete and closed following final owner acceptance. All five case studies and publication packages are accepted. Experiment 005's accepted publication revision is `15273a79f05f54675f648d9daedb0592c6351b54`. [Accepted studies and handoffs](docs/portfolio/lab-summary.md) · [Closure and verification record](docs/verification.md)
+The five-experiment AI Evaluation Lab initiative is complete and closed following final owner acceptance. All five case studies and publication packages are accepted. Experiment 005's accepted publication revision is `15273a79f05f54675f648d9daedb0592c6351b54`. A later initiative added Experiments 006 and 007, published together as a sixth study whose package awaits owner review. [Six studies and handoffs](docs/portfolio/lab-summary.md) · [Closure and verification record](docs/verification.md)
 
 AI Evaluation Lab documents applied AI implementation decisions. Each case study compares a baseline with an AI alternative and explains what the observed quality, cost and operational risks justify.
 
@@ -20,7 +20,9 @@ V2 tested 18 harder shared scenarios in two mirrored orders. All passed at each 
 
 **[When Should an Enterprise AI Agent Recover Automatically—and When Should It Stop?](docs/portfolio/recovery.md)** compares three responses to 24 simulated failures. Stop-and-report scored 9/24. Deterministic rules and the AI agent each scored 24/24. Model inference cost an estimated $0.0029715 across the follow-up, with a median API latency of 1.980 seconds per request.
 
-**[How Much Business Context Does an AI SQL Assistant Need?](docs/portfolio/finops-sql.md)** follows a March invoice question through four context designs. Curated and expanded context each scored 18/36, with four questions passing only under each design. Bounded discovery scored 5/36. [Five Lab deployment decisions](docs/portfolio/lab-summary.md)
+**[How Much Business Context Does an AI SQL Assistant Need?](docs/portfolio/finops-sql.md)** follows a March invoice question through four context designs. Curated and expanded context each scored 18/36, with four questions passing only under each design. Bounded discovery scored 5/36.
+
+**[Should a Finance SQL Assistant Buy a Bigger Model or Better Context?](docs/portfolio/model-vs-context.md)** crosses two model tiers with two context levels on the same 36 questions, three draws each, on GPT and then Claude models. The low-cost model with curated context beat the expensive model without it in every draw on both providers, at roughly a quarter of the cost. [Six Lab deployment decisions](docs/portfolio/lab-summary.md)
 
 ## Quick start
 
