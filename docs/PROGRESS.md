@@ -1,5 +1,26 @@
 # Progress — November 15, 2026
 
+## Experiment 007 · acquisition sealed, owner clarification review pending
+
+**Status:** the one-time run is complete and sealed. No scores are reported at this checkpoint.
+
+The owner approved proposal `1d0f60453140362f1f0ddc50a089066d80b093ccac14e2c063d3074447affdef` with a $15.00 cap. The run used clean revision `32eafc3d984e6019ba5eb2b287fad273f4dd6e0c`. The credential was read from the owner's user-level environment variable at run time and never printed or stored.
+
+**Run.** All 432 requests finished. There were zero failures, refusals, output exhaustions, guard stops or unsent requests. Usage-priced cost was $1.609131245. Every response was served as the requested model, and every receipt reported the global region. Prompt caching wrote each of the four system prompts once and read them afterwards.
+
+**Seal.** Ledger digest `3b30d0227606ad1ca6d66834c0c3a39591d96cd8020ec6f9d294c5ff09ce06a7`. Seal SHA-256 `001c7e32205a1d8e1938223fd80fae69d37d8d52425413e59f456248c55c9012`. The 2,594 result files are local and ignored.
+
+**Replay.** Verified every receipt.
+- The masked worksheet has 11 items, none carried over from 006: `.verification/claude-context-worksheet.json`, SHA-256 `b6fa3efa80c5e5b82fb0f70528f1118c920e6eb0cb5e3c519964b3855904b990`.
+- **Malformed answers.** 44 answers broke the frozen output contract and count as incorrect under the pre-registered rules: 17 were fenced code blocks, 16 had prose before the JSON, and 11 had trailing text. A clearly labelled post-hoc sensitivity analysis will also score them with lenient JSON extraction. That adds 3 worksheet items: `.verification/claude-context-worksheet-sensitivity.json`, SHA-256 `6de8912879ace852c0b339c0708f7dfb6d66c74ac625423a4d3d84ce0fe842a1`.
+
+**Blocker.** Clarification review by the owner, or a non-Anthropic drafter that the owner accepts. Claude does not draft these judgments.
+
+**Next steps.**
+1. Owner review of the 14 items.
+2. Grade with `python -m experiments.claude_context.analysis results/meridian-claude-context-r1-once --review <reviewed.json> --snapshots .verification/finops-verified`.
+3. Add the labelled sensitivity score and the replication verdict.
+
 ## Experiment 007 · frozen and awaiting run approval
 
 **Status:** the owner approved the design on November 15. The offline implementation is complete and the proposal is frozen. No Claude request has been sent.

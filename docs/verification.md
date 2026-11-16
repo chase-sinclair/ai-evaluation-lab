@@ -1,4 +1,13 @@
 # Phase 0 / Phase 1 verification
+## Experiment 007 · one-time acquisition sealed, November 15
+
+Ran `scripts.acquire_claude_context` once at approved clean revision `32eafc3d984e6019ba5eb2b287fad273f4dd6e0c` (also `origin/main`), with approval `1d0f60453140362f1f0ddc50a089066d80b093ccac14e2c063d3074447affdef` and a $15.00 cap. The 432 requests all finished. There were no failures, refusals, exhaustions, guard stops or unaccounted attempts. Accounted usage-priced spend was $1.609131245.
+
+- Seal SHA-256 `001c7e32205a1d8e1938223fd80fae69d37d8d52425413e59f456248c55c9012`. Ledger digest `3b30d0227606ad1ca6d66834c0c3a39591d96cd8020ec6f9d294c5ff09ce06a7`. 2,594 files.
+- `python -m experiments.claude_context.analysis` replayed the ledger without error. Served models matched every request, and every receipt reported `inference_geo: global`.
+- The masked worksheet has 11 items, and none matched an accepted 006 judgment. 44 malformed answers were categorized for a post-hoc sensitivity analysis, which adds 3 worksheet items.
+- Raw results and worksheets are local and ignored. No grading yet.
+
 ## Experiment 007 · offline implementation and freeze, November 15
 
 Added `anthropic==2.8.0` to the dev group with `uv add --dev` (Apache-2.0). Froze the 432-request proposal at `experiments/claude_context/proposals/r1`. Proposal digest `1d0f60453140362f1f0ddc50a089066d80b093ccac14e2c063d3074447affdef`, manifest file SHA-256 `933936714bb02dee4b6cac4479c4c1c5ea9d6bfa683fb1d8432648f7b162cb3a`, bodies digest `fdd81300b540c3d66d2792d3a6a7f55835b85be2cfad9939930be8f8775324fa`. The build verifies the approved 006 proposal and bodies digests first.
