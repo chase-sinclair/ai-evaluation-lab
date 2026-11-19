@@ -13,6 +13,7 @@ from experiments.finops_sql.references import QUERIES
 from experiments.model_context import analysis
 from experiments.model_context.accounting import charge, served_as
 from experiments.model_context.proposal import CAP, CELLS, MODELS, cell_id, parent_bodies
+from experiments.model_context.replay import replay
 from scripts import acquire_model_context as run
 
 
@@ -95,7 +96,7 @@ def answer_for(question):
     return {"kind": "clarify", "dimensions": ["period"], "question": "Which period?"}
 
 
-FAULTS = ["none", "exhaust", "guard", "http", "model", "duplicate", "tier", "timeout"]
+FAULTS = ["none", "exhaust", "guard", "http", "model", "duplicate", "tier", "timeout", "status"]
 
 
 @pytest.mark.parametrize("fault", FAULTS)
@@ -145,6 +146,8 @@ def test_acquisition(tmp_path, frozen, fault):
                 raw["id"] = "resp_1"
             if fault == "tier":
                 raw["service_tier"] = "priority"
+            if fault == "status":
+                raw.update(status="incomplete", incomplete_details={"reason": "content_filter"})
         return httpx.Response(200, json=raw)
 
     largest = max(Decimal(r["worst_case_usd"]) for r in plan["requests"])
@@ -179,7 +182,19 @@ def test_acquisition(tmp_path, frozen, fault):
     else:
         assert n == 2 and seal["stop"] is None
 
-    ends, stats, served = analysis.replay(dest)
+    ends, stats, served = replay(dest, "gpt")
+    if fault == "status":
+        assert ends[plan["requests"][1]["id"]] == {"kind": "interrupted"}
+        assert seal["attempts_without_accounting"] == 0
+        assert sum(cell["requests"] for cell in stats.values()) == 2
+        assert not (dest / "002.event").exists()
+        with pytest.raises(ValueError, match="seal counts"):
+            analysis.replay(dest)
+        (dest / "seal.json").write_text(json.dumps(seal | {"accounted_usd": "0"}), encoding="utf-8")
+        with pytest.raises(ValueError, match="seal counts"):
+            replay(dest, "gpt")
+    else:
+        assert (ends, stats, served) == analysis.replay(dest)
     kinds = Counter(a["kind"] for a in ends.values())
     assert kinds["unsent"] == seal["unsent"]
     assert sum(s["cost"] for s in stats.values()) == Decimal(seal["accounted_usd"])

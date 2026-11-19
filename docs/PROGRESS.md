@@ -1,4 +1,14 @@
-# Progress — November 16, 2026
+# Progress — November 19, 2026
+
+## Experiments 006 and 007 · replay and portfolio follow-up
+
+The read-only [ledger audit](../experiments/model_context/replay.py) reconciles a charged final request that stopped before writing a terminal event. It checks the frozen proposal, sealed inventory, request and receipt bindings, and usage-priced cost. The request remains interrupted in the audit. Both experiment READMEs document the command, and the mock acquisition tests cover this failure for both providers.
+
+The new audit reproduced all 864 terminal outcomes, per-cell telemetry, and served models from the frozen analyzers. The full Docker-fixture pytest suite passed all 431 tests, and Ruff lint and format checks passed. The previous CI-verified Lab checkpoint is `3cf96a9`. [Verification](verification.md)
+
+The portfolio's Lab card remains in slot 02. Its copy identifies the schema-only comparison and the 20× per-token rate. A persistent pause control complements independent hover and focus pauses. The page links directly to the scored write-ups while the assistant source awaits indexing. The production build and browser checks passed at 320, 390 and 1440 px. [Portfolio branch commit](https://github.com/chase-sinclair/career-intelligence-agent/commit/4d03edfa7ee8a40a0c3cef7f1061760b2e748a6c)
+
+Assistant indexing remains deferred pending spending approval. [Lab GitHub Actions](https://github.com/chase-sinclair/ai-evaluation-lab/actions/workflows/ci.yml?query=branch%3Amain)
 
 
 ## Experiments 006 and 007 · combined publication package ready for owner review

@@ -6,7 +6,8 @@ Does Experiment 006's finding replicate on a second provider? That finding was t
 |---|---|
 | `proposal.py` | Derives every Messages API body from the frozen 006 body in the same position, with identical texts, and freezes the manifest. |
 | `accounting.py` | Receipt checks, usage pricing and stop-reason classification for Claude responses. |
-| `analysis.py` | Replays the sealed ledger, builds the masked worksheet with carried-over 006 judgments, scores with 006's frozen functions, and evaluates the pre-registered replication criteria. |
+| `analysis.py` | Frozen analyzer for the scored run, masked worksheet, offline grading and pre-registered replication criteria. |
+| `../model_context/replay.py` | Read-only audit of the seal, receipt bindings and usage, including a charged final request interrupted before its terminal event. |
 | `proposals/r1/` | Frozen manifest and gzipped bodies. |
 | `../../scripts/acquire_claude_context.py` | One-time dispatcher with a per-request spending guard. |
 
@@ -16,4 +17,10 @@ Offline check:
 uv run --offline pytest tests/test_claude_context.py
 ```
 
-No live request has been sent. A run needs owner approval of the exact proposal digest, reviewed revision and cap, plus an Anthropic credential in the owner's own environment.
+Audit the sealed Claude run from the repository root with the command below.
+
+```bash
+uv run --offline python -m experiments.model_context.replay claude results/meridian-claude-context-r1-once
+```
+
+See the [scored results](../../docs/experiment07_scored_results.md) for the completed one-time run. Any new acquisition requires a separately reviewed proposal and spending approval.

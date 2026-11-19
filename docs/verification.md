@@ -1,4 +1,13 @@
 # Phase 0 / Phase 1 verification
+
+## Experiments 006 and 007 · replay and portfolio follow-up, November 19
+
+- Added the read-only `experiments.model_context.replay` audit for the existing sealed GPT and Claude ledgers. It accounts for a receipt priced before its final request was interrupted, verifies the price against the seal, and reports the outcome as interrupted. The frozen proposals, acquisition scripts, analyzers, and grading rules retain their original identities.
+- The regression tests use a GPT content-filter status and a Claude unexpected stop reason after valid usage. Both retain the charge in the audit, and the audit rejects a changed seal total. The targeted pytest command covering those two cases and GPT output exhaustion passed all three tests.
+- The audit matched the frozen replay's 864 terminal outcomes, per-cell telemetry and served-model lists. The CLI reconciled $0.825245080 for GPT and $1.609131245 for Claude against their existing seals, with zero unpriced attempts.
+- With `FINOPS_VERIFIED_ROOT` set to `.verification/finops-verified`, `uv run --offline pytest -q -p no:cacheprovider -rs` passed all 431 tests. `uv run --offline ruff check .` and `uv run --offline ruff format --check .` (236 files) passed.
+- The portfolio production build and targeted ESLint passed. In Chrome at 320, 390 and 1440 px, verified the path from Projects into the Lab, slot 02, the expanded chart, its metadata and scored evidence links, and reduced motion. Verified independent hover and focus pauses, persistent manual pause, resume, and offscreen pause with normal motion enabled. Browser tests blocked POSTs. Assistant indexing and public deployment remain deferred. [Portfolio branch commit](https://github.com/chase-sinclair/career-intelligence-agent/commit/4d03edfa7ee8a40a0c3cef7f1061760b2e748a6c)
+
 ## Experiments 006 and 007 · review edits to the combined package, November 16
 
 After a review of `c7c9106` found no factual errors, the owner approved two edits:

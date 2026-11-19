@@ -6,7 +6,8 @@ Can `gpt-6-luna` with curated business definitions match `gpt-6.1-sol` with only
 |---|---|
 | `proposal.py` | Builds the 432 bodies from the accepted 005 evaluation bodies and freezes the manifest. Luna bodies are byte-identical to 005. Sol bodies differ only in the model. |
 | `accounting.py` | Receipt checks and usage pricing for both models. Accepts the requested alias or its dated snapshot. |
-| `analysis.py` | Replays the sealed ledger, builds the masked clarification worksheet, and grades and summarizes results offline. |
+| `analysis.py` | Frozen analyzer for the scored run, masked worksheet, and offline grading. |
+| `replay.py` | Read-only audit of the seal, receipt bindings and usage, including a charged final request interrupted before its terminal event. |
 | `proposals/r1/` | Frozen manifest and gzipped bodies. |
 | `../../scripts/acquire_model_context.py` | One-time dispatcher with a per-request spending guard. |
 
@@ -16,4 +17,10 @@ Rebuild check (offline):
 uv run --offline pytest tests/test_model_context.py
 ```
 
-No live request has been sent. Running the dispatcher requires owner approval of the exact proposal digest, reviewed revision and cap.
+Audit the sealed GPT run from the repository root with the command below.
+
+```bash
+uv run --offline python -m experiments.model_context.replay gpt results/meridian-model-context-r1-once
+```
+
+See the [scored results](../../docs/experiment06_scored_results.md) for the completed one-time run. Any new acquisition requires a separately reviewed proposal and spending approval.
