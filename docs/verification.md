@@ -1,5 +1,12 @@
 # Phase 0 / Phase 1 verification
 
+## Experiment 006 · portfolio naming, November 19
+
+- Updated the README and public case study, index and handoff to describe Experiment 006 as the original GPT run and the Claude replication. Both technical reports, the frozen requests, scores and figures retain their original records.
+- Verified all relative links in the four public documents and checked the combined label, 864-request total and primary scores against the scored records.
+- With `FINOPS_VERIFIED_ROOT` set to `.verification/finops-verified`, `uv run --offline pytest -q -p no:cacheprovider -rs` passed all 431 tests. `uv run --offline ruff check .`, `uv run --offline ruff format --check .` (236 files) and `git diff --check` passed.
+- The portfolio production build and targeted ESLint passed. The Browser plugin was unavailable, so Playwright Chromium checked navigation from Projects to the Lab at 390 and 1440 px. Both widths showed one Experiment 006 card in slot 02 with the grouped chart, the combined case-study link and links to the GPT and Claude results. The checks found no app errors or horizontal overflow. [Portfolio branch commit](https://github.com/chase-sinclair/career-intelligence-agent/commit/66de8503af360ad8d5a956f0da489495031983aa)
+
 ## Experiments 006 and 007 · replay and portfolio follow-up, November 19
 
 - Added the read-only `experiments.model_context.replay` audit for the existing sealed GPT and Claude ledgers. It accounts for a receipt priced before its final request was interrupted, verifies the price against the seal, and reports the outcome as interrupted. The frozen proposals, acquisition scripts, analyzers, and grading rules retain their original identities.

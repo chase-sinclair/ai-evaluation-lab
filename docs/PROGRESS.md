@@ -1,5 +1,11 @@
 # Progress — November 19, 2026
 
+## Experiment 006 · portfolio naming
+
+The public case study, Lab index, README and website handoff use **Experiment 006** for the original GPT run and its pre-registered Claude replication. The technical reports retain their run identifiers. The portfolio shows one card in slot 02 and links to both reports under Experiment 006. [Portfolio branch commit](https://github.com/chase-sinclair/career-intelligence-agent/commit/66de8503af360ad8d5a956f0da489495031983aa)
+
+The Lab passed all 431 fixture-enabled offline tests, Ruff lint and Ruff format checks. The portfolio production build and targeted ESLint passed. Playwright verified the Projects-to-Lab flow, single card, chart and report links at 390 and 1440 px. The portfolio feature branch is updated. Production deployment and assistant indexing remain pending. [Verification](verification.md)
+
 ## Experiments 006 and 007 · replay and portfolio follow-up
 
 The read-only [ledger audit](../experiments/model_context/replay.py) reconciles a charged final request that stopped before writing a terminal event. It checks the frozen proposal, sealed inventory, request and receipt bindings, and usage-priced cost. The request remains interrupted in the audit. Both experiment READMEs document the command, and the mock acquisition tests cover this failure for both providers.

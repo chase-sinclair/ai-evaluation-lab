@@ -1,12 +1,12 @@
 # Website handoff · model tier against context
 
-Place this sixth study after financial SQL context in **Applied AI decisions**. Do this only after owner acceptance and a separate approval for website integration. Use the [case study](model-vs-context.md) as the editorial source. It covers Experiments 006 and 007 as one study, because 007 is a pre-registered replication of 006.
+Use **Experiment 006** for the [combined case study](model-vs-context.md) in slot 02, after financial SQL context. The study covers the original GPT run and the pre-registered Claude replication. The technical records retain their original run identifiers.
 
 **Card headline**: Should a Finance SQL Assistant Buy a Bigger Model or Better Context?
 
 **Card copy**: A low-cost model with curated financial definitions beat a model costing 20 times more per token without them, in every draw on both GPT and Claude models, for roughly a quarter of the cost. On one question, every schema-only answer from the expensive model flipped the sign of a credit.
 
-**Primary action**: Read the case study. Use the [006 scored results](../experiment06_scored_results.md) and [007 scored results](../experiment07_scored_results.md) as secondary actions.
+**Primary action**: Read the case study. Use the [GPT results](../experiment06_scored_results.md) and [Claude replication results](../experiment07_scored_results.md) as secondary actions.
 
 ## Article and assets
 
@@ -28,4 +28,4 @@ The [renderer](render_context_tier.py) reads the two locally preserved, digest-c
 - Costs are usage-priced and exclude the effort of writing the curated package, which already existed from Experiment 005.
 - The questions were seen in Experiment 005, and the warehouse is synthetic.
 - Three draws describe variation. Do not add significance language.
-- Keep the attribution of clarification review: AI-drafted and owner-accepted in 006, owner-reviewed item by item in 007.
+- Keep the attribution of clarification review. The owner accepted the AI-drafted GPT judgments and reviewed the Claude wordings item by item.

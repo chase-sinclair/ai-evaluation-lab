@@ -1,6 +1,6 @@
 # AI Evaluation Lab
 
-The five-experiment AI Evaluation Lab initiative is complete and closed following final owner acceptance. All five case studies and publication packages are accepted. Experiment 005's accepted publication revision is `15273a79f05f54675f648d9daedb0592c6351b54`. A later initiative added Experiments 006 and 007, published together as a sixth study whose package awaits owner review. [Six studies and handoffs](docs/portfolio/lab-summary.md) · [Closure and verification record](docs/verification.md)
+The five-experiment AI Evaluation Lab initiative is complete and closed following final owner acceptance. All five case studies and publication packages are accepted. Experiment 005's accepted publication revision is `15273a79f05f54675f648d9daedb0592c6351b54`. A later initiative added Experiment 006, a single case study covering the original GPT run and the pre-registered Claude replication. [Six studies and handoffs](docs/portfolio/lab-summary.md) · [Closure and verification record](docs/verification.md)
 
 AI Evaluation Lab documents applied AI implementation decisions. Each case study compares a baseline with an AI alternative and explains what the observed quality, cost and operational risks justify.
 
