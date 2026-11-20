@@ -1,0 +1,151 @@
+{
+  "version": "source-routing-r1",
+  "documents": [
+    {
+      "id": "arbor-filing",
+      "kind": "filing",
+      "title": "Arbor Transit fiscal Q2 regulatory filing",
+      "body": "Consolidated statement of operations. Fiscal Q2 net revenue as reported: $184 million. The company estimated $192 million in sales for fiscal Q3 in its planning discussion. The filing does not attribute the quarter's growth to a single driver."
+    },
+    {
+      "id": "arbor-call",
+      "kind": "transcript",
+      "title": "Arbor Transit fiscal Q2 earnings call transcript",
+      "body": "CEO, prepared remarks: Our primary fiscal Q2 revenue growth driver was fleet contract renewals. Analyst question: Could municipal grant timing have played a larger role? CEO: That was not the main driver. CFO, outlook: The $192 million figure is our fiscal Q3 outlook."
+    },
+    {
+      "id": "arbor-brief",
+      "kind": "commentary",
+      "title": "Market Ledger Arbor Transit fiscal Q2 preview and commentary",
+      "body": "Market Ledger compiled a pre-release revenue consensus of $179 million from 11 analyst estimates. This was an expectations snapshot created before the issuer reported. Our writer had expected municipal grant timing to be the main growth driver."
+    },
+    {
+      "id": "briar-filing",
+      "kind": "filing",
+      "title": "Briar Controls fiscal Q2 regulatory filing",
+      "body": "Consolidated statement of operations. Fiscal Q2 net revenue as reported: $268 million. The company estimated $281 million in sales for fiscal Q3 in its planning discussion. The filing does not attribute the quarter's growth to a single driver."
+    },
+    {
+      "id": "briar-call",
+      "kind": "transcript",
+      "title": "Briar Controls fiscal Q2 earnings call transcript",
+      "body": "CEO, prepared remarks: Our primary fiscal Q2 revenue growth driver was warehouse automation shipments. Analyst question: Could one-time licensing income have played a larger role? CEO: That was not the main driver. CFO, outlook: The $281 million figure is our fiscal Q3 outlook."
+    },
+    {
+      "id": "briar-brief",
+      "kind": "commentary",
+      "title": "Market Ledger Briar Controls fiscal Q2 preview and commentary",
+      "body": "Market Ledger compiled a pre-release revenue consensus of $254 million from 7 analyst estimates. This was an expectations snapshot created before the issuer reported. Our writer had expected one-time licensing income to be the main growth driver."
+    },
+    {
+      "id": "cobalt-filing",
+      "kind": "filing",
+      "title": "Cobalt Foods fiscal Q2 regulatory filing",
+      "body": "Consolidated statement of operations. Fiscal Q2 net revenue as reported: $327 million. The company estimated $350 million in sales for fiscal Q3 in its planning discussion. The filing does not attribute the quarter's growth to a single driver."
+    },
+    {
+      "id": "cobalt-call",
+      "kind": "transcript",
+      "title": "Cobalt Foods fiscal Q2 earnings call transcript",
+      "body": "CEO, prepared remarks: Our primary fiscal Q2 revenue growth driver was private-label volume. Analyst question: Could restaurant demand have played a larger role? CEO: That was not the main driver. CFO, outlook: The $350 million figure is our fiscal Q3 outlook."
+    },
+    {
+      "id": "cobalt-brief",
+      "kind": "commentary",
+      "title": "Market Ledger Cobalt Foods fiscal Q2 preview and commentary",
+      "body": "Market Ledger compiled a pre-release revenue consensus of $339 million from 14 analyst estimates. This was an expectations snapshot created before the issuer reported. Our writer had expected restaurant demand to be the main growth driver."
+    },
+    {
+      "id": "dune-filing",
+      "kind": "filing",
+      "title": "Dune Medical fiscal Q2 regulatory filing",
+      "body": "Consolidated statement of operations. Fiscal Q2 net revenue as reported: $416 million. The company estimated $434 million in sales for fiscal Q3 in its planning discussion. The filing does not attribute the quarter's growth to a single driver."
+    },
+    {
+      "id": "dune-call",
+      "kind": "transcript",
+      "title": "Dune Medical fiscal Q2 earnings call transcript",
+      "body": "CEO, prepared remarks: Our primary fiscal Q2 revenue growth driver was diagnostic cartridge sales. Analyst question: Could clinic acquisitions have played a larger role? CEO: That was not the main driver. CFO, outlook: The $434 million figure is our fiscal Q3 outlook."
+    },
+    {
+      "id": "dune-brief",
+      "kind": "commentary",
+      "title": "Market Ledger Dune Medical fiscal Q2 preview and commentary",
+      "body": "Market Ledger compiled a pre-release revenue consensus of $421 million from 9 analyst estimates. This was an expectations snapshot created before the issuer reported. Our writer had expected clinic acquisitions to be the main growth driver."
+    }
+  ],
+  "cases": [
+    {
+      "id": "arbor-1",
+      "question": "What net revenue did Arbor Transit officially report for fiscal Q2? Return the amount in millions of dollars.",
+      "answer": "184",
+      "source": "arbor-filing"
+    },
+    {
+      "id": "arbor-2",
+      "question": "What did Arbor Transit's CEO name as the main driver of fiscal Q2 revenue growth? Return the named driver.",
+      "answer": "fleet contract renewals",
+      "source": "arbor-call"
+    },
+    {
+      "id": "arbor-3",
+      "question": "How many analyst estimates did Market Ledger use to calculate its pre-release revenue consensus for Arbor Transit's fiscal Q2? Return the count.",
+      "answer": "11",
+      "source": "arbor-brief"
+    },
+    {
+      "id": "briar-1",
+      "question": "What net revenue did Briar Controls officially report for fiscal Q2? Return the amount in millions of dollars.",
+      "answer": "268",
+      "source": "briar-filing"
+    },
+    {
+      "id": "briar-2",
+      "question": "What did Briar Controls's CEO name as the main driver of fiscal Q2 revenue growth? Return the named driver.",
+      "answer": "warehouse automation shipments",
+      "source": "briar-call"
+    },
+    {
+      "id": "briar-3",
+      "question": "How many analyst estimates did Market Ledger use to calculate its pre-release revenue consensus for Briar Controls's fiscal Q2? Return the count.",
+      "answer": "7",
+      "source": "briar-brief"
+    },
+    {
+      "id": "cobalt-1",
+      "question": "What net revenue did Cobalt Foods officially report for fiscal Q2? Return the amount in millions of dollars.",
+      "answer": "327",
+      "source": "cobalt-filing"
+    },
+    {
+      "id": "cobalt-2",
+      "question": "What did Cobalt Foods's CEO name as the main driver of fiscal Q2 revenue growth? Return the named driver.",
+      "answer": "private-label volume",
+      "source": "cobalt-call"
+    },
+    {
+      "id": "cobalt-3",
+      "question": "How many analyst estimates did Market Ledger use to calculate its pre-release revenue consensus for Cobalt Foods's fiscal Q2? Return the count.",
+      "answer": "14",
+      "source": "cobalt-brief"
+    },
+    {
+      "id": "dune-1",
+      "question": "What net revenue did Dune Medical officially report for fiscal Q2? Return the amount in millions of dollars.",
+      "answer": "416",
+      "source": "dune-filing"
+    },
+    {
+      "id": "dune-2",
+      "question": "What did Dune Medical's CEO name as the main driver of fiscal Q2 revenue growth? Return the named driver.",
+      "answer": "diagnostic cartridge sales",
+      "source": "dune-call"
+    },
+    {
+      "id": "dune-3",
+      "question": "How many analyst estimates did Market Ledger use to calculate its pre-release revenue consensus for Dune Medical's fiscal Q2? Return the count.",
+      "answer": "9",
+      "source": "dune-brief"
+    }
+  ]
+}

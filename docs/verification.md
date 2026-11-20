@@ -1,5 +1,13 @@
 # Phase 0 / Phase 1 verification
 
+## Source routing · offline pilot, November 19
+
+- Authored 12 questions and 12 documents. The experiment reuses the repository's canonical hashing and leaves the shared runner and earlier studies untouched. The public FDE Simulation repo supplied scenario inspiration. No third-party material was imported.
+- Ran `uv run --offline python -m experiments.source_routing plan`. Plan SHA-256 `a658c4c966d0b0a2a7c1369732c1cc5d80091732b9e949df08c31b38c9fd9388`, 72 episodes, at most 432 model requests. Ran `uv run --offline python -m experiments.source_routing smoke --traces` twice and verified byte-identical output, all 72 traces and 216 scripted calls.
+- All 11 targeted tests passed. They cover order balance, identical search conditions, answer isolation, strict JSON, unopened or wrong citations, wrong values, output bounds, exhausted episodes and completeness of paired reporting.
+- `uv run --offline pytest -q -p no:cacheprovider -rs` passed 435 tests with seven fixture-dependent skips. Ran those seven separately with `FINOPS_VERIFIED_ROOT=.verification/finops-verified`. All seven passed. Ruff lint, Ruff format (240 files) and staged diff checks passed.
+- Live dispatcher, approved prices and reserves, usage receipts and paid acquisition are pending. The local environment has no configured Gemini credential. The smoke yields no model-performance measurements. [Pilot design](../experiments/source_routing/README.md)
+
 ## Experiment 006 · portfolio naming, November 19
 
 - Updated the README and public case study, index and handoff to describe Experiment 006 as the original GPT run and the Claude replication. Both technical reports, the frozen requests, scores and figures retain their original records.

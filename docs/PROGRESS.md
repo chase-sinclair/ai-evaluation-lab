@@ -1,5 +1,11 @@
 # Progress — November 19, 2026
 
+## Source routing · offline pilot
+
+Prepared a paired pilot on whether a three-line source map reduces the work of finding authoritative evidence. The local title search and strict answer-plus-source grader cover 12 original synthetic questions across four issuers. The proposed three-provider matrix has 72 scheduled episodes and a ceiling of 432 model requests. [Pilot design](../experiments/source_routing/README.md)
+
+All 72 scripted episodes ran twice with byte-identical traces. The default offline suite passed 435 tests. The seven tests that require Docker fixtures also passed in a separate run. Ruff lint and format passed. The next acquisition checkpoint is an approved, priced and receipt-validated live protocol. The $5 spending cap is provisional, and the three-provider run needs a configured Gemini credential. No inference was sent. [Verification](verification.md)
+
 ## Experiment 006 · portfolio naming
 
 The public case study, Lab index, README and website handoff use **Experiment 006** for the original GPT run and its pre-registered Claude replication. The technical reports retain their run identifiers. The portfolio shows one card in slot 02 and links to both reports under Experiment 006. [Portfolio branch commit](https://github.com/chase-sinclair/career-intelligence-agent/commit/66de8503af360ad8d5a956f0da489495031983aa)
